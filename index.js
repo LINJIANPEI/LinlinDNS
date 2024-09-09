@@ -148,19 +148,6 @@ const transformations = async (oldDirectory, newDirectory) => {
             .join('\n')
         await fss.writeFile(`${oldDirectory}/4.txt`, allDatas);
 
-        // const filesEnd = await fss.readdir(oldDirectory);
-
-        // filesEnd.forEach(async (w) => {
-        //     const data = await fss.readFile(`${oldDirectory}/${w}`, 'utf-8')
-        //     const datas = data
-        //         .split('\n')
-        //         .map(line => `||${line}`)
-        //         .map(line => `${line}^`)
-        //         .map(line => `0.0.0.0 ${line}`)
-        //         .join('\n')
-        //     await fss.writeFile(`${oldDirectory}/${w}`, datas, 'utf8')
-        // })
-
         console.log('规则转换成功');
     } catch (error) {
         console.log('规则转换失败');
@@ -222,6 +209,7 @@ const processFiles = async (oldDirectory, newDirectory) => {
     await rule()
     await cleanReadme()
     await title()
+    deleteDir(newDirectorys)
     console.log('更新完成');
 })();
 
