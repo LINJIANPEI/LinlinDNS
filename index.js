@@ -209,7 +209,7 @@ const processFiles = async (oldDirectory, newDirectory) => {
     await rule()
     await cleanReadme()
     await title()
-    deleteDir(newDirectorys)
+    await deleteDir(newDirectorys)
     console.log('更新完成');
 })();
 

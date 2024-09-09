@@ -95,7 +95,6 @@ https://doh.familyshield.opendns.com/dns-query
             const content = await fss.readFile(`${filePath}`, 'utf8');
             const result = getFilenameWithoutExtension(filePath)
             const lineCount = content.split('\n').length;
-            console.log(lineCount);
 
             const newContent = `[个人合并 2.0]
 ! Title: 林林${result}
