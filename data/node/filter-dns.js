@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const fss = fs.promises
-
+//过滤DNS
 const filterDns = async () => {
+    console.log('开始过滤DNS');
+
     try {
         // 读取文件
         const data = await fss.readFile(path.resolve('./', 'rules.txt'), 'utf8');
@@ -14,8 +16,10 @@ const filterDns = async () => {
         });
         // 写入文件
         await fss.writeFile(path.resolve('./', 'dns.txt'), filteredLines.join('\n') + '\n', 'utf8');
+
+        console.log('过滤DNS成功');
     } catch (error) {
-        console.error('Error filterDns:', error.message);
+        console.error('过滤DNS失败');
     }
 }
 module.exports = {
