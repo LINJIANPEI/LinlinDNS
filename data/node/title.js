@@ -92,9 +92,11 @@ https://doh.familyshield.opendns.com/dns-query
         const fileList = files.filter(file => file.endsWith('.txt'));
 
         fileList.forEach(async (filePath) => {
-            const content = await fss.readFile(filePath, 'utf8');
+            const content = await fss.readFile(`${filePath}`, 'utf8');
             const result = getFilenameWithoutExtension(filePath)
             const lineCount = content.split('\n').length;
+            console.log(lineCount);
+
             const newContent = `[个人合并 2.0]
 ! Title: 林林${result}
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/blob/main

@@ -11,8 +11,6 @@ const rule = async () => {
             const data = await fss.readFile(file, 'utf8')
             // 将文件内容按行分割，‌去重，‌排序
             const lines = [...new Set(data.split('\n'))].sort();
-            console.log(lines.length);
-
             // 删除原文件
             fss.unlink(file)
 

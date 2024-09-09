@@ -8,7 +8,8 @@ const cleanReadme = async () => {
 
     const extractCount = async (filename) => {
         const content = await fss.readFile(filename, 'utf8');
-        const match = content.match(/^! Total count: (\d+)/);
+        const match = content.split('\n').length
+
         return match ? match[1] : '0';
     }
     try {
