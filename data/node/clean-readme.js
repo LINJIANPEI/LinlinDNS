@@ -10,7 +10,7 @@ const cleanReadme = async () => {
         const content = await fss.readFile(filename, 'utf8');
         const match = content.split('\n').length
 
-        return match ? match[1] : '0';
+        return match ? match : '0';
     }
     try {
         const numRules = await extractCount('rules.txt');
