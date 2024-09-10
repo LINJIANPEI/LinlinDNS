@@ -21,10 +21,10 @@ DNS配置数量: 75
 <summary>规则列表</summary>
 <ul>
 
-- **[拦截规则](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/rules.txt)**
-- **[DNS拦截规则](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/dns.txt)**
-- **[白名单](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/allow.txt)**
-- **[DNS配置](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/DnsConfiguration.txt)**
+- **[拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/rules.txt)**
+- **[DNS拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/dns.txt)**
+- **[白名单](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/allow.txt)**
+- **[DNS配置](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/DnsConfiguration.txt)**
 </ul>
 </details>
 
