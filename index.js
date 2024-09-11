@@ -96,6 +96,7 @@ const downloadRules = async (rules, allow, directory) => {
             const response = await axios.get(url, { responseType: 'arraybuffer', timeout: 60000 });
             const decoded = iconv.decode(response.data, 'utf-8');
             await writeFile(directory, decoded);
+            console.error(`下载规则文件成功: ${url}`);
         } catch (error) {
             console.error(`下载规则文件失败: ${url}`);
         }
@@ -234,10 +235,10 @@ const processFiles = async (oldDirectory, newDirectory) => {
     await filterDns()
     // 规则处理
     await rule()
-    // 处理md文件
-    await cleanReadme()
     // 处理title
     await title()
+    // 处理md文件
+    await cleanReadme()
     // 删除临时文件夹
     await deleteDir(directorys)
     console.log('更新完成');

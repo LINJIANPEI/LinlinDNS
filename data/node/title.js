@@ -108,7 +108,7 @@ ${content}`
         })
         console.log('写入头部信息成功');
     } catch (error) {
-        console.log('写入头部信息失败');
+        console.error('写入头部信息失败');
     }
 }
 module.exports = {

@@ -8,18 +8,16 @@ const cleanReadme = async () => {
 
     const extractCount = async (filename) => {
         const content = await fss.readFile(filename, 'utf8');
-        const match = content.split('\n').length
-
+        const match = content.split('\n').length - 7
         return match ? match : '0';
     }
     try {
+
         const numRules = await extractCount('rules.txt');
         const numDns = await extractCount('dns.txt');
         const numAllow = await extractCount('allow.txt');
         const numDnsConfiguration = await extractCount('DnsConfiguration.txt');
-
         const time = moment().format('YYYY-MM-DD HH:mm:ss');
-
         let readmeContent = await fss.readFile('README.md', 'utf-8');
 
         readmeContent = readmeContent
@@ -28,8 +26,8 @@ const cleanReadme = async () => {
             .replace(/^DNS拦截规则数量.*/gm, `DNS拦截规则数量: ${numDns}`)
             .replace(/^白名单规则数量.*/gm, `白名单规则数量: ${numAllow}`)
             .replace(/^DNS配置数量.*/gm, `DNS配置数量: ${numDnsConfiguration}`);
-
         await fss.writeFile('README.md', readmeContent);
+        console.log('更新md文件成功');
     } catch (error) {
         console.error('更新md文件失败');
     }
