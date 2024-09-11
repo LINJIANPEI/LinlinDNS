@@ -11,11 +11,11 @@ const rule = async () => {
             const data = await fss.readFile(file, 'utf8')
             // 将文件内容按行分割，‌去重，‌排序
             const lines = [...new Set(data.split('\n'))].sort();
-            
-            // 删除原文件
-            fss.unlink(file)
 
-            fss.writeFile(file, lines.join('\n'), 'utf8')
+            // 删除原文件
+            await fss.unlink(file)
+
+            await fss.writeFile(file, lines.join('\n'), 'utf8')
 
         });
         console.log("规则去重完成");
