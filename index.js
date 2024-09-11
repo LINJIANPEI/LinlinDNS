@@ -205,6 +205,7 @@ const processFiles = async (oldDirectory, newDirectory) => {
             .join('\n')
             .split('\n')
             .filter(line => line.startsWith('@'))
+
         allallowDatas = [...new Set(allallowDatas)].join('\n')
 
         // 写入文件
