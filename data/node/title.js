@@ -88,6 +88,8 @@ https://doh.familyshield.opendns.com/dns-query
 
         // 获取当前时间并转换为北京时间
         const beijingTime = moment().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
+        console.log(beijingTime);
+
         const files = await fss.readdir('./')
         const fileList = files.filter(file => file.endsWith('.txt'));
 
