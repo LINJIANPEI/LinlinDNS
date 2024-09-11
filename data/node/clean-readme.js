@@ -1,6 +1,6 @@
 const fs = require('fs');
 const fss = fs.promises
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 //更新md文件
 const cleanReadme = async () => {
@@ -17,13 +17,14 @@ const cleanReadme = async () => {
         const numDns = await extractCount('dns.txt');
         const numAllow = await extractCount('allow.txt');
         const numDnsConfiguration = await extractCount('DnsConfiguration.txt');
-        const time = moment().format('YYYY-MM-DD HH:mm:ss');
+        // 获取当前时间并转换为北京时间
+        const beijingTime = moment().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
         let readmeContent = await fss.readFile('README.md', 'utf8');
         readmeContentData = readmeContent
             .split('\n')
             .map((line) => {
                 return line
-                    .replace(/^更新时间.*/, `更新时间: ${time} （北京时间）`)
+                    .replace(/^更新时间.*/, `更新时间: ${beijingTime} （北京时间）`)
                     .replace(/^拦截规则数量.*/, `拦截规则数量: ${numRules}`)
                     .replace(/^DNS拦截规则数量.*/, `DNS拦截规则数量: ${numDns}`)
                     .replace(/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`)
