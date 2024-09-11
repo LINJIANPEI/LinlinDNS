@@ -99,7 +99,7 @@ https://doh.familyshield.opendns.com/dns-query
 
             const newContent = `[个人合并 2.0]
 ! Title: 林林${result}
-! Homepage: https://github.com/LINJIANPEI/DnsRules/blob/main
+! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
 ! Version: ${beijingTime}（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
