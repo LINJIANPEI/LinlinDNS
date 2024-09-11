@@ -18,7 +18,7 @@ const cleanReadme = async () => {
         const numAllow = await extractCount('allow.txt');
         const numDnsConfiguration = await extractCount('DnsConfiguration.txt');
         const time = moment().format('YYYY-MM-DD HH:mm:ss');
-        let readmeContent = await fss.readFile('README.md', 'utf-8');
+        let readmeContent = await fss.readFile('README.md', 'utf8');
 
         readmeContent = readmeContent
             .replace(/^更新时间.*/gm, `更新时间: ${time} （北京时间）`)
