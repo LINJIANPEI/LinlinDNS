@@ -10,21 +10,21 @@
 <h2 id="a">🎯 规则订阅</h2>
 
 ```
-更新时间: 2024-09-10 05:19:51 （北京时间）
+更新时间: 2024-09-11 04:18:31 （北京时间）
 
-拦截规则数量: 1098224
-DNS拦截规则数量: 262140
-白名单规则数量: 18445
+拦截规则数量: 1088117
+DNS拦截规则数量: 251952
+白名单规则数量: 18458
 DNS配置数量: 75
 ``` 
 <details open>
 <summary>规则列表</summary>
 <ul>
 
-- **[拦截规则](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/rules.txt)**
-- **[DNS拦截规则](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/dns.txt)**
-- **[白名单](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/allow.txt)**
-- **[DNS配置](https://raw.githubusercontent.com/LINJIANPEI/DnsRules/main/DnsConfiguration.txt)**
+- **[拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/rules.txt)**
+- **[DNS拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/dns.txt)**
+- **[白名单](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/allow.txt)**
+- **[DNS配置](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/DnsConfiguration.txt)**
 </ul>
 </details>
 
