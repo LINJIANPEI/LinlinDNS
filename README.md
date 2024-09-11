@@ -10,11 +10,11 @@
 <h2 id="a">🎯 规则订阅</h2>
 
 ```
-更新时间: 2024-09-11 13:29:54 （北京时间）
+更新时间: 2024-09-11 22:06:57 （北京时间）
 
 拦截规则数量: 1067720
 DNS拦截规则数量: 255589
-白名单规则数量: 8696
+白名单规则数量: 1
 DNS配置数量: 68
 ``` 
 <details open>
@@ -27,9 +27,3 @@ DNS配置数量: 68
 - **[DNS配置](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/DnsConfiguration.txt)**
 </ul>
 </details>
-
-
-
-
-
-

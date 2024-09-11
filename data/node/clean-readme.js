@@ -19,14 +19,19 @@ const cleanReadme = async () => {
         const numDnsConfiguration = await extractCount('DnsConfiguration.txt');
         const time = moment().format('YYYY-MM-DD HH:mm:ss');
         let readmeContent = await fss.readFile('README.md', 'utf8');
+        readmeContentData = readmeContent
+            .split('\n')
+            .map((line) => {
+                return line
+                    .replace(/^更新时间.*/, `更新时间: ${time} （北京时间）`)
+                    .replace(/^拦截规则数量.*/, `拦截规则数量: ${numRules}`)
+                    .replace(/^DNS拦截规则数量.*/, `DNS拦截规则数量: ${numDns}`)
+                    .replace(/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`)
+                    .replace(/^DNS配置数量.*/, `DNS配置数量: ${numDnsConfiguration}`);
+            })
+            .join('\n')
 
-        readmeContent = readmeContent
-            .replace(/^更新时间.*/gm, `更新时间: ${time} （北京时间）`)
-            .replace(/^拦截规则数量.*/gm, `拦截规则数量: ${numRules}`)
-            .replace(/^DNS拦截规则数量.*/gm, `DNS拦截规则数量: ${numDns}`)
-            .replace(/^白名单规则数量.*/gm, `白名单规则数量: ${numAllow}`)
-            .replace(/^DNS配置数量.*/gm, `DNS配置数量: ${numDnsConfiguration}`);
-        await fss.writeFile('README.md', readmeContent);
+        await fss.writeFile('README.md', readmeContentData);
         console.log('更新md文件成功');
     } catch (error) {
         console.error('更新md文件失败');
