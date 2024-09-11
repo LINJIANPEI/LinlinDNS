@@ -25,7 +25,7 @@ const rule = async () => {
 
         console.log("规则去重成功");
     } catch (error) {
-        console.error('规则去重失败');
+        throw `规则去重失败:${error}`
     }
 }
 module.exports = {

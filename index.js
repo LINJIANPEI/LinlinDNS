@@ -1,14 +1,27 @@
-const fs = require('fs');
-const axios = require('axios');
-const iconv = require('iconv-lite');
-const path = require('path');
-const { promisify } = require('util');
-const { filterDns } = require('./data/node/filter-dns'); // 引用 filter-dns.js 模块
+// 创建临时文件夹
+const { createDir } = require('./data/node/createDir'); // createDir.js 模块
+// 删除临时文件夹
+const { deleteDir } = require('./data/node/deleteDir'); // deleteDir.js 模块
+// 复制文件
+const { copyFiles } = require('./data/node/copyFiles'); // copyFiles.js 模块
+// 删除文件
+const { deleteFiles } = require('./data/node/deleteFiles'); // deleteFiles.js 模块
+//规则下载
+const { downloadRules } = require('./data/node/downloadRules'); // downloadRules.js 模块
+// 添加空格
+const { addEmptyLinesToFiles } = require('./data/node/addEmptyLinesToFiles'); // addEmptyLinesToFiles.js 模块
+// 规则转换
+const { transformations } = require('./data/node/transformations'); //transformations.js 模块
+// 合并规则
+const { processFiles } = require('./data/node/processFiles'); //processFiles.js 模块
+// 过滤DNS
+const { filterDns } = require('./data/node/filterDns'); // 引用 filterDns.js 模块
+// 规则处理
 const { rule } = require('./data/node/rule'); // rule.js 模块
+// 处理title
 const { title } = require('./data/node/title'); // title.js 模块
-const { cleanReadme } = require('./data/node/clean-readme'); // clean-readme.js 模块
-const fss = fs.promises
-const _ = require('lodash');
+// 处理md文件
+const { cleanReadme } = require('./data/node/cleanReadme'); // cleanReadme.js 模块
 
 //黑名单规则
 const rules = [
@@ -55,206 +68,49 @@ const allow = [
     "https://mirror.ghproxy.com/raw.githubusercontent.com/8680/GOODBYEADS/master/allow.txt",//8680
     "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/ok.txt",//AdGuardHomeRules
 ]
+// 旧地址
+const oldDirectory = './tmp'
+// 新地址
+const newDirectory = './'
 
-// 创建临时文件夹
-const createDir = async (directory) => {
-    console.log('开始创建临时文件夹');
-    const mkdir = promisify(fs.mkdir);
+async function main() {
     try {
-        await mkdir(directory, { recursive: true });
-        console.log('创建临时文件夹成功');
+        // 创建临时文件夹
+        await createDir(oldDirectory)
+        //规则下载
+        await downloadRules(rules, allow, oldDirectory)
+        // 删除文件
+        await deleteFiles('./allow.txt')
+        await deleteFiles('./dns.txt')
+        await deleteFiles('./DnsConfiguration.txt')
+        await deleteFiles('./rules.txt')
+        // 复制文件
+        await copyFiles('./data/rules/adblock.txt', `${oldDirectory}/rules01.txt`);
+        await copyFiles('./data/rules/whitelist.txt', `${oldDirectory}/allow01.txt`);
+        // 添加空格
+        await addEmptyLinesToFiles(oldDirectory);
+        // 规则转换
+        await transformations(oldDirectory);
+        // 合并规则
+        await processFiles(oldDirectory)
+        // 复制文件
+        await copyFiles(`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`);
+        await copyFiles(`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`);
+        // 过滤DNS
+        await filterDns()
+        // 规则处理
+        await rule()
+        // 处理title
+        await title()
+        // 处理md文件
+        await cleanReadme()
+        // 删除临时文件夹
+        await deleteDir(oldDirectory)
+        console.log('更新完成');
+
     } catch (error) {
-        console.error('创建临时文件夹失败');
+        throw `更新失败:${error}`
     }
+
 }
-// 删除临时文件夹
-const deleteDir = async (directory) => {
-    console.log('开始删除临时文件夹');
-    const mkdir = promisify(fs.rm);
-    try {
-        await mkdir(directory, { recursive: true, force: true });
-        console.log('删除临时文件夹成功');
-    } catch (error) {
-        console.error('删除临时文件夹失败');
-    }
-}
-// 复制文件
-const copyFiles = async (oldDirectory, newDirectory) => {
-    console.log('开始复制文件');
-    try {
-        const copyFile = promisify(fs.copyFile);
-        await copyFile(oldDirectory, newDirectory);
-        console.log('复制文件成功');
-    } catch (error) {
-        console.error('复制文件失败');
-    }
-}
-const deleteFiles = async (directory) => {
-    console.log('开始删除文件');
-    try {
-        const deleteFile = promisify(fs.unlink);
-        await deleteFile(directory);
-        console.log('删除文件成功');
-    } catch (error) {
-        console.error('删除文件失败');
-    }
-}
-
-
-
-(async function main() {
-    const oldDirectory = './tmp'
-    const newDirectory = './'
-    // 创建临时文件夹
-    await createDir(oldDirectory)
-    //规则下载
-    await downloadRules(rules, allow, oldDirectory)
-    // 删除文件
-    await deleteFiles('./allow.txt')
-    await deleteFiles('./dns.txt')
-    await deleteFiles('./DnsConfiguration.txt')
-    await deleteFiles('./rules.txt')
-    // 复制文件
-    await copyFiles('./data/rules/adblock.txt', `${oldDirectory}/rules01.txt`);
-    await copyFiles('./data/rules/whitelist.txt', `${oldDirectory}/allow01.txt`);
-    // 添加空格
-    await addEmptyLinesToFiles(oldDirectory);
-    // 规则转换
-    await transformations(oldDirectory);
-    // 开始合并规则
-    await processFiles(oldDirectory, newDirectory)
-    // 复制文件
-    await copyFiles(`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`);
-    await copyFiles(`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`);
-    // 过滤DNS
-    await filterDns()
-    // 规则处理
-    await rule()
-    // 处理title
-    await title()
-    // 处理md文件
-    await cleanReadme()
-    // 删除临时文件夹
-    await deleteDir(oldDirectory)
-    console.log('更新完成');
-
-
-})();
-
-
-//规则下载
-async function downloadRules(rules, allow, directory) {
-    const downloadFile = async (url, directory) => {
-        const writeFile = promisify(fs.writeFile);
-        try {
-            const response = await axios.get(url, { responseType: 'arraybuffer', timeout: 60000 });
-            const decoded = iconv.decode(response.data, 'utf8');
-            await writeFile(directory, decoded);
-            console.error(`下载规则文件成功: ${url}`);
-        } catch (error) {
-            console.error(`下载规则文件失败: ${url}`);
-        }
-    }
-    console.log('开始下载规则');
-    try {
-        await createDir(directory)
-        const downloadPromises = rules.map((url, index) => downloadFile(url, `${directory}/rules${index}.txt`));
-        const allowPromises = allow.map((url, index) => downloadFile(url, `${directory}/allow${index}.txt`));
-        await Promise.all([...downloadPromises, ...allowPromises]);
-        console.log('规则下载完成');
-    } catch (error) {
-        console.error('规则下载失败');
-    }
-}
-
-
-
-// 添加空格
-async function addEmptyLinesToFiles(directory) {
-    console.log('开始添加空格');
-    try {
-
-        // 读取列表文件名
-        const files = await fss.readdir(directory);
-        // 读取所有文件内容并添加空格
-        await Promise.all(files.map(async (file) => {
-            const filePath = path.join(directory, file);
-            if ((await fss.stat(filePath)).isFile()) {
-                await fss.appendFile(filePath, '\n');
-            }
-        }));
-        console.log('添加空格成功');
-    } catch (error) {
-        console.error('添加空格失败');
-    }
-}
-
-
-// 规则转换
-async function transformations(directory) {
-    console.log('开始规则转换');
-
-    try {
-        // 读取列表文件名
-        const files = await fss.readdir(directory);
-        // 读取所有文件内容
-        const allData = await Promise.all(files.map(file => fss.readFile(`${directory}/${file}`, 'utf8')));
-        // 处理文件规则
-        let allDatas = allData
-            .join('\n')
-            .split('\n')
-            .filter(line => line.trim() !== '')
-            .filter((line) => /^\/[a-z]([a-z]|\.)*\.$/.test(line))
-            .join('\n')
-        // 写入文件
-        await fss.writeFile(`${directory}/4.txt`, allDatas);
-
-        console.log('规则转换成功');
-    } catch (error) {
-        console.log('规则转换失败');
-    }
-
-};
-
-
-// 开始合并规则
-async function processFiles(oldDirectory, newDirectory) {
-    console.log('开始合并规则');
-
-    try {
-        // 读取列表文件名
-        const files = await fss.readdir(oldDirectory)
-        // 过滤rules开头的txt文件
-        const ruleFiles = files.filter(file => file.startsWith('rules') && file.endsWith('.txt'));
-        // 读取所有文件内容
-        const allruleData = await Promise.all(ruleFiles.map(file => fss.readFile(`${oldDirectory}/${file}`, 'utf8')));
-        // 处理文件规则
-        let allruleDatas = allruleData
-            .join('\n')
-            .split('\n')
-            .filter(line => !/^((\!)|(\[)).*/.test(line))
-            .join('\n')
-        // 写入文件
-        await fss.writeFile(`${oldDirectory}/tmp-rules.txt`, allruleDatas, 'utf8')
-
-        // 读取列表文件名
-        const filess = await fss.readdir(oldDirectory)
-        // 读取所有文件内容
-        const allallowData = await Promise.all(filess.map(file => fss.readFile(`${oldDirectory}/${file}`, 'utf8')));
-        // 处理文件规则
-        let allallowDatas = allallowData
-            .join('\n')
-            .split('\n')
-            .filter(line => line.startsWith('@'))
-            .join('\n')
-
-        // 写入文件
-        await fss.writeFile(`${oldDirectory}/tmp-allow.txt`, allallowDatas, 'utf8')
-
-        console.log('合并规则完成');
-
-    } catch (error) {
-        console.error('合并规则失败');
-    }
-}
-
+main()

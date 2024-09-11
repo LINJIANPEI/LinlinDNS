@@ -3,16 +3,8 @@ const path = require('path');
 const moment = require('moment-timezone');
 const fss = fs.promises
 
-
-// 写入头部信息
-const title = async () => {
-    function getFilenameWithoutExtension(filepath) {
-        const filenameWithExtension = path.basename(filepath);
-        return path.parse(filenameWithExtension).name;
-    }
-
-    // DNS配置字符串
-    const dnsConfiguration = `https://doh.pub/dns-query
+// DNS配置字符串
+const dnsConfiguration = `https://doh.pub/dns-query
 https://sm2.doh.pub/dns-query
 https://dns.alidns.com/dns-query
 https://dns.google/dns-query
@@ -81,6 +73,15 @@ https://doh.familyshield.opendns.com/dns-query
 2001:4860:4860::8888
 2001:4860:4860::8844`;
 
+const getFilenameWithoutExtension = (filepath) => {
+    const filenameWithExtension = path.basename(filepath);
+    return path.parse(filenameWithExtension).name;
+}
+
+
+// 写入头部信息
+const title = async () => {
+
     console.log('开始写入头部信息');
     try {
         // 写入dns配置列表
@@ -109,7 +110,7 @@ ${content}`
         })
         console.log('写入头部信息成功');
     } catch (error) {
-        console.error('写入头部信息失败');
+        throw `写入头部信息失败:${error}`
     }
 }
 module.exports = {
