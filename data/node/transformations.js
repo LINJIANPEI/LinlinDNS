@@ -1,13 +1,16 @@
 const fs = require('fs');
 const { promisify } = require('util');
+const path = require('path');
 const readDir = promisify(fs.readdir)
 const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
+
 // 规则转换
 const transformations = async (directory) => {
     console.log('开始规则转换');
 
     try {
+        directory = path.join(__dirname, directory)
         // 读取列表文件名
         const files = await readDir(directory);
         // 读取所有文件内容

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const { promisify } = require('util');
 const readDir = promisify(fs.readdir)
 const stat = promisify(fs.stat)
@@ -8,6 +9,7 @@ const appendFile = promisify(fs.appendFile)
 const addEmptyLinesToFiles = async (directory) => {
     console.log('开始添加空格');
     try {
+        directory = path.join(__dirname, directory)
         // 读取列表文件名
         const files = await readDir(directory);
         // 读取所有文件内容并添加空格

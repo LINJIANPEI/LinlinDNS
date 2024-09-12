@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { promisify } = require('util');
+const path = require('path');
 const readDir = promisify(fs.readdir)
 const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
@@ -9,6 +10,7 @@ const processFiles = async (directory) => {
     console.log('开始合并规则');
 
     try {
+        directory = path.join(__dirname, directory)
         // 读取列表文件名
         const files = await readDir(directory)
         // 过滤rules开头的txt文件

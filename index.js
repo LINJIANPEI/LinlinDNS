@@ -80,10 +80,7 @@ async function main() {
         //规则下载
         await downloadRules(rules, allow, oldDirectory)
         // 删除文件
-        await deleteFiles('./allow.txt')
-        await deleteFiles('./dns.txt')
-        await deleteFiles('./DnsConfiguration.txt')
-        await deleteFiles('./rules.txt')
+        await deleteFiles('./allow.txt', './dns.txt', './DnsConfiguration.txt', './rules.txt')
         // 复制文件
         await copyFiles('./data/rules/adblock.txt', `${oldDirectory}/rules01.txt`);
         await copyFiles('./data/rules/whitelist.txt', `${oldDirectory}/allow01.txt`);
@@ -97,9 +94,9 @@ async function main() {
         await copyFiles(`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`);
         await copyFiles(`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`);
         // 过滤DNS
-        await filterDns()
+        await filterDns(newDirectory)
         // 规则处理
-        await rule()
+        await rule(newDirectory)
         // 处理title
         await title()
         // 处理md文件

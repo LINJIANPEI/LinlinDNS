@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment-timezone');
-const fss = fs.promises
-
+const { promisify } = require('util');
+const writeFile = promisify(fs.writeFile)
+const readDir = promisify(fs.readdir)
+const readFile = promisify(fs.readFile)
 // DNS配置字符串
 const dnsConfiguration = `https://doh.pub/dns-query
 https://sm2.doh.pub/dns-query
@@ -85,17 +87,17 @@ const title = async () => {
     console.log('开始写入头部信息');
     try {
         // 写入dns配置列表
-        await fss.writeFile('./DnsConfiguration.txt', dnsConfiguration)
+        await writeFile('./DnsConfiguration.txt', dnsConfiguration)
 
         // 获取当前时间并转换为北京时间
         const beijingTime = moment().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
 
-        const files = await fss.readdir('./')
+        const files = await readDir('./')
         const fileList = files.filter(file => file.endsWith('.txt'));
+        for (let i = 0; i < fileList.length; i++) {
 
-        fileList.forEach(async (filePath) => {
-            const content = await fss.readFile(`${filePath}`, 'utf8');
-            const result = getFilenameWithoutExtension(filePath)
+            const content = await readFile(`${fileList[i]}`, 'utf8');
+            const result = getFilenameWithoutExtension(fileList[i])
             const lineCount = content.split('\n').length;
 
             const newContent = `[个人合并 2.0]
@@ -106,8 +108,9 @@ const title = async () => {
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: ${lineCount}
 ${content}`
-            await fss.writeFile(filePath, newContent);
-        })
+
+            await writeFile(fileList[i], newContent);
+        }
         console.log('写入头部信息成功');
     } catch (error) {
         throw `写入头部信息失败:${error}`

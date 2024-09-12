@@ -1,12 +1,14 @@
 const fs = require('fs');
 const axios = require('axios');
 const iconv = require('iconv-lite');
+const path = require('path');
 const { promisify } = require('util');
 const writeFile = promisify(fs.writeFile);
 
 const downloadFile = async (url, directory) => {
 
     try {
+        directory = path.join(__dirname, directory)
         const response = await axios.get(url, { responseType: 'arraybuffer', timeout: 60000 });
         const decoded = iconv.decode(response.data, 'utf8');
         await writeFile(directory, decoded);
