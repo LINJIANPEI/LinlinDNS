@@ -14,7 +14,7 @@ const downloadFile = async (url, directory) => {
         await writeFile(directory, decoded);
         console.log(`下载规则文件成功: ${url}`);
     } catch (error) {
-        throw `下载规则文件失败:${error}`
+        throw `下载规则文件失败:${url}${error}`
     }
 }
 
