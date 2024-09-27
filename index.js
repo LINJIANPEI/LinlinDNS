@@ -65,7 +65,7 @@ const allow = [
 
     "https://raw.githubusercontent.com/Zisbusy/AdGuardHome-Rules/main/Rules/whitelist.txt",//Zisbusy
     "https://raw.githubusercontent.com/sccheng460/adguard/main/whitelist.txt",//sccheng460
-    "https://mirror.ghproxy.com/raw.githubusercontent.com/8680/GOODBYEADS/master/allow.txt",//8680
+    // "https://mirror.ghproxy.com/raw.githubusercontent.com/8680/GOODBYEADS/master/allow.txt",//8680
     "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/ok.txt",//AdGuardHomeRules
 ]
 // 旧地址
