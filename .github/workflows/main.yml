@@ -1,9 +1,13 @@
 name: Linlin DNS UpdateRules
-on: 
+on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */2 * * *'
-    
+    - cron: "0 */2 * * *"
+
+  push:
+    branches:
+      - main #2020年10月后github新建仓库默认分支改为main，注意更改
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -19,7 +23,7 @@ jobs:
           git reset --hard origin/main
           git pull
           git branch -m main
-          
+
       - name: 运行
         run: |
           npm install
@@ -31,7 +35,7 @@ jobs:
           git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')（北京时间）"
           git push -u origin -f
 
-      - name: 删除 workflow 运行记录 
+      - name: 删除 workflow 运行记录
         uses: Mattraks/delete-workflow-runs@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
