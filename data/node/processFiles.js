@@ -28,6 +28,7 @@ const processFiles = async (directory) => {
       .filter((line) => !/^((\!)|(\[)).*/.test(line))
       .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
       .join("\n");
+    allruleDatas = [...new Set(allruleDatas.split("\n"))].join("\n");
     // 写入文件
     await writeFile(`${directory}/tmp-rules.txt`, allruleDatas, "utf8");
 
@@ -44,7 +45,7 @@ const processFiles = async (directory) => {
       .filter((line) => line.startsWith("@"))
       .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
       .join("\n");
-
+    allallowDatas = [...new Set(allallowDatas.split("\n"))].join("\n");
     // 写入文件
     await writeFile(`${directory}/tmp-allow.txt`, allallowDatas, "utf8");
 
