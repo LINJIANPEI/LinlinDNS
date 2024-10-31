@@ -42,6 +42,7 @@ const processFiles = async (directory) => {
       .join("\n")
       .split("\n")
       .filter((line) => line.startsWith("@"))
+      .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
       .join("\n");
 
     // 写入文件
