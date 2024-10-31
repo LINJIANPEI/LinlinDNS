@@ -22,10 +22,9 @@ const deleteFiles = async (...directory) => {
   console.log("开始删除文件");
   try {
     for (let i = 0; i < directory.length; i++) {
-      const directorys = path.join(__dirname, directory[i]);
-      if (await fileExistsAsync(directorys)) {
+      if (await fileExistsAsync(directory[i])) {
         await deleteFile();
-        const name = await getFilenameWithoutExtension(directorys);
+        const name = await getFilenameWithoutExtension(directory[i]);
         console.log(`删除文件${name}成功`);
       }
     }

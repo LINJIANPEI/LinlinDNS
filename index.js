@@ -8,12 +8,15 @@ const { copyFiles } = require("./data/node/copyFiles"); // copyFiles.js 模块
 const { deleteFiles } = require("./data/node/deleteFiles"); // deleteFiles.js 模块
 //规则下载
 const { downloadRules } = require("./data/node/downloadRules"); // downloadRules.js 模块
-// 添加空格
-const { addEmptyLinesToFiles } = require("./data/node/addEmptyLinesToFiles"); // addEmptyLinesToFiles.js 模块
+
+// 合并规则
+// 黑名单
+const { mergeBlacklists } = require("./data/node/mergeBlacklists"); //processFiles.js 模块
+// 白名单
+const { mergeWhitelist } = require("./data/node/mergeWhitelist"); //processFiles.js 模块
+
 // 规则转换
 const { transformations } = require("./data/node/transformations"); //transformations.js 模块
-// 合并规则
-const { processFiles } = require("./data/node/processFiles"); //processFiles.js 模块
 // 过滤DNS
 const { filterDns } = require("./data/node/filterDns"); // 引用 filterDns.js 模块
 // 处理所有规则
@@ -92,12 +95,16 @@ async function main() {
       "./data/rules/whitelist.txt",
       `${oldDirectory}/allow01.txt`
     );
-    // 添加空格
-    await addEmptyLinesToFiles(oldDirectory);
-    // 规则转换
-    await transformations(oldDirectory);
     // 合并规则
-    await processFiles(oldDirectory);
+    await mergeBlacklists(oldDirectory);
+    await mergeWhitelist(oldDirectory);
+
+    // 规则转换
+    await transformations(
+      `${oldDirectory}/tmp-rules.txt`,
+      `${oldDirectory}/tmp-allow.txt`
+    );
+
     // 复制文件
     await copyFiles(
       `${oldDirectory}/tmp-allow.txt`,
@@ -109,8 +116,6 @@ async function main() {
     );
     // 过滤DNS
     await filterDns(newDirectory);
-    // 规则处理
-    await rule(newDirectory);
 
     // 处理所有规则
     await handleAllRules("./allow.txt", "./dns.txt", "./rules.txt");

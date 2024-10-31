@@ -7,7 +7,6 @@ const writeFile = promisify(fs.writeFile);
 
 const downloadFile = async (url, directory) => {
   try {
-    directory = path.join(__dirname, directory);
     const response = await axios.get(url, {
       responseType: "arraybuffer",
       timeout: 60000,
