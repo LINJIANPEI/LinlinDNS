@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const moment = require('moment-timezone');
-const { promisify } = require('util');
-const writeFile = promisify(fs.writeFile)
-const readDir = promisify(fs.readdir)
-const readFile = promisify(fs.readFile)
+const fs = require("fs");
+const path = require("path");
+const moment = require("moment-timezone");
+const { promisify } = require("util");
+const writeFile = promisify(fs.writeFile);
+const readDir = promisify(fs.readdir);
+const readFile = promisify(fs.readFile);
 // DNS配置字符串
 const dnsConfiguration = `https://doh.pub/dns-query
 https://sm2.doh.pub/dns-query
@@ -76,49 +76,51 @@ https://doh.familyshield.opendns.com/dns-query
 2001:4860:4860::8844`;
 
 const getFilenameWithoutExtension = (filepath) => {
-    const filenameWithExtension = path.basename(filepath);
-    return path.parse(filenameWithExtension).name;
-}
-
+  const filenameWithExtension = path.basename(filepath);
+  return path.parse(filenameWithExtension).name;
+};
 
 // 写入头部信息
 const title = async () => {
+  console.log("开始写入头部信息");
+  try {
+    // 写入dns配置列表
+    await writeFile("./DnsConfiguration.txt", dnsConfiguration);
 
-    console.log('开始写入头部信息');
-    try {
-        // 写入dns配置列表
-        await writeFile('./DnsConfiguration.txt', dnsConfiguration)
+    // 获取当前时间并转换为北京时间
+    const beijingTime = moment()
+      .tz("Asia/Shanghai")
+      .format("YYYY-MM-DD HH:mm:ss");
 
-        // 获取当前时间并转换为北京时间
-        const beijingTime = moment().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
+    const files = await readDir("./");
+    const fileList = files.filter((file) => file.endsWith(".txt"));
+    for (let i = 0; i < fileList.length; i++) {
+      let content = await readFile(`${fileList[i]}`, "utf8");
+      content = content
+        .split("\n")
+        .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
+        .join("\n");
+      content = [...new Set(content.split("\n"))].join("\n");
 
-        const files = await readDir('./')
-        const fileList = files.filter(file => file.endsWith('.txt'));
-        for (let i = 0; i < fileList.length; i++) {
+      const result = getFilenameWithoutExtension(fileList[i]);
+      const lineCount = content.split("\n").length;
 
-            const content = await readFile(`${fileList[i]}`, 'utf8');
-            const result = getFilenameWithoutExtension(fileList[i])
-            const lineCount = content.split('\n').length;
-
-            const newContent = `[个人合并 2.0]
+      const newContent = `[个人合并 2.0]
 ! Title: 林林${result}
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
 ! Version: ${beijingTime}（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: ${lineCount}
-${content}`
+${content}`;
 
-            await writeFile(fileList[i], newContent);
-        }
-        console.log('写入头部信息成功');
-    } catch (error) {
-        throw `写入头部信息失败:${error}`
+      await writeFile(fileList[i], newContent);
     }
-}
-module.exports = {
-    title
+    console.log("写入头部信息成功");
+  } catch (error) {
+    throw `写入头部信息失败:${error}`;
+  }
 };
-
-
-
+module.exports = {
+  title,
+};
