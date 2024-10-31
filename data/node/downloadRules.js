@@ -1,7 +1,6 @@
 const fs = require("fs");
 const axios = require("axios");
 const iconv = require("iconv-lite");
-const path = require("path");
 const { promisify } = require("util");
 const writeFile = promisify(fs.writeFile);
 
