@@ -9,8 +9,11 @@ const handleAllRules = async (...fileList) => {
     const contentArray = content.split("\n");
     // 将文件内容去重，过滤，排序
     contentArray = [...new Set(contentArray)]
+      .sort()
       .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
-      .sort();
+      .filter((line) => line.trim() !== "")
+      .map((line) => line.trim())
+      .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line));
 
     const contentString = contentArray.join("\n");
     await writeFile(`${fileLists}`, contentString, "utf8");

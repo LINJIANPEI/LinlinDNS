@@ -16,8 +16,6 @@ const { transformations } = require("./data/node/transformations"); //transforma
 const { processFiles } = require("./data/node/processFiles"); //processFiles.js 模块
 // 过滤DNS
 const { filterDns } = require("./data/node/filterDns"); // 引用 filterDns.js 模块
-// 规则处理
-const { rule } = require("./data/node/rule"); // rule.js 模块
 // 处理所有规则
 const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
 // 处理title
