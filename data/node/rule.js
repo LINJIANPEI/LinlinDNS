@@ -16,10 +16,8 @@ const rule = async (directory) => {
       const file = files[index];
       // 读取文件内容
       const data = await readFile(file, "utf8");
-      // 将文件内容按行分割，‌去重，‌排序
-      const lines = [...new Set(data.split("\n"))];
-
       const linesdata = lines
+        .split("\n")
         .sort()
         .filter((line) => line.trim() !== "")
         .map((line) => line.trim())
