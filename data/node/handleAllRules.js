@@ -7,8 +7,11 @@ const handleAllRules = async (...fileList) => {
     const fileLists = path.join(__dirname, fileList[i]);
     const content = await readFile(`${fileLists}`, "utf8");
     const contentArray = content.split("\n");
-    contentArray.filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line));
-    contentArray = [...new Set(contentArray)];
+    // 将文件内容去重，过滤，排序
+    contentArray = [...new Set(contentArray)]
+      .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
+      .sort();
+
     const contentString = contentArray.join("\n");
     await writeFile(`${fileLists}`, contentString, "utf8");
   }
