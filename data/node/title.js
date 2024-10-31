@@ -95,13 +95,7 @@ const title = async () => {
     const files = await readDir("./");
     const fileList = files.filter((file) => file.endsWith(".txt"));
     for (let i = 0; i < fileList.length; i++) {
-      let content = await readFile(`${fileList[i]}`, "utf8");
-      content = content
-        .split("\n")
-        .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
-        .join("\n");
-      content = [...new Set(content.split("\n"))].join("\n");
-
+      const content = await readFile(`${fileList[i]}`, "utf8");
       const result = getFilenameWithoutExtension(fileList[i]);
       const lineCount = content.split("\n").length;
 

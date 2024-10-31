@@ -18,6 +18,8 @@ const { processFiles } = require("./data/node/processFiles"); //processFiles.js 
 const { filterDns } = require("./data/node/filterDns"); // 引用 filterDns.js 模块
 // 规则处理
 const { rule } = require("./data/node/rule"); // rule.js 模块
+// 处理所有规则
+const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
 // 处理md文件
@@ -111,6 +113,10 @@ async function main() {
     await filterDns(newDirectory);
     // 规则处理
     await rule(newDirectory);
+
+    // 处理所有规则
+    await handleAllRules("./allow.txt", "./dns.txt", "./rules.txt");
+
     // 处理title
     await title();
     // 处理md文件
