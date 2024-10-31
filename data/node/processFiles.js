@@ -34,9 +34,13 @@ const processFiles = async (directory) => {
 
     // 读取列表文件名
     const filess = await readDir(directory);
+    // 过滤rules开头的txt文件
+    const allowFiles = filess.filter(
+      (file) => file.startsWith("allow") && file.endsWith(".txt")
+    );
     // 读取所有文件内容
     const allallowData = await Promise.all(
-      filess.map((file) => readFile(`${directory}/${file}`, "utf8"))
+      allowFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
     );
     // 处理文件规则
     let allallowDatas = allallowData
