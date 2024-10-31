@@ -112,7 +112,7 @@ async function main() {
     // 规则处理
     await rule(newDirectory);
     // 处理title
-    await title();
+    // await title();
     // 处理md文件
     await cleanReadme();
     // 删除临时文件夹
