@@ -11,14 +11,14 @@ const { downloadRules } = require("./data/node/downloadRules"); // downloadRules
 
 // 合并规则
 // 黑名单
-const { mergeBlacklists } = require("./data/node/mergeBlacklists"); //processFiles.js 模块
+const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlacklists.js 模块
 // 白名单
-const { mergeWhitelist } = require("./data/node/mergeWhitelist"); //processFiles.js 模块
+const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
 // 规则转换
-const { transformations } = require("./data/node/transformations"); //transformations.js 模块
+const { transformations } = require("./data/node/transformations"); // transformations.js 模块
 // 过滤DNS
-const { filterDns } = require("./data/node/filterDns"); // 引用 filterDns.js 模块
+const { filterDns } = require("./data/node/filterDns"); // filterDns.js 模块
 // 处理所有规则
 const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
 // 处理title
