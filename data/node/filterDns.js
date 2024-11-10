@@ -12,11 +12,10 @@ const filterDns = async (directory) => {
     // 处理数据
     const lines = data
       .split("\n")
+      .map((line) => line.trim())
       .filter(
         (line) =>
-          line.trim().length >= 2 &&
-          line.trim().startsWith("||") &&
-          line.trim().endsWith("^")
+          line.length >= 2 && line.startsWith("||") && line.endsWith("^")
       )
       .join("\n");
     // 写入文件
