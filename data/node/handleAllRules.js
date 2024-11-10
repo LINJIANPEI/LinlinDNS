@@ -13,8 +13,9 @@ const handleAllRules = async (...fileList) => {
       contentArray = [...new Set(contentArray)]
         .sort()
         .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
-        .filter((line) => line.trim() !== "")
         .map((line) => line.trim())
+        .filter((line) => line !== "")
+
         .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line));
 
       const contentString = contentArray.join("\n");
