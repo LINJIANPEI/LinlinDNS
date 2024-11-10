@@ -9,7 +9,7 @@ const handleAllRules = async (...fileList) => {
     for (let i = 0; i < fileList.length; i++) {
       const content = await readFile(`${fileList[i]}`, "utf8");
       let contentArray = content.split("\n");
-      // 将文件内容去重，过滤，排序
+      // 将文件内容去重，排序，过滤
       contentArray = [...new Set(contentArray)]
         .sort()
         .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
