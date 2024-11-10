@@ -12,10 +12,9 @@ const handleAllRules = async (...fileList) => {
       // 将文件内容去重，排序，过滤
       contentArray = [...new Set(contentArray)]
         .sort()
-        .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
         .map((line) => line.trim())
         .filter((line) => line !== "")
-
+        .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
         .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line));
 
       const contentString = contentArray.join("\n");
