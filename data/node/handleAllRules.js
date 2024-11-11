@@ -13,9 +13,9 @@ const handleAllRules = async (...fileList) => {
       contentArray = [...new Set(contentArray)]
         .sort()
         .map((line) => line.trim())
-        .filter((line) => line !== "");
-      // .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
-      // .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line));
+        .filter((line) => line !== "")
+        .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line))
+        .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line));
 
       const contentString = contentArray.join("\n");
       await writeFile(`${fileList[i]}`, contentString, "utf8");

@@ -23,7 +23,7 @@ const mergeWhitelist = async (directory) => {
     const allFileDatas = allFileData
       .join("\n")
       .split("\n")
-      // .filter((line) => line.startsWith("@"))
+      .filter((line) => line.startsWith("@"))
       .join("\n");
     // 写入文件
     await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");

@@ -10,9 +10,9 @@ const transformations = async (...fileList) => {
     for (let i = 0; i < fileList.length; i++) {
       let content = await readFile(`${fileList[i]}`, "utf8");
       const contentArray = content.split("\n");
-      // contentArrays = contentArray.filter((line) =>
-      //   /^\/[a-z]([a-z]|\.)*\.$/.test(line)
-      // );
+      contentArrays = contentArray.filter((line) =>
+        /^\/[a-z]([a-z]|\.)*\.$/.test(line)
+      );
       const contentString = contentArray.join("\n");
       await writeFile(`${fileList[i]}`, contentString);
     }
