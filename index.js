@@ -57,6 +57,30 @@ const rules = [
   "https://raw.githubusercontent.com/sccheng460/adguard/main/blacklist.txt", //sccheng460
   "https://easylist-downloads.adblockplus.org/easylist.txt", //EasyList-去除国际网页
   "https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt", //海哥
+  "https://anti-ad.net/easylist.txt", //anti-AD
+  "https://gitee.com/cjx82630/cjxlist/raw/master/cjx-ublock.txt", //CJX'suBlocklist
+  "https://easylist-downloads.adblockplus.org/easyprivacy.txt", //EasyListPrivacy
+  "https://easylist-downloads.adblockplus.org/easylistchina.txt", //EasylistChina
+  "https://cdn.jsdelivr.net/gh/cjx82630/cjxlist@master/cjx-annoyance.txt", //CJX'sAnnoyanceList
+  "https://cdn.jsdelivr.net/gh/zsakvo/AdGuard-Custom-Rule@master/rule/zhihu-strict.txt", //移除知乎部分广告
+  "http://sub.adtchrome.com/adt-chinalist-easylist.txt", //ChinaList+EasyList(淇)
+  "https://raw.sevencdn.com/Goooler/1024_hosts/master/hosts", //Goooler
+  "https://raw.sevencdn.com/jdlingyu/ad-wars/master/hosts", //ad-wars
+  "https://raw.sevencdn.com/jdlingyu/ad-wars/master/sha_ad_hosts", //ad-wars
+  "http://winhelp2002.mvps.org/hosts.txt", //MVPSHOST
+  "https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/full/hosts.txt", //NekoDevTeam&neoHostsTeam
+  "https://raw.sevencdn.com/VeleSila/yhosts/master/hosts.txt", //VeleSila/yhosts
+  "https://raw.sevencdn.com/timlu85/AdGuard-Home_Youtube-Adfilter/master/Youtube-Adfilter-Web.txt", //Youtube-Adfilter-Web
+  "https://raw.sevencdn.com/91ajames/ublock-filters-ulist-youtube/main/blocklist.txt", //ublock-filters-ulist-youtube
+  "https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt", //本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
+  "https://cdn.jsdelivr.net/gh/anudeepND/blacklist@master/adservers.txt", //anudeepND/blacklist
+  "https://raw.sevencdn.com/neodevpro/neodevhost/master/adblocker", //NEODEVHOST
+  "https://cdn.jsdelivr.net/gh/liwenjie119/adg-rules@master/black.txt", //LWJ'sblacklist
+  "https://raw.fastgit.org/BlueSkyXN/AdGuardHomeRules/master/all.txt", //BlueSkyXN/AdGuardHomeRules
+  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist1.txt", //hl2guide/Filterlist-for-AdGuard1
+  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist2.txt", //hl2guide/Filterlist-for-AdGuard2
+  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist3.txt", //hl2guide/Filterlist-for-AdGuard3
+  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist4.txt", //hl2guide/Filterlist-for-AdGuard4
 ];
 //白名单规则
 const allow = [
@@ -73,6 +97,19 @@ const allow = [
   "https://mirror.ghproxy.com/raw.githubusercontent.com/8680/GOODBYEADS/master/allow.txt", //8680
   "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/ok.txt", //AdGuardHomeRules
   "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/skyrules.txt", //AdGuardHomeRules
+  "https://cdn.jsdelivr.net/gh/hl2guide/Filterlist-for-AdGuard@master/filter_whitelist.txt", //hl2guideFilterlist-for-AdGuard
+  "https://cdn.jsdelivr.net/gh/hg1978/AdGuard-Home-Whitelist@master/whitelist.txt", //hg1978/AdGuard-Home-Whitelist
+  "https://cdn.jsdelivr.net/gh/mmotti/adguard-home-filters@master/whitelist.txt", //mmotti/adguard-home-filters
+  "https://raw.sevencdn.com/mawenjian/china-cdn-domain-whitelist/master/china-top-website-whitelist.txt", //china-cdn-domain-whitelist
+  "https://raw.sevencdn.com/mawenjian/china-cdn-domain-whitelist/master/china-cdn-domain-whitelist.txt", //china-cdn-domain-whitelist
+  "https://raw.sevencdn.com/pluwen/china-domain-allowlist/master/allow-list.sorl", //china-domain-allowlist
+  "https://raw.sevencdn.com/entr0pia/SwitchyOmega-Whitelist/master/white-list.sorl", //SwitchyOmega-Whitelist
+  "https://cdn.jsdelivr.net/gh/liwenjie119/adg-rules@master/white.txt", //LWJ'swhitelist
+  "https://cdn.jsdelivr.net/gh/LucienShui/chinalist@gh-pages/chinalist.txt", //LucienShui/chinalist
+  "https://raw.sevencdn.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List", //etotakeo/AdGuardDNSPassList
+  "https://cdn.jsdelivr.net/gh/JamesDamp/AdGuard-Home---Personal-Whitelist@master/AdGuardHome-Whitelist.txt", //JamesDamp/Personal-Whitelist
+  "https://cdn.jsdelivr.net/gh/scarletbane/AdGuard-Home-Whitelist@main/whitelist.txt", //scarletbane/AdGuard-Home-Whitelist
+  "https://raw.sevencdn.com/Aveelo/Aveelo-adguard-home-Adlist-Whitelist/master/WhitelistAdGuardHome", //Aveelo-adguard-home-Adlist-Whitelist
 ];
 // 旧地址
 const oldDirectory = "./tmp";
