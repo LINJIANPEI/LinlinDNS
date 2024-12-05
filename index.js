@@ -56,6 +56,7 @@ const rules = [
   "https://raw.githubusercontent.com/Zisbusy/AdGuardHome-Rules/main/Rules/filter.txt", //Zisbusy
   "https://raw.githubusercontent.com/sccheng460/adguard/main/blacklist.txt", //sccheng460
   "https://easylist-downloads.adblockplus.org/easylist.txt", //EasyList-去除国际网页
+  "https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt", //海哥
 ];
 //白名单规则
 const allow = [
