@@ -71,6 +71,7 @@ const allow = [
   "https://raw.githubusercontent.com/sccheng460/adguard/main/whitelist.txt", //sccheng460
   "https://mirror.ghproxy.com/raw.githubusercontent.com/8680/GOODBYEADS/master/allow.txt", //8680
   "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/ok.txt", //AdGuardHomeRules
+  "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/skyrules.txt", //AdGuardHomeRules
 ];
 // 旧地址
 const oldDirectory = "./tmp";
