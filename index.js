@@ -81,6 +81,7 @@ const rules = [
   "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist2.txt", //hl2guide/Filterlist-for-AdGuard2
   "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist3.txt", //hl2guide/Filterlist-for-AdGuard3
   "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist4.txt", //hl2guide/Filterlist-for-AdGuard4
+  'https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt'
 ];
 //白名单规则
 const allow = [
@@ -110,6 +111,7 @@ const allow = [
   "https://cdn.jsdelivr.net/gh/JamesDamp/AdGuard-Home---Personal-Whitelist@master/AdGuardHome-Whitelist.txt", //JamesDamp/Personal-Whitelist
   "https://cdn.jsdelivr.net/gh/scarletbane/AdGuard-Home-Whitelist@main/whitelist.txt", //scarletbane/AdGuard-Home-Whitelist
   "https://raw.githubusercontent.com/Aveelo/Aveelo-adguard-home-Adlist-Whitelist/master/WhitelistAdGuardHome", //Aveelo-adguard-home-Adlist-Whitelist
+  'https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Allowlist.txt'
 ];
 // 旧地址
 const oldDirectory = "./tmp";
