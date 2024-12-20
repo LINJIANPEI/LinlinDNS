@@ -16,6 +16,7 @@ const fileExistsAsync = async (filePath) => {
 // 复制文件
 const copyFiles = async (oldPath, newPath) => {
   try {
+    console.log("开始复制文件");
     // 检查源文件是否存在
     if (await fileExistsAsync(oldPath)) {
       // 复制文件并等待完成
@@ -25,8 +26,7 @@ const copyFiles = async (oldPath, newPath) => {
       console.error("源文件不存在");
     }
   } catch (error) {
-    console.error(`复制文件失败: ${error.message}`);
-    throw error; // 根据需要决定是否要重新抛出错误
+    throw `复制文件失败: ${error}`;
   }
 };
 
