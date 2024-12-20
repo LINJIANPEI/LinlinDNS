@@ -27,6 +27,7 @@ const transformations = async (...fileList) => {
 
         // 将过滤后的内容写回文件
         await writeFile(filePath, filteredContentString, "utf8");
+        console.log(`处理文件 ${filePath} 完成。`);
       } catch (fileError) {
         // 捕获并打印单个文件的错误，但不中断整个流程
         console.error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
