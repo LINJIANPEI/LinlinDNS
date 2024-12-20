@@ -40,7 +40,8 @@ const rules = [
   "https://raw.githubusercontent.com/liwenjie119/adg-rules/master/black.txt", //liwenjie119
   "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt", //秋风规则
   "https://github.com/entr0pia/fcm-hosts/raw/fcm/fcm-hosts", //FCM Hosts
-
+  "https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/adblock.txt", //8680
+  "https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/dns.txt", //8680
   "https://www.coolapk.com/link?url=https%3A%2F%2Fraw.gitmirror.com%2FTTDNS%2FCat%2Fmain%2FTT%25E6%258B%2592%25E7%25BB%259D%25E5%2588%2597%25E8%25A1%25A8%25E6%25B8%2585%25E5%258D%2595%2520(%25E6%259B%25B4%25E6%2596%25B0%25E4%25B8%25AD).txt", //TTDNS
   "https://mirror.ghproxy.com/raw.githubusercontent.com/Lynricsy/HyperADRules/master/rules.txt", //HyperADRules
   "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/all.txt", //AdGuardHomeRules
@@ -89,7 +90,7 @@ const allow = [
 
   "https://raw.githubusercontent.com/Zisbusy/AdGuardHome-Rules/main/Rules/whitelist.txt", //Zisbusy
   "https://raw.githubusercontent.com/sccheng460/adguard/main/whitelist.txt", //sccheng460
-  "https://mirror.ghproxy.com/raw.githubusercontent.com/8680/GOODBYEADS/master/allow.txt", //8680
+  "https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/allow.txt", //8680
   "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/ok.txt", //AdGuardHomeRules
   "https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/skyrules.txt", //AdGuardHomeRules
   "https://cdn.jsdelivr.net/gh/hl2guide/Filterlist-for-AdGuard@master/filter_whitelist.txt", //hl2guideFilterlist-for-AdGuard
