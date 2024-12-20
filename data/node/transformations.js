@@ -18,9 +18,7 @@ const transformations = async (...fileList) => {
 
         // 过滤出符合正则表达式的行
         // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
-        const filteredContentArray = contentArray.filter((line) =>
-          /^\/[a-z]([a-z]|\.)*\.$/.test(line)
-        );
+        const filteredContentArray = contentArray;
 
         // 将过滤后的内容重新组合成字符串
         const filteredContentString = filteredContentArray.join("\n");

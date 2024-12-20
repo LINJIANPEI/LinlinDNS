@@ -25,6 +25,7 @@ const mergeBlacklists = async (directory) => {
     const allFileData = await Promise.all(
       rulesFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
     );
+
     // 处理文件规则
     const allFileDatas = allFileData
       .join("\n")
