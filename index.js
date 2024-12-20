@@ -56,10 +56,10 @@ const rules = [
   "https://easylist-downloads.adblockplus.org/easylist.txt", //EasyList-去除国际网页
   "https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt", //海哥
   "https://anti-ad.net/easylist.txt", //anti-AD
-  "https://gitee.com/cjx82630/cjxlist/raw/master/cjx-ublock.txt", //CJX'suBlocklist
+  "https://raw.githubusercontent.com/cjx82630/cjxlist/refs/heads/master/cjx-ublock.txt", //CJX'suBlocklist
   "https://easylist-downloads.adblockplus.org/easyprivacy.txt", //EasyListPrivacy
   "https://easylist-downloads.adblockplus.org/easylistchina.txt", //EasylistChina
-  "https://cdn.jsdelivr.net/gh/cjx82630/cjxlist@master/cjx-annoyance.txt", //CJX'sAnnoyanceList
+  "https://raw.githubusercontent.com/cjx82630/cjxlist/refs/heads/master/cjx-annoyance.txt", //CJX'sAnnoyanceList
   "https://cdn.jsdelivr.net/gh/zsakvo/AdGuard-Custom-Rule@master/rule/zhihu-strict.txt", //移除知乎部分广告
   "http://sub.adtchrome.com/adt-chinalist-easylist.txt", //ChinaList+EasyList(淇)
   "https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts", //Goooler
@@ -74,11 +74,6 @@ const rules = [
   "https://cdn.jsdelivr.net/gh/anudeepND/blacklist@master/adservers.txt", //anudeepND/blacklist
   "https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker", //NEODEVHOST
   "https://cdn.jsdelivr.net/gh/liwenjie119/adg-rules@master/black.txt", //LWJ'sblacklist
-  "https://raw.fastgit.org/BlueSkyXN/AdGuardHomeRules/master/all.txt", //BlueSkyXN/AdGuardHomeRules
-  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist1.txt", //hl2guide/Filterlist-for-AdGuard1
-  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist2.txt", //hl2guide/Filterlist-for-AdGuard2
-  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist3.txt", //hl2guide/Filterlist-for-AdGuard3
-  "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist4.txt", //hl2guide/Filterlist-for-AdGuard4
   "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt", //mphin
 ];
 //白名单规则
@@ -108,7 +103,6 @@ const allow = [
   "https://cdn.jsdelivr.net/gh/LucienShui/chinalist@gh-pages/chinalist.txt", //LucienShui/chinalist
   "https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List", //etotakeo/AdGuardDNSPassList
   "https://cdn.jsdelivr.net/gh/JamesDamp/AdGuard-Home---Personal-Whitelist@master/AdGuardHome-Whitelist.txt", //JamesDamp/Personal-Whitelist
-  "https://cdn.jsdelivr.net/gh/scarletbane/AdGuard-Home-Whitelist@main/whitelist.txt", //scarletbane/AdGuard-Home-Whitelist
   "https://raw.githubusercontent.com/Aveelo/Aveelo-adguard-home-Adlist-Whitelist/master/WhitelistAdGuardHome", //Aveelo-adguard-home-Adlist-Whitelist
   "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Allowlist.txt", //mphin
   "https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt", //5460
