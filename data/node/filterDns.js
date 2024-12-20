@@ -23,7 +23,8 @@ const filterDns = async (directory) => {
 
     console.log("过滤DNS成功");
   } catch (error) {
-    throw `过滤DNS失败:${error}`;
+    console.error(`过滤DNS规则失败: ${error.message}`);
+    throw new Error(`过滤DNS规则时发生错误: ${error.message}`);
   }
 };
 module.exports = {
