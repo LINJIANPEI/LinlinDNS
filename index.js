@@ -29,17 +29,15 @@ const { cleanReadme } = require("./data/node/cleanReadme"); // cleanReadme.js �
 //黑名单规则
 const rules = [
   "https://raw.githubusercontent.com/qq5460168/dangchu/main/black.txt", //5460
+  "https://raw.githubusercontent.com/qq5460168/dangchu/main/adhosts.txt", //5460
   "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt", //大萌主
   "https://raw.githubusercontent.com/afwfv/DD-AD/main/rule/DD-AD.txt", //DD
   "https://raw.gitmirror.com/Cats-Team/dns-filter/main/abp.txt", //AdRules DNS Filter
   "https://raw.hellogithub.com/hosts", //GitHub加速
-  "https://raw.githubusercontent.com/qq5460168/dangchu/main/adhosts.txt", //测试hosts
-  "https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt", //白名单
   "https://raw.githubusercontent.com/loveqqzj/AdGuard/master/Mobile.txt", //loveqqzj
   "https://raw.githubusercontent.com/mphin/AdGuardHomeRules/main/Blacklist.txt", //mphin
   "https://gitee.com/zjqz/ad-guard-home-dns/raw/master/black-list", //周木木
   "https://raw.githubusercontent.com/liwenjie119/adg-rules/master/black.txt", //liwenjie119
-  "https://raw.githubusercontent.com/qq5460168/dangchu/main/T%E7%99%BD%E5%90%8D%E5%8D%95.txt", //T白
   "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt", //秋风规则
   "https://github.com/entr0pia/fcm-hosts/raw/fcm/fcm-hosts", //FCM Hosts
 
@@ -81,11 +79,12 @@ const rules = [
   "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist2.txt", //hl2guide/Filterlist-for-AdGuard2
   "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist3.txt", //hl2guide/Filterlist-for-AdGuard3
   "https://raw.fastgit.org/hl2guide/Filterlist-for-AdGuard/master/Blocklist/filter_blocklist4.txt", //hl2guide/Filterlist-for-AdGuard4
-  'https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt'
+  "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt", //mphin
 ];
 //白名单规则
 const allow = [
-  "https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt", //白名单
+  "https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt", //5460
+  "https://raw.githubusercontent.com/qq5460168/dangchu/main/T%E7%99%BD%E5%90%8D%E5%8D%95.txt", //T白 5460
   "https://raw.githubusercontent.com/mphin/AdGuardHomeRules/main/Allowlist.txt",
   "https://file-git.trli.club/file-hosts/allow/Domains", //冷漠
   "https://hub.gitmirror.com/https://raw.githubusercontent.com/user001235/112/main/white.txt", //浅笑
@@ -111,7 +110,9 @@ const allow = [
   "https://cdn.jsdelivr.net/gh/JamesDamp/AdGuard-Home---Personal-Whitelist@master/AdGuardHome-Whitelist.txt", //JamesDamp/Personal-Whitelist
   "https://cdn.jsdelivr.net/gh/scarletbane/AdGuard-Home-Whitelist@main/whitelist.txt", //scarletbane/AdGuard-Home-Whitelist
   "https://raw.githubusercontent.com/Aveelo/Aveelo-adguard-home-Adlist-Whitelist/master/WhitelistAdGuardHome", //Aveelo-adguard-home-Adlist-Whitelist
-  'https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Allowlist.txt'
+  "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Allowlist.txt", //mphin
+  "https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt", //5460
+  "https://raw.githubusercontent.com/miaoermua/AdguardFilter/main/whitelist.txt", //AdguardFilter
 ];
 // 旧地址
 const oldDirectory = "./tmp";
