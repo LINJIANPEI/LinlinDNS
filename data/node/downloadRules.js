@@ -4,6 +4,12 @@ const iconv = require("iconv-lite");
 const { promisify } = require("util");
 const writeFile = promisify(fs.writeFile);
 
+/**
+ * 下载文件。
+ * @param {string} url - 下载链接。
+ * @param {string} directory - 下载保存的文件路径。
+ *
+ */
 const downloadFile = async (url, directory) => {
   try {
     const response = await axios.get(url, {
@@ -14,26 +20,32 @@ const downloadFile = async (url, directory) => {
     await writeFile(directory, decoded);
     console.log(`下载规则文件成功: ${url}`);
   } catch (error) {
-    console.log(`下载规则文件失败:${url}${error}`);
-    // throw `下载规则文件失败:${url}${error}`;
+    console.error(`下载文件失败: ${url} - ${error.message}`);
   }
 };
 
-//规则下载
+/**
+ * 规则下载。
+ * @param {Array} rules - 下载链接。
+ * @param {Array} allow - 下载链接。
+ * @param {string} directory - 下载保存的文件路径。
+ *
+ */
 const downloadRules = async (rules, allow, directory) => {
   console.log("开始下载规则");
+  const downloadTasks = [
+    ...rules.map((url, index) =>
+      downloadFile(url, `${directory}/rules${index + 1}.txt`)
+    ),
+    ...allow.map((url, index) =>
+      downloadFile(url, `${directory}/allow${index + 1}.txt`)
+    ),
+  ];
   try {
-    const downloadPromises = rules.map((url, index) =>
-      downloadFile(url, `${directory}/rules${index}.txt`)
-    );
-    const allowPromises = allow.map((url, index) =>
-      downloadFile(url, `${directory}/allow${index}.txt`)
-    );
-    await Promise.all([...downloadPromises, ...allowPromises]);
+    await Promise.all(downloadTasks);
     console.log("规则下载完成");
   } catch (error) {
-    console.log(`规则下载失败:${error}`);
-    // throw `规则下载失败:${error}`;
+    console.error(`规则下载过程中发生错误: ${error.message}`);
   }
 };
 

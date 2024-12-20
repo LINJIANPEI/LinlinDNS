@@ -162,11 +162,12 @@ async function main() {
     await title();
     // 处理md文件
     await cleanReadme();
-    // 删除临时文件夹
-    await deleteDir(oldDirectory);
     console.log("更新完成");
   } catch (error) {
-    throw `更新失败:${error}`;
+    console.log(`更新失败:${error}`);
+  } finally {
+    // 删除临时文件夹
+    await deleteDir(oldDirectory);
   }
 }
 main();
