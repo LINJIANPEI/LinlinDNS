@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { promisify } = require("util");
 const stat = promisify(fs.stat);
-const rmdir = promisify(fs.rmdir);
+const rmdir = promisify(fs.rm);
 
 /**
  * 检查文件夹是否存在。
