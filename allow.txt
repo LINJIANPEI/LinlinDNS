@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2024-12-21 09:14:10（北京时间）
+! Version: 2024-12-21 10:43:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 24278
+! Total count: 24276
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -20,6 +20,7 @@
 @@*.mp4?$media,stealth=referrer,domain=vidtube.pro
 @@*.myapp.com
 @@*.php?player=desktop$stealth=referrer,domain=tv1337.buzz|soccermlbstream.top|hitsports.pro|feedzstream.com|cricplay2.xyz|antenatv.shop|virazo.sx|redditsoccerstream.online
+@@*/embed/$stealth=referrer,domain=cambabe.video|cambabe.me
 @@-atari-embeds.googleusercontent.com/embeds/*/inner-frame-minified.html$stealth
 @@-social-bar.$domain=mobi.yahoo.com
 @@-template-ads/*$domain=rapidgrab.pl
@@ -9443,7 +9444,6 @@
 @@||cdn.adrise.tv/js/ads.js$domain=tubitv.com
 @@||cdn.adsafeprotected.com/*.*.js$domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|esgentside.com|maxisciences.com|ohmymag.com|ohmymag.de|ohmymag.com.br|ohmirevista.com
 @@||cdn.adsafeprotected.com/*.js$domain=gentside.com|ohmymag.com
-@@||cdn.adsafeprotected.com/iasPET.1.js$domain=geopop.it
 @@||cdn.adsafeprotected.com^$domain=tio.ch
 @@||cdn.adsninja.ca/adsninja_client.js$domain=androidpolice.com
 @@||cdn.adsninja.ca/adsninja_client.js$domain=makeuseof.com|howtogeek.com
@@ -10959,8 +10959,6 @@
 @@||dd.myapp.com^$important
 @@||dd6zx4ibq538k.cloudfront.net/static/images/$domain=tkmaxx.com
 @@||ddmix.net^$generichide
-@@||ddnk.advertur.ru/*/code.js$domain=grouple.co
-@@||ddnk.advertur.ru/*/loader.js$domain=grouple.co
 @@||ddnk.advertur.ru/*/loader.js$domain=zoobusiness.kiev.ua
 @@||ddys.pro^
 @@||ddys.pro^$important
@@ -12616,7 +12614,6 @@
 @@||geekrar.com^$generichide
 @@||geekzone.co.nz^$generichide
 @@||geely.com/assets/plugins/sa-sdk-javascript-*/sensorsdata.min.js$domain=galaxy.geely.com|xingyue.geely.com
-@@||gelbooru.com/ads.js
 @@||gelbooru.com/css^
 @@||gelbooru.com/script/jquery*.js
 @@||gelbooru.com/script/lazyload.js
@@ -23665,6 +23662,7 @@
 @@||wpmienphi.com^$generichide
 @@||wpnrtnmrewunrtok.xyz/*preview/*/preview.jpg$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz/main/$image,domain=camwhores.tv
+@@||wpnrtnmrewunrtok.xyz/remote_control.php?file=
 @@||wpnrtnmrewunrtok.xyz/remote_control.php^$domain=camwhores.tv
 @@||wqsd.jd.com
 @@||wqsd.jd.com
