@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2024-12-21 22:13:04（北京时间）
+! Version: 2024-12-22 00:17:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 24275
+! Total count: 24277
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -11349,6 +11349,7 @@
 @@||download-album.com^$generichide
 @@||download.3dzip.org^$generichide
 @@||download.adguard.com^
+@@||download.alicdn.com^$important
 @@||download.amd.com/js/analytics/analyticscore.js
 @@||download.com/ad-
 @@||download.developer.apple.com^$important
@@ -20700,6 +20701,7 @@
 @@||shareasale.com/r.cfm?
 @@||sharecast.ws/embed.min.js$stealth
 @@||sharecast.ws/player/$stealth
+@@||sharechain.qq.com^$important
 @@||sharecool.us^$generichide
 @@||shareinfo.pl^$generichide
 @@||sharejunction.com^$generichide
