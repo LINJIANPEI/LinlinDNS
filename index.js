@@ -84,7 +84,6 @@ const rules = [
   "https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt", //本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
   "https://cdn.jsdelivr.net/gh/anudeepND/blacklist@master/adservers.txt", //anudeepND/blacklist
   "https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker", //NEODEVHOST
-  "https://cdn.jsdelivr.net/gh/liwenjie119/adg-rules@master/black.txt", //LWJ'sblacklist
   "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt", //mphin
 ];
 //白名单规则
@@ -109,7 +108,6 @@ const allow = [
   "https://raw.githubusercontent.com/mawenjian/china-cdn-domain-whitelist/master/china-cdn-domain-whitelist.txt", //china-cdn-domain-whitelist
   "https://raw.githubusercontent.com/pluwen/china-domain-allowlist/master/allow-list.sorl", //china-domain-allowlist
   "https://raw.githubusercontent.com/entr0pia/SwitchyOmega-Whitelist/master/white-list.sorl", //SwitchyOmega-Whitelist
-  "https://cdn.jsdelivr.net/gh/liwenjie119/adg-rules@master/white.txt", //LWJ'swhitelist
   "https://cdn.jsdelivr.net/gh/LucienShui/chinalist@gh-pages/chinalist.txt", //LucienShui/chinalist
   "https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List", //etotakeo/AdGuardDNSPassList
   "https://cdn.jsdelivr.net/gh/JamesDamp/AdGuard-Home---Personal-Whitelist@master/AdGuardHome-Whitelist.txt", //JamesDamp/Personal-Whitelist
