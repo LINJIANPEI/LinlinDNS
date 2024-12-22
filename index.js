@@ -33,6 +33,7 @@ const rules = [
   "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt", //大萌主
   "https://raw.githubusercontent.com/afwfv/DD-AD/main/rule/DD-AD.txt", //DD
   "https://raw.gitmirror.com/Cats-Team/dns-filter/main/abp.txt", //AdRules DNS Filter
+  "https://www.i-dont-care-about-cookies.eu/abp/", //I don't care about cookies
   "https://raw.hellogithub.com/hosts", //GitHub加速
   "https://raw.githubusercontent.com/loveqqzj/AdGuard/master/Mobile.txt", //loveqqzj
   "https://raw.githubusercontent.com/mphin/AdGuardHomeRules/main/Blacklist.txt", //mphin
@@ -57,17 +58,25 @@ const rules = [
   "https://easylist-downloads.adblockplus.org/easylist.txt", //EasyList-去除国际网页
   "https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt", //海哥
   "https://anti-ad.net/easylist.txt", //anti-AD
+  "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt", //Anti-AD抗ad
   "https://raw.githubusercontent.com/cjx82630/cjxlist/refs/heads/master/cjx-ublock.txt", //CJX'suBlocklist
   "https://easylist-downloads.adblockplus.org/easyprivacy.txt", //EasyListPrivacy
   "https://easylist-downloads.adblockplus.org/easylistchina.txt", //EasylistChina
   "https://raw.githubusercontent.com/cjx82630/cjxlist/refs/heads/master/cjx-annoyance.txt", //CJX'sAnnoyanceList
   "https://cdn.jsdelivr.net/gh/zsakvo/AdGuard-Custom-Rule@master/rule/zhihu-strict.txt", //移除知乎部分广告
+  "https://raw.githubusercontent.com/zsakvo/AdGuard-Custom-Rule/master/rule/zhihu.txt", // Basic
   "http://sub.adtchrome.com/adt-chinalist-easylist.txt", //ChinaList+EasyList(淇)
   "https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts", //Goooler
   "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts", //ad-wars
   "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/sha_ad_hosts", //ad-wars
+  "https://adaway.org/hosts.txt", //AdAwayAdaway
   "http://winhelp2002.mvps.org/hosts.txt", //MVPSHOST
+  "https://hblock.molinero.dev/hosts ", //Hblock
+  "https://raw.githubusercontent.com/yous/YousList/master/hosts.txt"//YousList
+  "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts", //StevenBlack
+  "https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts", //Google hosts
   "https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/full/hosts.txt", //NekoDevTeam&neoHostsTeam
+  "https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/basic/hosts.txt ", //Basic
   "https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt", //VeleSila/yhosts
   "https://raw.githubusercontent.com/timlu85/AdGuard-Home_Youtube-Adfilter/master/Youtube-Adfilter-Web.txt", //Youtube-Adfilter-Web
   "https://raw.githubusercontent.com/91ajames/ublock-filters-ulist-youtube/main/blocklist.txt", //ublock-filters-ulist-youtube
