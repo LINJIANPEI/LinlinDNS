@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2024-12-22 20:29:19（北京时间）
+! Version: 2024-12-22 22:13:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 24278
+! Total count: 24279
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -8022,6 +8022,7 @@
 @@||api.amplitude.com^$xmlhttprequest,domain=insiderintelligence.com
 @@||api.anivideo.fun/file/$stealth
 @@||api.apolomedia.com/static/libs/event-tracking.min.js$script
+@@||api.app.mobilelocker.eu/api/latest/application-environment/ahoy/events$~third-party
 @@||api.apple-cloudkit.com^$important
 @@||api.apple-mapkit.com^$stealth
 @@||api.athom.com^$domain=my.homey.app,stealth
