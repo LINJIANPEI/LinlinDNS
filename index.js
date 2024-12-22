@@ -72,7 +72,8 @@ const rules = [
   "https://adaway.org/hosts.txt", //AdAwayAdaway
   "http://winhelp2002.mvps.org/hosts.txt", //MVPSHOST
   "https://hblock.molinero.dev/hosts ", //Hblock
-  "https://raw.githubusercontent.com/yous/YousList/master/hosts.txt"//YousList
+  "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", //AdGuard DNS filter
+  "https://raw.githubusercontent.com/yous/YousList/master/hosts.txt", //YousList
   "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts", //StevenBlack
   "https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts", //Google hosts
   "https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/full/hosts.txt", //NekoDevTeam&neoHostsTeam
