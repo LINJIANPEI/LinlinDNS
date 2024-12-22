@@ -97,7 +97,6 @@ const allow = [
   "https://gitee.com/zjqz/ad-guard-home-dns/raw/master/white-list", //周木木
   "https://raw.githubusercontent.com/liwenjie119/adg-rules/master/white.txt", //liwenjie119
   "https://raw.githubusercontent.com/qq5460168/dangchu/main/T%E7%99%BD%E5%90%8D%E5%8D%95.txt", //T白名单
-
   "https://raw.githubusercontent.com/Zisbusy/AdGuardHome-Rules/main/Rules/whitelist.txt", //Zisbusy
   "https://raw.githubusercontent.com/sccheng460/adguard/main/whitelist.txt", //sccheng460
   "https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/allow.txt", //8680
