@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2024-12-23 14:24:12（北京时间）
+! Version: 2024-12-23 16:21:38（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 24279
+! Total count: 24282
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -15064,6 +15064,7 @@
 @@||in-page-push.com^$script,domain=mylink.*|my1ink.*|myl1nk.*|myli3k.*
 @@||in-trend.biz^$generichide
 @@||in.appcenter.ms^$important
+@@||in.find.api.micloud.xiaomi.net^$important
 @@||in.gr^$generichide
 @@||in.treasuredata.com/js/*api_key$script,domain=retty.me
 @@||in.treasuredata.com/js/v*/event/fluentd_website/anchor_clicks_$domain=docs.fluentd.org
@@ -22727,6 +22728,7 @@
 @@||ulogin.ru/auth.php
 @@||ulogin.ru/fill.php
 @@||ultimate-guitar.com/components/ads/interstitial/
+@@||ultimateota.d.miui.com^$important
 @@||ultimedia.com/js/common/jquery.gatracker.js
 @@||ultimedia.com/js/common/smart.js$domain=letelegramme.fr
 @@||ultra4kporn.com^$generichide
@@ -22885,6 +22887,7 @@
 @@||us-west-2-prod-prodxbl01-reg-httpping.p76prod.systems^$important
 @@||us.configsvc1.live.com.akadns.net^$important
 @@||us.download.nvidia.com^$important
+@@||us.find.api.micloud.xiaomi.net^$important
 @@||us.np.stun.playstation.net^$important
 @@||usaa.com^$document
 @@||usandoapp.com^$generichide
