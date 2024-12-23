@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2024-12-23 16:21:38（北京时间）
+! Version: 2024-12-23 18:17:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 24282
+! Total count: 24283
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -8243,6 +8243,7 @@
 @@||apis.kostprice.com/fapi/$script,domain=gadgets.ndtv.com
 @@||apis.live.net^$important
 @@||apis.wavve.com/fz/streaming$domain=wavve.com,stealth=ip
+@@||apischedule.ksyungslb.com^$important
 @@||apiservices.krxd.net/click_tracker^
 @@||apissl.ksapisrv.com^$important
 @@||apiwaka.azure-api.net/api/key/$stealth,domain=wakanim.tv
