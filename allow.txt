@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2024-12-26 09:14:42（北京时间）
+! Version: 2024-12-26 10:46:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 24282
+! Total count: 24286
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -9138,6 +9138,7 @@
 @@||btrace.qq.com^$important
 @@||btrace.qq.com^$important
 @@||btsax.info^$generichide
+@@||btv.bg/static/bg/shared/js/admanager/ads.js
 @@||btvsports.cam^$generichide
 @@||btvsports.lol^$generichide
 @@||bucket.fitwhey.com/Banners^$domain=fitwhey.com
@@ -18010,6 +18011,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=bowfile.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=boyhoodmovies.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=breatheheavy.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=btv.bg
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=calculate.plus
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=calculator-online.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=calculatored.com
@@ -19393,6 +19395,8 @@
 @@||proxy.safebrowsing.apple^$important
 @@||proxy02.pop.ord.plex.bz^
 @@||proxy02.pop.ord.plex.bz^$important
+@@||prra.spxl.socy.es/pixel.json$domain=cadenaser.com
+@@||prra.spxl.socy.es/pixel/js/$domain=cadenaser.com
 @@||prs-gta5-prod.ros.rockstargames.com^$important
 @@||prscripts.com/pub.js$domain=pornve.com
 @@||prueba.pixelshost.com^$generichide
