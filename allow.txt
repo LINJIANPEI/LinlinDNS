@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2024-12-28 22:13:11（北京时间）
+! Version: 2024-12-29 00:18:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 24288
+! Total count: 24295
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -11745,6 +11745,7 @@
 @@||emerald.omeda.com/npdn/custsrv_login.do
 @@||emjcd.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@||emoji.gg^$generichide
+@@||emoji.qpic.cn^$important
 @@||emome.net/files/advertising/
 @@||emturbovid.com/t/$stealth=referrer
 @@||emturbovid.com/t/*?poster=$stealth=referrer
@@ -16144,6 +16145,7 @@
 @@||lol.qq.com^$important
 @@||lols.gg^$generichide
 @@||loltmcheck.com/js/ads.js
+@@||long.weixin.qq.com^$important
 @@||longtailvideo.com/5/googlytics/googlytics-1.js$domain=arte.tv
 @@||lookcam.com/fuckadblock.js
 @@||looker.com/api/internal/$~third-party
@@ -16820,6 +16822,7 @@
 @@||mmgd.xyz^$generichide
 @@||mmo-population.com^$generichide
 @@||mmo69.com^$generichide
+@@||mmsns.qpic.cn^$important
 @@||mmstat.com/eg.js$domain=1688.com|taobao.com|tmall.com|tudou.com|youku.com
 @@||mmstat.com/eg.js$domain=aliexpress.*
 @@||mmstat.com/eg.js$domain=player.youku.com
@@ -20751,6 +20754,7 @@
 @@||shipstation.com^$generichide
 @@||shmeea.edu.cn^$generichide
 @@||shminorshort.weixin.qq.com^
+@@||shmmsns.qpic.cn^$important
 @@||shoemoney.com^$generichide
 @@||shogaisha-techo.com^$generichide
 @@||shon.xyz^$generichide
@@ -20773,6 +20777,7 @@
 @@||short.croclix.me/*js/viewad.js
 @@||short.goldenfaucet.io/*js/viewad.js
 @@||short.goldenfaucet.io/*templates/css/viewad.css
+@@||short.weixin.qq.com^$important
 @@||short24.pw^$generichide
 @@||short2money.com^$stealth
 @@||shortadd.com^$generichide
@@ -21780,6 +21785,7 @@
 @@||szhr.com^*ad
 @@||szlong.weixin.qq.com^
 @@||szmg.qq.com^
+@@||szmmsns.qpic.cn^$important
 @@||sznlink.xyz/images/ad-inserter/*/*.js
 @@||sznlink.xyz/inc/plugins/ad-inserter-pro/images/ads.png
 @@||sznlink.xyz^$generichide
@@ -23871,6 +23877,7 @@
 @@||wwwimage-tve.cbsstatic.com^
 @@||wwwstream.pro^$subdocument,stealth
 @@||wx.17u.cn^$important
+@@||wx.qlogo.cn^$important
 @@||wx.qq.com/*/ad_$script
 @@||wx.qq.com/c/=/mpres/*/video_ad_
 @@||wx.qq.com/mmbizwap/*/framead.
