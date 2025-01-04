@@ -144,6 +144,12 @@ async function main() {
     await mergeBlacklists(oldDirectory);
     await mergeWhitelist(oldDirectory);
 
+    // 处理所有规则
+    await handleAllRules(
+      `${oldDirectory}/tmp-rules.txt`,
+      `${oldDirectory}/tmp-allow.txt`
+    );
+
     // 规则转换
     await transformations(
       `${oldDirectory}/tmp-rules.txt`,
@@ -162,8 +168,8 @@ async function main() {
     // 过滤DNS
     await filterDns(newDirectory);
 
-    // 处理所有规则
-    await handleAllRules("./allow.txt", "./dns.txt", "./rules.txt");
+    // // 处理所有规则
+    // await handleAllRules("./allow.txt", "./dns.txt", "./rules.txt");
 
     // 处理title
     await title();
