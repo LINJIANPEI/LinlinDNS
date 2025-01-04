@@ -45,7 +45,7 @@ const transformations = async (...fileList) => {
         // 过滤出符合正则表达式的行
         // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
         const filteredContentArray = contentArray.filter((str) =>
-          /^!/.test(str)
+          !/^!/.test(str)
         );
 
         // 将过滤后的内容重新组合成字符串
