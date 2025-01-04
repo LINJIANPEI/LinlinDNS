@@ -2,6 +2,7 @@ const fs = require("fs");
 const { promisify } = require("util");
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
+const compile = require("@adguard/hostlist-compiler");
 
 // 规则转换函数
 const transformations = async (...fileList) => {
@@ -11,7 +12,32 @@ const transformations = async (...fileList) => {
     for (const filePath of fileList) {
       try {
         // 读取文件内容
-        let content = await readFile(filePath, "utf8");
+        // let content = await readFile(filePath, "utf8");
+        const result = await compile({
+          name: "linlin",
+          sources: [
+            {
+              type: "adblock",
+              source: filePath,
+              transformations: ["RemoveComments", "Validate"],
+            },
+            {
+              type: "hosts",
+              source: filePath,
+              transformations: ["RemoveComments", "Validate"],
+            },
+          ],
+          transformations: [
+            "Deduplicate",
+            "Compress",
+            "TrimLines",
+            "Deduplicate",
+            "Validate",
+            "RemoveEmptyLines",
+          ],
+        });
+
+        const content = result.join("\n");
 
         // 将内容按行分割成数组
         const contentArray = content.split("\n");
