@@ -10,7 +10,7 @@ const transformations = async (...fileList) => {
   try {
     for (const filePath of fileList) {
       try {
-        // 读取文件内容
+        // 官方规则转换工具
         const contentArray = await compile({
           name: "linlin",
           sources: [
