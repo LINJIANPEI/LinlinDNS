@@ -16,13 +16,11 @@ const transformations = async (...fileList) => {
           sources: [
             {
               type: "adblock",
-              source: filePath,
-              transformations: ["Validate"],
+              source: filePath
             },
             {
               type: "hosts",
-              source: filePath,
-              transformations: ["Validate"],
+              source: filePath
             },
           ],
           transformations: ["Compress", "Validate"],
