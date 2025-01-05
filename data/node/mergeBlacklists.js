@@ -30,7 +30,7 @@ const mergeBlacklists = async (directory) => {
     const allFileDatas = allFileData
       .join("\n")
       .split("\n")
-      .filter((line) => !/^((\!)|(\[)).*/.test(line))
+      // .filter((line) => !/^((\!)|(\[)).*/.test(line))
       .join("\n");
     // 写入文件
     await writeFile(`${directory}/tmp-rules.txt`, allFileDatas, "utf8");
