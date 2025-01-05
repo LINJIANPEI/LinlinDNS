@@ -17,20 +17,15 @@ const transformations = async (...fileList) => {
             {
               type: "adblock",
               source: filePath,
-              transformations: ["RemoveComments", "Validate"],
+              transformations: ["Validate"],
             },
             {
               type: "hosts",
               source: filePath,
-              transformations: ["RemoveComments", "Validate"],
+              transformations: ["Validate"],
             },
           ],
-          transformations: [
-            "Compress",
-            "TrimLines",
-            "Validate",
-            "RemoveEmptyLines",
-          ],
+          transformations: ["Compress", "Validate"],
         });
 
         // 过滤出符合正则表达式的行
