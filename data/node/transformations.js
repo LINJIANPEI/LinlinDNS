@@ -1,6 +1,5 @@
 const fs = require("fs");
 const { promisify } = require("util");
-const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 const compile = require("@adguard/hostlist-compiler");
 
@@ -12,8 +11,7 @@ const transformations = async (...fileList) => {
     for (const filePath of fileList) {
       try {
         // 读取文件内容
-        // let content = await readFile(filePath, "utf8");
-        const result = await compile({
+        const contentArray = await compile({
           name: "linlin",
           sources: [
             {
@@ -37,15 +35,10 @@ const transformations = async (...fileList) => {
           ],
         });
 
-        const content = result.join("\n");
-
-        // 将内容按行分割成数组
-        const contentArray = content.split("\n");
-
         // 过滤出符合正则表达式的行
         // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
-        const filteredContentArray = contentArray.filter((str) =>
-          !/^!/.test(str)
+        const filteredContentArray = contentArray.filter(
+          (str) => !/^!/.test(str)
         );
 
         // 将过滤后的内容重新组合成字符串

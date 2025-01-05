@@ -15,12 +15,12 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
+// 处理黑白名单
+const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
 // 规则转换
 const { transformations } = require("./data/node/transformations"); // transformations.js 模块
 // 过滤DNS
 const { filterDns } = require("./data/node/filterDns"); // filterDns.js 模块
-// 处理所有规则
-const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
 // 处理md文件
@@ -144,7 +144,7 @@ async function main() {
     await mergeBlacklists(oldDirectory);
     await mergeWhitelist(oldDirectory);
 
-    // 处理所有规则
+    // 处理黑白名单
     await handleAllRules(
       `${oldDirectory}/tmp-rules.txt`,
       `${oldDirectory}/tmp-allow.txt`
@@ -167,9 +167,6 @@ async function main() {
     );
     // 过滤DNS
     await filterDns(newDirectory);
-
-    // // 处理所有规则
-    // await handleAllRules("./allow.txt", "./dns.txt", "./rules.txt");
 
     // 处理title
     await title();
