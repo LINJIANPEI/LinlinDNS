@@ -25,11 +25,10 @@ const mergeWhitelist = async (directory) => {
       allowFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
     );
     // 处理文件规则
-    const allFileDatas = allFileData
-      .join("\n")
-      .split("\n")
-      // .filter((line) => line.startsWith("@"))
-      .join("\n");
+    const allFileDatas = allFileData.join("\n");
+    // .split("\n")
+    // .filter((line) => line.startsWith("@"))
+    // .join("\n");
     // 写入文件
     await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");
 
