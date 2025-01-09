@@ -36,8 +36,8 @@ const handleAllRules = async (...fileList) => {
 
       // 将处理后的内容写回文件
       await writeFile(filePath, processedContentString, "utf8");
-      await writeFile("./tmp/tmp-allow.txt", contentAllow, "utf8");
-      await writeFile("./tmp/tmp-rules.txt", contentRules, "utf8");
+      await writeFile("./tmp/tmp-allow.txt", contentAllow.join("\n"), "utf8");
+      await writeFile("./tmp/tmp-rules.txt", contentRules.join("\n"), "utf8");
 
       console.log(`文件 ${filePath} 处理成功`);
     } catch (fileError) {
