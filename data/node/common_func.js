@@ -33,8 +33,8 @@ const filters = (arr) => {
 
 /**
  * 检查文件是否存在。
- * @param {string} filePath - 要检查的文件路径。
- * @return {boolean} 如果有返回true，没有则false。
+ * @param {string} filepath - 检查文件是否存在的文件名路径。
+ * @return {boolean} 存在返回true，不存在返回false。
  */
 const fileExistsAsync = async (filePath) => {
   try {
@@ -44,6 +44,37 @@ const fileExistsAsync = async (filePath) => {
     return false;
   }
 };
+
+// ----------------------------------------
+
+/**
+ * 检查文件夹是否存在。
+ * @param {string} dirPath - 要检查的文件夹路径。
+ * @return {boolean} 存在返回true，不存在返回false。
+ */
+const directoryExistsAsync = async (dirPath) => {
+  try {
+    const stats = await stat(dirPath);
+    return stats.isDirectory();
+  } catch (error) {
+    // 如果文件/文件夹不存在或无法访问，返回false
+    return false;
+  }
+};
+
+// ----------------------------------------
+
+/**
+ * 获取不带扩展名的文件名。
+ * @param {string} filepath - 要获取的文件名路径。
+ * @return {string} 获取的文件名。
+ */
+const getFilenameWithoutExtension = (filepath) => {
+  const filenameWithExtension = path.basename(filepath);
+  return path.parse(filenameWithExtension).name;
+};
+
+// ----------------------------------------
 
 /**
  * 复制文件。
@@ -92,33 +123,8 @@ const createDir = async (directory) => {
 // ----------------------------------------
 
 /**
- * 获取不带扩展名的文件名。
- * @param {string} filepath - 要获取的文件名路径。
- * @return {string} 获取的文件名。
- */
-const getFilenameWithoutExtension = (filepath) => {
-  const filenameWithExtension = path.basename(filepath);
-  return path.parse(filenameWithExtension).name;
-};
-
-/**
- * 检查文件是否存在。
- * @param {string} filepath - 检查文件是否存在的文件名路径。
- * @return {boolean} 存在返回true，不存在返回false。
- */
-async function fileExistsAsync(filePath) {
-  try {
-    await access(filePath, fs.constants.F_OK);
-    return true;
-  } catch (error) {
-    return false;
-  }
-}
-
-// 删除文件
-/**
- * 检查文件是否存在。
- * @param {string} filePaths - 文件路径。
+ * 删除文件。
+ * @param {array} filePaths - 文件路径。
  */
 const deleteFiles = async (...filePaths) => {
   console.log("开始删除文件");
@@ -139,21 +145,6 @@ const deleteFiles = async (...filePaths) => {
 };
 
 // ----------------------------------------
-
-/**
- * 检查文件夹是否存在。
- * @param {string} dirPath - 要检查的文件夹路径。
- * @return {boolean} 存在返回true，不存在返回false。
- */
-const directoryExistsAsync = async (dirPath) => {
-  try {
-    const stats = await stat(dirPath);
-    return stats.isDirectory();
-  } catch (error) {
-    // 如果文件/文件夹不存在或无法访问，返回false
-    return false;
-  }
-};
 
 /**
  * 创建一个指定的文件夹。
@@ -182,4 +173,13 @@ const deleteDir = async (directory) => {
 
 // ----------------------------------------
 
-module.exports = { filters, copyFiles, createDir, deleteFiles, deleteDir };
+module.exports = {
+  filters,
+  copyFiles,
+  createDir,
+  deleteFiles,
+  deleteDir,
+  fileExistsAsync,
+  getFilenameWithoutExtension,
+  directoryExistsAsync,
+};
