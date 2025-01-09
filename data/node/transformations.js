@@ -42,7 +42,7 @@ const transformations = async (...fileList) => {
             .filter((str) => !/^!/.test(str))
             .push(...contentAllow)
             .join("\n");
-          await writeFile("./tmp/tmp-allow.txt", filteredContentString, "utf8");
+          await writeFile("./tmp/tmp-allow.txt", filteredContentArray, "utf8");
         } else {
           // 官方规则转换工具
           const contentArray = await compile({
@@ -63,7 +63,7 @@ const transformations = async (...fileList) => {
             .filter((str) => !/^!/.test(str))
             .push(...contentRules)
             .join("\n");
-          await writeFile("./tmp/tmp-rules.txt", filteredContentString, "utf8");
+          await writeFile("./tmp/tmp-rules.txt", filteredContentArray, "utf8");
         }
 
         // 将过滤后的内容重新组合成字符串
