@@ -21,8 +21,7 @@ const transformations = async (...fileList) => {
         contentAllow = contentAllow.split("\n");
         let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8");
         contentRules = contentRules.split("\n");
-        let filteredContentArray = "";
-        if ((filePath = "./tmp/tmp-allowFilter.txt")) {
+        if (filePath == "./tmp/tmp-allowFilter.txt") {
           // 官方规则转换工具
           const contentArray = await compile({
             name: "linlin",
@@ -38,7 +37,7 @@ const transformations = async (...fileList) => {
             ],
             transformations: ["Compress", "Validate", "InvertAllow"],
           });
-          filteredContentArray = [...new Set(contentArray)]
+          const filteredContentArray = [...new Set(contentArray)]
             .filter((str) => !/^!/.test(str))
             .push(...contentAllow)
             .join("\n");
@@ -59,7 +58,7 @@ const transformations = async (...fileList) => {
             ],
             transformations: ["Compress", "Validate"],
           });
-          filteredContentArray = [...new Set(contentArray)]
+          const filteredContentArray = [...new Set(contentArray)]
             .filter((str) => !/^!/.test(str))
             .push(...contentRules)
             .join("\n");
