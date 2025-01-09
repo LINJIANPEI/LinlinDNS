@@ -14,7 +14,7 @@ const handleAllRules = async (...fileList) => {
       let contentAllow = await readFile("./tmp/tmp-allow.txt", "utf8");
       contentAllow = contentAllow.split("\n");
       let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8");
-      contentAllow = contentAllow.split("\n");
+      contentAllow = contentRules.split("\n");
 
       // 将文件内容按行分割成数组，并进行处理
       let processedContentArray = content.split("\n");
