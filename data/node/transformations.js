@@ -37,9 +37,10 @@ const transformations = async (...fileList) => {
             ],
             transformations: ["Compress", "Validate", "InvertAllow"],
           });
-          const filteredContentArray = [...new Set(contentArray)]
+          const filteredContentArray = [
+            ...new Set(...new Set([...contentArray, ...contentAllow])),
+          ]
             .filter((str) => !/^!/.test(str))
-            .push(...contentAllow)
             .join("\n");
           await writeFile("./tmp/tmp-allow.txt", filteredContentArray, "utf8");
         } else {
@@ -58,9 +59,10 @@ const transformations = async (...fileList) => {
             ],
             transformations: ["Compress", "Validate"],
           });
-          const filteredContentArray = [...new Set(contentArray)]
+          const filteredContentArray = [
+            ...new Set([...contentArray, ...contentAllow]),
+          ]
             .filter((str) => !/^!/.test(str))
-            .push(...contentRules)
             .join("\n");
           await writeFile("./tmp/tmp-rules.txt", filteredContentArray, "utf8");
         }
