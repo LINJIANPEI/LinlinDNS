@@ -45,13 +45,15 @@ const mergeWhitelist = async (directory) => {
           allFileDataFilter.push(line);
         }
       });
-    allFileDatas = filters(allFileDatas).join("\n");
     // 写入文件
-    await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");
-    allFileDataFilter = allFileDataFilter.join("\n");
+    await writeFile(
+      `${directory}/tmp-allow.txt`,
+      filters(allFileDatas).join("\n"),
+      "utf8"
+    );
     await writeFile(
       `${directory}/tmp-allowFilter.txt`,
-      allFileDataFilter,
+      allFileDataFilter.join("\n"),
       "utf8"
     );
 
