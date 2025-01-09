@@ -11,12 +11,10 @@ const handleAllRules = async (...fileList) => {
     try {
       // 读取文件内容
       const content = await readFile(filePath, "utf8");
-      let contentAllow = (await readFile("./tmp/tmp-allow.txt", "utf8")).split(
-        "\n"
-      );
-      let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8").split(
-        "\n"
-      );
+      let contentAllow = await readFile("./tmp/tmp-allow.txt", "utf8");
+      contentAllow = contentAllow.split("\n");
+      let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8");
+      contentAllow = contentAllow.split("\n");
 
       // 将文件内容按行分割成数组，并进行处理
       let processedContentArray = content.split("\n");
