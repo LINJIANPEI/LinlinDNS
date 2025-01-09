@@ -26,7 +26,7 @@ const mergeBlacklists = async (directory) => {
       rulesFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
     );
 
-    let allFileDataFilter = "";
+    let allFileDataFilter = [];
     // 处理文件规则
     const allFileDatas = allFileData
       .join("\n")
@@ -35,7 +35,7 @@ const mergeBlacklists = async (directory) => {
         if (!/^((\!)|(\[)).*/.test(line)) {
           return line;
         } else {
-          allFileDataFilter += line;
+          allFileDataFilter.push(line);
         }
       })
       .join("\n");
@@ -43,7 +43,7 @@ const mergeBlacklists = async (directory) => {
     await writeFile(`${directory}/tmp-rules.txt`, allFileDatas, "utf8");
     await writeFile(
       `${directory}/tmp-rulesFilter.txt`,
-      allFileDataFilter,
+      allFileDataFilter.join("\n"),
       "utf8"
     );
 

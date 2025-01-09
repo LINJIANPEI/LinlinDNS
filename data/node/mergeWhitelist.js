@@ -25,7 +25,7 @@ const mergeWhitelist = async (directory) => {
       allowFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
     );
 
-    let allFileDataFilter = "";
+    let allFileDataFilter = [];
     // 处理文件规则
     const allFileDatas = allFileData
       .join("\n")
@@ -34,7 +34,7 @@ const mergeWhitelist = async (directory) => {
         if (line.startsWith("@")) {
           return line;
         } else {
-          allFileDataFilter += line;
+          allFileDataFilter.push(line);
         }
       })
       .join("\n");
@@ -42,7 +42,7 @@ const mergeWhitelist = async (directory) => {
     await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");
     await writeFile(
       `${directory}/tmp-allowFilter.txt`,
-      allFileDataFilter,
+      allFileDataFilter.join("\n"),
       "utf8"
     );
 
