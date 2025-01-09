@@ -132,7 +132,9 @@ async function main() {
       "./allow.txt",
       "./dns.txt",
       "./DnsConfiguration.txt",
-      "./rules.txt"
+      "./rules.txt",
+      "./allowFilter.txt",
+      "./rulesFilter.txt"
     );
     // 复制文件
     await copyFiles("./data/rules/adblock.txt", `${oldDirectory}/rules01.txt`);
