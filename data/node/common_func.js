@@ -33,7 +33,7 @@ const filters = (arr) => {
 
 /**
  * 检查文件是否存在。
- * @param {string} directory - 要检查的文件路径。
+ * @param {string} filePath - 要检查的文件路径。
  * @return {boolean} 如果有返回true，没有则false。
  */
 const fileExistsAsync = async (filePath) => {
