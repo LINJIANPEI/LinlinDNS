@@ -18,8 +18,8 @@ const handleAllRules = async (...fileList) => {
       processedContentArray = [...new Set(processedContentArray)]
         .map((line) => line.trim()) // 修剪每行的空白
         .filter((line) => line !== "") // 过滤掉空行
-        .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line)) // 过滤掉特定格式的行
-        .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)) // 过滤掉更多特定格式的行
+        // .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line)) // 过滤掉特定格式的行
+        // .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)) // 过滤掉更多特定格式的行
         .sort(); // 对行进行排序
 
       // 将处理后的内容重新组合成字符串
