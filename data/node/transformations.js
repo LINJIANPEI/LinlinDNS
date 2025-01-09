@@ -16,31 +16,58 @@ const transformations = async (...fileList) => {
         // 过滤出符合正则表达式的行
         // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
         // const filteredContentArray = contentArray;
-
-        // 官方规则转换工具
-        const contentArray = await compile({
-          name: "linlin",
-          sources: [
-            {
-              type: "adblock",
-              source: filePath,
-            },
-            {
-              type: "hosts",
-              source: filePath,
-            },
-          ],
-          transformations: ["Compress", "Validate"],
-        });
-        const filteredContentArray = [...new Set(contentArray)].filter(
-          (str) => !/^!/.test(str)
-        );
+        let contentAllow = await readFile("./tmp/tmp-allow.txt", "utf8");
+        contentAllow = contentAllow.split("\n");
+        let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8");
+        contentRules = contentRules.split("\n");
+        let filteredContentArray = "";
+        if ((filePath = "./tmp/tmp-allowFilter.txt")) {
+          // 官方规则转换工具
+          const contentArray = await compile({
+            name: "linlin",
+            sources: [
+              {
+                type: "adblock",
+                source: filePath,
+              },
+              {
+                type: "hosts",
+                source: filePath,
+              },
+            ],
+            transformations: ["Compress", "Validate", "InvertAllow"],
+          });
+          filteredContentArray = [...new Set(contentArray)]
+            .filter((str) => !/^!/.test(str))
+            .push(...contentAllow);
+          await writeFile("./tmp/tmp-allow.txt", filteredContentString, "utf8");
+        } else {
+          // 官方规则转换工具
+          const contentArray = await compile({
+            name: "linlin",
+            sources: [
+              {
+                type: "adblock",
+                source: filePath,
+              },
+              {
+                type: "hosts",
+                source: filePath,
+              },
+            ],
+            transformations: ["Compress", "Validate"],
+          });
+          filteredContentArray = [...new Set(contentArray)]
+            .filter((str) => !/^!/.test(str))
+            .push(...contentRules);
+          await writeFile("./tmp/tmp-rules.txt", filteredContentString, "utf8");
+        }
 
         // 将过滤后的内容重新组合成字符串
-        const filteredContentString = filteredContentArray.join("\n");
+        // const filteredContentString = filteredContentArray.join("\n");
 
         // 将过滤后的内容写回文件
-        await writeFile(filePath, filteredContentString, "utf8");
+        // await writeFile(filePath, filteredContentString, "utf8");
         console.log(`处理文件 ${filePath} 完成。`);
       } catch (fileError) {
         // 捕获并打印单个文件的错误，但不中断整个流程
@@ -57,3 +84,4 @@ const transformations = async (...fileList) => {
 };
 
 module.exports = { transformations };
+InvertAllow;

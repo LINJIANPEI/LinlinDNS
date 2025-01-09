@@ -145,8 +145,8 @@ async function main() {
 
     // 规则转换过滤
     await transformations(
-      `${oldDirectory}/tmp-allow.txt`,
-      `${oldDirectory}/tmp-rules.txt`
+      `${oldDirectory}/tmp-rulesFilter.txt`,
+      `${oldDirectory}/tmp-allowFilter.txt`
     );
 
     // 删除文件
