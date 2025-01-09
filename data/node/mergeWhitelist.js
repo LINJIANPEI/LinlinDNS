@@ -42,7 +42,7 @@ const mergeWhitelist = async (directory) => {
     await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");
     await writeFile(
       `${directory}/tmp-allowFilter.txt`,
-      allFileDataFilter.join("\n"),
+      allFileDataFilter.sort().join("\n"),
       "utf8"
     );
 

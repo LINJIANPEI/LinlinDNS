@@ -43,7 +43,7 @@ const mergeBlacklists = async (directory) => {
     await writeFile(`${directory}/tmp-rules.txt`, allFileDatas, "utf8");
     await writeFile(
       `${directory}/tmp-rulesFilter.txt`,
-      allFileDataFilter.join("\n"),
+      allFileDataFilter.sort().join("\n"),
       "utf8"
     );
 
