@@ -86,4 +86,3 @@ const transformations = async (...fileList) => {
 };
 
 module.exports = { transformations };
-InvertAllow;
