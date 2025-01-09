@@ -1,11 +1,10 @@
-// 创建临时文件夹
-const { createDir } = require("./data/node/createDir"); // createDir.js 模块
-// 删除临时文件夹
-const { deleteDir } = require("./data/node/deleteDir"); // deleteDir.js 模块
-// 复制文件
-const { copyFiles } = require("./data/node/copyFiles"); // copyFiles.js 模块
-// 删除文件
-const { deleteFiles } = require("./data/node/deleteFiles"); // deleteFiles.js 模块
+const {
+  createDir,
+  copyFiles,
+  deleteDir,
+  deleteFiles,
+} = require("./data/node/common_func"); // common_func.js 模块
+
 //规则下载
 const { downloadRules } = require("./data/node/downloadRules"); // downloadRules.js 模块
 
