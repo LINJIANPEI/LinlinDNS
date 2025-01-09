@@ -9,38 +9,74 @@ const transformations = async (...fileList) => {
 
   try {
     for (const filePath of fileList) {
-      try {
-        // 官方规则转换工具
-        const contentArray = await compile({
-          name: "linlin",
-          sources: [
-            {
-              type: "adblock",
-              source: filePath
-            },
-            {
-              type: "hosts",
-              source: filePath
-            },
-          ],
-          transformations: ["Compress", "Validate"],
-        });
+      if (filePath == "./tmp/tmp-allow.txt") {
+        try {
+          // 官方规则转换工具
+          const contentArray = await compile({
+            name: "linlin",
+            sources: [
+              {
+                type: "adblock",
+                source: filePath,
+              },
+              {
+                type: "hosts",
+                source: filePath,
+              },
+            ],
+            transformations: ["Compress", "Validate", "InvertAllow"],
+          });
 
-        // 过滤出符合正则表达式的行
-        // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
-        const filteredContentArray = [...new Set(contentArray)].filter(
-          (str) => !/^!/.test(str)
-        );
+          // 过滤出符合正则表达式的行
+          // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
+          const filteredContentArray = [...new Set(contentArray)].filter(
+            (str) => !/^!/.test(str)
+          );
 
-        // 将过滤后的内容重新组合成字符串
-        const filteredContentString = filteredContentArray.join("\n");
+          // 将过滤后的内容重新组合成字符串
+          const filteredContentString = filteredContentArray.join("\n");
 
-        // 将过滤后的内容写回文件
-        await writeFile(filePath, filteredContentString, "utf8");
-        console.log(`处理文件 ${filePath} 完成。`);
-      } catch (fileError) {
-        // 捕获并打印单个文件的错误，但不中断整个流程
-        console.error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
+          // 将过滤后的内容写回文件
+          await writeFile(filePath, filteredContentString, "utf8");
+          console.log(`处理文件 ${filePath} 完成。`);
+        } catch (fileError) {
+          // 捕获并打印单个文件的错误，但不中断整个流程
+          console.error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
+        }
+      } else {
+        try {
+          // 官方规则转换工具
+          const contentArray = await compile({
+            name: "linlin",
+            sources: [
+              {
+                type: "adblock",
+                source: filePath,
+              },
+              {
+                type: "hosts",
+                source: filePath,
+              },
+            ],
+            transformations: ["Compress", "Validate"],
+          });
+
+          // 过滤出符合正则表达式的行
+          // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
+          const filteredContentArray = [...new Set(contentArray)].filter(
+            (str) => !/^!/.test(str)
+          );
+
+          // 将过滤后的内容重新组合成字符串
+          const filteredContentString = filteredContentArray.join("\n");
+
+          // 将过滤后的内容写回文件
+          await writeFile(filePath, filteredContentString, "utf8");
+          console.log(`处理文件 ${filePath} 完成。`);
+        } catch (fileError) {
+          // 捕获并打印单个文件的错误，但不中断整个流程
+          console.error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
+        }
       }
     }
 
