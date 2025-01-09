@@ -11,22 +11,35 @@ const handleAllRules = async (...fileList) => {
     try {
       // 读取文件内容
       const content = await readFile(filePath, "utf8");
+      let contentAllow = (await readFile("./tmp/tmp-allow.txt", "utf8")).split(
+        "\n"
+      );
+      let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8").split(
+        "\n"
+      );
 
       // 将文件内容按行分割成数组，并进行处理
       let processedContentArray = content.split("\n");
 
-      processedContentArray = [...new Set(processedContentArray)]
-        .map((line) => line.trim()) // 修剪每行的空白
-        .filter((line) => line !== "") // 过滤掉空行
-        // .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line)) // 过滤掉特定格式的行
-        // .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)) // 过滤掉更多特定格式的行
-        .sort(); // 对行进行排序
+      processedContentArray = processedContentArray.filter((line) => {
+        if (/^\|\|.*/.test(line) || /^\/.*\/$/.test(line)) {
+          contentRules.push(line);
+        } else if (/^@@\|\|.*/.test(line)) {
+          contentAllow.push(line);
+        } else {
+          return line;
+        }
+      });
+      // .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line)) // 过滤掉特定格式的行
+      // .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)) // 过滤掉更多特定格式的行
 
       // 将处理后的内容重新组合成字符串
       const processedContentString = processedContentArray.join("\n");
 
       // 将处理后的内容写回文件
       await writeFile(filePath, processedContentString, "utf8");
+      await writeFile("./tmp/tmp-allow.txt", contentAllow, "utf8");
+      await writeFile("./tmp/tmp-rules.txt", contentRules, "utf8");
 
       console.log(`文件 ${filePath} 处理成功`);
     } catch (fileError) {

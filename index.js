@@ -144,17 +144,17 @@ async function main() {
     await mergeBlacklists(oldDirectory);
     await mergeWhitelist(oldDirectory);
 
-    // 处理黑白名单
+    // 处理黑白名单过滤
     await handleAllRules(
-      `${oldDirectory}/tmp-rules.txt`,
-      `${oldDirectory}/tmp-allow.txt`
+      `${oldDirectory}/tmp-rulesFilter.txt`,
+      `${oldDirectory}/tmp-allowFilter.txt`
     );
 
-    // 规则转换
-    await transformations(
-      `${oldDirectory}/tmp-rules.txt`,
-      `${oldDirectory}/tmp-allow.txt`
-    );
+    // // 规则转换过滤
+    // await transformations(
+    //   `${oldDirectory}/tmp-rulesFilter.txt`,
+    //   `${oldDirectory}/tmp-allowFilter.txt`
+    // );
 
     // 复制文件
     await copyFiles(

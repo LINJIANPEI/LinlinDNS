@@ -3,6 +3,7 @@ const { promisify } = require("util");
 const readDir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
+const { filters } = require("./filters");
 
 // 合并规则
 const mergeWhitelist = async (directory) => {
@@ -46,10 +47,14 @@ const mergeWhitelist = async (directory) => {
       })
       .join("\n");
     // 写入文件
-    await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");
+    await writeFile(
+      `${directory}/tmp-allow.txt`,
+      filters(allFileDatas),
+      "utf8"
+    );
     await writeFile(
       `${directory}/tmp-allowFilter.txt`,
-      allFileDataFilter.sort().join("\n"),
+      allFileDataFilter.join("\n"),
       "utf8"
     );
 
