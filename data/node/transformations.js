@@ -39,7 +39,8 @@ const transformations = async (...fileList) => {
           });
           filteredContentArray = [...new Set(contentArray)]
             .filter((str) => !/^!/.test(str))
-            .push(...contentAllow);
+            .push(...contentAllow)
+            .join("\n");
           await writeFile("./tmp/tmp-allow.txt", filteredContentString, "utf8");
         } else {
           // 官方规则转换工具
@@ -59,7 +60,8 @@ const transformations = async (...fileList) => {
           });
           filteredContentArray = [...new Set(contentArray)]
             .filter((str) => !/^!/.test(str))
-            .push(...contentRules);
+            .push(...contentRules)
+            .join("\n");
           await writeFile("./tmp/tmp-rules.txt", filteredContentString, "utf8");
         }
 
