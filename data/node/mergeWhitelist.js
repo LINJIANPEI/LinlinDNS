@@ -44,12 +44,11 @@ const mergeWhitelist = async (directory) => {
         } else {
           allFileDataFilter.push(line);
         }
-      })
-      .join("\n");
+      });
     // 写入文件
     await writeFile(
       `${directory}/tmp-allow.txt`,
-      filters(allFileDatas),
+      filters(allFileDatas).join("\n"),
       "utf8"
     );
     await writeFile(
