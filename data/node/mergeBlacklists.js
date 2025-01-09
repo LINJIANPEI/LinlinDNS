@@ -29,7 +29,7 @@ const mergeBlacklists = async (directory) => {
 
     let allFileDataFilter = [];
     // 处理文件规则
-    const allFileDatas = allFileData
+    let allFileDatas = allFileData
       .join("\n")
       .split("\n")
       // .filter((line) => {
@@ -46,15 +46,13 @@ const mergeBlacklists = async (directory) => {
           allFileDataFilter.push(line);
         }
       });
+    allFileDatas = filters(allFileDatas).join("\n");
     // 写入文件
-    await writeFile(
-      `${directory}/tmp-rules.txt`,
-      filters(allFileDatas).join("\n"),
-      "utf8"
-    );
+    await writeFile(`${directory}/tmp-rules.txt`, allFileDatas, "utf8");
+    allFileDataFilter = allFileDataFilter.join("\n");
     await writeFile(
       `${directory}/tmp-rulesFilter.txt`,
-      allFileDataFilter.join("\n"),
+      allFileDataFilter,
       "utf8"
     );
 

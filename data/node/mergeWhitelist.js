@@ -28,7 +28,7 @@ const mergeWhitelist = async (directory) => {
 
     let allFileDataFilter = [];
     // 处理文件规则
-    const allFileDatas = allFileData
+    let allFileDatas = allFileData
       .join("\n")
       .split("\n")
       // .filter((line) => {
@@ -45,15 +45,13 @@ const mergeWhitelist = async (directory) => {
           allFileDataFilter.push(line);
         }
       });
+    allFileDatas = filters(allFileDatas).join("\n");
     // 写入文件
-    await writeFile(
-      `${directory}/tmp-allow.txt`,
-      filters(allFileDatas).join("\n"),
-      "utf8"
-    );
+    await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");
+    allFileDataFilter = allFileDataFilter.join("\n");
     await writeFile(
       `${directory}/tmp-allowFilter.txt`,
-      allFileDataFilter.join("\n"),
+      allFileDataFilter,
       "utf8"
     );
 
