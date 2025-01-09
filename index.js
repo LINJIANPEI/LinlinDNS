@@ -126,15 +126,7 @@ async function main() {
     await createDir(oldDirectory);
     //规则下载
     await downloadRules(rules, allow, oldDirectory);
-    // 删除文件
-    await deleteFiles(
-      "./allow.txt",
-      "./dns.txt",
-      "./DnsConfiguration.txt",
-      "./rules.txt",
-      "./allowFilter.txt",
-      "./rulesFilter.txt"
-    );
+
     // 复制文件
     await copyFiles("./data/rules/adblock.txt", `${oldDirectory}/rules01.txt`);
     await copyFiles(
@@ -156,7 +148,15 @@ async function main() {
     //   `${oldDirectory}/tmp-rulesFilter.txt`,
     //   `${oldDirectory}/tmp-allowFilter.txt`
     // );
-
+    // 删除文件
+    await deleteFiles(
+      "./allow.txt",
+      "./dns.txt",
+      "./DnsConfiguration.txt",
+      "./rules.txt",
+      "./allowFilter.txt",
+      "./rulesFilter.txt"
+    );
     // 复制文件
     await copyFiles(
       `${oldDirectory}/tmp-allow.txt`,
