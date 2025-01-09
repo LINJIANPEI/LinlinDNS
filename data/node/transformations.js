@@ -60,7 +60,7 @@ const transformations = async (...fileList) => {
             transformations: ["Compress", "Validate"],
           });
           const filteredContentArray = [
-            ...new Set([...contentArray, ...contentAllow]),
+            ...new Set([...contentArray, ...contentRules]),
           ]
             .filter((str) => !/^!/.test(str))
             .join("\n");
