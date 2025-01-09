@@ -26,13 +26,26 @@ const mergeBlacklists = async (directory) => {
       rulesFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
     );
 
+    let allFileDataFilter = "";
     // 处理文件规则
-    const allFileDatas = allFileData.join("\n");
-    // .split("\n")
-    // .filter((line) => !/^((\!)|(\[)).*/.test(line))
-    // .join("\n");
+    const allFileDatas = allFileData
+      .join("\n")
+      .split("\n")
+      .filter((line) => {
+        if (!/^((\!)|(\[)).*/.test(line)) {
+          return line;
+        } else {
+          allFileDataFilter += line;
+        }
+      })
+      .join("\n");
     // 写入文件
     await writeFile(`${directory}/tmp-rules.txt`, allFileDatas, "utf8");
+    await writeFile(
+      `${directory}/tmp-rulesFilter.txt`,
+      allFileDataFilter,
+      "utf8"
+    );
 
     console.log(`合并白名单规则完成，共处理了${rulesFiles.length}个文件`);
   } catch (error) {

@@ -161,9 +161,18 @@ async function main() {
       `${oldDirectory}/tmp-allow.txt`,
       `${newDirectory}/allow.txt`
     );
+    // 复制文件
+    await copyFiles(
+      `${oldDirectory}/tmp-allowFilter.txt`,
+      `${newDirectory}/allowFilter.txt`
+    );
     await copyFiles(
       `${oldDirectory}/tmp-rules.txt`,
       `${newDirectory}/rules.txt`
+    );
+    await copyFiles(
+      `${oldDirectory}/tmp-rulesFilter.txt`,
+      `${newDirectory}/rulesFilter.txt`
     );
     // 过滤DNS
     await filterDns(newDirectory);

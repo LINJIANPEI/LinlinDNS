@@ -24,13 +24,27 @@ const mergeWhitelist = async (directory) => {
     const allFileData = await Promise.all(
       allowFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
     );
+
+    let allFileDataFilter = "";
     // 处理文件规则
-    const allFileDatas = allFileData.join("\n");
-    // .split("\n")
-    // .filter((line) => line.startsWith("@"))
-    // .join("\n");
+    const allFileDatas = allFileData
+      .join("\n")
+      .split("\n")
+      .filter((line) => {
+        if (line.startsWith("@")) {
+          return line;
+        } else {
+          allFileDataFilter += line;
+        }
+      })
+      .join("\n");
     // 写入文件
     await writeFile(`${directory}/tmp-allow.txt`, allFileDatas, "utf8");
+    await writeFile(
+      `${directory}/tmp-allowFilter.txt`,
+      allFileDataFilter,
+      "utf8"
+    );
 
     console.log(`合并白名单规则完成，共处理了${allowFiles.length}个文件`);
   } catch (error) {
