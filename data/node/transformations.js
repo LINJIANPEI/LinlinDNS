@@ -6,33 +6,35 @@ const compile = require("@adguard/hostlist-compiler");
 // 规则转换函数
 const transformations = async (...fileList) => {
   console.log("开始规则转换");
-  //  // 官方规则转换工具
-  //  const contentArray = await compile({
-  //   name: "linlin",
-  //   sources: [
-  //     {
-  //       type: "adblock",
-  //       source: filePath,
-  //     },
-  //     {
-  //       type: "hosts",
-  //       source: filePath,
-  //     },
-  //   ],
-  //   transformations: ["Compress", "Validate", "InvertAllow"],
-  // });
-  // const filteredContentArray = [...new Set(contentArray)].filter(
-  //   (str) => !/^!/.test(str)
-  // );
+
   try {
     for (const filePath of fileList) {
       try {
-        const content = await readFile(filePath, "utf8");
+        // const content = await readFile(filePath, "utf8");
 
-        const contentArray = content.split("\n");
+        // const contentArray = content.split("\n");
         // 过滤出符合正则表达式的行
         // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
-        const filteredContentArray = contentArray;
+        // const filteredContentArray = contentArray;
+
+        // 官方规则转换工具
+        const contentArray = await compile({
+          name: "linlin",
+          sources: [
+            {
+              type: "adblock",
+              source: filePath,
+            },
+            {
+              type: "hosts",
+              source: filePath,
+            },
+          ],
+          transformations: ["Compress", "Validate"],
+        });
+        const filteredContentArray = [...new Set(contentArray)].filter(
+          (str) => !/^!/.test(str)
+        );
 
         // 将过滤后的内容重新组合成字符串
         const filteredContentString = filteredContentArray.join("\n");

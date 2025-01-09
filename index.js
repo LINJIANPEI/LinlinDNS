@@ -143,11 +143,12 @@ async function main() {
       `${oldDirectory}/tmp-allowFilter.txt`
     );
 
-    // // 规则转换过滤
-    // await transformations(
-    //   `${oldDirectory}/tmp-rulesFilter.txt`,
-    //   `${oldDirectory}/tmp-allowFilter.txt`
-    // );
+    // 规则转换过滤
+    await transformations(
+      `${oldDirectory}/tmp-allow.txt`,
+      `${oldDirectory}/tmp-rules.txt`
+    );
+
     // 删除文件
     await deleteFiles(
       "./allow.txt",
