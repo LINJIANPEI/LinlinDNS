@@ -14,7 +14,7 @@ const downloadFile = async (url, directory) => {
       responseType: "arraybuffer",
       timeout: 60000,
     });
-    const decoded = iconv.decode(response.data, "utf8");
+    const decoded = iconv.decode(response.data);
     await writeFile(directory, decoded);
     console.log(`下载规则文件成功: ${url}`);
   } catch (error) {

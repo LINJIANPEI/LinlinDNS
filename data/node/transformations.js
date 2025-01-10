@@ -1,4 +1,5 @@
 const { filters, compileRules, readFile, writeFile } = require("./common_func");
+const { adGuardRulesFun } = require("./transformations_func");
 
 // 规则转换函数
 const transformations = async (tmpAllow, tmpRules, ...fileList) => {
@@ -7,31 +8,45 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
   try {
     for (const filePath of fileList) {
       try {
-        // const content = await readFile(filePath, "utf8");
+        const content = await readFile(filePath);
 
-        // const contentArray = content.split("\n");
+        const contentArray = content.split("\n");
         // 过滤出符合正则表达式的行
         // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
         // const filteredContentArray = contentArray;
-        let contentAllow = await readFile(tmpAllow, "utf8");
+        let contentAllow = await readFile(tmpAllow);
         contentAllow = contentAllow.split("\n");
-        let contentRules = await readFile(tmpRules, "utf8");
+        let contentRules = await readFile(tmpRules);
         contentRules = contentRules.split("\n");
-        if (/allow/.test(filePath)) {
-          const contentArray = await compileRules(filePath, true);
-          const filteredContentArray = filters([
-            ...contentArray,
-            ...contentAllow,
-          ]).join("\n");
-          await writeFile(tmpAllow, filteredContentArray, "utf8");
-        } else {
-          const contentArray = await compileRules(filePath);
-          const filteredContentArray = filters([
-            ...contentArray,
-            ...contentRules,
-          ]).join("\n");
-          await writeFile(tmpRules, filteredContentArray, "utf8");
-        }
+
+        const [blacklistRules, whitelistRules, noadGuardRules] =
+          adGuardRulesFun(contentArray);
+        const blacklistRulesArray = filters([
+          ...blacklistRules,
+          ...contentRules,
+        ]).join("\n");
+        await writeFile(tmpRules, blacklistRulesArray);
+        const whitelistRulesArray = filters([
+          ...whitelistRules,
+          ...contentAllow,
+        ]).join("\n");
+        await writeFile(tmpAllow, whitelistRulesArray);
+        await writeFile(filePath, noadGuardRules);
+        // if (/allow/.test(filePath)) {
+        //   const contentArray = await compileRules(filePath, true);
+        //   const filteredContentArray = filters([
+        //     ...contentArray,
+        //     ...contentAllow,
+        //   ]).join("\n");
+        //   await writeFile(tmpAllow, filteredContentArray, "utf8");
+        // } else {
+        //   const contentArray = await compileRules(filePath);
+        //   const filteredContentArray = filters([
+        //     ...contentArray,
+        //     ...contentRules,
+        //   ]).join("\n");
+        //   await writeFile(tmpRules, filteredContentArray, "utf8");
+        // }
 
         // 将过滤后的内容重新组合成字符串
         // const filteredContentString = filteredContentArray.join("\n");

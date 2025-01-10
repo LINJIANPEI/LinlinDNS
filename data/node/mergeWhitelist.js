@@ -18,7 +18,7 @@ const mergeWhitelist = async (directory) => {
     }
     // 读取所有符合条件的文件内容
     const allFileData = await Promise.all(
-      allowFiles.map((file) => readFile(`${directory}/${file}`, "utf8"))
+      allowFiles.map((file) => readFile(`${directory}/${file}`))
     );
 
     let allFileDataFilter = [];
@@ -43,13 +43,11 @@ const mergeWhitelist = async (directory) => {
     // 写入文件
     await writeFile(
       `${directory}/tmp-allow.txt`,
-      filters(allFileDatas).join("\n"),
-      "utf8"
+      filters(allFileDatas).join("\n")
     );
     await writeFile(
       `${directory}/tmp-allowFilter.txt`,
-      filters(allFileDataFilter).join("\n"),
-      "utf8"
+      filters(allFileDataFilter).join("\n")
     );
 
     console.log(`合并白名单规则完成，共处理了${allowFiles.length}个文件`);

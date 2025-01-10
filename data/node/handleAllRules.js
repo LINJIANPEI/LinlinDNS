@@ -7,10 +7,10 @@ const handleAllRules = async (tmpAllow, tmpRules, ...fileList) => {
   for (const filePath of fileList) {
     try {
       // 读取文件内容
-      const content = await readFile(filePath, "utf8");
-      let contentAllow = await readFile(tmpAllow, "utf8");
+      const content = await readFile(filePath);
+      let contentAllow = await readFile(tmpAllow);
       contentAllow = contentAllow.split("\n");
-      let contentRules = await readFile(tmpRules, "utf8");
+      let contentRules = await readFile(tmpRules);
       contentRules = contentRules.split("\n");
 
       // 将文件内容按行分割成数组，并进行处理
@@ -32,9 +32,9 @@ const handleAllRules = async (tmpAllow, tmpRules, ...fileList) => {
       const processedContentString = filters(processedContentArray).join("\n");
 
       // 将处理后的内容写回文件
-      await writeFile(filePath, processedContentString, "utf8");
-      await writeFile(tmpAllow, filters(contentAllow).join("\n"), "utf8");
-      await writeFile(tmpRules, filters(contentRules).join("\n"), "utf8");
+      await writeFile(filePath, processedContentString);
+      await writeFile(tmpAllow, filters(contentAllow).join("\n"));
+      await writeFile(tmpRules, filters(contentRules).join("\n"));
 
       console.log(`文件 ${filePath} 处理成功`);
     } catch (fileError) {

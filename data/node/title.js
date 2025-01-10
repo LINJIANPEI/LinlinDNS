@@ -92,7 +92,7 @@ const title = async () => {
     const files = await readDir("./");
     const fileList = files.filter((file) => file.endsWith(".txt"));
     for (let i = 0; i < fileList.length; i++) {
-      const content = await readFile(`${fileList[i]}`, "utf8");
+      const content = await readFile(`${fileList[i]}`);
       const result = getFilenameWithoutExtension(fileList[i]);
       const lineCount = content.split("\n").length;
 

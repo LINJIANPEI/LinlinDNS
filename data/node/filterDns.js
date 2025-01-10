@@ -5,7 +5,7 @@ const filterDns = async (directory) => {
 
   try {
     // 读取文件
-    const data = await readFile(`${directory}/rules.txt`, "utf8");
+    const data = await readFile(`${directory}/rules.txt`);
     // 处理数据
     const lines = data
       .split("\n")
@@ -16,7 +16,7 @@ const filterDns = async (directory) => {
       )
       .join("\n");
     // 写入文件
-    await writeFile(`${directory}/dns.txt`, lines, "utf8");
+    await writeFile(`${directory}/dns.txt`, lines);
 
     console.log("过滤DNS成功");
   } catch (error) {

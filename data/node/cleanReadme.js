@@ -4,7 +4,7 @@ const { readFile, writeFile } = require("./common_func");
 const extractCount = async (filename) => {
   console.log(`开始统计${filename}行数`);
   try {
-    const content = await readFile(filename, "utf8");
+    const content = await readFile(filename);
     const match = content.split("\n").length - 7;
     console.log(`统计${filename}行数成功`);
     return match ? match : "0";
@@ -26,7 +26,7 @@ const cleanReadme = async () => {
     const beijingTime = moment()
       .tz("Asia/Shanghai")
       .format("YYYY-MM-DD HH:mm:ss");
-    let readmeContent = await readFile("README.md", "utf8");
+    let readmeContent = await readFile("README.md");
     readmeContentData = readmeContent
       .split("\n")
       .map((line) => {
