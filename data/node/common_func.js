@@ -8,6 +8,7 @@ const copyFile = promisify(fs.copyFile);
 const access = promisify(fs.access);
 const stat = promisify(fs.stat);
 const rmdir = promisify(fs.rm);
+const readFileContent = promisify(fs.readFile);
 
 // ----------------------------------------
 
@@ -220,6 +221,23 @@ const compileRules = async (filePath, invertAllow = false) => {
 
 // ----------------------------------------
 
+/**
+ * 读取文件内容
+ * @param {string} filePath - 文件路径
+ * @returns {Promise<string>} - 返回文件内容的 Promise
+ */
+const readFile = async (filePath) => {
+  try {
+    const content = await readFileContent(filePath, "utf8");
+    return content;
+  } catch (error) {
+    console.error(`读取文件失败: ${filePath}, 错误: ${error.message}`);
+    throw new Error(`读取文件失败: ${error.message}`);
+  }
+};
+
+// ----------------------------------------
+
 module.exports = {
   filters,
   copyFiles,
@@ -230,4 +248,5 @@ module.exports = {
   getFilenameWithoutExtension,
   directoryExistsAsync,
   compileRules,
+  readFile,
 };

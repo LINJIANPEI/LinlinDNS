@@ -4,7 +4,8 @@ const moment = require("moment-timezone");
 const { promisify } = require("util");
 const writeFile = promisify(fs.writeFile);
 const readDir = promisify(fs.readdir);
-const readFile = promisify(fs.readFile);
+const { readFile } = require("./common_func");
+
 // DNS配置字符串
 const dnsConfiguration = `https://doh.pub/dns-query
 https://sm2.doh.pub/dns-query

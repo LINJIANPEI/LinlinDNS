@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { promisify } = require("util");
-const readFile = promisify(fs.readFile);
+const { readFile } = require("./common_func");
 const writeFile = promisify(fs.writeFile);
 //过滤DNS
 const filterDns = async (directory) => {
