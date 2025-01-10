@@ -1,4 +1,5 @@
 const { filters, compileRules, readFile, writeFile } = require("./common_func");
+const { removeSubdomainDuplicates } = require("./transformations_func");
 
 // 规则转换函数
 const compileRulesFun = async (tmpAllow, tmpRules, ...fileList) => {
@@ -22,10 +23,9 @@ const compileRulesFun = async (tmpAllow, tmpRules, ...fileList) => {
           await writeFile(tmpAllow, filteredContentArray, "utf8");
         } else {
           const contentArray = await compileRules(filePath);
-          const filteredContentArray = filters([
-            ...contentArray,
-            ...contentRulesArray,
-          ]).join("\n");
+          const filteredContentArray = removeSubdomainDuplicates(
+            filters([...contentArray, ...contentRulesArray])
+          ).join("\n");
           await writeFile(tmpRules, filteredContentArray, "utf8");
         }
 

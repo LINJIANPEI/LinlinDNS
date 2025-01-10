@@ -29,9 +29,10 @@ const adGuardRulesFun = (rules) => {
     }
     // 处理 AdBlock 规则
     else if (/^\|\|/.test(trimmed)) {
-      blacklistRules.push(
-        trimmed.includes("$") ? trimmed.replace("$", "$important,") : trimmed
-      );
+      // blacklistRules.push(
+      //   trimmed.includes("$") ? trimmed.replace("$", "$important,") : trimmed
+      // );
+      blacklistRules.push(trimmed);
     }
     // 处理白名单规则
     else if (/^@@/.test(trimmed)) {
@@ -47,6 +48,34 @@ const adGuardRulesFun = (rules) => {
   return [blacklistRules, whitelistRules, noadGuardRules];
 };
 
+/**
+ * 去除黑白名单规则中的多余子域名，不区分黑白名单。
+ * @param {string[]} rules - 包含黑白名单的规则数组。
+ * @returns {string[]} 返回去重后的规则数组。
+ */
+const removeSubdomainDuplicates = (rules) => {
+  const optimizedRules = [];
+
+  // 辅助函数：提取主域名
+  const getBaseDomain = (rule) => {
+    return rule
+      .replace(/^(\|\|)/, "")
+      .replace(/^@@(\|\|)/, "")
+      .replace(/\^.*$/, ""); // 去除前缀 "||" 和修饰符 "^"
+  };
+
+  rules.forEach((rule) => {
+    const baseDomain = getBaseDomain(rule);
+    // 如果没有找到相同的主域名，则添加到优化后的规则
+    if (!optimizedRules.some((r) => getBaseDomain(r) === baseDomain)) {
+      optimizedRules.push(rule);
+    }
+  });
+
+  return optimizedRules;
+};
+
 module.exports = {
   adGuardRulesFun,
+  removeSubdomainDuplicates,
 };
