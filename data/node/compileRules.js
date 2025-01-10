@@ -20,13 +20,19 @@ const compileRulesFun = async (tmpAllow, tmpRules, ...fileList) => {
             ...contentArray,
             ...contentAllowArray,
           ]).join("\n");
-          await writeFile(tmpAllow, filteredContentArray, "utf8");
+          const removeArray =
+            removeSubdomainDuplicates(filteredContentArray).join("\n");
+
+          await writeFile(tmpAllow, removeArray, "utf8");
         } else {
           const contentArray = await compileRules(filePath);
-          const filteredContentArray = removeSubdomainDuplicates(
-            filters([...contentArray, ...contentRulesArray])
-          ).join("\n");
-          await writeFile(tmpRules, filteredContentArray, "utf8");
+          const filteredContentArray = filters([
+            ...contentArray,
+            ...contentRulesArray,
+          ]);
+          const removeArray =
+            removeSubdomainDuplicates(filteredContentArray).join("\n");
+          await writeFile(tmpRules, removeArray, "utf8");
         }
 
         console.log(`处理文件 ${filePath} 完成。`);
