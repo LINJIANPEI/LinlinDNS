@@ -35,7 +35,7 @@ const transformations = async (...fileList) => {
                 source: filePath,
               },
             ],
-            transformations: ["RemoveComments","Compress", "Validate", "InvertAllow"],
+            transformations: ["RemoveComments", "Validate", "InvertAllow"],
           });
           const filteredContentArray = [
             ...new Set(...new Set([...contentArray, ...contentAllow])),
@@ -57,7 +57,7 @@ const transformations = async (...fileList) => {
                 source: filePath,
               },
             ],
-            transformations: ["RemoveComments","Compress", "Validate"],
+            transformations: ["RemoveComments", "Compress", "Validate"],
           });
           const filteredContentArray = [
             ...new Set([...contentArray, ...contentRules]),
