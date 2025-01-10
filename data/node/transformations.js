@@ -1,7 +1,4 @@
-const fs = require("fs");
-const { promisify } = require("util");
-const writeFile = promisify(fs.writeFile);
-const { filters, compileRules, readFile } = require("./common_func");
+const { filters, compileRules, readFile, writeFile } = require("./common_func");
 
 // 规则转换函数
 const transformations = async (tmpAllow, tmpRules, ...fileList) => {

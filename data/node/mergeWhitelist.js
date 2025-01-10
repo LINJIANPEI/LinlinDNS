@@ -1,8 +1,7 @@
 const fs = require("fs");
 const { promisify } = require("util");
 const readDir = promisify(fs.readdir);
-const writeFile = promisify(fs.writeFile);
-const { filters, readFile } = require("./common_func");
+const { filters, readFile, writeFile } = require("./common_func");
 
 // 合并规则
 const mergeWhitelist = async (directory) => {

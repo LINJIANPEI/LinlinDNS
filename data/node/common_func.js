@@ -9,6 +9,7 @@ const access = promisify(fs.access);
 const stat = promisify(fs.stat);
 const rmdir = promisify(fs.rm);
 const readFileContent = promisify(fs.readFile);
+const writeFileContent = promisify(fs.writeFile);
 
 // ----------------------------------------
 
@@ -238,6 +239,24 @@ const readFile = async (filePath) => {
 
 // ----------------------------------------
 
+/**
+ * 写入内容到指定文件
+ * @param {string} filePath - 文件路径
+ * @param {string} content - 要写入的内容
+ * @returns {Promise<void>} - 返回一个 Promise，表示写入操作完成
+ */
+const writeFile = async (filePath, content) => {
+  try {
+    await writeFile(filePath, content, "utf8");
+    console.log(`成功写入文件: ${filePath}`);
+  } catch (error) {
+    console.error(`写入文件失败: ${filePath}, 错误: ${error.message}`);
+    throw new Error(`写入文件失败: ${error.message}`);
+  }
+};
+
+// ----------------------------------------
+
 module.exports = {
   filters,
   copyFiles,
@@ -249,4 +268,5 @@ module.exports = {
   directoryExistsAsync,
   compileRules,
   readFile,
+  writeFile,
 };

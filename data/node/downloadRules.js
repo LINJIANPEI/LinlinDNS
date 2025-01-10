@@ -1,8 +1,6 @@
-const fs = require("fs");
 const axios = require("axios");
 const iconv = require("iconv-lite");
-const { promisify } = require("util");
-const writeFile = promisify(fs.writeFile);
+const { writeFile } = require("./common_func");
 
 /**
  * 下载文件。

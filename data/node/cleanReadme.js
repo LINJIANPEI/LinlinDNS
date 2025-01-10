@@ -1,8 +1,5 @@
-const fs = require("fs");
-const { promisify } = require("util");
 const moment = require("moment-timezone");
-const { readFile } = require("./common_func");
-const writeFile = promisify(fs.writeFile);
+const { readFile, writeFile } = require("./common_func");
 
 const extractCount = async (filename) => {
   console.log(`开始统计${filename}行数`);

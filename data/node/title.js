@@ -2,9 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const moment = require("moment-timezone");
 const { promisify } = require("util");
-const writeFile = promisify(fs.writeFile);
 const readDir = promisify(fs.readdir);
-const { readFile } = require("./common_func");
+const { readFile, writeFile } = require("./common_func");
 
 // DNS配置字符串
 const dnsConfiguration = `https://doh.pub/dns-query

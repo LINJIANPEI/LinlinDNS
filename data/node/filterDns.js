@@ -1,7 +1,4 @@
-const fs = require("fs");
-const { promisify } = require("util");
-const { readFile } = require("./common_func");
-const writeFile = promisify(fs.writeFile);
+const { readFile, writeFile } = require("./common_func");
 //过滤DNS
 const filterDns = async (directory) => {
   console.log("开始过滤DNS");

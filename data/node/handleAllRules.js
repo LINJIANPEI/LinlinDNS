@@ -1,7 +1,4 @@
-const fs = require("fs");
-const { promisify } = require("util");
-const writeFile = promisify(fs.writeFile);
-const { filters, readFile } = require("./common_func");
+const { filters, readFile, writeFile } = require("./common_func");
 
 // 处理所有规则的函数
 const handleAllRules = async (tmpAllow, tmpRules, ...fileList) => {
