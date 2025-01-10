@@ -22,14 +22,14 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
         let contentRules = await readFile(tmpRules, "utf8");
         contentRules = contentRules.split("\n");
         if (/allow/.test(filePath)) {
-          const contentArray = compileRules(filePath);
+          const contentArray = await compileRules(filePath);
           const filteredContentArray = filters([
             ...contentArray,
             ...contentAllow,
           ]).join("\n");
           await writeFile(tmpAllow, filteredContentArray, "utf8");
         } else {
-          const contentArray = compileRules(filePath, true);
+          const contentArray = await compileRules(filePath, true);
           const filteredContentArray = filters([
             ...contentArray,
             ...contentRules,
