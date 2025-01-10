@@ -42,7 +42,7 @@ const cleanReadme = async () => {
     await writeFile("README.md", readmeContentData);
     console.log("更新md文件成功");
   } catch (error) {
-    throw `更新md文件失败:${error}`;
+    throw new Error(`更新md文件失败:${error.message}`);
   }
 };
 module.exports = {

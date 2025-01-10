@@ -35,14 +35,14 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
         console.log(`处理文件 ${filePath} 完成。`);
       } catch (fileError) {
         // 捕获并打印单个文件的错误，但不中断整个流程
-        console.error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
+        throw new Error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
       }
     }
 
     console.log("所有文件的规则转换完成");
   } catch (error) {
     // 捕获整个转换过程中的未处理错误
-    console.error(`规则转换过程中发生未处理的错误: ${error.message}`);
+
     throw new Error(`规则转换失败: ${error.message}`);
   }
 };

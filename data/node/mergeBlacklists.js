@@ -53,7 +53,6 @@ const mergeBlacklists = async (directory) => {
 
     console.log(`合并白名单规则完成，共处理了${rulesFiles.length}个文件`);
   } catch (error) {
-    console.error(`合并黑名单规则失败: ${error.message}`);
     throw new Error(`合并黑名单规则失败: ${error.message}`);
   }
 };

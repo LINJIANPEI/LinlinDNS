@@ -109,7 +109,7 @@ ${content}`;
     }
     console.log("写入头部信息成功");
   } catch (error) {
-    throw `写入头部信息失败:${error}`;
+    throw new Error(`写入头部信息失败:${error.message}`);
   }
 };
 module.exports = {

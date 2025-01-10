@@ -39,7 +39,6 @@ const handleAllRules = async (tmpAllow, tmpRules, ...fileList) => {
       console.log(`文件 ${filePath} 处理成功`);
     } catch (fileError) {
       // 捕获并打印单个文件的错误
-      console.error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
       throw new Error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
     }
   }

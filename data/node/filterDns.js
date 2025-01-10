@@ -20,7 +20,6 @@ const filterDns = async (directory) => {
 
     console.log("过滤DNS成功");
   } catch (error) {
-    console.error(`过滤DNS规则失败: ${error.message}`);
     throw new Error(`过滤DNS规则时发生错误: ${error.message}`);
   }
 };
