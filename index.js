@@ -151,12 +151,12 @@ async function main() {
 
     // 删除文件
     await deleteFiles(
-      `${newDirectory}allow.txt`,
-      `${newDirectory}dns.txt`,
-      `${newDirectory}DnsConfiguration.txt`,
-      `${newDirectory}rules.txt`,
-      `${newDirectory}allowFilter.txt`,
-      `${newDirectory}rulesFilter.txt`
+      `${newDirectory}/allow.txt`,
+      `${newDirectory}/dns.txt`,
+      `${newDirectory}/DnsConfiguration.txt`,
+      `${newDirectory}/rules.txt`,
+      `${newDirectory}/allowFilter.txt`,
+      `${newDirectory}/rulesFilter.txt`
     );
 
     // 复制文件

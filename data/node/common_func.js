@@ -25,7 +25,7 @@ const filters = (arr) => {
     console.log("过滤无效字符成功");
     return arrs;
   } catch (error) {
-    throw `过滤无效字符失败: ${error}`;
+    throw new Error(`过滤无效字符失败: ${error}`);
   }
 };
 
@@ -78,7 +78,7 @@ const getFilenameWithoutExtension = (filepath) => {
 
 /**
  * 复制文件。
- * @param {array} fileList  - 要复制的文件路径:[[旧，新]]。
+ * @param {array<array<string>>} fileList  - 要复制的文件路径:[[旧，新]]。
  * @throws {Error} 如果复制文件失败，则抛出错误。
  */
 const copyFiles = async (...fileList) => {
@@ -94,7 +94,7 @@ const copyFiles = async (...fileList) => {
         console.error(`源文件:${filePath[0]}不存在`);
       }
     } catch (error) {
-      throw `复制文件：${filePath[0]}=>${filePath[1]}失败: ${error}`;
+      throw new Error(`复制文件：${filePath[0]}=>${filePath[1]}失败: ${error}`);
     }
   }
 };
