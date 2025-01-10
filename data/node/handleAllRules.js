@@ -22,7 +22,7 @@ const handleAllRules = async (...fileList) => {
       processedContentArray = processedContentArray.filter((line) => {
         if (/^\|\|.*/.test(line) || /^\/.*\/$/.test(line)) {
           contentRules.push(line);
-        } else if (/^@@\|\|.*/.test(line)) {
+        } else if (/^@@.*/.test(line)) {
           contentAllow.push(line);
         } else {
           return line;
