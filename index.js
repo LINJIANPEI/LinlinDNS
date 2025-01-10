@@ -20,7 +20,6 @@ const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRu
 const { transformations } = require("./data/node/transformations"); // transformations.js 模块
 const { compileRulesFun } = require("./data/node/compileRules"); // transformations.js 模块
 
-compileRules;
 // 过滤DNS
 const { filterDns } = require("./data/node/filterDns"); // filterDns.js 模块
 // 处理title
