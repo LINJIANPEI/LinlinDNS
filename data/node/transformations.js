@@ -21,16 +21,19 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
 
         const [blacklistRules, whitelistRules, noadGuardRules] =
           adGuardRulesFun(contentArray);
+
         const blacklistRulesArray = filters([
           ...blacklistRules,
           ...contentRules,
         ]).join("\n");
         await writeFile(tmpRules, blacklistRulesArray);
+
         const whitelistRulesArray = filters([
           ...whitelistRules,
           ...contentAllow,
         ]).join("\n");
         await writeFile(tmpAllow, whitelistRulesArray);
+
         const noadGuardRulesArray = noadGuardRules.join("\n");
         await writeFile(filePath, noadGuardRulesArray);
         // if (/allow/.test(filePath)) {
