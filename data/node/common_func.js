@@ -225,11 +225,12 @@ const compileRules = async (filePath, invertAllow = false) => {
 /**
  * 读取文件内容
  * @param {string} filePath - 文件路径
+ * @param {string} decoded - 编码格式
  * @returns {Promise<string>} - 返回文件内容的 Promise
  */
-const readFile = async (filePath) => {
+const readFile = async (filePath, decoded = "utf8") => {
   try {
-    const content = await readFileContent(filePath, "utf8");
+    const content = await readFileContent(filePath, decoded);
     return content;
   } catch (error) {
     console.error(`读取文件失败: ${filePath}, 错误: ${error.message}`);
@@ -243,11 +244,12 @@ const readFile = async (filePath) => {
  * 写入内容到指定文件
  * @param {string} filePath - 文件路径
  * @param {string} content - 要写入的内容
+ * @param {string} decoded - 编码格式
  * @returns {Promise<void>} - 返回一个 Promise，表示写入操作完成
  */
-const writeFile = async (filePath, content) => {
+const writeFile = async (filePath, content, decoded = "utf8") => {
   try {
-    await writeFileContent(filePath, content, "utf8");
+    await writeFileContent(filePath, content, decoded);
     console.log(`成功写入文件: ${filePath}`);
   } catch (error) {
     console.error(`写入文件失败: ${filePath}, 错误: ${error.message}`);
