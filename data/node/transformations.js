@@ -3,6 +3,7 @@ const { promisify } = require("util");
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 const compile = require("@adguard/hostlist-compiler");
+const { filters } = require("./common_func");
 
 // 规则转换函数
 const transformations = async (...fileList) => {
@@ -35,11 +36,17 @@ const transformations = async (...fileList) => {
                 source: filePath,
               },
             ],
-            transformations: ["RemoveComments","Compress", "Validate", "InvertAllow"],
+            transformations: [
+              "RemoveComments",
+              "Compress",
+              "Validate",
+              "InvertAllow",
+            ],
           });
-          const filteredContentArray = [
-            ...new Set(...new Set([...contentArray, ...contentAllow])),
-          ]
+          const filteredContentArray = filters([
+            ...contentArray,
+            ...contentAllow,
+          ])
             .filter((str) => !/^!/.test(str))
             .join("\n");
           await writeFile("./tmp/tmp-allow.txt", filteredContentArray, "utf8");
@@ -57,11 +64,12 @@ const transformations = async (...fileList) => {
                 source: filePath,
               },
             ],
-            transformations: ["RemoveComments","Compress", "Validate"],
+            transformations: ["RemoveComments", "Compress", "Validate"],
           });
-          const filteredContentArray = [
-            ...new Set([...contentArray, ...contentRules]),
-          ]
+          const filteredContentArray = filters([
+            ...contentArray,
+            ...contentRules,
+          ])
             .filter((str) => !/^!/.test(str))
             .join("\n");
           await writeFile("./tmp/tmp-rules.txt", filteredContentArray, "utf8");

@@ -2,6 +2,7 @@ const fs = require("fs");
 const { promisify } = require("util");
 const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
+const { filters } = require("./common_func");
 
 // 处理所有规则的函数
 const handleAllRules = async (...fileList) => {
@@ -32,12 +33,20 @@ const handleAllRules = async (...fileList) => {
       // .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)) // 过滤掉更多特定格式的行
 
       // 将处理后的内容重新组合成字符串
-      const processedContentString = processedContentArray.join("\n");
+      const processedContentString = filters(processedContentArray).join("\n");
 
       // 将处理后的内容写回文件
       await writeFile(filePath, processedContentString, "utf8");
-      await writeFile("./tmp/tmp-allow.txt", contentAllow.join("\n"), "utf8");
-      await writeFile("./tmp/tmp-rules.txt", contentRules.join("\n"), "utf8");
+      await writeFile(
+        "./tmp/tmp-allow.txt",
+        filters(contentAllow).join("\n"),
+        "utf8"
+      );
+      await writeFile(
+        "./tmp/tmp-rules.txt",
+        filters(contentRules).join("\n"),
+        "utf8"
+      );
 
       console.log(`文件 ${filePath} 处理成功`);
     } catch (fileError) {
