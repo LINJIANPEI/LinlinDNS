@@ -128,10 +128,9 @@ async function main() {
     await downloadRules(rules, allow, oldDirectory);
 
     // 复制文件
-    await copyFiles("./data/rules/adblock.txt", `${oldDirectory}/rules01.txt`);
     await copyFiles(
-      "./data/rules/whitelist.txt",
-      `${oldDirectory}/allow01.txt`
+      ["./data/rules/adblock.txt", `${oldDirectory}/rules01.txt`],
+      ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`]
     );
     // 合并规则
     await mergeBlacklists(oldDirectory);

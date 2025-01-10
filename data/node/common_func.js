@@ -78,10 +78,11 @@ const getFilenameWithoutExtension = (filepath) => {
 
 /**
  * 复制文件。
- * @param {array<array<string>>} fileList  - 要复制的文件路径:[[旧，新]]。
+ * @param {...Array<string>} fileList  - 要复制的文件路径:[[旧，新]]。
  * @throws {Error} 如果复制文件失败，则抛出错误。
  */
 const copyFiles = async (...fileList) => {
+
   if (
     !fileList.every(
       (filePair) => Array.isArray(filePair) && filePair.length === 2
