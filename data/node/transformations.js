@@ -31,7 +31,8 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
           ...contentAllow,
         ]).join("\n");
         await writeFile(tmpAllow, whitelistRulesArray);
-        await writeFile(filePath, noadGuardRules);
+        const noadGuardRulesArray = noadGuardRules.join("\n");
+        await writeFile(filePath, noadGuardRulesArray);
         // if (/allow/.test(filePath)) {
         //   const contentArray = await compileRules(filePath, true);
         //   const filteredContentArray = filters([
