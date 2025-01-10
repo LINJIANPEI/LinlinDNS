@@ -191,14 +191,16 @@ const deleteDir = async (directory) => {
  */
 const compileRules = async (filePath, invertAllow = false) => {
   const transformations = ["RemoveComments", "Compress", "Validate"];
-  let name = "linlinRules";
+  const name = invertAllow ? "linlinAllow" : "linlinRules";
+
+  // 如果需要添加 "InvertAllow" 转换，加入转换数组
   if (invertAllow) {
-    transformations.push("InvertAllow"); // 根据需要添加 "InvertAllow"
-    name = "linlinAllow";
+    transformations.push("InvertAllow");
   }
 
   try {
-    const con = await compile({
+    // 编译规则文件
+    const compiledContent = await compile({
       name,
       sources: [
         { type: "adblock", source: filePath },
@@ -206,9 +208,12 @@ const compileRules = async (filePath, invertAllow = false) => {
       ],
       transformations,
     });
-    return con.filter((str) => !/^!/.test(str));
+
+    // 过滤掉以 "!" 开头的行（注释）
+    const filteredContent = compiledContent.filter((str) => !/^!/.test(str));
+    return filteredContent;
   } catch (error) {
-    console.error(`编译规则文件失败: ${filePath}`, error.message);
+    console.error(`编译规则文件失败: ${filePath}, 错误: ${error.message}`);
     throw new Error(`编译失败: ${error.message}`);
   }
 };
