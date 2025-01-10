@@ -10,7 +10,7 @@ const stat = promisify(fs.stat);
 const rmdir = promisify(fs.rm);
 const readFileContent = promisify(fs.readFile);
 const writeFileContent = promisify(fs.writeFile);
-
+const readDirContent = promisify(fs.readdir);
 // ----------------------------------------
 
 /**
@@ -247,11 +247,29 @@ const readFile = async (filePath) => {
  */
 const writeFile = async (filePath, content) => {
   try {
-    await writeFile(filePath, content, "utf8");
+    await writeFileContent(filePath, content, "utf8");
     console.log(`成功写入文件: ${filePath}`);
   } catch (error) {
     console.error(`写入文件失败: ${filePath}, 错误: ${error.message}`);
     throw new Error(`写入文件失败: ${error.message}`);
+  }
+};
+
+// ----------------------------------------
+
+/**
+ * 读取目录内容
+ * @param {string} dirPath - 目录路径
+ * @returns {Promise<Array<string>>} - 返回目录中的文件和子目录列表
+ */
+const readDir = async (dirPath) => {
+  try {
+    const files = await readDirContent(dirPath);
+    console.log(`成功读取目录: ${dirPath}`);
+    return files;
+  } catch (error) {
+    console.error(`读取目录失败: ${dirPath}, 错误: ${error.message}`);
+    throw new Error(`读取目录失败: ${error.message}`);
   }
 };
 
@@ -269,4 +287,5 @@ module.exports = {
   compileRules,
   readFile,
   writeFile,
+  readDir,
 };
