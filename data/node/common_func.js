@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { promisify } = require("util");
+const compile = require("@adguard/hostlist-compiler");
 const deleteFile = promisify(fs.unlink);
 const mkdir = promisify(fs.mkdir);
 const copyFile = promisify(fs.copyFile);
@@ -82,7 +83,6 @@ const getFilenameWithoutExtension = (filepath) => {
  * @throws {Error} 如果复制文件失败，则抛出错误。
  */
 const copyFiles = async (...fileList) => {
-
   if (
     !fileList.every(
       (filePair) => Array.isArray(filePair) && filePair.length === 2
@@ -182,6 +182,37 @@ const deleteDir = async (directory) => {
 
 // ----------------------------------------
 
+/**
+ * 编译规则文件
+ * @param {string} filePath - 要编译的文件路径
+ * @param {boolean} invertAllow - 是否启用 "InvertAllow" 转换
+ * @returns {Promise<Array<string>>} - 返回编译后的内容数组
+ */
+const compileRules = async (filePath, invertAllow = false) => {
+  const transformations = ["RemoveComments", "Compress", "Validate"];
+  let name = "linlinRules";
+  if (invertAllow) {
+    transformations.push("InvertAllow"); // 根据需要添加 "InvertAllow"
+    name = "linlinAllow";
+  }
+
+  try {
+    return await compile({
+      name,
+      sources: [
+        { type: "adblock", source: filePath },
+        { type: "hosts", source: filePath },
+      ],
+      transformations,
+    }).filter((str) => !/^!/.test(str));
+  } catch (error) {
+    console.error(`编译规则文件失败: ${filePath}`, error.message);
+    throw new Error(`编译失败: ${error.message}`);
+  }
+};
+
+// ----------------------------------------
+
 module.exports = {
   filters,
   copyFiles,
@@ -191,4 +222,5 @@ module.exports = {
   fileExistsAsync,
   getFilenameWithoutExtension,
   directoryExistsAsync,
+  compileRules,
 };

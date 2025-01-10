@@ -2,8 +2,7 @@ const fs = require("fs");
 const { promisify } = require("util");
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
-const compile = require("@adguard/hostlist-compiler");
-const { filters } = require("./common_func");
+const { filters, compileRules } = require("./common_func");
 
 // 规则转换函数
 const transformations = async (tmpAllow, tmpRules, ...fileList) => {
@@ -24,51 +23,19 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
         contentRules = contentRules.split("\n");
         if (/allow/.test(filePath)) {
           // 官方规则转换工具
-          const contentArray = await compile({
-            name: "linlin",
-            sources: [
-              {
-                type: "adblock",
-                source: filePath,
-              },
-              {
-                type: "hosts",
-                source: filePath,
-              },
-            ],
-            transformations: [
-              "RemoveComments",
-              "Compress",
-              "Validate",
-              "InvertAllow",
-            ],
-          });
-          const filteredContentArray = filters(
-            [...contentArray, ...contentAllow].filter((str) => !/^!/.test(str))
-          ).join("\n");
+          const contentArray = compileRules(filePath);
+          const filteredContentArray = filters([
+            ...contentArray,
+            ...contentAllow,
+          ]).join("\n");
           await writeFile(tmpAllow, filteredContentArray, "utf8");
         } else {
           // 官方规则转换工具
-          const contentArray = await compile({
-            name: "linlin",
-            sources: [
-              {
-                type: "adblock",
-                source: filePath,
-              },
-              {
-                type: "hosts",
-                source: filePath,
-              },
-            ],
-            transformations: ["RemoveComments", "Compress", "Validate"],
-          });
+          const contentArray = compileRules(filePath, true);
           const filteredContentArray = filters([
             ...contentArray,
             ...contentRules,
-          ])
-            .filter((str) => !/^!/.test(str))
-            .join("\n");
+          ]).join("\n");
           await writeFile(tmpRules, filteredContentArray, "utf8");
         }
 
