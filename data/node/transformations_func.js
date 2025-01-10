@@ -55,6 +55,7 @@ const adGuardRulesFun = (rules) => {
  */
 const removeSubdomainDuplicates = (rules) => {
   const optimizedRules = [];
+  const seenDomains = new Set(); // 用于存储已经处理过的主域名
 
   // 辅助函数：提取主域名
   const getBaseDomain = (rule) => {
@@ -66,9 +67,10 @@ const removeSubdomainDuplicates = (rules) => {
 
   rules.forEach((rule) => {
     const baseDomain = getBaseDomain(rule);
-    // 如果没有找到相同的主域名，则添加到优化后的规则
-    if (!optimizedRules.some((r) => getBaseDomain(r) === baseDomain)) {
+    // 如果主域名没有出现过，则添加到优化后的规则
+    if (!seenDomains.has(baseDomain)) {
       optimizedRules.push(rule);
+      seenDomains.add(baseDomain); // 标记此主域名已处理
     }
   });
 
