@@ -43,12 +43,9 @@ const transformations = async (...fileList) => {
               "InvertAllow",
             ],
           });
-          const filteredContentArray = filters([
-            ...contentArray,
-            ...contentAllow,
-          ])
-            .filter((str) => !/^!/.test(str))
-            .join("\n");
+          const filteredContentArray = filters(
+            [...contentArray, ...contentAllow].filter((str) => !/^!/.test(str))
+          ).join("\n");
           await writeFile("./tmp/tmp-allow.txt", filteredContentArray, "utf8");
         } else {
           // 官方规则转换工具
