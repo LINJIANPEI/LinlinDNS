@@ -5,16 +5,16 @@ const readFile = promisify(fs.readFile);
 const { filters } = require("./common_func");
 
 // 处理所有规则的函数
-const handleAllRules = async (...fileList) => {
+const handleAllRules = async (tmpAllow, tmpRules, ...fileList) => {
   console.log("开始处理所有规则");
 
   for (const filePath of fileList) {
     try {
       // 读取文件内容
       const content = await readFile(filePath, "utf8");
-      let contentAllow = await readFile("./tmp/tmp-allow.txt", "utf8");
+      let contentAllow = await readFile(tmpAllow, "utf8");
       contentAllow = contentAllow.split("\n");
-      let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8");
+      let contentRules = await readFile(tmpRules, "utf8");
       contentRules = contentRules.split("\n");
 
       // 将文件内容按行分割成数组，并进行处理
@@ -37,16 +37,8 @@ const handleAllRules = async (...fileList) => {
 
       // 将处理后的内容写回文件
       await writeFile(filePath, processedContentString, "utf8");
-      await writeFile(
-        "./tmp/tmp-allow.txt",
-        filters(contentAllow).join("\n"),
-        "utf8"
-      );
-      await writeFile(
-        "./tmp/tmp-rules.txt",
-        filters(contentRules).join("\n"),
-        "utf8"
-      );
+      await writeFile(tmpAllow, filters(contentAllow).join("\n"), "utf8");
+      await writeFile(tmpRules, filters(contentRules).join("\n"), "utf8");
 
       console.log(`文件 ${filePath} 处理成功`);
     } catch (fileError) {
