@@ -183,6 +183,7 @@ const deleteDir = async (directory) => {
 // ----------------------------------------
 
 /**
+ * 官方规则转换工具
  * 编译规则文件
  * @param {string} filePath - 要编译的文件路径
  * @param {boolean} invertAllow - 是否启用 "InvertAllow" 转换

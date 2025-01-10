@@ -22,7 +22,6 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
         let contentRules = await readFile(tmpRules, "utf8");
         contentRules = contentRules.split("\n");
         if (/allow/.test(filePath)) {
-          // 官方规则转换工具
           const contentArray = compileRules(filePath);
           const filteredContentArray = filters([
             ...contentArray,
@@ -30,7 +29,6 @@ const transformations = async (tmpAllow, tmpRules, ...fileList) => {
           ]).join("\n");
           await writeFile(tmpAllow, filteredContentArray, "utf8");
         } else {
-          // 官方规则转换工具
           const contentArray = compileRules(filePath, true);
           const filteredContentArray = filters([
             ...contentArray,
