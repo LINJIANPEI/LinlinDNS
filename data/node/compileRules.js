@@ -13,8 +13,6 @@ const compileRulesFun = async (tmpAllow, tmpRules, ...fileList) => {
         const contentAllow = await readFile(tmpAllow);
         const contentAllowArray = contentAllow.split("\n");
 
-        const noadGuardRulesArray = noadGuardRules.join("\n");
-        await writeFile(filePath, noadGuardRulesArray);
         if (/allow/.test(filePath)) {
           const contentArray = await compileRules(filePath, true);
           const filteredContentArray = filters([
