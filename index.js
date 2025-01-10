@@ -120,6 +120,8 @@ const oldDirectory = "./tmp";
 // 新地址
 const newDirectory = "./";
 
+const assets = "./data/assets";
+
 async function main() {
   try {
     // 创建临时文件夹
@@ -158,19 +160,16 @@ async function main() {
       `${newDirectory}/dns.txt`,
       `${newDirectory}/DnsConfiguration.txt`,
       `${newDirectory}/rules.txt`,
-      `${newDirectory}/allowFilter.txt`,
-      `${newDirectory}/rulesFilter.txt`
+      `${assets}/allowFilter.txt`,
+      `${assets}/rulesFilter.txt`
     );
 
     // 复制文件
     await copyFiles(
       [`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`],
-      [
-        `${oldDirectory}/tmp-allowFilter.txt`,
-        `${newDirectory}/allowFilter.txt`,
-      ],
+      [`${oldDirectory}/tmp-allowFilter.txt`, `${assets}/allowFilter.txt`],
       [`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`],
-      [`${oldDirectory}/tmp-rulesFilter.txt`, `${newDirectory}/rulesFilter.txt`]
+      [`${oldDirectory}/tmp-rulesFilter.txt`, `${assets}/rulesFilter.txt`]
     );
 
     // 过滤DNS
