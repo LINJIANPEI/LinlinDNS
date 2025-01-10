@@ -18,6 +18,9 @@ const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitel
 const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
 // 规则转换
 const { transformations } = require("./data/node/transformations"); // transformations.js 模块
+const { compileRulesFun } = require("./data/node/compileRules"); // transformations.js 模块
+
+compileRules;
 // 过滤DNS
 const { filterDns } = require("./data/node/filterDns"); // filterDns.js 模块
 // 处理title
@@ -148,6 +151,12 @@ async function main() {
 
     // 规则转换过滤
     await transformations(
+      `${oldDirectory}/tmp-allow.txt`,
+      `${oldDirectory}/tmp-rules.txt`,
+      `${oldDirectory}/tmp-rulesFilter.txt`,
+      `${oldDirectory}/tmp-allowFilter.txt`
+    );
+    await compileRulesFun(
       `${oldDirectory}/tmp-allow.txt`,
       `${oldDirectory}/tmp-rules.txt`,
       `${oldDirectory}/tmp-rulesFilter.txt`,
