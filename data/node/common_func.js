@@ -82,19 +82,26 @@ const getFilenameWithoutExtension = (filepath) => {
  * @throws {Error} 如果复制文件失败，则抛出错误。
  */
 const copyFiles = async (...fileList) => {
-  for (const filePath of fileList) {
+  if (
+    !fileList.every(
+      (filePair) => Array.isArray(filePair) && filePair.length === 2
+    )
+  ) {
+    throw new Error("所有参数必须是包含 [旧路径, 新路径] 的数组。");
+  }
+  for (const [src, dest] of fileList) {
     try {
       console.log("开始复制文件");
       // 检查源文件是否存在
-      if (await fileExistsAsync(filePath[0])) {
+      if (await fileExistsAsync(src)) {
         // 复制文件并等待完成
-        await copyFile(filePath[0], filePath[1]);
-        console.log(`文件复制：${filePath[0]}=>${filePath[1]}成功`);
+        await copyFile(src, dest);
+        console.log(`文件复制：${src}=>${dest}成功`);
       } else {
-        console.error(`源文件:${filePath[0]}不存在`);
+        console.error(`源文件:${src}不存在`);
       }
     } catch (error) {
-      throw new Error(`复制文件：${filePath[0]}=>${filePath[1]}失败: ${error}`);
+      throw new Error(`复制文件：${src}=>${dest}失败: ${error}`);
     }
   }
 };
