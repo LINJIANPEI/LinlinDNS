@@ -151,31 +151,25 @@ async function main() {
 
     // 删除文件
     await deleteFiles(
-      "./allow.txt",
-      "./dns.txt",
-      "./DnsConfiguration.txt",
-      "./rules.txt",
-      "./allowFilter.txt",
-      "./rulesFilter.txt"
-    );
-    // 复制文件
-    await copyFiles(
-      `${oldDirectory}/tmp-allow.txt`,
-      `${newDirectory}/allow.txt`
-    );
-    // 复制文件
-    await copyFiles(
-      `${oldDirectory}/tmp-allowFilter.txt`,
-      `${newDirectory}/allowFilter.txt`
-    );
-    await copyFiles(
-      `${oldDirectory}/tmp-rules.txt`,
-      `${newDirectory}/rules.txt`
-    );
-    await copyFiles(
-      `${oldDirectory}/tmp-rulesFilter.txt`,
+      `${newDirectory}/allow.txt`,
+      `${newDirectory}/dns.txt`,
+      `${newDirectory}/DnsConfiguration.txt`,
+      `${newDirectory}/rules.txt`,
+      `${newDirectory}/allowFilter.txt`,
       `${newDirectory}/rulesFilter.txt`
     );
+
+    // 复制文件
+    await copyFiles(
+      [`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`],
+      [
+        `${oldDirectory}/tmp-allowFilter.txt`,
+        `${newDirectory}/allowFilter.txt`,
+      ],
+      [`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`],
+      [`${oldDirectory}/tmp-rulesFilter.txt`, `${newDirectory}/rulesFilter.txt`]
+    );
+
     // 过滤DNS
     await filterDns(newDirectory);
 
