@@ -198,14 +198,15 @@ const compileRules = async (filePath, invertAllow = false) => {
   }
 
   try {
-    return await compile({
+    const con = await compile({
       name,
       sources: [
         { type: "adblock", source: filePath },
         { type: "hosts", source: filePath },
       ],
       transformations,
-    }).filter((str) => !/^!/.test(str));
+    });
+    return con.filter((str) => !/^!/.test(str));
   } catch (error) {
     console.error(`编译规则文件失败: ${filePath}`, error.message);
     throw new Error(`编译失败: ${error.message}`);
