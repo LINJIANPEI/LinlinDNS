@@ -6,7 +6,7 @@ const compile = require("@adguard/hostlist-compiler");
 const { filters } = require("./common_func");
 
 // 规则转换函数
-const transformations = async (...fileList) => {
+const transformations = async (tmpAllow, tmpRules, ...fileList) => {
   console.log("开始规则转换");
 
   try {
@@ -18,11 +18,11 @@ const transformations = async (...fileList) => {
         // 过滤出符合正则表达式的行
         // 注意：这里修改了正则表达式匹配的逻辑，确保它符合您的需求
         // const filteredContentArray = contentArray;
-        let contentAllow = await readFile("./tmp/tmp-allow.txt", "utf8");
+        let contentAllow = await readFile(tmpAllow, "utf8");
         contentAllow = contentAllow.split("\n");
-        let contentRules = await readFile("./tmp/tmp-rules.txt", "utf8");
+        let contentRules = await readFile(tmpRules, "utf8");
         contentRules = contentRules.split("\n");
-        if (filePath == "./tmp/tmp-allowFilter.txt") {
+        if (/allow/.test(filePath)) {
           // 官方规则转换工具
           const contentArray = await compile({
             name: "linlin",

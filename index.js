@@ -138,6 +138,8 @@ async function main() {
 
     // 处理黑白名单过滤
     await handleAllRules(
+      `${oldDirectory}/tmp-allow.txt`,
+      `${oldDirectory}/tmp-rules.txt`,
       `${oldDirectory}/tmp-rulesFilter.txt`,
       `${oldDirectory}/tmp-allowFilter.txt`
     );
