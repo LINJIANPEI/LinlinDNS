@@ -1,6 +1,3 @@
-const { filters, readFile, writeFile } = require("./common_func");
-const { adGuardRulesFun } = require("./transformations_func");
-
 // 规则转换函数
 const transformations = async (...fileList) => {
   console.log("开始规则转换");

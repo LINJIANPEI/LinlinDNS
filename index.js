@@ -137,6 +137,7 @@ async function main() {
       ["./data/rules/adblock.txt", `${oldDirectory}/rules01.txt`],
       ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`]
     );
+
     // 合并规则
     const [mergeBlacklistsRules, mergeBlacklistsRulesFilter] =
       await mergeBlacklists(oldDirectory);
@@ -215,6 +216,7 @@ async function main() {
         ...transformationswhitelistRules2,
       ].join("\n")
     );
+    
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
       [
@@ -236,7 +238,7 @@ async function main() {
 
 
 
-    
+
 
     await compileRulesFun(
       `${oldDirectory}/tmp-allow.txt`,

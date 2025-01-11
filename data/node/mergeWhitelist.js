@@ -1,4 +1,4 @@
-const { filters, readFile, writeFile, readDir } = require("./common_func");
+const { filters, readFile, readDir } = require("./common_func");
 
 // 合并规则
 const mergeWhitelist = async (directory) => {
