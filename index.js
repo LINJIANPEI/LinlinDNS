@@ -178,12 +178,6 @@ async function main() {
       `${oldDirectory}/tmp-allowFilter2.txt`,
       mergeWhitelistAllowFilterhandleAllRulesFilter.join("\n")
     );
-    // await handleAllRules(
-    //   `${oldDirectory}/tmp-allow.txt`,
-    //   `${oldDirectory}/tmp-rules.txt`,
-    //   `${oldDirectory}/tmp-rulesFilter.txt`,
-    //   `${oldDirectory}/tmp-allowFilter.txt`
-    // );
 
     // 规则转换过滤
     const [
@@ -231,6 +225,18 @@ async function main() {
         ...transformationsblacklistRules2,
       ].join("\n")
     );
+
+
+
+
+
+
+
+
+
+
+
+    
 
     await compileRulesFun(
       `${oldDirectory}/tmp-allow.txt`,

@@ -50,10 +50,10 @@ const transformations = async (...fileList) => {
 
         // 返回一个包含黑名单、白名单和未识别规则的数组
         confilter.push([blacklistRules, whitelistRules, noadGuardRules]);
-        console.log(`处理文件 ${filePath} 完成。`);
+        console.log(`处理文件 ${rules} 完成。`);
       } catch (fileError) {
         // 捕获并打印单个文件的错误，但不中断整个流程
-        throw new Error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
+        throw new Error(`处理文件 ${rules} 时出错: ${fileError.message}`);
       }
     }
     return confilter;
