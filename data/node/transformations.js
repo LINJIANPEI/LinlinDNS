@@ -6,7 +6,7 @@ const transformations = async (...fileList) => {
   console.log("开始规则转换");
   let confilter = [];
   try {
-    for (const rules of fileList) {
+    for (const [index, rules] of fileList.entries()) {
       try {
         // 定义三个数组，分别用于保存黑名单、白名单和未识别的规则
         const blacklistRules = [];
@@ -50,14 +50,14 @@ const transformations = async (...fileList) => {
 
         // 返回一个包含黑名单、白名单和未识别规则的数组
         confilter.push([blacklistRules, whitelistRules, noadGuardRules]);
-        console.log(`处理文件 ${rules} 完成。`);
+        console.log(`处理文件 ${index} 完成。`);
       } catch (fileError) {
         // 捕获并打印单个文件的错误，但不中断整个流程
-        throw new Error(`处理文件 ${rules} 时出错: ${fileError.message}`);
+        throw new Error(`处理文件 ${index} 时出错: ${fileError.message}`);
       }
     }
-    return confilter;
     console.log("所有文件的规则转换完成");
+    return confilter;
   } catch (error) {
     // 捕获整个转换过程中的未处理错误
 

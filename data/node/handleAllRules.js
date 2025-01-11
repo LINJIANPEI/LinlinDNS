@@ -4,7 +4,7 @@ const { filters, readFile, writeFile } = require("./common_func");
 const handleAllRules = async (...fileList) => {
   console.log("开始处理所有规则");
   let confilter = [];
-  for (const filePath of fileList) {
+  for (const [index, filePath] of fileList.entries()) {
     try {
       // // 读取文件内容
       // const content = await readFile(filePath);
@@ -40,14 +40,14 @@ const handleAllRules = async (...fileList) => {
       // await writeFile(tmpRules, filters(contentRules).join("\n"));
       confilter.push([tmpRules, tmpAllow, processedContentArray]);
 
-      console.log(`文件 ${filePath} 处理成功`);
+      console.log(`文件 ${index} 处理成功`);
     } catch (fileError) {
       // 捕获并打印单个文件的错误
-      throw new Error(`处理文件 ${filePath} 时出错: ${fileError.message}`);
+      throw new Error(`处理文件 ${index} 时出错: ${fileError.message}`);
     }
   }
-  return confilter;
   console.log("所有文件的规则处理完成");
+  return confilter;
 };
 
 module.exports = { handleAllRules };
