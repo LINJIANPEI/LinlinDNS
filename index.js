@@ -138,18 +138,26 @@ async function main() {
       ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`]
     );
     // 合并规则
-    const [rules, rulesFilter] = await mergeBlacklists(oldDirectory);
-    await writeFile(`${oldDirectory}/tmp-rules.txt`, rules.join("\n"));
+    const [mergeBlacklistsRules, mergeBlacklistsRulesFilter] =
+      await mergeBlacklists(oldDirectory);
+    await writeFile(
+      `${oldDirectory}/tmp-rules.txt`,
+      mergeBlacklistsRules.join("\n")
+    );
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter.txt`,
-      rulesFilter.join("\n")
+      mergeBlacklistsRulesFilter.join("\n")
     );
 
-    const [allow, allowFilter] = await mergeWhitelist(oldDirectory);
-    await writeFile(`${oldDirectory}/tmp-allow.txt`, allow.join("\n"));
+    const [mergeWhitelistAllow, mergeWhitelistAllowFilter] =
+      await mergeWhitelist(oldDirectory);
+    await writeFile(
+      `${oldDirectory}/tmp-allow.txt`,
+      mergeWhitelistAllow.join("\n")
+    );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter.txt`,
-      allowFilter.join("\n")
+      mergeWhitelistAllowFilter.join("\n")
     );
 
     // 处理黑白名单过滤

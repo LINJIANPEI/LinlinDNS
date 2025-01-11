@@ -41,11 +41,9 @@ const mergeBlacklists = async (directory) => {
           allFileDataFilter.push(line);
         }
       });
-    allFileDatas = filters(allFileDatas);
-    allFileDataFilter = filters(allFileDataFilter);
 
     console.log(`合并白名单规则完成，共处理了${rulesFiles.length}个文件`);
-    return [allFileDatas, allFileDataFilter];
+    return [filters(allFileDatas), filters(allFileDataFilter)];
   } catch (error) {
     throw new Error(`合并黑名单规则失败: ${error.message}`);
   }
