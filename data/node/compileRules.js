@@ -19,7 +19,7 @@ const compileRulesFun = async (tmpAllow, tmpRules, ...fileList) => {
           const filteredContentArray = filters([
             ...contentArray,
             ...contentAllowArray,
-          ]).join("\n");
+          ]);
           const removeArray =
             removeSubdomainDuplicates(filteredContentArray).join("\n");
 
