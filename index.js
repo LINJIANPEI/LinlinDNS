@@ -3,6 +3,7 @@ const {
   copyFiles,
   deleteDir,
   deleteFiles,
+  writeFile,
 } = require("./data/node/common_func"); // common_func.js 模块
 
 //规则下载
@@ -137,15 +138,18 @@ async function main() {
       ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`]
     );
     // 合并规则
-    const [rules, rulesFilter] = await mergeBlacklists(
-      oldDirectory,
-      `${oldDirectory}/tmp-rules.txt`,
-      `${oldDirectory}/tmp-rulesFilter.txt`
+    const [rules, rulesFilter] = await mergeBlacklists(oldDirectory);
+    await writeFile(`${oldDirectory}/tmp-rules.txt`, rules.join("\n"));
+    await writeFile(
+      `${oldDirectory}/tmp-rulesFilter.txt`,
+      rulesFilter.join("\n")
     );
-    const [allow, allowFilter] = await mergeWhitelist(
-      oldDirectory,
-      `${oldDirectory}/tmp-allow.txt`,
-      `${oldDirectory}/tmp-allowFilter.txt`
+
+    const [allow, allowFilter] = await mergeWhitelist(oldDirectory);
+    await writeFile(`${oldDirectory}/tmp-allow.txt`, allow.join("\n"));
+    await writeFile(
+      `${oldDirectory}/tmp-allowFilter.txt`,
+      allowFilter.join("\n")
     );
 
     // 处理黑白名单过滤
