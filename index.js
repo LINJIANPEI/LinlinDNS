@@ -140,41 +140,98 @@ async function main() {
     // 合并规则
     const [mergeBlacklistsRules, mergeBlacklistsRulesFilter] =
       await mergeBlacklists(oldDirectory);
+
     await writeFile(
-      `${oldDirectory}/tmp-rules.txt`,
-      mergeBlacklistsRules.join("\n")
-    );
-    await writeFile(
-      `${oldDirectory}/tmp-rulesFilter.txt`,
+      `${oldDirectory}/tmp-rulesFilter1.txt`,
       mergeBlacklistsRulesFilter.join("\n")
     );
 
     const [mergeWhitelistAllow, mergeWhitelistAllowFilter] =
       await mergeWhitelist(oldDirectory);
+
     await writeFile(
-      `${oldDirectory}/tmp-allow.txt`,
-      mergeWhitelistAllow.join("\n")
-    );
-    await writeFile(
-      `${oldDirectory}/tmp-allowFilter.txt`,
+      `${oldDirectory}/tmp-allowFilter1.txt`,
       mergeWhitelistAllowFilter.join("\n")
     );
 
     // 处理黑白名单过滤
-    await handleAllRules(
-      `${oldDirectory}/tmp-allow.txt`,
-      `${oldDirectory}/tmp-rules.txt`,
-      `${oldDirectory}/tmp-rulesFilter.txt`,
-      `${oldDirectory}/tmp-allowFilter.txt`
+    const [
+      [
+        mergeBlacklistsRulesFiltertmpRules,
+        mergeBlacklistsRulesFiltertmpAllow,
+        mergeBlacklistsRulesFilterhandleAllRulesFilter,
+      ],
+      [
+        mergeWhitelistAllowFiltertmpRules,
+        mergeWhitelistAllowFiltertmpAllow,
+        mergeWhitelistAllowFilterhandleAllRulesFilter,
+      ],
+    ] = await handleAllRules(
+      mergeBlacklistsRulesFilter,
+      mergeWhitelistAllowFilter
     );
+    await writeFile(
+      `${oldDirectory}/tmp-rulesFilter2.txt`,
+      mergeBlacklistsRulesFilterhandleAllRulesFilter.join("\n")
+    );
+    await writeFile(
+      `${oldDirectory}/tmp-allowFilter2.txt`,
+      mergeWhitelistAllowFilterhandleAllRulesFilter.join("\n")
+    );
+    // await handleAllRules(
+    //   `${oldDirectory}/tmp-allow.txt`,
+    //   `${oldDirectory}/tmp-rules.txt`,
+    //   `${oldDirectory}/tmp-rulesFilter.txt`,
+    //   `${oldDirectory}/tmp-allowFilter.txt`
+    // );
 
     // 规则转换过滤
-    await transformations(
-      `${oldDirectory}/tmp-allow.txt`,
-      `${oldDirectory}/tmp-rules.txt`,
-      `${oldDirectory}/tmp-rulesFilter.txt`,
-      `${oldDirectory}/tmp-allowFilter.txt`
+    const [
+      [
+        transformationsblacklistRules1,
+        transformationswhitelistRules1,
+        transformationsnoadGuardRules1,
+      ],
+      [
+        transformationsblacklistRules2,
+        transformationswhitelistRules2,
+        transformationsnoadGuardRules2,
+      ],
+    ] = await transformations(
+      mergeBlacklistsRulesFilterhandleAllRulesFilter,
+      mergeWhitelistAllowFilterhandleAllRulesFilter
     );
+
+    await writeFile(
+      `${oldDirectory}/tmp-rulesFilter3.txt`,
+      transformationsnoadGuardRules1.join("\n")
+    );
+    await writeFile(
+      `${oldDirectory}/tmp-allowFilter3.txt`,
+      transformationsnoadGuardRules2.join("\n")
+    );
+
+    await writeFile(
+      `${oldDirectory}/tmp-allow.txt`,
+      [
+        ...mergeWhitelistAllow,
+        ...mergeBlacklistsRulesFiltertmpAllow,
+        ...mergeWhitelistAllowFiltertmpAllow,
+        ...transformationswhitelistRules1,
+        ...transformationswhitelistRules2,
+      ].join("\n")
+    );
+    await writeFile(
+      `${oldDirectory}/tmp-rules.txt`,
+      [
+        ...mergeBlacklistsRules,
+        ...mergeBlacklistsRulesFiltertmpRules,
+        ...mergeWhitelistAllowFiltertmpRules,
+        ...transformationsblacklistRules1,
+        ...transformationsblacklistRules2,
+      ].join("\n")
+    );
+
     await compileRulesFun(
       `${oldDirectory}/tmp-allow.txt`,
       `${oldDirectory}/tmp-rules.txt`,
