@@ -235,8 +235,8 @@ async function main() {
     await compileRulesFun(
       `${oldDirectory}/tmp-allow.txt`,
       `${oldDirectory}/tmp-rules.txt`,
-      `${oldDirectory}/tmp-rulesFilter.txt`,
-      `${oldDirectory}/tmp-allowFilter.txt`
+      `${oldDirectory}/tmp-rulesFilter3.txt`,
+      `${oldDirectory}/tmp-allowFilter3.txt`
     );
 
     // 删除文件
@@ -252,9 +252,13 @@ async function main() {
     // 复制文件
     await copyFiles(
       [`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`],
-      [`${oldDirectory}/tmp-allowFilter.txt`, `${assets}/allowFilter.txt`],
       [`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`],
-      [`${oldDirectory}/tmp-rulesFilter.txt`, `${assets}/rulesFilter.txt`]
+      [`${oldDirectory}/tmp-allowFilter1.txt`, `${assets}/allowFilter1.txt`],
+      [`${oldDirectory}/tmp-rulesFilter1.txt`, `${assets}/rulesFilter1.txt`],
+      [`${oldDirectory}/tmp-allowFilter2.txt`, `${assets}/allowFilter2.txt`],
+      [`${oldDirectory}/tmp-rulesFilter2.txt`, `${assets}/rulesFilter2.txt`],
+      [`${oldDirectory}/tmp-allowFilter3.txt`, `${assets}/allowFilter3.txt`],
+      [`${oldDirectory}/tmp-rulesFilter3.txt`, `${assets}/rulesFilter3.txt`]
     );
 
     // 过滤DNS
