@@ -16,7 +16,7 @@ const downloadFile = async (url, directory) => {
     });
     const decoded = iconv.decode(response.data, "utf8");
     await writeFile(directory, decoded);
-    console.log(`下载规则文件成功: ${url}`);
+    // console.log(`下载规则文件成功: ${url}`);
   } catch (error) {
     console.error(`下载文件失败: ${url} - ${error.message}`);
   }
@@ -43,7 +43,7 @@ const downloadRules = async (rules, allow, directory) => {
     await Promise.all(downloadTasks);
     console.log("规则下载完成");
   } catch (error) {
-    console.error(`规则下载过程中发生错误: ${error.message}`);
+    throw new Error(`规则下载过程中发生错误: ${error.message}`);
   }
 };
 
