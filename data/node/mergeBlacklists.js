@@ -1,7 +1,7 @@
 const { filters, readFile, writeFile, readDir } = require("./common_func");
 
 // 合并规则
-const mergeBlacklists = async (directory) => {
+const mergeBlacklists = async (directory, rules, rulesFilter) => {
   console.log("开始合并黑名单规则");
   try {
     // 读取列表文件名
@@ -41,17 +41,17 @@ const mergeBlacklists = async (directory) => {
           allFileDataFilter.push(line);
         }
       });
-    // 写入文件
-    await writeFile(
-      `${directory}/tmp-rules.txt`,
-      filters(allFileDatas).join("\n")
-    );
-    await writeFile(
-      `${directory}/tmp-rulesFilter.txt`,
-      filters(allFileDataFilter).join("\n")
-    );
+
+    if (!rules) {
+      await writeFile(rules, filters(allFileDatas).join("\n"));
+    }
+
+    if (!rulesFilter) {
+      await writeFile(rulesFilter, filters(allFileDataFilter).join("\n"));
+    }
 
     console.log(`合并白名单规则完成，共处理了${rulesFiles.length}个文件`);
+    return [filters(allFileDatas), filters(allFileDataFilter)];
   } catch (error) {
     throw new Error(`合并黑名单规则失败: ${error.message}`);
   }

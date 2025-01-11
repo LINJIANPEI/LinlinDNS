@@ -137,8 +137,16 @@ async function main() {
       ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`]
     );
     // 合并规则
-    await mergeBlacklists(oldDirectory);
-    await mergeWhitelist(oldDirectory);
+    const [rules, rulesFilter] = await mergeBlacklists(
+      oldDirectory,
+      `${oldDirectory}/tmp-rules.txt`,
+      `${oldDirectory}/tmp-rulesFilter.txt`
+    );
+    const [allow, allowFilter] = await mergeWhitelist(
+      oldDirectory,
+      `${oldDirectory}/tmp-allow.txt`,
+      `${oldDirectory}/tmp-allowFilter.txt`
+    );
 
     // 处理黑白名单过滤
     await handleAllRules(
