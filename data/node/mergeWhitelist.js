@@ -26,13 +26,6 @@ const mergeWhitelist = async (directory) => {
     let allFileDatas = allFileData
       .join("\n")
       .split("\n")
-      // .filter((line) => {
-      //   if (line.startsWith("@")) {
-      //     return line;
-      //   } else {
-      //     allFileDataFilter.push(line);
-      //   }
-      // })
       .filter((line) => {
         if (/^@@.*/.test(line)) {
           return line;

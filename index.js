@@ -142,18 +142,8 @@ async function main() {
     const [mergeBlacklistsRules, mergeBlacklistsRulesFilter] =
       await mergeBlacklists(oldDirectory);
 
-    await writeFile(
-      `${oldDirectory}/tmp-rulesFilter1.txt`,
-      mergeBlacklistsRulesFilter.join("\n")
-    );
-
     const [mergeWhitelistAllow, mergeWhitelistAllowFilter] =
       await mergeWhitelist(oldDirectory);
-
-    await writeFile(
-      `${oldDirectory}/tmp-allowFilter1.txt`,
-      mergeWhitelistAllowFilter.join("\n")
-    );
 
     // 处理黑白名单过滤
     const [
@@ -171,14 +161,6 @@ async function main() {
       mergeBlacklistsRulesFilter,
       mergeWhitelistAllowFilter
     );
-    await writeFile(
-      `${oldDirectory}/tmp-rulesFilter2.txt`,
-      mergeBlacklistsRulesFilterhandleAllRulesFilter.join("\n")
-    );
-    await writeFile(
-      `${oldDirectory}/tmp-allowFilter2.txt`,
-      mergeWhitelistAllowFilterhandleAllRulesFilter.join("\n")
-    );
 
     // 规则转换过滤
     const [
@@ -195,6 +177,23 @@ async function main() {
     ] = await transformations(
       mergeBlacklistsRulesFilterhandleAllRulesFilter,
       mergeWhitelistAllowFilterhandleAllRulesFilter
+    );
+
+    await writeFile(
+      `${oldDirectory}/tmp-rulesFilter1.txt`,
+      mergeBlacklistsRulesFilter.join("\n")
+    );
+    await writeFile(
+      `${oldDirectory}/tmp-allowFilter1.txt`,
+      mergeWhitelistAllowFilter.join("\n")
+    );
+    await writeFile(
+      `${oldDirectory}/tmp-rulesFilter2.txt`,
+      mergeBlacklistsRulesFilterhandleAllRulesFilter.join("\n")
+    );
+    await writeFile(
+      `${oldDirectory}/tmp-allowFilter2.txt`,
+      mergeWhitelistAllowFilterhandleAllRulesFilter.join("\n")
     );
 
     await writeFile(
@@ -216,7 +215,7 @@ async function main() {
         ...transformationswhitelistRules2,
       ].join("\n")
     );
-    
+
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
       [
@@ -227,18 +226,6 @@ async function main() {
         ...transformationsblacklistRules2,
       ].join("\n")
     );
-
-
-
-
-
-
-
-
-
-
-
-
 
     await compileRulesFun(
       `${oldDirectory}/tmp-allow.txt`,
@@ -253,8 +240,12 @@ async function main() {
       `${newDirectory}/dns.txt`,
       `${newDirectory}/DnsConfiguration.txt`,
       `${newDirectory}/rules.txt`,
-      `${assets}/allowFilter.txt`,
-      `${assets}/rulesFilter.txt`
+      `${assets}/allowFilter1.txt`,
+      `${assets}/rulesFilter1.txt`,
+      `${assets}/allowFilter2.txt`,
+      `${assets}/rulesFilter2.txt`,
+      `${assets}/allowFilter3.txt`,
+      `${assets}/rulesFilter3.txt`
     );
 
     // 复制文件

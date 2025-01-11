@@ -17,15 +17,14 @@ const handleAllRules = async (...fileList) => {
           return line;
         }
       });
-      // .filter((line) => !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line)) // 过滤掉特定格式的行
-      // .filter((line) => !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)) // 过滤掉更多特定格式的行
 
       confilter.push([tmpRules, tmpAllow, processedContentArray]);
 
       console.log(`文件 ${index} 处理成功`);
     } catch (fileError) {
       // 捕获并打印单个文件的错误
-      throw new Error(`处理文件 ${index} 时出错: ${fileError.message}`);
+      console.error(`处理文件 ${index} 时出错: ${fileError.message}`);
+      throw new Error(`处理文件 ${index} 时出错`);
     }
   }
   console.log("所有文件的规则处理完成");

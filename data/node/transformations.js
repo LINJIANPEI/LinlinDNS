@@ -30,9 +30,6 @@ const transformations = async (...fileList) => {
           }
           // 处理 AdBlock 规则
           else if (/^\|\|/.test(trimmed)) {
-            // blacklistRules.push(
-            //   trimmed.includes("$") ? trimmed.replace("$", "$important,") : trimmed
-            // );
             blacklistRules.push(trimmed);
           }
           // 处理白名单规则
@@ -50,6 +47,7 @@ const transformations = async (...fileList) => {
         console.log(`处理文件 ${index} 完成。`);
       } catch (fileError) {
         // 捕获并打印单个文件的错误，但不中断整个流程
+        console.error(`处理文件 ${index} 时出错: ${fileError.message}`);
         throw new Error(`处理文件 ${index} 时出错: ${fileError.message}`);
       }
     }
@@ -57,7 +55,6 @@ const transformations = async (...fileList) => {
     return confilter;
   } catch (error) {
     // 捕获整个转换过程中的未处理错误
-
     throw new Error(`规则转换失败: ${error.message}`);
   }
 };
