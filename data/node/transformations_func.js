@@ -44,10 +44,21 @@ const processRuleLines = async (lines, str = "") => {
       .map((line) => {
         // 判断是否为注释行或特定结构的行
         const isNotComment = !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line);
+
+        // 如果符合条件（不是注释行或特定结构的行），为规则添加自定义前缀
+        if (isNotComment) {
+          return `${str}${line}`;
+        } else {
+          no.push(line);
+          return null; // 确保 map 的长度与原数组一致
+        }
+      })
+      .map((line) => {
+        // 判断是否为注释行或特定结构的行
         const isNotValidStructure = !/(((^#)([^#]|$))|^#{4,}).*$/.test(line);
 
         // 如果符合条件（不是注释行或特定结构的行），为规则添加自定义前缀
-        if (isNotComment || isNotValidStructure) {
+        if (isNotValidStructure) {
           return `${str}${line}`;
         } else {
           no.push(line);
