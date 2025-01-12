@@ -271,7 +271,9 @@ async function main() {
       `${assets}/allowFilter2.txt`,
       `${assets}/rulesFilter2.txt`,
       `${assets}/allowFilter3.txt`,
-      `${assets}/rulesFilter3.txt`
+      `${assets}/rulesFilter3.txt`,
+      `${assets}/allowFilter4.txt`,
+      `${assets}/rulesFilter4.txt`
     );
 
     // 复制文件
@@ -283,7 +285,9 @@ async function main() {
       [`${oldDirectory}/tmp-allowFilter2.txt`, `${assets}/allowFilter2.txt`],
       [`${oldDirectory}/tmp-rulesFilter2.txt`, `${assets}/rulesFilter2.txt`],
       [`${oldDirectory}/tmp-allowFilter3.txt`, `${assets}/allowFilter3.txt`],
-      [`${oldDirectory}/tmp-rulesFilter3.txt`, `${assets}/rulesFilter3.txt`]
+      [`${oldDirectory}/tmp-rulesFilter3.txt`, `${assets}/rulesFilter3.txt`],
+      [`${oldDirectory}/tmp-allowFilter4.txt`, `${assets}/allowFilter4.txt`],
+      [`${oldDirectory}/tmp-rulesFilter4.txt`, `${assets}/rulesFilter4.txt`]
     );
 
     // 过滤DNS
