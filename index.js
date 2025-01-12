@@ -4,6 +4,7 @@ const {
   deleteDir,
   deleteFiles,
   writeFile,
+  filters,
 } = require("./data/node/common_func"); // common_func.js 模块
 const {
   removeSubdomainDuplicates,
@@ -184,50 +185,54 @@ async function main() {
 
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter1.txt`,
-      mergeBlacklistsRulesFilter.join("\n")
+      filters(mergeBlacklistsRulesFilter).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter1.txt`,
-      mergeWhitelistAllowFilter.join("\n")
+      filters(mergeWhitelistAllowFilter).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter2.txt`,
-      mergeBlacklistsRulesFilterhandleAllRulesFilter.join("\n")
+      filters(mergeBlacklistsRulesFilterhandleAllRulesFilter).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter2.txt`,
-      mergeWhitelistAllowFilterhandleAllRulesFilter.join("\n")
+      filters(mergeWhitelistAllowFilterhandleAllRulesFilter).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter3.txt`,
-      transformationsnoadGuardRules1.join("\n")
+      filters(transformationsnoadGuardRules1).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter3.txt`,
-      transformationsnoadGuardRules2.join("\n")
+      filters(transformationsnoadGuardRules2).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
-      removeSubdomainDuplicates([
-        ...mergeWhitelistAllow,
-        ...mergeBlacklistsRulesFiltertmpAllow,
-        ...mergeWhitelistAllowFiltertmpAllow,
-        ...transformationswhitelistRules1,
-        ...transformationswhitelistRules2,
-      ]).join("\n")
+      filters(
+        removeSubdomainDuplicates([
+          ...mergeWhitelistAllow,
+          ...mergeBlacklistsRulesFiltertmpAllow,
+          ...mergeWhitelistAllowFiltertmpAllow,
+          ...transformationswhitelistRules1,
+          ...transformationswhitelistRules2,
+        ])
+      ).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
-      removeSubdomainDuplicates([
-        ...mergeBlacklistsRules,
-        ...mergeBlacklistsRulesFiltertmpRules,
-        ...mergeWhitelistAllowFiltertmpRules,
-        ...transformationsblacklistRules1,
-        ...transformationsblacklistRules2,
-      ]).join("\n")
+      filters(
+        removeSubdomainDuplicates([
+          ...mergeBlacklistsRules,
+          ...mergeBlacklistsRulesFiltertmpRules,
+          ...mergeWhitelistAllowFiltertmpRules,
+          ...transformationsblacklistRules1,
+          ...transformationsblacklistRules2,
+        ])
+      ).join("\n")
     );
 
     // await compileRulesFun(
