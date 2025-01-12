@@ -5,6 +5,7 @@ const {
   deleteFiles,
   writeFile,
 } = require("./data/node/common_func"); // common_func.js 模块
+const { removeSubdomainDuplicates } = require("./transformations_func"); // transformations_func.js 模块
 
 //规则下载
 const { downloadRules } = require("./data/node/downloadRules"); // downloadRules.js 模块
@@ -207,32 +208,32 @@ async function main() {
 
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
-      [
+      removeSubdomainDuplicates([
         ...mergeWhitelistAllow,
         ...mergeBlacklistsRulesFiltertmpAllow,
         ...mergeWhitelistAllowFiltertmpAllow,
         ...transformationswhitelistRules1,
         ...transformationswhitelistRules2,
-      ].join("\n")
+      ]).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
-      [
+      removeSubdomainDuplicates([
         ...mergeBlacklistsRules,
         ...mergeBlacklistsRulesFiltertmpRules,
         ...mergeWhitelistAllowFiltertmpRules,
         ...transformationsblacklistRules1,
         ...transformationsblacklistRules2,
-      ].join("\n")
+      ]).join("\n")
     );
 
-    await compileRulesFun(
-      `${oldDirectory}/tmp-allow.txt`,
-      `${oldDirectory}/tmp-rules.txt`,
-      `${oldDirectory}/tmp-rulesFilter3.txt`,
-      `${oldDirectory}/tmp-allowFilter3.txt`
-    );
+    // await compileRulesFun(
+    //   `${oldDirectory}/tmp-allow.txt`,
+    //   `${oldDirectory}/tmp-rules.txt`,
+    //   `${oldDirectory}/tmp-rulesFilter3.txt`,
+    //   `${oldDirectory}/tmp-allowFilter3.txt`
+    // );
 
     // 删除文件
     await deleteFiles(
