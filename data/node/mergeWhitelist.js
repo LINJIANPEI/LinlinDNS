@@ -27,7 +27,11 @@ const mergeWhitelist = async (directory) => {
       .join("\n")
       .split("\n")
       .filter((line) => {
-        if (/^@@.*/.test(line)) {
+        if (
+          /^@@.*/.test(line) ||
+          !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line) ||
+          !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)
+        ) {
           return line;
         } else {
           allFileDataFilter.push(line);
