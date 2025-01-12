@@ -8,6 +8,7 @@ const {
 } = require("./data/node/common_func"); // common_func.js 模块
 const {
   removeSubdomainDuplicates,
+  processRuleLines,
 } = require("./data/node/transformations_func"); // transformations_func.js 模块
 
 //规则下载
@@ -183,6 +184,11 @@ async function main() {
       mergeWhitelistAllowFilterhandleAllRulesFilter
     );
 
+    const [processRuleLinesblacklistRules, processRuleLinesnoadGuardRules1] =
+      await processRuleLines(transformationsnoadGuardRules1, "||");
+    const [processRuleLineswhitelistRules, processRuleLinesnoadGuardRules2] =
+      await processRuleLines(transformationsnoadGuardRules2, "@@");
+
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter1.txt`,
       filters(mergeBlacklistsRulesFilter).join("\n")
@@ -191,6 +197,7 @@ async function main() {
       `${oldDirectory}/tmp-allowFilter1.txt`,
       filters(mergeWhitelistAllowFilter).join("\n")
     );
+
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter2.txt`,
       filters(mergeBlacklistsRulesFilterhandleAllRulesFilter).join("\n")
@@ -210,6 +217,15 @@ async function main() {
     );
 
     await writeFile(
+      `${oldDirectory}/tmp-rulesFilter4.txt`,
+      filters(processRuleLinesnoadGuardRules1).join("\n")
+    );
+    await writeFile(
+      `${oldDirectory}/tmp-allowFilter4.txt`,
+      filters(processRuleLinesnoadGuardRules2).join("\n")
+    );
+
+    await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
       filters(
         removeSubdomainDuplicates([
@@ -218,6 +234,7 @@ async function main() {
           ...mergeWhitelistAllowFiltertmpAllow,
           ...transformationswhitelistRules1,
           ...transformationswhitelistRules2,
+          ...processRuleLineswhitelistRules,
         ])
       ).join("\n")
     );
@@ -231,6 +248,7 @@ async function main() {
           ...mergeWhitelistAllowFiltertmpRules,
           ...transformationsblacklistRules1,
           ...transformationsblacklistRules2,
+          ...processRuleLinesblacklistRules,
         ])
       ).join("\n")
     );

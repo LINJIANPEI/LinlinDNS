@@ -27,6 +27,40 @@ const removeSubdomainDuplicates = (rules) => {
   return optimizedRules;
 };
 
+/**
+ * 异步处理规则数组，为符合条件的规则添加自定义前缀。
+ *
+ * @param {string[]} lines - 一个包含规则字符串的数组。
+ * @param {string} [str=""] - 需要添加的前缀，默认为空字符串。
+ * @returns {Promise<[string[], string[]]>} - 返回一个 Promise，解析为包含两部分数组的结果：[符合条件的规则数组，不符合条件的规则数组]。
+ */
+const processRuleLines = async (lines, str = "") => {
+  return new Promise((resolve) => {
+    // 用于存储不符合条件的规则
+    let no = [];
+
+    // 处理规则数组
+    const yes = lines
+      .map((line) => {
+        // 判断是否为注释行或特定结构的行
+        const isNotComment = !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line);
+        const isNotValidStructure = !/(((^#)([^#]|$))|^#{4,}).*$/.test(line);
+
+        // 如果符合条件（不是注释行或特定结构的行），为规则添加自定义前缀
+        if (isNotComment || isNotValidStructure) {
+          return `${str}${line}`;
+        } else {
+          no.push(line);
+          return null; // 确保 map 的长度与原数组一致
+        }
+      })
+      .filter(Boolean); // 移除 null 值
+
+    resolve([yes, no]);
+  });
+};
+
 module.exports = {
   removeSubdomainDuplicates,
+  processRuleLines,
 };
