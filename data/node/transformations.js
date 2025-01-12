@@ -15,7 +15,7 @@ const transformations = async (...fileList) => {
           const trimmed = line.trim();
 
           // 排除注释和空行
-          if (!trimmed || trimmed.startsWith("#") || trimmed.startsWith("!")) {
+          if (!trimmed) {
             return;
           }
 
