@@ -47,7 +47,7 @@ const processRuleLines = async (lines, str = "") => {
 
         // 如果符合条件（不是注释行或特定结构的行），为规则添加自定义前缀
         if (isNotComment) {
-          return `${str}${line}`;
+          return line;
         } else {
           no.push(line);
           return null; // 确保 map 的长度与原数组一致
@@ -59,14 +59,16 @@ const processRuleLines = async (lines, str = "") => {
 
         // 如果符合条件（不是注释行或特定结构的行），为规则添加自定义前缀
         if (isNotValidStructure) {
-          return `${str}${line}`;
+          return line;
         } else {
           no.push(line);
           return null; // 确保 map 的长度与原数组一致
         }
       })
-      .filter(Boolean); // 移除 null 值
-
+      .filter(Boolean) // 移除 null 值
+      .map((line) => {
+        return `${str}${line}`;
+      });
     resolve([yes, no]);
   });
 };
