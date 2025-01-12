@@ -29,11 +29,6 @@ const mergeWhitelist = async (directory) => {
       .filter((line) => {
         if (/^@@.*/.test(line)) {
           return line;
-        } else if (
-          !/^!|^#[^#,^@,^%,^\$]|^\[.*\]$/.test(line) ||
-          !/(((^#)([^#]|$))|^#{4,}).*$/.test(line)
-        ) {
-          return `@@${line}`;
         } else {
           allFileDataFilter.push(line);
         }
