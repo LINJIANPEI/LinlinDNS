@@ -10,9 +10,9 @@ const handleAllRules = async (...fileList) => {
 
       processedContentArray = filePath.filter((line) => {
         if (/^\|\|.*/.test(line) || /^\/.*\/$/.test(line)) {
-          tmpAllow.push(line);
-        } else if (/^@@.*/.test(line)) {
           tmpRules.push(line);
+        } else if (/^@@.*/.test(line)) {
+          tmpAllow.push(line);
         } else {
           return line;
         }
