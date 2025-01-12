@@ -5,7 +5,9 @@ const {
   deleteFiles,
   writeFile,
 } = require("./data/node/common_func"); // common_func.js 模块
-const { removeSubdomainDuplicates } = require("./transformations_func"); // transformations_func.js 模块
+const {
+  removeSubdomainDuplicates,
+} = require("./data/node/transformations_func"); // transformations_func.js 模块
 
 //规则下载
 const { downloadRules } = require("./data/node/downloadRules"); // downloadRules.js 模块
