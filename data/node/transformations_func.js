@@ -81,7 +81,7 @@ const processRuleLines = async (lines, str = "") => {
         const isNotValidStructure = !/^##.*[\u4e00-\u9fa5].*$/.test(line);
         const isNotValidStructures = /^##.*\[.*\].*$/.test(line);
         // 如果符合条件（不是注释行或特定结构的行），为规则添加自定义前缀
-        if (isNotValidStructure || isNotValidStructuress) {
+        if (isNotValidStructure || isNotValidStructures) {
           return line;
         } else {
           no.push(line);
