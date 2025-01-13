@@ -21,13 +21,11 @@ const readDirContent = promisify(fs.readdir);
 const filters = (arr) => {
   try {
     console.log("开始过滤无效字符");
-    let arrs = arr;
-    if (arr.length > 0) {
-      arrs = [...new Set(arr)]
-        .map((line) => line.trim()) // 修剪每行的空白
-        .filter((line) => line !== "") // 过滤掉空行
-        .sort();
-    }
+    const arrs = [...new Set(arr)]
+      .filter(Boolean)
+      .map((line) => line.trim()) // 修剪每行的空白
+      .filter((line) => line !== "") // 过滤掉空行
+      .sort();
     console.log("过滤无效字符成功");
     return arrs;
   } catch (error) {
