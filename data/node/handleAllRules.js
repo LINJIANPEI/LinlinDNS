@@ -20,7 +20,9 @@ const handleAllRules = async (...fileList) => {
 
       confilter.push([tmpRules, tmpAllow, processedContentArray]);
 
-      console.log(`文件 ${index} 处理成功`);
+      console.log(
+        `文件 ${index} 处理成功,过滤黑名单规则${tmpRules.length}条,过滤黑名单规则${tmpAllow.length}条,不匹配${processedContentArray.length}条`
+      );
     } catch (fileError) {
       // 捕获并打印单个文件的错误
       console.error(`处理文件 ${index} 时出错: ${fileError.message}`);

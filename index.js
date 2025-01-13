@@ -144,97 +144,79 @@ async function main() {
     );
 
     // 合并规则
-    const [mergeBlacklistsRules, mergeBlacklistsRulesFilter] =
-      await mergeBlacklists(oldDirectory);
+    const [blacklists1, blacklistsFilter1] = await mergeBlacklists(
+      oldDirectory
+    );
 
-    const [mergeWhitelistAllow, mergeWhitelistAllowFilter] =
-      await mergeWhitelist(oldDirectory);
+    const [whitelists1, whitelistsFilter1] = await mergeWhitelist(oldDirectory);
 
     // 处理黑白名单过滤
     const [
-      [
-        mergeBlacklistsRulesFiltertmpRules,
-        mergeBlacklistsRulesFiltertmpAllow,
-        mergeBlacklistsRulesFilterhandleAllRulesFilter,
-      ],
-      [
-        mergeWhitelistAllowFiltertmpRules,
-        mergeWhitelistAllowFiltertmpAllow,
-        mergeWhitelistAllowFilterhandleAllRulesFilter,
-      ],
-    ] = await handleAllRules(
-      mergeBlacklistsRulesFilter,
-      mergeWhitelistAllowFilter
-    );
+      [blacklists2, whitelists2, blacklistsFilter2],
+      [blacklists3, whitelists3, whitelistsFilter2],
+    ] = await handleAllRules(blacklistsFilter1, whitelistsFilter1);
 
     // 规则转换过滤
     const [
-      [
-        transformationsblacklistRules1,
-        transformationswhitelistRules1,
-        transformationsnoadGuardRules1,
-      ],
-      [
-        transformationsblacklistRules2,
-        transformationswhitelistRules2,
-        transformationsnoadGuardRules2,
-      ],
-    ] = await transformations(
-      mergeBlacklistsRulesFilterhandleAllRulesFilter,
-      mergeWhitelistAllowFilterhandleAllRulesFilter
-    );
+      [blacklists4, whitelists4, blacklistsFilter3],
+      [blacklists5, whitelists5, whitelistsFilter3],
+    ] = await transformations(blacklistsFilter2, whitelistsFilter2);
 
-    const [processRuleLinesblacklistRules, processRuleLinesnoadGuardRules1] =
-      await processRuleLines(transformationsnoadGuardRules1, "||");
-    const [processRuleLineswhitelistRules, processRuleLinesnoadGuardRules2] =
-      await processRuleLines(transformationsnoadGuardRules2, "@@");
+    const [blacklists6, blacklistsFilter4] = await processRuleLines(
+      blacklistsFilter3,
+      "||"
+    );
+    const [whitelists6, whitelistsFilter4] = await processRuleLines(
+      whitelistsFilter3,
+      "@@"
+    );
 
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter1.txt`,
-      filters(mergeBlacklistsRulesFilter).join("\n")
+      filters(blacklistsFilter1).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter1.txt`,
-      filters(mergeWhitelistAllowFilter).join("\n")
+      filters(whitelistsFilter1).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter2.txt`,
-      filters(mergeBlacklistsRulesFilterhandleAllRulesFilter).join("\n")
+      filters(blacklistsFilter2).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter2.txt`,
-      filters(mergeWhitelistAllowFilterhandleAllRulesFilter).join("\n")
+      filters(whitelistsFilter2).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter3.txt`,
-      filters(transformationsnoadGuardRules1).join("\n")
+      filters(blacklistsFilter3).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter3.txt`,
-      filters(transformationsnoadGuardRules2).join("\n")
+      filters(whitelistsFilter3).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rulesFilter4.txt`,
-      filters(processRuleLinesnoadGuardRules1).join("\n")
+      filters(blacklistsFilter4).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-allowFilter4.txt`,
-      filters(processRuleLinesnoadGuardRules2).join("\n")
+      filters(whitelistsFilter4).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
       filters(
         removeSubdomainDuplicates([
-          ...mergeWhitelistAllow,
-          ...mergeBlacklistsRulesFiltertmpAllow,
-          ...mergeWhitelistAllowFiltertmpAllow,
-          ...transformationswhitelistRules1,
-          ...transformationswhitelistRules2,
-          ...processRuleLineswhitelistRules,
+          ...whitelists1,
+          ...whitelists2,
+          ...whitelists3,
+          ...whitelists4,
+          ...whitelists5,
+          ...whitelists6,
         ])
       ).join("\n")
     );
@@ -243,12 +225,12 @@ async function main() {
       `${oldDirectory}/tmp-rules.txt`,
       filters(
         removeSubdomainDuplicates([
-          ...mergeBlacklistsRules,
-          ...mergeBlacklistsRulesFiltertmpRules,
-          ...mergeWhitelistAllowFiltertmpRules,
-          ...transformationsblacklistRules1,
-          ...transformationsblacklistRules2,
-          ...processRuleLinesblacklistRules,
+          ...blacklists1,
+          ...blacklists2,
+          ...blacklists3,
+          ...blacklists4,
+          ...blacklists5,
+          ...blacklists6,
         ])
       ).join("\n")
     );

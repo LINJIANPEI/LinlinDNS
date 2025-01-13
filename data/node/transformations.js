@@ -44,7 +44,9 @@ const transformations = async (...fileList) => {
 
         // 返回一个包含黑名单、白名单和未识别规则的数组
         confilter.push([blacklistRules, whitelistRules, noadGuardRules]);
-        console.log(`处理文件 ${index} 完成。`);
+        console.log(
+          `处理文件 ${index} 完成,过滤黑名单规则${blacklistRules.length}条,过滤白名单规则${whitelistRules.length}条,排除${noadGuardRules.length}条`
+        );
       } catch (fileError) {
         // 捕获并打印单个文件的错误，但不中断整个流程
         console.error(`处理文件 ${index} 时出错: ${fileError.message}`);

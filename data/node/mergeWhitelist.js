@@ -34,7 +34,11 @@ const mergeWhitelist = async (directory) => {
         }
       });
 
-    console.log(`合并白名单规则完成，共处理了${allowFiles.length}个文件`);
+    console.log(
+      `合并白名单规则完成，共处理了${allowFiles.length}个文件，符合规则${
+        filters(allFileDatas).length
+      }条，不符合${filters(allFileDataFilter).length}条`
+    );
     return [filters(allFileDatas), filters(allFileDataFilter)];
   } catch (error) {
     throw new Error(`合并白名单规则失败: ${error.message}`);
