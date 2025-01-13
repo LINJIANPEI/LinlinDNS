@@ -3,7 +3,6 @@ const { filters, readFile, readDir } = require("./common_func");
 // 合并规则
 const mergeWhitelist = async (directory) => {
   console.log("开始合并白名单规则");
-
   try {
     // 读取列表文件名
     const fileList = await readDir(directory);
