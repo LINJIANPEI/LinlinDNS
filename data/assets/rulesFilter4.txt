@@ -382,12 +382,12 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 2uPHCNGVyQpygjV25YO4HA
-! Checksum: C+xmRphtQCwP4Pd6CimYdg
 ! Checksum: Rn4+JFMnUTbkvbFUmRVUTA
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: hbMX+ZrDxQtRhyFTNgphJA
-! Checksum: iJ0J7EMEOmu5wPoRnrdHMA
+! Checksum: bR3yMKaj+ggae9vHGijuAg
+! Checksum: lDkCU1rw2fUIqtcJeryAbw
 ! Checksum: vXO2skD37egAcrKzRVhe1A
+! Checksum: yDF7S40AAaYqQwq/PvJllg
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -647,14 +647,13 @@
 ! Last modified: 12 Jan 2025 23:52 UTC+7
 ! Last modified: 13 Dec 2024 12:21 UTC
 ! Last modified: 13 Dec 2024 12:31 UTC
-! Last modified: 14 Jan 2025 04:11 UTC
+! Last modified: 14 Jan 2025 06:11 UTC
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2024/09/26 07:32 +0800
 ! Last modified: 2024/12/21 19:27 +0800
-! Last modified: 2025-01-13T06:01:40.160Z
-! Last modified: 2025-01-13T18:01:32.968Z
+! Last modified: 2025-01-14T06:01:20.733Z
 ! Last modified: 30 Jan 2021
 ! Last modified: 30 Nov 2023 11:33 UTC
 ! Latvian
@@ -967,7 +966,6 @@
 ! The list of bug-tracker services(Sentry, etc.)
 ! The reason for unblocking crashlytics is to not make developers life worse by breaking crash reporting.
 ! The rules with hints are at the end of file
-! The rules with hints are at the end of file.
 ! There is a system setting for getting rid of homescreen "Buy Now"-type ads, which is hidden in Settings → System → Automatic Downloads → Featured Content → Off.
 ! There is a system setting for getting rid of the Nintendo eShop advertisements on the lockscreen, which is hidden in System Settings → System → News Channel Settings → Nintendo News → Unfollow.
 ! There were multiple third-party online game servers for the PS2, of which Bobz Entertainment and OpenSpy are the only ones with some functionality still working.
@@ -1071,7 +1069,6 @@
 ! Version: 202011041719
 ! Version: 202011182
 ! Version: 202012190310
-! Version: 202302242205
 ! Version: 2024.10.19
 ! Version: 202406120915
 ! Version: 202408241
@@ -1084,7 +1081,7 @@
 ! Version: 2025-01-14 08:37:05（北京时间）
 ! Version: 2025-01-14 09:35:52（北京时间）
 ! Version: 202501051
-! Version: 202501140411
+! Version: 202501140611
 ! Version: 2501122352
 ! Version: 350.202311301133
 ! Vietnamese
@@ -1922,7 +1919,6 @@
 !!!note! If you are using "AdGuard Home", please load https://anti-ad.net/easylist.txt
 !!!note! If you are using "AdGuard", please load https://anti-ad.net/adguard.txt
 !!||localhost.direct^
-!##div#dplayer-ad
 !#0
 !#17ce.com
 !#18comic.org
@@ -2006,14 +2002,8 @@
 !+ PLATFORM(ios, ext_safari)
 !+ PLATFORM(windows, mac, android)
 !--
-!-- 2021-12-1
-!-- 2022-1-4
-!-- 2022-3-7 txty
-!-- 2022-4-21 txsp
-!-- 2022..7.2
 !-- END END ---
 !-- taobao
-!-- 百度搜索广告
 !----
 !----- For HTTPS websites when HTTPS filtering is disabled ------
 !---------- Anti-Adblock ----------
@@ -2143,22 +2133,15 @@
 !---腾讯视频
 !---迅雷看看
 !---风行
-!--2021-10-30
-!--2021-8-10
 !--360影视
-!--55影视
 !--56
 !--bilibili
 !--bimibimi--m站
 !--dlkoo.com
 !--google
-!--replace ##a[href$="/hjdt9.com"]
-!--replace ##a[href$="/xha77.com"]
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > [class]:-abp-has(span[data-tuiguang])
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > [style*="important"]
-!--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > div:-abp-has(.ec-tuiguang)
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_right > [class]:-abp-has(span[data-tuiguang])
-!--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_right > div:-abp-has(.ec-tuiguang)
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?#div[id$="_canvas"]
 !--replace ipv6.baidu.com,xueshu.baidu.com,www.baidu.com,www1.baidu.com#?#.c-container:-abp-has(.t > a[data-landurl])
 !--replace ipv6.baidu.com,xueshu.baidu.com,www.baidu.com,www1.baidu.com#?#div:not([id]) > style[id^="s-"] + style + div + div[id]
@@ -2167,42 +2150,25 @@
 !--replace ||alicdn.com^*yksdk/*sdk.js$script,domain=youku.com
 !--replace ||iqiyi.com/show2?cb=
 !--replace ||iqiyi.com/show2?e=$domain=~m.iqiyi.com
-!--replace ||nfmovies.com/static/*.jpg
-!--replace ||nfmovies.com/static/210203.png
 !--replace ||qq.com/livemsg?
 !--replace ||zhuashi.oss-cn-beijing.aliyuncs.com^$domain=~zhuashi.com
-!--www.bde4.cc
 !--youtube
 !--不兼容的新规则
-!--奈菲www.nfmovies.com
 !--挖矿
 !--百度
-!--百度贴吧
 !--贴吧---
 !-mgtv
 !/.tc.qq.com/*.mp4*vkey=
 !/^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/(q?player[^\.]*|\w{13})\.swf/>>>http://yk.522.com.cn/player.swf>>>>keyword=youku
 !/^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/upsplayer\/(q?player[^\.]*|\w{13})\.swf/>>>http://yk.522.com.cn/player.swf>>>>keyword=youku
 !/^http:\/\/td\.atm\.youku\.com\/tdcm\/adcontrol/>>>http://www.tudou.com/util/tools/www_hd.txt>>>>keyword=tdcm
-!/^https:\/\/pss\.bdstatic\.com\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/\w+\.js/>>>https://1111.51xiaolu.com/tu_68114f1.min.js?233>>>>keyword=bdstatic
-!/^https:\/\/pss\.bdstatic\.com\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/tu_68114f1\.js/>>>https://1111.51xiaolu.com/tu_68114f1.right.min.js?233>>>>keyword=bdstatic
-!/^https:\/\/ss1\.bdstatic.com\/.*?\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/tu_68114f1\.js/>>>https://1111.51xiaolu.com/tu_68114f1.min.js>>>>keyword=bdstatic
-!/^https:\/\/ss1\.bdstatic\.com\/5eN1bjq8AAUYm2zgoY3K\/r\/www\/cache\/static\/protocol\/https\/plugins\/hotWord_cc828cc\.js/>>>https://1111.51xiaolu.com/hotWord_cc828cc.min.js?117>>>>keyword=plugins
-!/^https:\/\/tb1\.bdstatic\.com\/\?\?tb\/static-common\/lib\/tb_lib_\S+\.js,tb\/static-common\/ui\/common_logic_v2_\S+,tb\/static-common\/js\/tb_ui_\S+\.js,\/tb\/_\/ban_8422f6c\.js/>>>https://1111.51xiaolu.com/baidutieba_p.js?1>>>>keyword=bdstatic
-!/^https:\/\/www\.googletagmanager\.com\/gtag\/js/>>>https://1111.51xiaolu.com/gtag.js?adt=1&>>>>keyword=googletagmanager
-!/^https:\/\/www\.youtube\.com\/s\/player\/\w*\/player_ias\.vflset\/zh_CN\/base\.js$/>>>https://litao.test.utools.club/base.js?dfsesfsefesx>>>>keyword=base
-!/g\.alicdn\.com\/mm\/yksdk\/0\.2\.\d+\/playersdk\.js/>>>1111.51xiaolu.com/playersdk.js>>>>keyword=playersdk
 !/g\.alicdn\.com\/player\/ykplayer\/0\.6\.[0-9]+\/youku-player\.min\.js/>>>g.alicdn.com/player/ykplayer/0.5.90/youku-player.min.js>>>>keyword=youku
-!/gzc_.*\.mp4\?/
 !/player\.mgtv\.com\/mgtv_v6_main\/main\.swf/>>>player.mgtv.com/mgtv_v5_main/main.swf>>>>keyword=mgtv
 !/yk\.522\.com\.cn\/danmu\.swf/>>>static.youku.com/v201706061000.0/v/swf/upsplayer/danmu.swf>>>>keyword=danmu
 !123pan网盘
-!15
-!16
 !360搜索
 !3DM
 !51cto.com###ft~div
-!@@|https://www.mgtv.com/
 !@@||googletagmanager.com/gtm.js$domain=www.nintendo.co.jp
 !AdBlock Plus:
 !Amazon ADS
@@ -2235,7 +2201,6 @@
 !Title: anti-AD for AdGuard
 !Total lines: 745
 !Total lines: 753
-!Total lines: 82210
 !Total lines: 82239
 !Total lines: 83567
 !Total lines: 89230
@@ -2244,7 +2209,6 @@
 !Version: 1.5.6-release
 !Version: 20241212022254754752413
 !Version: 20241212102253
-!Version: 20250111024207
 !Version: 20250114024321
 !Yahoo
 !Yandex
@@ -2253,9 +2217,6 @@
 !appboot.netflix.com
 !applicast.ga.sony.net
 !auth.samsungosp.com # If blocked, Samsung accounts will fail to authenticate
-!baidu.com###content_left>div[id^='300']
-!baidu.com###content_left>table
-!baidu.com##.EC_result
 !baidu.com##div#bottom_layer
 !cdn.samsungcloudsolution.com # System update check on Samsung UE40F5500
 !csdn
@@ -2265,7 +2226,6 @@
 !douyu.com##+js(set, RTCPeerConnection.prototype.addTrack, noopFunc)
 !efwef
 !epg.corio.com # needed for apps
-!http://defaultts.tc.qq.com/
 !https://bbs.kafan.cn/thread-2180923-1-1.html
 !https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
 !imomoe.*###adl,#adr
@@ -2277,7 +2237,6 @@
 !portal.store.sonyentertainmentnetwork.com
 !qq.com##+js(aopr, Beacon.prototype.fail)
 !qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
-!qq.com/flv/*.mp4*vkey=
 !samsungosp.com
 !samsungotn.net # System update check on Samsung UE65RU7455
 !sd173.com
@@ -2285,8 +2244,6 @@
 !time.samsungcloudsolution.com # If blocked, services like Plex, YouTube and Amazon Video not working anymore on some Samsung TV's
 !tv.deezer.com # Breaks Deezer's smart-TV apps.
 !ul.ul_Address a[href$=exe]:not([href^="http://skycnxz"])
-!v-*.71edge.com/videos/other/*.f4v?dis
-!v-*.71edge.com/videos/vts/*.ts?key=
 !v.smtcdns.com/defaultts.tc.qq.com/
 !v.youku.com##+js(nano-stb)
 !vcs.vdspf.com  #  if blocked, notified of new firmware but unable to download/install
@@ -2795,7 +2752,7 @@
 # BigGo End
 # BigGo Start
 # Bill Allison, Harj Basi, Lance Russhing, Marshall Drew-Brook,
-# Blocked domains: 465920
+# Blocked domains: 466393
 # Blocked domains: 510735
 # Blocked: 1.868 domains
 # Blocked: 1.907 domains
@@ -2843,7 +2800,7 @@
 # DailyView Start
 # Date: 09 January 2025 16:04:30 (UTC)
 # Date: 12 December 2024 20:10:56 (UTC)
-# Date: Mon Jan 13 04:45:06 UTC 2025
+# Date: Tue Jan 14 04:45:04 UTC 2025
 # Description: Filtry chroniace przed roznego rodzaju przekretami i oszustwami, takimi jak np. subskrypcje SMS, wirusy i falszywe sklepy internetowe. Oprocz wlasnego zestawu, zawieraja one rowniez wpisy z list stworzonych przez takie zespoly jak np. CERT Polska, legalniewsieci.pl i KNF.
 # DeviantArt End
 # DeviantArt Start
@@ -3274,7 +3231,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2025-01-14T04:04:32+08:00
+# Update time: 2025-01-14T06:04:40+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -7084,7 +7041,7 @@
 # contents or host on any other site without permission or #
 # credits:        Peter Lowe - pgl@yoyo.org - https://pgl.yoyo.org/ - https://twitter.com/pgl
 # cydoor -- server side tracking
-# entries:        1100
+# entries:        1103
 # entries:        3542
 # fastclick banner ads
 # file and try the tools listed above immediately. Don't forget to reboot
@@ -7178,7 +7135,7 @@
 # issuu End
 # issuu Start
 # kwadronaut for Windows 7 and Vista information
-# last updated:   2025-01-06 05:34:18 CET
+# last updated:   2025-01-14 05:42:13 CET
 # last updated:   Wed, 04 Dec 2024 10:38:14 GMT
 # let them know that you have read your mail.
 # log all such errors.
