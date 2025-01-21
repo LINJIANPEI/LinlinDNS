@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2025-01-21 09:13:14（北京时间）
+! Version: 2025-01-21 10:42:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 121631
+! Total count: 121634
 @@##Appshare
 @@##BT1207
 @@##Omofun
@@ -109266,6 +109266,7 @@
 @@||file-upload.cc^$generichide
 @@||file-upload.com/js/advertisement.js
 @@||file-upload.com^$generichide
+@@||file-upload.net/include/adserver.js$domain=file-upload.net
 @@||file.fm/f/$stealth
 @@||file.market.xiaomi.com^$import
 @@||file.myqcloud.com/*.mp4?token=$stealth
@@ -112041,6 +112042,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=texastech.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=theticket.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=timesnownews.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=titans.com.au
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=tokfm.pl
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=tranimeci.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=trojmiasto.pl
@@ -117361,6 +117363,7 @@
 @@||s3.ap-southeast-2.wasabisys.com^$important
 @@||s3.pstatp.com^$important
 @@||s3.us-east-2.amazonaws.com^$important
+@@||s3t3d2y8.afcdn.net/library/$image,domain=pmvhaven.com
 @@||s41poke.com^$generichide
 @@||s79.research.de.com/bb-mx/prime$domain=joyn.de
 @@||s9.cnzz.com^$app=com.unionpay
