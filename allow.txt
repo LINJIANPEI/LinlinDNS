@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 12 Hours
-! Version: 2025-01-22 18:15:37（北京时间）
+! Version: 2025-01-22 20:32:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 121589
+! Total count: 121600
 @@##Appshare
 @@##BT1207
 @@##Omofun
@@ -98931,6 +98931,7 @@
 @@|da2.gos.ea.com^$important
 @@|daftsex.com^$important
 @@|daisy.ubuntu.com^$important
+@@|daraz.com^|
 @@|dash.cloudflare.com^$important
 @@|dash.sonicbit.net^$important
 @@|dashboard.blomp.com^$important
@@ -103022,6 +103023,7 @@
 @@|www.cyberlink.com^$important
 @@|www.cyberpunk.net^$important
 @@|www.cydex.com.au^$important
+@@|www.daraz.pk^|
 @@|www.dashlane.com^$important
 @@|www.debian.org^$important
 @@|www.deepin.org^$important
@@ -105544,6 +105546,7 @@
 @@||assistir.biz^$generichide
 @@||assoc-amazon.com/widgets/cm?$subdocument,domain=atcoder.jp
 @@||associateddentists.com/wp-content/themes/AD/
+@@||astatic.ccmbg.com/fc/js/prebid?v=$domain=journaldunet.com
 @@||astatic.ccmbg.com^*/prebid$script,domain=linternaute.com
 @@||astyle.alicdn.com/??
 @@||asus-zenfone.com^$generichide
@@ -106667,6 +106670,8 @@
 @@||cdn.evolutionadv.it/money.it/*.mp4$domain=money.it
 @@||cdn.ex.co/player/$domain=reviewjournal.com
 @@||cdn.ex.co/player/*.js$domain=pagesix.com
+@@||cdn.ex.co/player/*.js$domain=sport24.gr
+@@||cdn.ex.co/transformations/production/$domain=sport24.gr
 @@||cdn.ex.co^$domain=mm-watch.com|theautopian.com
 @@||cdn.exmarketplace.com/bidder/video_scripts/video_updated_*.js$domain=tvserial.it
 @@||cdn.exp.qq.com/img/
@@ -107946,6 +107951,7 @@
 @@||d2o03z2xnyxlz5.cloudfront.net^|$xmlhttprequest,domain=kbjfree.com
 @@||d2qnx6y010m4rt.cloudfront.net^|$xmlhttprequest,domain=kbjfree.com
 @@||d2ujtyf7wfmq6y.cloudfront.net/ads/ads.html$domain=reisefrage.net|motorradfrage.net|autofrage.net|sportlerfrage.net|gesundheitsfrage.net|finanzfrage.net|computerfrage.net|gutefrage.net
+@@||d2wy8f7a9ursnm.cloudfront.net/v8/bugsnag.min.js$script,domain=forecastapp.com
 @@||d2wy8f7a9ursnm.cloudfront.net^$important
 @@||d2yyd1h5u9mauk.cloudfront.net^$important
 @@||d31j93rd8oukbv.cloudfront.net/metrika/watch_*.js$domain=gazeta.ru
@@ -108526,6 +108532,7 @@
 @@||dpm.demdex.net/id?d_visid_ver=$domain=nbcdfw.com,important
 @@||dpm.demdex.net^
 @@||dpm.zebestof.com/*/tag.js$domain=commentcamarche.net
+@@||dpm.zebestof.com/*/tag.js^$domain=journaldunet.com
 @@||dpmtpush.dianping.com^$important
 @@||dpurl.cn^$important
 @@||dqmsl-search.net^$generichide
@@ -110669,6 +110676,7 @@
 @@||googletagmanager.com/gtm.js$domain=journaldemontreal.com
 @@||googletagmanager.com/gtm.js$domain=journaldequebec.com
 @@||googletagmanager.com/gtm.js$domain=journaldesfemmes.fr
+@@||googletagmanager.com/gtm.js$domain=journaldunet.com
 @@||googletagmanager.com/gtm.js$domain=jreastmall.com
 @@||googletagmanager.com/gtm.js$domain=juffing.at
 @@||googletagmanager.com/gtm.js$domain=kakuyomu.jp
@@ -116284,8 +116292,10 @@
 @@||player.clevercast.com/players/video-js/video-js-plugins/videojs.ads.min.js
 @@||player.enetres.net/js/videojs-plugins/videojs-ads-contrib/videojs.ads.js
 @@||player.ex.co/config$domain=pagesix.com
+@@||player.ex.co/config$domain=sport24.gr
 @@||player.ex.co/player/$domain=pagesix.com
 @@||player.ex.co/player/$domain=si.com
+@@||player.ex.co/player/$domain=sport24.gr
 @@||player.ex.co/player/$domain=thestreet.com
 @@||player.ex.co/player/$domain=usatoday.com
 @@||player.ex.co/player/$script,domain=mm-watch.com|theautopian.com|usatoday.com|ydr.com
@@ -117785,6 +117795,7 @@
 @@||seg-cdn.pumpkin.care/next-integrations/integrations/mixpanel/$domain=get.pumpkin.care
 @@||segmentify.com^$script,stylesheet,xmlhttprequest,domain=puma.com
 @@||seguridad.compensar.com/lib/js/fingerprint2.js$domain=compensar.com
+@@||seguridad.compensar.com/lib/js/fingerprint2.js$~third-party
 @@||seireshd.com^$generichide
 @@||seirsanduk.com/ad-server.js
 @@||seirsanduk.online^$generichide
