@@ -92,6 +92,10 @@ const rules = [
   "https://cdn.jsdelivr.net/gh/anudeepND/blacklist@master/adservers.txt", //anudeepND/blacklist
   "https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker", //NEODEVHOST
   "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt", //mphin
+  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt', //217heidai/adblockfilters
+  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt', //217heidai/adblockfilters
+  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt', //217heidai/adblockfilters
+  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt', //217heidai/adblockfilters
 ];
 //白名单规则
 const allow = [
