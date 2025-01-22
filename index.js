@@ -209,30 +209,26 @@ async function main() {
 
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
-      filters(
-        removeSubdomainDuplicates([
-          ...whitelists1,
-          ...whitelists2,
-          ...whitelists3,
-          ...whitelists4,
-          ...whitelists5,
-          ...whitelists6,
-        ])
-      ).join("\n")
+      filters([
+        ...whitelists1,
+        ...whitelists2,
+        ...whitelists3,
+        ...whitelists4,
+        ...whitelists5,
+        ...whitelists6,
+      ]).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
-      filters(
-        removeSubdomainDuplicates([
-          ...blacklists1,
-          ...blacklists2,
-          ...blacklists3,
-          ...blacklists4,
-          ...blacklists5,
-          ...blacklists6,
-        ])
-      ).join("\n")
+      filters([
+        ...blacklists1,
+        ...blacklists2,
+        ...blacklists3,
+        ...blacklists4,
+        ...blacklists5,
+        ...blacklists6,
+      ]).join("\n")
     );
 
     // await compileRulesFun(
