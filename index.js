@@ -217,8 +217,8 @@ async function main() {
         ...whitelists1,
         ...whitelists2,
         ...whitelists3,
-        ...whitelists4,
-        ...whitelists5,
+        // ...whitelists4,
+        // ...whitelists5,
         // ...whitelists6,
       ]).join("\n")
     );
@@ -229,8 +229,8 @@ async function main() {
         ...blacklists1,
         ...blacklists2,
         ...blacklists3,
-        ...blacklists4,
-        ...blacklists5,
+        // ...blacklists4,
+        // ...blacklists5,
         // ...blacklists6,
       ]).join("\n")
     );
