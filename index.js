@@ -215,8 +215,8 @@ async function main() {
       `${oldDirectory}/tmp-allow.txt`,
       filters([
         ...whitelists1,
-        ...whitelists2,
-        ...whitelists3,
+        // ...whitelists2,
+        // ...whitelists3,
         // ...whitelists4,
         // ...whitelists5,
         // ...whitelists6,
@@ -227,8 +227,8 @@ async function main() {
       `${oldDirectory}/tmp-rules.txt`,
       filters([
         ...blacklists1,
-        ...blacklists2,
-        ...blacklists3,
+        // ...blacklists2,
+        // ...blacklists3,
         // ...blacklists4,
         // ...blacklists5,
         // ...blacklists6,
