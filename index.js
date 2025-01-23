@@ -214,12 +214,12 @@ async function main() {
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
       filters([
-        // ...whitelists1,
+        ...whitelists1,
         ...whitelists2,
         ...whitelists3,
         ...whitelists4,
         ...whitelists5,
-        ...whitelists6,
+        // ...whitelists6,
       ]).join("\n")
     );
 
