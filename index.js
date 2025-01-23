@@ -219,7 +219,7 @@ async function main() {
         ...whitelists3,
         ...whitelists4,
         ...whitelists5,
-        ...whitelists6,
+        // ...whitelists6,
       ]).join("\n")
     );
 
