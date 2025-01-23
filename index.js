@@ -226,7 +226,7 @@ async function main() {
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
       filters([
-        // ...blacklists1,
+        ...blacklists1,
         ...blacklists2,
         ...blacklists3,
         ...blacklists4,

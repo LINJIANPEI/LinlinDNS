@@ -27,6 +27,9 @@ const mergeBlacklists = async (directory) => {
       .split("\n")
       .filter((line) => {
         if (/^\|\|.*/.test(line) || /^\/.*\/$/.test(line)) {
+          if (/^\/.*\/$/.test(line)) {
+            return;
+          }
           return line;
         } else {
           allFileDataFilter.push(line);
