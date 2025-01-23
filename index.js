@@ -92,10 +92,11 @@ const rules = [
   "https://cdn.jsdelivr.net/gh/anudeepND/blacklist@master/adservers.txt", //anudeepND/blacklist
   "https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker", //NEODEVHOST
   "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt", //mphin
-  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt', //217heidai/adblockfilters
-  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt', //217heidai/adblockfilters
-  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt', //217heidai/adblockfilters
-  'https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt', //217heidai/adblockfilters
+  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt", //217heidai/adblockfilters
+  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt", //217heidai/adblockfilters
+  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt", //217heidai/adblockfilters
+  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt", //217heidai/adblockfilters
+  "https://cdn.jsdelivr.net/gh/LucienShui/chinalist@gh-pages/chinalist.txt", //LucienShui/chinalist
 ];
 //白名单规则
 const allow = [
@@ -119,7 +120,6 @@ const allow = [
   "https://raw.githubusercontent.com/mawenjian/china-cdn-domain-whitelist/master/china-cdn-domain-whitelist.txt", //china-cdn-domain-whitelist
   "https://raw.githubusercontent.com/pluwen/china-domain-allowlist/master/allow-list.sorl", //china-domain-allowlist
   "https://raw.githubusercontent.com/entr0pia/SwitchyOmega-Whitelist/master/white-list.sorl", //SwitchyOmega-Whitelist
-  "https://cdn.jsdelivr.net/gh/LucienShui/chinalist@gh-pages/chinalist.txt", //LucienShui/chinalist
   "https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List", //etotakeo/AdGuardDNSPassList
   "https://cdn.jsdelivr.net/gh/JamesDamp/AdGuard-Home---Personal-Whitelist@master/AdGuardHome-Whitelist.txt", //JamesDamp/Personal-Whitelist
   "https://raw.githubusercontent.com/Aveelo/Aveelo-adguard-home-Adlist-Whitelist/master/WhitelistAdGuardHome", //Aveelo-adguard-home-Adlist-Whitelist
