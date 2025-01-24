@@ -388,9 +388,9 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: UgY/eeeQC96KgBYJ9lKq5Q
-! Checksum: ZcoqXHtBogIp8C+dFV/fYA
-! Checksum: bMzCeY19hnjMfrRkya5chQ
+! Checksum: dAJbuvMskZ0lg7g0Pbe3mA
+! Checksum: g7GmXCv+iYel5fXhfwHj8w
+! Checksum: tniEVs+tI2tRkrOg/byOVQ
 ! Checksum: uuMyAFXT+k2tSoJfzrMRwA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! Checksum: vnmBrKcXMpHZUe6eK0+0Zw
@@ -667,7 +667,7 @@
 ! Last modified: 2025/01/24 08:26:48
 ! Last modified: 21 Jan 2025 01:09 UTC
 ! Last modified: 21 Jan 2025 02:41 UTC
-! Last modified: 24 Jan 2025 06:51 UTC
+! Last modified: 24 Jan 2025 07:01 UTC
 ! Last modified: 30 Jan 2021
 ! Last modified: 30 Nov 2023 11:33 UTC
 ! Latvian
@@ -1092,6 +1092,7 @@
 ! Version: 202011041719
 ! Version: 202011182
 ! Version: 202012190310
+! Version: 202302242205
 ! Version: 2024.10.19
 ! Version: 202406120915
 ! Version: 202412211927
@@ -1103,7 +1104,7 @@
 ! Version: 202501210109
 ! Version: 202501210241
 ! Version: 202501210801
-! Version: 202501240651
+! Version: 202501240701
 ! Version: 20250124082648
 ! Version: 2501162253
 ! Version: 2501162255
@@ -1947,6 +1948,7 @@
 !!!note! If you are using "AdGuard Home", please load https://anti-ad.net/easylist.txt
 !!!note! If you are using "AdGuard", please load https://anti-ad.net/adguard.txt
 !!||localhost.direct^
+!##div#dplayer-ad
 !#0
 !#17ce.com
 !#18comic.org
@@ -2028,8 +2030,14 @@
 !+ PLATFORM(ios, ext_safari)
 !+ PLATFORM(windows, mac, android)
 !--
+!-- 2021-12-1
+!-- 2022-1-4
+!-- 2022-3-7 txty
+!-- 2022-4-21 txsp
+!-- 2022..7.2
 !-- END END ---
 !-- taobao
+!-- 百度搜索广告
 !----
 !----- For HTTPS websites when HTTPS filtering is disabled ------
 !---------- Anti-Adblock ----------
@@ -2159,15 +2167,22 @@
 !---腾讯视频
 !---迅雷看看
 !---风行
+!--2021-10-30
+!--2021-8-10
 !--360影视
+!--55影视
 !--56
 !--bilibili
 !--bimibimi--m站
 !--dlkoo.com
 !--google
+!--replace ##a[href$="/hjdt9.com"]
+!--replace ##a[href$="/xha77.com"]
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > [class]:-abp-has(span[data-tuiguang])
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > [style*="important"]
+!--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > div:-abp-has(.ec-tuiguang)
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_right > [class]:-abp-has(span[data-tuiguang])
+!--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_right > div:-abp-has(.ec-tuiguang)
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?#div[id$="_canvas"]
 !--replace ipv6.baidu.com,xueshu.baidu.com,www.baidu.com,www1.baidu.com#?#.c-container:-abp-has(.t > a[data-landurl])
 !--replace ipv6.baidu.com,xueshu.baidu.com,www.baidu.com,www1.baidu.com#?#div:not([id]) > style[id^="s-"] + style + div + div[id]
@@ -2176,25 +2191,42 @@
 !--replace ||alicdn.com^*yksdk/*sdk.js$script,domain=youku.com
 !--replace ||iqiyi.com/show2?cb=
 !--replace ||iqiyi.com/show2?e=$domain=~m.iqiyi.com
+!--replace ||nfmovies.com/static/*.jpg
+!--replace ||nfmovies.com/static/210203.png
 !--replace ||qq.com/livemsg?
 !--replace ||zhuashi.oss-cn-beijing.aliyuncs.com^$domain=~zhuashi.com
+!--www.bde4.cc
 !--youtube
 !--不兼容的新规则
+!--奈菲www.nfmovies.com
 !--挖矿
 !--百度
+!--百度贴吧
 !--贴吧---
 !-mgtv
 !/.tc.qq.com/*.mp4*vkey=
 !/^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/(q?player[^\.]*|\w{13})\.swf/>>>http://yk.522.com.cn/player.swf>>>>keyword=youku
 !/^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/upsplayer\/(q?player[^\.]*|\w{13})\.swf/>>>http://yk.522.com.cn/player.swf>>>>keyword=youku
 !/^http:\/\/td\.atm\.youku\.com\/tdcm\/adcontrol/>>>http://www.tudou.com/util/tools/www_hd.txt>>>>keyword=tdcm
+!/^https:\/\/pss\.bdstatic\.com\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/\w+\.js/>>>https://1111.51xiaolu.com/tu_68114f1.min.js?233>>>>keyword=bdstatic
+!/^https:\/\/pss\.bdstatic\.com\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/tu_68114f1\.js/>>>https://1111.51xiaolu.com/tu_68114f1.right.min.js?233>>>>keyword=bdstatic
+!/^https:\/\/ss1\.bdstatic.com\/.*?\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/tu_68114f1\.js/>>>https://1111.51xiaolu.com/tu_68114f1.min.js>>>>keyword=bdstatic
+!/^https:\/\/ss1\.bdstatic\.com\/5eN1bjq8AAUYm2zgoY3K\/r\/www\/cache\/static\/protocol\/https\/plugins\/hotWord_cc828cc\.js/>>>https://1111.51xiaolu.com/hotWord_cc828cc.min.js?117>>>>keyword=plugins
+!/^https:\/\/tb1\.bdstatic\.com\/\?\?tb\/static-common\/lib\/tb_lib_\S+\.js,tb\/static-common\/ui\/common_logic_v2_\S+,tb\/static-common\/js\/tb_ui_\S+\.js,\/tb\/_\/ban_8422f6c\.js/>>>https://1111.51xiaolu.com/baidutieba_p.js?1>>>>keyword=bdstatic
+!/^https:\/\/www\.googletagmanager\.com\/gtag\/js/>>>https://1111.51xiaolu.com/gtag.js?adt=1&>>>>keyword=googletagmanager
+!/^https:\/\/www\.youtube\.com\/s\/player\/\w*\/player_ias\.vflset\/zh_CN\/base\.js$/>>>https://litao.test.utools.club/base.js?dfsesfsefesx>>>>keyword=base
+!/g\.alicdn\.com\/mm\/yksdk\/0\.2\.\d+\/playersdk\.js/>>>1111.51xiaolu.com/playersdk.js>>>>keyword=playersdk
 !/g\.alicdn\.com\/player\/ykplayer\/0\.6\.[0-9]+\/youku-player\.min\.js/>>>g.alicdn.com/player/ykplayer/0.5.90/youku-player.min.js>>>>keyword=youku
+!/gzc_.*\.mp4\?/
 !/player\.mgtv\.com\/mgtv_v6_main\/main\.swf/>>>player.mgtv.com/mgtv_v5_main/main.swf>>>>keyword=mgtv
 !/yk\.522\.com\.cn\/danmu\.swf/>>>static.youku.com/v201706061000.0/v/swf/upsplayer/danmu.swf>>>>keyword=danmu
 !123pan网盘
+!15
+!16
 !360搜索
 !3DM
 !51cto.com###ft~div
+!@@|https://www.mgtv.com/
 !@@||googletagmanager.com/gtm.js$domain=www.nintendo.co.jp
 !AdBlock Plus:
 !Amazon ADS
@@ -2243,6 +2275,9 @@
 !appboot.netflix.com
 !applicast.ga.sony.net
 !auth.samsungosp.com # If blocked, Samsung accounts will fail to authenticate
+!baidu.com###content_left>div[id^='300']
+!baidu.com###content_left>table
+!baidu.com##.EC_result
 !baidu.com##div#bottom_layer
 !cdn.samsungcloudsolution.com # System update check on Samsung UE40F5500
 !csdn
@@ -2251,6 +2286,7 @@
 !douyu.com##+js(set, RTCPeerConnection.prototype.addTrack, noopFunc)
 !efwef
 !epg.corio.com # needed for apps
+!http://defaultts.tc.qq.com/
 !https://bbs.kafan.cn/thread-2180923-1-1.html
 !https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
 !imomoe.*###adl,#adr
@@ -2262,6 +2298,7 @@
 !portal.store.sonyentertainmentnetwork.com
 !qq.com##+js(aopr, Beacon.prototype.fail)
 !qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
+!qq.com/flv/*.mp4*vkey=
 !samsungosp.com
 !samsungotn.net # System update check on Samsung UE65RU7455
 !sd173.com
@@ -2269,6 +2306,8 @@
 !time.samsungcloudsolution.com # If blocked, services like Plex, YouTube and Amazon Video not working anymore on some Samsung TV's
 !tv.deezer.com # Breaks Deezer's smart-TV apps.
 !ul.ul_Address a[href$=exe]:not([href^="http://skycnxz"])
+!v-*.71edge.com/videos/other/*.f4v?dis
+!v-*.71edge.com/videos/vts/*.ts?key=
 !v.smtcdns.com/defaultts.tc.qq.com/
 !v.youku.com##+js(nano-stb)
 !vcs.vdspf.com  #  if blocked, notified of new firmware but unable to download/install
