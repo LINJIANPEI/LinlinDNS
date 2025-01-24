@@ -219,14 +219,14 @@ async function main() {
         ...whitelists3,
         ...whitelists4,
         ...whitelists5,
-        // ...whitelists6,
+        ...whitelists6,
       ]).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
       filters([
-        // ...blacklists1,
+        ...blacklists1,
         ...blacklists2,
         ...blacklists3,
         ...blacklists4,
