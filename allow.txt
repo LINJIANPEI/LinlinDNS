@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-01-28 07:08:43（北京时间）
+! Version: 2025-01-28 08:41:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 122736
+! Total count: 122734
 @@##Appshare
 @@##BT1207
 @@##Omofun
@@ -100013,7 +100013,6 @@
 @@|http://pay.2345.com
 @@|http://pic.2345.com
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
-@@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.orgebee.com^
 @@|http://s.csbew.com/FrameWork/AFP/ASP_
 @@|http://s.csbew.com/crossdomain.xml
 @@|http://shouyou.2345.com
@@ -103649,7 +103648,6 @@
 @@||157.245.202.123^$generichide
 @@||159i.com/a_d/$media
 @@||159i.com/p/hola/cpt.js
-@@||15min.lt^$generichide
 @@||163.com/user/event?id=
 @@||163.com^$important
 @@||16668.*/css/ad.css$stylesheet
@@ -117529,7 +117527,6 @@
 @@||pub.pixels.ai/prebid_standard.js$script,domain=standard.co.uk
 @@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$script,domain=independent.co.uk
 @@||pub.pixels.ai/wrap-independent-prebid-lib.js$domain=independent.co.uk
-@@||pubads.g.doubleclick.net/activity;$domain=15min.lt
 @@||pubads.g.doubleclick.net/gampad/ad?$domain=nbc.com
 @@||pubads.g.doubleclick.net/gampad/ads$domain=cbs.com,~image,~script
 @@||pubads.g.doubleclick.net/gampad/ads?$app=com.goldtouch.ynet
@@ -117823,6 +117820,8 @@
 @@||rcsobjects.it/rcs_data-tracking/v*/distro/openx/gazzetta/openx_async.js$domain=gazzetta.it
 @@||rctech.net/forum/clientscript/vbulletin_analytics.js$domain=rctech.net
 @@||rd.bizrate.com^
+@@||rd.bizrate.com^$removeparam=utm_campaign
+@@||rd.bizrate.com^$removeparam=utm_medium
 @@||rd.bizrate.com^|
 @@||rd.ias.global.rakuten.com/adv/$domain=24.rakuten.co.jp
 @@||rddywd.com/adcode.png$domain=joblo.com
@@ -118538,7 +118537,6 @@
 @@||securepubads.g.doubleclick.net/gampad/ads?$domain=purepeople.com
 @@||securepubads.g.doubleclick.net/gampad/ads?$domain=purposegames.com
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=*gamespot%2Cgallery&$other,domain=gamespot.com
-@@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=15min.lt
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=forums.hardwarezone.com.sg
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=gq-magazine.co.uk
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=joe.ie|joe.co.uk
@@ -118548,7 +118546,6 @@
 @@||securepubads.g.doubleclick.net/gampad/ads?pvsid=$domain=portmiamiwebcam.com
 @@||securepubads.g.doubleclick.net/gampad/ads^$domain=theatlantic.com
 @@||securepubads.g.doubleclick.net/gpt/pubads$domain=line.me
-@@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=15min.lt
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=allmusic.com
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=askmen.com
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=bloomberg.com
@@ -119637,6 +119634,7 @@
 @@||static.doubleclick.net/instream/ad_status.js$domain=shineads.in
 @@||static.doubleclick.net/instream/ad_status.js$domain=sonixgvn.net
 @@||static.doubleclick.net/instream/ad_status.js$domain=techedubyte.com
+@@||static.doubleclick.net/instream/ad_status.js$domain=thesciencetoday.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=topsporter.net|sportnews.to
 @@||static.doubleclick.net/instream/ad_status.js$domain=tweakcentral.net
 @@||static.doubleclick.net/instream/ad_status.js$domain=youtube.com
