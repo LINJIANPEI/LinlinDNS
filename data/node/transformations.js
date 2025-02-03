@@ -23,7 +23,8 @@ const transformations = async (...fileList) => {
           if (/^\d+\.\d+\.\d+\.\d+/.test(trimmed) || /^::/.test(trimmed)) {
             const domain = trimmed.split(/\s+/)[1];
             if (domain) {
-              blacklistRules.push(`||${domain}^`);
+              // blacklistRules.push(`||${domain}^`);
+              noadGuardRules.push(line); // 无法解析域名的规则加入未识别规则
             } else {
               noadGuardRules.push(line); // 无法解析域名的规则加入未识别规则
             }
