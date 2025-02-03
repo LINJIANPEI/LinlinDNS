@@ -88,6 +88,18 @@ const processRuleLines = async (lines, str = "") => {
           return null; // 确保 map 的长度与原数组一致
         }
       })
+      .map((line) => {
+        if (
+          /^\|\|.*/.test(line) &&
+          /^\/.*\/$/.test(line) &&
+          /^@@.*/.test(line)
+        ) {
+          return line;
+        } else {
+          no.push(line);
+          return null; // 确保 map 的长度与原数组一致
+        }
+      })
       .filter(Boolean) // 移除 null 值
       .map((line) => {
         return `${str}${line}`;
