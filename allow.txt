@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-05 19:07:48（北京时间）
+! Version: 2025-02-05 20:16:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 25460
+! Total count: 25461
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -15917,6 +15917,7 @@
 @@||iol.pt^$generichide
 @@||iopen.alipay.com/gateway.do$domain=aliexpress.com
 @@||ios.bugly.qq.com^$important
+@@||ios.crashsight.qq.com^$important
 @@||ioscreator.com^$generichide
 @@||iotapi.adups.com^
 @@||ip-*.net/*.mp4$stealth,domain=animeonline.site
@@ -21975,7 +21976,6 @@
 @@||snobdomobeyeo.com^$script,domain=blog.cryptowidgets.net|blog.insurancegold.in
 @@||snopes.com/photos/advert*/*.asp
 @@||snowfl.com/ads/*.js$~third-party
-@@||snowflake.qq.com^$important
 @@||snssdk.com^
 @@||snssdk.com^$important
 @@||snva.jp/javascripts/reco/$script,domain=store.charle.co.jp
@@ -22809,6 +22809,7 @@
 @@||szhr.com^*ad
 @@||szlong.weixin.qq.com^
 @@||szmg.qq.com^
+@@||szminorshort.weixin.qq.com^$important
 @@||szmmsns.qpic.cn^$important
 @@||sznlink.xyz/images/ad-inserter/*/*.js
 @@||sznlink.xyz/inc/plugins/ad-inserter-pro/images/ads.png
