@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-05 18:10:17（北京时间）
+! Version: 2025-02-05 19:07:48（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 25456
+! Total count: 25460
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -8576,6 +8576,7 @@
 @@||apkpure.com^$generichide
 @@||aplayer.xyz/player/watch.php^$stealth
 @@||apmebf.com/ad/$domain=betfair.com
+@@||apmfront.17u.cn^$important
 @@||apmplus.volces.com^
 @@||apnetv.me^$generichide
 @@||apnetv.tv^$generichide
@@ -11154,7 +11155,9 @@
 @@||creative.wwwpromoter.com/*.js?d=300x250$script,domain=hdmoviezone.net
 @@||creative.wwwpromoter.com/*.js?d=728x90$script,domain=hdmoviezone.net
 @@||creativecloud-deliver.bytedance.com/api/webardeliver/verify$stealth,domain=capcut.cn
+@@||credit-cdn.heytap.com^$important
 @@||credit-jfimage-cn.heytapimage.com^$important
+@@||credit.heytap.com^$important
 @@||creditas.cz/cb/public/assets/SmartTag-$script,~third-party
 @@||creditcarred.com^$generichide
 @@||credits-loan.pw^$generichide
@@ -12690,6 +12693,7 @@
 @@||file-upload.com/js/advertisement.js
 @@||file-upload.com^$generichide
 @@||file-upload.net/include/adserver.js$domain=file-upload.net
+@@||file.40017.cn^$important
 @@||file.fm/f/$stealth
 @@||file.market.xiaomi.com^$import
 @@||file.market.xiaomi.com^$importantcdn.ark.qq.com
