@@ -27,7 +27,7 @@ const removeSubdomainDuplicates = (rules) => {
     return rule
       .replace(/^(\|\|)/, "")
       .replace(/^@@(\|\|)/, "")
-      .replace(/\^$/, ""); // 去除前缀 "||" 和修饰符 "^"
+      .replace(/\^.*$/, ""); // 去除前缀 "||" 和修饰符 "^"
   };
 
   rules.forEach((rule) => {
