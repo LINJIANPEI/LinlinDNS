@@ -231,10 +231,10 @@ async function main() {
       filters([
         ...blacklists1,
         ...blacklists2,
-        ...blacklists3,
+        // ...blacklists3,
         ...blacklists4,
         ...blacklists5,
-        // ...blacklists6,
+        ...blacklists6,
       ]).join("\n")
     );
 
