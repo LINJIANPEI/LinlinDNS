@@ -130,6 +130,7 @@ const allow = [
   "https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt", //5460
   "https://raw.githubusercontent.com/miaoermua/AdguardFilter/main/whitelist.txt", //AdguardFilter
 ];
+
 // 旧地址
 const oldDirectory = "./tmp";
 // 新地址
