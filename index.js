@@ -6,6 +6,7 @@ const {
   writeFile,
   filters,
   removeSubdomainDuplicates,
+  processHostsRule,
 } = require("./data/node/common_func"); // common_func.js 模块
 
 //规则下载
@@ -225,19 +226,32 @@ async function main() {
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
       removeSubdomainDuplicates(
-        filters([...domainWhitelists, ...hostsWhitelists, ...regexWhitelists])
+        filters(
+          processHostsRule(
+            [...domainWhitelists, ...hostsWhitelists, ...regexWhitelists],
+            "@@||"
+          )
+        )
       ).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-dns.txt`,
       removeSubdomainDuplicates(
-        filters([...domainBlacklist, ...hostsBlacklist, ...regexBlacklist])
+        filters(
+          processHostsRule(
+            [...domainBlacklist, ...hostsBlacklist, ...regexBlacklist],
+            "||"
+          )
+        )
       ).join("\n")
     );
+
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
-      removeSubdomainDuplicates(filters(noinvalidBlacklist)).join("\n")
+      removeSubdomainDuplicates(
+        filters(processHostsRule(noinvalidBlacklist, "||"))
+      ).join("\n")
     );
 
     // 删除文件

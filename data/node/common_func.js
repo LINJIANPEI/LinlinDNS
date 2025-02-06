@@ -13,6 +13,22 @@ const writeFileContent = promisify(fs.writeFile);
 const readDirContent = promisify(fs.readdir);
 // ----------------------------------------
 
+// 处理 hosts 规则
+function processHostsRule(line, str) {
+  const trimmed = line.trim();
+  // 检查是否是有效的 IPv4 地址和后续的域名，或是 IPv6 地址（以 :: 开头）
+  if (/^\d+\.\d+\.\d+\.\d+\s+.*$/.test(trimmed) || /^::/.test(trimmed)) {
+    // 从 trimmed 字符串中提取域名部分
+    const domain = trimmed.split(/\s+/)[1];
+    if (domain) {
+      // 如果找到了域名，添加到黑名单规则中
+      blacklistRules.push(`${str}${domain}`);
+    }
+  }
+}
+
+// ----------------------------------------
+
 /**
  * 去除黑白名单规则中的多余子域名，不区分黑白名单。
  * @param {string[]} rules - 包含黑白名单的规则数组。
@@ -310,6 +326,7 @@ const readDir = async (dirPath) => {
 // ----------------------------------------
 
 module.exports = {
+  processHostsRule,
   removeSubdomainDuplicates,
   filters,
   copyFiles,
