@@ -14,18 +14,23 @@ const readDirContent = promisify(fs.readdir);
 // ----------------------------------------
 
 // 处理 hosts 规则
-function processHostsRule(line, str) {
-  const trimmed = line.trim();
-  // 检查是否是有效的 IPv4 地址和后续的域名，或是 IPv6 地址（以 :: 开头）
-  if (/^\d+\.\d+\.\d+\.\d+\s+.*$/.test(trimmed) || /^::/.test(trimmed)) {
-    // 从 trimmed 字符串中提取域名部分
-    const domain = trimmed.split(/\s+/)[1];
-    if (domain) {
-      // 如果找到了域名，添加到黑名单规则中
-      blacklistRules.push(`${str}${domain}`);
-    }
-  }
-}
+const processHostsRule = (rules, str) => {
+  const arr = rules
+    .map((line) => {
+      const trimmed = line.trim();
+      // 检查是否是有效的 IPv4 地址和后续的域名，或是 IPv6 地址（以 :: 开头）
+      if (/^\d+\.\d+\.\d+\.\d+\s+.*$/.test(trimmed) || /^::/.test(trimmed)) {
+        // 从 trimmed 字符串中提取域名部分
+        const domain = trimmed.split(/\s+/)[1];
+        if (domain) {
+          return `${str}${domain}`;
+        }
+        return null;
+      }
+    })
+    .filter(Boolean);
+  return arr;
+};
 
 // ----------------------------------------
 
