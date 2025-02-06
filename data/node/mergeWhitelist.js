@@ -20,7 +20,6 @@ const mergeWhitelist = async (directory) => {
       allowFiles.map((file) => readFile(`${directory}/${file}`))
     );
 
-    let allFileDataFilter = [];
     // 处理文件规则
     let allFileDatas = filters(allFileData.join("\n").split("\n"));
 
