@@ -25,8 +25,9 @@ const processHostsRule = (rules, str) => {
         if (domain) {
           return `${str}${domain}`;
         }
-        return null;
+        return domain;
       }
+      return trimmed;
     })
     .filter(Boolean);
   return arr;
