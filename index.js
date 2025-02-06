@@ -6,10 +6,6 @@ const {
   writeFile,
   filters,
 } = require("./data/node/common_func"); // common_func.js 模块
-const {
-  removeSubdomainDuplicates,
-  processRuleLines,
-} = require("./data/node/transformations_func"); // transformations_func.js 模块
 
 //规则下载
 const { downloadRules } = require("./data/node/downloadRules"); // downloadRules.js 模块
@@ -31,14 +27,6 @@ const { invalidStrFilter } = require("./data/node/invalidStrFilter"); // invalid
 //过滤修饰符
 const { modifiersFilter } = require("./data/node/modifiersFilter"); // modifiersFilter.js 模块
 
-// 处理黑白名单
-const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
-// 规则转换
-const { transformations } = require("./data/node/transformations"); // transformations.js 模块
-const { compileRulesFun } = require("./data/node/compileRules"); // transformations.js 模块
-
-// 过滤DNS
-const { filterDns } = require("./data/node/filterDns"); // filterDns.js 模块
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
 // 处理md文件
