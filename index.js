@@ -97,6 +97,9 @@ const rules = [
   "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt", //217heidai/adblockfilters
   "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt", //217heidai/adblockfilters
   "https://cdn.jsdelivr.net/gh/LucienShui/chinalist@gh-pages/chinalist.txt", //LucienShui/chinalist
+  "https://raw.githubusercontent.com/qq5460168/666/master/rules.txt", //酷安反馈
+  "https://raw.githubusercontent.com/Lynricsy/HyperADRules/master/dns.txt", //HyperADRules
+  "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt", //AWAvenue
 ];
 //白名单规则
 const allow = [
