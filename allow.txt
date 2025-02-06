@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-06 20:16:50（北京时间）
+! Version: 2025-02-06 21:16:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 25465
+! Total count: 25469
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -8956,6 +8956,7 @@
 @@||avatarsv3.xboxlive.com^$important
 @@||avaxhome.co^$generichide
 @@||avclub.com^*/adManager.$script,~third-party
+@@||avdb.*.com^$xmlhttprequest,stealth=referrer,domain=avdbapi.com
 @@||avforums.com^$generichide
 @@||avgle.com/embed/$genericblock,generichide
 @@||avgle.com/embed/$stealth
@@ -19406,6 +19407,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fastssh.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=flixscans.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fooak.com|plknu.com|nexnoo.com|simana.online|upfilesurls.com|falpus.com|upfiles-urls.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fooak.com|plknu.com|nexnoo.com|simana.online|upfilesurls.com|falpus.com|upfiles-urls.com|haxi.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=forasm.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=forexit.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=freetvsports.xyz|poscishd.online
@@ -20353,6 +20355,7 @@
 @@||pub.network^$script,domain=creaders.net
 @@||pub.pixels.ai/prebid_standard.js$domain=standard.co.uk
 @@||pub.pixels.ai/prebid_standard.js$script,domain=standard.co.uk
+@@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$domain=the-independent.com
 @@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$script,domain=independent.co.uk
 @@||pub.pixels.ai/wrap-independent-prebid-lib.js$domain=independent.co.uk
 @@||pubads.g.doubleclick.net/gampad/ad?$domain=nbc.com
@@ -22211,6 +22214,7 @@
 @@||ssl.msdk.qq.com^
 @@||ssl.p.jwpcdn.com/player/plugins/vast/*/vast.js$domain=dizilost.com
 @@||ssl.p.jwpcdn.com/player/plugins/vast/*/vast.js$domain=hentaihaven.xxx
+@@||ssl.p.jwpcdn.com/player/plugins/vast/v/8.9.4/vast.js$xmlhttprequest,domain=avdbapi.com
 @@||ssl.p.jwpcdn.com/player/v/*/*.js$domain=faselhd.cafe
 @@||ssl.p.jwpcdn.com/player/v/*/googima.js$xmlhttprequest,domain=play.nova.bg
 @@||ssl.p.jwpcdn.com/player/v/*/jwplayer.core.controls.html5.js$domain=kissasian.si
