@@ -232,12 +232,8 @@ async function main() {
     await writeFile(
       `${oldDirectory}/tmp-dns.txt`,
       removeSubdomainDuplicates(
-        filters([
-          ...domainBlacklist,
-          ...hostsBlacklist,
-          ...regexBlacklist,
-        ]).join("\n")
-      )
+        filters([...domainBlacklist, ...hostsBlacklist, ...regexBlacklist])
+      ).join("\n")
     );
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
