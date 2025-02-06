@@ -20,6 +20,17 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
+//过滤域名规则
+const { domainFilter } = require("./data/node/domainFilter"); // domainFilter.js 模块
+//过滤Hosts规则
+const { hostsFilter } = require("./data/node/hostsFilter"); // domainFilter.js 模块
+//过滤正则规则
+const { regexFilter } = require("./data/node/regexFilter"); // regexFilter.js 模块
+//过滤无效字符
+const { invalidStrFilter } = require("./data/node/invalidStrFilter"); // invalidStrFilter.js 模块
+//过滤修饰符
+const { modifiersFilter } = require("./data/node/modifiersFilter"); // modifiersFilter.js 模块
+
 // 处理黑白名单
 const { handleAllRules } = require("./data/node/handleAllRules"); // handleAllRules.js 模块
 // 规则转换
@@ -150,100 +161,96 @@ async function main() {
       ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`]
     );
 
-    // 合并规则
-    const [blacklists1, blacklistsFilter1] = await mergeBlacklists(
-      oldDirectory
-    );
+    // 合并规则并去重
+    const blacklists1 = await mergeBlacklists(oldDirectory);
 
-    const [whitelists1, whitelistsFilter1] = await mergeWhitelist(oldDirectory);
+    const [noinvalidBlacklist, invalidBlacklistFilters] =
+      await invalidStrFilter(blacklists1);
 
-    // 处理黑白名单过滤
-    const [
-      [blacklists2, whitelists2, blacklistsFilter2],
-      [blacklists3, whitelists3, whitelistsFilter2],
-    ] = await handleAllRules(blacklistsFilter1, whitelistsFilter1);
-
-    // 规则转换过滤
-    const [
-      [blacklists4, whitelists4, blacklistsFilter3],
-      [blacklists5, whitelists5, whitelistsFilter3],
-    ] = await transformations(blacklistsFilter2, whitelistsFilter2);
-
-    const [blacklists6, blacklistsFilter4] = await processRuleLines(
-      blacklistsFilter3,
+    const [domainBlacklist, domainBlacklistFilters] = await domainFilter(
+      await modifiersFilter(noinvalidBlacklist),
       "||"
     );
-    const [whitelists6, whitelistsFilter4] = await processRuleLines(
-      whitelistsFilter3,
-      "@@"
+    const [hostsBlacklist, hostsBlacklistFilters] = await hostsFilter(
+      noinvalidBlacklist
+    );
+    const [regexBlacklist, regexBlacklistFilters] = await regexFilter(
+      noinvalidBlacklist
+    );
+
+    const whitelists1 = await mergeWhitelist(oldDirectory);
+
+    const [noinvalidWhitelists, invalidWhitelistsFilters] =
+      await invalidStrFilter(whitelists1);
+
+    const [domainWhitelists, domainWhitelistsFilters] = await domainFilter(
+      await modifiersFilter(noinvalidWhitelists),
+      "@@||"
+    );
+    const [hostsWhitelists, hostsWhitelistsFilters] = await hostsFilter(
+      noinvalidWhitelists
+    );
+    const [regexWhitelists, regexWhitelistsFilters] = await regexFilter(
+      noinvalidWhitelists
     );
 
     await writeFile(
-      `${oldDirectory}/tmp-rulesFilter1.txt`,
-      filters(blacklistsFilter1).join("\n")
-    );
-    await writeFile(
-      `${oldDirectory}/tmp-allowFilter1.txt`,
-      filters(whitelistsFilter1).join("\n")
+      `${oldDirectory}/tmp-invalidBlacklistFilters.txt`,
+      filters(invalidBlacklistFilters).join("\n")
     );
 
     await writeFile(
-      `${oldDirectory}/tmp-rulesFilter2.txt`,
-      filters(blacklistsFilter2).join("\n")
+      `${oldDirectory}/tmp-domainBlacklistFilters.txt`,
+      filters(domainBlacklistFilters).join("\n")
     );
     await writeFile(
-      `${oldDirectory}/tmp-allowFilter2.txt`,
-      filters(whitelistsFilter2).join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-rulesFilter3.txt`,
-      filters(blacklistsFilter3).join("\n")
+      `${oldDirectory}/tmp-hostsBlacklistFilters.txt`,
+      filters(hostsBlacklistFilters).join("\n")
     );
     await writeFile(
-      `${oldDirectory}/tmp-allowFilter3.txt`,
-      filters(whitelistsFilter3).join("\n")
+      `${oldDirectory}/tmp-regexBlacklistFilters.txt`,
+      filters(regexBlacklistFilters).join("\n")
     );
 
     await writeFile(
-      `${oldDirectory}/tmp-rulesFilter4.txt`,
-      filters(blacklistsFilter4).join("\n")
+      `${oldDirectory}/tmp-invalidWhitelistsFilters.txt`,
+      filters(invalidWhitelistsFilters).join("\n")
     );
+
     await writeFile(
-      `${oldDirectory}/tmp-allowFilter4.txt`,
-      filters(whitelistsFilter4).join("\n")
+      `${oldDirectory}/tmp-domainWhitelistsFilters.txt`,
+      filters(domainWhitelistsFilters).join("\n")
+    );
+
+    await writeFile(
+      `${oldDirectory}/tmp-hostsWhitelistsFilters.txt`,
+      filters(hostsWhitelistsFilters).join("\n")
+    );
+
+    await writeFile(
+      `${oldDirectory}/tmp-regexWhitelistsFilters.txt`,
+      filters(regexWhitelistsFilters).join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
       filters([
-        ...whitelists1,
-        ...whitelists2,
-        ...whitelists3,
-        ...whitelists4,
-        ...whitelists5,
-        ...whitelists6,
+        ...domainWhitelists,
+        ...hostsWhitelists,
+        ...regexWhitelists,
       ]).join("\n")
     );
 
     await writeFile(
-      `${oldDirectory}/tmp-rules.txt`,
-      filters([
-        ...blacklists1,
-        ...blacklists2,
-        ...blacklists3,
-        ...blacklists4,
-        ...blacklists5,
-        ...blacklists6,
-      ]).join("\n")
+      `${oldDirectory}/tmp-dns.txt`,
+      filters([...domainBlacklist, ...hostsBlacklist, ...regexBlacklist]).join(
+        "\n"
+      )
     );
-
-    // await compileRulesFun(
-    //   `${oldDirectory}/tmp-allow.txt`,
-    //   `${oldDirectory}/tmp-rules.txt`,
-    //   `${oldDirectory}/tmp-rulesFilter3.txt`,
-    //   `${oldDirectory}/tmp-allowFilter3.txt`
-    // );
+    await writeFile(
+      `${oldDirectory}/tmp-rules.txt`,
+      filters(noinvalidBlacklist).join("\n")
+    );
 
     // 删除文件
     await deleteFiles(
@@ -251,32 +258,54 @@ async function main() {
       `${newDirectory}/dns.txt`,
       `${newDirectory}/DnsConfiguration.txt`,
       `${newDirectory}/rules.txt`,
-      `${assets}/allowFilter1.txt`,
-      `${assets}/rulesFilter1.txt`,
-      `${assets}/allowFilter2.txt`,
-      `${assets}/rulesFilter2.txt`,
-      `${assets}/allowFilter3.txt`,
-      `${assets}/rulesFilter3.txt`,
-      `${assets}/allowFilter4.txt`,
-      `${assets}/rulesFilter4.txt`
+      `${assets}/invalidBlacklistFilters.txt`,
+      `${assets}/domainBlacklistFilters.txt`,
+      `${assets}/hostsBlacklistFilters.txt`,
+      `${assets}/regexBlacklistFilters.txt`,
+      `${assets}/invalidWhitelistsFilters.txt`,
+      `${assets}/domainWhitelistsFilters.txt`,
+      `${assets}/hostsWhitelistsFilters.txt`,
+      `${assets}/regexWhitelistsFilters.txt`
     );
 
     // 复制文件
     await copyFiles(
       [`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`],
       [`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`],
-      [`${oldDirectory}/tmp-allowFilter1.txt`, `${assets}/allowFilter1.txt`],
-      [`${oldDirectory}/tmp-rulesFilter1.txt`, `${assets}/rulesFilter1.txt`],
-      [`${oldDirectory}/tmp-allowFilter2.txt`, `${assets}/allowFilter2.txt`],
-      [`${oldDirectory}/tmp-rulesFilter2.txt`, `${assets}/rulesFilter2.txt`],
-      [`${oldDirectory}/tmp-allowFilter3.txt`, `${assets}/allowFilter3.txt`],
-      [`${oldDirectory}/tmp-rulesFilter3.txt`, `${assets}/rulesFilter3.txt`],
-      [`${oldDirectory}/tmp-allowFilter4.txt`, `${assets}/allowFilter4.txt`],
-      [`${oldDirectory}/tmp-rulesFilter4.txt`, `${assets}/rulesFilter4.txt`]
+      [`${oldDirectory}/tmp-dns.txt`, `${newDirectory}/dns.txt`],
+      [
+        `${oldDirectory}/tmp-invalidBlacklistFilters.txt`,
+        `${assets}/invalidBlacklistFilters.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-domainBlacklistFilters.txt`,
+        `${assets}/domainBlacklistFilters.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-hostsBlacklistFilters.txt`,
+        `${assets}/hostsBlacklistFilters.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-regexBlacklistFilters.txt`,
+        `${assets}/regexBlacklistFilters.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-invalidWhitelistsFilters.txt`,
+        `${assets}/invalidWhitelistsFilters.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-domainWhitelistsFilters.txt`,
+        `${assets}/domainWhitelistsFilters.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-hostsWhitelistsFilters.txt`,
+        `${assets}/hostsWhitelistsFilters.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-regexWhitelistsFilters.txt`,
+        `${assets}/regexWhitelistsFilters.txt`,
+      ]
     );
-
-    // 过滤DNS
-    await filterDns(newDirectory);
 
     // 处理title
     await title();

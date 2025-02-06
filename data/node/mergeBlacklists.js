@@ -22,23 +22,12 @@ const mergeBlacklists = async (directory) => {
 
     let allFileDataFilter = [];
     // 处理文件规则
-    let allFileDatas = allFileData
-      .join("\n")
-      .split("\n")
-      .filter((line) => {
-        if (/^\|\|.*/.test(line) || /^\/.*\/$/.test(line)) {
-          return line;
-        } else {
-          allFileDataFilter.push(line);
-        }
-      });
+    let allFileDatas = filters(allFileData.join("\n").split("\n"));
 
     console.log(
-      `合并黑名单规则完成，共处理了${rulesFiles.length}个文件，符合规则${
-        filters(allFileDatas).length
-      }条，不符合${filters(allFileDataFilter).length}条`
+      `合并黑名单规则完成，共处理了${rulesFiles.length}个文件，合并规则${allFileDatas.length}条`
     );
-    return [filters(allFileDatas), filters(allFileDataFilter)];
+    return allFileDatas;
   } catch (error) {
     throw new Error(`合并黑名单规则失败: ${error.message}`);
   }
