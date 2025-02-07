@@ -173,6 +173,8 @@ async function main() {
 
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
+    const whitelists2 = whitelists1.filter((line) => !/^||.*/.test(line));
+
     const [noinvalidWhitelist, invalidWhitelistsFilters] =
       await invalidStrFilter(whitelists1);
 
@@ -240,7 +242,7 @@ async function main() {
     // );
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
-      removeSubdomainDuplicates(filters(whitelists1)).join("\n")
+      removeSubdomainDuplicates(filters(whitelists2)).join("\n")
     );
 
     await writeFile(
