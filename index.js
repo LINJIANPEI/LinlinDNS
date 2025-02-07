@@ -92,11 +92,11 @@ const rules = [
   "https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt", //本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
   "https://cdn.jsdelivr.net/gh/anudeepND/blacklist@master/adservers.txt", //anudeepND/blacklist
   "https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker", //NEODEVHOST
- // "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt", //mphin
- // "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt", //217heidai/adblockfilters
- // "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt", //217heidai/adblockfilters
-//  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt", //217heidai/adblockfilters
-//  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt", //217heidai/adblockfilters
+  // "https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt", //mphin
+  // "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt", //217heidai/adblockfilters
+  // "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt", //217heidai/adblockfilters
+  //  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt", //217heidai/adblockfilters
+  //  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt", //217heidai/adblockfilters
   "https://cdn.jsdelivr.net/gh/LucienShui/chinalist@gh-pages/chinalist.txt", //LucienShui/chinalist
   "https://raw.githubusercontent.com/qq5460168/666/master/rules.txt", //酷安反馈
   "https://raw.githubusercontent.com/Lynricsy/HyperADRules/master/dns.txt", //HyperADRules
@@ -234,7 +234,9 @@ async function main() {
             "@@||"
           )
         )
-      ).join("\n")
+      )
+        .map((line) => `${line}$important`)
+        .join("\n")
     );
 
     await writeFile(
