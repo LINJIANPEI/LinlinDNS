@@ -242,7 +242,9 @@ async function main() {
     // );
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
-      removeSubdomainDuplicates(filters(noinvalidWhitelist)).join("\n")
+      removeSubdomainDuplicates(
+        filters(processHostsRule(noinvalidWhitelist, "@@||"))
+      ).join("\n")
     );
 
     await writeFile(
