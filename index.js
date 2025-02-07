@@ -155,22 +155,20 @@ async function main() {
     // 合并规则并去重
     const blacklists1 = await mergeBlacklists(oldDirectory);
 
-    const [noinvalidBlacklist, invalidBlacklistFilters] =
-      await invalidStrFilter(blacklists1);
+    const blacklists2 = blacklists1.filters((line) => !/^@@.*/.test(line));
 
-    const noinvalidBlacklists = noinvalidBlacklist.filters(
-      (line) => !/^@@.*/.test(line)
-    );
+    const [noinvalidBlacklist, invalidBlacklistFilters] =
+      await invalidStrFilter(blacklists2);
 
     const [domainBlacklist, domainBlacklistFilters] = await domainFilter(
-      await modifiersFilter(noinvalidBlacklists),
+      await modifiersFilter(noinvalidBlacklist),
       "||"
     );
     const [hostsBlacklist, hostsBlacklistFilters] = await hostsFilter(
-      noinvalidBlacklists
+      noinvalidBlacklist
     );
     const [regexBlacklist, regexBlacklistFilters] = await regexFilter(
-      noinvalidBlacklists
+      noinvalidBlacklist
     );
 
     const whitelists1 = await mergeWhitelist(oldDirectory);
