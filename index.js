@@ -101,6 +101,7 @@ const rules = [
   "https://raw.githubusercontent.com/qq5460168/666/master/rules.txt", //酷安反馈
   "https://raw.githubusercontent.com/Lynricsy/HyperADRules/master/dns.txt", //HyperADRules
   "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt", //AWAvenue
+  "https://adguardteam.github.io/HostlistsRegistry/assets/filter_53.txt", //AWAvenue Ads Rule
 ];
 //白名单规则
 const allow = [
