@@ -235,7 +235,7 @@ async function main() {
           )
         )
       )
-        .map((line) => `${line}$important`)
+        .map((line) => `${line}^$important`)
         .join("\n")
     );
 
