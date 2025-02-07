@@ -225,18 +225,22 @@ async function main() {
       filters(regexWhitelistsFilters).join("\n")
     );
 
+    // await writeFile(
+    //   `${oldDirectory}/tmp-allow.txt`,
+    //   removeSubdomainDuplicates(
+    //     filters(
+    //       processHostsRule(
+    //         [...domainWhitelists, ...hostsWhitelists, ...regexWhitelists],
+    //         "@@||"
+    //       )
+    //     )
+    //   )
+    //     .map((line) => `${line}^$important`)
+    //     .join("\n")
+    // );
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
-      removeSubdomainDuplicates(
-        filters(
-          processHostsRule(
-            [...domainWhitelists, ...hostsWhitelists, ...regexWhitelists],
-            "@@||"
-          )
-        )
-      )
-        .map((line) => `${line}^$important`)
-        .join("\n")
+      removeSubdomainDuplicates(filters(whitelists1)).join("\n")
     );
 
     await writeFile(
