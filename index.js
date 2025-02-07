@@ -155,7 +155,7 @@ async function main() {
     // 合并规则并去重
     const blacklists1 = await mergeBlacklists(oldDirectory);
 
-    const blacklists2 = blacklists1.filters((line) => !/^@@.*/.test(line));
+    const blacklists2 = blacklists1.filter((line) => !/^@@.*/.test(line));
 
     const [noinvalidBlacklist, invalidBlacklistFilters] =
       await invalidStrFilter(blacklists2);
