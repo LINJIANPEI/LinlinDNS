@@ -176,7 +176,7 @@ async function main() {
     const whitelists2 = whitelists1.filter((line) => !/^||.*/.test(line));
 
     const [noinvalidWhitelist, invalidWhitelistsFilters] =
-      await invalidStrFilter(whitelists1);
+      await invalidStrFilter(whitelists2);
 
     const [domainWhitelists, domainWhitelistsFilters] = await domainFilter(
       await modifiersFilter(noinvalidWhitelist),
@@ -242,7 +242,7 @@ async function main() {
     // );
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
-      removeSubdomainDuplicates(filters(whitelists2)).join("\n")
+      removeSubdomainDuplicates(filters(noinvalidWhitelist)).join("\n")
     );
 
     await writeFile(
