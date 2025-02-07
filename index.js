@@ -158,31 +158,35 @@ async function main() {
     const [noinvalidBlacklist, invalidBlacklistFilters] =
       await invalidStrFilter(blacklists1);
 
+    const noinvalidBlacklists = noinvalidBlacklist.filters(
+      (line) => !/^@@.*/.test(line)
+    );
+
     const [domainBlacklist, domainBlacklistFilters] = await domainFilter(
-      await modifiersFilter(noinvalidBlacklist),
+      await modifiersFilter(noinvalidBlacklists),
       "||"
     );
     const [hostsBlacklist, hostsBlacklistFilters] = await hostsFilter(
-      noinvalidBlacklist
+      noinvalidBlacklists
     );
     const [regexBlacklist, regexBlacklistFilters] = await regexFilter(
-      noinvalidBlacklist
+      noinvalidBlacklists
     );
 
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    const [noinvalidWhitelists, invalidWhitelistsFilters] =
+    const [noinvalidWhitelist, invalidWhitelistsFilters] =
       await invalidStrFilter(whitelists1);
 
     const [domainWhitelists, domainWhitelistsFilters] = await domainFilter(
-      await modifiersFilter(noinvalidWhitelists),
+      await modifiersFilter(noinvalidWhitelist),
       "@@||"
     );
     const [hostsWhitelists, hostsWhitelistsFilters] = await hostsFilter(
-      noinvalidWhitelists
+      noinvalidWhitelist
     );
     const [regexWhitelists, regexWhitelistsFilters] = await regexFilter(
-      noinvalidWhitelists
+      noinvalidWhitelist
     );
 
     await writeFile(
