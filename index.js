@@ -184,10 +184,10 @@ async function main() {
       "@@||"
     );
     const [hostsWhitelists, hostsWhitelistsFilters] = await hostsFilter(
-      noinvalidWhitelist
+      domainWhitelistsFilters
     );
     const [regexWhitelists, regexWhitelistsFilters] = await regexFilter(
-      noinvalidWhitelist
+      hostsWhitelistsFilters
     );
 
     await writeFile(
@@ -228,29 +228,45 @@ async function main() {
       filters(regexWhitelistsFilters).join("\n")
     );
 
-    // await writeFile(
-    //   `${oldDirectory}/tmp-allow.txt`,
-    //   removeSubdomainDuplicates(
-    //     filters(
-    //       processHostsRule(
-    //         [...domainWhitelists, ...hostsWhitelists, ...regexWhitelists],
-    //         "@@||"
-    //       )
-    //     )
-    //   )
-    //     .map((line) => `${line}^$important`)
-    //     .join("\n")
-    // );
     await writeFile(
       `${oldDirectory}/tmp-allow.txt`,
       removeSubdomainDuplicates(
         filters(
-          await modifiersFilter(processHostsRule(noinvalidWhitelist, "@@||"))
+          processHostsRule(
+            [
+              ...domainWhitelists,
+              ...hostsWhitelists,
+              ...regexWhitelists,
+              ...regexWhitelistsFilters,
+            ],
+            "@@||"
+          )
         )
-      )
-        .map((line) => `@@||${line}`)
-        .join("\n")
+      ).join("\n")
     );
+
+    await writeFile(
+      `${oldDirectory}/tmp-dnsallow.txt`,
+      removeSubdomainDuplicates(
+        filters(
+          processHostsRule(
+            [...domainWhitelists, ...hostsWhitelists, ...regexWhitelists],
+            "@@||"
+          )
+        )
+      ).join("\n")
+    );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-allow.txt`,
+    //   removeSubdomainDuplicates(
+    //     filters(
+    //       await modifiersFilter(processHostsRule(noinvalidWhitelist, "@@||"))
+    //     )
+    //   )
+    //     .map((line) => `@@||${line}`)
+    //     .join("\n")
+    // );
 
     await writeFile(
       `${oldDirectory}/tmp-dns.txt`,
@@ -284,6 +300,7 @@ async function main() {
     // 删除文件
     await deleteFiles(
       `${newDirectory}/allow.txt`,
+      `${newDirectory}/dnsallow.txt`,
       `${newDirectory}/dns.txt`,
       `${newDirectory}/DnsConfiguration.txt`,
       `${newDirectory}/rules.txt`,
@@ -300,6 +317,7 @@ async function main() {
     // 复制文件
     await copyFiles(
       [`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`],
+      [`${oldDirectory}/tmp-dnsallow.txt`, `${newDirectory}/dnsallow.txt`],
       [`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`],
       [`${oldDirectory}/tmp-dns.txt`, `${newDirectory}/dns.txt`],
       [
