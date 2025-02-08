@@ -603,7 +603,6 @@
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! Homepage: https://github.com/Cats-Team/dns-filter
 ! Homepage: https://github.com/Lynricsy/HyperADRules
-! Homepage: https://github.com/TTDNS/Cat?tab=readme-ov-file
 ! Homepage: https://github.com/cjx82630/cjxlist
 ! Homepage: https://github.com/damengzhu/banad
 ! Homepage: https://github.com/easylist/easylistchina/
@@ -1038,7 +1037,6 @@
 ! Title: NoCoin Filter List
 ! Title: Perflyst and Dandelion Sprout's Smart-TV Blocklist for AdGuard Home
 ! Title: Scam Blocklist by DurableNapkin
-! Title: TT拒绝列表
 ! Title: Youtube-Adfilter-Web
 ! Title: Zhihu App 广告屏蔽
 ! Title: black-list
@@ -1102,7 +1100,6 @@
 ! Version: 202011041719
 ! Version: 202011182
 ! Version: 202012190310
-! Version: 202302242205
 ! Version: 2024.10.19
 ! Version: 202406120915
 ! Version: 202412211927
@@ -1192,7 +1189,6 @@
 ! bit.ly
 ! blueconic.net on hearst.com sites
 ! but make sure it's blocked in apps
-! by: TTDNS⭐⭐✨
 ! by: 酷安@大萌主
 ! canyoublockit.com
 ! cdn.rozetka.com.ua is blocked by CNAME 'rozetka-cdn.exponea.com'
@@ -1889,7 +1885,6 @@
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 此规则不定时更新
 ! 电信截持弹窗 3行
-! 白名单/放行条
 ! 禁用左右快捷键 nangua99.com,xxdm2.com##+js(set,jQuery.fn.keydown,trueFunc)
 ! 美团外卖AppDebug无解析的公网域名，详见https://www.blueskyxn.com/202311/6919.html
 ! 规则链接地址
@@ -1966,7 +1961,6 @@
 !!!note! If you are using "AdGuard Home", please load https://anti-ad.net/easylist.txt
 !!!note! If you are using "AdGuard", please load https://anti-ad.net/adguard.txt
 !!||localhost.direct^
-!##div#dplayer-ad
 !#0
 !#17ce.com
 !#18comic.org
@@ -2048,14 +2042,8 @@
 !+ PLATFORM(ios, ext_safari)
 !+ PLATFORM(windows, mac, android)
 !--
-!-- 2021-12-1
-!-- 2022-1-4
-!-- 2022-3-7 txty
-!-- 2022-4-21 txsp
-!-- 2022..7.2
 !-- END END ---
 !-- taobao
-!-- 百度搜索广告
 !----
 !----- For HTTPS websites when HTTPS filtering is disabled ------
 !---------- Anti-Adblock ----------
@@ -2185,22 +2173,15 @@
 !---腾讯视频
 !---迅雷看看
 !---风行
-!--2021-10-30
-!--2021-8-10
 !--360影视
-!--55影视
 !--56
 !--bilibili
 !--bimibimi--m站
 !--dlkoo.com
 !--google
-!--replace ##a[href$="/hjdt9.com"]
-!--replace ##a[href$="/xha77.com"]
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > [class]:-abp-has(span[data-tuiguang])
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > [style*="important"]
-!--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_left > div:-abp-has(.ec-tuiguang)
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_right > [class]:-abp-has(span[data-tuiguang])
-!--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?##content_right > div:-abp-has(.ec-tuiguang)
 !--replace ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#?#div[id$="_canvas"]
 !--replace ipv6.baidu.com,xueshu.baidu.com,www.baidu.com,www1.baidu.com#?#.c-container:-abp-has(.t > a[data-landurl])
 !--replace ipv6.baidu.com,xueshu.baidu.com,www.baidu.com,www1.baidu.com#?#div:not([id]) > style[id^="s-"] + style + div + div[id]
@@ -2209,42 +2190,25 @@
 !--replace ||alicdn.com^*yksdk/*sdk.js$script,domain=youku.com
 !--replace ||iqiyi.com/show2?cb=
 !--replace ||iqiyi.com/show2?e=$domain=~m.iqiyi.com
-!--replace ||nfmovies.com/static/*.jpg
-!--replace ||nfmovies.com/static/210203.png
 !--replace ||qq.com/livemsg?
 !--replace ||zhuashi.oss-cn-beijing.aliyuncs.com^$domain=~zhuashi.com
-!--www.bde4.cc
 !--youtube
 !--不兼容的新规则
-!--奈菲www.nfmovies.com
 !--挖矿
 !--百度
-!--百度贴吧
 !--贴吧---
 !-mgtv
 !/.tc.qq.com/*.mp4*vkey=
 !/^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/(q?player[^\.]*|\w{13})\.swf/>>>http://yk.522.com.cn/player.swf>>>>keyword=youku
 !/^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/upsplayer\/(q?player[^\.]*|\w{13})\.swf/>>>http://yk.522.com.cn/player.swf>>>>keyword=youku
 !/^http:\/\/td\.atm\.youku\.com\/tdcm\/adcontrol/>>>http://www.tudou.com/util/tools/www_hd.txt>>>>keyword=tdcm
-!/^https:\/\/pss\.bdstatic\.com\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/\w+\.js/>>>https://1111.51xiaolu.com/tu_68114f1.min.js?233>>>>keyword=bdstatic
-!/^https:\/\/pss\.bdstatic\.com\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/tu_68114f1\.js/>>>https://1111.51xiaolu.com/tu_68114f1.right.min.js?233>>>>keyword=bdstatic
-!/^https:\/\/ss1\.bdstatic.com\/.*?\/r\/www\/cache\/static\/protocol\/https\/soutu\/js\/tu_68114f1\.js/>>>https://1111.51xiaolu.com/tu_68114f1.min.js>>>>keyword=bdstatic
-!/^https:\/\/ss1\.bdstatic\.com\/5eN1bjq8AAUYm2zgoY3K\/r\/www\/cache\/static\/protocol\/https\/plugins\/hotWord_cc828cc\.js/>>>https://1111.51xiaolu.com/hotWord_cc828cc.min.js?117>>>>keyword=plugins
-!/^https:\/\/tb1\.bdstatic\.com\/\?\?tb\/static-common\/lib\/tb_lib_\S+\.js,tb\/static-common\/ui\/common_logic_v2_\S+,tb\/static-common\/js\/tb_ui_\S+\.js,\/tb\/_\/ban_8422f6c\.js/>>>https://1111.51xiaolu.com/baidutieba_p.js?1>>>>keyword=bdstatic
-!/^https:\/\/www\.googletagmanager\.com\/gtag\/js/>>>https://1111.51xiaolu.com/gtag.js?adt=1&>>>>keyword=googletagmanager
-!/^https:\/\/www\.youtube\.com\/s\/player\/\w*\/player_ias\.vflset\/zh_CN\/base\.js$/>>>https://litao.test.utools.club/base.js?dfsesfsefesx>>>>keyword=base
-!/g\.alicdn\.com\/mm\/yksdk\/0\.2\.\d+\/playersdk\.js/>>>1111.51xiaolu.com/playersdk.js>>>>keyword=playersdk
 !/g\.alicdn\.com\/player\/ykplayer\/0\.6\.[0-9]+\/youku-player\.min\.js/>>>g.alicdn.com/player/ykplayer/0.5.90/youku-player.min.js>>>>keyword=youku
-!/gzc_.*\.mp4\?/
 !/player\.mgtv\.com\/mgtv_v6_main\/main\.swf/>>>player.mgtv.com/mgtv_v5_main/main.swf>>>>keyword=mgtv
 !/yk\.522\.com\.cn\/danmu\.swf/>>>static.youku.com/v201706061000.0/v/swf/upsplayer/danmu.swf>>>>keyword=danmu
 !123pan网盘
-!15
-!16
 !360搜索
 !3DM
 !51cto.com###ft~div
-!@@|https://www.mgtv.com/
 !@@||googletagmanager.com/gtm.js$domain=www.nintendo.co.jp
 !AdBlock Plus:
 !Amazon ADS
@@ -2293,9 +2257,6 @@
 !appboot.netflix.com
 !applicast.ga.sony.net
 !auth.samsungosp.com # If blocked, Samsung accounts will fail to authenticate
-!baidu.com###content_left>div[id^='300']
-!baidu.com###content_left>table
-!baidu.com##.EC_result
 !baidu.com##div#bottom_layer
 !cdn.samsungcloudsolution.com # System update check on Samsung UE40F5500
 !csdn
@@ -2304,7 +2265,6 @@
 !douyu.com##+js(set, RTCPeerConnection.prototype.addTrack, noopFunc)
 !efwef
 !epg.corio.com # needed for apps
-!http://defaultts.tc.qq.com/
 !https://bbs.kafan.cn/thread-2180923-1-1.html
 !https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
 !imomoe.*###adl,#adr
@@ -2316,7 +2276,6 @@
 !portal.store.sonyentertainmentnetwork.com
 !qq.com##+js(aopr, Beacon.prototype.fail)
 !qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
-!qq.com/flv/*.mp4*vkey=
 !samsungosp.com
 !samsungotn.net # System update check on Samsung UE65RU7455
 !sd173.com
@@ -2324,8 +2283,6 @@
 !time.samsungcloudsolution.com # If blocked, services like Plex, YouTube and Amazon Video not working anymore on some Samsung TV's
 !tv.deezer.com # Breaks Deezer's smart-TV apps.
 !ul.ul_Address a[href$=exe]:not([href^="http://skycnxz"])
-!v-*.71edge.com/videos/other/*.f4v?dis
-!v-*.71edge.com/videos/vts/*.ts?key=
 !v.smtcdns.com/defaultts.tc.qq.com/
 !v.youku.com##+js(nano-stb)
 !vcs.vdspf.com  #  if blocked, notified of new firmware but unable to download/install
@@ -7088,7 +7045,6 @@
 # [未分类]
 # [正则百度]
 # [番茄小说]
-# [番茄畅听]
 # [百度]
 # [知乎]
 # [视频客户端过滤器]
@@ -7290,7 +7246,6 @@
 # 搜狗输入法
 # 支付宝
 # 支付宝以及淘宝农场任务
-# 未标注
 # 流氓下载器
 # 淘宝
 # 淘宝相关
@@ -7418,7 +7373,6 @@
 #-
 #---------------------------------------
 #------------------------------------------
-#-----------------------分割线-----------------------------
 #-----Test
 #-----Test End
 #--PP视频-PPTV
@@ -7615,7 +7569,6 @@
 #<wiki-spam-sites>
 #<yahoo-ad-sites>
 #=====================================
-#===================================分割线===================================
 #@ <<<<<<<< hostsplus + hostsplus-cert => hosts
 #@ <<<<<<<< https://raw.githubusercontent.com/FiltersHeroes/KAD/master/sections/blogspot.txt => hosts
 #@ <<<<<<<< https://raw.githubusercontent.com/FiltersHeroes/KAD/master/sections/podejrzane_inne_oszustwa.txt => hosts
@@ -7632,7 +7585,6 @@
 #@#.has-ad
 #@@||appdownload.alicdn.com^$important
 #@@||update.miui.com^$important
-#@@||v3-novelapp.fqnovelvod.com
 #Alimama
 #Appcpa
 #A站点赞
@@ -8793,7 +8745,6 @@
 #乔安智联
 #书旗
 #书旗听书
-#书旗小说
 #书旗小说评论
 #交管12123
 #京东
@@ -8812,12 +8763,10 @@
 #优酷app
 #优酷app 兑换vip
 #优酷图片加载
-#优酷广告
 #传奇广告
 #低端影视
 #信息流及评论区广告
 #免费公共 DNS 服务器大全
-#公众号留言头像
 #公共CDN
 #其他↓
 #其他腾讯系
@@ -8840,7 +8789,6 @@
 #喜马拉雅音频下载
 #喵酷扫描登录
 #囧次元
-#囧次元播放
 #图床
 #土豆视频
 #墨墨背单词
@@ -8862,7 +8810,6 @@
 #夸克网盘
 #夸克首页
 #字节系 AD API SDK 屏蔽
-#字节跳动
 #安逸花
 #宜享花
 #宜人贷
@@ -8895,7 +8842,6 @@
 #应用游戏页去除推广视频
 #度小满
 #得间
-#微信公众号广告
 #微信公众号视频
 #微信小程序,城市通
 #微信帮助与反馈
@@ -8907,7 +8853,6 @@
 #微信视频号图片
 #微粒贷
 #必应
-#快手历史记录
 #快手图标
 #快手头像
 #快手平台
@@ -8971,7 +8916,6 @@
 #淘宝的一个主要域名
 #淘宝的一些功能加载
 #淘宝菜鸟裹裹
-#游戏广告
 #滴滴数科
 #滴滴顺风车
 #熊猫小说
@@ -8983,8 +8927,6 @@
 #爱奇艺会员成长体系
 #爱奇艺会员权益
 #爱奇艺图片误杀
-#版本不安全
-#版本不安全显示
 #猫眼
 #王者一些图片
 #王者更新
@@ -9013,7 +8955,6 @@
 #百度网盘签到图片界面
 #百度翻译接口
 #百度视频封面
-#百度贴吧
 #百度贴吧签到
 #百度贴吧表情误杀
 #皮皮虾/字节跳动
@@ -9021,10 +8962,8 @@
 #皮皮虾评论区发图
 #盒子定位
 #直播吧
-#真人听书功能
 #知乎
 #知乎图片
-#知乎广告
 #福利网站去广告
 #科利达WiFi
 #移动app登录
@@ -9044,7 +8983,6 @@
 #网易光遇 sky 登录
 #网易图片
 #网易年度总结
-#网易有道词典
 #网络播放去广告
 #罗盘软件
 #美团外卖
@@ -9052,7 +8990,6 @@
 #脚本之家
 #腾讯云实时音视频
 #腾讯充值
-#腾讯广告
 #腾讯广告服务
 #腾讯手游加速器
 #腾讯新闻
@@ -9081,7 +9018,6 @@
 #路由器
 #转转
 #迅雷下载
-#通杀规则
 #速递易京东广告推广
 #部分设备的小米云服务
 #部分设备的小米推送
@@ -9096,7 +9032,6 @@
 #链家、贝壳找房验证码
 #锁屏画报正常化
 #阅友去广告
-#阅读评论
 #阻止苏宁小店下载
 #阿里图片
 #阿里巴巴购物
@@ -9108,7 +9043,6 @@
 #领红包封面
 #饿了么小程序
 #饿了么登录
-#首页图片
 #香哈升级包
 #马上消费
 #高德左上广告
@@ -9116,9 +9050,6 @@
 #魅族天气
 #黄历通胜
 #龙享花
-#（UC浏览器）
-#（微信）
-#（番茄免费小说）
 [$domain=/87\d{2}ck\.cc/]##body > div[style] > a[href][target="_blank"]
 [$domain=/slkpeqme\d\.shop/]##.small-icon-container > a[target="_blank"]
 [$path=/\\/(movies|shows)\\/play\\//]monster##.view-movie .hero + .container .col-sm-12 > div[style="text-align: center; margin-top: 20px;"] > a[target="_blank"][style="padding: 20px; display: block"]
@@ -9133,7 +9064,6 @@
 [个人收集 2.0]
 [个人维护]
 某些其他
-荣耀主题
 ！↑↑腾讯视频设备管理器!
 ！腾讯乘车码小程序
 ！酷安
