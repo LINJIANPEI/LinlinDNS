@@ -36,7 +36,7 @@ const cleanReadme = async () => {
           .replace(/^拦截规则数量.*/, `拦截规则数量: ${numRules}`)
           .replace(/^DNS拦截规则数量.*/, `DNS拦截规则数量: ${numDns}`)
           .replace(/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`)
-          .replace(/^DNS白名单规则数量.*/, `白名单规则数量: ${numdnsAllow}`)
+          .replace(/^DNS白名单规则数量.*/, `DNS白名单规则数量: ${numdnsAllow}`)
           .replace(/^DNS配置数量.*/, `DNS配置数量: ${numDnsConfiguration}`);
       })
       .join("\n");
