@@ -24,6 +24,7 @@ DNS拦截规则数量: 1150500
 - **[拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/rules.txt)**
 - **[DNS拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/dns.txt)**
 - **[白名单](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/allow.txt)**
+- **[DNS白名单](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/dnsallow.txt)**
 - **[DNS配置](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/DnsConfiguration.txt)**
 </ul>
 </details>
