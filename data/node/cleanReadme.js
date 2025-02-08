@@ -28,16 +28,21 @@ const cleanReadme = async () => {
       .tz("Asia/Shanghai")
       .format("YYYY-MM-DD HH:mm:ss");
     let readmeContent = await readFile("README.md");
+    const replacements = [
+      [/^更新时间.*/, `更新时间: ${beijingTime} （北京时间）`],
+      [/^拦截规则数量.*/, `拦截规则数量: ${numRules}`],
+      [/^DNS拦截规则数量.*/, `DNS拦截规则数量: ${numDns}`],
+      [/^DNS白名单规则数量.*/, `DNS白名单规则数量: ${numdnsAllow}`],
+      [/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`],
+      [/^DNS配置数量.*/, `DNS配置数量: ${numDnsConfiguration}`],
+    ];
     readmeContentData = readmeContent
       .split("\n")
       .map((line) => {
-        return line
-          .replace(/^更新时间.*/, `更新时间: ${beijingTime} （北京时间）`)
-          .replace(/^拦截规则数量.*/, `拦截规则数量: ${numRules}`)
-          .replace(/^DNS拦截规则数量.*/, `DNS拦截规则数量: ${numDns}`)
-          .replace(/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`)
-          .replace(/^DNS白名单规则数量.*/, `DNS白名单规则数量: ${numdnsAllow}`)
-          .replace(/^DNS配置数量.*/, `DNS配置数量: ${numDnsConfiguration}`);
+        for (const [regex, replacement] of replacements) {
+          if (regex.test(line)) return replacement; // 匹配成功直接返回
+        }
+        return line; // 未匹配则保持原样
       })
       .join("\n");
 

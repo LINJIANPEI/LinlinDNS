@@ -5,7 +5,10 @@ const domainFilter = async (con, str) => {
     let conFalse = [];
     const conTrue = con
       .map((line) => {
-        if (/^([\w,\d,-]+\.)+[\w,\d,-]+(\^$)?$/.test(line)) {
+        // const regex = /^([\w,\d,-,\*]+\.)+[\w,\d,-,\*]+(\^$)?$/;
+        const regex =
+          /^(?:\*\.|[a-zA-Z0-9-]{1,63}\.)+[a-zA-Z0-9-]{1,63}\.[a-zA-Z]{2,6}$|^\*?[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(\.[a-zA-Z]{2,6})?$/;
+        if (regex.test(line)) {
           return `${str}${line}`;
         } else {
           conFalse.push(line);

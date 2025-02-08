@@ -6,7 +6,10 @@ const modifiersFilter = async (con) => {
     const cons = con.map((line) => {
       return line
         .trim()
-        .replace(/^@@\|\||^\|\||^\||^@@|\$important\$|\s#[^#]*$|\^$/, "");
+        .replace(
+          /^@@\|\||^\|\||^\||^@@\||^@@|\$important$|\^\$important$|\s#[^#]*$|\^$/g,
+          ""
+        );
     });
 
     console.log(`过滤修饰符成功`);
