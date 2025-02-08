@@ -166,10 +166,10 @@ async function main() {
       "||"
     );
     const [hostsBlacklist, hostsBlacklistFilters] = await hostsFilter(
-      noinvalidBlacklist
+      domainBlacklistFilters
     );
     const [regexBlacklist, regexBlacklistFilters] = await regexFilter(
-      noinvalidBlacklist
+      hostsBlacklistFilters
     );
 
     const whitelists1 = await mergeWhitelist(oldDirectory);
@@ -267,7 +267,17 @@ async function main() {
     await writeFile(
       `${oldDirectory}/tmp-rules.txt`,
       removeSubdomainDuplicates(
-        filters(processHostsRule(noinvalidBlacklist, "||"))
+        filters(
+          processHostsRule(
+            [
+              ...domainBlacklist,
+              ...hostsBlacklist,
+              ...regexBlacklist,
+              ...regexBlacklistFilters,
+            ],
+            "||"
+          )
+        )
       ).join("\n")
     );
 
