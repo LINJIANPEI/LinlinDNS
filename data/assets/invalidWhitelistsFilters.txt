@@ -1,1072 +1,719 @@
-!
-! 2023.9.90版本，拦截该广告域名频繁弹窗Unknown及ConnectionAborted错误
-! ================= 360 =================
-! ================= 3975游戏 =================
-! ================= APP工具 =================
-! ================= MASN中国 =================
-! ================= Raidrive =================
-! ================= UC浏览器 =================
-! ================= UC直播 =================
-! ================= UC短视频 =================
-! ================= xhamsterlive =================
-! ================= xlivesex =================
-! ================= 下载 =================
-! ================= 东方头条 =================
-! ================= 东方财富网 =================
-! ================= 中关村在线 =================
-! ================= 中国电信 =================
-! ================= 京东 =================
-! ================= 优米电视 =================
-! ================= 优酷 =================
-! ================= 其它 =================
-! ================= 千橡 =================
-! ================= 原神 =================
-! ================= 同盾 =================
-! ================= 哔哩哔哩 =================
-! ================= 域名注册 =================
-! ================= 天气预报 =================
-! ================= 字节跳动 =================
-! ================= 小米 =================
-! ================= 巨人网络 =================
-! ================= 应用宝 =================
-! ================= 建设银行 =================
-! ================= 微信 =================
-! ================= 微软 =================
-! ================= 快手 =================
-! ================= 手机QQ =================
-! ================= 抖音 =================
-! ================= 搜狐 =================
-! ================= 搜狐视频 =================
-! ================= 搜狗手机输入法 =================
-! ================= 斗鱼 =================
-! ================= 新浪 =================
-! ================= 新疆网上税务局 =================
-! ================= 查询 =================
-! ================= 模拟城市 =================
-! ================= 淘宝 =================
-! ================= 深圳通 =================
-! ================= 爱奇艺 =================
-! ================= 电视盒子 =================
-! ================= 番茄畅听 =================
-! ================= 百事公司大中华区 =================
-! ================= 百姓网 =================
-! ================= 百度 =================
-! ================= 百度手机输入法 =================
-! ================= 短剧 =================
-! ================= 米读小说 =================
-! ================= 网易 =================
-! ================= 网易云音乐 =================
-! ================= 美团 =================
-! ================= 老毛桃PE工具 =================
-! ================= 腾讯 =================
-! ================= 腾讯视频 =================
-! ================= 苹果 =================
-! ================= 蜗牛 =================
-! ================= 迅雷 =================
-! ================= 酷狗音乐 =================
-! ================= 阿里巴巴 =================
-! ================= 饿了么 =================
-! > 360
-! > 3975游戏
-! > > 大牌餐饮
-! > > 应用宝
-! > > 微信
-! > > 手机QQ
-! > > 抖音
-! > > 搜狐视频
-! > > 百度手机输入法
-! > > 网易云音乐
-! > > 腾讯视频
-! > >迅雷
-! > APP工具
-! > MASN中国
-! > PE工具
-! > Raidrive
-! > UC浏览器
-! > UC直播
-! > UC短视频
-! > xlivesex直播
-! > 下载
-! > 东方头条
-! > 东方财富网
-! > 中关村在线
-! > 京东
-! > 优米电视
-! > 优酷
-! > 其他
-! > 千橡
-! > 原神
-! > 同盾
-! > 哔哩哔哩
-! > 域名注册
-! > 天气预报
-! > 字节跳动
-! > 小米
-! > 巨人网络
-! > 建设银行
-! > 微软
-! > 快手
-! > 搜狐
-! > 搜狗手机输入法
-! > 斗鱼
-! > 新浪
-! > 新疆网上税务局
-! > 查询
-! > 模拟城市
-! > 淘宝
-! > 深圳通
-! > 爱奇艺
-! > 百事公司大中华区
-! > 百姓网
-! > 百度
-! > 短剧
-! > 米读小说
-! > 网易
-! > 美团
-! > 腾讯
-! > 苹果
-! > 蜗牛
-! > 试玩平台
-! > 酷狗音乐
-! > 阿里巴巴
-! > 饿了么
-! Apple
-! Apple addendum
-! CN - Perfect World: https://help.steamchina.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
-! Copyright (c) Digac.cc
-! Copyright (c) 周木木
-! DNS ad blocking whitelist for AdGuard Home
-! Description: Is it my Whitelist [use at your own risk no support or help will be done]
-! Description: Whitelist to resolve false positives introduced by filters.txt
-! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Epic Games
-! Expires: 1 days
-! Expires: 12 Hours
-! Expires: 20991231
-! Global: https: //help.steampowered.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
-! Google
-! Google addendum
-! Homepage: https://github.com/8680/GOODBYEADS
-! Homepage: https://github.com/mphin/adguardhome_rules
-! Homepage: https://github.com/qq5460168/me
-! Last modified: 2024-03-11 14:15
-! MAC地址查询
-! MicroSoft
-! MicroSoft addendum
-! Netflix
-! Note: 本规则相对于广告隐私保护更注重功能性、便捷性和效率。建议与 anti-AD 主规则一同使用：https://anti-ad.net/easylist.txt
-! Sources: https://raw.githubusercontent.com/Aveelo/Aveelo-adguard-home-Adlist-Whitelist/master/WhitelistAdGuardHome
-! Steam
-! Title: AdGuardHome白名单
-! Title: Aveelo Filter - Whitelist AdGuardHome
-! Title: DNS-Pass-List
-! Title: GOODBYEADS
-! Title: LWJ's white list
-! Title: MMotti AdguardHome - whitelist.txt
-! Title: white-list（白名单）
-! Title: 广告白名单规则，反馈🐧群
-! Total count: 14614
-! Total lines: 137
-! Update: 20241219
-! Version: 202407191352
-! Version: 2025-02-10 20:40:57（北京时间）
-! Xiaomi
-! ads.raidrive.com^
-! https://gitee.com/zjqz/ad-guard-home-dns
-! https://github.com/etotakeo/AdGuardDNSPassList
-! https://github.com/unknownFalleN/xiaomi-dns-blocklist
-! https://learn.microsoft.com/zh-cn/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide
-! https://support.apple.com/zh-cn/HT210060
-! https://support.google.com/chrome/a/answer/6334001?hl=zh-Hans
-! https://www.epicgames.com/help/zh-CN/c5719357686683/c5719341353627/epic-games-fortnite-a5720352654107#whitelist
-! url=https://gitee.com/zjqz/ad-guard-home-dns/raw/master/white-list
-! url=https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List
-! version=2021031702
-! version=20241219000119
-! ⠄⠄⠃⢰⣿⣿⣿⣿⣿⣿⡿⣿⣿⠴⠋⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⡟⢀⣾⠄⠄
-! ⠄⠄⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⢁⣴⣿⣿⣿⣿⠗⠄⠄⣿⣿⠄⠄
-! ⠄⠄⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣾⣿⣿⡿⠟⠄⠄
-! ⠄⠄⡿⠁⣼⣿⣿⣿⣿⣿⣿⣿⡇⠄⢀⡴⠚⢿⣿⣿⣿⣿⣿⣿⣿⣿⡏⢠⠄⠄
-! ⠄⠄⢀⣿⣿⣿⣿⣿⣿⣿⠃⠈⠁⠄⠄⢀⣴⣿⣿⣿⣿⣿⣿⣿⡟⢀⣾⣿⠄⠄
-! ⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⠄⠄⠄⠄⢶⣿⣿⣿⣿⣿⣿⣿⣿⠏⢀⣾⣿⣿⠄⠄
-! ⠄⠄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢁⣴⣿⣿⣿⣿⣿⣿⣿⠄⠄
-! ⠄⠄⣆⠈⠻⢿⣿⣿⣿⣿⣿⣿⠿⠛⣉⣤⣾⣿⣿⣿⣿⣿⣇⠠⠺⣷⣿⣿⠄⠄
-! ⠄⠄⣰⣾⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣆⠄⠄
-! ⠄⠄⣿⡿⠁⣼⣿⣿⣿⣿⣿⣿⡿⠋⠄⠄⠄⣠⣄⢰⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄
-! ⠄⠄⣿⣿⠃⠄⢠⣾⣿⣿⣿⠟⢁⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠄⠄
-! ⠄⠄⣿⣿⡿⠁⣰⣿⣿⣿⣿⣿⣿⣿⣿⠗⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄
-! ⠄⠄⣿⣿⣦⣄⣈⣉⣉⣉⣡⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⠉⠁⣀⣼⣿⣿⣿⠄⠄
-! ⠄⠄⣿⣿⣿⡿⠋⠄⡀⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠋⣉⣉⣉⡉⠙⠻⣿⣿⠄⠄
-! ⠄⠄⣿⣿⣿⣇⠔⠈⣿⣿⣿⣿⣿⡿⠛⢉⣤⣶⣾⣿⣿⣿⣿⣿⣿⣦⡀⠹⠄⠄
-! ⠄⠄⣿⣿⣿⣿⠋⢠⣾⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄
-! ⠄⠄⣿⣿⣿⣿⣿⡟⠁⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄
-! ⠄⠄⣿⣿⣿⣿⣿⣿⣿⠟⢁⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠄⠄
-! ⠄⠄⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⠋⣠⣿⣿⣿⣿⠄⠄
-! ⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢁⣼⣿⣿⣿⣿⣿⠄⠄
-! ⠐⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠂
-! ⠠⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-! 云联想
-! 云贝签到
-! 今日头条相关
-! 反馈帮助页面
-! 大牌餐饮
-! 天翼账号本机号码免注册一键登录
-! 抖音实名认证校验页面
-! 抖音直播购物
-! 拦截该域名Safari无法播放视频
-! 拦截该域名提示网络错误，无法打开消息列表设置
-! 拦截该域名电脑端页面提示广告加载失败，无实际性作用容易产生歧义
-! 拦截该广告域名导致在版本2023.9.90频繁弹窗Unknown及ConnectionAborted错误
-! 查找好友加载页面
-! 灵感语录同步
-! 电脑端提示广告加载失败，易产生歧义，实际在有效倒计时
-! 电视盒子下载，cnhezi.niuaniua.com
-! 第三方授权一键绑定
-! 谷歌
-! 输入法云联想
-! 输入法灵感语录同步
-! 送礼使用规则
-!*********************************************************
-!--------2345-------
-!--------360--------
-!--------Adult (Gay) used--------
-!--------BT/PT--------
-!--------Commonly used--------
-!--------The List End--------
-!--------WeChat public account platform--------
-!--------customize--------
-!--------vivo-------
-!--------乐播投屏-------
-!--------京东--------
-!--------其他-------
-!--------哔哩哔哩-------
-!--------字节跳动--------
-!--------小米--------
-!--------工具网站-------
-!--------微软--------
-!--------快手-------
-!--------手机遥控器-------
-!--------新浪--------
-!--------新网-------
-!--------本地--------
-!--------深信服--------
-!--------电视相关-------
-!--------百度--------
-!--------移动--------
-!--------统计-------
-!--------网易-------
-!--------腾讯-------
-!--------苹果-------
-!--------谷歌--------
-!--------豆瓣--------
-!--------迅游手游-------
-!--------迅雷-------
-!--------金山--------
-!--------阿里--------
-!--------飞智--------
-!--------魅族--------
-!Bootcdn
-!B站弹幕
-!JD试用商品详情
-!QQ音乐PC端登录
-!Windows
-!google系
-!ofiii
-!qq音乐畅听广告
-!vivo
-!一点资讯
-!京东
-!京东一号店
-!其他杂七杂八
-!华为
-!华为账号登录
-!国内大站/app
-!头条系
-!小爱音箱配网
-!小米
-!小米主题
-!小米系
-!小米隐私政策撤回同意
-!小黑盒验证
-!微信验证
-!抖音网页
-!携程移动端主页
-!新浪
-!海外
-!淘宝特卖网
-!百度智能云
-!百度系
-!知乎评论
-!短链接
-!网易系
-!网易验证
-!腾讯游戏登录
-!腾讯系
-!腾讯系 头像
-!腾讯网图片资源
-!腾讯视频图片资源
-!苹果
-!部分微信小程序登录
-!酷安
-!阿里云盘登录需要
-!阿里系
-!阿里验证
-!饿了么小程序
-#  糯米PHP 网站
-# 360极速浏览器网页下载
-# ARD German Television
-# Adswizz sponsor clips before several podcasts
-# Akamai Technologies
-# Aliexpress.com
-# Amazon Prime Video and Amazon CDN
-# Apple
-# AppleMusic音乐
-# Audioscrobbler.com
-# Avangate Shop
-# Brightcove Player
-# Buffer CDN
-# CBS Television Stream
-# Cloudflare
-# Cloudinary Upload Platform
-# Dataplicity.com
-# Disney+ Streaming
-# Drift.com
-# Dropbox
-# DynDns Provider
-# Earthquake App
-# Embedly.com
-# F1 TV
-# Firefox Browser
-# Formula 1 Mobile iOS
-# German Corona Apps Very Special lol
-# German Corona Warn App
-# Giphy.com
-# Github
-# Google
-# Gravatar Image
-# ImgIX
-# Instagram
-# Ipify.org
-# JW Player
-# Joyn TV Stream
-# Jquery
-# Jsdelivr.net Open Source CDN
-# Lets Encrypt
-# Libsyn Podcast Hosting
-# MIUI 骚扰拦截
-# Mailbox.org
-# Malwarebytes Anti-Malware
-# Manager Magazin App
-# Meteologix Business
-# Microsoft
-# My Adguard Home whitelist
-# NOMO APP
-# Netflix
-# No-IP.com
-# OneDrive Mac客户端连接
-# Optimizely
-# Pinterest
-# Placehold it image soft
-# Plex
-# QQ 聊天里的分享
-# QQ头像
-# QQ小程序 微博分享
-# QQ群内打卡图片
-# Reddit
-# Rlje.net VOD
-# Samsung TV network issue
-# Scalable
-# Shopify.com eCommerce Software
-# Sonarr TV Soft
-# Sonos
-# Spiegel.de
-# Spotify
-# Surveymonkey
-# Tawk Live Chat
-# Ted.com
-# The Pionneer App
-# Themoviedb.com
-# Thetvdb.com
-# Tidal
-# Tinyurl Shortener
-# Todesk
-# Twitter
-# Vidible Video Platform
-# Weather
-# WhatsApp
-# Wikipedia
-# Wordpress
-# Wow Tv App ex Sky
-# XKCD
-# Youtube
-# bilibili
-# easyicon图标库
-# iMessage 头像
-# twitter
-# 中国移动网盘-活动页面
-# 什么值得买-领券
-# 修复小米健康无法打开手表公交卡的问题
-# 天翼云认证登陆
-# 头条搜索
-# 夸克云盘
-# 夸克图片
-# 夸克学习
-# 夸克小说
-# 夸克小说模式
-# 夸克搜索框
-# 夸克数据同步
-# 夸克未成年人模式
-# 夸克浏览器网络监测
-# 夸克神马搜索
-# 夸克账户登录
-# 小米云服务状态
-# 小米社区
-# 小米网页客服头像
-# 应用汇
-# 微信红包
-# 我的网站
-# 抖音小程序
-# 搜狗输入法
-# 搜狗输入法PC网页
-# 支付宝
-# 支付宝以及淘宝农场任务
-# 支付宝小程序饿了么美食板块
-# 支付宝小程序饿了么购物车
-# 支付宝小程序饿了吗
-# 支付宝小程序饿了吗商品展示
-# 支付宝小程序饿了吗登陆
-# 淘宝
-# 淘宝相关
-# 电信一键登录
-# 百度关键词跳转
-# 百度搜索小米
-# 百度网盘exe下载
-# 百度贴吧
-# 皮皮虾无法访问问题
-# 知乎
-# 禁用后无法开启部分权限
-# 米家Iot
-# 系统应用检查更新 e.g 下载管理
-# 网易云蜗牛阅读^
-# 腾讯视频
-# 豌豆荚
-# 阿里云DNS网页
-# 阿里巴巴矢量图标库
-# 驾考宝典教学视频
-## 163登陆
-## 小米云服务备份
-## 放行
-############
-##360扫地机
-##360摄像机
-##360防骚扰大师
-##Faceu激萌
-##Flyme 游戏下载
-##OPPO商店登陆
-##QQ音乐
-##个推
-##中国移动
-##乐播投屏
-##今日头条
-##今日头条极速版
-##今日词条
-##公共CDN
-##剪映
-##原神
-##咪咕视频
-##囧次元
-##图床
-##基于 https://github.com/n0wa11/gfw_whitelist/blob/master/whitelist.pac 整理
-##头条PRO
-##夸克
-##夸克网盘
-##夸克网盘扫码登陆
-##夸克首页
-##小红书
-##巴哈姆特動畫瘋
-##当鸟动漫
-##影视仓小雅误杀
-##微信
-##微信支付
-##快影
-##快手
-##快手极速版
-##快看视频
-##懂车帝
-##抖音
-##拼多多
-##有柿
-##樱花动漫
-##浅笑分享
-##淘宝
-##淘小说
-##火山引擎
-##火山翻译
-##瑞幸
-##番茄小说
-##百度云盘
-##百度搜索
-##百度输入法
-##皮皮虾
-##网易严选
-##网易企业邮箱
-##网易有道词典
-##网易邮箱大师
-##美团领券小程序
-##菜鸟裹裹
-##菠菜
-##蓝奏
-##虎牙直播
-##讯飞
-##谷歌广告
-##豆包
-##赏帮赚
-##酷安
-##酷我音乐
-##钉钉
-##闲鱼
-##阿里云
-##风行视频
-##飞猪
-#10086推送
-#12306推送
-#123网盘app
-#1688网页版图片
-#2585
-#360下载安装
-#360升级
-#360坦克世界
-#360搜图
-#360清理大师
-#360网站卫士
-#360翻译
-#3dm
-#4399小游戏
-#555影视
-#58258
-#@@||appdownload.alicdn.com^$important
-#@@||update.miui.com^$important
-#Adguard DNS
-#A站点赞
-#Bitly URL Shortener
-#Blogger
-#B直播
-#B站
-#B站APP关注列表
-#CDN联盟
-#DCloud社区
-#EDGE浏览器网页翻译
-#FlowUs
-#ICP/IP地址/域名信息备案管理系统
-#IP 地址查询
-#MIUI 天气预报
-#MIUI 流量中心
-#MIUI垃圾清理
-#MIUI手机管家
-#MIUI浏览器
-#MIUI浏览器关键词联想
-#MIUI黄页
-#OPPO 应用商店 主题 开屏广告
-#OPPO应用配置
-#OPPO开放平台
-#OPPO账号相关
-#QQ互动标识图
-#QQ头像
-#QQ安全中心
-#QQ小世界图片
-#QQ小程序
-#QQ微信头像
-#QQ微信小(程序)游戏
-#QQ收藏
-#QQ浏览器图片加载
-#QQ浏览器插件误杀
-#QQ直播
-#QQ相关
-#QQ空间精选照片
-#QQ群在线文档
-#QQ跳转
-#QQ邮箱
-#QQ钱包
-#QQ音乐的歌曲加载
-#UC浏览器
-#UC浏览器网盘
-#Webluker
-#X5内核文档插件下载
-#YouTube
-#adguard相关
-#adobe
-#afternic
-#alexa cn 500
-#appcenter
-#bilibili游戏密码
-#bilibili漫画
-#bing
-#bing相关
-#bluecatnetworks社区
-#booking
-#b站一些功能
-#cdn加速
-#cn域名
-#custom-list
-#discord登录新地点验证
-#dropbox
-#ecosia
-#emby服务器
-#github相关列表下载
-#gp助手
-#ihipop
-#ios app付费解锁
-#ios上的pixiv
-#ios定位相关
-#ios毒奶
-#ios系统更新
-#ios酷安,禁用后无法回复
-#ip138
-#msn
-#mytvsuper
-#nextdns
-#oppo相关
-#oschina论坛
-#pixiv
-#pornhub
-#qq小程序手机参数汇图片
-#qq收藏
-#qq登录授权接口
-#qq的一些资源图片加载
-#qq空间图片
-#qq空间表情图片
-#qq群公告小程序
-#qq音乐ai音色
-#qq音乐一些头像
-#qq频道一些图片
-#quora
-#skype
-#soul相关
-#soul签到
-#teams
-#telegram
-#tiktok相关
-#uc夸克浏览器小说相关
-#uc夸克相关
-#uc推送
-#uc首页新闻图片短视频
-#uc验证码登录
-#vivo推送和火狐推送
-#vivo相关
-#xream
-#yqcvip脚本
-#一个去广告列表下载
-#一个图床
-#一个测试去广告网站
-#一个视频资源
-#一些QQ头像
-#一些cdn加速
-#一些应用短信登陆拼图验证
-#一些应用调用的高德api
-#一些推送
-#一些短链接
-#一些高清影视下载站点
-#一号店优惠券
-#一点资讯
-#七牛
-#七猫小说
-#三星应用商店
-#三星手机商店
-#三星推送
-#东方财富网相关
-#两个漫画
-#个人所得税app安全验证
-#中国电信app消息
-#中国移动
-#中国联通
-#丰巢
-#丰巢app图片
-#主题商店
-#习讯云
-#书旗听书
-#书旗小说评论
-#交易猫
-#交管12123
-#京东
-#京东优惠券
-#京东会员权益中心
-#京东图床
-#京东图片
-#京东推送
-#京东跳转
-#什么值得买浏览记录
-#今日头条
-#今日头条pro
-#今日诗词
-#代理游戏
-#优酷app
-#优酷app 兑换vip
-#优酷图片加载
-#优酷消息推送
-#低端影视
-#低端影视图床
-#使命召唤登录
-#俩个搜索漫画网站
-#免费公共 DNS 服务器大全
-#其他腾讯系
-#凤凰新闻图
-#剑桥词典
-#华为相关
-#华风爱科气象
-#又拍云
-#反向DNS查找
-#同兴万点CDN
-#同程旅行
-#咪咕图片
-#咪咕推送
-#咪咕推送相关
-#咪咕爱看视频
-#咪咕视频
-#咪咕视频接口
-#哔哩哔哩
-#唯品会APP
-#喜番短剧
-#喜马拉雅
-#喜马拉雅音频下载
-#喵酷扫描登录
-#囧次元
-#土豆视频
-#在线工具
-#地图坐标接口
-#墨墨背单词
-#墨迹天气
-#大众养生网
-#大众点评推送
-#大公报
-#大圣净化
-#大师兄
-#天下手游
-#天气
-#天猫app
-#天翼云登陆
-#头像
-#头条
-#头条pro
-#头条必备
-#头条授权登陆
-#头条登录
-#夸克
-#夸克/神马
-#夸克图床
-#夸克手机号验证码登录
-#夸克浏览器下载插件
-#夸克热榜
-#学习通
-#安卓lsposed
-#小哥工作台
-#小米一些图片
-#小米主题商店
-#小米主题设计师注册
-#小米云备份
-#小米云服务
-#小米商城商品服务介绍
-#小米商店
-#小米垃圾清理库更新
-#小米天气相关
-#小米应用商店图片
-#小米推送服务
-#小米搜狗输入法翻译功能
-#小米文件下载
-#小米浏览器
-#小米浏览器搜索推荐
-#小米游戏
-#小米相关
-#小米矫正流量，
-#小米系统升级
-#小米视频
-#小米路由器测试
-#小米部件
-#小米隐私收集
-#小米预警中心-地震预警
-#小红书一些推送域名
-#小红书分享链接
-#山姆
-#应用商店
-#应用宝
-#度小满
-#度盘一些图片
-#微信公众号视频
-#微信公众号视频号
-#微信共享地图加载
-#微信小程序,城市通
-#微信帮助与反馈
-#微信广告政策
-#微信爱奇艺
-#微信相关↑
-#微信相关↓
-#微信视频号图片
-#微信输入法
-#微博
-#微博一些推送域名
-#微博历史浏览
-#微博相关
-#微软cdn
-#微软相关
-#必应
-#快手图标
-#快手头像
-#快手相关
-#快手评论图片
-#快手送礼物
-#快牙
-#快网
-#感谢*(https://github.com/niani2)反馈
-#懂车帝
-#懂车帝一些图片加载
-#懂车帝图片
-#我爱
-#战舰世界
-#手机应用列表上传，但是禁用后会导致应用云备份gg
-#手机搜狗输入法
-#手机淘宝网页端
-#抖音cdn加速
-#抖音一些图片加载
-#抖音个性化广告设置
-#抖音举报等一些相关功能
-#抖音信用卡
-#抖音借贷
-#抖音分享
-#抖音客服
-#抖音小程序、今日头条搜索
-#抖音极速版表情
-#抖音直播
-#抖音直播间购物车和购物车商品图片
-#抖音相关一些影视网站会用到
-#抖音短剧接口
-#抖音系图片
-#抖音系推送
-#抖音系相关
-#抖音网页版
-#抖音网页版验证图片
-#抖音聊天图片
-#抖音视频
-#抖音附近团购
-#招行信用卡申请
-#拼多多
-#探探
-#探鸽
-#推特
-#推特(第三方调用)
-#推特相关
-#搜狐
-#搜狗
-#搜狗输入法图片
-#携程相关
-#放行
-#放行一堆click
-#斗鱼
-#新浪微博
-#新浪新闻图片^
-#新浪新闻网页误杀
-#日历网
-#时间校准相关
-#智谱清言
-#有道翻译官网页翻译
-#朋友圈图片
-#木木一土dns官网
-#未知
-#极光推送
-#极弧
-#极狐
-#果酱
-#某app下载
-#某些网页的图片加载
-#欢太官网
-#欢太软件商店
-#沪江网校
-#油管缓存
-#泉州网
-#测速网站
-#淘宝
-#淘宝api
-#淘宝一些功能加载
-#淘宝授权
-#淘宝活动
-#淘宝的一个主要域名
-#淘宝的一些功能加载
-#淘宝相关
-#淘宝菜鸟裹裹
-#滴滴顺风车
-#漫画柜
-#爱(i)茅台
-#爱奇艺
-#爱奇艺vip
-#爱奇艺、腾讯视频
-#爱奇艺一个域名误杀会导致首页无法刷新
-#爱奇艺会员成长体系
-#爱奇艺会员权益
-#爱奇艺图片误杀
-#猫眼
-#王者一些图片
-#王者更新
-#王者荣耀登录
-#王者语音转文字
-#环球网
-#电脑qq链接
-#番茄小说
-#番茄小说听书
-#番茄小说短信登陆
-#番茄小说网页
-#番茄畅听图片
-#番茄畅听必放行域名
-#登陆域名
-#白山云
-#百家号图片
-#百度
-#百度云CDN
-#百度云加速
-#百度地图街景
-#百度天气图标
-#百度好看视频
-#百度安全
-#百度小程序
-#百度手机助手网页版
-#百度推送
-#百度搜索一个域名,误杀后会进入不了搜索结果
-#百度搜索结果一些图片
-#百度支付接口
-#百度文心一言和百度百科里的视频
-#百度求医问药网
-#百度百科
-#百度相关
-#百度知道头像
-#百度网盘签到图片界面
-#百度翻译接口
-#百度视频封面
-#百度贴吧签到
-#百度贴吧表情误杀
-#百度输入法图片
-#皮皮虾/字节跳动
-#皮皮虾评论区发图
-#盒子定位
-#直播吧
-#知乎一些脚本
-#知乎图片
-#知乎相关
-#短信登录验证
-#短链接
-#神马搜索
-#科利达WiFi
-#移动app登录
-#米游社
-#米游社图标
-#米社区图片
-#系统判断联网
-#索尼账号找回密码
-#红包封面公众号
-#纵横小说图
-#维基百科
-#网宿
-#网易
-#网易云api
-#网易云信
-#网易云图片加载
-#网易云邮箱大师
-#网易云音乐 音效下载
-#网易云音乐听歌统计
-#网易光遇 sky 登录
-#网易图片
-#网易年度总结
-#美团外卖
-#美团推送(大众点评)
-#美团相关
-#联通app推送
-#脚本之家
-#腾讯CDN
-#腾讯云实时音视频
-#腾讯充值
-#腾讯地图
-#腾讯手机管家
-#腾讯手游加速器
-#腾讯新闻
-#腾讯活动
-#腾讯消息推送
-#腾讯游戏
-#腾讯游戏登录相关
-#腾讯网
-#腾讯视频
-#腾讯视频一些图片加载
-#腾讯视频弹幕
-#腾讯视频搜索
-#芒果tv一些图片
-#芒果tv视频播放
-#花瓣测速
-#花生壳推送
-#苹果id cdn
-#苹果商店图片
-#苹果官网
-#苹果推送服务
-#苹果翻译
-#菜鸟
-#菜鸟包裹侠
-#葫芦侠
-#蓝汛
-#虎扑
-#衡阳新闻网
-#表情消息
-#西瓜视频图片
-#要求放行
-#视频app
-#解除小米手机私人dns无法连接
-#讯飞互联通讯
-#讯飞星火
-#讯飞相关
-#讯飞语音开发者网站
-#谷歌
-#谷歌fcm推送相关
-#谷歌相关
-#豆瓣app主域名
-#豆瓣一些图片
-#贝壳
-#财新
-#贴吧一些表情图片加载
-#贴吧通知设置
-#路由器
-#转转
-#迅雷下载
-#部分设备的小米云服务
-#部分设备的小米推送
-#酷安图片
-#酷安推送来自酷安@ck388(http://www.coolapk.com/u/1347977)
-#酷我音乐
-#酷狗vip抽年卡
-#酷狗推送
-#金铲铲之战登录
-#针对转转App
-#银河互联网网络电视
-#链家、贝壳找房验证码
-#锁屏画报正常化
-#阿里app下载
-#阿里dns
-#阿里云CDN
-#阿里云盘
-#阿里图片
-#阿里巴巴购物
-#阿里推送(未知用途)
-#阿里系登录接口
-#阿里系相关推送
-#阿里系软件下载
-#陌陌
-#陌陌推送
-#陌陌直播
-#雅虎新闻图
-#音乐适配
-#领红包封面
-#饿了么
-#饿了么小程序
-#饿了么登录
-#饿了么相关
-#高德开放平台
-#魅族^
-#魅族onemind
-#魅族天气
-#魅族推送
-#魅族相关
-#鲁大师
-[Adblock Plus 2.0]
-[SwitchyOmega Conditions]
+{"rule":"@@||*.alipay.com^$important","reason":"与现有规则冲突: @@||*.alipay.com^","existingRule":"@@||*.alipay.com^"}
+{"rule":"@@||*.micloud.xiaomi.net^$important","reason":"与现有规则冲突: @@||*.micloud.xiaomi.net^","existingRule":"@@||*.micloud.xiaomi.net^"}
+{"rule":"@@||0.client-channel.google.com^$important","reason":"与现有规则冲突: @@||0.client-channel.google.com^","existingRule":"@@||0.client-channel.google.com^"}
+{"rule":"@@||10086.cn^*/ad$~third-party","reason":"与现有规则冲突: @@||10086.cn^$generichide","existingRule":"@@||10086.cn^$generichide"}
+{"rule":"@@||17u.cn^$important","reason":"与现有规则冲突: @@||17u.cn^","existingRule":"@@||17u.cn^"}
+{"rule":"@@||1drv.com^$important","reason":"与现有规则冲突: @@||1drv.com^","existingRule":"@@||1drv.com^"}
+{"rule":"@@||2.android.pool.ntp.org^$important","reason":"与现有规则冲突: @@||2.android.pool.ntp.org^","existingRule":"@@||2.android.pool.ntp.org^"}
+{"rule":"@@||360buyimg.com^*??","reason":"与现有规则冲突: @@||360buyimg.com^$important","existingRule":"@@||360buyimg.com^$important"}
+{"rule":"@@||40017.cn^$important","reason":"与现有规则冲突: @@||40017.cn^","existingRule":"@@||40017.cn^"}
+{"rule":"@@||9now.com.au^$important","reason":"与现有规则冲突: @@||9now.com.au^$generichide","existingRule":"@@||9now.com.au^$generichide"}
+{"rule":"@@||a0.app.xiaomi.com^$important","reason":"与现有规则冲突: @@||a0.app.xiaomi.com^","existingRule":"@@||a0.app.xiaomi.com^"}
+{"rule":"@@||abema-tv.com^$stealth=3p-auth","reason":"与现有规则冲突: @@||abema-tv.com^$domain=abema.tv,stealth=3p-auth","existingRule":"@@||abema-tv.com^$domain=abema.tv,stealth=3p-auth"}
+{"rule":"@@||ac.namu.la^$image,domain=arca.live,stealth=referrer","reason":"与现有规则冲突: @@||ac.namu.la^$domain=arca.live,media,image,stealth","existingRule":"@@||ac.namu.la^$domain=arca.live,media,image,stealth"}
+{"rule":"@@||accounts.ea.com^$stealth","reason":"与现有规则冲突: @@||accounts.ea.com^$important","existingRule":"@@||accounts.ea.com^$important"}
+{"rule":"@@||accounts.google.com^$important","reason":"与现有规则冲突: @@||accounts.google.com^$generichide","existingRule":"@@||accounts.google.com^$generichide"}
+{"rule":"@@||accounts.google.com^$jsinject,generichide","reason":"与现有规则冲突: @@||accounts.google.com^$generichide","existingRule":"@@||accounts.google.com^$generichide"}
+{"rule":"@@||accounts.google.com^$popup","reason":"与现有规则冲突: @@||accounts.google.com^$generichide","existingRule":"@@||accounts.google.com^$generichide"}
+{"rule":"@@||acea.it^$jsinject","reason":"与现有规则冲突: @@||acea.it^$extension","existingRule":"@@||acea.it^$extension"}
+{"rule":"@@||acidcow.com^$generichide","reason":"与现有规则冲突: @@||acidcow.com^$csp=script-src 'self' * blob: data:","existingRule":"@@||acidcow.com^$csp=script-src 'self' * blob: data:"}
+{"rule":"@@||acs.m.taobao.com^$important","reason":"与现有规则冲突: @@||acs.m.taobao.com^","existingRule":"@@||acs.m.taobao.com^"}
+{"rule":"@@||act.vip.iqiyi.com^$important","reason":"与现有规则冲突: @@||act.vip.iqiyi.com^","existingRule":"@@||act.vip.iqiyi.com^"}
+{"rule":"@@||activity.windows.com^","reason":"与现有规则冲突: @@||*.activity.windows.com^","existingRule":"@@||*.activity.windows.com^"}
+{"rule":"@@||activity.windows.com^$important","reason":"与现有规则冲突: @@||*.activity.windows.com^","existingRule":"@@||*.activity.windows.com^"}
+{"rule":"@@||ad.crwdcntrl.net^$script,domain=rtl.nl","reason":"与现有规则冲突: @@||ad.crwdcntrl.net^$domain=ap.org","existingRule":"@@||ad.crwdcntrl.net^$domain=ap.org"}
+{"rule":"@@||adamas.ru^$jsinject,elemhide,extension","reason":"与现有规则冲突: @@||adamas.ru^$jsinject,elemhide","existingRule":"@@||adamas.ru^$jsinject,elemhide"}
+{"rule":"@@||adblockanalytics.com^|$domain=pearos.xyz","reason":"与现有规则冲突: @@||adblockanalytics.com^$xmlhttprequest,domain=chd4.com","existingRule":"@@||adblockanalytics.com^$xmlhttprequest,domain=chd4.com"}
+{"rule":"@@||adligature.com^|$xmlhttprequest,domain=work.ink","reason":"与现有规则冲突: @@||adligature.com^$domain=listeamed.net|gaystream.click","existingRule":"@@||adligature.com^$domain=listeamed.net|gaystream.click"}
+{"rule":"@@||adm.fwmrm.net^$domain=revision3.com","reason":"与现有规则冲突: @@||adm.fwmrm.net^$domain=nhl.com","existingRule":"@@||adm.fwmrm.net^$domain=nhl.com"}
+{"rule":"@@||adm.fwmrm.net^*/TremorAdRenderer.$object,domain=go.com","reason":"与现有规则冲突: @@||adm.fwmrm.net^$domain=nhl.com","existingRule":"@@||adm.fwmrm.net^$domain=nhl.com"}
+{"rule":"@@||adm.fwmrm.net^*/videoadrenderer.$object,domain=cnbc.com|go.com|nbc.com|nbcnews.com","reason":"与现有规则冲突: @@||adm.fwmrm.net^$domain=nhl.com","existingRule":"@@||adm.fwmrm.net^$domain=nhl.com"}
+{"rule":"@@||admin.mailchimp.com^$extension","reason":"与现有规则冲突: @@||admin.mailchimp.com^","existingRule":"@@||admin.mailchimp.com^"}
+{"rule":"@@||adnews.me^$generichide","reason":"与现有规则冲突: @@||adnews.me^$domain=adnews.me","existingRule":"@@||adnews.me^$domain=adnews.me"}
+{"rule":"@@||adobedtm.com^*-libraryCode_source.min.js$domain=doda.jp","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*-source.min.js$script,domain=53.com|aarp.org|ally.com|americanexpress.com|as.com|atresplayer.com|automobiles.honda.com|backcountry.com|bbva.com.ar|bbvacib.com|bbvauk.com|bose.ae|bose.at|bose.ca|bose.ch|bose.cl|bose.co|bose.co.jp|bose.co.nz|bose.co.uk|bose.com|bose.com.au|bose.de|bose.dk|bose.es|bose.fi|bose.fr|bose.hk|bose.hu|bose.ie|bose.it|bose.lu|bose.mx|bose.nl|bose.no|bose.pe|bose.pl|bose.se|boseapac.com|bosebelgium.be|boselatam.com|bt.com|cadenaser.com|churchofjesuschrist.org|cibc.com|crave.ca|currys.co.uk|deutsche-bank.de|dollargeneral.com|etihad.com|fedex.com|guitarcenter.com|healthsafe-id.com|healthy.kaiserpermanente.org|helvetia.com|hgtv.com|hilton.com|homedepot.ca|ihg.com|imsa.com|ing.com.au|ingrammicro.com|kroger.com|lenovo.com|manager-magazin.de|marriott.com|mtvuutiset.fi|mybell.bell.ca|natwest.com|nbarizona.com|news.sky.com|personal.natwest.com|plasticsnews.com|pnc.com|poweredbycovermore.com|ralphlauren.com|samsung.com|sephora.com|snsbank.nl|ssrn.com|subway.com|tatacliq.com|telegraph.co.uk|telus.com|verizon.com|virginplus.ca|walgreens.com|xfinity.com","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*/AppMeasurement.min.js$script,domain=sky.it","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*/launch-$script,xmlhttprequest","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*/mbox-contents-$script,domain=absa.co.za|ally.com|americanexpress.com|as.com|backcountry.com|ceair.com|conad.it|costco.com|dhl.de|fcbarcelona.cat|fcbarcelona.cn|fcbarcelona.com|fcbarcelona.es|fcbarcelona.fr|fcbarcelona.jp|firststatesuper.com.au|hgtv.com|lenovo.com|lowes.com|nfl.com|oprah.com|pnc.com|shoppersdrugmart.ca|sony.jp|tatacliq.com|usanetwork.com|vanityfair.com|wired.com","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*/s-code-$script","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*/satellite-$script","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*/satelliteLib-$script,domain=absa.co.za|ally.com|americanexpress.com|as.com|auspost.com.au|backcountry.com|bmw.com.au|canadapost-postescanada.ca|ceair.com|collegeboard.org|conad.it|costco.com|crackle.com|crackle.com.ar|crackle.com.br|crackle.com.ec|crackle.com.mx|crackle.com.pe|crackle.com.py|crave.ca|crimewatchdaily.com|dhl.de|directline.com|elgiganten.se|elkjop.no|eonline.com|fcbarcelona.cat|fcbarcelona.cn|fcbarcelona.com|fcbarcelona.es|fcbarcelona.fr|fcbarcelona.jp|firststatesuper.com.au|gigantti.fi|godigit.com|hellobank.fr|hgtv.com|hrw.com|ilsole24ore.com|jeep.com|laredoute.be|laredoute.ch|laredoute.co.uk|laredoute.com|laredoute.es|laredoute.fr|laredoute.it|laredoute.pl|laredoute.pt|laredoute.ru|lenovo.com|lowes.com|malaysiaairlines.com|mastercard.us|mathworks.com|monoprice.com|myaetnasupplemental.com|nbcnews.com|nfl.com|nflgamepass.com|nofrills.ca|nrj.fr|oprah.com|oracle.com|pnc.com|poweredbycovermore.com|radiko.jp|realtor.com|redbull.tv|repco.co.nz|sbb.ch|searspartsdirect.com|shoppersdrugmart.ca|smooth.com.au|sony.jp|stuff.co.nz|subaru.com|support.nec-lavie.jp|tatacliq.com|telegraph.co.uk|timewarnercable.com|tou.tv|usanetwork.com|vanityfair.com|vtr.com|wayin.com|wired.com","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*/satelliteLib-$script,domain=samsungmembers.cn","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobedtm.com^*_source.min.js$domain=ally.com|americanexpress.com|as.com|backcountry.com|crave.ca|disneyplus.disney.co.jp|hilton.com|hl.co.uk|homedepot.ca|kroger.com|mora.jp|nbarizona.com|pnc.com|tatacliq.com|telus.com","reason":"与现有规则冲突: @@||adobedtm.com^$script,domain=sonystyle.com.cn","existingRule":"@@||adobedtm.com^$script,domain=sonystyle.com.cn"}
+{"rule":"@@||adobetag.com^*/amc.js$script","reason":"与现有规则冲突: @@||adobetag.com^$domain=priceline.com.au","existingRule":"@@||adobetag.com^$domain=priceline.com.au"}
+{"rule":"@@||adobetag.com^*/sitecatalyst.js$domain=hbf.com.au|tv.com","reason":"与现有规则冲突: @@||adobetag.com^$domain=priceline.com.au","existingRule":"@@||adobetag.com^$domain=priceline.com.au"}
+{"rule":"@@||adobetag.com^*/sitecatalystnew.js$domain=playstation.com","reason":"与现有规则冲突: @@||adobetag.com^$domain=priceline.com.au","existingRule":"@@||adobetag.com^$domain=priceline.com.au"}
+{"rule":"@@||adobetag.com^*s_code.js$domain=fnac.com","reason":"与现有规则冲突: @@||adobetag.com^$domain=priceline.com.au","existingRule":"@@||adobetag.com^$domain=priceline.com.au"}
+{"rule":"@@||ads-api.twitter.com^$domain=camcam.cc|euskalnews.tv|studybullet.com|e-kitapstore.com|studybullet.com|zapcourses.com|eventiavversinews.it|sysguides.com|branditechture.agency|cizgifilmizle.info|kawaguchimaeda.com|coursesdaddy.com|maos4alaw.online","reason":"与现有规则冲突: @@||ads-api.twitter.com^$domain=ads.twitter.com|analytics.twitter.com","existingRule":"@@||ads-api.twitter.com^$domain=ads.twitter.com|analytics.twitter.com"}
+{"rule":"@@||ads-api.twitter.com^$domain=eurekaddl.skin","reason":"与现有规则冲突: @@||ads-api.twitter.com^$domain=ads.twitter.com|analytics.twitter.com","existingRule":"@@||ads-api.twitter.com^$domain=ads.twitter.com|analytics.twitter.com"}
+{"rule":"@@||ads.google.com^$domain=ads.google.com","reason":"与现有规则冲突: @@||ads.google.com^$domain=accounts.google.com","existingRule":"@@||ads.google.com^$domain=accounts.google.com"}
+{"rule":"@@||ads.google.com^$domain=ads.google.com|analytics.google.com","reason":"与现有规则冲突: @@||ads.google.com^$domain=accounts.google.com","existingRule":"@@||ads.google.com^$domain=accounts.google.com"}
+{"rule":"@@||ads.google.com^$popup","reason":"与现有规则冲突: @@||ads.google.com^$domain=accounts.google.com","existingRule":"@@||ads.google.com^$domain=accounts.google.com"}
+{"rule":"@@||ads.microsoft.com^$popup","reason":"与现有规则冲突: @@||ads.microsoft.com^$generichide","existingRule":"@@||ads.microsoft.com^$generichide"}
+{"rule":"@@||ads.pinterest.com^$popup","reason":"与现有规则冲突: @@||ads.pinterest.com^$domain=3dpchip.com","existingRule":"@@||ads.pinterest.com^$domain=3dpchip.com"}
+{"rule":"@@||ads.privacy.qq.com^$domain=privacy.qq.com","reason":"与现有规则冲突: @@||ads.privacy.qq.com^","existingRule":"@@||ads.privacy.qq.com^"}
+{"rule":"@@||ads.reddit.com^$domain=myqqjd.com","reason":"与现有规则冲突: @@||ads.reddit.com^$domain=ads.reddit.com","existingRule":"@@||ads.reddit.com^$domain=ads.reddit.com"}
+{"rule":"@@||ads.tiktok.com^$popup","reason":"与现有规则冲突: @@||ads.tiktok.com^$generichide","existingRule":"@@||ads.tiktok.com^$generichide"}
+{"rule":"@@||ads.tiktok.com^$~third-party","reason":"与现有规则冲突: @@||ads.tiktok.com^$generichide","existingRule":"@@||ads.tiktok.com^$generichide"}
+{"rule":"@@||ads.twitter.com^$popup","reason":"与现有规则冲突: @@||ads.twitter.com^$domain=ads.twitter.com|analytics.twitter.com","existingRule":"@@||ads.twitter.com^$domain=ads.twitter.com|analytics.twitter.com"}
+{"rule":"@@||aegis.qq.com^$important","reason":"与现有规则冲突: @@||aegis.qq.com^","existingRule":"@@||aegis.qq.com^"}
+{"rule":"@@||aeventlog.beacon.qq.com^$important","reason":"与现有规则冲突: @@||aeventlog.beacon.qq.com^","existingRule":"@@||aeventlog.beacon.qq.com^"}
+{"rule":"@@||ajax.aspnetcdn.com^$important","reason":"与现有规则冲突: @@||ajax.aspnetcdn.com^","existingRule":"@@||ajax.aspnetcdn.com^"}
+{"rule":"@@||ajax.googleapis.com^$script,domain=rule34hentai.net","reason":"与现有规则冲突: @@||ajax.googleapis.com^$script,domain=imgbox.com","existingRule":"@@||ajax.googleapis.com^$script,domain=imgbox.com"}
+{"rule":"@@||ajax.googleapis.com^$script,domain=up-4ever.net","reason":"与现有规则冲突: @@||ajax.googleapis.com^$script,domain=imgbox.com","existingRule":"@@||ajax.googleapis.com^$script,domain=imgbox.com"}
+{"rule":"@@||aka.ms^$important","reason":"与现有规则冲突: @@||aka.ms^","existingRule":"@@||aka.ms^"}
+{"rule":"@@||akamai.net^*/omniture.jsp$script,domain=walmart.com","reason":"与现有规则冲突: @@||akamai.net^$important","existingRule":"@@||akamai.net^$important"}
+{"rule":"@@||akamaihd.net^$important","reason":"与现有规则冲突: @@||akamaihd.net^","existingRule":"@@||akamaihd.net^"}
+{"rule":"@@||akamaitechnologies.com^$important","reason":"与现有规则冲突: @@||akamaitechnologies.com^","existingRule":"@@||akamaitechnologies.com^"}
+{"rule":"@@||akamaized.net^$important","reason":"与现有规则冲突: @@||akamaized.net^","existingRule":"@@||akamaized.net^"}
+{"rule":"@@||ali.static.yximgs.com^$important","reason":"与现有规则冲突: @@||ali.static.yximgs.com^","existingRule":"@@||ali.static.yximgs.com^"}
+{"rule":"@@||alicdn.com^$stealth,domain=developer.aliyun.com","reason":"与现有规则冲突: @@||alicdn.com^$important","existingRule":"@@||alicdn.com^$important"}
+{"rule":"@@||alicdn.com^*/click_track.js","reason":"与现有规则冲突: @@||alicdn.com^$important","existingRule":"@@||alicdn.com^$important"}
+{"rule":"@@||alicdn.com^*/log.js,","reason":"与现有规则冲突: @@||alicdn.com^$important","existingRule":"@@||alicdn.com^$important"}
+{"rule":"@@||alicdn.com^*/tanxssp.js$domain=dlkoo.cc","reason":"与现有规则冲突: @@||alicdn.com^$important","existingRule":"@@||alicdn.com^$important"}
+{"rule":"@@||alicdn.com^*/tanxssp.js$domain=dlkoo.com","reason":"与现有规则冲突: @@||alicdn.com^$important","existingRule":"@@||alicdn.com^$important"}
+{"rule":"@@||alicdn.com^*yksdk/*sdk.js$script,domain=youku.com","reason":"与现有规则冲突: @@||alicdn.com^$important","existingRule":"@@||alicdn.com^$important"}
+{"rule":"@@||alimama.com^$domain=tanx.com","reason":"与现有规则冲突: @@||alimama.com^","existingRule":"@@||alimama.com^"}
+{"rule":"@@||amazon.com^$important","reason":"与现有规则冲突: @@||amazon.com^","existingRule":"@@||amazon.com^"}
+{"rule":"@@||amazonaws.com^$important","reason":"与现有规则冲突: @@||amazonaws.com^","existingRule":"@@||amazonaws.com^"}
+{"rule":"@@||amazonaws.com^$stealth,domain=console.aws.amazon.com","reason":"与现有规则冲突: @@||amazonaws.com^","existingRule":"@@||amazonaws.com^"}
+{"rule":"@@||amzn.com^$important","reason":"与现有规则冲突: @@||amzn.com^","existingRule":"@@||amzn.com^"}
+{"rule":"@@||amzn.to^$important","reason":"与现有规则冲突: @@||amzn.to^","existingRule":"@@||amzn.to^"}
+{"rule":"@@||android.clients.google.com^$important","reason":"与现有规则冲突: @@||android.clients.google.com^","existingRule":"@@||android.clients.google.com^"}
+{"rule":"@@||ap6.ssl.msdk.qq.com^$important","reason":"与现有规则冲突: @@||ap6.ssl.msdk.qq.com^","existingRule":"@@||ap6.ssl.msdk.qq.com^"}
+{"rule":"@@||ap6.ssl.msdk.qq.com^$important,app=com.tencent.tmgp.sgame","reason":"与现有规则冲突: @@||ap6.ssl.msdk.qq.com^","existingRule":"@@||ap6.ssl.msdk.qq.com^"}
+{"rule":"@@||api-global.netflix.com^$important","reason":"与现有规则冲突: @@||api-global.netflix.com^","existingRule":"@@||api-global.netflix.com^"}
+{"rule":"@@||api.ipify.org^$important","reason":"与现有规则冲突: @@||api.ipify.org^","existingRule":"@@||api.ipify.org^"}
+{"rule":"@@||api.kuaishouzt.com^$important","reason":"与现有规则冲突: @@||api.kuaishouzt.com^","existingRule":"@@||api.kuaishouzt.com^"}
+{"rule":"@@||api.lab.amplitude.com^$domain=watch.outsideonline.com","reason":"与现有规则冲突: @@||api.lab.amplitude.com^","existingRule":"@@||api.lab.amplitude.com^"}
+{"rule":"@@||api.mapbox.com^$stealth,domain=gpx.studio","reason":"与现有规则冲突: @@||api.mapbox.com^$important","existingRule":"@@||api.mapbox.com^$important"}
+{"rule":"@@||api.mapbox.com^$stealth,domain=kamsnim.cz","reason":"与现有规则冲突: @@||api.mapbox.com^$important","existingRule":"@@||api.mapbox.com^$important"}
+{"rule":"@@||api.mapbox.com^$stealth,domain=maps.me","reason":"与现有规则冲突: @@||api.mapbox.com^$important","existingRule":"@@||api.mapbox.com^$important"}
+{"rule":"@@||api.mapbox.com^$stealth,domain=padmapper.com","reason":"与现有规则冲突: @@||api.mapbox.com^$important","existingRule":"@@||api.mapbox.com^$important"}
+{"rule":"@@||api.mapbox.com^$stealth,domain=planet.com","reason":"与现有规则冲突: @@||api.mapbox.com^$important","existingRule":"@@||api.mapbox.com^$important"}
+{"rule":"@@||api.mapbox.com^$stealth,domain=tunein.com","reason":"与现有规则冲突: @@||api.mapbox.com^$important","existingRule":"@@||api.mapbox.com^$important"}
+{"rule":"@@||api.mapbox.com^$xmlhttprequest,stealth,domain=weather.com","reason":"与现有规则冲突: @@||api.mapbox.com^$important","existingRule":"@@||api.mapbox.com^$important"}
+{"rule":"@@||api.miui.security.xiaomi.com^$important","reason":"与现有规则冲突: @@||api.miui.security.xiaomi.com^","existingRule":"@@||api.miui.security.xiaomi.com^"}
+{"rule":"@@||api.miwifi.com^$important","reason":"与现有规则冲突: @@||api.miwifi.com^","existingRule":"@@||api.miwifi.com^"}
+{"rule":"@@||api.onedrive.com^$stealth","reason":"与现有规则冲突: @@||api.onedrive.com^$important","existingRule":"@@||api.onedrive.com^$important"}
+{"rule":"@@||api.prod.bunnings.com.au^$stealth","reason":"与现有规则冲突: @@||api.prod.bunnings.com.au^$important","existingRule":"@@||api.prod.bunnings.com.au^$important"}
+{"rule":"@@||api.rlje.net^$important","reason":"与现有规则冲突: @@||api.rlje.net^","existingRule":"@@||api.rlje.net^"}
+{"rule":"@@||api.sec.miui.com^$important","reason":"与现有规则冲突: @@||api.sec.miui.com^","existingRule":"@@||api.sec.miui.com^"}
+{"rule":"@@||app-api.ted.com^$important","reason":"与现有规则冲突: @@||app-api.ted.com^","existingRule":"@@||app-api.ted.com^"}
+{"rule":"@@||app-measurement.com^$important","reason":"与现有规则冲突: @@||app-measurement.com^","existingRule":"@@||app-measurement.com^"}
+{"rule":"@@||app.home.360.cn^$important","reason":"与现有规则冲突: @@||app.home.360.cn^","existingRule":"@@||app.home.360.cn^"}
+{"rule":"@@||app.plex.tv^$extension","reason":"与现有规则冲突: @@||app.plex.tv^","existingRule":"@@||app.plex.tv^"}
+{"rule":"@@||app.plex.tv^$important","reason":"与现有规则冲突: @@||app.plex.tv^","existingRule":"@@||app.plex.tv^"}
+{"rule":"@@||appboot.netflix.com^$important","reason":"与现有规则冲突: @@||appboot.netflix.com^","existingRule":"@@||appboot.netflix.com^"}
+{"rule":"@@||appldnld.apple.com^$important","reason":"与现有规则冲突: @@||appldnld.apple.com^","existingRule":"@@||appldnld.apple.com^"}
+{"rule":"@@||apple.com^$generichide","reason":"与现有规则冲突: @@||apple.com^$domain=apple.com,stealth=referrer","existingRule":"@@||apple.com^$domain=apple.com,stealth=referrer"}
+{"rule":"@@||apple.com^$important","reason":"与现有规则冲突: @@||apple.com^$domain=apple.com,stealth=referrer","existingRule":"@@||apple.com^$domain=apple.com,stealth=referrer"}
+{"rule":"@@||appleid.apple.com^$important","reason":"与现有规则冲突: @@||appleid.apple.com^","existingRule":"@@||appleid.apple.com^"}
+{"rule":"@@||appleid.apple.com^$stealth=referrer","reason":"与现有规则冲突: @@||appleid.apple.com^","existingRule":"@@||appleid.apple.com^"}
+{"rule":"@@||apps.skype.com^$important","reason":"与现有规则冲突: @@||apps.skype.com^","existingRule":"@@||apps.skype.com^"}
+{"rule":"@@||apresolve.spotify.com^$important","reason":"与现有规则冲突: @@||apresolve.spotify.com^","existingRule":"@@||apresolve.spotify.com^"}
+{"rule":"@@||apt.sonarr.tv^$important","reason":"与现有规则冲突: @@||apt.sonarr.tv^","existingRule":"@@||apt.sonarr.tv^"}
+{"rule":"@@||arc.msn.com^$important","reason":"与现有规则冲突: @@||arc.msn.com^","existingRule":"@@||arc.msn.com^"}
+{"rule":"@@||aspnetcdn.com^$important","reason":"与现有规则冲突: @@||aspnetcdn.com^","existingRule":"@@||aspnetcdn.com^"}
+{"rule":"@@||asset*.coupangcdn.com^$stealth=referrer,domain=coupang.com","reason":"与现有规则冲突: @@||asset*.coupangcdn.com^$stealth","existingRule":"@@||asset*.coupangcdn.com^$stealth"}
+{"rule":"@@||assets.ctfassets.net^$media,domain=ads.spotify.com","reason":"与现有规则冲突: @@||assets.ctfassets.net^$important","existingRule":"@@||assets.ctfassets.net^$important"}
+{"rule":"@@||atozmath.com^$generichide","reason":"与现有规则冲突: @@||atozmath.com^$cookie","existingRule":"@@||atozmath.com^$cookie"}
+{"rule":"@@||attestation.xboxlive.com^$important","reason":"与现有规则冲突: @@||attestation.xboxlive.com^","existingRule":"@@||attestation.xboxlive.com^"}
+{"rule":"@@||audio-ake.spotify.com.edgesuite.net^$important","reason":"与现有规则冲突: @@||audio-ake.spotify.com.edgesuite.net^","existingRule":"@@||audio-ake.spotify.com.edgesuite.net^"}
+{"rule":"@@||auth.gfx.ms^$important","reason":"与现有规则冲突: @@||auth.gfx.ms^$document","existingRule":"@@||auth.gfx.ms^$document"}
+{"rule":"@@||aweme.snssdk.com^$important","reason":"与现有规则冲突: @@||aweme.snssdk.com^","existingRule":"@@||aweme.snssdk.com^"}
+{"rule":"@@||ax.phobos.apple.com.edgesuite.net^$important","reason":"与现有规则冲突: @@||ax.phobos.apple.com.edgesuite.net^","existingRule":"@@||ax.phobos.apple.com.edgesuite.net^"}
+{"rule":"@@||b24-*.bitrix24.ru^$xmlhttprequest,elemhide,jsinject,extension","reason":"与现有规则冲突: @@||b24-*.bitrix24.ru^$stealth","existingRule":"@@||b24-*.bitrix24.ru^$stealth"}
+{"rule":"@@||bam.nr-data.net^$script,domain=play.spotify.com","reason":"与现有规则冲突: @@||bam.nr-data.net^$script,domain=kapwing.com","existingRule":"@@||bam.nr-data.net^$script,domain=kapwing.com"}
+{"rule":"@@||bam.nr-data.net^$xmlhttprequest,domain=abema.tv","reason":"与现有规则冲突: @@||bam.nr-data.net^$script,domain=kapwing.com","existingRule":"@@||bam.nr-data.net^$script,domain=kapwing.com"}
+{"rule":"@@||bamgrid.com^$stealth,domain=disneyplus.com","reason":"与现有规则冲突: @@||bamgrid.com^$important","existingRule":"@@||bamgrid.com^$important"}
+{"rule":"@@||bamgrid.com^$stealth=3p-auth|useragent","reason":"与现有规则冲突: @@||bamgrid.com^$important","existingRule":"@@||bamgrid.com^$important"}
+{"rule":"@@||bankofamerica.com^*?adx=$~third-party,xmlhttprequest","reason":"与现有规则冲突: @@||bankofamerica.com^*?adx=","existingRule":"@@||bankofamerica.com^*?adx="}
+{"rule":"@@||bdstatic.com^$domain=doupocangqiong1.com","reason":"与现有规则冲突: @@||bdstatic.com^$domain=17k.com","existingRule":"@@||bdstatic.com^$domain=17k.com"}
+{"rule":"@@||bdstatic.com^$domain=dq.tieba.com","reason":"与现有规则冲突: @@||bdstatic.com^$domain=17k.com","existingRule":"@@||bdstatic.com^$domain=17k.com"}
+{"rule":"@@||beinconnect.com.tr^$stealth=donottrack|webrtc","reason":"与现有规则冲突: @@||beinconnect.com.tr^$extension=\"AdGuard Popup Blocker\"","existingRule":"@@||beinconnect.com.tr^$extension=\"AdGuard Popup Blocker\""}
+{"rule":"@@||bin.bnbstatic.com^$stealth,domain=binance.com","reason":"与现有规则冲突: @@||bin.bnbstatic.com^$important","existingRule":"@@||bin.bnbstatic.com^$important"}
+{"rule":"@@||bing.com^$important","reason":"与现有规则冲突: @@||bing.com^$generichide","existingRule":"@@||bing.com^$generichide"}
+{"rule":"@@||bing.com^$stealth=ip","reason":"与现有规则冲突: @@||bing.com^$generichide","existingRule":"@@||bing.com^$generichide"}
+{"rule":"@@||bitbucket.org^$generichide","reason":"与现有规则冲突: @@||bitbucket.org^","existingRule":"@@||bitbucket.org^"}
+{"rule":"@@||blob.core.windows.net^","reason":"与现有规则冲突: @@||*.blob.core.windows.net^","existingRule":"@@||*.blob.core.windows.net^"}
+{"rule":"@@||blob.core.windows.net^$important","reason":"与现有规则冲突: @@||*.blob.core.windows.net^","existingRule":"@@||*.blob.core.windows.net^"}
+{"rule":"@@||boxer.baidu.com^$important","reason":"与现有规则冲突: @@||boxer.baidu.com^","existingRule":"@@||boxer.baidu.com^"}
+{"rule":"@@||brightcove.net^$important","reason":"与现有规则冲突: @@||brightcove.net^","existingRule":"@@||brightcove.net^"}
+{"rule":"@@||bufferapp.com^$important","reason":"与现有规则冲突: @@||bufferapp.com^","existingRule":"@@||bufferapp.com^"}
+{"rule":"@@||c.pc.qq.com^$important","reason":"与现有规则冲突: @@||c.pc.qq.com^","existingRule":"@@||c.pc.qq.com^"}
+{"rule":"@@||c.s-microsoft.com^$important","reason":"与现有规则冲突: @@||c.s-microsoft.com^","existingRule":"@@||c.s-microsoft.com^"}
+{"rule":"@@||c.y.qq.com^$important","reason":"与现有规则冲突: @@||c.y.qq.com^","existingRule":"@@||c.y.qq.com^"}
+{"rule":"@@||captcha-delivery.com^$subdocument,extension","reason":"与现有规则冲突: @@||captcha-delivery.com^$stealth","existingRule":"@@||captcha-delivery.com^$stealth"}
+{"rule":"@@||captcha.qq.com^*?*=*=*=$subdocument","reason":"与现有规则冲突: @@||captcha.qq.com^*&refer=http","existingRule":"@@||captcha.qq.com^*&refer=http"}
+{"rule":"@@||captive.apple.com^$important","reason":"与现有规则冲突: @@||captive.apple.com^","existingRule":"@@||captive.apple.com^"}
+{"rule":"@@||cdn.bootcdn.net^$script,domain=38kanshu.net|tianz.la","reason":"与现有规则冲突: @@||cdn.bootcdn.net^","existingRule":"@@||cdn.bootcdn.net^"}
+{"rule":"@@||cdn.cloudflare.net^$important","reason":"与现有规则冲突: @@||cdn.cloudflare.net^","existingRule":"@@||cdn.cloudflare.net^"}
+{"rule":"@@||cdn.cloudflare.net^$stylesheet,script,xmlhttprequest,domain=cocomanga.com|cocomanga.com","reason":"与现有规则冲突: @@||cdn.cloudflare.net^","existingRule":"@@||cdn.cloudflare.net^"}
+{"rule":"@@||cdn.embedly.com^$important","reason":"与现有规则冲突: @@||cdn.embedly.com^","existingRule":"@@||cdn.embedly.com^"}
+{"rule":"@@||cdn.jsdelivr.net^$script,domain=movieffm.net","reason":"与现有规则冲突: @@||cdn.jsdelivr.net^$important","existingRule":"@@||cdn.jsdelivr.net^$important"}
+{"rule":"@@||cdn.jsdelivr.net^$script,domain=yemancomic.com","reason":"与现有规则冲突: @@||cdn.jsdelivr.net^$important","existingRule":"@@||cdn.jsdelivr.net^$important"}
+{"rule":"@@||cdn.jsdelivr.net^*/fp.min.js$script,domain=cuevana2.io","reason":"与现有规则冲突: @@||cdn.jsdelivr.net^$important","existingRule":"@@||cdn.jsdelivr.net^$important"}
+{"rule":"@@||cdn.optimizely.com^$important","reason":"与现有规则冲突: @@||cdn.optimizely.com^","existingRule":"@@||cdn.optimizely.com^"}
+{"rule":"@@||cdn.segmentify.com^$domain=mediamarkt.com.tr","reason":"与现有规则冲突: @@||cdn.segmentify.com^$domain=gratis.com","existingRule":"@@||cdn.segmentify.com^$domain=gratis.com"}
+{"rule":"@@||cdn.segmentify.com^$domain=pttavm.com","reason":"与现有规则冲突: @@||cdn.segmentify.com^$domain=gratis.com","existingRule":"@@||cdn.segmentify.com^$domain=gratis.com"}
+{"rule":"@@||cdn.segmentify.com^$script,domain=gratis.com","reason":"与现有规则冲突: @@||cdn.segmentify.com^$domain=gratis.com","existingRule":"@@||cdn.segmentify.com^$domain=gratis.com"}
+{"rule":"@@||cdn.staticfile.org^$script,domain=movieffm.net","reason":"与现有规则冲突: @@||cdn.staticfile.org^$domain=00ksw.com|147xiaoshuo.com|91zww.com|biququ.info|bxwx.live|lzbao.net|shenzu.org|tianz.la","existingRule":"@@||cdn.staticfile.org^$domain=00ksw.com|147xiaoshuo.com|91zww.com|biququ.info|bxwx.live|lzbao.net|shenzu.org|tianz.la"}
+{"rule":"@@||cdn.taboola.com^$domain=msnbc.com","reason":"与现有规则冲突: @@||cdn.taboola.com^$domain=asianetnews.com","existingRule":"@@||cdn.taboola.com^$domain=asianetnews.com"}
+{"rule":"@@||cdn.vidible.tv^$important","reason":"与现有规则冲突: @@||cdn.vidible.tv^","existingRule":"@@||cdn.vidible.tv^"}
+{"rule":"@@||cdn2.optimizely.com^$important","reason":"与现有规则冲突: @@||cdn2.optimizely.com^","existingRule":"@@||cdn2.optimizely.com^"}
+{"rule":"@@||cdn3.optimizely.com^$important","reason":"与现有规则冲突: @@||cdn3.optimizely.com^","existingRule":"@@||cdn3.optimizely.com^"}
+{"rule":"@@||cdnb.4strokemedia.com^$domain=video.gazzetta.it","reason":"与现有规则冲突: @@||cdnb.4strokemedia.com^$domain=video.corriere.it","existingRule":"@@||cdnb.4strokemedia.com^$domain=video.corriere.it"}
+{"rule":"@@||cdninstagram.com^$important","reason":"与现有规则冲突: @@||*.cdninstagram.com^$important","existingRule":"@@||*.cdninstagram.com^$important"}
+{"rule":"@@||cdnjs.cloudflare.com^$important","reason":"与现有规则冲突: @@||cdnjs.cloudflare.com^","existingRule":"@@||cdnjs.cloudflare.com^"}
+{"rule":"@@||cdpn.io^$stealth,domain=codepen.io","reason":"与现有规则冲突: @@||cdpn.io^$generichide","existingRule":"@@||cdpn.io^$generichide"}
+{"rule":"@@||cdpn.io^$subdocument,stealth","reason":"与现有规则冲突: @@||cdpn.io^$generichide","existingRule":"@@||cdpn.io^$generichide"}
+{"rule":"@@||cert.mgt.xboxlive.com^$important","reason":"与现有规则冲突: @@||cert.mgt.xboxlive.com^","existingRule":"@@||cert.mgt.xboxlive.com^"}
+{"rule":"@@||challenges.cloudflare.com^$stealth","reason":"与现有规则冲突: @@||challenges.cloudflare.com^$domain=download.megaup.net","existingRule":"@@||challenges.cloudflare.com^$domain=download.megaup.net"}
+{"rule":"@@||chinamobile.com^*/ad$~third-party","reason":"与现有规则冲突: @@||chinamobile.com^$generichide","existingRule":"@@||chinamobile.com^$generichide"}
+{"rule":"@@||click.aliyun.com^$important","reason":"与现有规则冲突: @@||click.aliyun.com^","existingRule":"@@||click.aliyun.com^"}
+{"rule":"@@||click.simba.taobao.com^$important","reason":"与现有规则冲突: @@||click.simba.taobao.com^","existingRule":"@@||click.simba.taobao.com^"}
+{"rule":"@@||client-s.gateway.messenger.live.com^$important","reason":"与现有规则冲突: @@||client-s.gateway.messenger.live.com^","existingRule":"@@||client-s.gateway.messenger.live.com^"}
+{"rule":"@@||client.wns.windows.com^$important","reason":"与现有规则冲突: @@||client.wns.windows.com^","existingRule":"@@||client.wns.windows.com^"}
+{"rule":"@@||clientconfig.passport.net^$important","reason":"与现有规则冲突: @@||clientconfig.passport.net^","existingRule":"@@||clientconfig.passport.net^"}
+{"rule":"@@||clients1.google.com^$important","reason":"与现有规则冲突: @@||clients1.google.com^","existingRule":"@@||clients1.google.com^"}
+{"rule":"@@||clients2.google.com^$important","reason":"与现有规则冲突: @@||clients2.google.com^","existingRule":"@@||clients2.google.com^"}
+{"rule":"@@||clients3.google.com^$important","reason":"与现有规则冲突: @@||clients3.google.com^","existingRule":"@@||clients3.google.com^"}
+{"rule":"@@||clients4.google.com^$important","reason":"与现有规则冲突: @@||clients4.google.com^","existingRule":"@@||clients4.google.com^"}
+{"rule":"@@||clients5.google.com^$important","reason":"与现有规则冲突: @@||clients5.google.com^","existingRule":"@@||clients5.google.com^"}
+{"rule":"@@||clients6.google.com^$important","reason":"与现有规则冲突: @@||clients6.google.com^","existingRule":"@@||clients6.google.com^"}
+{"rule":"@@||cloud.google.com^$~third-party","reason":"与现有规则冲突: @@||cloud.google.com^$generichide","existingRule":"@@||cloud.google.com^$generichide"}
+{"rule":"@@||cloudflare.com^$script,domain=rule34hentai.net","reason":"与现有规则冲突: @@||cloudflare.com^","existingRule":"@@||cloudflare.com^"}
+{"rule":"@@||cloudflare.com^$script,stylesheet,domain=canyoublockit.com","reason":"与现有规则冲突: @@||cloudflare.com^","existingRule":"@@||cloudflare.com^"}
+{"rule":"@@||cloudflare.com^*/videojs-contrib-ads.js$domain=wtk.pl","reason":"与现有规则冲突: @@||cloudflare.com^","existingRule":"@@||cloudflare.com^"}
+{"rule":"@@||cloudfront.net^$domain=postype.com,stealth,image","reason":"与现有规则冲突: @@||cloudfront.net^$domain=manga1000.com|manga1001.com","existingRule":"@@||cloudfront.net^$domain=manga1000.com|manga1001.com"}
+{"rule":"@@||cloudfront.net^$important","reason":"与现有规则冲突: @@||cloudfront.net^$domain=manga1000.com|manga1001.com","existingRule":"@@||cloudfront.net^$domain=manga1000.com|manga1001.com"}
+{"rule":"@@||cloudfront.net^$script,domain=ebaticalfel.com|fansmega.com|iedprivatedqu.com|stownrusis.com|best-links.org","reason":"与现有规则冲突: @@||cloudfront.net^$domain=manga1000.com|manga1001.com","existingRule":"@@||cloudfront.net^$domain=manga1000.com|manga1001.com"}
+{"rule":"@@||cloudfront.net^$stealth=referrer,domain=openrec.tv","reason":"与现有规则冲突: @@||cloudfront.net^$domain=manga1000.com|manga1001.com","existingRule":"@@||cloudfront.net^$domain=manga1000.com|manga1001.com"}
+{"rule":"@@||cloudfront.net^$stealth=referrer,domain=routexl.de","reason":"与现有规则冲突: @@||cloudfront.net^$domain=manga1000.com|manga1001.com","existingRule":"@@||cloudfront.net^$domain=manga1000.com|manga1001.com"}
+{"rule":"@@||cloudfront.net^*/jquery.google-analytics.js$domain=homepath.com","reason":"与现有规则冲突: @@||cloudfront.net^$domain=manga1000.com|manga1001.com","existingRule":"@@||cloudfront.net^$domain=manga1000.com|manga1001.com"}
+{"rule":"@@||cloudfront.net^*adframe.js$domain=webupd8.org","reason":"与现有规则冲突: @@||cloudfront.net^$domain=manga1000.com|manga1001.com","existingRule":"@@||cloudfront.net^$domain=manga1000.com|manga1001.com"}
+{"rule":"@@||coinmarketcap.com^$important","reason":"与现有规则冲突: @@||coinmarketcap.com^$domain=coinmarketcap.com","existingRule":"@@||coinmarketcap.com^$domain=coinmarketcap.com"}
+{"rule":"@@||compliance.microsoft.com^$important","reason":"与现有规则冲突: @@||*.compliance.microsoft.com^","existingRule":"@@||*.compliance.microsoft.com^"}
+{"rule":"@@||connect.facebook.net^$script,domain=up-4ever.net","reason":"与现有规则冲突: @@||connect.facebook.net^$important","existingRule":"@@||connect.facebook.net^$important"}
+{"rule":"@@||connect.facebook.net^*/fbevents.js$domain=elinoi.com","reason":"与现有规则冲突: @@||connect.facebook.net^$important","existingRule":"@@||connect.facebook.net^$important"}
+{"rule":"@@||connectivitycheck.gstatic.com^$important","reason":"与现有规则冲突: @@||connectivitycheck.gstatic.com^","existingRule":"@@||connectivitycheck.gstatic.com^"}
+{"rule":"@@||content.jwplatform.com^$domain=tomshardware.com","reason":"与现有规则冲突: @@||content.jwplatform.com^$domain=destructoid.com","existingRule":"@@||content.jwplatform.com^$domain=destructoid.com"}
+{"rule":"@@||continuum.dds.microsoft.com^$important","reason":"与现有规则冲突: @@||continuum.dds.microsoft.com^","existingRule":"@@||continuum.dds.microsoft.com^"}
+{"rule":"@@||cpms.spop10.ams.plex.bz^$important","reason":"与现有规则冲突: @@||cpms.spop10.ams.plex.bz^","existingRule":"@@||cpms.spop10.ams.plex.bz^"}
+{"rule":"@@||cpms35.spop10.ams.plex.bz^$important","reason":"与现有规则冲突: @@||cpms35.spop10.ams.plex.bz^","existingRule":"@@||cpms35.spop10.ams.plex.bz^"}
+{"rule":"@@||crl.identrust.com^$important","reason":"与现有规则冲突: @@||crl.identrust.com^","existingRule":"@@||crl.identrust.com^"}
+{"rule":"@@||crt.usertrust.com^$important","reason":"与现有规则冲突: @@||crt.usertrust.com^","existingRule":"@@||crt.usertrust.com^"}
+{"rule":"@@||cse.google.com^$important","reason":"与现有规则冲突: @@||cse.google.com^","existingRule":"@@||cse.google.com^"}
+{"rule":"@@||csm.cxpublic.com^$script,domain=tarzanweb.jp","reason":"与现有规则冲突: @@||csm.cxpublic.com^$script,domain=mainichi.jp","existingRule":"@@||csm.cxpublic.com^$script,domain=mainichi.jp"}
+{"rule":"@@||ctldl.windowsupdate.com^$important","reason":"与现有规则冲突: @@||ctldl.windowsupdate.com^","existingRule":"@@||ctldl.windowsupdate.com^"}
+{"rule":"@@||cws.conviva.com^$important","reason":"与现有规则冲突: @@||cws.conviva.com^","existingRule":"@@||cws.conviva.com^"}
+{"rule":"@@||cxense.com^$domain=thelocal.fr","reason":"与现有规则冲突: @@||cxense.com^$domain=ikea.com","existingRule":"@@||cxense.com^$domain=ikea.com"}
+{"rule":"@@||cz.mrezadosa.com^$domain=idos.idnes.cz","reason":"与现有规则冲突: @@||cz.mrezadosa.com^$domain=centrum.cz","existingRule":"@@||cz.mrezadosa.com^$domain=centrum.cz"}
+{"rule":"@@||cz.mrezadosa.com^$xmlhttprequest,image,domain=playzone.cz","reason":"与现有规则冲突: @@||cz.mrezadosa.com^$domain=centrum.cz","existingRule":"@@||cz.mrezadosa.com^$domain=centrum.cz"}
+{"rule":"@@||da.mmarket.com^$important","reason":"与现有规则冲突: @@||da.mmarket.com^","existingRule":"@@||da.mmarket.com^"}
+{"rule":"@@||dashboard.plex.tv^$important","reason":"与现有规则冲突: @@||dashboard.plex.tv^","existingRule":"@@||dashboard.plex.tv^"}
+{"rule":"@@||data.bilibili.com^$important","reason":"与现有规则冲突: @@||data.bilibili.com^","existingRule":"@@||data.bilibili.com^"}
+{"rule":"@@||data.mistat.xiaomi.com^$important","reason":"与现有规则冲突: @@||data.mistat.xiaomi.com^$app=com.tencent.mm","existingRule":"@@||data.mistat.xiaomi.com^$app=com.tencent.mm"}
+{"rule":"@@||datadoghq-browser-agent.com^$script,domain=hungryroot.com","reason":"与现有规则冲突: @@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|hungryroot.com|usa.experian.com","existingRule":"@@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|hungryroot.com|usa.experian.com"}
+{"rule":"@@||dataplicity.com^$important","reason":"与现有规则冲突: @@||dataplicity.com^","existingRule":"@@||dataplicity.com^"}
+{"rule":"@@||dataprajna.net^$important","reason":"与现有规则冲突: @@||dataprajna.net^","existingRule":"@@||dataprajna.net^"}
+{"rule":"@@||dc.services.visualstudio.com^$important","reason":"与现有规则冲突: @@||dc.services.visualstudio.com^","existingRule":"@@||dc.services.visualstudio.com^"}
+{"rule":"@@||ddys.pro^$important","reason":"与现有规则冲突: @@||ddys.pro^","existingRule":"@@||ddys.pro^"}
+{"rule":"@@||deadshot.io^$stealth","reason":"与现有规则冲突: @@||deadshot.io^$extension=\"AdGuard Popup Blocker\"","existingRule":"@@||deadshot.io^$extension=\"AdGuard Popup Blocker\""}
+{"rule":"@@||def-vef.xboxlive.com^$important","reason":"与现有规则冲突: @@||def-vef.xboxlive.com^","existingRule":"@@||def-vef.xboxlive.com^"}
+{"rule":"@@||delivery.vidible.tv^$important","reason":"与现有规则冲突: @@||delivery.vidible.tv^","existingRule":"@@||delivery.vidible.tv^"}
+{"rule":"@@||dev.virtualearth.net^$important","reason":"与现有规则冲突: @@||dev.virtualearth.net^","existingRule":"@@||dev.virtualearth.net^"}
+{"rule":"@@||developers.google.com^$domain=developers.google.com","reason":"与现有规则冲突: @@||developers.google.com^","existingRule":"@@||developers.google.com^"}
+{"rule":"@@||deviantart.com^$stealth=ip","reason":"与现有规则冲突: @@||deviantart.com^$elemhide","existingRule":"@@||deviantart.com^$elemhide"}
+{"rule":"@@||device-provisioning.googleapis.com^$important","reason":"与现有规则冲突: @@||device-provisioning.googleapis.com^","existingRule":"@@||device-provisioning.googleapis.com^"}
+{"rule":"@@||device.auth.xboxlive.com^$important","reason":"与现有规则冲突: @@||device.auth.xboxlive.com^","existingRule":"@@||device.auth.xboxlive.com^"}
+{"rule":"@@||disneyplus.com^$generichide,badfilter","reason":"与现有规则冲突: @@||disneyplus.com^$generichide","existingRule":"@@||disneyplus.com^$generichide"}
+{"rule":"@@||disneyplus.com^$important","reason":"与现有规则冲突: @@||disneyplus.com^$generichide","existingRule":"@@||disneyplus.com^$generichide"}
+{"rule":"@@||displaycatalog.mp.microsoft.com^$important","reason":"与现有规则冲突: @@||displaycatalog.mp.microsoft.com^","existingRule":"@@||displaycatalog.mp.microsoft.com^"}
+{"rule":"@@||disqus.com^$script,domain=wccftech.com","reason":"与现有规则冲突: @@||disqus.com^","existingRule":"@@||disqus.com^"}
+{"rule":"@@||dl.360safe.com^$important","reason":"与现有规则冲突: @@||dl.360safe.com^","existingRule":"@@||dl.360safe.com^"}
+{"rule":"@@||dl.delivery.mp.microsoft.com^","reason":"与现有规则冲突: @@||*.dl.delivery.mp.microsoft.com^$important","existingRule":"@@||*.dl.delivery.mp.microsoft.com^$important"}
+{"rule":"@@||dl.delivery.mp.microsoft.com^$important","reason":"与现有规则冲突: @@||*.dl.delivery.mp.microsoft.com^$important","existingRule":"@@||*.dl.delivery.mp.microsoft.com^$important"}
+{"rule":"@@||dl.dropbox.com^$important","reason":"与现有规则冲突: @@||dl.dropbox.com^","existingRule":"@@||dl.dropbox.com^"}
+{"rule":"@@||dl.dropboxusercontent.com^$important","reason":"与现有规则冲突: @@||dl.dropboxusercontent.com^","existingRule":"@@||dl.dropboxusercontent.com^"}
+{"rule":"@@||dl.google.com^$important","reason":"与现有规则冲突: @@||dl.google.com^","existingRule":"@@||dl.google.com^"}
+{"rule":"@@||dl.reg.163.com^$important","reason":"与现有规则冲突: @@||dl.reg.163.com^","existingRule":"@@||dl.reg.163.com^"}
+{"rule":"@@||dm.toutiao.com^$important","reason":"与现有规则冲突: @@||dm.toutiao.com^","existingRule":"@@||dm.toutiao.com^"}
+{"rule":"@@||doubleclick.net^$xmlhttprequest,domain=yyets.click","reason":"与现有规则冲突: @@||doubleclick.net^$domain=video.sport1.de","existingRule":"@@||doubleclick.net^$domain=video.sport1.de"}
+{"rule":"@@||download.sonarr.tv^$important","reason":"与现有规则冲突: @@||download.sonarr.tv^","existingRule":"@@||download.sonarr.tv^"}
+{"rule":"@@||download.windowsupdate.com^$important","reason":"与现有规则冲突: @@||download.windowsupdate.com^","existingRule":"@@||download.windowsupdate.com^"}
+{"rule":"@@||dpm.demdex.net^$app=com.appseleration.android.selfcare","reason":"与现有规则冲突: @@||dpm.demdex.net^","existingRule":"@@||dpm.demdex.net^"}
+{"rule":"@@||dpm.demdex.net^$important","reason":"与现有规则冲突: @@||dpm.demdex.net^","existingRule":"@@||dpm.demdex.net^"}
+{"rule":"@@||drift.com^$important","reason":"与现有规则冲突: @@||drift.com^","existingRule":"@@||drift.com^"}
+{"rule":"@@||driftt.com^$important","reason":"与现有规则冲突: @@||driftt.com^","existingRule":"@@||driftt.com^"}
+{"rule":"@@||dropbox.com^$generichide,badfilter","reason":"与现有规则冲突: @@||dropbox.com^$generichide","existingRule":"@@||dropbox.com^$generichide"}
+{"rule":"@@||ds2play.com^$stealth=ip","reason":"与现有规则冲突: @@||ds2play.com^$generichide","existingRule":"@@||ds2play.com^$generichide"}
+{"rule":"@@||duiba.com.cn^$important","reason":"与现有规则冲突: @@||duiba.com.cn^","existingRule":"@@||duiba.com.cn^"}
+{"rule":"@@||ebank.bsstarozreby.pl^$stealth=dpi","reason":"与现有规则冲突: @@||ebank.bsstarozreby.pl^$elemhide,jsinject,extension","existingRule":"@@||ebank.bsstarozreby.pl^$elemhide,jsinject,extension"}
+{"rule":"@@||echoes.gr^$generichide","reason":"与现有规则冲突: @@||echoes.gr^$elemhide","existingRule":"@@||echoes.gr^$elemhide"}
+{"rule":"@@||ecmb.bdimg.com^$important","reason":"与现有规则冲突: @@||ecmb.bdimg.com^","existingRule":"@@||ecmb.bdimg.com^"}
+{"rule":"@@||ecn.dev.virtualearth.net^$important","reason":"与现有规则冲突: @@||ecn.dev.virtualearth.net^","existingRule":"@@||ecn.dev.virtualearth.net^"}
+{"rule":"@@||eco.taobao.com^$important","reason":"与现有规则冲突: @@||eco.taobao.com^","existingRule":"@@||eco.taobao.com^"}
+{"rule":"@@||edge.api.brightcove.com^$important","reason":"与现有规则冲突: @@||edge.api.brightcove.com^","existingRule":"@@||edge.api.brightcove.com^"}
+{"rule":"@@||edgeservices.bing.com^$stealth","reason":"与现有规则冲突: @@||edgeservices.bing.com^$elemhide,jsinject,extension,content","existingRule":"@@||edgeservices.bing.com^$elemhide,jsinject,extension,content"}
+{"rule":"@@||edgesuite.net^*/frontend_webtrekk.js$domain=goertz.de","reason":"与现有规则冲突: @@||edgesuite.net^*/ad.css?","existingRule":"@@||edgesuite.net^*/ad.css?"}
+{"rule":"@@||eds.xboxlive.com^$important","reason":"与现有规则冲突: @@||eds.xboxlive.com^","existingRule":"@@||eds.xboxlive.com^"}
+{"rule":"@@||elconfidencial.com^*/EventTracker.js","reason":"与现有规则冲突: @@||elconfidencial.com^*/AnalyticsEvent.js","existingRule":"@@||elconfidencial.com^*/AnalyticsEvent.js"}
+{"rule":"@@||ensighten.com^*/code/$script","reason":"与现有规则冲突: @@||ensighten.com^*/Bootstrap.js$domain=americanexpress.com|ba.com|bestbuy.com|britishairways.com|capitalone.com|caranddriver.com|cart.autodesk.com|citi.com|citigold.com.sg|citizensbank.com|dell.com|fidelity.com|france24.com|hp.com|norton.com|rfi.fr|sbs.com.au|sfgate.com|staples.com|target.com|verizonwireless.com|williamhill.com|womenshealthmag.com|zales.com","existingRule":"@@||ensighten.com^*/Bootstrap.js$domain=americanexpress.com|ba.com|bestbuy.com|britishairways.com|capitalone.com|caranddriver.com|cart.autodesk.com|citi.com|citigold.com.sg|citizensbank.com|dell.com|fidelity.com|france24.com|hp.com|norton.com|rfi.fr|sbs.com.au|sfgate.com|staples.com|target.com|verizonwireless.com|williamhill.com|womenshealthmag.com|zales.com"}
+{"rule":"@@||ensighten.com^*/scode/$script,domain=norton.com","reason":"与现有规则冲突: @@||ensighten.com^*/Bootstrap.js$domain=americanexpress.com|ba.com|bestbuy.com|britishairways.com|capitalone.com|caranddriver.com|cart.autodesk.com|citi.com|citigold.com.sg|citizensbank.com|dell.com|fidelity.com|france24.com|hp.com|norton.com|rfi.fr|sbs.com.au|sfgate.com|staples.com|target.com|verizonwireless.com|williamhill.com|womenshealthmag.com|zales.com","existingRule":"@@||ensighten.com^*/Bootstrap.js$domain=americanexpress.com|ba.com|bestbuy.com|britishairways.com|capitalone.com|caranddriver.com|cart.autodesk.com|citi.com|citigold.com.sg|citizensbank.com|dell.com|fidelity.com|france24.com|hp.com|norton.com|rfi.fr|sbs.com.au|sfgate.com|staples.com|target.com|verizonwireless.com|williamhill.com|womenshealthmag.com|zales.com"}
+{"rule":"@@||ensighten.com^*/serverComponent.php?$script","reason":"与现有规则冲突: @@||ensighten.com^*/Bootstrap.js$domain=americanexpress.com|ba.com|bestbuy.com|britishairways.com|capitalone.com|caranddriver.com|cart.autodesk.com|citi.com|citigold.com.sg|citizensbank.com|dell.com|fidelity.com|france24.com|hp.com|norton.com|rfi.fr|sbs.com.au|sfgate.com|staples.com|target.com|verizonwireless.com|williamhill.com|womenshealthmag.com|zales.com","existingRule":"@@||ensighten.com^*/Bootstrap.js$domain=americanexpress.com|ba.com|bestbuy.com|britishairways.com|capitalone.com|caranddriver.com|cart.autodesk.com|citi.com|citigold.com.sg|citizensbank.com|dell.com|fidelity.com|france24.com|hp.com|norton.com|rfi.fr|sbs.com.au|sfgate.com|staples.com|target.com|verizonwireless.com|williamhill.com|womenshealthmag.com|zales.com"}
+{"rule":"@@||esprit.de^*/webtrekk_conf.js","reason":"与现有规则冲突: @@||esprit.de^*/webtrekk.js","existingRule":"@@||esprit.de^*/webtrekk.js"}
+{"rule":"@@||etl-xlmc-ssl.sandai.net^$important","reason":"与现有规则冲突: @@||etl-xlmc-ssl.sandai.net^","existingRule":"@@||etl-xlmc-ssl.sandai.net^"}
+{"rule":"@@||events.data.microsoft.com^","reason":"与现有规则冲突: @@||*.events.data.microsoft.com^","existingRule":"@@||*.events.data.microsoft.com^"}
+{"rule":"@@||events.gfe.nvidia.com^$important","reason":"与现有规则冲突: @@||events.gfe.nvidia.com^","existingRule":"@@||events.gfe.nvidia.com^"}
+{"rule":"@@||evernote.com^*/google-analytics-util.js","reason":"与现有规则冲突: @@||evernote.com^$domain=pioclpoplcdbaefihamjohnefbikjilc","existingRule":"@@||evernote.com^$domain=pioclpoplcdbaefihamjohnefbikjilc"}
+{"rule":"@@||f.bmcx.com^$important","reason":"与现有规则冲突: @@||f.bmcx.com^","existingRule":"@@||f.bmcx.com^"}
+{"rule":"@@||facebook.com^$generichide,badfilter","reason":"与现有规则冲突: @@||facebook.com^$generichide","existingRule":"@@||facebook.com^$generichide"}
+{"rule":"@@||facebook.com^$important","reason":"与现有规则冲突: @@||facebook.com^$generichide","existingRule":"@@||facebook.com^$generichide"}
+{"rule":"@@||fanqienovel.com^$important","reason":"与现有规则冲突: @@||fanqienovel.com^","existingRule":"@@||fanqienovel.com^"}
+{"rule":"@@||feed.4strokemedia.com^$domain=video.gazzetta.it","reason":"与现有规则冲突: @@||feed.4strokemedia.com^$domain=video.corriere.it","existingRule":"@@||feed.4strokemedia.com^$domain=video.corriere.it"}
+{"rule":"@@||file.market.xiaomi.com^$importantcdn.ark.qq.com","reason":"与现有规则冲突: @@||file.market.xiaomi.com^$import","existingRule":"@@||file.market.xiaomi.com^$import"}
+{"rule":"@@||filmweb.pl^$generichide","reason":"与现有规则冲突: @@||filmweb.pl^$elemhide,important","existingRule":"@@||filmweb.pl^$elemhide,important"}
+{"rule":"@@||filmweb.pl^$generichide,badfilter","reason":"与现有规则冲突: @@||filmweb.pl^$elemhide,important","existingRule":"@@||filmweb.pl^$elemhide,important"}
+{"rule":"@@||filmweb.pl^$stealth","reason":"与现有规则冲突: @@||filmweb.pl^$elemhide,important","existingRule":"@@||filmweb.pl^$elemhide,important"}
+{"rule":"@@||find.api.micloud.xiaomi.net^$important","reason":"与现有规则冲突: @@||*.find.api.micloud.xiaomi.net^","existingRule":"@@||*.find.api.micloud.xiaomi.net^"}
+{"rule":"@@||firebase-settings.crashlytics.com^$important","reason":"与现有规则冲突: @@||firebase-settings.crashlytics.com^","existingRule":"@@||firebase-settings.crashlytics.com^"}
+{"rule":"@@||flightradar24.com^$stealth=dpi","reason":"与现有规则冲突: @@||flightradar24.com^$generichide","existingRule":"@@||flightradar24.com^$generichide"}
+{"rule":"@@||fluidplayer.com^$script,stylesheet,domain=canyoublockit.com","reason":"与现有规则冲突: @@||fluidplayer.com^$script,domain=rule34hentai.net","existingRule":"@@||fluidplayer.com^$script,domain=rule34hentai.net"}
+{"rule":"@@||fonts.gstatic.com^$important","reason":"与现有规则冲突: @@||fonts.gstatic.com^","existingRule":"@@||fonts.gstatic.com^"}
+{"rule":"@@||forexprostools.com^$subdocument,domain=fx-rashinban.com","reason":"与现有规则冲突: @@||forexprostools.com^$domain=shougedui.com","existingRule":"@@||forexprostools.com^$domain=shougedui.com"}
+{"rule":"@@||forums.sonarr.tv^$important","reason":"与现有规则冲突: @@||forums.sonarr.tv^","existingRule":"@@||forums.sonarr.tv^"}
+{"rule":"@@||fp.msedge.net^$important","reason":"与现有规则冲突: @@||fp.msedge.net^","existingRule":"@@||fp.msedge.net^"}
+{"rule":"@@||fundingchoicesmessages.google.com^$domain=ytlarge.com","reason":"与现有规则冲突: @@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth","existingRule":"@@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth"}
+{"rule":"@@||fundingchoicesmessages.google.com^$script,domain=soranews24.com","reason":"与现有规则冲突: @@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth","existingRule":"@@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth"}
+{"rule":"@@||fundingchoicesmessages.google.com^$stealth,domain=adshnk.com|adshrink.it","reason":"与现有规则冲突: @@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth","existingRule":"@@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth"}
+{"rule":"@@||fundingchoicesmessages.google.com^$stealth,domain=stooq.pl|stooq.com","reason":"与现有规则冲突: @@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth","existingRule":"@@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth"}
+{"rule":"@@||fundingchoicesmessages.google.com^$stealth,script,domain=player.addradio.de","reason":"与现有规则冲突: @@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth","existingRule":"@@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth"}
+{"rule":"@@||fundingchoicesmessages.google.com^$stealth=referrer","reason":"与现有规则冲突: @@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth","existingRule":"@@||fundingchoicesmessages.google.com^$domain=rocketnews24.com|soranews24.com|youpouch.com,stealth"}
+{"rule":"@@||g.alicdn.com^*/banner_ad_","reason":"与现有规则冲突: @@||g.alicdn.com^$important","existingRule":"@@||g.alicdn.com^$important"}
+{"rule":"@@||g.live.com^$important","reason":"与现有规则冲突: @@||g.live.com^","existingRule":"@@||g.live.com^"}
+{"rule":"@@||g.msn.com^$important","reason":"与现有规则冲突: @@||g.msn.com^","existingRule":"@@||g.msn.com^"}
+{"rule":"@@||gdfp.gifshow.com^$important","reason":"与现有规则冲突: @@||gdfp.gifshow.com^","existingRule":"@@||gdfp.gifshow.com^"}
+{"rule":"@@||gdmf.apple.com^$important","reason":"与现有规则冲突: @@||gdmf.apple.com^","existingRule":"@@||gdmf.apple.com^"}
+{"rule":"@@||geo-prod.do.dsp.mp.microsoft.com^$important","reason":"与现有规则冲突: @@||geo-prod.do.dsp.mp.microsoft.com^","existingRule":"@@||geo-prod.do.dsp.mp.microsoft.com^"}
+{"rule":"@@||geo3.ggpht.com^$important","reason":"与现有规则冲突: @@||geo3.ggpht.com^","existingRule":"@@||geo3.ggpht.com^"}
+{"rule":"@@||gfwsl.geforce.com^$important","reason":"与现有规则冲突: @@||gfwsl.geforce.com^","existingRule":"@@||gfwsl.geforce.com^"}
+{"rule":"@@||gg.apple.com^$important","reason":"与现有规则冲突: @@||gg.apple.com^","existingRule":"@@||gg.apple.com^"}
+{"rule":"@@||gift.douyucdn.cn^$important","reason":"与现有规则冲突: @@||gift.douyucdn.cn^","existingRule":"@@||gift.douyucdn.cn^"}
+{"rule":"@@||giphy.com^$important","reason":"与现有规则冲突: @@||giphy.com^","existingRule":"@@||giphy.com^"}
+{"rule":"@@||github.com^$generichide","reason":"与现有规则冲突: @@||github.com^","existingRule":"@@||github.com^"}
+{"rule":"@@||github.com^$important","reason":"与现有规则冲突: @@||github.com^","existingRule":"@@||github.com^"}
+{"rule":"@@||github.io^$generichide","reason":"与现有规则冲突: @@||github.io^","existingRule":"@@||github.io^"}
+{"rule":"@@||github.io^$generichide,badfilter","reason":"与现有规则冲突: @@||github.io^","existingRule":"@@||github.io^"}
+{"rule":"@@||github.io^$important","reason":"与现有规则冲突: @@||github.io^","existingRule":"@@||github.io^"}
+{"rule":"@@||gitlab.com^$generichide","reason":"与现有规则冲突: @@||gitlab.com^","existingRule":"@@||gitlab.com^"}
+{"rule":"@@||globo.com^$cookie=_ga","reason":"与现有规则冲突: @@||globo.com^$cookie=/^_ga_/","existingRule":"@@||globo.com^$cookie=/^_ga_/"}
+{"rule":"@@||goo.gl^$important","reason":"与现有规则冲突: @@||goo.gl^","existingRule":"@@||goo.gl^"}
+{"rule":"@@||google-analytics.com^$domain=auone.jp","reason":"与现有规则冲突: @@||google-analytics.com^$app=jp.co.sej.app","existingRule":"@@||google-analytics.com^$app=jp.co.sej.app"}
+{"rule":"@@||google-analytics.com^$domain=daemon-tools.cc","reason":"与现有规则冲突: @@||google-analytics.com^$app=jp.co.sej.app","existingRule":"@@||google-analytics.com^$app=jp.co.sej.app"}
+{"rule":"@@||google-analytics.com^$script,domain=woman.excite.co.jp","reason":"与现有规则冲突: @@||google-analytics.com^$app=jp.co.sej.app","existingRule":"@@||google-analytics.com^$app=jp.co.sej.app"}
+{"rule":"@@||google-analytics.com^|$app=com.nttdocomo.android.danimeapp","reason":"与现有规则冲突: @@||google-analytics.com^$app=jp.co.sej.app","existingRule":"@@||google-analytics.com^$app=jp.co.sej.app"}
+{"rule":"@@||googleads.g.doubleclick.net^$domain=wandhi.com","reason":"与现有规则冲突: @@||googleads.g.doubleclick.net^$domain=fplstatistics.com","existingRule":"@@||googleads.g.doubleclick.net^$domain=fplstatistics.com"}
+{"rule":"@@||googleads.g.doubleclick.net^|$xmlhttprequest,domain=getexploits.com","reason":"与现有规则冲突: @@||googleads.g.doubleclick.net^$domain=fplstatistics.com","existingRule":"@@||googleads.g.doubleclick.net^$domain=fplstatistics.com"}
+{"rule":"@@||googleadservices.com^$domain=google.ae|google.at|google.be|google.by|google.ca|google.ch|google.cl|google.cn|google.co.id|google.co.in|google.co.jp|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.bd|google.com.br|google.com.co|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.ng|google.com.pe|google.com.ph|google.com.pk|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.vn|google.de|google.dk|google.ee|google.es|google.fr|google.gr|google.hu|google.ie|google.it|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk|google.tn","reason":"与现有规则冲突: @@||googleadservices.com^","existingRule":"@@||googleadservices.com^"}
+{"rule":"@@||googleapis.com^$important","reason":"与现有规则冲突: @@||googleapis.com^","existingRule":"@@||googleapis.com^"}
+{"rule":"@@||googleapis.com^$script,stylesheet,domain=canyoublockit.com","reason":"与现有规则冲突: @@||googleapis.com^","existingRule":"@@||googleapis.com^"}
+{"rule":"@@||googlesyndication.com^$script,xmlhttprequest,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|miuiflash.com|thecubexguide.com|jytechs.in","reason":"与现有规则冲突: @@||googlesyndication.com^$domain=searchftps.org","existingRule":"@@||googlesyndication.com^$domain=searchftps.org"}
+{"rule":"@@||googletagmanager.com^$domain=mobilmania.cz","reason":"与现有规则冲突: @@||googletagmanager.com^$domain=addons.opera.com","existingRule":"@@||googletagmanager.com^$domain=addons.opera.com"}
+{"rule":"@@||graph.microsoft.com^$stealth,xmlhttprequest,domain=odwebp.svc.ms","reason":"与现有规则冲突: @@||graph.microsoft.com^$important","existingRule":"@@||graph.microsoft.com^$important"}
+{"rule":"@@||gravatar.com^$important","reason":"与现有规则冲突: @@||gravatar.com^","existingRule":"@@||gravatar.com^"}
+{"rule":"@@||grimoireoss-pa.clients6.google.com^$stealth,domain=cs.opensource.google","reason":"与现有规则冲突: @@||grimoireoss-pa.clients6.google.com^$domain=source.chromium.org,stealth","existingRule":"@@||grimoireoss-pa.clients6.google.com^$domain=source.chromium.org,stealth"}
+{"rule":"@@||gsp1.apple.com^$important","reason":"与现有规则冲突: @@||gsp1.apple.com^","existingRule":"@@||gsp1.apple.com^"}
+{"rule":"@@||gstatic.com^$important","reason":"与现有规则冲突: @@||gstatic.com^","existingRule":"@@||gstatic.com^"}
+{"rule":"@@||gstatic.com^$stealth,domain=cup.rallyfans.info","reason":"与现有规则冲突: @@||gstatic.com^","existingRule":"@@||gstatic.com^"}
+{"rule":"@@||gstatic.com^*/firebase-performance-standalone.js$script,domain=flightradar24.com","reason":"与现有规则冲突: @@||gstatic.com^","existingRule":"@@||gstatic.com^"}
+{"rule":"@@||gumtree.com^$stealth=ip","reason":"与现有规则冲突: @@||gumtree.com^","existingRule":"@@||gumtree.com^"}
+{"rule":"@@||gvt1.com^$important","reason":"与现有规则冲突: @@||*.gvt1.com^","existingRule":"@@||*.gvt1.com^"}
+{"rule":"@@||h-adashx.ut.taobao.com^$important","reason":"与现有规则冲突: @@||h-adashx.ut.taobao.com^","existingRule":"@@||h-adashx.ut.taobao.com^"}
+{"rule":"@@||h.trace.qq.com^$important","reason":"与现有规则冲突: @@||h.trace.qq.com^","existingRule":"@@||h.trace.qq.com^"}
+{"rule":"@@||heatmap.it^$domain=heatmap.com|heatmap.it|heatmap.me|heatmap.org","reason":"与现有规则冲突: @@||heatmap.it^$domain=heatmap.com","existingRule":"@@||heatmap.it^$domain=heatmap.com"}
+{"rule":"@@||heatmap.it^$domain=heatmap.me","reason":"与现有规则冲突: @@||heatmap.it^$domain=heatmap.com","existingRule":"@@||heatmap.it^$domain=heatmap.com"}
+{"rule":"@@||help.ui.xboxlive.com^$important","reason":"与现有规则冲突: @@||help.ui.xboxlive.com^","existingRule":"@@||help.ui.xboxlive.com^"}
+{"rule":"@@||history.com^$generichide,badfilter","reason":"与现有规则冲突: @@||history.com^$generichide","existingRule":"@@||history.com^$generichide"}
+{"rule":"@@||hk01.com^*/scripts/ga.js","reason":"与现有规则冲突: @@||hk01.com^*/ga_trace.js","existingRule":"@@||hk01.com^*/ga_trace.js"}
+{"rule":"@@||hls.ted.com^$important","reason":"与现有规则冲突: @@||hls.ted.com^","existingRule":"@@||hls.ted.com^"}
+{"rule":"@@||hosts-file.net^$important","reason":"与现有规则冲突: @@||hosts-file.net^","existingRule":"@@||hosts-file.net^"}
+{"rule":"@@||hutchgo.advertserve.com^$popup,domain=hutchgo.com|hutchgo.com.cn|hutchgo.com.hk|hutchgo.com.sg|hutchgo.com.tw","reason":"与现有规则冲突: @@||hutchgo.advertserve.com^$domain=hutchgo.com|hutchgo.com.cn|hutchgo.com.hk|hutchgo.com.sg|hutchgo.com.tw","existingRule":"@@||hutchgo.advertserve.com^$domain=hutchgo.com|hutchgo.com.cn|hutchgo.com.hk|hutchgo.com.sg|hutchgo.com.tw"}
+{"rule":"@@||hwcdn.net^$domain=canyoublockit.com","reason":"与现有规则冲突: @@||*.hwcdn.net^$important","existingRule":"@@||*.hwcdn.net^$important"}
+{"rule":"@@||hwcdn.net^$script,domain=mp4upload.com","reason":"与现有规则冲突: @@||*.hwcdn.net^$important","existingRule":"@@||*.hwcdn.net^$important"}
+{"rule":"@@||i.s-microsoft.com^$important","reason":"与现有规则冲突: @@||i.s-microsoft.com^","existingRule":"@@||i.s-microsoft.com^"}
+{"rule":"@@||i.ytimg.com^$important","reason":"与现有规则冲突: @@||i.ytimg.com^","existingRule":"@@||i.ytimg.com^"}
+{"rule":"@@||i1.ytimg.com^$important","reason":"与现有规则冲突: @@||i1.ytimg.com^","existingRule":"@@||i1.ytimg.com^"}
+{"rule":"@@||ib.adnxs.com^$image,domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|5moviesporn.net|freewebcart.com|pasend.cam|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=elektrikmen.com","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=exbulletin.com","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=fantasyfootballgeek.co.uk","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=game-owl.com","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=plugincrack.com|gaypornmasters.com|gaydelicious.com|buydekhke.com|isekaisubs.web.id|javhoho.com|udoyoshi.com|amyscans.com|adrianoluis.net|altevolkstrachten.de|animecast.net|armyranger.com|bengalinews.co.in|boxylucha.com|chibchat.com|comprasenoferta.com|coreseeker.com|descargasmix.xyz|duniailkom.com|enciclopediaonline.com|eyalo.com|fosslovers.com|fotopixel.es|freeiphone.fr|hairstylesthatwork.com|hello-e1.com|ichberlin.com|indostarmedia.com|indrive.net|ireez.com|keepkoding.com|latribunadeautomocion.es|linemarlin.com|lumpiastudio.com|miaandme.org|mobility.com.ng|mygardening411.com|newstvonline.com|organismes.org|papagiovannipaoloii.altervista.org|pictasty.com|playlists.rocks|relatosdesexo.xxx|rencah.com|riverdesdelatribuna.com.ar|sarkarinaukry.com|seamanmemories.com|socialmediaverve.com|solnechnyj-kitaj.ru|thefoodstorydotcom.wpcomstaging.com|theorie-musik.de|topperpoint.com|transformator220.ru|vita-water.ru|googledrivelinks.com|ccthesims.com|papunika.com","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=politics-dz.com","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=scubidu.eu","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=tekfame.com","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ib.adnxs.com^$image,domain=world4.eu","reason":"与现有规则冲突: @@||ib.adnxs.com^$image,domain=apkmaza.net","existingRule":"@@||ib.adnxs.com^$image,domain=apkmaza.net"}
+{"rule":"@@||ichnaea.netflix.com^$important","reason":"与现有规则冲突: @@||ichnaea.netflix.com^","existingRule":"@@||ichnaea.netflix.com^"}
+{"rule":"@@||icloud.com^$important","reason":"与现有规则冲突: @@||icloud.com^$generichide","existingRule":"@@||icloud.com^$generichide"}
+{"rule":"@@||icloud.com^$stealth","reason":"与现有规则冲突: @@||icloud.com^$generichide","existingRule":"@@||icloud.com^$generichide"}
+{"rule":"@@||id6.me^$important","reason":"与现有规则冲突: @@||id6.me^","existingRule":"@@||id6.me^"}
+{"rule":"@@||identity.mparticle.com^$xmlhttprequest","reason":"与现有规则冲突: @@||identity.mparticle.com^$important","existingRule":"@@||identity.mparticle.com^$important"}
+{"rule":"@@||imasdk.googleapis.com^$domain=cnet.com","reason":"与现有规则冲突: @@||imasdk.googleapis.com^","existingRule":"@@||imasdk.googleapis.com^"}
+{"rule":"@@||imasdk.googleapis.com^$stealth,domain=news.tvb.com","reason":"与现有规则冲突: @@||imasdk.googleapis.com^","existingRule":"@@||imasdk.googleapis.com^"}
+{"rule":"@@||imasdk.googleapis.com^$xmlhttprequest,domain=uservideo.xyz","reason":"与现有规则冲突: @@||imasdk.googleapis.com^","existingRule":"@@||imasdk.googleapis.com^"}
+{"rule":"@@||img.segmentify.com^$image,domain=gratis.com","reason":"与现有规则冲突: @@||img.segmentify.com^$domain=mediamarkt.com.tr","existingRule":"@@||img.segmentify.com^$domain=mediamarkt.com.tr"}
+{"rule":"@@||img.vidible.tv^$important","reason":"与现有规则冲突: @@||img.vidible.tv^","existingRule":"@@||img.vidible.tv^"}
+{"rule":"@@||imgix.net^$important","reason":"与现有规则冲突: @@||imgix.net^","existingRule":"@@||imgix.net^"}
+{"rule":"@@||imgs.xkcd.com^$important","reason":"与现有规则冲突: @@||imgs.xkcd.com^","existingRule":"@@||imgs.xkcd.com^"}
+{"rule":"@@||imrworldwide.com^*/flashdetect.js","reason":"与现有规则冲突: @@||imrworldwide.com^*-mediaplayer&$domain=au.launch.yahoo.com","existingRule":"@@||imrworldwide.com^*-mediaplayer&$domain=au.launch.yahoo.com"}
+{"rule":"@@||imrworldwide.com^*/ggce354.swf$domain=espn.go.com","reason":"与现有规则冲突: @@||imrworldwide.com^*-mediaplayer&$domain=au.launch.yahoo.com","existingRule":"@@||imrworldwide.com^*-mediaplayer&$domain=au.launch.yahoo.com"}
+{"rule":"@@||imrworldwide.com^*/swfobject.js","reason":"与现有规则冲突: @@||imrworldwide.com^*-mediaplayer&$domain=au.launch.yahoo.com","existingRule":"@@||imrworldwide.com^*-mediaplayer&$domain=au.launch.yahoo.com"}
+{"rule":"@@||inews.gtimg.com^$important","reason":"与现有规则冲突: @@||inews.gtimg.com^","existingRule":"@@||inews.gtimg.com^"}
+{"rule":"@@||input.shouji.sogou.com^$important","reason":"与现有规则冲突: @@||input.shouji.sogou.com^","existingRule":"@@||input.shouji.sogou.com^"}
+{"rule":"@@||instagram.com^$important","reason":"与现有规则冲突: @@||instagram.com^$generichide","existingRule":"@@||instagram.com^$generichide"}
+{"rule":"@@||inven.co.kr^$stealth=dpi","reason":"与现有规则冲突: @@||inven.co.kr^$generichide","existingRule":"@@||inven.co.kr^$generichide"}
+{"rule":"@@||inven.co.kr^$stealth=ip","reason":"与现有规则冲突: @@||inven.co.kr^$generichide","existingRule":"@@||inven.co.kr^$generichide"}
+{"rule":"@@||iocdn.coremetrics.com^*.js?V=$script,domain=adidas.de","reason":"与现有规则冲突: @@||iocdn.coremetrics.com^*.js?V=$domain=24ace.co.uk","existingRule":"@@||iocdn.coremetrics.com^*.js?V=$domain=24ace.co.uk"}
+{"rule":"@@||iocdn.coremetrics.com^*/io_config.js?ts=$domain=24ace.co.uk","reason":"与现有规则冲突: @@||iocdn.coremetrics.com^*.js?V=$domain=24ace.co.uk","existingRule":"@@||iocdn.coremetrics.com^*.js?V=$domain=24ace.co.uk"}
+{"rule":"@@||iocdn.coremetrics.com^*/io_config.js?ts=$domain=adidas.de","reason":"与现有规则冲突: @@||iocdn.coremetrics.com^*.js?V=$domain=24ace.co.uk","existingRule":"@@||iocdn.coremetrics.com^*.js?V=$domain=24ace.co.uk"}
+{"rule":"@@||ip.taobao.com^$important","reason":"与现有规则冲突: @@||ip.taobao.com^","existingRule":"@@||ip.taobao.com^"}
+{"rule":"@@||ipassport.ele.me^$important","reason":"与现有规则冲突: @@||ipassport.ele.me^","existingRule":"@@||ipassport.ele.me^"}
+{"rule":"@@||ipv6.msftncsi.com^$important","reason":"与现有规则冲突: @@||ipv6.msftncsi.com^","existingRule":"@@||ipv6.msftncsi.com^"}
+{"rule":"@@||is.snssdk.com^$important","reason":"与现有规则冲突: @@||is.snssdk.com^","existingRule":"@@||is.snssdk.com^"}
+{"rule":"@@||issuecdn.baidupcs.com^$important","reason":"与现有规则冲突: @@||issuecdn.baidupcs.com^","existingRule":"@@||issuecdn.baidupcs.com^"}
+{"rule":"@@||itunes.apple.com^$important","reason":"与现有规则冲突: @@||itunes.apple.com^","existingRule":"@@||itunes.apple.com^"}
+{"rule":"@@||j.mp^$important","reason":"与现有规则冲突: @@||j.mp^","existingRule":"@@||j.mp^"}
+{"rule":"@@||jd.com^*&refer=http$script","reason":"与现有规则冲突: @@||jd.com^","existingRule":"@@||jd.com^"}
+{"rule":"@@||jquery.com^$important","reason":"与现有规则冲突: @@||jquery.com^","existingRule":"@@||jquery.com^"}
+{"rule":"@@||js-agent.newrelic.com^$domain=alliantcreditunion.com|giftcards.com|kapwing.com|live.griiip.com","reason":"与现有规则冲突: @@||js-agent.newrelic.com^","existingRule":"@@||js-agent.newrelic.com^"}
+{"rule":"@@||js-agent.newrelic.com^$script,domain=abema.tv","reason":"与现有规则冲突: @@||js-agent.newrelic.com^","existingRule":"@@||js-agent.newrelic.com^"}
+{"rule":"@@||js.monitor.azure.com^$important","reason":"与现有规则冲突: @@||js.monitor.azure.com^$app=com.microsoft.office.officehubrow","existingRule":"@@||js.monitor.azure.com^$app=com.microsoft.office.officehubrow"}
+{"rule":"@@||jsdelivr.net^$important","reason":"与现有规则冲突: @@||jsdelivr.net^","existingRule":"@@||jsdelivr.net^"}
+{"rule":"@@||jsdelivr.net^$script,domain=thepiratebay.org","reason":"与现有规则冲突: @@||jsdelivr.net^","existingRule":"@@||jsdelivr.net^"}
+{"rule":"@@||jsdelivr.net^*/keen-tracking.min.js$domain=nextquotidiano.it","reason":"与现有规则冲突: @@||jsdelivr.net^","existingRule":"@@||jsdelivr.net^"}
+{"rule":"@@||jsdelivr.net^*/videojs.ads.css$domain=irctc.co.in","reason":"与现有规则冲突: @@||jsdelivr.net^","existingRule":"@@||jsdelivr.net^"}
+{"rule":"@@||kastatic.com^$stealth,domain=kickass.to","reason":"与现有规则冲突: @@||kastatic.com^$domain=kickass.to","existingRule":"@@||kastatic.com^$domain=kickass.to"}
+{"rule":"@@||keystone.mwbsys.com^$important","reason":"与现有规则冲突: @@||keystone.mwbsys.com^","existingRule":"@@||keystone.mwbsys.com^"}
+{"rule":"@@||komputerswiat.pl^$generichide,badfilter","reason":"与现有规则冲突: @@||komputerswiat.pl^$generichide","existingRule":"@@||komputerswiat.pl^$generichide"}
+{"rule":"@@||konto.play.pl^$stealth","reason":"与现有规则冲突: @@||konto.play.pl^$extension","existingRule":"@@||konto.play.pl^$extension"}
+{"rule":"@@||letsencrypt.org^$important","reason":"与现有规则冲突: @@||letsencrypt.org^","existingRule":"@@||letsencrypt.org^"}
+{"rule":"@@||lf-cdn-tos.bytescm.com^$important","reason":"与现有规则冲突: @@||lf-cdn-tos.bytescm.com^","existingRule":"@@||lf-cdn-tos.bytescm.com^"}
+{"rule":"@@||lf3-cdn-tos.bytegoofy.com^$important","reason":"与现有规则冲突: @@||lf3-cdn-tos.bytegoofy.com^","existingRule":"@@||lf3-cdn-tos.bytegoofy.com^"}
+{"rule":"@@||libs.baidu.com^$domain=m.supfree.net","reason":"与现有规则冲突: @@||libs.baidu.com^$domain=0794.org|12zw.net|1biqu.com|1kans.net|23hh.com|23sk.net|23wxx.com|33yq.org|3yt.com|4xiaoshuo.net|56shuku.info|777zw.net|81book.com|99mk.net|aiwx.info|aixs.la|aikushuge.com|bequmo.com|bimixsw.com|biqiuge8.cc|biqudu.tv|biquge775.com|biquge98.net|biqugecd.com|biquka.com|aidu123.com|biqutsxs.com|biquzw.info|bshuku.com|bxwx.live|bxwx.org|damengzhu1.com|gdbzkz.com|gdbzkz.org|hongyeshuzhai.com|ibiquges.com|ibiquges.org|ibiquta.net|ibotaodz.org|imianhuatang.info|ishisetianxia.com|ishubao.org|xvipxs.net|iwurexs.info|ixs.la|lewenge.info|liewenn.com|liudatxt.org|paoshu8.com|paoshuzw.com|pksge.com|qishuta.info|shu008.com|shumil.co|silukex.com|siluwx.org|sthuojia.org|tutengzw.com|u33.cc|wenxuem.com|x81zw.co|xbiquke.com|xdingdian.cc|xiaxs.info|xs5200.com|xszww8.net|xuanshu.org|xuessex.com|yqd6.com|yunxs.info|zjsw.org|zzs5.info","existingRule":"@@||libs.baidu.com^$domain=0794.org|12zw.net|1biqu.com|1kans.net|23hh.com|23sk.net|23wxx.com|33yq.org|3yt.com|4xiaoshuo.net|56shuku.info|777zw.net|81book.com|99mk.net|aiwx.info|aixs.la|aikushuge.com|bequmo.com|bimixsw.com|biqiuge8.cc|biqudu.tv|biquge775.com|biquge98.net|biqugecd.com|biquka.com|aidu123.com|biqutsxs.com|biquzw.info|bshuku.com|bxwx.live|bxwx.org|damengzhu1.com|gdbzkz.com|gdbzkz.org|hongyeshuzhai.com|ibiquges.com|ibiquges.org|ibiquta.net|ibotaodz.org|imianhuatang.info|ishisetianxia.com|ishubao.org|xvipxs.net|iwurexs.info|ixs.la|lewenge.info|liewenn.com|liudatxt.org|paoshu8.com|paoshuzw.com|pksge.com|qishuta.info|shu008.com|shumil.co|silukex.com|siluwx.org|sthuojia.org|tutengzw.com|u33.cc|wenxuem.com|x81zw.co|xbiquke.com|xdingdian.cc|xiaxs.info|xs5200.com|xszww8.net|xuanshu.org|xuessex.com|yqd6.com|yunxs.info|zjsw.org|zzs5.info"}
+{"rule":"@@||licensing.xboxlive.com^$important","reason":"与现有规则冲突: @@||licensing.xboxlive.com^","existingRule":"@@||licensing.xboxlive.com^"}
+{"rule":"@@||limbopro.com^$important","reason":"与现有规则冲突: @@||limbopro.com^","existingRule":"@@||limbopro.com^"}
+{"rule":"@@||linkbucks.com^$third-party,domain=goneviral.com","reason":"与现有规则冲突: @@||linkbucks.com^$domain=ultrafiles.net","existingRule":"@@||linkbucks.com^$domain=ultrafiles.net"}
+{"rule":"@@||live.com^$important","reason":"与现有规则冲突: @@||live.com^","existingRule":"@@||live.com^"}
+{"rule":"@@||live.primis.tech^$xmlhttprequest,domain=xxlmag.com","reason":"与现有规则冲突: @@||live.primis.tech^$script,domain=eurogamer.net|klaq.com|loudwire.com|screencrush.com|vg247.com|xxlmag.com","existingRule":"@@||live.primis.tech^$script,domain=eurogamer.net|klaq.com|loudwire.com|screencrush.com|vg247.com|xxlmag.com"}
+{"rule":"@@||localhost^$important","reason":"与现有规则冲突: @@||localhost^","existingRule":"@@||localhost^"}
+{"rule":"@@||logging.apache.org^$~third-party","reason":"与现有规则冲突: @@||logging.apache.org^","existingRule":"@@||logging.apache.org^"}
+{"rule":"@@||login.aliexpress.com^$important","reason":"与现有规则冲突: @@||login.aliexpress.com^","existingRule":"@@||login.aliexpress.com^"}
+{"rule":"@@||login.live.com^$important","reason":"与现有规则冲突: @@||login.live.com^","existingRule":"@@||login.live.com^"}
+{"rule":"@@||login.live.com^$stealth","reason":"与现有规则冲突: @@||login.live.com^","existingRule":"@@||login.live.com^"}
+{"rule":"@@||login.microsoftonline.com^$important","reason":"与现有规则冲突: @@||login.microsoftonline.com^","existingRule":"@@||login.microsoftonline.com^"}
+{"rule":"@@||login.microsoftonline.com^$stealth","reason":"与现有规则冲突: @@||login.microsoftonline.com^","existingRule":"@@||login.microsoftonline.com^"}
+{"rule":"@@||logo.clearbit.com^$image,third-party","reason":"与现有规则冲突: @@||logo.clearbit.com^$image,domain=securitytrails.com","existingRule":"@@||logo.clearbit.com^$image,domain=securitytrails.com"}
+{"rule":"@@||lol.qq.com^$important","reason":"与现有规则冲突: @@||*.lol.qq.com^$important","existingRule":"@@||*.lol.qq.com^$important"}
+{"rule":"@@||m.qpic.cn^$important","reason":"与现有规则冲突: @@||m.qpic.cn^","existingRule":"@@||m.qpic.cn^"}
+{"rule":"@@||manifest.googlevideo.com^$important","reason":"与现有规则冲突: @@||manifest.googlevideo.com^","existingRule":"@@||manifest.googlevideo.com^"}
+{"rule":"@@||market.mi-img.com^$important","reason":"与现有规则冲突: @@||*.market.mi-img.com^$important","existingRule":"@@||*.market.mi-img.com^$important"}
+{"rule":"@@||market.spotify.com^$important","reason":"与现有规则冲突: @@||market.spotify.com^","existingRule":"@@||market.spotify.com^"}
+{"rule":"@@||market.xiaomi.com^","reason":"与现有规则冲突: @@||*.market.xiaomi.com^$important","existingRule":"@@||*.market.xiaomi.com^$important"}
+{"rule":"@@||maxmind.com^*/geoip.js$domain=automatensuche.de","reason":"与现有规则冲突: @@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com","existingRule":"@@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com"}
+{"rule":"@@||maxmind.com^*/geoip.js$domain=ballerstatus.com|bikemap.net|carltonjordan.com|dr.dk|everydaysource.com|girlgames4u.com|ip-address.cc|justin.tv|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com","reason":"与现有规则冲突: @@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com","existingRule":"@@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com"}
+{"rule":"@@||maxmind.com^*/geoip.js$domain=sportube.tv","reason":"与现有规则冲突: @@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com","existingRule":"@@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com"}
+{"rule":"@@||maxmind.com^*/geoip2.js$domain=bandai-hobby.net|boostedboards.com|donorschoose.org|driftinnovation.com|fallout4.com|ibanez.com|instamed.com|metronews.ca|mtv.com.lb|runningheroes.com|tama.com|teslamotors.com","reason":"与现有规则冲突: @@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com","existingRule":"@@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com"}
+{"rule":"@@||media-imdb.com^*/clickstream.js","reason":"与现有规则冲突: @@||media-imdb.com^$stealth,domain=imdb.com","existingRule":"@@||media-imdb.com^$stealth,domain=imdb.com"}
+{"rule":"@@||memoryhackers.org^$stealth","reason":"与现有规则冲突: @@||memoryhackers.org^$generichide","existingRule":"@@||memoryhackers.org^$generichide"}
+{"rule":"@@||mesu.apple.com^$important","reason":"与现有规则冲突: @@||mesu.apple.com^","existingRule":"@@||mesu.apple.com^"}
+{"rule":"@@||meta-db-worker02.pop.ric.plex.bz^$important","reason":"与现有规则冲突: @@||meta-db-worker02.pop.ric.plex.bz^","existingRule":"@@||meta-db-worker02.pop.ric.plex.bz^"}
+{"rule":"@@||meta.plex.bz^$important","reason":"与现有规则冲突: @@||meta.plex.bz^","existingRule":"@@||meta.plex.bz^"}
+{"rule":"@@||meta.plex.tv^$important","reason":"与现有规则冲突: @@||meta.plex.tv^","existingRule":"@@||meta.plex.tv^"}
+{"rule":"@@||metrics.icloud.com^$important","reason":"与现有规则冲突: @@||metrics.icloud.com^","existingRule":"@@||metrics.icloud.com^"}
+{"rule":"@@||mi-img.com^$important","reason":"与现有规则冲突: @@||*.mi-img.com^$important","existingRule":"@@||*.mi-img.com^$important"}
+{"rule":"@@||micloud.xiaomi.net^","reason":"与现有规则冲突: @@||*.micloud.xiaomi.net^","existingRule":"@@||*.micloud.xiaomi.net^"}
+{"rule":"@@||microsoft.com^","reason":"与现有规则冲突: @@||*.microsoft.com^","existingRule":"@@||*.microsoft.com^"}
+{"rule":"@@||microsoft.com^$important","reason":"与现有规则冲突: @@||*.microsoft.com^","existingRule":"@@||*.microsoft.com^"}
+{"rule":"@@||microsoftonline.com^","reason":"与现有规则冲突: @@||*.microsoftonline.com^","existingRule":"@@||*.microsoftonline.com^"}
+{"rule":"@@||microsoftonline.com^$important","reason":"与现有规则冲突: @@||*.microsoftonline.com^","existingRule":"@@||*.microsoftonline.com^"}
+{"rule":"@@||mixpanel.com^$domain=mixpanel.com","reason":"与现有规则冲突: @@||mixpanel.com^$domain=app.writesonic.com","existingRule":"@@||mixpanel.com^$domain=app.writesonic.com"}
+{"rule":"@@||mobile-ap.spotify.com^$important","reason":"与现有规则冲突: @@||mobile-ap.spotify.com^","existingRule":"@@||mobile-ap.spotify.com^"}
+{"rule":"@@||mobile.launchdarkly.com^$important","reason":"与现有规则冲突: @@||mobile.launchdarkly.com^","existingRule":"@@||mobile.launchdarkly.com^"}
+{"rule":"@@||mobile.pipe.aria.microsoft.com^$important","reason":"与现有规则冲突: @@||mobile.pipe.aria.microsoft.com^","existingRule":"@@||mobile.pipe.aria.microsoft.com^"}
+{"rule":"@@||mobile.twitter.com^$important","reason":"与现有规则冲突: @@||mobile.twitter.com^","existingRule":"@@||mobile.twitter.com^"}
+{"rule":"@@||mooc-image.nosdn.127.net^$stealth","reason":"与现有规则冲突: @@||mooc-image.nosdn.127.net^","existingRule":"@@||mooc-image.nosdn.127.net^"}
+{"rule":"@@||mp4upload.com^$generichide","reason":"与现有规则冲突: @@||mp4upload.com^$domain=anyanime.com","existingRule":"@@||mp4upload.com^$domain=anyanime.com"}
+{"rule":"@@||mpush-api.aliyun.com^$important","reason":"与现有规则冲突: @@||mpush-api.aliyun.com^","existingRule":"@@||mpush-api.aliyun.com^"}
+{"rule":"@@||msecnd.net^*/site-tracker.js$domain=momondo.co.uk","reason":"与现有规则冲突: @@||*.msecnd.net^","existingRule":"@@||*.msecnd.net^"}
+{"rule":"@@||msecnd.net^*/site-tracker.js$domain=momondo.dk","reason":"与现有规则冲突: @@||*.msecnd.net^","existingRule":"@@||*.msecnd.net^"}
+{"rule":"@@||msftconnecttest.com^$important","reason":"与现有规则冲突: @@||msftconnecttest.com^","existingRule":"@@||msftconnecttest.com^"}
+{"rule":"@@||msftncsi.com^$important","reason":"与现有规则冲突: @@||msftncsi.com^","existingRule":"@@||msftncsi.com^"}
+{"rule":"@@||msg.douyu.com^$important","reason":"与现有规则冲突: @@||msg.douyu.com^","existingRule":"@@||msg.douyu.com^"}
+{"rule":"@@||mxpnl.com^$domain=mixpanel.com","reason":"与现有规则冲突: @@||mxpnl.com^$domain=dailysteals.com","existingRule":"@@||mxpnl.com^$domain=dailysteals.com"}
+{"rule":"@@||my.plexapp.com^$important","reason":"与现有规则冲突: @@||my.plexapp.com^","existingRule":"@@||my.plexapp.com^"}
+{"rule":"@@||myhdjav.net^$generichide","reason":"与现有规则冲突: @@||myhdjav.net^$content","existingRule":"@@||myhdjav.net^$content"}
+{"rule":"@@||nakanohito.jp^*/bi.js$domain=kenko-tokina.co.jp|myna.go.jp","reason":"与现有规则冲突: @@||nakanohito.jp^*/bi.js$domain=kenko-tokina.co.jp","existingRule":"@@||nakanohito.jp^*/bi.js$domain=kenko-tokina.co.jp"}
+{"rule":"@@||nakanohito.jp^*/bi.js$domain=myna.go.jp","reason":"与现有规则冲突: @@||nakanohito.jp^*/bi.js$domain=kenko-tokina.co.jp","existingRule":"@@||nakanohito.jp^*/bi.js$domain=kenko-tokina.co.jp"}
+{"rule":"@@||nexus.ensighten.com^$important","reason":"与现有规则冲突: @@||nexus.ensighten.com^","existingRule":"@@||nexus.ensighten.com^"}
+{"rule":"@@||nexusrules.officeapps.live.com^$important","reason":"与现有规则冲突: @@||nexusrules.officeapps.live.com^","existingRule":"@@||nexusrules.officeapps.live.com^"}
+{"rule":"@@||nine.plugins.plexapp.com^$important","reason":"与现有规则冲突: @@||nine.plugins.plexapp.com^","existingRule":"@@||nine.plugins.plexapp.com^"}
+{"rule":"@@||no-ip.com^$important","reason":"与现有规则冲突: @@||no-ip.com^","existingRule":"@@||no-ip.com^"}
+{"rule":"@@||node.plexapp.com^$important","reason":"与现有规则冲突: @@||node.plexapp.com^","existingRule":"@@||node.plexapp.com^"}
+{"rule":"@@||notify.xboxlive.com^$important","reason":"与现有规则冲突: @@||notify.xboxlive.com^","existingRule":"@@||notify.xboxlive.com^"}
+{"rule":"@@||novelpia.com^$stealth=ip","reason":"与现有规则冲突: @@||novelpia.com^$stealth","existingRule":"@@||novelpia.com^$stealth"}
+{"rule":"@@||npr-news.streaming.adswizz.com^$important","reason":"与现有规则冲突: @@||npr-news.streaming.adswizz.com^","existingRule":"@@||npr-news.streaming.adswizz.com^"}
+{"rule":"@@||ns.itunes.apple.com^$important","reason":"与现有规则冲突: @@||ns.itunes.apple.com^","existingRule":"@@||ns.itunes.apple.com^"}
+{"rule":"@@||ns1.dropbox.com^$important","reason":"与现有规则冲突: @@||ns1.dropbox.com^","existingRule":"@@||ns1.dropbox.com^"}
+{"rule":"@@||ns2.dropbox.com^$important","reason":"与现有规则冲突: @@||ns2.dropbox.com^","existingRule":"@@||ns2.dropbox.com^"}
+{"rule":"@@||nsclick.baidu.com^$important","reason":"与现有规则冲突: @@||nsclick.baidu.com^","existingRule":"@@||nsclick.baidu.com^"}
+{"rule":"@@||nuggad.net^$domain=video.sport1.de","reason":"与现有规则冲突: @@||nuggad.net^$domain=sportdeutschland.tv","existingRule":"@@||nuggad.net^$domain=sportdeutschland.tv"}
+{"rule":"@@||o1.email.plex.tv^$important","reason":"与现有规则冲突: @@||o1.email.plex.tv^","existingRule":"@@||o1.email.plex.tv^"}
+{"rule":"@@||o2.sg0.plex.tv^$important","reason":"与现有规则冲突: @@||o2.sg0.plex.tv^","existingRule":"@@||o2.sg0.plex.tv^"}
+{"rule":"@@||o2o.api.xiaomi.com^$important","reason":"与现有规则冲突: @@||o2o.api.xiaomi.com^","existingRule":"@@||o2o.api.xiaomi.com^"}
+{"rule":"@@||ocsp.apple.com^$important","reason":"与现有规则冲突: @@||ocsp.apple.com^","existingRule":"@@||ocsp.apple.com^"}
+{"rule":"@@||office.com^","reason":"与现有规则冲突: @@||*.office.com^","existingRule":"@@||*.office.com^"}
+{"rule":"@@||office.com^$important","reason":"与现有规则冲突: @@||*.office.com^","existingRule":"@@||*.office.com^"}
+{"rule":"@@||office.net^","reason":"与现有规则冲突: @@||*.office.net^","existingRule":"@@||*.office.net^"}
+{"rule":"@@||office.net^$important","reason":"与现有规则冲突: @@||*.office.net^","existingRule":"@@||*.office.net^"}
+{"rule":"@@||office365.com^","reason":"与现有规则冲突: @@||*.office365.com^","existingRule":"@@||*.office365.com^"}
+{"rule":"@@||office365.com^$important","reason":"与现有规则冲突: @@||*.office365.com^","existingRule":"@@||*.office365.com^"}
+{"rule":"@@||officeapps.live.com^$important","reason":"与现有规则冲突: @@||*.officeapps.live.com^","existingRule":"@@||*.officeapps.live.com^"}
+{"rule":"@@||officeclient.microsoft.com^$important","reason":"与现有规则冲突: @@||officeclient.microsoft.com^","existingRule":"@@||officeclient.microsoft.com^"}
+{"rule":"@@||omtrdc.net^$domain=amazon.co.uk|amazon.com","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^$domain=amazon.co.uk|amazon.com|amazon.de","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^$domain=geico.com","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^$domain=nydailynews.com","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^$domain=pcworld.com","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^*/mbox/ajax?$script,other,domain=canadiantire.ca","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^*/mbox/json?$xmlhttprequest,domain=absa.co.za|att.com|pnc.com|vodafone.it","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^*/mbox/json?$xmlhttprequest,domain=argos.co.uk|att.com|t-mobile.com","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^*/mbox/standard?$script,domain=ancestry.com|ancestry.com.au|blogtalkradio.com","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||omtrdc.net^*/mbox/standard?$script,domain=kenkoukazoku.co.jp","reason":"与现有规则冲突: @@||omtrdc.net^$domain=abbyy.ru","existingRule":"@@||omtrdc.net^$domain=abbyy.ru"}
+{"rule":"@@||onedrive.live.com^$generichide","reason":"与现有规则冲突: @@||onedrive.live.com^","existingRule":"@@||onedrive.live.com^"}
+{"rule":"@@||onenote.com^*/aria-web-telemetry","reason":"与现有规则冲突: @@||*.onenote.com^","existingRule":"@@||*.onenote.com^"}
+{"rule":"@@||onet.pl^$generichide,badfilter","reason":"与现有规则冲突: @@||onet.pl^$generichide","existingRule":"@@||onet.pl^$generichide"}
+{"rule":"@@||open.spotify.com^$important","reason":"与现有规则冲突: @@||open.spotify.com^$generichide","existingRule":"@@||open.spotify.com^$generichide"}
+{"rule":"@@||optimost.com^*/content.js?$domain=bebo.com","reason":"与现有规则冲突: @@||optimost.com^*/FT_live.js$domain=ft.com","existingRule":"@@||optimost.com^*/FT_live.js$domain=ft.com"}
+{"rule":"@@||ota-downloads.nvidia.com^$important","reason":"与现有规则冲突: @@||ota-downloads.nvidia.com^","existingRule":"@@||ota-downloads.nvidia.com^"}
+{"rule":"@@||otheve.beacon.qq.com^$important","reason":"与现有规则冲突: @@||otheve.beacon.qq.com^","existingRule":"@@||otheve.beacon.qq.com^"}
+{"rule":"@@||outlook.com^$important","reason":"与现有规则冲突: @@||*.outlook.com^","existingRule":"@@||*.outlook.com^"}
+{"rule":"@@||outlook.live.com^$cookie=OParams","reason":"与现有规则冲突: @@||outlook.live.com^","existingRule":"@@||outlook.live.com^"}
+{"rule":"@@||outlook.office365.com^$important","reason":"与现有规则冲突: @@||outlook.office365.com^","existingRule":"@@||outlook.office365.com^"}
+{"rule":"@@||ov-chipkaart.nl^$stealth","reason":"与现有规则冲突: @@||ov-chipkaart.nl^$extension","existingRule":"@@||ov-chipkaart.nl^$extension"}
+{"rule":"@@||p.qlogo.cn^$important","reason":"与现有规则冲突: @@||p.qlogo.cn^","existingRule":"@@||p.qlogo.cn^"}
+{"rule":"@@||p11.techlab-cdn.com^$important","reason":"与现有规则冲突: @@||p11.techlab-cdn.com^$domain=wizzair.com","existingRule":"@@||p11.techlab-cdn.com^$domain=wizzair.com"}
+{"rule":"@@||p3-sign.toutiaoimg.com^$important","reason":"与现有规则冲突: @@||p3-sign.toutiaoimg.com^","existingRule":"@@||p3-sign.toutiaoimg.com^"}
+{"rule":"@@||pagead2.googleadservices.com^|$domain=sportfacts.net|topsporter.net","reason":"与现有规则冲突: @@||pagead2.googleadservices.com^$domain=sportshub.to","existingRule":"@@||pagead2.googleadservices.com^$domain=sportshub.to"}
+{"rule":"@@||pagead2.googleadservices.com^|$xmlhttprequest,domain=werfgt.fun","reason":"与现有规则冲突: @@||pagead2.googleadservices.com^$domain=sportshub.to","existingRule":"@@||pagead2.googleadservices.com^$domain=sportshub.to"}
+{"rule":"@@||pagead2.googlesyndication.com^$domain=fplstatistics.com","reason":"与现有规则冲突: @@||pagead2.googlesyndication.com^$domain=battlecats-db.com","existingRule":"@@||pagead2.googlesyndication.com^$domain=battlecats-db.com"}
+{"rule":"@@||pagead2.googlesyndication.com^$domain=ytlarge.com","reason":"与现有规则冲突: @@||pagead2.googlesyndication.com^$domain=battlecats-db.com","existingRule":"@@||pagead2.googlesyndication.com^$domain=battlecats-db.com"}
+{"rule":"@@||pagead2.googlesyndication.com^$xmlhttprequest,domain=rekidai-info.github.io","reason":"与现有规则冲突: @@||pagead2.googlesyndication.com^$domain=battlecats-db.com","existingRule":"@@||pagead2.googlesyndication.com^$domain=battlecats-db.com"}
+{"rule":"@@||passiontimes.hk^*-ad.php?","reason":"与现有规则冲突: @@||passiontimes.hk^$generichide","existingRule":"@@||passiontimes.hk^$generichide"}
+{"rule":"@@||passport.360.cn^$important","reason":"与现有规则冲突: @@||passport.360.cn^","existingRule":"@@||passport.360.cn^"}
+{"rule":"@@||payments.jagex.com^$stealth","reason":"与现有规则冲突: @@||payments.jagex.com^$jsinject","existingRule":"@@||payments.jagex.com^$jsinject"}
+{"rule":"@@||paypal.com^$important","reason":"与现有规则冲突: @@||paypal.com^","existingRule":"@@||paypal.com^"}
+{"rule":"@@||per*.segmentify.com^$domain=gratis.com","reason":"与现有规则冲突: @@||per*.segmentify.com^$app=com.carrefoursa.ecommerce","existingRule":"@@||per*.segmentify.com^$app=com.carrefoursa.ecommerce"}
+{"rule":"@@||per*.segmentify.com^$domain=mediamarkt.com.tr","reason":"与现有规则冲突: @@||per*.segmentify.com^$app=com.carrefoursa.ecommerce","existingRule":"@@||per*.segmentify.com^$app=com.carrefoursa.ecommerce"}
+{"rule":"@@||pingfore.qq.com^$important","reason":"与现有规则冲突: @@||pingfore.qq.com^","existingRule":"@@||pingfore.qq.com^"}
+{"rule":"@@||pingjs.qq.com^$important","reason":"与现有规则冲突: @@||pingjs.qq.com^","existingRule":"@@||pingjs.qq.com^"}
+{"rule":"@@||pingjs.qq.com^$~third-party","reason":"与现有规则冲突: @@||pingjs.qq.com^","existingRule":"@@||pingjs.qq.com^"}
+{"rule":"@@||pingtas.qq.com^$important","reason":"与现有规则冲突: @@||pingtas.qq.com^","existingRule":"@@||pingtas.qq.com^"}
+{"rule":"@@||pinterest.com^$generichide","reason":"与现有规则冲突: @@||pinterest.com^","existingRule":"@@||pinterest.com^"}
+{"rule":"@@||pinterest.com^$important","reason":"与现有规则冲突: @@||pinterest.com^","existingRule":"@@||pinterest.com^"}
+{"rule":"@@||pixel.adsafeprotected.com^$xmlhttprequest,domain=gentside.com|ohmymag.com","reason":"与现有规则冲突: @@||pixel.adsafeprotected.com^$domain=tio.ch","existingRule":"@@||pixel.adsafeprotected.com^$domain=tio.ch"}
+{"rule":"@@||pl-play.adtonos.com^$domain=tokfm.pl","reason":"与现有规则冲突: @@||pl-play.adtonos.com^$domain=radio-internetowe.com","existingRule":"@@||pl-play.adtonos.com^$domain=radio-internetowe.com"}
+{"rule":"@@||placehold.it^$important","reason":"与现有规则冲突: @@||placehold.it^","existingRule":"@@||placehold.it^"}
+{"rule":"@@||placeholdit.imgix.net^$important","reason":"与现有规则冲突: @@||placeholdit.imgix.net^","existingRule":"@@||placeholdit.imgix.net^"}
+{"rule":"@@||player.pl^$stealth","reason":"与现有规则冲突: @@||player.pl^$generichide","existingRule":"@@||player.pl^$generichide"}
+{"rule":"@@||poedb.tw^*ad$script,~third-party","reason":"与现有规则冲突: @@||poedb.tw^$generichide","existingRule":"@@||poedb.tw^$generichide"}
+{"rule":"@@||pos.baidu.com^$subdocument,domain=bigpixel.cn","reason":"与现有规则冲突: @@||pos.baidu.com^$script,domain=fxpan.com|htqyy.com","existingRule":"@@||pos.baidu.com^$script,domain=fxpan.com|htqyy.com"}
+{"rule":"@@||pos.baidu.com^*?di=u3160754&$domain=bigpixel.cn","reason":"与现有规则冲突: @@||pos.baidu.com^$script,domain=fxpan.com|htqyy.com","existingRule":"@@||pos.baidu.com^$script,domain=fxpan.com|htqyy.com"}
+{"rule":"@@||pricelist.skype.com^$important","reason":"与现有规则冲突: @@||pricelist.skype.com^","existingRule":"@@||pricelist.skype.com^"}
+{"rule":"@@||prod.telemetry.ros.rockstargames.com^$important","reason":"与现有规则冲突: @@||prod.telemetry.ros.rockstargames.com^","existingRule":"@@||prod.telemetry.ros.rockstargames.com^"}
+{"rule":"@@||protection.office.com^$important","reason":"与现有规则冲突: @@||*.protection.office.com^","existingRule":"@@||*.protection.office.com^"}
+{"rule":"@@||proton.me^$generichide","reason":"与现有规则冲突: @@||proton.me^$cookie","existingRule":"@@||proton.me^$cookie"}
+{"rule":"@@||proxy.plex.bz^$important","reason":"与现有规则冲突: @@||proxy.plex.bz^","existingRule":"@@||proxy.plex.bz^"}
+{"rule":"@@||proxy.plex.tv^$important","reason":"与现有规则冲突: @@||proxy.plex.tv^","existingRule":"@@||proxy.plex.tv^"}
+{"rule":"@@||proxy02.pop.ord.plex.bz^$important","reason":"与现有规则冲突: @@||proxy02.pop.ord.plex.bz^","existingRule":"@@||proxy02.pop.ord.plex.bz^"}
+{"rule":"@@||pstatp.com^$important","reason":"与现有规则冲突: @@||pstatp.com^","existingRule":"@@||pstatp.com^"}
+{"rule":"@@||pub.idqqimg.com^$important","reason":"与现有规则冲突: @@||pub.idqqimg.com^","existingRule":"@@||pub.idqqimg.com^"}
+{"rule":"@@||pubads.g.doubleclick.net^$domain=twitch.tv","reason":"与现有规则冲突: @@||pubads.g.doubleclick.net^$domain=popsugar.com","existingRule":"@@||pubads.g.doubleclick.net^$domain=popsugar.com"}
+{"rule":"@@||public-ubiservices.ubi.com^$stealth","reason":"与现有规则冲突: @@||public-ubiservices.ubi.com^$important","existingRule":"@@||public-ubiservices.ubi.com^$important"}
+{"rule":"@@||pubsub.plex.bz^$important","reason":"与现有规则冲突: @@||pubsub.plex.bz^","existingRule":"@@||pubsub.plex.bz^"}
+{"rule":"@@||pubsub.plex.tv^$important","reason":"与现有规则冲突: @@||pubsub.plex.tv^","existingRule":"@@||pubsub.plex.tv^"}
+{"rule":"@@||push.apple.com^$important","reason":"与现有规则冲突: @@||push.apple.com^","existingRule":"@@||push.apple.com^"}
+{"rule":"@@||push.m.youku.com^$important","reason":"与现有规则冲突: @@||push.m.youku.com^","existingRule":"@@||push.m.youku.com^"}
+{"rule":"@@||puui.qpic.cn^$important","reason":"与现有规则冲突: @@||puui.qpic.cn^","existingRule":"@@||puui.qpic.cn^"}
+{"rule":"@@||pv.sohu.com^$important","reason":"与现有规则冲突: @@||pv.sohu.com^","existingRule":"@@||pv.sohu.com^"}
+{"rule":"@@||pvtag.yahoo.co.jp^$script,domain=paypaymall.yahoo.co.jp","reason":"与现有规则冲突: @@||pvtag.yahoo.co.jp^$script,domain=paypayfleamarket.yahoo.co.jp","existingRule":"@@||pvtag.yahoo.co.jp^$script,domain=paypayfleamarket.yahoo.co.jp"}
+{"rule":"@@||qlogo.cn^$important","reason":"与现有规则冲突: @@||qlogo.cn^","existingRule":"@@||qlogo.cn^"}
+{"rule":"@@||quark.cn^$important","reason":"与现有规则冲突: @@||quark.cn^","existingRule":"@@||quark.cn^"}
+{"rule":"@@||qzonestyle.gtimg.cn^$important","reason":"与现有规则冲突: @@||qzonestyle.gtimg.cn^","existingRule":"@@||qzonestyle.gtimg.cn^"}
+{"rule":"@@||rackcdn.com^$stealth,domain=investing.com|forexpros.com","reason":"与现有规则冲突: @@||rackcdn.com^$domain=fapdu.com","existingRule":"@@||rackcdn.com^$domain=fapdu.com"}
+{"rule":"@@||raw.githubusercontent.com^$domain=viewscreen.githubusercontent.com","reason":"与现有规则冲突: @@||raw.githubusercontent.com^","existingRule":"@@||raw.githubusercontent.com^"}
+{"rule":"@@||raw.githubusercontent.com^$important","reason":"与现有规则冲突: @@||raw.githubusercontent.com^","existingRule":"@@||raw.githubusercontent.com^"}
+{"rule":"@@||realtime-chart.info^$stealth","reason":"与现有规则冲突: @@||realtime-chart.info^$script,stealth","existingRule":"@@||realtime-chart.info^$script,stealth"}
+{"rule":"@@||reddit.com^$generichide,badfilter","reason":"与现有规则冲突: @@||reddit.com^$generichide","existingRule":"@@||reddit.com^$generichide"}
+{"rule":"@@||reddit.com^$important","reason":"与现有规则冲突: @@||reddit.com^$generichide","existingRule":"@@||reddit.com^$generichide"}
+{"rule":"@@||redirector.googlevideo.com^$important","reason":"与现有规则冲突: @@||redirector.googlevideo.com^","existingRule":"@@||redirector.googlevideo.com^"}
+{"rule":"@@||res.cloudinary.com^$important","reason":"与现有规则冲突: @@||res.cloudinary.com^","existingRule":"@@||res.cloudinary.com^"}
+{"rule":"@@||resolver.msg.xiaomi.net^$important","reason":"与现有规则冲突: @@||resolver.msg.xiaomi.net^","existingRule":"@@||resolver.msg.xiaomi.net^"}
+{"rule":"@@||rtoaster.jp^$domain=attenir.co.jp","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||rtoaster.jp^$script,domain=animate-onlineshop.jp|brainpad.co.jp|hikaritv.net|lexus.jp|peachjohn.co.jp|rurubu.jp|melonbooks.co.jp","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||rtoaster.jp^$script,domain=cecile.co.jp","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||rtoaster.jp^$script,domain=cecile.co.jp|ec-store.net|jreastmall.com|lexus.jp|melonbooks.co.jp","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||rtoaster.jp^$script,domain=ec-store.net","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||rtoaster.jp^$script,domain=jreastmall.com","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||rtoaster.jp^$script,domain=kanaloco.jp","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||rtoaster.jp^$script,domain=store.united-arrows.co.jp","reason":"与现有规则冲突: @@||rtoaster.jp^$domain=3ple.jp","existingRule":"@@||rtoaster.jp^$domain=3ple.jp"}
+{"rule":"@@||s.click.taobao.com^$important","reason":"与现有规则冲突: @@||s.click.taobao.com^","existingRule":"@@||s.click.taobao.com^"}
+{"rule":"@@||s.click.taobao.com^$popup","reason":"与现有规则冲突: @@||s.click.taobao.com^","existingRule":"@@||s.click.taobao.com^"}
+{"rule":"@@||s.mzstatic.com^$important","reason":"与现有规则冲突: @@||s.mzstatic.com^","existingRule":"@@||s.mzstatic.com^"}
+{"rule":"@@||s.shopify.com^$important","reason":"与现有规则冲突: @@||s.shopify.com^","existingRule":"@@||s.shopify.com^"}
+{"rule":"@@||s.youtube.com^$important","reason":"与现有规则冲突: @@||s.youtube.com^","existingRule":"@@||s.youtube.com^"}
+{"rule":"@@||s.ytimg.com^$important","reason":"与现有规则冲突: @@||s.ytimg.com^","existingRule":"@@||s.ytimg.com^"}
+{"rule":"@@||s0.2mdn.net^$image,domain=client.falixnodes.net","reason":"与现有规则冲突: @@||s0.2mdn.net^","existingRule":"@@||s0.2mdn.net^"}
+{"rule":"@@||s0.2mdn.net^$important","reason":"与现有规则冲突: @@||s0.2mdn.net^","existingRule":"@@||s0.2mdn.net^"}
+{"rule":"@@||s2.youtube.com^$important","reason":"与现有规则冲突: @@||s2.youtube.com^","existingRule":"@@||s2.youtube.com^"}
+{"rule":"@@||s3.amazonaws.com^$stealth,domain=informationisbeautiful.net","reason":"与现有规则冲突: @@||s3.amazonaws.com^","existingRule":"@@||s3.amazonaws.com^"}
+{"rule":"@@||scontent-*.cdninstagram.com^$stealth,domain=wp.pl","reason":"与现有规则冲突: @@||scontent-*.cdninstagram.com^$stealth,domain=bella.tw","existingRule":"@@||scontent-*.cdninstagram.com^$stealth,domain=bella.tw"}
+{"rule":"@@||scorecardresearch.com^$domain=ticketmaster.com.au","reason":"与现有规则冲突: @@||scorecardresearch.com^$domain=abc.go.com","existingRule":"@@||scorecardresearch.com^$domain=abc.go.com"}
+{"rule":"@@||scorecardresearch.com^$third-party,domain=nissan.ru","reason":"与现有规则冲突: @@||scorecardresearch.com^$domain=abc.go.com","existingRule":"@@||scorecardresearch.com^$domain=abc.go.com"}
+{"rule":"@@||scorecardresearch.com^*/streamingtag_plugin_jwplayer.js","reason":"与现有规则冲突: @@||scorecardresearch.com^$domain=abc.go.com","existingRule":"@@||scorecardresearch.com^$domain=abc.go.com"}
+{"rule":"@@||sec.resource.xiaomi.net^$important","reason":"与现有规则冲突: @@||sec.resource.xiaomi.net^","existingRule":"@@||sec.resource.xiaomi.net^"}
+{"rule":"@@||secure.avangate.com^$important","reason":"与现有规则冲突: @@||secure.avangate.com^","existingRule":"@@||secure.avangate.com^"}
+{"rule":"@@||secure.brightcove.com^$important","reason":"与现有规则冲突: @@||secure.brightcove.com^","existingRule":"@@||secure.brightcove.com^"}
+{"rule":"@@||secure.netflix.com^$important","reason":"与现有规则冲突: @@||secure.netflix.com^","existingRule":"@@||secure.netflix.com^"}
+{"rule":"@@||secure.surveymonkey.com^$important","reason":"与现有规则冲突: @@||secure.surveymonkey.com^","existingRule":"@@||secure.surveymonkey.com^"}
+{"rule":"@@||security.microsoft.com^$important","reason":"与现有规则冲突: @@||*.security.microsoft.com^","existingRule":"@@||*.security.microsoft.com^"}
+{"rule":"@@||services.sonarr.tv^$important","reason":"与现有规则冲突: @@||services.sonarr.tv^","existingRule":"@@||services.sonarr.tv^"}
+{"rule":"@@||sharepoint.com^","reason":"与现有规则冲突: @@||*.sharepoint.com^","existingRule":"@@||*.sharepoint.com^"}
+{"rule":"@@||sharepoint.com^$important","reason":"与现有规则冲突: @@||*.sharepoint.com^","existingRule":"@@||*.sharepoint.com^"}
+{"rule":"@@||shorterall.com^$generichide","reason":"与现有规则冲突: @@||shorterall.com^$cookie=_gid","existingRule":"@@||shorterall.com^$cookie=_gid"}
+{"rule":"@@||sinaimg.cn^*/deco/*/sinaObj.js","reason":"与现有规则冲突: @@||sinaimg.cn^$stealth,domain=weibo.com","existingRule":"@@||sinaimg.cn^$stealth,domain=weibo.com"}
+{"rule":"@@||skyhook.sonarr.tv^$important","reason":"与现有规则冲突: @@||skyhook.sonarr.tv^","existingRule":"@@||skyhook.sonarr.tv^"}
+{"rule":"@@||skype.com^$important","reason":"与现有规则冲突: @@||*.skype.com^","existingRule":"@@||*.skype.com^"}
+{"rule":"@@||sls.update.microsoft.com^$important","reason":"与现有规则冲突: @@||sls.update.microsoft.com^","existingRule":"@@||sls.update.microsoft.com^"}
+{"rule":"@@||smallseotools.com^$generichide,badfilter","reason":"与现有规则冲突: @@||smallseotools.com^$generichide","existingRule":"@@||smallseotools.com^$generichide"}
+{"rule":"@@||snssdk.com^$important","reason":"与现有规则冲突: @@||snssdk.com^","existingRule":"@@||snssdk.com^"}
+{"rule":"@@||sofire.baidu.com^$important","reason":"与现有规则冲突: @@||sofire.baidu.com^","existingRule":"@@||sofire.baidu.com^"}
+{"rule":"@@||sonar.viously.com^$domain=supertoinette.com","reason":"与现有规则冲突: @@||sonar.viously.com^$domain=clubic.com","existingRule":"@@||sonar.viously.com^$domain=clubic.com"}
+{"rule":"@@||sonichits.com^$generichide,badfilter","reason":"与现有规则冲突: @@||sonichits.com^$generichide","existingRule":"@@||sonichits.com^$generichide"}
+{"rule":"@@||sourl.cn^$important","reason":"与现有规则冲突: @@||sourl.cn^","existingRule":"@@||sourl.cn^"}
+{"rule":"@@||sovrn.com^$domain=mens1069.com","reason":"与现有规则冲突: @@||sovrn.com^$domain=3dpchip.com","existingRule":"@@||sovrn.com^$domain=3dpchip.com"}
+{"rule":"@@||sovrn.com^$domain=technewsrooms.com","reason":"与现有规则冲突: @@||sovrn.com^$domain=3dpchip.com","existingRule":"@@||sovrn.com^$domain=3dpchip.com"}
+{"rule":"@@||spclient.wg.spotify.com^$important","reason":"与现有规则冲突: @@||spclient.wg.spotify.com^","existingRule":"@@||spclient.wg.spotify.com^"}
+{"rule":"@@||spiegel.de^$important","reason":"与现有规则冲突: @@||spiegel.de^$generichide","existingRule":"@@||spiegel.de^$generichide"}
+{"rule":"@@||ss.phncdn.com^$script,domain=redtube.com|redtube.net","reason":"与现有规则冲突: @@||ss.phncdn.com^","existingRule":"@@||ss.phncdn.com^"}
+{"rule":"@@||ssl.google-analytics.com^|$domain=sportfacts.net|topsporter.net","reason":"与现有规则冲突: @@||ssl.google-analytics.com^$domain=sportshub.to","existingRule":"@@||ssl.google-analytics.com^$domain=sportshub.to"}
+{"rule":"@@||ssl.google-analytics.com^|$xmlhttprequest,domain=werfgt.fun","reason":"与现有规则冲突: @@||ssl.google-analytics.com^$domain=sportshub.to","existingRule":"@@||ssl.google-analytics.com^$domain=sportshub.to"}
+{"rule":"@@||ssl.p.jwpcdn.com^$domain=bdsmstreak.com","reason":"与现有规则冲突: @@||ssl.p.jwpcdn.com^","existingRule":"@@||ssl.p.jwpcdn.com^"}
+{"rule":"@@||ssl.p.jwpcdn.com^$important","reason":"与现有规则冲突: @@||ssl.p.jwpcdn.com^","existingRule":"@@||ssl.p.jwpcdn.com^"}
+{"rule":"@@||stackblitz.com^$stealth=referrer","reason":"与现有规则冲突: @@||stackblitz.com^$generichide","existingRule":"@@||stackblitz.com^$generichide"}
+{"rule":"@@||staging.plex.tv^$important","reason":"与现有规则冲突: @@||staging.plex.tv^","existingRule":"@@||staging.plex.tv^"}
+{"rule":"@@||stat.y.qq.com^$important","reason":"与现有规则冲突: @@||stat.y.qq.com^","existingRule":"@@||stat.y.qq.com^"}
+{"rule":"@@||static.ips.apple.com^$important\"","reason":"与现有规则冲突: @@||static.ips.apple.com^$important","existingRule":"@@||static.ips.apple.com^$important"}
+{"rule":"@@||static.media.net^|$domain=sportfacts.net|topsporter.net","reason":"与现有规则冲突: @@||static.media.net^$domain=sportshub.to","existingRule":"@@||static.media.net^$domain=sportshub.to"}
+{"rule":"@@||static.media.net^|$xmlhttprequest,domain=werfgt.fun","reason":"与现有规则冲突: @@||static.media.net^$domain=sportshub.to","existingRule":"@@||static.media.net^$domain=sportshub.to"}
+{"rule":"@@||static.vocstatic.com^$script,stylesheet,domain=ideal.es","reason":"与现有规则冲突: @@||static.vocstatic.com^$script,domain=areapersonal.hoy.es","existingRule":"@@||static.vocstatic.com^$script,domain=areapersonal.hoy.es"}
+{"rule":"@@||stats.g.doubleclick.net^|$app=com.nttdocomo.android.danimeapp","reason":"与现有规则冲突: @@||stats.g.doubleclick.net^$domain=sportshub.to","existingRule":"@@||stats.g.doubleclick.net^$domain=sportshub.to"}
+{"rule":"@@||stats.g.doubleclick.net^|$domain=sportfacts.net|topsporter.net","reason":"与现有规则冲突: @@||stats.g.doubleclick.net^$domain=sportshub.to","existingRule":"@@||stats.g.doubleclick.net^$domain=sportshub.to"}
+{"rule":"@@||stats.g.doubleclick.net^|$xmlhttprequest,domain=werfgt.fun","reason":"与现有规则冲突: @@||stats.g.doubleclick.net^$domain=sportshub.to","existingRule":"@@||stats.g.doubleclick.net^$domain=sportshub.to"}
+{"rule":"@@||stats.wp.com^|$domain=sportfacts.net|topsporter.net","reason":"与现有规则冲突: @@||stats.wp.com^$domain=sportshub.to","existingRule":"@@||stats.wp.com^$domain=sportshub.to"}
+{"rule":"@@||stats.wp.com^|$xmlhttprequest,domain=werfgt.fun","reason":"与现有规则冲突: @@||stats.wp.com^$domain=sportshub.to","existingRule":"@@||stats.wp.com^$domain=sportshub.to"}
+{"rule":"@@||status.plex.tv^$important","reason":"与现有规则冲突: @@||status.plex.tv^","existingRule":"@@||status.plex.tv^"}
+{"rule":"@@||store.storeimages.cdn-apple.com^*/appmeasurement.js$domain=apple.com","reason":"与现有规则冲突: @@||store.storeimages.cdn-apple.com^$domain=apple.com,stealth=referrer","existingRule":"@@||store.storeimages.cdn-apple.com^$domain=apple.com,stealth=referrer"}
+{"rule":"@@||support.microsoft.com^$important","reason":"与现有规则冲突: @@||support.microsoft.com^","existingRule":"@@||support.microsoft.com^"}
+{"rule":"@@||syndicatedsearch.goog^$domain=wotaku.moe|syndicatedsearch.goog","reason":"与现有规则冲突: @@||syndicatedsearch.goog^$domain=paint.net","existingRule":"@@||syndicatedsearch.goog^$domain=paint.net"}
+{"rule":"@@||szhr.com.cn^*ad","reason":"与现有规则冲突: @@||szhr.com.cn^$generichide","existingRule":"@@||szhr.com.cn^$generichide"}
+{"rule":"@@||szhr.com^*ad","reason":"与现有规则冲突: @@||szhr.com^$generichide","existingRule":"@@||szhr.com^$generichide"}
+{"rule":"@@||t.co^$important","reason":"与现有规则冲突: @@||t.co^","existingRule":"@@||t.co^"}
+{"rule":"@@||t0.ssl.ak.dynamic.tiles.virtualearth.net^$important","reason":"与现有规则冲突: @@||t0.ssl.ak.dynamic.tiles.virtualearth.net^","existingRule":"@@||t0.ssl.ak.dynamic.tiles.virtualearth.net^"}
+{"rule":"@@||t0.ssl.ak.tiles.virtualearth.net^$important","reason":"与现有规则冲突: @@||t0.ssl.ak.tiles.virtualearth.net^","existingRule":"@@||t0.ssl.ak.tiles.virtualearth.net^"}
+{"rule":"@@||taobao.com^*&adgroupid=","reason":"与现有规则冲突: @@||taobao.com^","existingRule":"@@||taobao.com^"}
+{"rule":"@@||tawk.to^$important","reason":"与现有规则冲突: @@||tawk.to^","existingRule":"@@||tawk.to^"}
+{"rule":"@@||tawk.to^$stealth","reason":"与现有规则冲突: @@||tawk.to^","existingRule":"@@||tawk.to^"}
+{"rule":"@@||teams.live.com^$important","reason":"与现有规则冲突: @@||teams.live.com^$generichide","existingRule":"@@||teams.live.com^$generichide"}
+{"rule":"@@||teams.microsoft.com^$generichide","reason":"与现有规则冲突: @@||*.teams.microsoft.com^","existingRule":"@@||*.teams.microsoft.com^"}
+{"rule":"@@||teams.microsoft.com^$important","reason":"与现有规则冲突: @@||*.teams.microsoft.com^","existingRule":"@@||*.teams.microsoft.com^"}
+{"rule":"@@||tedcdn.com^$important","reason":"与现有规则冲突: @@||tedcdn.com^","existingRule":"@@||tedcdn.com^"}
+{"rule":"@@||themoviedb.com^$important","reason":"与现有规则冲突: @@||themoviedb.com^","existingRule":"@@||themoviedb.com^"}
+{"rule":"@@||thepiratebay.org^$~script,domain=thepiratebay.org","reason":"与现有规则冲突: @@||thepiratebay.org^$subdocument","existingRule":"@@||thepiratebay.org^$subdocument"}
+{"rule":"@@||thetvdb.com^$important","reason":"与现有规则冲突: @@||thetvdb.com^","existingRule":"@@||thetvdb.com^"}
+{"rule":"@@||tinyurl.com^$important","reason":"与现有规则冲突: @@||tinyurl.com^","existingRule":"@@||tinyurl.com^"}
+{"rule":"@@||title.auth.xboxlive.com^$important","reason":"与现有规则冲突: @@||title.auth.xboxlive.com^","existingRule":"@@||title.auth.xboxlive.com^"}
+{"rule":"@@||title.mgt.xboxlive.com^$important","reason":"与现有规则冲突: @@||title.mgt.xboxlive.com^","existingRule":"@@||title.mgt.xboxlive.com^"}
+{"rule":"@@||tpc.googlesyndication.com^$domain=hoyts.com.au","reason":"与现有规则冲突: @@||tpc.googlesyndication.com^$domain=edition.cnn.com","existingRule":"@@||tpc.googlesyndication.com^$domain=edition.cnn.com"}
+{"rule":"@@||tpc.googlesyndication.com^$domain=ytlarge.com","reason":"与现有规则冲突: @@||tpc.googlesyndication.com^$domain=edition.cnn.com","existingRule":"@@||tpc.googlesyndication.com^$domain=edition.cnn.com"}
+{"rule":"@@||tpstelemetry.tencent.com^$important","reason":"与现有规则冲突: @@||tpstelemetry.tencent.com^","existingRule":"@@||tpstelemetry.tencent.com^"}
+{"rule":"@@||tracker.ai.xiaomi.com^$important","reason":"与现有规则冲突: @@||tracker.ai.xiaomi.com^","existingRule":"@@||tracker.ai.xiaomi.com^"}
+{"rule":"@@||tracking.epicgames.com^$important","reason":"与现有规则冲突: @@||tracking.epicgames.com^","existingRule":"@@||tracking.epicgames.com^"}
+{"rule":"@@||traffic.libsyn.com^$important","reason":"与现有规则冲突: @@||traffic.libsyn.com^","existingRule":"@@||traffic.libsyn.com^"}
+{"rule":"@@||ttkdex.com^*ad$~third-party","reason":"与现有规则冲突: @@||ttkdex.com^$generichide","existingRule":"@@||ttkdex.com^$generichide"}
+{"rule":"@@||tv.2345.com^$important","reason":"与现有规则冲突: @@||tv.2345.com^","existingRule":"@@||tv.2345.com^"}
+{"rule":"@@||tvdb2.plex.tv^$important","reason":"与现有规则冲突: @@||tvdb2.plex.tv^","existingRule":"@@||tvdb2.plex.tv^"}
+{"rule":"@@||tvthemes.plexapp.com^$important","reason":"与现有规则冲突: @@||tvthemes.plexapp.com^","existingRule":"@@||tvthemes.plexapp.com^"}
+{"rule":"@@||twimg.com^","reason":"与现有规则冲突: @@||*.twimg.com^$important","existingRule":"@@||*.twimg.com^$important"}
+{"rule":"@@||twimg.com^$important","reason":"与现有规则冲突: @@||*.twimg.com^$important","existingRule":"@@||*.twimg.com^$important"}
+{"rule":"@@||twitch.tv^$websocket,permissions","reason":"与现有规则冲突: @@||twitch.tv^$generichide","existingRule":"@@||twitch.tv^$generichide"}
+{"rule":"@@||twitter.com^$important","reason":"与现有规则冲突: @@||twitter.com^","existingRule":"@@||twitter.com^"}
+{"rule":"@@||ui.skype.com^$important","reason":"与现有规则冲突: @@||ui.skype.com^","existingRule":"@@||ui.skype.com^"}
+{"rule":"@@||unpkg.com^$script,domain=vidsrc.stream","reason":"与现有规则冲突: @@||unpkg.com^$important","existingRule":"@@||unpkg.com^$important"}
+{"rule":"@@||updata.miui.com^$important","reason":"与现有规则冲突: @@||updata.miui.com^","existingRule":"@@||updata.miui.com^"}
+{"rule":"@@||update.360safe.com^$important","reason":"与现有规则冲突: @@||update.360safe.com^","existingRule":"@@||update.360safe.com^"}
+{"rule":"@@||update.microsoft.com^$important","reason":"与现有规则冲突: @@||update.microsoft.com^","existingRule":"@@||update.microsoft.com^"}
+{"rule":"@@||update.xboxlive.com^$important","reason":"与现有规则冲突: @@||update.xboxlive.com^","existingRule":"@@||update.xboxlive.com^"}
+{"rule":"@@||upgrade.scdn.com^$important","reason":"与现有规则冲突: @@||upgrade.scdn.com^","existingRule":"@@||upgrade.scdn.com^"}
+{"rule":"@@||v.gdt.qq.com^$important","reason":"与现有规则冲突: @@||v.gdt.qq.com^","existingRule":"@@||v.gdt.qq.com^"}
+{"rule":"@@||v.shopify.com^$important","reason":"与现有规则冲突: @@||v.shopify.com^","existingRule":"@@||v.shopify.com^"}
+{"rule":"@@||v10.events.data.microsoft.com^$important","reason":"与现有规则冲突: @@||v10.events.data.microsoft.com^","existingRule":"@@||v10.events.data.microsoft.com^"}
+{"rule":"@@||v2.jinrishici.com^$important","reason":"与现有规则冲突: @@||v2.jinrishici.com^","existingRule":"@@||v2.jinrishici.com^"}
+{"rule":"@@||video-stats.l.google.com^$important","reason":"与现有规则冲突: @@||video-stats.l.google.com^","existingRule":"@@||video-stats.l.google.com^"}
+{"rule":"@@||video.repubblica.it^*/nielsen.js","reason":"与现有规则冲突: @@||video.repubblica.it^$generichide","existingRule":"@@||video.repubblica.it^$generichide"}
+{"rule":"@@||videos.vidible.tv^$important","reason":"与现有规则冲突: @@||videos.vidible.tv^","existingRule":"@@||videos.vidible.tv^"}
+{"rule":"@@||vidible.tv^*/ComScore.Viewability.js","reason":"与现有规则冲突: @@||vidible.tv^*/ComScore.StreamSense.js","existingRule":"@@||vidible.tv^*/ComScore.StreamSense.js"}
+{"rule":"@@||vidtech.cbsinteractive.com^*/AkamaiAnalytics.swf$domain=kuathletics.com|mutigers.com|okstate.com","reason":"与现有规则冲突: @@||vidtech.cbsinteractive.com^","existingRule":"@@||vidtech.cbsinteractive.com^"}
+{"rule":"@@||virtualearth.net^$stealth,domain=bing.com","reason":"与现有规则冲突: @@||*.virtualearth.net^","existingRule":"@@||*.virtualearth.net^"}
+{"rule":"@@||virtualearth.net^*/LoggingService.svc/Log?$script,domain=bing.com","reason":"与现有规则冲突: @@||*.virtualearth.net^","existingRule":"@@||*.virtualearth.net^"}
+{"rule":"@@||vivo.sx^$stealth","reason":"与现有规则冲突: @@||vivo.sx^$generichide","existingRule":"@@||vivo.sx^$generichide"}
+{"rule":"@@||vms-players.minutemediaservices.com^$script,domain=si.com","reason":"与现有规则冲突: @@||vms-players.minutemediaservices.com^$script,domain=beargoggleson.com","existingRule":"@@||vms-players.minutemediaservices.com^$script,domain=beargoggleson.com"}
+{"rule":"@@||vv.video.qq.com^$important","reason":"与现有规则冲突: @@||vv.video.qq.com^","existingRule":"@@||vv.video.qq.com^"}
+{"rule":"@@||waimai-guide.ele.me^$important","reason":"与现有规则冲突: @@||waimai-guide.ele.me^","existingRule":"@@||waimai-guide.ele.me^"}
+{"rule":"@@||walla.co.il^$generichide","reason":"与现有规则冲突: @@||walla.co.il^$csp","existingRule":"@@||walla.co.il^$csp"}
+{"rule":"@@||wbapp.mobile.sina.cn^$important","reason":"与现有规则冲突: @@||wbapp.mobile.sina.cn^","existingRule":"@@||wbapp.mobile.sina.cn^"}
+{"rule":"@@||wdcpalt.microsoft.com^$important","reason":"与现有规则冲突: @@||wdcpalt.microsoft.com^","existingRule":"@@||wdcpalt.microsoft.com^"}
+{"rule":"@@||we.tl^$important","reason":"与现有规则冲突: @@||we.tl^","existingRule":"@@||we.tl^"}
+{"rule":"@@||weixin.qq.com^$important","reason":"与现有规则冲突: @@||weixin.qq.com^","existingRule":"@@||weixin.qq.com^"}
+{"rule":"@@||whatsapp.com^$generichide,badfilter","reason":"与现有规则冲突: @@||whatsapp.com^$generichide","existingRule":"@@||whatsapp.com^$generichide"}
+{"rule":"@@||whatsapp.com^$important","reason":"与现有规则冲突: @@||whatsapp.com^$generichide","existingRule":"@@||whatsapp.com^$generichide"}
+{"rule":"@@||widget-cdn.rpxnow.com^$important","reason":"与现有规则冲突: @@||widget-cdn.rpxnow.com^","existingRule":"@@||widget-cdn.rpxnow.com^"}
+{"rule":"@@||wikipedia.org^$generichide","reason":"与现有规则冲突: @@||wikipedia.org^","existingRule":"@@||wikipedia.org^"}
+{"rule":"@@||wikipedia.org^$important","reason":"与现有规则冲突: @@||wikipedia.org^","existingRule":"@@||wikipedia.org^"}
+{"rule":"@@||win10.ipv6.microsoft.com^$important","reason":"与现有规则冲突: @@||win10.ipv6.microsoft.com^","existingRule":"@@||win10.ipv6.microsoft.com^"}
+{"rule":"@@||windows.com^$important","reason":"与现有规则冲突: @@||windows.com^","existingRule":"@@||windows.com^"}
+{"rule":"@@||wl.jd.com^$important","reason":"与现有规则冲突: @@||wl.jd.com^","existingRule":"@@||wl.jd.com^"}
+{"rule":"@@||wordpress.com^$important","reason":"与现有规则冲突: @@||wordpress.com^","existingRule":"@@||wordpress.com^"}
+{"rule":"@@||wp.com^$important","reason":"与现有规则冲突: @@||wp.com^","existingRule":"@@||wp.com^"}
+{"rule":"@@||ws.audioscrobbler.com^$important","reason":"与现有规则冲突: @@||ws.audioscrobbler.com^","existingRule":"@@||ws.audioscrobbler.com^"}
+{"rule":"@@||www.apple.com^$important","reason":"与现有规则冲突: @@||www.apple.com^","existingRule":"@@||www.apple.com^"}
+{"rule":"@@||www.googleapis.com^$important","reason":"与现有规则冲突: @@||www.googleapis.com^","existingRule":"@@||www.googleapis.com^"}
+{"rule":"@@||www.msftconnecttest.com^$important","reason":"与现有规则冲突: @@||www.msftconnecttest.com^","existingRule":"@@||www.msftconnecttest.com^"}
+{"rule":"@@||www.paypalobjects.com^$important","reason":"与现有规则冲突: @@||www.paypalobjects.com^","existingRule":"@@||www.paypalobjects.com^"}
+{"rule":"@@||www.youtube.com^$important","reason":"与现有规则冲突: @@||www.youtube.com^$generichide","existingRule":"@@||www.youtube.com^$generichide"}
+{"rule":"@@||wxsnsdy.wxs.qq.com^$important","reason":"与现有规则冲突: @@||wxsnsdy.wxs.qq.com^","existingRule":"@@||wxsnsdy.wxs.qq.com^"}
+{"rule":"@@||xbox.ipv6.microsoft.com^$important","reason":"与现有规则冲突: @@||xbox.ipv6.microsoft.com^","existingRule":"@@||xbox.ipv6.microsoft.com^"}
+{"rule":"@@||xboxexperiencesprod.experimentation.xboxlive.com^$important","reason":"与现有规则冲突: @@||xboxexperiencesprod.experimentation.xboxlive.com^","existingRule":"@@||xboxexperiencesprod.experimentation.xboxlive.com^"}
+{"rule":"@@||xboxlive.com^$stealth","reason":"与现有规则冲突: @@||xboxlive.com^$important","existingRule":"@@||xboxlive.com^$important"}
+{"rule":"@@||xboxservices.com^$stealth","reason":"与现有规则冲突: @@||xboxservices.com^$important","existingRule":"@@||xboxservices.com^$important"}
+{"rule":"@@||xflight.xboxlive.com^$important","reason":"与现有规则冲突: @@||xflight.xboxlive.com^","existingRule":"@@||xflight.xboxlive.com^"}
+{"rule":"@@||xhslink.com^$important","reason":"与现有规则冲突: @@||xhslink.com^","existingRule":"@@||xhslink.com^"}
+{"rule":"@@||xkms.xboxlive.com^$important","reason":"与现有规则冲突: @@||xkms.xboxlive.com^","existingRule":"@@||xkms.xboxlive.com^"}
+{"rule":"@@||xp.apple.com^$important","reason":"与现有规则冲突: @@||xp.apple.com^","existingRule":"@@||xp.apple.com^"}
+{"rule":"@@||xsts.auth.xboxlive.com^$important","reason":"与现有规则冲突: @@||xsts.auth.xboxlive.com^","existingRule":"@@||xsts.auth.xboxlive.com^"}
+{"rule":"@@||youtu.be^$important","reason":"与现有规则冲突: @@||youtu.be^","existingRule":"@@||youtu.be^"}
+{"rule":"@@||youtube-nocookie.com^$important","reason":"与现有规则冲突: @@||youtube-nocookie.com^","existingRule":"@@||youtube-nocookie.com^"}
+{"rule":"@@||yt3.ggpht.com^$important","reason":"与现有规则冲突: @@||yt3.ggpht.com^","existingRule":"@@||yt3.ggpht.com^"}
+{"rule":"@@||zhan.vivo.com.cn^$important","reason":"与现有规则冲突: @@||zhan.vivo.com.cn^","existingRule":"@@||zhan.vivo.com.cn^"}

@@ -1,175 +1,249 @@
 const { createHash } = require("crypto");
 
-// 预编译正则表达式
-const RULE_REGEX = {
-  DOMAIN: /@@?\|\|([\w\-.*]+)\^/,
-  HOSTS: /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s+([\w\-.]+)/,
-  ABLOCK: /^(\|{1,2})([\w\-.*]+)\^?/,
-};
-
-class AdGuardListProcessor {
+class AdvancedAdGuardProcessor {
   constructor() {
-    // 使用Map保持插入顺序
+    // 有效规则存储
     this.whitelist = new Map();
     this.blacklist = new Map();
-    // 域名索引树
-    this.domainTree = {
-      wildcards: new Set(),
-      exact: new Set(),
+
+    // 排除规则存储（按类型分类）
+    this.excluded = {
+      whitelist: {
+        conflicts: new Map(), // 白名单内部的冲突
+        duplicates: new Set(),
+        invalid: new Set(),
+      },
+      blacklist: {
+        conflicts: new Map(), // 黑名单规则与白名单的冲突
+        duplicates: new Set(),
+        invalid: new Set(),
+      },
     };
-    // 哈希去重
-    this.hashCache = new Set();
+
+    // 辅助数据结构
+    this.domainIndex = new Map(); // domain => { type: 'wl'/'bl', rule: string }
+    this.wlHashes = new Set();
+    this.blHashes = new Set();
   }
 
-  // 标准化域名格式
-  _normalize(domain) {
-    return domain.replace(/^\*\.|\.\*$/g, "").toLowerCase();
+  process(whitelistInput, blacklistInput) {
+    this._processWhiteList(whitelistInput);
+    this._processBlackList(blacklistInput);
+    return this._compileResults();
   }
 
-  // 生成规则哈希
+  _processWhiteList(rules) {
+    rules.forEach((rule) => {
+      const parsed = this._parseWhiteRule(rule);
+
+      if (!parsed.valid) {
+        this.excluded.whitelist.invalid.add(rule);
+        return;
+      }
+
+      if (this.wlHashes.has(parsed.hash)) {
+        this.excluded.whitelist.duplicates.add(rule);
+        return;
+      }
+
+      // 白名单内部冲突检测
+      const existing = this.domainIndex.get(parsed.domain);
+      if (existing) {
+        this.excluded.whitelist.conflicts.set(rule, {
+          reason: `与现有规则冲突: ${existing.rule}`,
+          existingRule: existing.rule,
+        });
+        return;
+      }
+
+      this._addWhiteRule(parsed);
+    });
+  }
+
+  _processBlackList(rules) {
+    rules.forEach((originalRule) => {
+      const parsed = this._parseBlackRule(originalRule);
+
+      if (!parsed.valid) {
+        this.excluded.blacklist.invalid.add(originalRule);
+        return;
+      }
+
+      if (this.blHashes.has(parsed.hash)) {
+        this.excluded.blacklist.duplicates.add(originalRule);
+        return;
+      }
+
+      // 黑名单冲突检测（与白名单）
+      const conflict = this._checkConflict(parsed.domain);
+      if (conflict) {
+        this.excluded.blacklist.conflicts.set(originalRule, {
+          reason: `被白名单规则阻止: ${conflict.rule}`,
+          whiteRule: conflict.rule,
+        });
+        return;
+      }
+
+      this._addBlackRule(parsed);
+    });
+  }
+
+  _parseWhiteRule(rule) {
+    const trimmed = rule.trim();
+    const match = trimmed.match(/^@@\|\|([\w\-.*]+)\^/);
+
+    if (!match) return { valid: false };
+
+    const domain = this._normalizeDomain(match[1]);
+    return {
+      valid: true,
+      type: "whitelist",
+      domain: domain,
+      rule: trimmed,
+      hash: this._hash(trimmed),
+    };
+  }
+
+  _parseBlackRule(originalRule) {
+    const trimmed = originalRule.trim();
+    let domain, converted;
+
+    // 尝试匹配不同格式
+    const adgMatch = trimmed.match(/^\|\|([\w\-.*]+)\^/);
+    const hostsMatch = trimmed.match(/^\d+\.\d+\.\d+\.\d+\s+([\w\-.]+)/);
+    const ablockMatch = trimmed.match(/^\|([\w\-.]+)/);
+
+    if (adgMatch) {
+      domain = adgMatch[1];
+      converted = trimmed;
+    } else if (hostsMatch) {
+      domain = hostsMatch[1];
+      converted = `||${domain}^`;
+    } else if (ablockMatch) {
+      domain = ablockMatch[1];
+      converted = `||${domain}^`;
+    } else {
+      return { valid: false };
+    }
+
+    const normalized = this._normalizeDomain(domain);
+    return {
+      valid: true,
+      type: "blacklist",
+      domain: normalized,
+      rule: converted,
+      hash: this._hash(converted),
+      original: trimmed,
+    };
+  }
+
+  _addWhiteRule(parsed) {
+    this.wlHashes.add(parsed.hash);
+    this.whitelist.set(parsed.hash, parsed.rule);
+    this.domainIndex.set(parsed.domain, {
+      type: "wl",
+      rule: parsed.rule,
+    });
+  }
+
+  _addBlackRule(parsed) {
+    this.blHashes.add(parsed.hash);
+    this.blacklist.set(parsed.hash, parsed.rule);
+    this.domainIndex.set(parsed.domain, {
+      type: "bl",
+      rule: parsed.rule,
+    });
+  }
+
+  _checkConflict(domain) {
+    const parts = domain.split(".");
+    for (let i = 0; i < parts.length; i++) {
+      const checkDomain = parts.slice(i).join(".");
+      const entry = this.domainIndex.get(checkDomain);
+      if (entry && entry.type === "wl") {
+        return entry;
+      }
+    }
+    return null;
+  }
+
+  _compileResults() {
+    return {
+      whitelist: Array.from(this.whitelist.values()),
+      blacklist: Array.from(this.blacklist.values()),
+      excluded: {
+        whitelist: {
+          conflicts: this._mapToArray(this.excluded.whitelist.conflicts),
+          duplicates: Array.from(this.excluded.whitelist.duplicates),
+          invalid: Array.from(this.excluded.whitelist.invalid),
+        },
+        blacklist: {
+          conflicts: this._mapToArray(this.excluded.blacklist.conflicts),
+          duplicates: Array.from(this.excluded.blacklist.duplicates),
+          invalid: Array.from(this.excluded.blacklist.invalid),
+        },
+      },
+      stats: {
+        total: {
+          whitelist: this.whitelist.size,
+          blacklist: this.blacklist.size,
+        },
+        excluded: {
+          whitelist: {
+            conflicts: this.excluded.whitelist.conflicts.size,
+            duplicates: this.excluded.whitelist.duplicates.size,
+            invalid: this.excluded.whitelist.invalid.size,
+          },
+          blacklist: {
+            conflicts: this.excluded.blacklist.conflicts.size,
+            duplicates: this.excluded.blacklist.duplicates.size,
+            invalid: this.excluded.blacklist.invalid.size,
+          },
+        },
+      },
+    };
+  }
+
+  _mapToArray(map) {
+    return Array.from(map.entries()).map(([rule, info]) => ({
+      rule,
+      ...info,
+    }));
+  }
+
   _hash(rule) {
     return createHash("sha1").update(rule).digest("hex");
   }
 
-  // 处理单条规则
-  _processRule(rule, isWhitelist) {
-    const trimmed = rule.trim();
-    if (!trimmed || trimmed.startsWith("!")) return null;
-
-    // 哈希去重检查
-    const hash = this._hash(trimmed);
-    if (this.hashCache.has(hash)) return null;
-    this.hashCache.add(hash);
-
-    let domain, converted;
-
-    // 白名单处理流程
-    if (isWhitelist) {
-      const match = trimmed.match(RULE_REGEX.DOMAIN);
-      if (match) {
-        domain = this._normalize(match[1]);
-        this._addToDomainTree(domain, true);
-        return { domain, rule: trimmed, hash };
-      }
-      return null;
-    }
-
-    // 黑名单转换流程
-    if (RULE_REGEX.HOSTS.test(trimmed)) {
-      const [, domain] = trimmed.match(RULE_REGEX.HOSTS);
-      converted = `||${domain}^`;
-    } else if (RULE_REGEX.ABLOCK.test(trimmed)) {
-      const [, prefix, domain] = trimmed.match(RULE_REGEX.ABLOCK);
-      converted = prefix === "|" ? `||${domain}^` : `${prefix}${domain}^`;
-    } else if (RULE_REGEX.DOMAIN.test(trimmed)) {
-      converted = trimmed; // 已经是AdGuard格式
-    } else {
-      return null; // 无法识别的格式
-    }
-
-    // 提取转换后的域名
-    const domainMatch = converted.match(RULE_REGEX.DOMAIN);
-    domain = domainMatch ? this._normalize(domainMatch[1]) : null;
-
-    return { domain, rule: converted, hash };
-  }
-
-  // 构建域名索引树
-  _addToDomainTree(domain, isWhitelist) {
-    if (domain.includes("*")) {
-      this.domainTree.wildcards.add(domain.replace(/\*/g, ""));
-    } else {
-      this.domainTree.exact.add(domain);
-
-      // 自动添加通配符检测
-      const parts = domain.split(".");
-      if (parts.length > 2) {
-        this.domainTree.wildcards.add(parts.slice(1).join("."));
-      }
-    }
-  }
-
-  // 冲突检测
-  _checkConflict(domain) {
-    // 精确匹配检查
-    if (this.domainTree.exact.has(domain)) return true;
-
-    // 通配符匹配检查
-    const parts = domain.split(".");
-    for (let i = 0; i < parts.length - 1; i++) {
-      const checkDomain = parts.slice(i).join(".");
-      if (this.domainTree.wildcards.has(checkDomain)) return true;
-    }
-
-    return false;
-  }
-
-  // 处理白名单数组
-  processWhitelist(list) {
-    list.forEach((rule) => {
-      const processed = this._processRule(rule, true);
-      if (processed) {
-        this.whitelist.set(processed.hash, processed.rule);
-      }
-    });
-  }
-
-  // 处理黑名单数组
-  processBlacklist(list) {
-    list.forEach((rule) => {
-      const processed = this._processRule(rule, false);
-      if (processed) {
-        if (!processed.domain || !this._checkConflict(processed.domain)) {
-          this.blacklist.set(processed.hash, processed.rule);
-        }
-      }
-    });
-  }
-
-  // 获取处理结果
-  getResults() {
-    return {
-      whitelist: Array.from(this.whitelist.values()),
-      blacklist: Array.from(this.blacklist.values()),
-      stats: {
-        total: this.whitelist.size + this.blacklist.size,
-        whitelist: this.whitelist.size,
-        blacklist: this.blacklist.size,
-        conflicts:
-          this.hashCache.size - (this.whitelist.size + this.blacklist.size),
-      },
-    };
+  _normalizeDomain(domain) {
+    return domain
+      .replace(/^\*\.|\.\*$/g, "")
+      .toLowerCase()
+      .split(".")
+      .filter((p) => p !== "*")
+      .join(".");
   }
 }
 
 // 使用示例
-const processor = new AdGuardListProcessor();
-
-function optimizeProcessing(blacklist, whitelist) {
-  // 处理流程
-  processor.processWhitelist(whitelist);
-  processor.processBlacklist(blacklist);
-  // 获取结果
-  const result = processor.getResults();
+function optimizeProcessing(blacklist = [], whitelist = []) {
+  const processor = new AdvancedAdGuardProcessor();
+  const result = processor.process(whitelist, blacklist);
   return result;
 }
 
-/* 输出示例：
-==== 白名单规则 ====
-@@||example.com^
-@@||trusted.org^
-@@||safe.com^
+/* 示例输出：
+生效白名单: [ '@@||example.com^' ]
+生效黑名单: [ '||tracker.com^' ]
 
-==== 黑名单规则 ====
-||tracking.com^
-||ads.com^
+排除的白名单规则:
+- 冲突: []
+- 重复: [ '@@||example.com^' ]
+- 无效: [ '#@ invalid-whitelist' ]
 
-统计信息: {
-  total: 5,
-  whitelist: 3,
-  blacklist: 2,
-  conflicts: 2
-}
+排除的黑名单规则:
+- 冲突: [ { rule: '||example.com^', reason: '被白名单规则阻止: @@||example.com^', ... } ]
+- 重复: [ '||tracker.com^' ]
+- 无效: [ 'invalid-blacklist' ]
 */
-
 module.exports = { optimizeProcessing };
