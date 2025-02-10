@@ -268,12 +268,12 @@ class FilteredAdGuardProcessor {
 }
 
 // 使用示例
-function optimizeProcessing(blacklist = [], whitelist = []) {
+const optimizeProcessing = async (blacklist = [], whitelist = []) => {
   const processor = new FilteredAdGuardProcessor();
   const result = processor.process(whitelist, blacklist);
   console.log("\n统计信息:", result.stats);
   return result;
-}
+};
 
 // console.log('转换后的有效规则:');
 // console.log('- 白名单:', result.effective.whitelist);

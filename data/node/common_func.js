@@ -21,35 +21,60 @@ const readDirContent = promisify(fs.readdir);
  * @param {string} data - 要写入文件的数据。
  * @param {number} [sizeLimit=100] - 文件大小限制，单位为 MB（默认：100 MB）。
  */
-async function writeFileWithSizeCheck(filePath, data, sizeLimit = 100) {
+const writeFileWithSizeCheck = async (filePath, data, sizeLimit = 100) => {
   const chunkSize = sizeLimit * 1024 * 1024; // 将 MB 转换为字节
   const directory = path.dirname(filePath); // 从文件路径中提取目录
   const fileName = path.basename(filePath, path.extname(filePath)); // 提取文件名（不带扩展名）
   const fileExtension = path.extname(filePath); // 提取文件扩展名
+  const textEncoder = new TextEncoder();
 
-  // 确保目录存在
-  await mkdir(directory, { recursive: true });
+  try {
+    // 确保目录存在
+    await mkdir(directory, { recursive: true });
 
-  // 如果数据小于块大小，直接写入文件
-  if (Buffer.byteLength(data, "utf8") <= chunkSize) {
-    await writeFileContent(filePath, data, "utf8");
-    console.log(`文件写入成功: ${filePath}`);
-    return;
+    // 如果数据小于块大小，直接写入文件
+    if (textEncoder.encode(data).length <= chunkSize) {
+      await writeFileContent(filePath, data, "utf8");
+      console.log(`文件写入成功: ${filePath}`);
+      return;
+    }
+
+    // 将数据拆分为块，并确保每一行是完整的
+    let chunkIndex = 1;
+    let startIndex = 0;
+
+    while (startIndex < data.length) {
+      // 计算当前块的结束位置
+      let endIndex = startIndex + chunkSize;
+      if (endIndex > data.length) {
+        endIndex = data.length;
+      }
+
+      // 查找最后一个换行符的位置
+      const lastNewlineIndex = data.lastIndexOf("\n", endIndex);
+      if (lastNewlineIndex > startIndex) {
+        endIndex = lastNewlineIndex + 1; // 包含换行符
+      }
+
+      // 获取当前块的数据
+      const chunk = data.slice(startIndex, endIndex);
+
+      // 写入当前块
+      const chunkFilePath = path.join(
+        directory,
+        `${fileName}-part-${chunkIndex}${fileExtension}`
+      );
+      await writeFileContent(chunkFilePath, chunk, "utf8");
+      console.log(`块文件写入成功: ${chunkFilePath}`);
+
+      // 更新起始位置和块索引
+      startIndex = endIndex;
+      chunkIndex++;
+    }
+  } catch (error) {
+    console.error("写入文件时出错:", error);
   }
-
-  // 将数据拆分为块
-  let chunkIndex = 1;
-  for (let i = 0; i < data.length; i += chunkSize) {
-    const chunk = data.slice(i, i + chunkSize);
-    const chunkFilePath = path.join(
-      directory,
-      `${fileName}-part-${chunkIndex}${fileExtension}`
-    );
-    await writeFileContent(chunkFilePath, chunk, "utf8");
-    console.log(`块文件写入成功: ${chunkFilePath}`);
-    chunkIndex++;
-  }
-}
+};
 
 // ----------------------------------------
 

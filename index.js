@@ -148,7 +148,7 @@ async function main() {
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
     // 使用示例
-    const optimizedResult = optimizeProcessing(blacklists1, whitelists1);
+    const optimizedResult = await optimizeProcessing(blacklists1, whitelists1);
 
     // 删除文件
     await deleteFiles(
@@ -180,14 +180,14 @@ async function main() {
       optimizedResult.excluded.blacklist.conflicts
         .map((obj) => JSON.stringify(obj))
         .join("\n"),
-      99
+      50
     );
     await writeFileWithSizeCheck(
       `${assets}/conflictsWhitelist.txt`,
       optimizedResult.excluded.whitelist.conflicts
         .map((obj) => JSON.stringify(obj))
         .join("\n"),
-      99
+      50
     );
 
     // 重复规则
@@ -196,7 +196,7 @@ async function main() {
       optimizedResult.excluded.blacklist.duplicates
         .map((obj) => JSON.stringify(obj))
         .join("\n"),
-      99
+      50
     );
 
     await writeFileWithSizeCheck(
@@ -204,20 +204,20 @@ async function main() {
       optimizedResult.excluded.whitelist.duplicates
         .map((obj) => JSON.stringify(obj))
         .join("\n"),
-      99
+      50
     );
 
     // 无效规则
     await writeFileWithSizeCheck(
       `${assets}/invalidBlacklist.txt`,
       optimizedResult.excluded.blacklist.invalid.join("\n"),
-      99
+      50
     );
 
     await writeFileWithSizeCheck(
       `${assets}/invalidWhitelist.txt`,
       optimizedResult.excluded.whitelist.invalid.join("\n"),
-      99
+      50
     );
 
     // 处理title
