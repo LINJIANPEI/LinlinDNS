@@ -11,6 +11,69 @@ const rmdir = promisify(fs.rm);
 const readFileContent = promisify(fs.readFile);
 const writeFileContent = promisify(fs.writeFile);
 const readDirContent = promisify(fs.readdir);
+
+// ----------------------------------------
+
+// 分割文件
+/**
+ * 将数据写入文件，如果文件大小超过限制，则将其拆分为较小的块。
+ * @param {string} filePath - 文件的路径（包括文件名）。
+ * @param {string} data - 要写入文件的数据。
+ * @param {number} [sizeLimit=100] - 文件大小限制，单位为 MB（默认：100 MB）。
+ */
+async function writeFileWithSizeCheck(filePath, data, sizeLimit = 100) {
+  const chunkSize = sizeLimit * 1024 * 1024; // 将 MB 转换为字节
+  const directory = path.dirname(filePath); // 从文件路径中提取目录
+  const fileName = path.basename(filePath, path.extname(filePath)); // 提取文件名（不带扩展名）
+  const fileExtension = path.extname(filePath); // 提取文件扩展名
+
+  // 确保目录存在
+  await mkdir(directory, { recursive: true });
+
+  // 如果数据小于块大小，直接写入文件
+  if (Buffer.byteLength(data, "utf8") <= chunkSize) {
+    await writeFileContent(filePath, data, "utf8");
+    console.log(`文件写入成功: ${filePath}`);
+    return;
+  }
+
+  // 将数据拆分为块
+  let chunkIndex = 1;
+  for (let i = 0; i < data.length; i += chunkSize) {
+    const chunk = data.slice(i, i + chunkSize);
+    const chunkFilePath = path.join(
+      directory,
+      `${fileName}-part-${chunkIndex}${fileExtension}`
+    );
+    await writeFileContent(chunkFilePath, chunk, "utf8");
+    console.log(`块文件写入成功: ${chunkFilePath}`);
+    chunkIndex++;
+  }
+}
+
+// ----------------------------------------
+
+// 获取文件夹的文件名
+const getFileNamesWithSuffixAsync = async (folderPath, paths = "") => {
+  try {
+    await access(folderPath);
+    const items = await readDirContent(folderPath);
+    const fileNames = await Promise.all(
+      items.map(async (item) => {
+        const itemPath = path.join(folderPath, item);
+        const stats = await stat(itemPath);
+        return stats.isFile() ? item : null;
+      })
+    );
+    return fileNames
+      .filter((fileName) => fileName !== null)
+      .map((line) => `${paths}${line}`);
+  } catch (error) {
+    console.error(`Error reading folder: ${folderPath}`, error);
+    return [];
+  }
+};
+
 // ----------------------------------------
 
 // 处理 hosts 规则
@@ -346,4 +409,6 @@ module.exports = {
   readFile,
   writeFile,
   readDir,
+  getFileNamesWithSuffixAsync,
+  writeFileWithSizeCheck,
 };
