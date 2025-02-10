@@ -92,8 +92,39 @@ class FilteredAdGuardProcessor {
   }
 
   _convertBlackRule(rule) {
-    // 转换逻辑（同之前实现）
-    // 返回 { domain: string, rule: string }
+    const trimmed = rule.trim();
+    let domain, converted;
+
+    // 1. 处理 AdGuard 格式：||example.com^
+    const adgMatch = trimmed.match(/^\|\|([\w\-.*]+)\^/);
+    if (adgMatch) {
+      domain = adgMatch[1];
+      converted = trimmed; // 已经是 AdGuard 格式，直接使用
+    }
+
+    // 2. 处理 Hosts 格式：127.0.0.1 example.com
+    else if (trimmed.match(/^\d+\.\d+\.\d+\.\d+\s+([\w\-.]+)/)) {
+      domain = trimmed.split(/\s+/)[1]; // 提取域名部分
+      converted = `||${domain}^`; // 转换为 AdGuard 格式
+    }
+
+    // 3. 处理 ABlock 格式：|example.com 或 ||example.com
+    else if (trimmed.match(/^(\|{1,2})([\w\-.*]+)/)) {
+      const [, prefix, rawDomain] = trimmed.match(/^(\|{1,2})([\w\-.*]+)/);
+      domain = rawDomain;
+      converted = prefix === "|" ? `||${domain}^` : `${prefix}${domain}^`;
+    }
+
+    // 4. 无效格式
+    else {
+      throw new Error("Invalid blacklist rule format");
+    }
+
+    // 返回转换后的规则和标准化域名
+    return {
+      domain: this._normalizeDomain(domain),
+      rule: converted,
+    };
   }
 
   _isDuplicate(hash) {
