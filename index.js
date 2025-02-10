@@ -4,9 +4,6 @@ const {
   deleteDir,
   deleteFiles,
   writeFile,
-  filters,
-  removeSubdomainDuplicates,
-  processHostsRule,
 } = require("./data/node/common_func"); // common_func.js 模块
 
 //规则下载
@@ -18,17 +15,6 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 const { optimizeProcessing } = require("./data/node/optimizeProcessing"); // optimizeProcessing.js 模块
-
-//过滤域名规则
-const { domainFilter } = require("./data/node/domainFilter"); // domainFilter.js 模块
-//过滤Hosts规则
-const { hostsFilter } = require("./data/node/hostsFilter"); // domainFilter.js 模块
-//过滤正则规则
-const { regexFilter } = require("./data/node/regexFilter"); // regexFilter.js 模块
-//过滤无效字符
-const { invalidStrFilter } = require("./data/node/invalidStrFilter"); // invalidStrFilter.js 模块
-//过滤修饰符
-const { modifiersFilter } = require("./data/node/modifiersFilter"); // modifiersFilter.js 模块
 
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
@@ -162,116 +148,102 @@ async function main() {
     // 使用示例
     const optimizedResult = optimizeProcessing(blacklists1, whitelists1);
 
-    console.log("生效白名单:", optimizedResult.whitelist.length);
-    console.log("生效黑名单:", optimizedResult.blacklist.length);
-    // console.log("排除的白名单规则:");
-    // console.log("- 冲突:", optimizedResult.excluded.whitelist.conflicts.length);
-    // console.log("- 重复:", optimizedResult.excluded.whitelist.duplicates.length);
-    // console.log("- 无效:", optimizedResult.excluded.whitelist.invalid.length);
-    // console.log("排除的黑名单规则:");
-    // console.log("- 冲突:", optimizedResult.excluded.blacklist.conflicts.length);
-    // console.log("- 重复:", optimizedResult.excluded.blacklist.duplicates.length);
-    // console.log("- 无效:", optimizedResult.excluded.blacklist.invalid.length);
+    //有效规则
+    await writeFile(
+      `${oldDirectory}/tmp-dns.txt`,
+      optimizedResult.effective.blacklist.join("\n")
+    );
 
     await writeFile(
       `${oldDirectory}/tmp-dnsallow.txt`,
-      optimizedResult.whitelist.join("\n")
+      optimizedResult.effective.whitelist.join("\n")
     );
 
+    // 冲突规则
     await writeFile(
-      `${oldDirectory}/tmp-dns.txt`,
-      optimizedResult.blacklist.join("\n")
+      `${oldDirectory}/tmp-conflictsBlacklist.txt`,
+      optimizedResult.excluded.blacklist.conflicts
+        .map((obj) => JSON.stringify(obj))
+        .join("\n")
     );
-
     await writeFile(
-      `${oldDirectory}/tmp-invalidWhitelistsFilters.txt`,
+      `${oldDirectory}/tmp-conflictsWhitelist.txt`,
       optimizedResult.excluded.whitelist.conflicts
         .map((obj) => JSON.stringify(obj))
         .join("\n")
     );
 
+    // 重复规则
     await writeFile(
-      `${oldDirectory}/tmp-domainWhitelistsFilters.txt`,
-      optimizedResult.excluded.whitelist.duplicates.join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-hostsWhitelistsFilters.txt`,
-      optimizedResult.excluded.whitelist.invalid.join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-invalidBlacklistFilters.txt`,
-      optimizedResult.excluded.blacklist.conflicts
+      `${oldDirectory}/tmp-duplicatesBlacklist.txt`,
+      optimizedResult.excluded.blacklist.duplicates
         .map((obj) => JSON.stringify(obj))
         .join("\n")
     );
 
     await writeFile(
-      `${oldDirectory}/tmp-domainBlacklistFilters.txt`,
-      optimizedResult.excluded.blacklist.duplicates.join("\n")
+      `${oldDirectory}/tmp-duplicatesWhitelist.txt`,
+      optimizedResult.excluded.whitelist.duplicates
+        .map((obj) => JSON.stringify(obj))
+        .join("\n")
+    );
+
+    // 无效规则
+    await writeFile(
+      `${oldDirectory}/tmp-invalidBlacklist.txt`,
+      optimizedResult.excluded.blacklist.invalid.join("\n")
     );
 
     await writeFile(
-      `${oldDirectory}/tmp-hostsBlacklistFilters.txt`,
-      optimizedResult.excluded.blacklist.invalid.join("\n")
+      `${oldDirectory}/tmp-invalidWhitelist.txt`,
+      optimizedResult.excluded.whitelist.invalid.join("\n")
     );
 
     // 删除文件
     await deleteFiles(
-      `${newDirectory}/allow.txt`,
-      `${newDirectory}/dnsallow.txt`,
+      // `${newDirectory}/allow.txt`,
       `${newDirectory}/dns.txt`,
+      `${newDirectory}/dnsallow.txt`,
       `${newDirectory}/DnsConfiguration.txt`,
-      `${newDirectory}/rules.txt`,
-      `${assets}/invalidBlacklistFilters.txt`,
-      `${assets}/domainBlacklistFilters.txt`,
-      `${assets}/hostsBlacklistFilters.txt`,
-      // `${assets}/regexBlacklistFilters.txt`,
-      `${assets}/invalidWhitelistsFilters.txt`,
-      `${assets}/domainWhitelistsFilters.txt`,
-      `${assets}/hostsWhitelistsFilters.txt`
-      // `${assets}/regexWhitelistsFilters.txt`
+      // `${newDirectory}/rules.txt`,
+      `${assets}/conflictsBlacklist.txt`,
+      `${assets}/conflictsWhitelist.txt`,
+      `${assets}/duplicatesBlacklist.txt`,
+      `${assets}/duplicatesWhitelist.txt`,
+      `${assets}/invalidBlacklist.txt`,
+      `${assets}/invalidWhitelist.txt`
     );
 
     // 复制文件
     await copyFiles(
-      [`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`],
+      // [`${oldDirectory}/tmp-allow.txt`, `${newDirectory}/allow.txt`],
       [`${oldDirectory}/tmp-dnsallow.txt`, `${newDirectory}/dnsallow.txt`],
-      [`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`],
+      // [`${oldDirectory}/tmp-rules.txt`, `${newDirectory}/rules.txt`],
       [`${oldDirectory}/tmp-dns.txt`, `${newDirectory}/dns.txt`],
       [
-        `${oldDirectory}/tmp-invalidBlacklistFilters.txt`,
-        `${assets}/invalidBlacklistFilters.txt`,
+        `${oldDirectory}/tmp-conflictsBlacklist.txt`,
+        `${assets}/conflictsBlacklist.txt`,
       ],
       [
-        `${oldDirectory}/tmp-domainBlacklistFilters.txt`,
-        `${assets}/domainBlacklistFilters.txt`,
+        `${oldDirectory}/tmp-conflictsWhitelist.txt`,
+        `${assets}/conflictsWhitelist.txt`,
       ],
       [
-        `${oldDirectory}/tmp-hostsBlacklistFilters.txt`,
-        `${assets}/hostsBlacklistFilters.txt`,
-      ],
-      // [
-      //   `${oldDirectory}/tmp-regexBlacklistFilters.txt`,
-      //   `${assets}/regexBlacklistFilters.txt`,
-      // ],
-      [
-        `${oldDirectory}/tmp-invalidWhitelistsFilters.txt`,
-        `${assets}/invalidWhitelistsFilters.txt`,
+        `${oldDirectory}/tmp-duplicatesBlacklist.txt`,
+        `${assets}/duplicatesBlacklist.txt`,
       ],
       [
-        `${oldDirectory}/tmp-domainWhitelistsFilters.txt`,
-        `${assets}/domainWhitelistsFilters.txt`,
+        `${oldDirectory}/tmp-duplicatesWhitelist.txt`,
+        `${assets}/duplicatesWhitelist.txt`,
       ],
       [
-        `${oldDirectory}/tmp-hostsWhitelistsFilters.txt`,
-        `${assets}/hostsWhitelistsFilters.txt`,
+        `${oldDirectory}/tmp-invalidBlacklist.txt`,
+        `${assets}/invalidBlacklist.txt`,
+      ],
+      [
+        `${oldDirectory}/tmp-invalidWhitelist.txt`,
+        `${assets}/invalidWhitelist.txt`,
       ]
-      // [
-      //   `${oldDirectory}/tmp-regexWhitelistsFilters.txt`,
-      //   `${assets}/regexWhitelistsFilters.txt`,
-      // ]
     );
 
     // 处理title
