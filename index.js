@@ -17,6 +17,7 @@ const { downloadRules } = require("./data/node/downloadRules"); // downloadRules
 const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlacklists.js 模块
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
+const { optimizeProcessing } = require("./data/node/optimizeProcessing"); // optimizeProcessing.js 模块
 
 //过滤域名规则
 const { domainFilter } = require("./data/node/domainFilter"); // domainFilter.js 模块
@@ -156,135 +157,154 @@ async function main() {
     // 合并规则并去重
     const blacklists1 = await mergeBlacklists(oldDirectory);
 
-    const blacklists2 = blacklists1.filter((line) => !/^@@.*/.test(line));
+    // const blacklists2 = blacklists1.filter((line) => !/^@@.*/.test(line));
 
-    const [noinvalidBlacklist, invalidBlacklistFilters] =
-      await invalidStrFilter(blacklists2);
+    // const [noinvalidBlacklist, invalidBlacklistFilters] =
+    //   await invalidStrFilter(blacklists2);
 
-    const [domainBlacklist, domainBlacklistFilters] = await domainFilter(
-      await modifiersFilter(noinvalidBlacklist),
-      "||"
-    );
-    const [hostsBlacklist, hostsBlacklistFilters] = await hostsFilter(
-      domainBlacklistFilters
-    );
-    const [regexBlacklist, regexBlacklistFilters] = await regexFilter(
-      hostsBlacklistFilters
-    );
+    // const [domainBlacklist, domainBlacklistFilters] = await domainFilter(
+    //   await modifiersFilter(noinvalidBlacklist),
+    //   "||"
+    // );
+    // const [hostsBlacklist, hostsBlacklistFilters] = await hostsFilter(
+    //   domainBlacklistFilters
+    // );
+    // const [regexBlacklist, regexBlacklistFilters] = await regexFilter(
+    //   hostsBlacklistFilters
+    // );
 
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    const whitelists2 = whitelists1.filter((line) => !/^\|\|.*/.test(line));
+    // const whitelists2 = whitelists1.filter((line) => !/^\|\|.*/.test(line));
 
-    const [noinvalidWhitelist, invalidWhitelistsFilters] =
-      await invalidStrFilter(whitelists2);
+    // const [noinvalidWhitelist, invalidWhitelistsFilters] =
+    //   await invalidStrFilter(whitelists2);
 
-    const [domainWhitelists, domainWhitelistsFilters] = await domainFilter(
-      await modifiersFilter(noinvalidWhitelist),
-      "@@||"
-    );
-    const [hostsWhitelists, hostsWhitelistsFilters] = await hostsFilter(
-      domainWhitelistsFilters
-    );
-    const [regexWhitelists, regexWhitelistsFilters] = await regexFilter(
-      hostsWhitelistsFilters
-    );
+    // const [domainWhitelists, domainWhitelistsFilters] = await domainFilter(
+    //   await modifiersFilter(noinvalidWhitelist),
+    //   "@@||"
+    // );
+    // const [hostsWhitelists, hostsWhitelistsFilters] = await hostsFilter(
+    //   domainWhitelistsFilters
+    // );
+    // const [regexWhitelists, regexWhitelistsFilters] = await regexFilter(
+    //   hostsWhitelistsFilters
+    // );
 
-    await writeFile(
-      `${oldDirectory}/tmp-invalidBlacklistFilters.txt`,
-      filters(invalidBlacklistFilters).join("\n")
-    );
+    // 使用示例
+    const optimizedResult = optimizeProcessing(blacklists1, whitelists1);
 
-    await writeFile(
-      `${oldDirectory}/tmp-domainBlacklistFilters.txt`,
-      filters(domainBlacklistFilters).join("\n")
-    );
-    await writeFile(
-      `${oldDirectory}/tmp-hostsBlacklistFilters.txt`,
-      filters(hostsBlacklistFilters).join("\n")
-    );
-    await writeFile(
-      `${oldDirectory}/tmp-regexBlacklistFilters.txt`,
-      filters(regexBlacklistFilters).join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-invalidWhitelistsFilters.txt`,
-      filters(invalidWhitelistsFilters).join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-domainWhitelistsFilters.txt`,
-      filters(domainWhitelistsFilters).join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-hostsWhitelistsFilters.txt`,
-      filters(hostsWhitelistsFilters).join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-regexWhitelistsFilters.txt`,
-      filters(regexWhitelistsFilters).join("\n")
-    );
-
-    await writeFile(
-      `${oldDirectory}/tmp-allow.txt`,
-      removeSubdomainDuplicates(
-        filters(
-          processHostsRule(
-            [
-              ...domainWhitelists,
-              ...hostsWhitelists,
-              ...regexWhitelists,
-              ...regexWhitelistsFilters,
-            ],
-            "@@||"
-          )
-        )
-      ).join("\n")
-    );
+    // console.log("==== 白名单规则 ====");
+    // console.log(optimizedResult.whitelist.join("\n"));
+    // console.log("\n==== 黑名单规则 ====");
+    // console.log(optimizedResult.blacklist.join("\n"));
+    console.log("\n统计信息:", optimizedResult.stats);
 
     await writeFile(
       `${oldDirectory}/tmp-dnsallow.txt`,
-      removeSubdomainDuplicates(
-        filters(
-          processHostsRule(
-            [...domainWhitelists, ...hostsWhitelists, ...regexWhitelists],
-            "@@||"
-          )
-        )
-      ).join("\n")
+      optimizedResult.whitelist.join("\n")
     );
 
     await writeFile(
       `${oldDirectory}/tmp-dns.txt`,
-      removeSubdomainDuplicates(
-        filters(
-          processHostsRule(
-            [...domainBlacklist, ...hostsBlacklist, ...regexBlacklist],
-            "||"
-          )
-        )
-      ).join("\n")
+      optimizedResult.blacklist.join("\n")
     );
 
-    await writeFile(
-      `${oldDirectory}/tmp-rules.txt`,
-      removeSubdomainDuplicates(
-        filters(
-          processHostsRule(
-            [
-              ...domainBlacklist,
-              ...hostsBlacklist,
-              ...regexBlacklist,
-              ...regexBlacklistFilters,
-            ],
-            "||"
-          )
-        )
-      ).join("\n")
-    );
+    // await writeFile(
+    //   `${oldDirectory}/tmp-invalidBlacklistFilters.txt`,
+    //   filters(invalidBlacklistFilters).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-domainBlacklistFilters.txt`,
+    //   filters(domainBlacklistFilters).join("\n")
+    // );
+    // await writeFile(
+    //   `${oldDirectory}/tmp-hostsBlacklistFilters.txt`,
+    //   filters(hostsBlacklistFilters).join("\n")
+    // );
+    // await writeFile(
+    //   `${oldDirectory}/tmp-regexBlacklistFilters.txt`,
+    //   filters(regexBlacklistFilters).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-invalidWhitelistsFilters.txt`,
+    //   filters(invalidWhitelistsFilters).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-domainWhitelistsFilters.txt`,
+    //   filters(domainWhitelistsFilters).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-hostsWhitelistsFilters.txt`,
+    //   filters(hostsWhitelistsFilters).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-regexWhitelistsFilters.txt`,
+    //   filters(regexWhitelistsFilters).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-allow.txt`,
+    //   removeSubdomainDuplicates(
+    //     filters(
+    //       processHostsRule(
+    //         [
+    //           ...domainWhitelists,
+    //           ...hostsWhitelists,
+    //           ...regexWhitelists,
+    //           ...regexWhitelistsFilters,
+    //         ],
+    //         "@@||"
+    //       )
+    //     )
+    //   ).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-dnsallow.txt`,
+    //   removeSubdomainDuplicates(
+    //     filters(
+    //       processHostsRule(
+    //         [...domainWhitelists, ...hostsWhitelists, ...regexWhitelists],
+    //         "@@||"
+    //       )
+    //     )
+    //   ).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-dns.txt`,
+    //   removeSubdomainDuplicates(
+    //     filters(
+    //       processHostsRule(
+    //         [...domainBlacklist, ...hostsBlacklist, ...regexBlacklist],
+    //         "||"
+    //       )
+    //     )
+    //   ).join("\n")
+    // );
+
+    // await writeFile(
+    //   `${oldDirectory}/tmp-rules.txt`,
+    //   removeSubdomainDuplicates(
+    //     filters(
+    //       processHostsRule(
+    //         [
+    //           ...domainBlacklist,
+    //           ...hostsBlacklist,
+    //           ...regexBlacklist,
+    //           ...regexBlacklistFilters,
+    //         ],
+    //         "||"
+    //       )
+    //     )
+    //   ).join("\n")
+    // );
 
     // 删除文件
     await deleteFiles(
