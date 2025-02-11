@@ -16,7 +16,10 @@ const { downloadRules } = require("./data/node/downloadRules"); // downloadRules
 const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlacklists.js 模块
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
+
 const { optimizeProcessing } = require("./data/node/optimizeProcessing"); // optimizeProcessing.js 模块
+
+const { AdGuardConverters } = require("./data/node/AdGuardConverters"); // AdGuardConverters.js 模块
 
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
@@ -155,11 +158,11 @@ async function main() {
       `${newDirectory}/DnsConfiguration.txt`,
       `${newDirectory}/rules.txt`
     );
-    const FileNames = await getFileNamesWithSuffixAsync(
-      `${assets}`,
-      `${assets}/`
+
+    await deleteFiles(
+      ...(await getFileNamesWithSuffixAsync(`${assets}`, `${assets}/`))
     );
-    await deleteFiles(...FileNames);
+
     //有效规则
     await writeFile(
       `${newDirectory}/dns.txt`,
@@ -173,12 +176,12 @@ async function main() {
 
     await writeFile(
       `${newDirectory}/rules.txt`,
-      optimizedResult.excluded.blacklist.invalid.join("\n")
+      AdGuardConverters(optimizedResult.excluded.blacklist.invalid).join("\n")
     );
 
     await writeFile(
       `${newDirectory}/allow.txt`,
-      optimizedResult.excluded.whitelist.invalid.join("\n")
+      AdGuardConverters(optimizedResult.excluded.whitelist.invalid).join("\n")
     );
 
     // 冲突规则
