@@ -10,7 +10,7 @@ class AdGuardConverter {
   convert(rules) {
     return rules
       .reduce((acc, line) => {
-        const processed = this.#processLine(line);
+        const processed = this.processLine(line);
         if (processed) acc.push(processed);
         return acc;
       }, [])
@@ -18,68 +18,68 @@ class AdGuardConverter {
   }
 
   // 私有方法：行处理逻辑
-  #processLine(line) {
+  processLine(line) {
     const trimmed = line.trim();
-    if (!trimmed || this.#isComment(trimmed)) return null;
+    if (!trimmed || this.isComment(trimmed)) return null;
 
     return (
-      this.#handleHostsFormat(trimmed) ||
-      this.#handleSpecialCases(trimmed) ||
-      this.#validateAdGuardRule(trimmed)
+      this.handleHostsFormat(trimmed) ||
+      this.handleSpecialCases(trimmed) ||
+      this.validateAdGuardRule(trimmed)
     );
   }
 
   // 处理 hosts 格式
-  #handleHostsFormat(line) {
+  handleHostsFormat(line) {
     const parts = line.split(/\s+/);
-    if (parts.length < 2 || !this.#isValidIP(parts[0])) return null;
+    if (parts.length < 2 || !this.isValidIP(parts[0])) return null;
 
     const validDomains = parts
       .slice(1)
       .filter((d) => d && !d.startsWith("#"))
-      .filter((d) => this.#isValidDomain(d));
+      .filter((d) => this.isValidDomain(d));
 
     return validDomains.length > 0 ? validDomains.map((d) => `||${d}^`) : null;
   }
 
   // 处理特殊格式（ABlock/dnsrewrite）
-  #handleSpecialCases(line) {
+  handleSpecialCases(line) {
     // 处理 ABlock 的 DNS 重写格式
     if (line.startsWith("||") && line.includes("$dnsrewrite")) {
       const cleanDomain = line.split("^")[0].slice(2);
-      return this.#isValidDomain(cleanDomain) ? `||${cleanDomain}^` : null;
+      return this.isValidDomain(cleanDomain) ? `||${cleanDomain}^` : null;
     }
 
     // 处理包含通配符的规则
     if (line.includes("*")) {
-      return this.#validateWildcardRule(line);
+      return this.validateWildcardRule(line);
     }
     return null;
   }
 
   // 验证 AdGuard 规则有效性
-  #validateAdGuardRule(rule) {
+  validateAdGuardRule(rule) {
     if (rule.startsWith("@@")) return rule; // 异常规则
-    if (rule.includes("##")) return this.#validateElementRule(rule);
+    if (rule.includes("##")) return this.validateElementRule(rule);
     if (rule.startsWith("/") && rule.endsWith("/")) return rule; // 正则规则
-    if (this.#isBasicRule(rule)) return rule;
+    if (this.isBasicRule(rule)) return rule;
     return null;
   }
 
   // 辅助验证方法
-  #isComment(line) {
+  isComment(line) {
     return /^[#!！]/.test(line);
   }
 
-  #isValidIP(ip) {
+  isValidIP(ip) {
     return this.ipv4Regex.test(ip);
   }
 
-  #isValidDomain(domain) {
+  isValidDomain(domain) {
     return this.domainRegex.test(domain);
   }
 
-  #validateElementRule(rule) {
+  validateElementRule(rule) {
     const [domains, selector] = rule.split("##");
     return domains
       .split(",")
@@ -88,13 +88,13 @@ class AdGuardConverter {
       : null;
   }
 
-  #isBasicRule(rule) {
+  isBasicRule(rule) {
     return (
       /^\|{0,2}[\w.*-]+(\^)?(\$.*)?$/.test(rule) || /\$[a-z,~]+$/.test(rule)
     );
   }
 
-  #validateWildcardRule(rule) {
+  validateWildcardRule(rule) {
     const domainPart = rule.replace(/^\|+/g, "").split(/[\^$]/)[0];
     return this.domainPatternRegex.test(domainPart) ? rule : null;
   }

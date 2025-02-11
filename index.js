@@ -176,12 +176,20 @@ async function main() {
 
     await writeFile(
       `${newDirectory}/rules.txt`,
-      AdGuardConverters(optimizedResult.excluded.blacklist.invalid).join("\n")
+      [
+        ...(await AdGuardConverters(
+          optimizedResult.excluded.blacklist.invalid
+        )),
+      ].join("\n")
     );
 
     await writeFile(
       `${newDirectory}/allow.txt`,
-      AdGuardConverters(optimizedResult.excluded.whitelist.invalid).join("\n")
+      [
+        ...(await AdGuardConverters(
+          optimizedResult.excluded.whitelist.invalid
+        )),
+      ].join("\n")
     );
 
     // 冲突规则
