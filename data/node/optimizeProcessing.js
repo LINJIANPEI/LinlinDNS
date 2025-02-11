@@ -2,9 +2,10 @@ const { createHash } = require("crypto");
 
 // 预编译正则表达式
 const WHITELIST_REGEX = /^@@\|\|([\w\-.*]+)\^/;
-const ADGUARD_REGEX   = /^\|\|([\w\-.*]+)\^/;
-const HOSTS_REGEX     = /^\d+\.\d+\.\d+\.\d+\s+([\w\-.]+)/;
-const ADBLOCK_REGEX   = /^(\|{1,2})([\w\-.*]+)/;
+const ADGUARD_REGEX = /^\|\|([\w\-.*]+)\^/;
+const HOSTS_REGEX =
+  /^(?:(?:\d+\.\d+\.\d+\.\d+)|(?:\[[A-Fa-f0-9:]+\])|(?:[A-Fa-f0-9:]+))\s+([\w\-.]+)/;
+const ADBLOCK_REGEX = /^(\|{1,2})([\w\-.*]+)/;
 
 class FilteredAdGuardProcessor {
   constructor() {
@@ -159,19 +160,31 @@ class FilteredAdGuardProcessor {
     return {
       // 转换后的有效规则
       effective: {
-        whitelist: Array.from(this.effective.whitelist.values()).map(v => v.converted),
-        blacklist: Array.from(this.effective.blacklist.values()).map(v => v.converted),
+        whitelist: Array.from(this.effective.whitelist.values()).map(
+          (v) => v.converted
+        ),
+        blacklist: Array.from(this.effective.blacklist.values()).map(
+          (v) => v.converted
+        ),
       },
       // 原始格式的排除规则
       excluded: {
         whitelist: {
-          conflicts: Array.from(this.excluded.whitelist.conflicts.entries()).map(([original, info]) => ({ original, ...info })),
-          duplicates: Array.from(this.excluded.whitelist.duplicates.entries()).map(([original, info]) => ({ original, ...info })),
+          conflicts: Array.from(
+            this.excluded.whitelist.conflicts.entries()
+          ).map(([original, info]) => ({ original, ...info })),
+          duplicates: Array.from(
+            this.excluded.whitelist.duplicates.entries()
+          ).map(([original, info]) => ({ original, ...info })),
           invalid: Array.from(this.excluded.whitelist.invalid),
         },
         blacklist: {
-          conflicts: Array.from(this.excluded.blacklist.conflicts.entries()).map(([original, info]) => ({ original, ...info })),
-          duplicates: Array.from(this.excluded.blacklist.duplicates.entries()).map(([original, info]) => ({ original, ...info })),
+          conflicts: Array.from(
+            this.excluded.blacklist.conflicts.entries()
+          ).map(([original, info]) => ({ original, ...info })),
+          duplicates: Array.from(
+            this.excluded.blacklist.duplicates.entries()
+          ).map(([original, info]) => ({ original, ...info })),
           invalid: Array.from(this.excluded.blacklist.invalid),
         },
       },
@@ -250,8 +263,10 @@ class FilteredAdGuardProcessor {
       const entry = this.domainTree.get(checkDomain);
       if (entry) {
         return entry.isWhitelist
-          ? this.effective.whitelist.get(this._hash(`@@||${checkDomain}^`))?.converted
-          : this.effective.blacklist.get(this._hash(`||${checkDomain}^`))?.converted;
+          ? this.effective.whitelist.get(this._hash(`@@||${checkDomain}^`))
+              ?.converted
+          : this.effective.blacklist.get(this._hash(`||${checkDomain}^`))
+              ?.converted;
       }
     }
     return null;
