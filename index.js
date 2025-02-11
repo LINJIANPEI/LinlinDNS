@@ -170,6 +170,16 @@ async function main() {
       optimizedResult.effective.whitelist.join("\n")
     );
 
+    await writeFile(
+      `${newDirectory}/rules.txt`,
+      optimizedResult.excluded.blacklist.invalid.join("\n")
+    );
+
+    await writeFile(
+      `${newDirectory}/allow.txt`,
+      optimizedResult.excluded.whitelist.invalid.join("\n")
+    );
+
     // 冲突规则
     await writeFileWithSizeCheck(
       `${assets}/conflictsBlacklist.txt`,
@@ -214,16 +224,6 @@ async function main() {
       `${assets}/invalidWhitelist.txt`,
       optimizedResult.excluded.whitelist.invalid.join("\n"),
       50
-    );
-
-    await writeFile(
-      `${newDirectory}/rules.txt`,
-      optimizedResult.excluded.blacklist.invalid.join("\n")
-    );
-
-    await writeFile(
-      `${newDirectory}/allow.txt`,
-      optimizedResult.excluded.whitelist.invalid.join("\n")
     );
 
     // 处理title
