@@ -110,7 +110,6 @@ const allow = [
   "https://cdn.jsdelivr.net/gh/hl2guide/Filterlist-for-AdGuard@master/filter_whitelist.txt", //hl2guideFilterlist-for-AdGuard
   "https://cdn.jsdelivr.net/gh/hg1978/AdGuard-Home-Whitelist@master/whitelist.txt", //hg1978/AdGuard-Home-Whitelist
   "https://cdn.jsdelivr.net/gh/mmotti/adguard-home-filters@master/whitelist.txt", //mmotti/adguard-home-filters
-  "https://raw.githubusercontent.com/mawenjian/china-cdn-domain-whitelist/master/china-top-website-whitelist.txt", //china-cdn-domain-whitelist
   "https://raw.githubusercontent.com/mawenjian/china-cdn-domain-whitelist/master/china-cdn-domain-whitelist.txt", //china-cdn-domain-whitelist
   "https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List", //etotakeo/AdGuardDNSPassList
   "https://cdn.jsdelivr.net/gh/JamesDamp/AdGuard-Home---Personal-Whitelist@master/AdGuardHome-Whitelist.txt", //JamesDamp/Personal-Whitelist
