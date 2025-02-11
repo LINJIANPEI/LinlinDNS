@@ -217,16 +217,14 @@ async function main() {
       50
     );
 
-    await writeFileWithSizeCheck(
+    await writeFile(
       `${newDirectory}/rules.txt`,
-      optimizedResult.excluded.blacklist.invalid.join("\n"),
-      50
+      optimizedResult.excluded.blacklist.invalid.join("\n")
     );
 
-    await writeFileWithSizeCheck(
+    await writeFile(
       `${newDirectory}/dns.txt`,
-      optimizedResult.excluded.whitelist.invalid.join("\n"),
-      50
+      optimizedResult.excluded.whitelist.invalid.join("\n")
     );
 
     // 处理title
