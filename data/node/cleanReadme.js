@@ -18,9 +18,9 @@ const cleanReadme = async () => {
   console.log("开始更新md文件");
 
   try {
-    // const numRules = await extractCount("rules.txt");
+    const numRules = await extractCount("rules.txt");
     const numDns = await extractCount("dns.txt");
-    // const numAllow = await extractCount("allow.txt");
+    const numAllow = await extractCount("allow.txt");
     const numdnsAllow = await extractCount("dnsallow.txt");
     const numDnsConfiguration = await extractCount("DnsConfiguration.txt");
     // 获取当前时间并转换为北京时间
@@ -30,10 +30,10 @@ const cleanReadme = async () => {
     let readmeContent = await readFile("README.md");
     const replacements = [
       [/^更新时间.*/, `更新时间: ${beijingTime} （北京时间）`],
-      // [/^拦截规则数量.*/, `拦截规则数量: ${numRules}`],
+      [/^拦截规则数量.*/, `拦截规则数量: ${numRules}`],
       [/^DNS拦截规则数量.*/, `DNS拦截规则数量: ${numDns}`],
       [/^DNS白名单规则数量.*/, `DNS白名单规则数量: ${numdnsAllow}`],
-      // [/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`],
+      [/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`],
       [/^DNS配置数量.*/, `DNS配置数量: ${numDnsConfiguration}`],
     ];
     readmeContentData = readmeContent
