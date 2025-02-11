@@ -1,8 +1,8 @@
 const { createHash } = require("crypto");
 
 // 预编译正则表达式
-const WHITELIST_REGEX = /^(?:@@\|\|)?([\w\-.*]+)(?:\^(?:\$important)?)?$/;
-const ADGUARD_REGEX = /^(?:\|\|)?([\w\-.*]+)(?:\^(?:\$important)?)?$/;
+const WHITELIST_REGEX = /^(?:@@\|\|)?([*\w.-]*[*\w-])(?:\^(?:\$important)?)?$/;
+const ADGUARD_REGEX = /^(?:\|\|)?([*\w.-]*[*\w-])(?:\^(?:\$important)?)?$/;
 const HOSTS_REGEX =
   /^(?:(?:\d+\.\d+\.\d+\.\d+)|(?:\[[A-Fa-f0-9:]+\])|(?:[A-Fa-f0-9:]+))\s+([\w\-.]+)/;
 const ADBLOCK_REGEX = /^(\|{1,2})([\w\-.*]+)/;
