@@ -68,21 +68,8 @@ class FilteredAdGuardProcessor {
 
     try {
       if (isWhitelist) {
-        // 处理白名单规则
         const match = trimmed.match(/^@@\|\|([\w\-.*]+)\^/);
-        if (!match) {
-          // 尝试匹配正则表达式规则
-          const regexMatch = trimmed.match(/^@@\/(.*)\/$/);
-          if (regexMatch) {
-            return {
-              valid: true,
-              domain: null, // 正则表达式规则没有域名
-              hash: this._hash(trimmed),
-              converted: trimmed, // 直接使用原始规则
-            };
-          }
-          return { valid: false };
-        }
+        if (!match) return { valid: false };
         const domain = this._normalizeDomain(match[1]);
         return {
           valid: true,
@@ -91,7 +78,6 @@ class FilteredAdGuardProcessor {
           converted: `@@||${domain}^`,
         };
       } else {
-        // 处理黑名单规则
         const converted = this._convertBlackRule(trimmed);
         return {
           valid: true,
