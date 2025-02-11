@@ -149,11 +149,11 @@ async function main() {
 
     // 删除文件
     await deleteFiles(
-      // `${newDirectory}/allow.txt`,
+      `${newDirectory}/allow.txt`,
       `${newDirectory}/dns.txt`,
       `${newDirectory}/dnsallow.txt`,
       `${newDirectory}/DnsConfiguration.txt`
-      // `${newDirectory}/rules.txt`,
+      `${newDirectory}/rules.txt`,
     );
     const FileNames = await getFileNamesWithSuffixAsync(
       `${assets}`,
@@ -213,6 +213,18 @@ async function main() {
 
     await writeFileWithSizeCheck(
       `${assets}/invalidWhitelist.txt`,
+      optimizedResult.excluded.whitelist.invalid.join("\n"),
+      50
+    );
+
+    await writeFileWithSizeCheck(
+      `${newDirectory}/rules.txt`,
+      optimizedResult.excluded.blacklist.invalid.join("\n"),
+      50
+    );
+
+    await writeFileWithSizeCheck(
+      `${newDirectory}/dns.txt`,
       optimizedResult.excluded.whitelist.invalid.join("\n"),
       50
     );
