@@ -152,8 +152,7 @@ async function main() {
       `${newDirectory}/allow.txt`,
       `${newDirectory}/dns.txt`,
       `${newDirectory}/dnsallow.txt`,
-      `${newDirectory}/DnsConfiguration.txt`
-      `${newDirectory}/rules.txt`,
+      `${newDirectory}/DnsConfiguration.txt``${newDirectory}/rules.txt`
     );
     const FileNames = await getFileNamesWithSuffixAsync(
       `${assets}`,
@@ -223,7 +222,7 @@ async function main() {
     );
 
     await writeFile(
-      `${newDirectory}/dns.txt`,
+      `${newDirectory}/allow.txt`,
       optimizedResult.excluded.whitelist.invalid.join("\n")
     );
 
