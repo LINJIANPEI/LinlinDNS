@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-12 07:08:50（北京时间）
+! Version: 2025-02-12 08:42:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63380
+! Total count: 63394
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -550,6 +550,7 @@
 .org/ads/$~xmlhttprequest
 .personaclick.com/track/$image
 .php$script,domain=onmpeg.com
+.php?key=*&clickid=*&sub1=$all
 .php?zone_id=$~xmlhttprequest
 .pk/ads/$~xmlhttprequest
 .pledgebox.com/t/$image
@@ -590,6 +591,8 @@
 .warehousefashion.com/warehouse/e/$image
 .webp$domain=037hdmovie.com,~third-party
 .xyz$domain=btsj6.com|yinghua8.tv|iyinghua.io|yhdmba.net|xiakexsw.com
+.xyz/lander/$all
+.xyz/landers/$all
 .xyz^$domain=ceofix.net|teenfic.net
 .zippingcare.com/beacon/$image
 /(https?:\/\/)104\.154\..{100,}/
@@ -1916,6 +1919,8 @@
 115.com##.gb-advs
 115.com##div.sub-qcode.bottom-qcode,div.top-banner,div.bottom-banner,div.banner-box
 115.com##li#js_common_act-enter
+115cdn.com##.feature-float
+115cdn.com##a[href="https://vip.115.com/"] > img
 118pan.com##.card.mt-2:nth-child(2)
 11livematches.com###mid_left > br
 11luba.com,niluba.cc##.center > div:last-child
@@ -39333,9 +39338,16 @@ kitchentime.dk##.cookie
 kitchentime.fi##.cookie
 kitchentime.no##.cookie
 kitchentime.se##.cookie
+kitco.com###leaderboard
 kitco.com###left_square
 kitco.com##.ad_space_730
+kitco.com##.hidden:has(> div[id^="square-"]:only-child)
 kitco.com##.mining-banner-container
+kitco.com##div:has(> iframe[id^="google_ads_iframe"]:only-child)
+kitco.com##div[class]:has(> #leaderboard:only-child)
+kitco.com##div[id*="-billboard"]
+kitco.com##div[id*="-rail-"]
+kitco.com##div[id^="square-"]
 kitguru.net###bg_url_kg
 kitguru.net##.textwidget > .g > div[class^="g-single a-"]
 kitguru.net##a[id^="href-ad-"]
@@ -50535,9 +50547,11 @@ republicworld.com###desktop-livetv-728-90
 republicworld.com##.ads-decorator
 republicworld.com##.bg-f0f0f0
 republicworld.com##.honda_container
+republicworld.com##.lbdesktop
 republicworld.com##.pad3010.txtcenter
 republicworld.com##.padtop10.padright10.padleft10.minheight90
 republicworld.com##.padtop20.txtcenter.minheight90
+republicworld.com##div.items-center:has(> .adWidget)
 repuls.io###monetization
 repuls.io###partnerAd_letter
 reputationup.com##.elementor-popup-modal
