@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-12 15:09:14（北京时间）
+! Version: 2025-02-12 16:12:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63394
+! Total count: 63398
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12947,6 +12947,7 @@
 @@||ohmanhua.com/js/*.js
 @@||ohssr.cn^$important
 @@||ohttps.com^$stealth
+@@||ohu.edu.tr^$stealth=dpi
 @@||oii.io^$generichide
 @@||oiihk.com^$generichide
 @@||oisd.nl^$generichide
@@ -45992,6 +45993,7 @@ nybooks.com##.ad-spacing
 nybooks.com##.toast-cta
 nycpokemap.com,londonpogomap.com,vanpokemap.com,sgpokemap.com,sydneypogomap.com##.please
 nyctourism.com##.Layout_mobileStickyAdContainer__fCbCq
+nyctourism.com##div[class^="Layout_mobileStickyAdContainer"]
 nydailynews.com###ra-taboola-bottom
 nydailynews.com##.rh-ad
 nydailynews.com##body > section#rgi
@@ -47483,7 +47485,9 @@ perforce.com##.EUc
 perfumesclub.com##.cookies
 periodex.co##.p-banner
 permanentstyle.com###dttop
+permanentstyle.com###mobmid
 permanentstyle.com###mobtop
+permanentstyle.com##.widget_ps-midpage-mobile-ad
 permanentstyle.com##.widget_sow-advertisements
 permettezmoideconstruire.fr##.alert-overlay
 permies.com##.forum-top-banner
