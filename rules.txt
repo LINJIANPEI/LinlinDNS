@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-13 20:17:18（北京时间）
+! Version: 2025-02-13 21:17:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63398
+! Total count: 63403
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2700,6 +2700,7 @@
 2fzb.com###diy5
 2fzdao.com###diy_cmn1
 2fzdao.com##div[style="width: 100%;position: relative;margin-top:5px  ;  height: 60px;"]
+2gb.com##.related_articles
 2gis.com.cy###confirm ~ div
 2gis.cz###confirm + div
 2gis.ru###confirm ~ footer
@@ -5058,6 +5059,7 @@
 @@||adjectives-for.com^$generichide
 @@||adjs.8591.com.tw^$script
 @@||adjust.com/adjust-latest.min.js$domain=anchor.fm
+@@||adkit.9pub.io/v2$script,domain=9now.nine.com.au
 @@||adligature.com^$domain=listeamed.net|gaystream.click
 @@||adligature.com^|$xmlhttprequest,domain=work.ink
 @@||adlink.wf^
@@ -8658,6 +8660,7 @@
 @@||embed.binkies3d.com^$stealth,domain=gsmarena.com
 @@||embed.ex.co^$xmlhttprequest,domain=espncricinfo.com
 @@||embed.kijk.nl^$generichide
+@@||embed.new.video^$stealth=referrer
 @@||embed.redditmedia.com/widgets/platform.js$domain=gamerant.com
 @@||embed.watchanimesub.net/inc/embed/ads.js
 @@||embed.watchanimesub.net/inc/embed/kampyle.js
@@ -27258,6 +27261,7 @@ ddys.tv##div#kasjbgih
 ddzimu.com###popup
 ddzzxs.com###inglestore.inglestore
 dead-frog.com###site_top
+deadline.com##.markplace-ads
 deadline.com##.pmc-u-background-blue-light:has(> div.admz)
 deadwalk.io##.main-menu-overlay > div[class="main-menu main-menu-bottom"]:empty
 dealmoon.com,weibo.com##.pic_ad
@@ -40593,6 +40597,7 @@ liner.hu##.liner_cikk_top
 liner.hu##div[class*="siderbar_ads"]
 linergy.de###linergy-cookie-accept
 linetv.tw##.aspect-ratio > img.object-cover + .aspect-ratio-content + div[class^="absolute inset-"][class*="bg-brand"]
+linetv.tw##.aspect-ratio > img.object-cover + .aspect-ratio-content + div[class^="absolute inset-"][class*="bg-linetv"][class*="-emphasis"]
 linfodurable.fr###cookie
 linfusion.fr##.modal-cookie
 lingea.sk##.lck-wrapper
