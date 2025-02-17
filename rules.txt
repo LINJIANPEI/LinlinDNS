@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-17 21:18:15（北京时间）
+! Version: 2025-02-17 22:09:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63455
+! Total count: 63463
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4624,6 +4624,7 @@
 @@||360haven.com^$generichide
 @@||360kora.com^$generichide
 @@||360kora.io^$generichide
+@@||360kuai.com^$important
 @@||36krcnd.com^$stealth,domain=36kr.com
 @@||3746760377.qnqcdn.net^$important
 @@||3975.com^
@@ -10870,6 +10871,7 @@
 @@||img*.kangaroobro.com/images/$stealth,image,domain=leyuman.com
 @@||img*.reimg.org/images/$stealth,domain=remanga.org
 @@||img.1fichier.com/css/
+@@||img.360kuai.com^$important
 @@||img.achost.top^$stealth,domain=galge.fun
 @@||img.ads.tvb.com/news/min.js$domain=news.tvb.com
 @@||img.ads.tvb.com^
@@ -10923,6 +10925,7 @@
 @@||imgur.com/min/px.js$~third-party
 @@||imgview.net/js/jquery-*.min.js
 @@||imgwallet.com/advertisement.js
+@@||imgx.mediav.com^$important
 @@||imobiliare.ro/js/gtm.js$script,~third-party
 @@||imop.com^
 @@||imore.com/sites/imore.com/files/*/public/field/image/*/adchoices-$image,domain=imore.com
@@ -14564,6 +14567,7 @@
 @@||pro.gooooal.com/ad/ad_2.js
 @@||pro.m.jd.com^$important
 @@||proapkmod.com^$generichide
+@@||prod-chat-kimi-tos.moonshot.cn
 @@||prod.adspsp.com/adb.2418030m.min.js$domain=medicalnewstoday.com
 @@||prod.fennec.atp.fox/js/fennec.js$domain=freemcserver.net
 @@||prod.pandateacher.com/web-fos/app/$xmlhttprequest,elemhide,jsinject,extension
@@ -18050,6 +18054,7 @@
 @@||www.123pan.com^$important
 @@||www.336mn.com^
 @@||www.360kuai.com^
+@@||www.360kuai.com^$important
 @@||www.alidns.com^$important
 @@||www.bilibili.com/html/iframemessage.html
 @@||www.blogger.com^$important
@@ -22995,6 +23000,9 @@ boernestar.com##.widget-advert_placement
 boerse-stuttgart.de##.bsg-cookie-layer
 bog.ac##.sidebar-url
 bogijn.nl###cc-wrapper
+bohe.cn##.ml-30
+bohe.cn##.mt20
+bohe.cn##IFRAME[width='400'][height='200']
 boilerguide.co.uk##.consent-bar
 boilerroom.tv###app > div[class^="Dialogs"] > div[class^="Dialog"]
 boingboing.net##.boing-amp-triple13-amp-1
