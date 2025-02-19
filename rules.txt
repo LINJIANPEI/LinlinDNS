@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-19 07:08:57（北京时间）
+! Version: 2025-02-19 08:42:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63492
+! Total count: 63499
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5066,6 +5066,7 @@
 @@||adidasapp.api.adidas.com.cn^$important
 @@||adidasoriginals-lookbook.com.tw/js/adtracking.js
 @@||adikpm.github.io/repo/assets/js-v3/prebid.js$domain=adikhealth.xyz|mangindo.xyz
+@@||adikpm.github.io/repo/assets/js/prebid_hb_3293_5687.js
 @@||adinvent.engine.adglare.net^$other,xmlhttprequest,domain=gayboystube.com
 @@||adisteme.kz^$generichide
 @@||adjectives-for.com^$generichide
@@ -32397,6 +32398,7 @@ galeria-kaufhof.de##react-root[data-component="PRIVACY_SETTINGS"]
 galeriabaltycka.pl##.mdl-modal__backdrop, #mdl-overlay
 galerialazienek.pl##.config-messages
 galileo.tv###cookieBannerGTV
+gall.dcinside.com##div[class*="banner"]
 gallons.io###a-bottom
 gallons.io###a-left
 galnet.fr###topnotecontainer
@@ -41339,6 +41341,7 @@ m.07073.com##.new_heads_bg
 m.163.com##.floatMenu-backflow
 m.163.com##.floatMenu-logo
 m.163.com##footer > span
+m.40407.com##.bt_ad
 m.56.com##a[data-statkey="newad_banner"]
 m.acfun.cn##.flex-center.down-app-button
 m.acfun.cn##.header-ico
@@ -42538,6 +42541,8 @@ medlon.nl###globalmessage_holder
 medme.pl##div[class$="-loaded-w2g"]
 medme.pl##p[style^="background: none repeat scroll 0 0 #E3E3E3; color: #A5A5A5; font-family: Tahoma;"]
 medonet.pl##.mainHolder > .slot-covid-meter
+medonet.pl##.ods-ads__ad-space
+medonet.pl,plejada.pl,onet.pl,auto-swiat.pl,komputerswiat.pl##.ods-ads__ph
 medpagetoday.com###right-rail-frame
 medpagetoday.com##.leaderboard-region
 medpagetoday.com##.right-rail-panel
@@ -58161,6 +58166,8 @@ twitter.com,x.com##a[href*="src=promoted_trend_click"] + div
 twitter.com,x.com##article[data-testid="tweet"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com,x.com##div[data-testid="UserCell"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com,x.com##div[data-testid="cellInnerDiv"] > div > div[class] > div[class][data-testid="placementTracking"]
+twitter.com,x.com##div[data-testid="eventHero"]:first-child
+twitter.com,x.com##div[data-testid="eventHero"]:first-child + div:last-child
 twitter.com,x.com##div[data-testid="eventHero"]:has(path[d$="10H8.996V8h7v7z"])
 twitter.com,x.com##div[data-testid="placementTracking"]:has(div[data-testid$="-impression-pixel"])
 twitter.com,x.com##div[data-testid="trend"]:has(path[d$="10H8.996V8h7v7z"])
