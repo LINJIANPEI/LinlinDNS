@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-21 23:09:19（北京时间）
+! Version: 2025-02-22 00:11:14（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63560
+! Total count: 63570
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25,7 +25,6 @@
 (com?$script
 (com|$script
 *$doc,removeparam=/^utm_/
-*$document,csp=script-src-attr 'none',domain=cruciverba.it|motscroises.fr|palabr.as|word-grabber.com|wort-suchen.de|lamire.jp|picrew.me|badmouth1.com|jin115.com|gloria.hr|etnews.com|sportsseoul.com|hoyme.jp|heraldm.com
 *$document,csp=script-src-attr 'none',domain=cruciverba.it|motscroises.fr|palabr.as|word-grabber.com|wort-suchen.de|lamire.jp|picrew.me|badmouth1.com|jin115.com|gloria.hr|etnews.com|sportsseoul.com|hoyme.jp|heraldm.com|winfuture.de
 *$image,redirect-rule=1x1.gif,domain=youku.com
 *$image,redirect-rule=32x32-transparent.png,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|miuiflash.com|thecubexguide.com|jytechs.in
@@ -13986,6 +13985,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$domain=truffeonline.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$domain=tudaydeals.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$script,domain=conocesobreinformatica.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$script,domain=tamilyogi.wiki
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$xmlhttprequest,domain=getpaidtowritearticle.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$xmlhttprequest,domain=news-724.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$xmlhttprequest,domain=ottverse.com
@@ -29627,6 +29627,9 @@ engvig.no###cookie
 eni.com##c-ecp-cookies-banner
 enikom-m.com###cookies
 enikos.gr##.billboard-wrap
+enimerosi.com##.aritle-detail-description > div.row:has(> div > picture > img.banner_desktop)
+enimerosi.com##.detail-right-sd > div.d-sm-block:has(picture > img.banner_desktop)
+enimerosi.com##a[href="https://www.facebook.com/KazianisCashandCarry/"]
 enjoy4fun.com###fake-ads-dom
 enjoyfuck.com,fuckgonzo.com,pornokeep.com##.advmnt
 enjoymore.fun##a[href*="urlto.pw"]
@@ -32009,7 +32012,10 @@ freetutsdownload.net##.bialty-container > div.g-6 > div.g-single > br + center
 freetutsdownload.net##body .theiaStickySidebar > div.widget_text
 freeupscmaterials.org##nav + .gb-container .gb-inside-container:has(.code-block > center > a[target="_blank"] > img)
 freevbcode.com###wrapper > div[style="margin-top:96px; margin-left:630px; z-index:0;width:110px; padding-bottom:3px; height:0px;"]
+freevideo.cz##.detail-banner
+freevideo.cz##.section__content.videos > .video[data-autofill="placenky"]
 freevideo.cz##.topstory
+freevideo.cz##.videos__banner
 freevideo.cz##.videos__prbn
 freevpn4you.net##body > div[style^="width: 100%; background: #ddeaf3;"]
 freevpnplanet.com##.cookies
@@ -34713,6 +34719,7 @@ hawkbets.com##.app__right-sidebar > a[href][target="_blank"][rel="nofollow"]
 hawkbets.com##.new_aside_block
 haxball.com##.flexRow > .rightbar
 haxnode.net##.haxno-after_content
+haxnode.net,farlad.com,mod18.com,hoofoot.net,thejujutsukaisenmanga.com,nxbrew.net,hiphopa.net,anysource.pro,adminreboot.com,kakiagune.com,savegame.pro,papa4k.online,my-ford-focus.de,stakes100.xyz,sp500-up.com,papafoot.click,f1gplive.xyz,gamevcore.com,papahd.club,yakyufan-asobiba.com,hadakanonude.com##body > #wrapper + div[id][class*=" "]
 haxpc.net##form[action^="//ziphost.online/"]
 haxpc.net,fullcrackedpc.com,wareskey.com##.getox
 haydenjames.io###text-2
@@ -39280,6 +39287,7 @@ khaleejtimes.com##body .fix-mpu-nf
 khaosod.co.th##.ads_position_wrapper
 khboxhd.com##div[id$="-ad"]
 khelnow.com###header-adwords-section
+khelnow.com##.MuiBox-root:has(> div.ad-container:first-child)
 khmertimeskh.com##.head-wrap > div.col-md-4 > *:not(h1)
 khmertimeskh.com##.khmer-content_28
 khmertimeskh.com##.panel-grid-cell
@@ -61086,6 +61094,7 @@ word.tips##.result-words-ad
 word.tips##.result-words-ad-new
 wordcounter.icu##.interstitial-page > nav#mainNav ~ iframe
 wordcounter.icu##.sidebar__display
+wordcounter.icu##input[value="DIRECT DOWNLOAD"]
 wordcounter.icu,passgen.icu##div[style^="z-index:99"][style*=";position:fixed;"][style*="left:50%;transform:"][style*="translateX(-50%)"]
 wordcounter.io##.page-aside__display
 wordcounter.io##.sidebar__display
@@ -63291,6 +63300,7 @@ zielonyogrodek.pl##.zo-recommended-top
 zien.tv###cbar
 ziffit.com##.notificationholder
 zig-star.com##.md-consent
+ziggame.com##a[onclick="SMart1()"]:not([href^="http"]) > img
 ziggo.nl##.cookiewall__wrapper
 ziggogo.tv##.notifications-manager
 zillow.com##.vPTHT
