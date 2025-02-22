@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-23 01:07:37（北京时间）
+! Version: 2025-02-23 02:10:52（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63578
+! Total count: 63587
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -764,6 +764,7 @@
 /ad-scripts--$script
 /ad-scroll.js$script
 /ad-server.$~script
+/ad-sign.*/
 /ad.cgi?$~xmlhttprequest
 /ad.css?$stylesheet
 /ad.html?$~xmlhttprequest
@@ -996,6 +997,9 @@
 /bsa-plugin-pro-scripteo/frontend/js/script.js$script
 /bsa-pro-scripteo/frontend/js/script.js$script
 /buysellads.js$script
+/bytedance.*/
+/bytegoofy.*/
+/byteorge.*/
 /c.vialoops.com/*$image
 /c?siteID=$image,script
 /calcalist_gpt_ads.js$script
@@ -1118,6 +1122,7 @@
 /footer_ads.php$subdocument
 /footerads.php$script
 /fourapi/api/data/money?date=$xmlhttprequest
+/fqnovelvod.*/
 /fro_lo.js$script
 /frontend_loader.js$script
 /ftt2/js.php$script
@@ -1204,6 +1209,7 @@
 /leftad.js$script
 /leftad.png$image
 /legion-advertising-atlasastro/*$script
+/lf.fqnovel.*/
 /li.blogtrottr.com/imp?$image
 /link.divenewsletter.com/img/*$image
 /link.e-mail.*/mo/*$image
@@ -1228,6 +1234,7 @@
 /media_ads/*$image
 /mellowpresence.com^$script
 /merrx01/^$document
+/mgsdk-sign.*/
 /microad.js$script
 /mnpw3.js$script
 /mod_ijoomla_adagency_zone/*$~xmlhttprequest
@@ -1446,6 +1453,7 @@
 /smartpop/*$popup
 /snowplow/*$script
 /snowplow_$script
+/snssdk.*/
 /sp/delivery/*$script
 /spc.php?$script
 /spcjs.php$script
@@ -1560,6 +1568,7 @@
 /zcredirect?$popup
 /zcvisitor/*$popup
 /zheungouhw/
+/zijieapi.*/
 /znsrc.com/c/*$image
 /zone/*?frame=0&ancestorOrigins=$all
 /zp-redirect?$popup
