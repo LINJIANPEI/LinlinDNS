@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-23 12:11:10（北京时间）
+! Version: 2025-02-23 13:08:52（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63587
+! Total count: 63590
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -33047,6 +33047,7 @@ gelbooru.com##A[href*="ads="]
 gelbooru.com##a[href="https://gelbooru.com/tdForward.php"]
 gelbooru.com##a[href^="https://www.soulgen.net/"]
 gelbooru.com##div[style^="width: 728px; height: 90px"]
+gelbooru.com,xozilla.com##[style^="height: 250px !important; overflow: hidden;"]
 geld.de##.geld-layer-cookie-approval
 gelighting.com###privacy-message
 gelsia.it##.cao
@@ -44759,6 +44760,7 @@ namethatpornad.com,vxxx.com##a[href^="https://www.g2fame.com/"]
 namibian.com.na##.container.wrap > .extras-min
 namify.tech##.suggestion-rows .suggestion__namify-partner
 namify.tech##[class*="gtm-banner-"]
+namu.wiki##div[id][class]:empty
 nanamovies.me##.yan-rek
 nanamovies.me##a[target="_blank"] > img
 nanfengyl.com##.index-top-ad1
@@ -48053,6 +48055,7 @@ pixiv.net##.multi-ads-area
 pixiv.net##.premium-lead
 pixiv.net##.premium-lead-new-t-info-home-top
 pixiv.net##.premium-lead-t-footer
+pixiv.net##[data-gtm-recommend-zone="index"] li:has(> div > iframe[name$="rectangle"])
 pixiv.net##a[target="premium_noads"]
 pixiv.net##div[data-overlay-container="true"] > div:not([class]) > div[class^="sc-"]:has(> div[id^="adsdk"])
 pixiv.net##div[id^="adsdk-"]
