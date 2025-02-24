@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-24 20:17:36（北京时间）
+! Version: 2025-02-24 21:18:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63826
+! Total count: 63831
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -24627,7 +24627,6 @@ celebjihad.com##.crp_related td[align="center"] > a[href^="https://www.celebjiha
 celebjihad.com##a[href="https://www.celebjihad.com/widget/out/cjcams.php"]
 celebjihad.com##a[href^="https://go.admjmp.com/"]
 celebjihad.com##iframe[src^="https://go.bshrdr.com/"]
-celebmafia.com##div[data-ad]
 celebritygalls.com##.articles-container > article.card[style="border:5px solid black;"]
 celebritymovieblog.com,interracial-girls.com###custom_html-2
 celebritynakeds.com##.show-over-1000.async-reklam-placeholder
@@ -27614,7 +27613,6 @@ deepl.com###dl_cookieBanner
 deepl.com##div[class]:has(> aside[data-testid="write-promo-banner"])
 deeplol.gg##.center_content_bottom_ad_box
 deeplol.gg##div[data-ad]
-deeplol.gg,opynew.com,upfilesurls.com,imginn.com##div[data-ad]
 deepstash.com##.Toaster
 defacto.com.tr###kvkk_notification
 defence-industry.eu##.has-small-font-size.has-text-align-center
@@ -39845,6 +39843,7 @@ kolagames.com##.gameinfo_top_ad
 kolagames.com##.slot
 kolarzyk.pl###cookie_info_kl
 kolbi.pl##body > div:not([id]):not([class])
+kolbook.xyz,hardlevel.com.br,orenoraresne.com##iframe[name="__tcfapiLocator"] + div[id][class*=" "]
 kolding.dk###jGrowl
 kollelbudget.com###text-43
 kollelbudget.com###text-70
@@ -47343,6 +47342,10 @@ palma.cat###avisolssi
 palmknihy.cz##.gdpr
 palmtube.com##.Content > .Sub_Title.Sub_Title_Bottom
 palmtube.com##.Player_Bn
+palukimogilno.pl,zycie.pl##.adv
+palukimogilno.pl,zycie.pl##.grid__ad
+palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
+palukimogilno.pl,zycie.pl##.news__read-more
 palworld.gaming.tools##header ~ div.fixed:has(> div[id^="palworld-mobile-bottom"])
 pamgolding.co.za###popi-notification
 pamiec.pl##.JSWrapper
@@ -54923,6 +54926,8 @@ subyshare.com##a[href*="&utm_medium=banner"][target="_blank"]
 subzero-wolf.com##.footer-announcement
 succesagenda.com##.notification-wrapper
 success.ivanti.com##.cookies
+sucha24.pl##.grid__container > div.grid__row > div.grid__col:has(> div.card > div.box > div.box__container > div a[href^="https://intermarche.pl/"])
+sucha24.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div > center a[href]):not(:has(div[id^="calendar_"]))
 sucredorge.com###cnil, .cnil, #CNIL
 suder.eu##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 sudoku-knacker.de##.v-bottom-sheet
