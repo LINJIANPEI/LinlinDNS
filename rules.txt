@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-24 16:13:25（北京时间）
+! Version: 2025-02-24 17:11:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63821
+! Total count: 63825
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -28699,6 +28699,8 @@ dplay.fi##div[class^="notification"]
 dplay.nl###header-wrapper ~ dialog
 dplay.no###app > div > dialog[class^="notification"]
 dplay.se###app > div > dialog[class^="notification"]
+dpm.lol##.sticky > div[class*="314px"]
+dpm.lol,celebmafia.com,deeplol.gg,opynew.com,upfilesurls.com,imginn.com##div[data-ad]
 dpo-consulting.fr###POPUPS_ROOT
 dpreview.com##.articleBody > .videoWrapper:has(> .raptiveVideoWrapper > div[class^="adthrive-content"])
 dpreview.com##.connatixWrapper
@@ -55468,6 +55470,8 @@ tata.com##.overlayPop
 tattle.life##.mmt-sticky
 tattle.life##.visitorAdPost
 tattoodo.com###js-root > div > div:first-child:not([id])
+tauronliga.pl##.baner-box
+tauronliga.pl##.section-baner
 taxi-point.co.uk##.powr-popup
 taxi-point.co.uk##div[id^="comp-"][class^="_"] > div[class^="_"][style^="padding-left"]
 taxi69.com##.menu-button-cams-icon2
