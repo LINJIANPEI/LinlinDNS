@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-24 23:10:56（北京时间）
+! Version: 2025-02-25 00:11:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63833
+! Total count: 63835
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -24769,6 +24769,7 @@ channel24bd.tv##.stickyAds
 channel24bd.tv##a[target="_blank"] > img[title="Advertisement"]
 channel4.com###adPauseContainer
 channel4.com###c4ad-Top
+channel4.com###freewheelContainer
 channel4.com##.advertsLeaderboard
 channel4.com##.slice__list > .block--mpuContainer > .block--mpu
 channel4.com##body > a.page-bgLink[target="_blank"]
@@ -34895,7 +34896,6 @@ hardcoreluv.com,imageweb.ws,pezporn.com,wildpictures.net##[href="https://nudegir
 hardees.com##.notice-window
 hardforce.com###rgpd-cookies
 hardgif.com##.item:has(> .osBannerPreload:only-child)
-hardlevel.com.br,orenoraresne.com##iframe[name="__tcfapiLocator"] + div[id][class*=" "]
 hardloopschema.nl###interContainer, #interVeil
 hardocp.com###content-left > div[style="height:280px; width:336px; margin-left: 10px; clear: both;"]:not([class]):not([id])
 hardocp.com##a[href="https://www.hardocp.com/redirect.php"]
@@ -42042,6 +42042,7 @@ magazif.com##div[id^="magid-"]
 magazineexchange.co.uk##.ui-widget, .ui-widget-overlay
 magazineluiza.com.br##main > section ~ div[width="100%"]
 magazinizmir.com##footer a[class^="BoomadsButtonLink"]
+magazynnaszczycie.pl,palukimogilno.pl,zycie.pl##.grid__ad
 magazynpracy.pl##body > div:not([id]):not([class])
 magazzinirossi.eu###informativaBreve
 magdalena24.pl###cookie
@@ -42251,6 +42252,11 @@ manatelugumovies.cc##.laptopad
 manche.fr##.cmHeaderTop
 manchestereveningnews.co.uk##.container > div:empty
 manchestereveningnews.co.uk##div[data-link-partner]
+manchestereveningnews.co.uk,liverpoolecho.co.uk##.commercial-box-style
+manchestereveningnews.co.uk,liverpoolecho.co.uk##aside > div[class^="sc-"]:has(> span > span.react-loading-skeleton)
+manchestereveningnews.co.uk,liverpoolecho.co.uk##aside span > span.react-loading-skeleton
+manchestereveningnews.co.uk,liverpoolecho.co.uk##div[data-testid^="commercial-below-article-box-"]
+manchestereveningnews.co.uk,liverpoolecho.co.uk##section[data-testid^="commercial-"]
 mandatory.com###banner-top
 mandmdirect.de###cookieModal
 manetti.com##.fancybox-overlay, .fancybox-wrap
@@ -44635,7 +44641,6 @@ mydown.yesky.com##.main_left_advertisement
 mydown.yesky.com##.rightGg
 mydowndown.com##p[style="color:#ff0000;"] > a[target="_blank"]
 mydramalist.com##.ad-removal-info
-mydramalist.com##.app-body > :has(.is-desktop-ads)
 mydramalist.com##.app-body > div[class]:has(> div.is-desktop-ads)
 mydramalist.com##.col-lg-4 > .clear
 mydramalist.com##.content-side > div[class*="_right"][style="min-height: 250px;"]
@@ -47927,6 +47932,7 @@ petri.com##.sponsorsInline
 petri.com##div[data-petri-gutenberg-block="sponsors-logo-list"]
 petri.com##div[data-petri-impression-tracking^="sponsor_"]
 petromax.de##.mpp-container-position-bottom-bar
+petronews.pl,zyciezyrardowa.pl,zyciepabianic.pl##.baner
 petsathome.com##.onetrust
 petz.com.br##.policy-warning-banner
 peugeot-scooters.nl##.policy-window
@@ -63808,10 +63814,6 @@ zybang.com##.question-below-text
 zybang.com##.related-question-below-text
 zybang.com##.top_download
 zybang.com##body.m-question > a[href^="https://www.kuaiduizuoye.com/"][target="_blank"] > img
-zycie.pl##.adv
-zycie.pl##.grid__ad
-zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
-zycie.pl##.news__read-more
 zyciepabianic.pl##.baner
 zyciepabianic.pl##.new-toplayer
 zycrypto.com##.td-a-rec-id-content_bottom
