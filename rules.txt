@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-25 08:43:35（北京时间）
+! Version: 2025-02-25 10:13:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63843
+! Total count: 63830
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4940,7 +4940,6 @@
 @@||ad-delivery.net/px.gif?$domain=explorecams.com
 @@||ad-delivery.net/px.gif?$domain=linuxcapable.com
 @@||ad-doge.com^$generichide
-@@||ad-emea.doubleclick.net/ad/*$domain=channel4.com
 @@||ad-emea.doubleclick.net/clk
 @@||ad-gone.com^
 @@||ad-log-upload.mihoyo.com^
@@ -7073,7 +7072,6 @@
 @@||cdn.honor.ru/pms/pages/adsImages/$domain=honor.ru
 @@||cdn.howtofixwindows.com/wp-content/*/better-adsmanager/js/advertising.min-*.js
 @@||cdn.hsmedia.ru/dist/$stealth,domain=maximonline.ru|woman.ru|parents.ru|vokrugsveta.ru|psychologies.ru|ellegirl.ru|wday.ru|elle.ru|marieclaire.ru
-@@||cdn.http.anno.channel4.com^$domain=channel4.com
 @@||cdn.idevbase.com/static/$stealth,domain=ohttps.com
 @@||cdn.interactivemedia.net/live/t-o-auto/live/globalAdTag.min.js$domain=tanken.t-online.de
 @@||cdn.intergi.com/*/js/libs/cmg-prebid-*.new.js$domain=coolmathgames.com
@@ -12676,7 +12674,6 @@
 @@||mssl.fwmrm.net/libs/adm/*/LinkTag2.js$domain=play.tv3.lt
 @@||mssl.fwmrm.net/libs/adm/*/LinkTag2.js$domain=tv3play.skaties.lv
 @@||mssl.fwmrm.net/p/abc_live/AdManager.js$domain=abc.go.com
-@@||mssl.fwmrm.net/p/c4_live/*.swf$object,domain=channel4.com
 @@||mssl.fwmrm.net/p/msn_live/AdManager.swf$domain=msn.com
 @@||mssl.fwmrm.net/p/nbcu_*/AdManager.js$domain=nbcsports.com
 @@||mssl.fwmrm.net/p/nbcu_*/AdManager.js$domain=rottentomatoes.com
@@ -15311,7 +15308,6 @@
 @@||s-nbcnews.com/*/FreeWheelAdManagerLoader.swf$domain=today.com
 @@||s-plugins.wordpress.org
 @@||s-pt.ppstatic.pl/o/js/pp-ads/ads.js
-@@||s-static.innovid.com/*/config/*.xml$object,domain=channel4.com
 @@||s.163.com^
 @@||s.206ads.com/core.js$domain=androidauthority.com
 @@||s.206ads.com/helper.js$domain=androidauthority.com
@@ -17692,6 +17688,7 @@
 @@||v.fwmrm.net/ad/g/1?$domain=funimation.com
 @@||v.fwmrm.net/ad/g/1?$domain=play.tv3.lt
 @@||v.fwmrm.net/ad/g/1?$domain=ruutu.fi
+@@||v.fwmrm.net/ad/g/1?$xmlhttprequest,domain=channel4.com
 @@||v.fwmrm.net/ad/g/1?$xmlhttprequest,domain=www.mycanal.fr
 @@||v.fwmrm.net/ad/g/1?*DiscoveryIntl_BrightcoveJ*&csid=VVVVID_ITALY_*vast
 @@||v.fwmrm.net/ad/g/1?*mtv_desktop$xmlhttprequest
@@ -17700,7 +17697,6 @@
 @@||v.fwmrm.net/ad/l/1$domain=bold.dk
 @@||v.fwmrm.net/ad/l/1$domain=tv3sport.dk,important
 @@||v.fwmrm.net/ad/l/1$domain=viasatsport.se
-@@||v.fwmrm.net/ad/l/1?$object,domain=channel4.com
 @@||v.fwmrm.net/ad/p/1?$domain=cc.com|channel5.com|cmt.com|eonline.com|foodnetwork.com|nbcnews.com|ncaa.com|player.theplatform.com|simpsonsworld.com|today.com
 @@||v.fwmrm.net/ad/p/1?$domain=cdn.watch.aetnd.com
 @@||v.fwmrm.net/ad/p/1?$domain=channel4.com
@@ -21025,8 +21021,6 @@ atalayar.com,express.co.uk,the-express.com##.superbanner
 atea.ee###cookie
 ateliertuffery.com###pmtv-cookie
 atende.net##.termos_cookie_privacidade, #btn-open-preferencia-cookies
-aternos.org##.header-ad
-aternos.org##.header-ad-columns
 atg.se##.notice__info-info, .alert--info
 atgtickets.com###atgcookies-container
 athenesaccueil.com##body > div:not([id]):not([class])
@@ -41176,11 +41170,6 @@ livemint.com##div[class^="outbrainAd"]
 livemint.com##div[id$="NotAdFree"]
 livenewschat.eu###secondary > aside[id^="custom_html-"]
 liveradio.ie###disclaimer
-liverpoolecho.co.uk##.commercial-box-style
-liverpoolecho.co.uk##aside > div[class^="sc-"]:has(> span > span.react-loading-skeleton)
-liverpoolecho.co.uk##aside span > span.react-loading-skeleton
-liverpoolecho.co.uk##div[data-testid^="commercial-below-article-box-"]
-liverpoolecho.co.uk##section[data-testid^="commercial-"]
 liverpoolecho.co.uk,manchestereveningnews.co.uk##.teaser[data-tmdatatrack-source="SHOP_WINDOW"]
 liverpoolfc.com###LfcCookieContent
 liverpoolfc.com###lfc_ads_article_pos_one
@@ -47358,7 +47347,6 @@ palmknihy.cz##.gdpr
 palmtube.com##.Content > .Sub_Title.Sub_Title_Bottom
 palmtube.com##.Player_Bn
 palukimogilno.pl,zycie.pl##.adv
-palukimogilno.pl,zycie.pl##.grid__ad
 palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
 palukimogilno.pl,zycie.pl##.news__read-more
 palworld.gaming.tools##header ~ div.fixed:has(> div[id^="palworld-mobile-bottom"])
@@ -63822,7 +63810,6 @@ zybang.com##.question-below-text
 zybang.com##.related-question-below-text
 zybang.com##.top_download
 zybang.com##body.m-question > a[href^="https://www.kuaiduizuoye.com/"][target="_blank"] > img
-zyciepabianic.pl##.baner
 zyciepabianic.pl##.new-toplayer
 zycrypto.com##.td-a-rec-id-content_bottom
 zycrypto.com##.td-a-rec-id-custom_ad_2
