@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-26 23:10:38（北京时间）
+! Version: 2025-02-27 00:11:52（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63901
+! Total count: 63905
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1104,6 +1104,7 @@
 /email.t.*/o/*$image
 /email/open/?pd=$image
 /email/track/*$image
+/embed-1/ajax/e-1/banners|$xmlhttprequest
 /emimp/*$image
 /engage.indeed.com/*$image
 /eo?_t=$image
@@ -4220,9 +4221,7 @@
 @@/play.php?$stealth,domain=netlivetv.xyz
 @@/player/*$stealth,domain=ibomma.*
 @@/player/stats.php$domain=85po.com|watchporn.to|viralpornhub.com|watchmdh.to
-@@/player/stats.php$domain=watchporn.to|viralpornhub.com|watchmdh.to
 @@/player_ads.html$domain=85po.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|pornobit.me|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|pornsexer.com|sexcams-24.com|watchmdh.to
-@@/player_ads.html$domain=watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|pornobit.me|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|pornsexer.com|sexcams-24.com|watchmdh.to
 @@/playlist.m3u8$stealth
 @@/playlist/*caxi.m3u8$xmlhttprequest,stealth=referrer,domain=methstreamer.com|crackstreamer.net|thestreameast.ai|1stream.soccer|streameast.app|1stream.eu|buffstreams.app|meth-streams.ai
 @@/playstream/*/embed*.php$xmlhttprequest,stealth=referrer,domain=playstream.site
@@ -7486,6 +7485,7 @@
 @@||click.alternate.de^
 @@||click.appcast.io^
 @@||click.appcast.io^|
+@@||click.avs.io^
 @@||click.avs.io^|
 @@||click.chp.kohls.com^
 @@||click.cptrack.de^
@@ -16444,6 +16444,8 @@
 @@||static.doubleclick.net/instream/ad_status.js$domain=alliptvlinks.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=bloggingsathi.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=deblocker.merkulov.design|jpopsingles.eu
+@@||static.doubleclick.net/instream/ad_status.js$domain=drama-online.tv|deblocker.merkulov.design|jpopsingles.eu
+@@||static.doubleclick.net/instream/ad_status.js$domain=drama-online.tv|jpopsingles.eu|mhdstream.com|nullpk.com|tkbsen.in|alttyab.net|shineads.org|portalizpro.com|justpaste.top|whats-on-netflix.com|shineads.org|gplastra.com|kuponigo.com|arponag.xyz|step-tech.pl|nulleb.com|thecustomrom.com|anonyviet.com|ymknow.xyz|jadukit.com|serverbd247.com|emptycode.in|techacode.com|azmath.info|gamedrive.org|mhdworldtv.com|kisahdunia.com|mixrootmods.com|chindohot.site|javindo.eu.org|filmisub.cc|3dmodelshare.org|plc4me.com|ezaudiobookforsoul.com|apkdelisi.net|pcgameszone.com|drivers.plus|sketchup.cgtips.org
 @@||static.doubleclick.net/instream/ad_status.js$domain=game3rb.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=gpldose.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=idlixofficials.com|idlixofficial.co|idlixofficial.net
@@ -45675,6 +45677,7 @@ newsbeast.gr##.amSlotFeed
 newsbeast.gr##.amSlotInReadVideo
 newsbeast.gr##.sidebarAmSlot
 newsbeast.gr##.undeMenuAmSlot2
+newsbeast.gr##div[class*="amSlot"]
 newsbelow.de##.flash
 newsbomb.gr###taboola-below-article-thumbnails
 newsbomb.gr##.banner-section
@@ -46351,6 +46354,8 @@ nudevista.at,nudevista.com###paysite
 nudevista.link##.bnblog
 nudevista.link##.sidebar-bn
 nudityfactor.com##div[style="max-width: 320px; text-align: center; margin: 0 auto;"]
+nudogram.com##.super_button
+nudogram.com##.wp_xsize_class
 nudogram.com##ul.primary > li > a[target="_blank"]:not([href*="nudogram.com"])
 nuevocaceres-sanfrancisco.es##.index_cookies
 nuget.org##.banner, #banner
@@ -48437,7 +48442,6 @@ planetfootball.com##.grid > article:has(> div > div.unis-rec-ai-mpu-eoa)
 planetfootball.com##aside > div[class]:has(> div[class^="browsi"])
 planetfootball.com##div[style="height: 278px;"]
 planetfootball.com##div[style="height: 300px;"]
-planetfootball.com,se7ensins.com,theboobsblog.com##div[style="height: 250px;"]
 planethappy.de##.popup-overlay
 planetizen.com###navbar-top
 planetizen.com##.revive-sitewide-banner-2__wrapper
