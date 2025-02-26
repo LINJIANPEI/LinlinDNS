@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-26 08:43:20（北京时间）
+! Version: 2025-02-26 10:13:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63860
+! Total count: 63889
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -608,6 +608,21 @@
 /.*\.a\.market\.xiaomi\.com/
 /.*\.data\.hicloud\.com/
 /.*\.log\.aliyuncs\.com/
+/.*ad-sign.*/
+/.*ad.wtzw.com.*/
+/.*adservice.*/
+/.*adsmind.*/
+/.*aligames.*/
+/.*bytedance.*/
+/.*bytegoofy.*/
+/.*byteorge.*/
+/.*ibytedapm.*/
+/.*mgsdk-sign.*/
+/.*pangolin.*/
+/.*pglstatp.*/
+/.*tsyouto.*/
+/.*umeng.*/
+/.*zijieapi.*/
 /139.45.197.24\d/$network
 /193.200.64.24:/
 /1MObaudu.$script,xmlhttprequest
@@ -4847,6 +4862,7 @@
 @@||aboluowang.com^$generichide
 @@||about.gitlab.cn^$important
 @@||about.smartnews.com/ja/wp-content/assets/img/advertisers/ad_$~third-party
+@@||abt.s3.yandex.net/expjs/latest/exp.js$script,domain=some.porn
 @@||abtest.mistat.xiaomi.com^
 @@||abtest3-misc-lf.zijieapi.com^
 @@||abtestvm.bytedance.com^
@@ -6006,6 +6022,7 @@
 @@||apis.kostprice.com/fapi/$script,domain=gadgets.ndtv.com
 @@||apis.wavve.com/fz/streaming$domain=wavve.com,stealth=ip
 @@||apischedule.ksyungslb.com^$important
+@@||apissl.ksapisrv.com^$app=com.kuaishou.nebula,important
 @@||apissl.ksapisrv.com^$important
 @@||apiwaka.azure-api.net/api/key/$stealth,domain=wakanim.tv
 @@||apiwz.midukanshu.com^
@@ -10566,6 +10583,7 @@
 @@||image.mp3.zdn.vn/banner/
 @@||image.shutterstock.com^$image,domain=icons8.com
 @@||image.uc.cn^$important
+@@||image.uczzd.cn^$app=com.UCMobile
 @@||imagebam.com/gallery-organizer$document
 @@||imagefap.com/jscripts/ad_loader.js
 @@||images*.imagebam.com/ad^
@@ -10579,6 +10597,7 @@
 @@||images.intellicast.com/Scripts/ad-v3.js
 @@||images.macrumors.com/*/article-new/
 @@||images4u.cc^$generichide
+@@||imapi5-oth-*.zijieapi.com^
 @@||imasdk.googleapis.com$domain=video.huffingtonpost.it
 @@||imasdk.googleapis.com/js/$domain=cari.com.my
 @@||imasdk.googleapis.com/js/core/bridge*.html$domain=~spotify.com
@@ -10588,6 +10607,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=10play.com.au
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=20min.ch|lessentiel.lu
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=247sports.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=247sports.com|antena3.ro|api.screen9.com|autokult.pl|bbc.com|blastingnews.com|bloomberg.co.jp|bloomberg.com|bsfuji.tv|cbc.ca|cbsnews.com|cbssports.com|chicagotribune.com|clickorlando.com|cnet.com|crunchyroll.com|delish.com|distro.tv|doubtnut.com|einthusan.tv|embed.comicbook.com|etonline.com|farfeshplus.com|filmweb.pl|game.pointmall.rakuten.net|gamebox.gesoten.com|gamepix.com|gameplayneo.com|games.usatoday.com|gbnews.com|geo.dailymotion.com|givemesport.com|goodmorningamerica.com|goodstream.uno|gospodari.com|howstuffworks.com|humix.com|ignboards.com|iheart.com|insideedition.com|irctc.co.in|klix.ba|ktla.com|kxan.com|lemino.docomo.ne.jp|locipo.jp|maharashtratimes.com|maxpreps.com|metacritic.com|minigame.aeriagames.jp|missoulian.com|myspace.com|nettavisen.no|paralympic.org|paramountplus.com|player.abacast.net|player.amperwave.net|player.earthtv.com|player.performgroup.com|plex.tv|pointmall.rakuten.co.jp|popculture.com|realmadrid.com|rte.ie|rumble.com|s.yimg.jp|scrippsdigital.com|sonyliv.com|southpark.lat|southparkstudios.com|spiele.heise.de|sportsbull.jp|sportsport.ba|success-games.net|synk-casualgames.com|tbs.co.jp|tdn.com|thecw.com|truvid.com|tubitv.com|tunein.com|tv-asahi.co.jp|tv.abcnyheter.no|tv.rakuten.co.jp|tver.jp|tvp.pl|univtec.com|utsports.com|video.tv-tokyo.co.jp|vlive.tv|watch.nba.com|wbal.com|weather.com|webdunia.com|wellgames.com|worldsurfleague.com|wowbiz.ro|wsj.com|wtk.pl|zdnet.com|zeebiz.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=247sports.com|antena3.ro|api.screen9.com|autokult.pl|bbc.com|blastingnews.com|bloomberg.co.jp|bloomberg.com|bsfuji.tv|cbc.ca|cbsnews.com|cbssports.com|chicagotribune.com|clickorlando.com|cnet.com|crunchyroll.com|delish.com|distro.tv|doubtnut.com|einthusan.tv|embed.comicbook.com|etonline.com|farfeshplus.com|filmweb.pl|game.pointmall.rakuten.net|gamebox.gesoten.com|gamepix.com|gameplayneo.com|games.usatoday.com|gbnews.com|geo.dailymotion.com|givemesport.com|goodmorningamerica.com|goodstream.uno|gospodari.com|howstuffworks.com|humix.com|ignboards.com|iheart.com|insideedition.com|irctc.co.in|klix.ba|ktla.com|kxan.com|lemino.docomo.ne.jp|locipo.jp|maharashtratimes.com|maxpreps.com|metacritic.com|minigame.aeriagames.jp|missoulian.com|myspace.com|nettavisen.no|paralympic.org|paramountplus.com|player.abacast.net|player.amperwave.net|player.earthtv.com|player.performgroup.com|plex.tv|pointmall.rakuten.co.jp|popculture.com|realmadrid.com|rte.ie|rumble.com|s.yimg.jp|scrippsdigital.com|sonyliv.com|southpark.lat|southparkstudios.com|spiele.heise.de|sportsbull.jp|sportsport.ba|success-games.net|synk-casualgames.com|tbs.co.jp|tdn.com|thecw.com|truvid.com|tubitv.com|tunein.com|tv-asahi.co.jp|tv.abcnyheter.no|tv.rakuten.co.jp|tver.jp|tvp.pl|univtec.com|video.tv-tokyo.co.jp|vlive.tv|watch.nba.com|wbal.com|weather.com|webdunia.com|wellgames.com|worldsurfleague.com|wowbiz.ro|wsj.com|wtk.pl|zdnet.com|zeebiz.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=247sports.com|api.screen9.com|autokult.pl|bbc.com|blastingnews.com|bloomberg.co.jp|bloomberg.com|bsfuji.tv|cbc.ca|cbsnews.com|cbssports.com|chicagotribune.com|clickorlando.com|cnet.com|crunchyroll.com|delish.com|distro.tv|doubtnut.com|einthusan.tv|embed.comicbook.com|etonline.com|farfeshplus.com|filmweb.pl|game.pointmall.rakuten.net|gamebox.gesoten.com|gamepix.com|gameplayneo.com|games.usatoday.com|gbnews.com|geo.dailymotion.com|givemesport.com|goodmorningamerica.com|goodstream.uno|gospodari.com|howstuffworks.com|humix.com|ignboards.com|iheart.com|insideedition.com|irctc.co.in|klix.ba|ktla.com|lemino.docomo.ne.jp|locipo.jp|maharashtratimes.com|maxpreps.com|metacritic.com|minigame.aeriagames.jp|missoulian.com|myspace.com|nettavisen.no|paralympic.org|paramountplus.com|player.abacast.net|player.amperwave.net|player.earthtv.com|player.performgroup.com|plex.tv|pointmall.rakuten.co.jp|popculture.com|realmadrid.com|rte.ie|rumble.com|s.yimg.jp|scrippsdigital.com|sonyliv.com|southpark.lat|southparkstudios.com|spiele.heise.de|sportsbull.jp|sportsport.ba|success-games.net|synk-casualgames.com|tbs.co.jp|tdn.com|thecw.com|truvid.com|tubitv.com|tunein.com|tv-asahi.co.jp|tv.abcnyheter.no|tv.rakuten.co.jp|tver.jp|tvp.pl|univtec.com|video.tv-tokyo.co.jp|vlive.tv|watch.nba.com|wbal.com|weather.com|webdunia.com|wellgames.com|worldsurfleague.com|wowbiz.ro|wsj.com|wtk.pl|zdnet.com|zeebiz.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=24h.com.vn
@@ -10920,6 +10940,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=zoomtventertainment.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$important,domain=digi24.ro
 @@||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$domain=abcnews.go.com|brightcove.net|cbsnews.com|embed.sportsline.com|insideedition.com|pch.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$domain=abcnews.go.com|brightcove.net|cbsnews.com|embed.sportsline.com|insideedition.com|pch.com|utsports.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$domain=cbssports.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$domain=maxpreps.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$domain=repubblica.it
@@ -11011,6 +11032,7 @@
 @@||imgcache.qq.com^$important
 @@||imgdrive.net/anex/alt2.js
 @@||imgfx02.xyz/chapters/$stealth,image
+@@||imgsa.baidu.com
 @@||imgtaxi.com/img-*.html
 @@||imgtmo.com^$stealth=referrer
 @@||imgtn.bdimg.com^$stealth
@@ -12668,8 +12690,11 @@
 @@||msn.com/spartan/dhp$jsinject
 @@||msn.wrating.com/a1.js
 @@||mss0.bdstatic.com^
+@@||mssdk.zijieapi.com^$app=com.dragon.read
+@@||mssdk3-normal-*.zijieapi.com^
 @@||mssdk3-normal-hj.zijieapi.com^
 @@||mssdk3-normal-lf.zijieapi.com^
+@@||mssdk5-normal-hl.zijieapi.com^
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=play.tv3.lt
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=tv3sport.dk
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=viasatsport.se
@@ -14799,6 +14824,7 @@
 @@||pss.bdstatic.com^
 @@||psstatic.cdn.bcebos.com^
 @@||pstatic.net^$image,stealth
+@@||pstatp.com^$app=com.viva.note
 @@||pt.afl.rakuten.co.jp^
 @@||pt.afl.rakuten.co.jp^|
 @@||ptah.m3pd.com/key=$media,domain=porntop.com,stealth=referrer
@@ -16816,6 +16842,7 @@
 @@||task.galaxy.p2cdn.com^
 @@||tatuajestatu.com^$generichide
 @@||tawk.to^$stealth
+@@||tb.himg.baidu.com
 @@||tb.mgtv.com/sdk/*/ad-sdk.js$script
 @@||tb.mgtv.com/sdk/*/ad-sdk.js^$script
 @@||tb1.bdstatic.com/??/tb/_/*/ad_$script
@@ -17068,6 +17095,9 @@
 @@||tickets.oebb.at^$generichide
 @@||ticonsiglio.com/wp-content/*/plugins/ad-ace/includes/adblock-detector/advertisement-*.js
 @@||tidal.com^$generichide
+@@||tieba.baidu.com
+@@||tiebac.baidu.com
+@@||tiebapic.baidu.com
 @@||tienganhedu.com^$generichide
 @@||tiengnhatpro.net^$generichide
 @@||tii.la^$generichide
@@ -17119,6 +17149,7 @@
 @@||tms.capitalone.com^|
 @@||tms.oracle.com/main/prod/utag.sync.js$~third-party
 @@||tn.voyeurhit.com^$domain=voyeurhit.tube
+@@||tnc11-aliec2.zijieapi.com^$app=com.dragon.read
 @@||tnc11-bjlgy.zijieapi.com^
 @@||tnc16-platform-useast1a.tiktokv.com^$important
 @@||tnc3-aliec2.snssdk.com^$important
@@ -18398,6 +18429,7 @@
 @@||wwwimage-tve.cbsstatic.com^
 @@||wwwstream.pro^$subdocument,stealth
 @@||wx.17u.cn^$important
+@@||wx.qlogo.cn^$app=com.tencent.mm
 @@||wx.qlogo.cn^$important
 @@||wx.qq.com/*/ad_$script
 @@||wx.qq.com/c/=/mpres/*/video_ad_
@@ -24201,7 +24233,6 @@ cambabe.me##ul.primary > li[style^="background-color"][style*="color: #fff;"]
 cambabe.video##.margin-fix[id^="list_videos_"] > noindex > .place
 cambabe.video##.primary > li[style^="background-color:"][style*="color: #fff;"]
 cambay.tv##.fp-logo
-cambay.tv##iframe[src^="https://www.cambay.tv/player/html.php?aid="]
 cambay.tv,videocelebs.net##.fp-brand
 cambb.xxx##.model-out-col
 cambb.xxx,chaturbate.com,dlgal.com,playboy.com,rampant.tv,sex.com,signbucks.com,tallermaintenancar.com,tehvids.com,thehentaiworld.com,thehun.net,tiktits.com,uflash.tv,xcafe.com##.ad
@@ -45256,7 +45287,6 @@ nedeljnik.rs###kuki_upozorenje
 nederlandsebrouwers.nl##.cookies
 nedsecure.co.za###divnedbankretailcookie
 needgayporn.com###side_col > div:not([class]):not([id])
-needgayporn.com##iframe[src^="https://www.needgayporn.com/player/html.php"]
 needpix.com###TopBanner
 needpix.com###needpix_com_top_banner
 needsomefun.net###text-36
@@ -49090,7 +49120,6 @@ pornlib.icu##.row_content:has(> .wrap_container:only-child > .spots:only-child)
 pornlib.icu##.wrapper_content:has(> .row_container:only-child > .wrap_container:only-child > div > .live_cams_iframe)
 pornlist.tv##iframe[src*="/rek/"]
 pornlist.tv##iframe[src="/myvids/showx.php"]
-pornlist.tv,gay4porn.com,pornbimbo.com,uiporn.com,uiporn.com##iframe[src*="/player/html.php?aid="][src*="&referer="]
 pornlizer.com##a[href^="https://tezfiles.com/store/"]
 pornloupe.com##.banner-column
 pornlulu.com##.container-fluid > .links
@@ -52397,7 +52426,6 @@ sexlist.tv##.link-premium
 sexlist.tv##.player-ads-side
 sexlist.tv##div[style^="color:"]:has(> a[href="https://trafficox.com"])
 sexlist.tv##iframe[src^="/myvids/"]
-sexlist.tv##iframe[src^="https://www.sexlist.tv/player/html.php"]
 sexlist.tv,pornlist.tv,xxxporn.me,hdpornvideos.su,18porno.tv,hdpornonline.com##.camitems
 sexmummy.com##img[width="468"]
 sexmummy.com##td[height="115"][align="center"]
@@ -53834,6 +53862,7 @@ solwininfotech.com##.sol-cookie-cover
 somatex.com##.notification-system
 some.porn###ads-native
 some.porn###ads-native__skeleton
+some.porn##.fluid_html_on_pause_container
 some.porn##.w-full > div[class]:has(> div[class] > div[data-spot])
 someecards.com##div[class^="BaseAdSlot_adContainer_"]
 somethingartistic.net###hellobar-slider
@@ -55502,7 +55531,6 @@ tastingtable.com,islands.com,grunge.com,slashgear.com,grunge.com,svg.com##.befor
 tastingtable.com,islands.com,grunge.com,slashgear.com,grunge.com,svg.com##.partnership-header
 tastingtable.com,islands.com,grunge.com,slashgear.com,grunge.com,svg.com##.partnership-header + div.slide-key
 tastingtable.com,islands.com,grunge.com,slashgear.com,grunge.com,svg.com##.under-art > h2.section-header
-tastingtable.com,slashgear.com,islands.com,svg.com##.before-ad
 tasty.co##.video-wrap
 tata.com##.overlayPop
 tattle.life##.mmt-sticky
@@ -61592,6 +61620,7 @@ wsj.com##.aside-container > div > div:has(> div.adWrapper)
 wsj.com##.css-c54t2t:has(> .adWrapper)
 wsj.com##.css-c54t2t:has(> .adWrapper) + hr
 wsj.com##.e1cojiod1
+wsj.com##.ez6zued3.css-sw5cyu
 wsj.com##.snippet-right-ad
 wsj.com##.w27771
 wsj.com##[aria-label="Sponsored Offers"]
