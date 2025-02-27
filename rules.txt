@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-27 07:09:10（北京时间）
+! Version: 2025-02-27 08:43:35（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 63907
+! Total count: 63913
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4363,6 +4363,7 @@
 @@doubleclick.net/ads/preferences/
 @@down.360safe.com^
 @@embed/$stealth=webrtc,domain=vipbox.lc
+@@get=*&short=*&refer=google$domain=advertisingcamps.com,stealth=referrer
 @@google$domain=focus.de,script
 @@guokr.com/apis/flowingboard/item/guokrapp_download_source.json
 @@hls/player$stealth=referrer,xmlhttprequest,domain=sportshub.to
@@ -5412,6 +5413,7 @@
 @@||advertising.aol.com/favicon.ico
 @@||advertising.yahoo.com/favicon.ico
 @@||advertising.yahoo.com^$~third-party
+@@||advertisingcamps.com/*/landing/$stealth=referrer
 @@||adverts.1foo.com^
 @@||adverts.ie/css/
 @@||advertserve.com^$domain=trk-imps.com|lewdninja.com
@@ -13133,6 +13135,7 @@
 @@||oisd.nl^$generichide
 @@||oishi-kenko.com/kenko/assets/v2/ads/$~third-party
 @@||ojaivalleynews.com^$generichide
+@@||ojrq.net/p/?return=$popup
 @@||ok.ru/videoembed$stealth
 @@||ok.ru/web-api/music/conf$stealth
 @@||okdiario.com^$generichide
@@ -51602,7 +51605,10 @@ rynek-rolny.pl###fixedElement2
 rynekzdrowia.pl##.abc
 rynekzdrowia.pl##.rodo
 ryuugames.com###block-34
+ryuugames.com###wpfront-notification-bar
 ryuugames.com##.menu-item > a[href^="https://l.erodatalabs.com/s/"]
+ryuugames.com##.menu-item-42245
+ryuugames.com##.menu-item-94876
 ryuugames.com,gizchina.com###block-32
 ryuugames.com,yaoimangaonline.com##[href^="https://l.erodatalabs.com/s/"] > img
 ryzerobotics.com##footer > div[class*="pop-up"]
