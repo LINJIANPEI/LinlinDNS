@@ -178,11 +178,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14657
+! Total count: 14660
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-02-26 20:41:46（北京时间）
+! Version: 2025-02-27 09:42:43（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -1705,6 +1705,7 @@
 @@clicks.$domain=cimbclicks.com.my,~third-party
 @@doubleclick.net/ads/preferences/
 @@embed/$stealth=webrtc,domain=vipbox.lc
+@@get=*&short=*&refer=google$domain=advertisingcamps.com,stealth=referrer
 @@goo.gl
 @@google$domain=focus.de,script
 @@guoqiangti.cf
@@ -8396,6 +8397,7 @@
 @@||advertising.aol.com/favicon.ico
 @@||advertising.yahoo.com/favicon.ico
 @@||advertising.yahoo.com^$~third-party
+@@||advertisingcamps.com/*/landing/$stealth=referrer
 @@||adverts.ie/css/
 @@||advertserve.com^$domain=trk-imps.com|lewdninja.com
 @@||advnetwork.net/advertising/*/advertising.js$xmlhttprequest,domain=bsshotel.it
@@ -14832,7 +14834,6 @@
 @@||js.jansatta.com/ads_js.js
 @@||js.juicyads.com^$script,domain=badassdownloader.com
 @@||js.monitor.azure.com/scripts/$script,domain=genya.it
-@@||js.monitor.azure.com/scripts/$script,domain=genya.it|microsoft.com|rubex.efilecabinet.net
 @@||js.monitor.azure.com/scripts/*/ms.analytics-web-*.min.js$domain=mediastream.microsoft.com
 @@||js.monitor.azure.com/scripts/*/ms.analytics-web-*.min.js$domain=remoteassistance.support.services.microsoft.com
 @@||js.monitor.azure.com/scripts/*/ms.analytics-web-*.min.js$domain=skype.com
@@ -16422,6 +16423,7 @@
 @@||oisd.nl^$generichide
 @@||oishi-kenko.com/kenko/assets/v2/ads/$~third-party
 @@||ojaivalleynews.com^$generichide
+@@||ojrq.net/p/?return=$popup
 @@||ok.ru/videoembed$stealth
 @@||ok.ru/web-api/music/conf$stealth
 @@||okdiario.com^$generichide
@@ -19449,6 +19451,7 @@
 @@||sssbozh.com^$generichide
 @@||sst.soranews24.com/gtm.js$script,~third-party
 @@||sstats.omahasteaks.com/b/ss/
+@@||st-*.dynamicyield.com/st*&inHead=true&id=*&jsession=*scriptVersion=*&noConsent=
 @@||st-eu.dynamicyield.com/st$domain=amorelie.de
 @@||st-eu.dynamicyield.com/st?sec=$domain=adlibris.com
 @@||st-eu.dynamicyield.com/st?sec=$domain=gigasport.at|gigasport.de|gigasport.ch
@@ -19591,13 +19594,13 @@
 @@||static.doubleclick.net/instream/ad_status.js$domain=3dzip.org
 @@||static.doubleclick.net/instream/ad_status.js$domain=alliptvlinks.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=bloggingsathi.com
-@@||static.doubleclick.net/instream/ad_status.js$domain=deblocker.merkulov.design|jpopsingles.eu
+@@||static.doubleclick.net/instream/ad_status.js$domain=drama-online.tv|deblocker.merkulov.design|jpopsingles.eu
+@@||static.doubleclick.net/instream/ad_status.js$domain=drama-online.tv|jpopsingles.eu|mhdstream.com|nullpk.com|tkbsen.in|alttyab.net|shineads.org|portalizpro.com|justpaste.top|whats-on-netflix.com|shineads.org|gplastra.com|kuponigo.com|arponag.xyz|step-tech.pl|nulleb.com|thecustomrom.com|anonyviet.com|ymknow.xyz|jadukit.com|serverbd247.com|emptycode.in|techacode.com|azmath.info|gamedrive.org|mhdworldtv.com|kisahdunia.com|mixrootmods.com|chindohot.site|javindo.eu.org|filmisub.cc|3dmodelshare.org|plc4me.com|ezaudiobookforsoul.com|apkdelisi.net|pcgameszone.com|drivers.plus|sketchup.cgtips.org
 @@||static.doubleclick.net/instream/ad_status.js$domain=game3rb.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=gpldose.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=idlixofficials.com|idlixofficial.co|idlixofficial.net
 @@||static.doubleclick.net/instream/ad_status.js$domain=idlixplus.*|idlixofficialx.*
 @@||static.doubleclick.net/instream/ad_status.js$domain=investing.com
-@@||static.doubleclick.net/instream/ad_status.js$domain=jpopsingles.eu|mhdstream.com|nullpk.com|tkbsen.in|alttyab.net|shineads.org|portalizpro.com|justpaste.top|whats-on-netflix.com|shineads.org|gplastra.com|kuponigo.com|arponag.xyz|step-tech.pl|nulleb.com|thecustomrom.com|anonyviet.com|ymknow.xyz|jadukit.com|serverbd247.com|emptycode.in|techacode.com|azmath.info|gamedrive.org|mhdworldtv.com|kisahdunia.com|mixrootmods.com|chindohot.site|javindo.eu.org|filmisub.cc|3dmodelshare.org|plc4me.com|ezaudiobookforsoul.com|apkdelisi.net|pcgameszone.com|drivers.plus|sketchup.cgtips.org
 @@||static.doubleclick.net/instream/ad_status.js$domain=linkneverdie.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=shineads.in
 @@||static.doubleclick.net/instream/ad_status.js$domain=sonixgvn.net
