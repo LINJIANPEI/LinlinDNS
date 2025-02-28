@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-28 21:17:30（北京时间）
+! Version: 2025-02-28 22:09:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64073
+! Total count: 64108
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4628,6 +4628,7 @@
 @@||1plus1.video/video/embed/$stealth,~script,~xmlhttprequest,~other
 @@||1qwebplay.xyz/*.php$stealth=referrer
 @@||1sapp.com^
+@@||1tian.kuaishou.com^
 @@||1trackapp.com/static/tracking/$script,stylesheet,~third-party
 @@||1trackapp.com^$stealth,xmlhttprequest,domain=1track.ru
 @@||1vkx.cn/public/*/jquery.min.js
@@ -4670,6 +4671,7 @@
 @@||3dtuning.com^$generichide
 @@||3dzip.org^$generichide
 @@||3g.163.com^
+@@||3g.ali213.net^
 @@||3gimg.qq.com^$important
 @@||3gmfw.cn/js/wap/8.js
 @@||3voor12.vpro.nl^*/streamsense.min.js$~third-party
@@ -4806,6 +4808,7 @@
 @@||a-ads.com/*?size=$xmlhttprequest,domain=hitbits.io
 @@||a-delivery*.mxdcontent.net^$stealth,media
 @@||a-invdn-com.akamaized.net/Broker_Button_New^$domain=investing.com
+@@||a.9game.cn^
 @@||a.ads.cn.miaozhen.com^$domain=youku.com
 @@||a.adwolf.ru^
 @@||a.adwolf.ru^|
@@ -4891,6 +4894,7 @@
 @@||account.adguard.*/api_acc/$stealth=3p-auth
 @@||account.adobe.com/newrelic.js$~third-party
 @@||account.adobe.com^$document,domain=services.adobe.com,stealth=useragent
+@@||account.dianping.com^
 @@||account.leagueoflegends.com/pm.html$jsinject,elemhide
 @@||account.mail.ru^$stealth
 @@||account.mcid.mynavi.jp^$stealth=referrer
@@ -4899,6 +4903,7 @@
 @@||account.production-public.tubi.io^$stealth=3p-auth
 @@||account.withings.com^$stealth
 @@||account.wps.cn^$important
+@@||accountapi.dianping.com^
 @@||accounts.ea.com^$stealth
 @@||accounts.google.com/gsi/$stealth
 @@||accounts.google.com^$generichide
@@ -5551,6 +5556,7 @@
 @@||ali-ky.static.yximgs.com^
 @@||ali.static.yximgs.com^
 @@||ali.static.yximgs.com^$important
+@@||ali2.a.kwimgs.com^
 @@||ali2.a.yximgs.com^$important
 @@||alicdn.com/??*/tracker/
 @@||alicdn.com/dt/tracker/2.5.1/tracker.js$domain=alimama.com
@@ -6798,6 +6804,7 @@
 @@||bytedance.com/ttwid/union/register/
 @@||bytegoofy.com/ad/$domain=jinritemai.com
 @@||c-web.cedyna.co.jp/customer/img/spacer.gif?$~third-party
+@@||c.58cdn.com.cn^
 @@||c.ad6media.fr/l.js$domain=scan-manga.com
 @@||c.adsco.re/|$domain=adshnk.com
 @@||c.adsco.re/|$script,domain=hotfrog.*
@@ -6872,6 +6879,7 @@
 @@||calciomercato.com^$generichide
 @@||calendar.google.com^$generichide
 @@||call2friends.com/*/javascripts/ads.js
+@@||callback.58.com^
 @@||calvyn.com^$generichide
 @@||cam-archive.com/js/fuckadblock.js
 @@||cam-archive.com^$generichide
@@ -8269,6 +8277,7 @@
 @@||di.phncdn.com^
 @@||diagnofast.com^$generichide
 @@||diamant.ua/*/search$xmlhttprequest,elemhide,jsinject,extension
+@@||dianfeijisuanqi.bmcx.com^
 @@||diariodopeixe.com.br^$generichide
 @@||diariotecnico.net^$generichide
 @@||dicasvalores.com^$stealth=referrer
@@ -11702,6 +11711,7 @@
 @@||landtop.com.tw/images/ad/
 @@||langsungviral.com^$generichide
 @@||languagecloud.sdl.com/node_modules/fingerprintjs2/dist/fingerprint2.min.js$~third-party
+@@||laohuangli.bmcx.com^
 @@||laomaotao.net^
 @@||laotiesao.vip^$generichide
 @@||lapatilla.com^$generichide
@@ -12096,6 +12106,7 @@
 @@||lx.meituan.net^
 @@||lyricsongation.com^$generichide
 @@||m.163.com^
+@@||m.17173.com^
 @@||m.360.cn^
 @@||m.360buyimg.com^$important
 @@||m.360video.so.com^
@@ -12106,6 +12117,7 @@
 @@||m.dcinside.com/movie/$stealth,app=com.dcinside.app.android|com.dcinside.app
 @@||m.dcinside.com^$stealth=dpi
 @@||m.ddyueshu.cc/*common
+@@||m.dianping.com^
 @@||m.ds.163.com^
 @@||m.haberler.com/static/advertisement/ads_ima.js$domain=m.haberler.com
 @@||m.intl.taobao.com^$important
@@ -12379,6 +12391,7 @@
 @@||media-files.bunkr.ru^$media,stealth
 @@||media-imdb.com^$stealth,domain=imdb.com
 @@||media-us.amillionads.com/*.mp3$domain=open.spotify.com
+@@||media.9game.cn^
 @@||media.biertijd.com/galleries/$stealth,domain=biertijd.xxx
 @@||media.fastclick.net/iab^$domain=youronlinechoices.com
 @@||media.foundit.*/trex/public/theme_3/dist/js/userTracking.js$script,~third-party
@@ -12997,12 +13010,14 @@
 @@||new.vip.weibo.cn^
 @@||newad.abiechina.com^$domain=abiechina.com
 @@||newad.mail.wo.cn^
+@@||newgame.17173.com^
 @@||newmoviesfun.com^$generichide
 @@||newrelic.com/nr-*.min.js$domain=surveymonkey.co.uk|surveymonkey.com|surveymonkey.de
 @@||news-app.abumedia.yql.yahoo.com^
 @@||news-l.play.aiseet.atianqi.com^
 @@||news-tech.xyz^$generichide
 @@||news.163.com^
+@@||news.17173.com^
 @@||news.bg^$generichide
 @@||news.goo.ne.jp^$generichide
 @@||news.sina.com.cn^
@@ -13364,6 +13379,7 @@
 @@||origin-ads.exosrv.com/ad99uip8i.php
 @@||orion-http.gw.postman.co/v*/request$jsinject,elemhide,extension
 @@||osb-ussvc.samsungqbe.com^
+@@||osp.meituan.net^
 @@||oss-asq-static.11222.cn^$important
 @@||oss.dns.aliyun.com.dalvhe.com/image/$stealth=referrer,image,domain=4ksj.com
 @@||ossapi.baidu.com^
@@ -14548,9 +14564,13 @@
 @@||pic.mairuan.com^$important
 @@||pic.rmb.bdstatic.com^$important
 @@||pic.zol-img.com.cn/2009/pix_index.swf
+@@||pic2.58cdn.com.cn^
 @@||pic2.zhimg.com^
+@@||pic4.58cdn.com.cn^
+@@||pic5.58cdn.com.cn^
 @@||pic640.weishi.qq.com^$important
 @@||pic7.iqiyipic.com^
+@@||pic8.58cdn.com.cn^
 @@||picasso-static.xiaohongshu.com^
 @@||piccool.com/2home/phpAdsNew/
 @@||pichive.online^$subdocument,xmlhttprequest,stealth=referrer
@@ -15488,6 +15508,7 @@
 @@||s0.2mdn.net/ads/studio/Enabler.js$domain=yuukinohana.co.jp
 @@||s0.2mdn.net^
 @@||s0.2mdn.net^$image,domain=client.falixnodes.net
+@@||s0.meituan.net^
 @@||s0.wp.com/wp-content/js^$domain=gaypornwave.com
 @@||s0ft4pc.com^$generichide
 @@||s1-filecr.xyz^$stealth
@@ -16020,6 +16041,7 @@
 @@||sharing.wtf/themes/flow/frontend_assets/js/advertisement.js
 @@||shasso.com/MyStoreOrders/$document
 @@||sheee.co.il^$generichide
+@@||shenfenzheng.bmcx.com^
 @@||shiba.limited^$generichide
 @@||shibukei.com^$generichide
 @@||shijue.me/advertise/getList?
@@ -16063,6 +16085,7 @@
 @@||shortx.net^$generichide
 @@||shortzon.com^$generichide
 @@||shouji.360.cn^
+@@||shouji.bmcx.com^
 @@||shouji.sougou.com^
 @@||show.g.mediav.com/s?type=$domain=v.360kan.com
 @@||show.g.mediav.com/s?type=$script,domain=miercn.com
@@ -16535,6 +16558,7 @@
 @@||static.adsafeprotected.com/vans-adapter-google-ima.js$domain=tyla.com
 @@||static.adsafeprotected.com/vans-adapter-google-ima.js$domain=wsj.com
 @@||static.adtrue24.com/images/*$domain=fap18.net
+@@||static.ali213.net^
 @@||static.amazon.jobs/assets/analytics-$script,domain=amazon.jobs
 @@||static.anyporn.com/bravoplayer/custom/anyporncom/scripts/bpcc.js
 @@||static.anyporn.com/bravoplayer/fluidplayer.js
@@ -17317,6 +17341,7 @@
 @@||toonvideos.net.in^$generichide
 @@||top-faucet.com^$generichide
 @@||top-shop.ru^$domain=top-shop.ru
+@@||top.17173.com^
 @@||top1porn.com^$generichide
 @@||topdanet.me^$generichide
 @@||topembed.pw^$stealth=referrer
@@ -17633,6 +17658,7 @@
 @@||two.re^$generichide
 @@||twpkinfo.com/js/ads.min.js
 @@||tx163.com^$important
+@@||tx2.a.kwimgs.com^
 @@||txc.gtimg.com/static/$stealth,domain=support.qq.com
 @@||txori.com^$generichide
 @@||txxx.ahcdn.com/key=$stealth
@@ -18187,6 +18213,7 @@
 @@||wan.douyu.com^
 @@||wancaibb.com/share/js/share.min.js
 @@||wandhi.com^$generichide
+@@||wannianrili.bmcx.com^
 @@||wap.cmpassport.com^$important
 @@||wappass.baidu.com^
 @@||ware.shop.jd.com^$genericblock,generichide
@@ -18454,25 +18481,31 @@
 @@||www.123pan.com^$important
 @@||www.126.com^
 @@||www.163.com^
+@@||www.17173.com^
 @@||www.336mn.com^
 @@||www.360kuai.com^
 @@||www.360kuai.com^$important
 @@||www.360simg.com^
+@@||www.9game.cn^
+@@||www.ali213.net^
 @@||www.alidns.com^$important
 @@||www.bilibili.com/html/iframemessage.html
 @@||www.bilibili.com^
 @@||www.biligame.com^
 @@||www.blogger.com^$important
+@@||www.bmcx.com^
 @@||www.bqgyy.com^
 @@||www.chemdraw.com.cn^$important
 @@||www.cmpassport.com^$important
 @@||www.crossoverchina.com^$important
 @@||www.data.mistat.*xiaomi.com^
 @@||www.data.sec*.miui.com^
+@@||www.dianping.com^
 @@||www.dobreprogramy.pl^$generichide,badfilter
 @@||www.dogpile.com^
 @@||www.dogpile.com^|
 @@||www.door2windows.com^$stealth
+@@||www.dpfile.com^
 @@||www.dxmpay.com^$important
 @@||www.fbsbx.com^
 @@||www.fengxiaolong.cn^
@@ -18491,7 +18524,9 @@
 @@||www.googletagmanager.com^$domain=myqqjd.com
 @@||www.gstatic.com
 @@||www.gstatic.com^$important
+@@||www.haier.com^
 @@||www.hao123.com^$important
+@@||www.hisense.com^
 @@||www.infoq.com/scripts/ads.js
 @@||www.ip138.com^
 @@||www.iqiyi.com^$important
