@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-01 04:10:32（北京时间）
+! Version: 2025-03-01 05:08:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64121
+! Total count: 64123
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -52941,6 +52941,7 @@ shopee.com.br###main > div > div[style*="z-index"]
 shopee.es##.shopee-progress-bar ~ div:not([class]):not([id]) + div[class]:not([id])
 shopee.fr##.shopee-progress-bar ~ div:not([class]):not([id]) + div[class]:not([id])
 shopee.pl##.shopee-progress-bar ~ div:not([class]):not([id]) + div[class]:not([id])
+shopee.sg##.shopee-header-section__content:has(.sQyg41)
 shopfacil.com.br##.modal-lgpd__wrapper
 shopforex.online###con_me
 shopforshop.it##body > span
@@ -58027,6 +58028,7 @@ tractorbynet.com##a[href][target="_blank"] > img[class^="attachment-large"]
 trade.bisonapp.com###root > div:first-child
 trademe.co.nz##.tm-display-ad__wrapper
 trademe.co.nz##.tm-display-sponsored-listing__cards-flex
+trademe.co.nz##.tm-stripe__SL-card-container:has([class^="tm-sponsored-"])
 trademe.co.nz##tm-display-ad
 traderepublic.com##.consentCard
 traderie.com##.ae-fixed
