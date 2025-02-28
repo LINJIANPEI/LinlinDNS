@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-28 23:10:00（北京时间）
+! Version: 2025-03-01 00:11:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64108
+! Total count: 64120
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5994,6 +5994,7 @@
 @@||api.rikka.app^$important
 @@||api.rmr.rocks^$stealth=3p-auth
 @@||api.schale.network^$stealth=referrer
+@@||api.schale.network^$stealth=referrer|3p-auth
 @@||api.sec.intl.miui.com^
 @@||api.sec.miui.com^
 @@||api.sec.miui.com^$important
@@ -6287,6 +6288,7 @@
 @@||auth.mail.ru^$stealth
 @@||auth.opera.com^$stealth
 @@||auth.schale.network^$stealth=referrer
+@@||auth.schale.network^$stealth=referrer|3p-auth
 @@||auth.wosms.cn^$important
 @@||auth.xtrend.ru^$stealth
 @@||auth.zijieapi.com^
@@ -16934,6 +16936,7 @@
 @@||tab.gladly.io/newtab/|$document,subdocument,badfilter
 @@||taboola.com/libtrc/$script,domain=bild.de|computerbild.de|fitbook.de|jetzt.de|metal-hammer.de|musikexpress.de|noizz.de|rollingstone.de|stylebook.de|sueddeutsche.de|techbook.de|travelbook.de|welt.de|wieistmeineip.at|wieistmeineip.ch|wieistmeineip.de
 @@||taboola.com/libtrc/*/loader.js$domain=dailymail.co.uk|foxsports.com
+@@||tacirler.com.tr^$stealth=dpi
 @@||tacool.com^$stealth=dpi
 @@||tag.aticdn.net/piano-analytics.js$script,domain=boerzoektvrouw.kro-ncrv.nl
 @@||tag.aticdn.net/piano-analytics.js$script,domain=toureiffel.paris
@@ -20865,6 +20868,8 @@ appleinsider.com##div.main-art:has-text(Sponsored Content)
 appleinsider.com##div[style^="text-align:center;border-radius:0;"]
 appleinsider.com,dappradar.com,euroweeklynews.com,metro.co.uk,sitepoint.com,tld-list.com,twitch-tools.rootonline.de,wccftech.com##[rel*="sponsored"]
 appleinsider.com,dappradar.com,euroweeklynews.com,sitepoint.com,tld-list.com##[rel*="sponsored"]
+appleworld.pl##a[href*="/aff_c?offer_id="] > img
+appleworld.pl##a[href^="https://clk.tradedoubler.com/click?"]
 appleworld.today###block-26
 applnn.cc##DIV.html-box
 appnee.com##img[alt="Ads Place"]
@@ -26914,7 +26919,6 @@ crosswalk.com##body .advertisement
 crossword-solver.io###crossword-solver-io_leaderboard_atf
 crossword-solver.io###crossword-solver-io_right_rail
 crossword-solver.io##div[id^="crossword-solver-io_incontent_"]
-crosswordsolver.com##.col-sm-12:has(> div.ad-container)
 crosswordsolver.org##.mpu-ad-container
 crowd1.com##.cookie-concent
 crowdfinder.be##.cookie
@@ -27827,6 +27831,7 @@ decrypt.co##.my-10.xl\:flex.justify-center
 decrypt.co##.opacity-75
 decrypt.co##[style^="min-width: 728px;"]
 decrypt.co,metabattle.com##div[style^="min-width: 300px;"]
+decrypt.day##div[class*="content"] center.w-full
 decrypterlenergie.org###alert-mention
 dedbit.com##.userpost > tbody > tr > td > center:has(> img[src])
 dedoimedo.com###container > #content ~ #mon
@@ -33886,6 +33891,7 @@ gizguide.com,techcracked.com,novelasesp.blogspot.com###HTML7
 gizmodo.com##.lg\:min-h-\[300px\]
 gizmodo.com##.min-h-\[1000px\]
 gizmodo.com##.od-wrapper
+gizmodo.com##.related-posts > li.py-4.border-b
 gizmodo.com##.related-posts > li[class="py-4 border-b"]
 gizmodo.com##.widget_keleops-ad
 gizmodo.com.au,kotaku.com.au,lifehacker.com.au,pedestrian.tv##.ad-no-mobile
@@ -36446,6 +36452,7 @@ huffingtonpost.co.uk,huffpost.com##.leaderboard-flex-placeholder-desktop
 huffingtonpost.com###top_news_inner
 huffpost.com###main > .bottom-right-sticky-container
 huffpost.com###zone-commerce
+huffpost.com##.ad-container--1
 huffpost.com##.bottom-right-sticky-container
 huffpost.com##.openweb-container
 huge.se##.section-cookies-notice-outer
@@ -40038,6 +40045,8 @@ knuddels.de###root > div[class*="ColumnFluid"] > div[class*="ColumnFluid"] > div
 knuffmann.de##.cookie
 koakdesign.info###barre
 kob.com,kstp.com,whec.com###Header_1
+kobiecyfutbol.pl##.hero-baner
+kobiecyfutbol.pl##.reklama-art
 kobieta.pl##.advertising-box
 kobieta.wp.pl##body > div[class] > div[class*=" "][style^="height:"][style*="transition:"]
 kobietaxl.pl##.cookie_al
@@ -57802,7 +57811,6 @@ top.gg##[class*="__AdContainer-"]
 top.gg##article[data-testid="promoted-product"]
 top.gg##div[class*="_AdContainer-"]
 top.gg##div[class^="css-feed"] > div.chakra-stack
-top.pl,interia.pl##.article-body__ad-gora-srodek
 top100token.com##.swiper_div.right-pad
 top10vpn.com###notification-bar
 top10vpn.com##.boxCTA
@@ -58139,6 +58147,7 @@ triblive.com###storyContent > div[data-type="float"][data-stn-player]
 tribune.net.ph##div[id^="ads-"]
 tribuneindia.com##.add-sec
 tribuneindia.com##.fixed-ad-bottom
+tribuneindia.com,iclarified.com,cpophome.com,dak.gg,japannews.yomiuri.co.jp,investing.com,esportsearnings.com##div[class^="ad_"]
 tribunesandtriumphs.org###outer-consent
 tribunjualbeli.com###div-Top-Leaderboard
 tribunjualbeli.com##div[class="fl mt20"] > #iklan > div[style="width:160px; height:600px;text-align: center;margin:20px auto;background-color:#ebebeb!important"]
@@ -61258,7 +61267,6 @@ wi-fi.ru##.b-bnr
 wi-fi.ru##.vb
 wiadomosci.onet.pl##div[data-slot-img-width="300"][data-slot-img-height="168"]
 wiadomosci.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
-wiadomosci.wp.pl,pysznosci.pl,open.fm,fotoblogia.pl,autokult.pl,money.pl,pudelek.pl##style + div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"] + div:last-child)
 wiadomoscihandlowe.pl##.container--break-00
 wiadomoscihandlowe.pl##.container-topads
 wiadomoscihandlowe.pl,wiadomoscikosmetyczne.pl,halowies.pl,tygodnik-rolniczy.pl##div[class^="position_break_"][class$="_top"]
@@ -61829,12 +61837,16 @@ wsj.com###AD_WTRN_container
 wsj.com###coupon-links
 wsj.com###cx-deloitte-insight
 wsj.com###dianomi-module
+wsj.com###other-buckets > div > div:has(> .uds-ad-container)
 wsj.com##.ad_col_a
 wsj.com##.aside-container > div > div:has(> div.adWrapper)
 wsj.com##.css-c54t2t:has(> .adWrapper)
 wsj.com##.css-c54t2t:has(> .adWrapper) + hr
 wsj.com##.e1cojiod1
+wsj.com##.e1ewmsuz20:has(> .uds-ad-container)
+wsj.com##.e1vnmyci0:has(> .adWrapper)
 wsj.com##.ez6zued3.css-sw5cyu
+wsj.com##.ez6zued6
 wsj.com##.snippet-right-ad
 wsj.com##.w27771
 wsj.com##[aria-label="Sponsored Offers"]
