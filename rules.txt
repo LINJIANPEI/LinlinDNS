@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-02-28 20:17:05（北京时间）
+! Version: 2025-02-28 21:17:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64060
+! Total count: 64073
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -19757,6 +19757,8 @@ ajc.com,bostonglobe.com,daytondailynews.com,journal-news.com,springfieldnewssun.
 ajoto.com##.sqs-announcement-bar
 ajs-bw.de##.alertbanner
 ajurveda-brno.cz##.notify
+akadera.bialystok.pl##.banner_wrapper
+akadera.bialystok.pl##.tag:has(+ .banner_wrapper)
 akalaty4day.com##.adsbygoogle
 akari46.blogspot.com###xix0op-cookies
 akasha.org###___gatsby > div > div:first-child
@@ -23991,6 +23993,7 @@ buddhismguide.org###info_text_header
 buderus.de##.tt-mybuderus-common-cookiebar
 budgetbytes.com,ets2.lt,miloserdov.org###custom_html-2
 budgetinsurance.com##.elementor-popup-modal
+budgetlightforum.com##a[class$="-banner-link"]
 budgetmobiel.nl###cookie-wall
 budni.de###__next > div > footer ~ div
 budowniczy.com.pl##.configMessages
@@ -27806,6 +27809,7 @@ deeplol.gg##div[data-ad]
 deepstash.com##.Toaster
 defacto.com.tr###kvkk_notification
 defence-industry.eu##.has-small-font-size.has-text-align-center
+defence24.com,defence24.pl,energetyka24.com,infosecurity24.pl##:is(aside, .block) a:is([rel="sponsored"], [href*="utm_campaign"]) > span
 defence24.pl##main > section.block:has(> div > a > span > figure > figcaption:contains(Reklama))
 defenseworld.net###mb-bar
 defenseworld.net##.flex-header-ad
@@ -32015,8 +32019,10 @@ fortune.com###Leaderboard0
 fortune.com###__next > div[style^="min-height: 300px; position: sticky;"]
 fortune.com###piano-wrapper[style*="z-index: 100003;"] iframe[id^="offer-"]
 fortune.com##.bottom-recirc > .bottom-recirc[data-endpoint^="https://"][data-endpoint*="ads"]
+fortune.com##.cBTbqy
 fortune.com##.homepage:has(> div[id^="InStream"])
 fortune.com##.jzcxNo
+fortune.com##.paywall > div[class^="sc-"]:has(> div.simple)
 fortune.com##[class]:has(> #Leaderboard0)
 fortune.com##div[class^="sc-"]:has(> div[class] > div[id^="InStream"])
 fortune.com##div[data-cy="rightRailAd"]
@@ -36388,6 +36394,7 @@ huawei.com##.huawei-convergent-cookie, #cookieTipOut, .hwid-bannerBox-portal, .p
 huawei.ru###cookie__panel-help
 huaweipolska.pl##.huawei-cookie
 huaweivenicemarathon.it###cp-cont
+hub.pl,top.pl,interia.pl##.article-body__ad-gora-srodek
 hubcloud.club##.ads-btns
 hubcloud.day##[alt="New-Banner"]
 hubcloud.work##h2 > a#bgsora
@@ -37969,6 +37976,7 @@ ipn.gov.pl##.JSWrapper
 ipn.pt###cookie-law-panel
 ipodnikatel.cz##.footer-banner-container
 ipolitics.ca,qpbriefing.com##.big-box
+ipolska24.pl,wiadomosci.wp.pl,pysznosci.pl,open.fm,fotoblogia.pl,autokult.pl,money.pl,pudelek.pl##style + div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"] + div:last-child)
 ipon.hu##div[x-data="cookiePolicy"]
 ipornia.com##.tcats > ul > li.fel-vd
 iporntoo.com##.adbox-inner
@@ -41693,6 +41701,7 @@ lubartow24.pl##.text-center:has(> a[href*="://reklama."])
 lubedfan.com##.maxbutton-tour
 lubetube.com##.sidead
 lubetube.com##a[href^="http://lubetube.com/out"]
+lubiehrubie.pl##.theiaStickySidebar > aside.lubie-widget:has(a:not([href*="youtube.com"]) > img)
 lublin112.pl###sidebar > .ad ~ hr
 lublin112.pl##.boxa
 lublin112.pl##div[style="min-height: 200px"]
@@ -51755,6 +51764,7 @@ ryuugames.com##[href^="https://golove.ai/"]
 ryuugames.com,gizchina.com###block-32
 ryuugames.com,yaoimangaonline.com##[href^="https://l.erodatalabs.com/s/"] > img
 ryzerobotics.com##footer > div[class*="pop-up"]
+rzeszow-news.pl##div[id^="rzesz-"]
 rzeszow.pl###__next > .fixed
 s.yimg.com##.cta-wrapper
 s0ft4pc.com##.popup02778wrap
@@ -62067,6 +62077,9 @@ wyniki.pl###box-over-content-revive
 wyniki.pl##.banner
 wypad.com.pl###cookie
 wyrobieniepaszportu.pl##body > div:not([id]):not([class])
+wysokomazowiecki24.pl##.sppb-addon-single-image-container
+wysokomazowiecki24.pl##aside > .sp-column > .sp-module:has(> .sp-module-content > .custom > p > a[target="_blank"])
+wysokomazowiecki24.pl##img[src*="/images/"][src*="baner"]
 wzorniki.eu###cookie
 wzstats.gg##.landscape-ad-container
 wzstats.gg##app-desktop-takeover-ad
