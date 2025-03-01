@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-01 07:08:47（北京时间）
+! Version: 2025-03-01 08:47:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64123
+! Total count: 64127
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -503,6 +503,7 @@
 .gif$third-party,domain=m.7ktw.com
 .gif$third-party,domain=phim33.com
 .gif$third-party,domain=yasem5.com
+.gif$third-party,domain=zxc.dongludi.top
 .hongi7ie8owiie*.site^$script,third-party
 .icu/*?zoneid=*&visitor_id=$all
 .info^$domain=hdyayinmac1.com|sleeptimer.org
@@ -47678,6 +47679,7 @@ papapiqueetmamancoud.fr###id_suivi_publicites
 paper-io.com###gameadsbanner
 paper.li###info_banner, .MuiSnackbar-root
 paperflies.com###content > div[data-reactroot] > div > div[class]
+papergames.io##app-ad-banner
 papergeek.fr##.padb-enabled
 papergeek.fr##[id^="padb_widget_"]
 paperlessmovement.com##.elementor-popup-modal
@@ -50145,6 +50147,7 @@ pussysexgames.com##a[href*=".php?t="][rel="nofollow"]
 pussyspace.com###bhcr
 pussyspace.com,pussyspace.net##.mainBox div[id] img:not(a img)
 pussyspace.com,pussyspace.net##a[href$="/live/meet-and-fuck/"]
+pussyspace.com,pussyspace.net##div[class][style="display: inline-block; vertical-align: top;"]
 pussyspace.com,pussyspace.net##img[src^="data:image"]:not(a.cam_img > [id]):not(a.cat_img > span > [data-src*="/upload/"]):not(a.video_img > span > [id])
 pussyspot.net##a[href="https://nudegirlsoncam.com/"]
 pussyspot.net##div[class^="content"] > div[align="center"]
@@ -57081,6 +57084,7 @@ theultralinx.com##.m-ad-card--grid-item
 theultralinx.com##aside[phx-content-rail-ad-block]
 theurbanlist.com##.LeaderboardAd
 theverge.com##.ad__athena_internal
+theverge.com##div[class]:has(> div[data-concert])
 theverge.com##div[class^="adblock-allowlist-messaging"]
 theverge.com##div[data-concert]
 theverge.com,amp.cnn.com,ampproject.org##amp-iframe[src^="https://widgets.outbrain.com/hub/amp.html"]
