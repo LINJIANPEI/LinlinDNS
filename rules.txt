@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-02 11:20:03（北京时间）
+! Version: 2025-03-02 12:11:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64147
+! Total count: 64150
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11064,6 +11064,7 @@
 @@||img.funshion.com^
 @@||img.informer.com/images/mac_banner_$domain=informer.com
 @@||img.jbzj.com^$important
+@@||img.jxdown.com^$important
 @@||img.mangahasu.se^$image,stealth=referrer
 @@||img.medscapestatic.com/medscape-core/ads/js/dfp/profads2.js$domain=reference.medscape.com
 @@||img.meituan.net^
@@ -11505,6 +11506,7 @@
 @@||jwpcdn.com/player/plugins/googima/*/googima.js$domain=viu.tv
 @@||jwpcdn.com^
 @@||jwpltx.com^$domain=fmovies.to
+@@||jxdown.com^$important
 @@||jyllands-posten.dk/app/*ads*.js
 @@||k-ba.net^$generichide
 @@||k-img.com/script/analytics/s_code.js$script,domain=kakaku.com
@@ -12134,6 +12136,7 @@
 @@||m.jiaoyimao.com^$important
 @@||m.jingxi.com^
 @@||m.jingxi.com^$important
+@@||m.jxdown.com^$important
 @@||m.lsds.cn^
 @@||m.manhuabei.com^$important
 @@||m.media-amazon.com/images/*$domain=amazon.*,stealth
@@ -14899,7 +14902,7 @@
 @@||pro.gooooal.com/ad/ad_2.js
 @@||pro.m.jd.com^$important
 @@||proapkmod.com^$generichide
-@@||prod-chat-kimi-tos.moonshot.cn
+@@||prod-chat-kimi-tos.moonshot.cn^
 @@||prod.adspsp.com/adb.2418030m.min.js$domain=medicalnewstoday.com
 @@||prod.fennec.atp.fox/js/fennec.js$domain=freemcserver.net
 @@||prod.pandateacher.com/web-fos/app/$xmlhttprequest,elemhide,jsinject,extension
