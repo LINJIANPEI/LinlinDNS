@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-03 14:14:30（北京时间）
+! Version: 2025-03-03 15:10:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64157
+! Total count: 64158
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3867,6 +3867,7 @@
 :81/s/i.php?id=$script
 ?ab=*&rl=1|$all
 ?aff_pg=PPU&aff_id=$all
+?cf=ppd&r=$popup
 ?dovr=true|$document,popup
 ?proxy=ws://$script,websocket
 ?proxy=wss://$script,websocket
