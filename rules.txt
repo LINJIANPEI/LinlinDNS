@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-04 00:12:31（北京时间）
+! Version: 2025-03-04 01:08:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64174
+! Total count: 64179
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -31773,7 +31773,6 @@ flicksmore.com##.video_banner
 fliesenoutlet.com###disclaimer
 flight.qunar.com##.l_rside > .b_fly_ban_b:nth-child(2)
 flightaware.com##.homepage_skin_container
-flightconnections.com##.destination-list > div.display-box-first-click
 flightconnections.com##.display-box
 flightconnections.com##.display-box-2
 flightconnections.com##.parallax-container
@@ -33378,6 +33377,7 @@ gazeta.pl##.offers__wrapper > .sliderr--offers
 gazeta.pl##.serviceLogo__additionalElements:has(> .serviceLogo__partner)
 gazeta.pl##section ~ .newspapers
 gazetapraca.pl###overlayJS
+gazetaprawna.pl##.contentStreamFactory
 gazetaprawna.pl##.infor-ad
 gazetaprawna.pl##.tpl_std_module > div[id^="belka"][style^="margin-top:"] > div[style="text-align: center; color: grey; font-size: 10px;"]
 gazetaprawna.pl$$script[src="html-load.com/loader.min.js"]
@@ -33951,6 +33951,7 @@ glamour.hu##.wrapAds
 glamour.hu##.wrapAdsSide
 glamsquadmagazine.com##a[href^="https://onlineacct.zenithbank.com/"]
 glashuette-original.com###js_dataNnoticeBtns
+glassalmanac.com##div[id^="hit-inc-"]
 glassnode.com###root > div:last-child
 glavcom.ua##.kyk_menu
 gleaks.pro##.samBannerUnit
@@ -44609,7 +44610,6 @@ msn.com##div[data-section-id="stripe.shopping1"]
 msn.com##div[data-t*="campid="]
 msn.com##div[data-t*="subid1="]
 msn.com##div[data-yvef*="stripe"][data-yvef*="ad"]
-msn.com##div[id]:has(> div[id]:only-child > display-ads:only-child)
 msn.com##div[id^="nativeAd"]
 msn.com##div[id^="nativead"]
 msn.com##div[id^="watch-feed-native-ad-"]
@@ -46517,6 +46517,9 @@ now14.co.il##.fit-banner-size
 nowaelektro.pl##body > div:not([id]):not([class])
 nowcoder.com###jsSideTopicList
 nowcoder.com##.mini-banner
+nowezyciepabianic.pl###nzp_ad_above_header
+nowezyciepabianic.pl##.pum
+nowezyciepabianic.pl##.widget-area > section.widget_block:not([id="block-44"])
 nowfoods.com##.block-sd-cookie-consent-block
 nowgoal8.com##div[id^="ad_"]
 nowiny.pl##.ad_async_placeholder
@@ -48977,6 +48980,9 @@ poki.com##div:has(> div > div[style] > div[data-poki-ad-id])
 poklw.com##img[alt="恰饭广告"]
 polarbackup.com##.cp-slidein-popup-container
 polder.se##.sd-surface-top > .sd-object-if
+police24.pl##.baner
+police24.pl##.billboard
+police24.pl##.new-toplayer
 policja.pl##.informationBar, .JSWrapper
 policy.app.cookieinformation.com$domain=~kartor.eniro.se|~kart.gulesider.no|~kort.degulesider.dk|~map.krak.dk|~norlys.dk|~altibox.no|~lomax.dk|~lomax.se|~babysam.dk|~elkjop.no|~minaftale.dk|~skousen.dk|~skousen.no|~whiteaway.com|~whiteaway.no|~whiteaway.se|~dvdoo.dk
 policyoptions.irpp.org##.single__ad
@@ -50754,6 +50760,7 @@ raider.io##div[style="width:320px;height:180px;overflow:hidden"]
 raiffeisen-laborservice.de##.nptbccm
 rail-sim.de##.popupBase.notification
 rail.phototrans.eu##body > div:not([id]):not([class])
+rain-alarm.com##div[id^="google"]
 raincaptcha.com,cryptodirectories.com##.rc-advert
 rainforest-alliance.org###modalOverlay
 rainostream.net##.abblock-msg
@@ -55632,11 +55639,9 @@ t.qq.com###homeBannerNew
 t.qq.com###talkList > li[ispopula="1"][tv="2"]
 t21.press###donate
 t2informatik.de###sidebar-divibar
-t3.com###article-body > .hawk-nest[data-model-name][data-widget-type]
 t3.com###kicker1
 t3.com##.leaderboard__container
 t3.com,gamesradar.com##.sponsored-post
-t3.com,lifehacker.com,thenextweb.com##.ad-unit
 t66y.com##.sptable_do_not_remove
 t66y.com##.tips
 t66y.com##.tpc_content.do_not_catch > span.f24
