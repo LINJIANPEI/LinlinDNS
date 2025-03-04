@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-04 23:10:33（北京时间）
+! Version: 2025-03-05 00:11:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64206
+! Total count: 64210
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3819,6 +3819,7 @@
 9to5google.com,9to5mac.com,9to5toys.com,dronedj.com,electrek.co##.ad-disclaimer-container
 9to5google.com,9to5mac.com,9to5toys.com,dronedj.com,electrek.co##.post-body > p > a[href^="http://bit.ly/"] > img
 9to5linux.com##.theiaStickySidebar > .widget:has(> .textwidget > center > .sponsor)
+9to5linux.com##.theiaStickySidebar > .widget:has(> a[href^="https://www.tuxedocomputers.com/?refID="])
 9to5linux.com##.widget:has([href$=".php"])
 9to5linux.com,anoopcnair.com,apkmirror.com,askpython.com,beckernews.com,bizpacreview.com,boxingnews24.com,browserhow.com,constructionreviewonline.com,crankers.com,hard-drive.net,journeybytes.com,maxblizz.com,net-load.com,planetanalog.com,roadaheadonline.co.za,theamericantribune.com,windowslatest.com,yugatech.com##.ai_widget
 9to5linux.com,maxblizz.com##.block-widget
@@ -10998,7 +10999,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=f5haber.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=zattoo.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=10play.com.au
-@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=247sports.com|4029tv.com|airtelxstream.in|bet.com|bloomberg.co.jp|bloomberg.com|cbc.ca|cbssports.com|cc.com|clickorlando.com|digi24.ro|embed.comicbook.com|gbnews.com|history.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mynbc5.com|paramountplus.com|s.yimg.jp|sbs.com.au|tv.rakuten.co.jp|vk.sportsbull.jp|wapt.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|worldsurfleague.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=247sports.com|4029tv.com|bet.com|bloomberg.co.jp|bloomberg.com|cbc.ca|cbssports.com|cc.com|clickorlando.com|digi24.ro|embed.comicbook.com|gbnews.com|history.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mynbc5.com|paramountplus.com|s.yimg.jp|sbs.com.au|tv.rakuten.co.jp|vk.sportsbull.jp|wapt.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|worldsurfleague.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=247sports.com|4029tv.com|bet.com|bloomberg.co.jp|bloomberg.com|cbc.ca|cbssports.com|cc.com|clickorlando.com|embed.comicbook.com|gbnews.com|history.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mynbc5.com|paramountplus.com|s.yimg.jp|sbs.com.au|tv.rakuten.co.jp|vk.sportsbull.jp|wapt.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|worldsurfleague.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=bloomberg.com,stealth=referrer
@@ -11679,6 +11679,7 @@
 @@||ks.push.yximgs.com^
 @@||ksapisrv.com/rest/wd/common/log/collect/
 @@||kspay-activity.kuaishoupay.com^
+@@||ksstradio.com/wp-content/plugins/adrotate/library/jquery.*.js
 @@||ksv-video-publish-m3u8.cdn.bcebos.com/*.m3u8$stealth
 @@||ktm2day.com^$generichide
 @@||ktmx.pro^$generichide
@@ -13723,7 +13724,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dl.ccbluex.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dlpanda.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=docsach24.co
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=docsmall.com|uiadmin.net|4horlover.com|23qb.net|4spaces.org|aboluowang.com|assbbs.com|bilinovel.com|chaojizhibo.net|chtoen.com|daxiaamu.com|demo.ama.pub|dizhishengcheng.com|doitwell.tw|ekamus.info|eu4cn.com|ff14angler.com|freedidi.com|fsbot.xyz|haoweichi.com|it365.abctool.info|linovelib.com|logi.im|mens1069.com|monnsutogatya.com|mpyit.com|myqqjd.com|numberempire.com|ozabc.com|pansearch.me|patch.ali213.net|pc3mag.com|reh.tw|shenfendaquan.com|sistersbedroom.com|sto520.com|vaptcha.com|wandhi.com|wenxuecity.com|wuyong.fun|xbeibeix.com|xiebruce.top|xugaoxiang.com|xxxxx520.com|yodu.org|yummy.best|zaixianjisuan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dogeen.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dongknows.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=door2windows.com
@@ -14205,6 +14205,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=exego.app
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=exeurl.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=facciabuco.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=falpus.com|fooak.com|haxi.online|nexnoo.com|plknu.com|simana.online|upfiles-urls.com|upfiles.app|upfilesurls.com|upfion.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fastssh.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=flixscans.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fooak.com|plknu.com|nexnoo.com|simana.online|upfilesurls.com|falpus.com|upfiles-urls.com|haxi.online
@@ -31114,6 +31115,7 @@ fastadmin.net##body > a[target="_blank"]
 fastalp.biz##.policy, #policy, .cpolicy
 fastbikesmag.com##.main-sidebar > aside[id^="custom_html-"]
 fastcompany.com##.adhesive-banner
+fastcompany.com##.article-container > div.py-8
 fastcompany.com##.homepage-page__tag-ad-container
 fastcompany.com##.jw-floating-dismissible
 fastcompany.com##.nativeSecondScroll__container:empty
@@ -32033,7 +32035,6 @@ forbes.com##[data-testid="locked-top-ad-container"]
 forbes.com##body fbs-ad:not(#style_important)
 forbes.com##div[class^="fbs-ad--"]
 forbes.com##div[id^="google_ads_iframe_"]
-forbes.com,livescience.com,windowscentral.com##.ad-unit
 forbes.com,nasdaq.com##.video-placeholder
 forbes.com,windowscentral.com##.ad-unit
 forbes.com.au##.bz-viewability-container
@@ -32633,7 +32634,6 @@ ftios.vn##.ftd4-new-scroll > .ftd4-testbox
 ftop.ru##.left-block > div.row > div.add-block
 ftopadova.it###SITE_ROOT ~ div[data-reactid*="siteAspectsContainer"]
 ftopx.com##.add-block
-ftopx.com,gayboystube.com,gayporntube.com,hungangels.com##.advert
 ftopx.com,gayboystube.com,gayporntube.com,hungangels.com,porngameshub.com##.advert
 ftopx.com,gayboystube.com,hungangels.com##.advert
 fttxt.com###txtbox a[target="_blank"]
@@ -54671,6 +54671,7 @@ sportshub.to##.card-body[style="text-align: center;min-height: 130px;"]
 sportshub.to##.card:has(div[id^="HBai_"])
 sportshub.to##.theiaStickySidebar > div.widget:has(div[id^="HBai_"])
 sportshub.to##div[style="margin-bottom: 800px;"]
+sportsinjuryclinic.net##div[id^="sport-"]:has(> div.sport-adlabel)
 sportskeeda.com###video-player-container--
 sportskeeda.com##.consent-pop-up
 sportskeeda.com##.primis-player-container
@@ -56223,6 +56224,7 @@ tekfame.com##.adsbygoogle
 teknikkdeler.no##.cookies
 tekno.kompas.com##.kcm
 tekno.kompas.com##.native-wrap
+teknoasian.com,fullmatch.info##div[class^="penci-google-adsense-"]
 teknologisk.dk##.bottom-warning
 tekrevue.com##.ad-post-trail
 tekstowo.pl##.adv-home
@@ -59449,9 +59451,11 @@ usingenglish.com###header-leaderboard-ad
 uskip.me##a[href*="inclk.com/adServe/"] > img
 uslugi.gov.mk##.gdpr
 usm.com##.usm-cookie
+usmagazine.com###nativeAdMosaicBreakingNews
 usmagazine.com##.content-card-footer
 usmagazine.com##.cy-storyblock
 usmagazine.com##.lead-container
+usmagazine.com##.module-storyme
 usnews.com###ac-lre-player-ph
 usnews.com###bfad-slot
 usnews.com##.ad-spacer__AdSpacer-sc-nwg9sv-0
