@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-04 07:09:08（北京时间）
+! Version: 2025-03-04 08:44:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64179
+! Total count: 64188
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9682,6 +9682,7 @@
 @@||glbimg.com/*/300x250/smart/*/original/*.jpg$domain=vogue.globo.com
 @@||gledaitv.live^$generichide
 @@||gledajcrtace.xyz^$generichide
+@@||gloacmug.net^|$xmlhttprequest,domain=ipalibrary.me
 @@||global-search.browser.miui.com^$important
 @@||global-uploads.webflow.com/*_dimensions-$image,domain=dimensions.com
 @@||global.apis.naver.com/commentBox/cbox/web_neo_list_jsonp.json$stealth
@@ -11114,6 +11115,8 @@
 @@||imgcache.qq.com^$important
 @@||imgdrive.net/anex/alt2.js
 @@||imgfx02.xyz/chapters/$stealth,image
+@@||imgs-2.2xstorage.com$image,stealth=referrer
+@@||imgs-2.virus2hub.com^$image,stealth=referrer
 @@||imgsa.baidu.com
 @@||imgsrc.baidu.com^
 @@||imgtaxi.com/img-*.html
@@ -12331,6 +12334,7 @@
 @@||matrix.redditspace.com^$stealth=3p-auth
 @@||matystudios.github.io/banner_ad.png$domain=serialyzdarma.eu
 @@||matzoo.pl/*/adsbygoogle.js
+@@||matzoo.pl^$generichide
 @@||mawsueaa.com^$generichide
 @@||max.com^$generichide
 @@||maxcdn.bootstrapcdn.com/bootstrap/$domain=gelbooru.com
@@ -14982,6 +14986,8 @@
 @@||pub.doubleverify.com/signals/pub.json$domain=ladbible.com|unilad.com|unilad.co.uk|gamingbible.com|tyla.com|sportbible.com|uniladtech.com
 @@||pub.idqqimg.com^
 @@||pub.idqqimg.com^$important
+@@||pub.network/*/sites/netronline-com/configs$domain=netronline.com
+@@||pub.network/netronline-com/pubfig.min.js$domain=netronline.com
 @@||pub.network^$script,domain=creaders.net
 @@||pub.pixels.ai/prebid_standard.js$domain=standard.co.uk
 @@||pub.pixels.ai/prebid_standard.js$script,domain=standard.co.uk
@@ -37998,6 +38004,7 @@ ipa4fun.com##div[style*="min-height:"]
 ipadforums.net##.mainContent > div.sectionMain.funbox
 ipadforums.net##.pageContent > div.sectionMain.funbox
 ipaidia.gr##.inarticle-add
+ipalibrary.me###hihi
 ipass4sures.com###blockCookie
 ipax.at###ipaxCC
 ipcelou.com##.MODBanana
@@ -45668,6 +45675,7 @@ neti.ee##.neti_reminder
 netia.pl##.cookies
 netonnet.no##.topInfo
 netonnet.se##.topInfo
+netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,coomer.party,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com##.ad-container:not(#style_important)
 nettavisen.no###article-body > .rel-article
 nettavisen.no##.am-bazaar-ad
 nettavisen.no##.background-na-commercial
@@ -47637,6 +47645,7 @@ pagefly.io##.cookie.card
 pagellapolitica.it##.alert, #alert
 pagesix.com##.nyp-video-player
 pagesix.com##.widget_nypost_dfp_ad_widget
+pagesix.com,nypost.com##.widget_nypost_dfp_ad_widget:not(#style_important)
 paginasamarillas.es###m-notification--bottom
 pahe.plus##form#link-view > a
 paid4.link##.box > div[align="center"] > div.card
