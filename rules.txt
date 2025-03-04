@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-04 15:10:49（北京时间）
+! Version: 2025-03-04 16:12:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64186
+! Total count: 64195
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9398,6 +9398,7 @@
 @@||fxporn69.com^$generichide
 @@||fzmovies.*^$generichide
 @@||fzmovies.host^$generichide
+@@||g-mh.online^$image,domain=bzmh.org,stealth=referrer
 @@||g-status.com^$generichide
 @@||g.adspeed.net/ad.php?do=detectadblocker$domain=btcbunch.com
 @@||g.adspeed.net/ad.php?do=detectadblocker$domain=crewbase.net|crewus.net|shinchu.net|thumb8.net|thumb9.net
@@ -12531,6 +12532,7 @@
 @@||mgkomik.com^$generichide
 @@||mgnet.xyz/default/public/assets/*.js
 @@||mgpm.macaotourism.gov.mo^$stealth=ip
+@@||mgsearcher.com/api/$stealth=referrer
 @@||mhc-ajax-eu-s2.myhomescreen.tv^
 @@||mhc-ajax-eu.myhomescreen.tv^
 @@||mhc-xpana-eu-s2.myhomescreen.tv^
@@ -31232,6 +31234,7 @@ fellow.pl##body > div:not([id]):not([class])
 fellowsfilm.com##article[data-author="Advertisement"]
 feltet.dk##body > div[style="width: 100%;height: 80vh;background-color: #ccc; overflow: hidden;"]
 femalefirst.co.uk##.browsi_home
+fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,streamsb.online,rufiguta.com,abysscdn.com,player-cdn.com,kmo.to,nazarickol.com,redirect-ads.com##body > #player ~ div[style^="position: fixed; inset:"][style*="z-index:"]
 fembio.org###my-modal, .bg-wg-modal
 femida.az##.news-st > .addthis_native_toolbox ~ br
 femina.in##.blocked
@@ -32029,6 +32032,7 @@ forbes.com##[data-testid="locked-top-ad-container"]
 forbes.com##body fbs-ad:not(#style_important)
 forbes.com##div[class^="fbs-ad--"]
 forbes.com##div[id^="google_ads_iframe_"]
+forbes.com,livescience.com,windowscentral.com##.ad-unit
 forbes.com,nasdaq.com##.video-placeholder
 forbes.com,windowscentral.com##.ad-unit
 forbes.com.au##.bz-viewability-container
@@ -35603,6 +35607,7 @@ hentai-gamer.com##[src^="https://www.hentai-gamer.com/pics/"]
 hentai-id.tv###floatLayer2
 hentai-id.tv$replace=/http:\/\/[s\S]*s=http:\/\/www.hentai-id.tv\//http:\/\/www.hentai-id.tv\//,~third-party,~stylesheet,~script,~xmlhttprequest,important
 hentai-imperia.org##a[href^="http://www.adult-empire.com/rs.php?"]
+hentai-mega-mix.com,tuktukcinma.com,tuksudia1.sbs,blog.6ziz.com,keesat.org,vnuki.net,applediagram.com,kh-pokemon-mc.com,eroalice.com,plantswith.com,207hd.com,awpd24.com,gahag.net,inlovingmemoriesnews.com,4fingermusic.com,chihouban.com,cheatermad.com,autodime.com,torrentdofilmeshd.net,pupuweb.com,mmorpgplay.com.br##footer + div[id][class]
 hentai-sharing.net###ads300_250-widget-2
 hentai-sharing.net###text-9
 hentai-sharing.net##.e3lan-post
@@ -37521,13 +37526,17 @@ indiatimes.com##.article_first_ad
 indiatimes.com##.bottom-ad-height
 indiatimes.com##.consent-container, .du_consent, .cookie_stng
 indiatimes.com##.custom_ad
+indiatimes.com##.ecom-widget
 indiatimes.com##.googlead
 indiatimes.com##.last8brdiv > div.sponsor_block
 indiatimes.com##.li_banner_wrap
 indiatimes.com##.manbox-banner
+indiatimes.com##.product-cont
 indiatimes.com##.rmfp
 indiatimes.com##.tsh-ads
 indiatimes.com##.vidad
+indiatimes.com##body .ads-textafter
+indiatimes.com##body .rhs_ads:not(#style_important)
 indiatimes.com##body div.article_first_ad
 indiatimes.com##style[type="text/css"] + div[class]:not([id]):not([style]):not([class*=" "])
 indiatoday.in###block-itg-front-end-common-recommend-news-block
