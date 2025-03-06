@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-06 20:17:30（北京时间）
+! Version: 2025-03-06 21:18:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64251
+! Total count: 64257
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10951,7 +10951,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=typingtest.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|sf.upns.xyz|showflix.upns.one
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|sf.upns.xyz|showflix.upns.one|isekaitube.cfd
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
@@ -15601,6 +15600,7 @@
 @@||sammyboy.com/members/*advertisement$xmlhttprequest
 @@||sammyboy.com/threads/*advertisement$xmlhttprequest
 @@||samnaprawiam.com^$generichide
+@@||samplette.io^$stealth=push
 @@||sams.11freunde.de/ee/*/interact?$xmlhttprequest,domain=11freunde.de
 @@||sams.11freunde.de/ee/irl1/v1/interact?$domain=11freunde.de
 @@||sams.spiegel.de/ee/irl1/v1/interact?$domain=spiegel.de
@@ -16158,6 +16158,7 @@
 @@||signalshares.com/webtrends.min.js$script,~third-party
 @@||significatocanzoni.it^$generichide
 @@||signin.aws.amazon.com/signin^$stealth
+@@||signin.rockstargames.com^$stealth=dpi
 @@||signin.verizon.com^*/affiliate/$subdocument,xmlhttprequest
 @@||signs.pl/_css/adserver.css
 @@||silenthub.net^$generichide
@@ -18654,6 +18655,7 @@
 @@||www1.pcauto.com.cn^
 @@||www1.pconline.com.cn^
 @@||www3.doubleclick.net/|$xmlhttprequest,domain=hentaihaven.xxx
+@@||www3.doubleclick.net^$domain=missavtv.com
 @@||wwwcache.wral.com/presentation/v3/scripts/providers/analytics/ga.js$~third-party
 @@||wwwimage-tve.cbsstatic.com^
 @@||wwwstream.pro^$subdocument,stealth
@@ -41338,6 +41340,7 @@ linkedin.com##.jserp-ad-container
 linkedin.com##.premium-search-upsell
 linkedin.com##.scaffold-finite-scroll__content > div > div[data-id^="urn:li:activity:"]:has(.update-components-text-view > span[aria-hidden="true"]):not(:has(li-icon > svg))
 linkedin.com##article[data-is-sponsored]
+linkedin.com##iframe[componentkey="MynetworkDesktopNav_mynetwork_desktop_nav_ad"]
 linkedin.com##li[data-is-sponsored="true"]
 linkem.com###bottom-banner
 linkerpt.com##div[id*="ScriptRootC"]
@@ -47525,6 +47528,7 @@ osuskins.net##body > div[style^="background:"][style*="position: fixed; display:
 osxdaily.com###sharing_container
 osxdaily.com##a[href^="https://www.amazon.com/ref"]
 oszkar.com###footerbar
+ot.gr##div[class^="das-"]
 otabletach.pl###cop
 otakukan.com##body > div[style^="background:"][style*="position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px; z-index:"]
 otakusan.net###chap_view > div[style="margin: auto;width: 605px;max-width: 100%;text-align: center;height: 252px;overflow: hidden;max-height:260px;overflow-y:hidden;"]
@@ -51847,6 +51851,7 @@ rule34hentai.net###main > div.blockbody
 rule34hentai.net##.blockbody > iframe[src^="https://rule34hentai.net/javascript_rotaor"]
 rule34porn.net##.footer + div[id][class*=" "]
 rule34porn.net,mangoporn.net##a[href="https://theporndude.com"]
+rule34video.com##.columns > div.panel_header:has(> a[href="https://theporndude.com/"])
 rule34video.com##.popup-adv
 rule34video.com##.spot-thumb
 rule34video.com##.thumbs > .item:has(> a[title="Advertisement"])
@@ -52067,6 +52072,7 @@ sammobile.com##.rev
 sammyspizza.de##.responsiveFooterBar
 samnaprawiam.com##.adsbygoogle
 sampledrive.org,rahim-soft.com,veganab.co,inter-news.it,azamericasat.net##.background-overlay + div[id][class*=" "]
+samplette.io##div[id^="pw-"][id$="-leaderboard"]
 samsaraubud.com###bottom-fixed
 samsonite.ro##.mainBlack
 samsung.com###operationBanner
