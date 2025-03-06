@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-06 08:44:32（北京时间）
+! Version: 2025-03-06 10:16:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64262
+! Total count: 64243
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3496,7 +3496,6 @@
 69games.xxx##[class^="leaderboard"]
 69games.xxx##[id*="tvadbody"]
 69games.xxx##[id^="center"] .I:has(> [class=""][href])
-69games.xxx##a[href^="/ads/"]
 69games.xxx,gamcore.com###tvnotice
 69games.xxx,porcore.com##body > [id][style^="position: fixed; top: 0px;"]
 69story.com###main > div[style="margin-top: 15px;"]
@@ -5389,6 +5388,7 @@
 @@||adsinstant.com/bingfeng/gm$domain=bingfeng.tw
 @@||adslink.pw/advertisement.js
 @@||adslink.pw^$generichide
+@@||adsmanager.facebook.com^$generichide
 @@||adsninja.ca/ads_$script,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
 @@||adsninja.ca/adsninja_client.js$script,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
 @@||adsninja.ca^$stylesheet,xmlhttprequest,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -32992,24 +32992,13 @@ gamato3.com##iframe[src^="https://syndication.optimizesrv.com/"]
 gamaverse.com,html5.gamedistribution.com###gd__adblocker__overlay
 gamblejoe.com##.c-area
 gamblingnewsmagazine.com##img[width="365"]
-gamcore.com###centerwrap > div#center > div#blurb
 gamcore.com###preloader_2
-gamcore.com###tvnotice
 gamcore.com##.add_game.d-none
-gamcore.com##.d-md-block > .flexslider
-gamcore.com##.flashes > li.foxtrotuniform_block
 gamcore.com##.item:has(> [href^="/games/fuckyou/"])
 gamcore.com##.row > .d-md-block
-gamcore.com##.side_fls
 gamcore.com##.warningbox
-gamcore.com##.warningbox ~ a[rel="nofollow"] > img
 gamcore.com##[href*="/ads/"]
-gamcore.com##a[href^="https://gamcore.com/ads"]
-gamcore.com##a[rel="nofollow"] > img[src*="fgn.me/common/images/"]
 gamcore.com##body > #languages ~ div[style*="z-index"][style*="visibility: hidden;"]
-gamcore.com##body > #wrapper ~ div[style="bottom: 0px; right: 0px; position: fixed; z-index: 100; cursor: pointer;"]
-gamcore.com##canvas[width="350"]
-gamcore.com##div[id$="_tvadbody"]
 gamcore.com##li.d-md-block > a[rel]
 game-2u.com##aside.widget a[href^="https://bit.ly/"]
 game-debate.com##.scrolling-ad
@@ -47170,11 +47159,6 @@ onleihe.de##.cookie
 online-archive-extractor.com,rhymes-with.com,adjectives-for.com,find-words.com,word-count-tool.com,ocr-free.com,read-text.com,other-languages.com,how-to-say.com,online-screen-recorder.com,webcam-test.com,record-video-online.com,speaker-test.com,send-voice.com,share-my-location.com,online-mic-test.com##div[style^="min-height:280px;"]
 online-convert.com##.banner-ad-size
 online-converting.com###xyz
-online-filmek.ac##img[width="300"][height="250"]
-online-filmek.ac##img[width="300"][height="600"]
-online-filmek.ac##img[width="600"][height="300"]
-online-filmek.ac##img[width="970"][height="250"]
-online-filmek.ac##span[class^="adslot_"]
 online-fix.me##img[src*=";base64"]
 online-games.co##.overlayVid
 online-image-editor.com,thehindu.com,watcher.guru##.add
@@ -49160,9 +49144,7 @@ poradnikpracownika.pl##.banner-expandable a[target="_blank"] > img
 poradnikprzedsiebiorcy.pl###bottomBar
 poradnikprzedsiebiorcy.pl##.header-content > .container-slider
 poral.eu###adblock-message
-porcore.com###topcontainer + div[style*="margin-bottom:16px;"]
 porcore.com##.adddscolumn
-porcore.com##div[style^="text-align:center;"] > div > a[rel="nofollow"]
 porezna-uprava.hr###cookie, .modal-cookie
 porkytube.com##.large-square
 porn-images-xxx.com,hentai-cosplays.com###display_image_detail > span
@@ -61777,7 +61759,6 @@ word.tips##.result-words-ad-new
 wordcount.im,wordcounter.icu##input[value="DIRECT DOWNLOAD"]
 wordcounter.icu##.interstitial-page > nav#mainNav ~ iframe
 wordcounter.icu##.sidebar__display
-wordcounter.icu##input[value="DIRECT DOWNLOAD"]
 wordcounter.icu,passgen.icu##div[style^="z-index:99"][style*=";position:fixed;"][style*="left:50%;transform:"][style*="translateX(-50%)"]
 wordcounter.io##.page-aside__display
 wordcounter.io##.sidebar__display
