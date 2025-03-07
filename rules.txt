@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-07 23:09:44（北京时间）
+! Version: 2025-03-08 00:11:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64280
+! Total count: 64286
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2662,6 +2662,8 @@
 24h-pflege-check.de##.alert-dismissible
 24h.com.vn###div_inpage_banner_after
 24h.com.vn###div_inpage_banner_open
+24h.com.vn##.dcpd-eva
+24h.com.vn##.lady
 24h.com.vn##section[id^="ADS_"][id$="s_container"]
 24h.pchome.com.tw,find.ruten.com.tw##.site_evt
 24hgold.com##.divTop
@@ -4350,6 +4352,7 @@
 @@://www.sinya.com.tw^$stealth=ip
 @@://www3.doubleclick.net^|$xmlhttprequest
 @@://www3.doubleclick.net^|$xmlhttprequest,domain=sshkit.com
+@@://xhamster.$script,~third-party
 @@://xhamster.*.js$script,~third-party
 @@://xhamster.*.php$script,~third-party
 @@=mywebloadt1&$domain=myweb.hinet.net
@@ -37492,6 +37495,7 @@ indacoin.com###root > div[style*="block"]
 indaily.com.au,posemaniacs.com##.h-\[250px\]
 indaily.com.au,thenewdaily.com.au##.h-\[100px\]
 independent.co.ug##img[width="320"]
+independent.co.uk###main > div[class]:has(> div > div > a[href^="https://tv.apple.com/"])
 independent.co.uk###taboola-mid-article-thumbnails-ii
 independent.co.uk##.amp-live-list-item[id^="ad-"]
 independent.co.uk##.indy100-trending
@@ -49888,6 +49892,7 @@ primeradivision.pl,fcbarca.com##.banner
 primevideo.com##.DVWebNode[class*="wrapper"][class*="cookie"]
 primewire.li##a[href^="/links/sponsored/"]
 primewire.link##a[href^="https://url.rw/"]
+primewire.tf##tr:has(> td > div.spn-btns)
 primocanale.it###cookie
 primochef.it###detect ~ div[style^="display: flex; align-items: center; justify-content: center; position: fixed;"]
 primrose.co.uk###cookies
@@ -61163,6 +61168,7 @@ wellmall.cz##.euc
 wellness4live.com##.adb
 weloma.art###welcome-bar > a[target="_blank"]
 weloma.art,mangagun.net##.banner-container
+weloma.art,welovemanga.one###poly
 welovemanga.one###poly
 welovemanga.one##.popup-wrap
 welovemanga.one##a[href="https://nicoscan.com/"]
