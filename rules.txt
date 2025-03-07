@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-07 17:10:18（北京时间）
+! Version: 2025-03-07 18:10:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64264
+! Total count: 64274
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4349,6 +4349,7 @@
 @@://www.sinya.com.tw^$stealth=ip
 @@://www3.doubleclick.net^|$xmlhttprequest
 @@://www3.doubleclick.net^|$xmlhttprequest,domain=sshkit.com
+@@://xhamster.*.js$script,~third-party
 @@://xhamster.*.php$script,~third-party
 @@=mywebloadt1&$domain=myweb.hinet.net
 @@?adType=$domain=taotaosou.com
@@ -21371,6 +21372,7 @@ audi-sport.net##div[data-widget-key="forum_home_sidebar_top_ads"]
 audi-sport.net##div[data-widget-key="right_top_ad"]
 audi-sport.net##div[data-widget-key="sellwild_sidebar_bottom"]
 audi-sport.net,beermoneyforum.com,clubsearay.com,forums.sailinganarchy.com,geekdoing.com,skitalk.com,sportfishingbc.com,studentdoctor.net##.samBannerUnit
+audi-sport.net,emtbforums.com,forums.bluemoon-mcfc.co.uk,overtake.gg,racedepartment.com,resetera.com,satelliteguys.us##.samCodeUnit
 audi-sport.net,forums.bluemoon-mcfc.co.uk,overtake.gg,racedepartment.com,resetera.com,satelliteguys.us##.samCodeUnit
 audiencepool.com###interstetial-container
 audio-hi-fi.ru,electro-sila.ru##.blok_new > div[style]
@@ -26882,6 +26884,7 @@ crash.net##.block-ad-manager
 crash.net##.dmpu
 crash.net##.dmpu-container
 crash.net##.inarticle-wrapper
+crash.net,visordown.com##.block-ad-manager
 cravesandflames.com,novelsapps.com,codesnse.com##form a[rel="nofollow"] > img
 crazyblog.in,studyuo.com##div[id*="_"][style^="min-width"]
 crazygames.com##.css-1h6nq0a
@@ -34567,6 +34570,7 @@ graze.com###graze-cookie-message
 grazia-magazin.de##.safeSpaceForClose
 graziadaily.co.uk##.adContainer--inline
 graziadaily.co.uk##.article_adContainer__qr_Hd
+graziadaily.co.uk,livefortheoutdoors.com##.article_adContainer__qr_Hd
 grdf.fr###ckieBnr_banner
 greasyfork.org##.ad-entry
 greatandhra.com##.AdinHedare
@@ -45028,6 +45032,7 @@ mydrivers.com##.ab
 mydrivers.com##.adds
 mydrivers.com##.baidu, a[href^=http][target=_blank]
 mydrivers.com##.baidu_box
+mydrivers.com##.baidu_left
 mydrivers.com##.bb
 mydrivers.com##.btnNext + div:last-child
 mydrivers.com##.drivers_right > div[style="padding-top: 10px;"]
@@ -51871,6 +51876,8 @@ rumble.com##.homepage-section:has(> div.constrained > div[data-js^="rac-rp_"])
 rumble.com##main > section.homepage-section:has(> div.constrained a[href^="https://polymarket.com"])
 rummikub-apps.com###blockBanner
 rumporn.com,stilltube.com###floaterRight
+run247.com##.run24-300x250-in-post
+run247.com##.run24-content
 runcloud.io##.rc-cookie-banner
 rundfunkbeitrag.de###optInId
 runinmarseille.com##.confidentialite
@@ -58280,6 +58287,7 @@ tresdaos.com,siikomik.lat,nekoscans.com##.mainholder + div[id][class*=" "]
 tresorit.com##main ~ aside, sticky-notification
 trespasse.com###cookies
 tri-shop24.de##.cookie
+tri247.com##.show-ad
 triangletribune.com##.fba_links
 triblive.com###storyContent > div[data-type="float"][data-stn-player]
 tribune.net.ph##div[id^="ads-"]
@@ -59125,6 +59133,8 @@ uk.barclays##.barclays-consent, .c-modal-overlay, #modalCookies
 uk420.com###ipsLayout_sidebar > div[align="center"]
 uk420.com##.ipsLayout_container > div[align="center"]
 ukadultzone.com##.a--d-slot
+ukclimbing.com##.ad12195
+ukclimbing.com##.ad12249
 ukfucking.com##.im-show
 ukmail.com##.cookies
 ukmotorists.com##.csent
