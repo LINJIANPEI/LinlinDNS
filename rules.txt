@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-10 20:17:59（北京时间）
+! Version: 2025-03-10 21:19:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64296
+! Total count: 64304
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6086,6 +6086,7 @@
 @@||apm-and.zhipin.com^
 @@||apmebf.com/ad/$domain=betfair.com
 @@||apmfront.17u.cn^$important
+@@||apnetv.biz^$generichide
 @@||apnetv.me^$generichide
 @@||apnetv.tv^$generichide
 @@||app-advertise.zhihuishu.com^
@@ -8735,6 +8736,7 @@
 @@||edge.microsoft.com/translate/auth
 @@||edge.mycdn.live/live/*.m3u8$stealth
 @@||edge.mycdn.live^$stealth,domain=futebolplayhd.com
+@@||edge1.certona.net/*/scripts/resonance.js$domain=canadiantire.ca
 @@||edgeservices.bing.com^$elemhide,jsinject,extension,content
 @@||edgeservices.bing.com^$stealth
 @@||edgesuite.net^*/ad.css?
@@ -20593,6 +20595,8 @@ anime-sugoi.com##.center_lnwphp + center > br
 anime-sugoi.com##center > a[rel="nofollow"]~br
 anime-sugoi.com,awsubs.co##a[rel="nofollow"] > img[src*="bp.blogspot.com"]
 anime47.com##.ad-container
+anime4i.vip##.a--d-wrapper
+anime4i.vip##div[class^="container-ads-"]
 anime7.download###sidebar > div.widget_custom_html
 animeaddicts.hu###left > .box > .content > .twinkle
 animecorner.me,crewbase.net,zarabiajprzez24.pl,watchhentai.xxx,napeza.com,app-how-to-use-it.com,linuxcapable.com,designcorral.com,thecustomrom.com,digitalthinkerhelp.com,browserhow.com,sqlserveregitimleri.com,udemycourses.me,eckovation.com##.ai_widget
@@ -30314,6 +30318,7 @@ eporner.com###movieplayer-box-adv
 eporner.com##.ad300px
 eporner.com##.dropdown > li > a[rel="nofollow"]
 eporner.com##.hptab
+eporner.com##.video-description + center
 eporner.com##.vjs-inplayer-container
 eporner.com##[style="margin: 20px auto; height: 275px; width: 900px;"]
 eporner.video##.center-adv
@@ -31147,6 +31152,8 @@ farmacoecura.it###minihead
 farmacoecura.it##.nativeadv
 farmer.pl##.sad
 farmer.pl##.section-gr
+farmersjournal.ie##.gadvertinlinestyling
+farmersjournal.ie##.ipad-configuration:has(>[id*=gpt-])
 farmgamesfree.com,mahjonginn.com,solitairevale.com,gamesparkles.com,wordgamesfun.com,gemsblitz.com,flowersyard.com,freegames.guru,mysteryvale.com,mysteryarcade.com,oceaniaplay.com,criminalcase.co,hiddensaga.com,stumbleplay.com,mmosquare.com,gamestough.com,sportsgameslive.com,onlineanimegames.com,appstoplay.com,playmmorts.com,playmmofps.com,wwgdb.com,watchtoplay.com,slotsbingofun.com,bingospell.com,slotsevens.com,pokerworldz.com,social-casino-games.com,virtualworldsland.com,horseplains.com,virtualworldgames3d.com,glamoursquare.com,girlgamestown.com,petsvale.com,babyclaps.com,virtualrealitygamesfree.com,sandboxworlds.com,gameseducatekids.com##div[class^="bnr_"]
 farmgamesfree.com,mahjonginn.com,solitairevale.com,gamesparkles.com,wordgamesfun.com,mysteryvale.com,gamestough.com,slotsbingofun.com,bingospell.com,virtualworldsland.com,horseplains.com##.matched_content_wrapper
 farmina.com###cookies
@@ -57337,6 +57344,7 @@ thisinterestsme.com###ww-blackout
 thisisanfield.com##.code-block[class*="ai-viewport-"]
 thisisanfield.com##.elementor-widget-wp-widget-ai_widget .code-block > div[style]
 thisisanfield.com##.elementor-widget-wp-widget-ai_widget .code-block center > div[style]:not(.newsnow)
+thisisanfield.com,compsmag.com,thisisanfield.com,divernet.com##div[class^="ai-viewport-"]
 thisiscolossal.com##.ad-code-block
 thisismoney.co.uk###fiveDealsWidget
 thisismoney.co.uk##.button-style > [href]
