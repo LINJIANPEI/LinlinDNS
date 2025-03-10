@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-10 23:11:05（北京时间）
+! Version: 2025-03-11 00:10:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64304
+! Total count: 64319
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -504,6 +504,7 @@
 .gif$third-party,domain=phim33.com
 .gif$third-party,domain=yasem5.com
 .gif$third-party,domain=zxc.dongludi.top
+.gif^$image,domain=dooporn24.com
 .hongi7ie8owiie*.site^$script,third-party
 .icu/*?zoneid=*&visitor_id=$all
 .info^$domain=hdyayinmac1.com|sleeptimer.org
@@ -19238,6 +19239,8 @@ abmedia.io##.pum
 abmedia.io##a[href^="https://ace.io/"]
 abmedia.io##a[href^="https://www.okx.com/"]
 abmedia.io,appinn.com,carrotchou.blog,landiannews.com,laoliublog.cn,woniuyulew.com,zhain8.com##.widget_media_image
+abmilf.com##.wrapper > section:has(> div > div[style^="width"] > div.ad__title)
+abmilf.com,gettranny.com,xjav.tube,manysex.tube,manysex.com##.right
 abminbuy.com##body > a[rel="nofollow"] > img
 aboardtheworld.com##.popmake
 about.me##.bubble[class*="cookie_notice"]
@@ -26484,7 +26487,6 @@ compressor.io##.adwrapp
 compresss.com##.alert-dismissable
 comprovendolibri.it###AvvisoADblock
 comprovendolibri.it###CVLR_AdvPrivacy, #CVLR_AdvPrivacy ~ table
-compsmag.com,thisisanfield.com,divernet.com##div[class^="ai-viewport-"]
 compstudio.in##div[class^="stream-item"]
 comptabilisation.fr###message_wrap
 compteurdelettres.com##.top-header
@@ -27380,6 +27382,8 @@ cybernews.com##.adds__wrapper + .line
 cybernews.com##.adds__wrapper + hr
 cybernews.com##div:has(> div.main-deals)
 cybernews.com##div:has(> div.main-deals) + hr
+cyberpor.com###adsModal
+cyberpor.com##.modal-backdrop
 cyberpowerpc.com###pp_cookie
 cyberpowersystem.co.uk###pp_cookie_consent
 cyberscoop.com###welcomeadMask
@@ -28832,6 +28836,10 @@ doomovie.com##.ads-center
 doomovie.com##.go-b-close
 doomovie88-hd.com##img[alt="ufabet"]
 doopla.pl##div[cmp]
+dooporn24.com##.btn-skip
+dooporn24.com##.regis
+dooporn24.com##div[class^="dp-cen"]
+dooporn24.com##div[id^="ads_"]
 doordash.com##.carousel-virtual-wrapper:has([href*="collection_type=sponsored_brand"])
 doordash.com##.ccdtLs:has([data-testid="sponsored:Sponsored"])
 doordash.com##div:has(> a[data-anchor-id="SponsoredStoreCard"])
@@ -41566,6 +41574,8 @@ livemint.com##div[class^="outbrainAd"]
 livemint.com##div[id$="NotAdFree"]
 livenewschat.eu###secondary > aside[id^="custom_html-"]
 liveradio.ie###disclaimer
+liverpoolecho.co.uk##div[class*="BoxStyles_commercial"]
+liverpoolecho.co.uk##div[class^="Article_below-article-commercial-box"]
 liverpoolecho.co.uk,manchestereveningnews.co.uk##.teaser[data-tmdatatrack-source="SHOP_WINDOW"]
 liverpoolfc.com###LfcCookieContent
 liverpoolfc.com###lfc_ads_article_pos_one
@@ -47584,6 +47594,7 @@ otakuusamagazine.com##.otaku_big_ad
 otakuwire.com##.td-header-wrap > .td-banner-wrap-full
 otcmarkets.com###userAgreementBanner
 otodom.pl###root > footer ~ div
+otodom.pl##div[class="css-11az3rb etqjiy20"]
 otomi-games.com##.clean-grid-grid-post:has(> [id^="otomi-"] + .clean-grid-grid-post-details-full) {remove:true;}
 otomi-games.com##.otomi-widget
 otomi-games.com,ryuugames.com##[href^="https://aichattings.com/"]
@@ -47612,6 +47623,7 @@ ouo.press,leechpremium.link,cpmlink.net,shink.in##div[id*="ScriptRootC"]
 ouo.press,ouo.io##.content a[href][target="_blank"]
 ouraring.com##div[data-cy*="consent-manager-banner"]
 ourcodeworld.com##.widget_archive
+ourcoincash.xyz###miniFooterWrapper ~ script + style + div[id][class*=" "]
 ourmatch.me##.adv21
 ourworldofenergy.com###sponsors_container
 oushop.com##body > div:not([id]):not([class])
@@ -56920,6 +56932,7 @@ thekitchn.com##.DesktopStickyFooter
 thekitchn.com##.Post__inPostVideoAdDesktop
 theknowledgeacademy.com##.cookies
 thekrazycouponlady.com##.cookie-consent-modal
+thelab.gr##.ipsSpacer_both:has(> ul > li > a[href^="https://www.thelab.gr/index.php?"][href*="=redirect&"])
 thelallantop.com###taboola-ads
 thelallantop.com##.deaktop-header-ad
 thelallantop.com##p[style="font-size:11px;color:#b7b7b7;margin-bottom:0px"]
@@ -63548,6 +63561,8 @@ yovizag.com##div[id^="v-yovizag-"]
 yow.ca###sticky
 yoy.tv###notice
 yoys.no###section-cookies
+yozm.wishket.com##.grid-in-advertisement > a[href]
+yozm.wishket.com##div.box-border:has(> a[href] > img[alt="advertisement"])
 yp868.com##iframe[src="/js/loading.html"]
 ypojie.com##.widget_ui_orbui
 ypppt.com##.login_panel
