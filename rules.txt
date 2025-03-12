@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-12 07:09:10（北京时间）
+! Version: 2025-03-12 08:44:10（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64342
+! Total count: 64352
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7829,6 +7829,7 @@
 @@||concertads-configs.vox-cdn.com/sbn/sbn/config.json$domain=goldenstateofmind.com
 @@||concertads-configs.vox-cdn.com/sbn/sbn/config.json$domain=mmafighting.com
 @@||concertads-configs.vox-cdn.com/sbn/verge/config.json$domain=theverge.com
+@@||condorsoft.co^$generichide
 @@||conf.hpplay.cn^
 @@||config.aps.amazon-adsystem.com/configs/$domain=kitco.com
 @@||config.cmpassport.com^$important
@@ -14225,6 +14226,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=ckk.ai
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=client.falixnodes.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=coinsrev.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=condorsoft.co
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=cosplay18.pics
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=couponscorpion.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=cutyion.com
@@ -23315,6 +23317,7 @@ bleepingcomputer.com##.bc_right_sidebar > .bc_guide:has(> ul > li > a.spon_res)
 bleepingcomputer.com##.cz-post-comment-wrapp + .cz-related-article-wrapp:has(> .adsbygoogle)
 bleepingcomputer.com##.cz-sponsorposts
 bleepingcomputer.com##.cz-toa-wrapp
+bleepingcomputer.com##.ia_ad
 bleepingcomputer.com##.noty_bar
 bleepingcomputer.com##.s-ou-wrap
 bleepingcomputer.com##[href="https://try.flare.io/bleeping-computer/"]
@@ -40445,6 +40448,10 @@ krunker.io###streamContainer
 krunker.io###topLeftAdHolder
 krunker.io###topRightAdHolder
 krups.com.pl##body > div:not([id]):not([class])
+krx18.com###image-container:has(> a#image-link[href^="https://bit.ly/"])
+krx18.com##.alert.info
+krx18.com##.content.right > center:has(input.MyButton)
+krx18.com##aside.widget_text:has(script[class^="__clb-"])
 krx18.com,myqqjd.com##script + div[class][style="display:none;"] + div[id][class*=" "]
 krypto-trend.de###captcha-adspace
 krypto-trend.de###middle-adspace
@@ -45522,6 +45529,7 @@ nativesurge.info##.adsbyadful + button#dismiss-btn
 nativesurge.info##td:has(> div.adsbyadful)
 natlawreview.com##.\#div\.block-native_bf
 natlawreview.com##.block-content-ad_block
+natomanga.com##.ads-contain
 nats.io###main_gdpr
 natural-cosmetology.ru##body > div[style*="background-color:#ff0000;color:#ffffff;"]
 naturalblaze.com##.n553lfzn75
@@ -52871,6 +52879,7 @@ sextb.date,sextb.net##.tray-item-cam
 sextb.net##.asg-overlay
 sextb.net##.network-top span
 sextb.net##.network-top span ~ a[href]:not(.login-member)
+sextb.net##div[data-spots]
 sextb.net,sextb.xyz##.sextb_300
 sextfun.com###top-navbar.wrap
 sextfun.com##a[href^="http://app.oksrv.com"]
@@ -62580,6 +62589,7 @@ xiaolz.cn###zzbuluoled_sx
 xiaoma.com##.leftewm_topa
 xiaoma.net##.col-list-ad
 xiaoma.net##.colunm-banner
+xiaomitime.com##.featuredb_ad
 xiaomitoday.com###secondary > div.g1-sticky-sidebar
 xiaomitoday.com##.widget_sp_image > a > img[width="300"][height="200"]
 xiaomitoday.it##.cegg_widget_products
