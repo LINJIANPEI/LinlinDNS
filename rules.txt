@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-12 15:10:06（北京时间）
+! Version: 2025-03-12 16:13:36（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64359
+! Total count: 64361
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8466,6 +8466,7 @@
 @@||dogestar.website^$generichide
 @@||dogry.pl^$generichide
 @@||doka.guide/html^$elemhide,jsinject,extension
+@@||dokoplay.xyz$stealth=referrer
 @@||dokuo666.blog98.fc2.com^$generichide
 @@||dolldivine.com^$generichide
 @@||dollsnews.com^$generichide
@@ -18088,6 +18089,7 @@
 @@||vidcdn.co/iframe/$stealth
 @@||videacesky.cz^$generichide
 @@||vidembed.cc/encrypt-ajax.php?id=
+@@||vidembed.re/stream$stealth=referrer
 @@||video*.xhcdn.com/key=$stealth
 @@||video-download.online/js/advertisement.js
 @@||video.520call.me/ad.php
