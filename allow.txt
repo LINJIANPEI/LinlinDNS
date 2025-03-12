@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-12 20:18:08（北京时间）
+! Version: 2025-03-12 21:19:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 20655
+! Total count: 20659
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -10109,6 +10109,7 @@
 @@||dogus-ads-cdn.dygdigital.com/daion/daion-videojs-hlsjs-*.min.js
 @@||dogus-ads-cdn.dygdigital.com/live-broadcast-player/v1/bundle.js$domain=startv.com.tr
 @@||doka.guide/html^$elemhide,jsinject,extension
+@@||dokoplay.xyz$stealth=referrer
 @@||dokuo666.blog98.fc2.com^$generichide
 @@||dolldivine.com^$generichide
 @@||dollsnews.com^$generichide
@@ -10439,6 +10440,7 @@
 @@||embed.sendtonews.com/player*.php$domain=earth.com
 @@||embed.watchanimesub.net/inc/embed/ads.js
 @@||embed.watchanimesub.net/inc/embed/kampyle.js
+@@||embed.watchanimesub.net/inc/embed/suv4.js
 @@||embeddedanalytics.com/updateeakpi.html$domain=brocardi.it
 @@||embedstream.me^$generichide
 @@||embedstreams.me^$stealth=referrer,subdocument
@@ -15741,7 +15743,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=itscybertech.com|premiumebooks.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jarochos.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=javball.com|idol69.net
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=javsunday.com|kin8-av.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=javsunday.com|kin8-av.com|fikfok.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jazzradio.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=joblo.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=joktop.com
@@ -18073,6 +18075,7 @@
 @@||snobdomobeyeo.com^$script,domain=blog.cryptowidgets.net|blog.insurancegold.in
 @@||snopes.com/photos/advert*/*.asp
 @@||snowfl.com/ads/*.js$~third-party
+@@||snowplow.swm.digital^$domain=7plus.com.au
 @@||snva.jp/javascripts/reco/$script,domain=store.charle.co.jp
 @@||so-magazyn.pl^$generichide
 @@||so-net.ne.jp/access/hikari/minico/ad/images/$~third-party
@@ -19738,6 +19741,7 @@
 @@||vidcdn.co/iframe/$stealth
 @@||videacesky.cz^$generichide
 @@||vidembed.cc/encrypt-ajax.php?id=
+@@||vidembed.re/stream$stealth=referrer
 @@||video*.xhcdn.com/key=$stealth
 @@||video-download.online/js/advertisement.js
 @@||video.520call.me/ad.php
