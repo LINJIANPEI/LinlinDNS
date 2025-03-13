@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-13 15:09:54（北京时间）
+! Version: 2025-03-13 16:14:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64210
+! Total count: 64212
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -50121,6 +50121,7 @@ ptbus.com##.weixin_ad
 ptbus.com##div.ad300_250,div.weixin_ad,div.content14
 ptbus.com,weather.com.cn###duilian
 ptc-auto.hu###hCookiePanel
+ptcgp.raenonx.cc##.grid.w-full.grid-cols-1:has(#nitro-ptcgp-wide-page-top-a)
 ptcgp.raenonx.cc##.grid:has(> div[tabindex] > div.absolute > div.flex > div[id^="nitro-"])
 ptinews.com##.rightUl > li[style="color:Red; margin:20px 0px 0px 60px; font-family:Georgia; font-size:17px; float:left"]
 ptinews.com##div[class^="adddiv"]
@@ -51101,6 +51102,7 @@ redbook.com.au##.is-section-doubleclickad
 redbubble.com##.ds-theme-find-your-thing ~ .Toastify
 redd.it##shreddit-async-loader[bundlename*="cookie_banner"]
 redd.tube###basePopping
+redd.tube###closeable_widget
 redd.tube##.adsession
 redd.tube##.banner-juicy-desktop
 reddingo.ch##.policy, #policy, .cpolicy
