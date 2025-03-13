@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-13 21:19:54（北京时间）
+! Version: 2025-03-13 22:09:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64228
+! Total count: 64262
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4541,6 +4541,7 @@
 @@|ws://*$websocket,domain=flirt4free.com
 @@|www.daraz.pk^|
 @@||*.alipay.com^$important
+@@||*.anjuke.com$important
 @@||*.cdninstagram.com^$important
 @@||*.dlied1.cdntips.net^
 @@||*.img.mobile.sina.cn^$important
@@ -4978,6 +4979,7 @@
 @@||activity.kugou.com^
 @@||activity.tuiapple.com^$important
 @@||activity.youku.com^$important
+@@||acts.qidian.com^
 @@||ad*.adbreak.ch/*ad_block=$domain=tio.ch
 @@||ad-api-v01.uliza.jp^$script,xmlhttprequest,domain=golfnetwork.co.jp|tv-asahi.co.jp
 @@||ad-block.dns.adguard.com^
@@ -6714,6 +6716,8 @@
 @@||boobausauhipsa.net^$domain=playhydrax.com|kissanime.com.ru
 @@||book.com.tw/image/getImage?
 @@||book.com.tw/image/getImage?$domain=books.com.tw
+@@||book.qidian.com^
+@@||bookcover.yuewen.com^
 @@||booking.vietjetair.com/searchrespax.aspx$stealth
 @@||bookmate.com^*/impressions?$~third-party,xmlhttprequest
 @@||books-share.com/scripts/ads.js
@@ -6726,6 +6730,7 @@
 @@||bordeaux.futurecdn.net/bordeaux.js$script,domain=gamesradar.com|tomsguide.com
 @@||borneobulletin.com.bn/wp-content/banners/bblogo.jpg$~third-party
 @@||borsen.dk/themes/borsen.dk/js/dfp.js
+@@||bossaudioandcomic-1252317822.image.myqcloud.com^
 @@||bostonglobe.com/login/js/lib/AppMeasurement.js$~third-party
 @@||botannews.com^$generichide
 @@||botprotect.io^$stealth,domain=robloxscripts.com
@@ -6986,6 +6991,7 @@
 @@||ccllaa.com^$generichide
 @@||ccna6.com^$generichide
 @@||ccnav6.com^$generichide
+@@||ccportrait.yuewen.com^
 @@||ccthesims.com^$generichide
 @@||cctv.com/js/cntv_Advertise.js
 @@||cd.adition.com/assets/adition/*/*.mp4$domain=orf.at
@@ -9009,6 +9015,7 @@
 @@||facebook.com^$generichide
 @@||facebook.com^$generichide,badfilter
 @@||facebook.com^$important
+@@||facepic.qidian.com^
 @@||facepunch.io^$generichide
 @@||faculty.uml.edu/klevasseur/ads/
 @@||faculty.uml.edu^$image,stylesheet
@@ -9477,6 +9484,7 @@
 @@||game.bilibili.com^
 @@||game.eve.mdt.qq.com^
 @@||game.html5.qq.com^
+@@||game.qidian.com^
 @@||game.res.meizu.com^$important
 @@||game.weixin.qq.com^$important
 @@||game24h.vn/js/ads_v*.js?v=$domain=game24h.vn
@@ -9491,6 +9499,7 @@
 @@||gameflier.com/ad/
 @@||gamefly.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@||gameguardian.b-cdn.net^$domain=gameguardian.net,stealth
+@@||gameimg.qidian.com^
 @@||gamekit.com^$generichide
 @@||gamenguide.com/common/js/common/ads.js
 @@||gamer-cds.cdn.hinet.net/vod/gamer/*.m3u8^$domain=ani.gamer.com.tw
@@ -11087,6 +11096,7 @@
 @@||img.mxomo.com^$image,stealth
 @@||img.noobzone.ru^$stealth
 @@||img.pddpic.com^
+@@||img.qidian.com^
 @@||img.rakudaclub.com/adv/$~third-party
 @@||img.reimg2.org/images/$stealth=referrer
 @@||img.soft98.ir/*/300x250.
@@ -11103,6 +11113,7 @@
 @@||img03.sogoucdn.com^
 @@||img04.sogoucdn.com^
 @@||img05.zhaopin.cn/2014/common/js/za/ga.js
+@@||img1.qidian.com^
 @@||img10.360buyimg.com^
 @@||img12.360buyimg.com^
 @@||img13.360buyimg.com^
@@ -11127,6 +11138,7 @@
 @@||imgs-2.2xstorage.com$image,stealth=referrer
 @@||imgs-2.virus2hub.com^$image,stealth=referrer
 @@||imgsa.baidu.com
+@@||imgservices-1252317822.image.myqcloud.com^
 @@||imgsrc.baidu.com^
 @@||imgtaxi.com/img-*.html
 @@||imgtmo.com^$stealth=referrer
@@ -12130,6 +12142,7 @@
 @@||m.360.cn^
 @@||m.360buyimg.com^$important
 @@||m.360video.so.com^
+@@||m.anjuke.com^
 @@||m.azonline.de/var/storage/images/*_image_300_250.jpg$~third-party
 @@||m.bilibili.com^
 @@||m.ctrip.com^
@@ -12158,6 +12171,8 @@
 @@||m.olx.pl/api/v*/ads/*?adId=
 @@||m.pes24.com^$generichide
 @@||m.pinduoduo.com^
+@@||m.qdmm.com^
+@@||m.qidian.com^
 @@||m.qpic.cn^
 @@||m.qpic.cn^$important
 @@||m.rp5.*/mobile/scripts/adblocker.js$domain=m.rp5.ru|m.rp5.by|m.rp5.kz|rp5.co.uk|rp5.md
@@ -13497,7 +13512,9 @@
 @@||p3-cpay.byteimg.com^
 @@||p3-dcd-sign.byteimg.com^
 @@||p3-dcd.byteimg.com^
+@@||p3-faceu-img-sign.byteimg.com^
 @@||p3-flow-imagex-sign.byteimg.com^
+@@||p3-heycan-hgt-sign.byteimg.com^
 @@||p3-insurance.byteimg.com^
 @@||p3-iz-e-sign.byteimg.com^
 @@||p3-notice.byteimg.com^
@@ -13527,7 +13544,9 @@
 @@||p6-dcd-sign.byteimg.com^
 @@||p6-dcd.byteimg.com^
 @@||p6-dy-ipv6.byteimg.com^
+@@||p6-faceu-img-sign.byteimg.com^
 @@||p6-flow-imagex-sign.byteimg.com^
+@@||p6-heycan-hgt-sign.byteimg.com^
 @@||p6-novel.byteimg.com
 @@||p6-novel.byteimg.com^
 @@||p6-novelfm-sign.novelfmpic.com^
@@ -13541,7 +13560,9 @@
 @@||p9-dcd-sign.byteimg.com^
 @@||p9-dcd.byteimg.com^
 @@||p9-dy.byteimg.com
+@@||p9-faceu-img-sign.byteimg.com^
 @@||p9-flow-imagex-sign.byteimg.com^
+@@||p9-heycan-hgt-sign.byteimg.com^
 @@||p9-novelfm-sign.novelfmpic.com^
 @@||p9-open-sign.byteimg.com^
 @@||p9-reading-sign.fqnovelpic.com^
@@ -14471,10 +14492,12 @@
 @@||passport.bobo.com^
 @@||passport.csdn.net/login^$stealth=referrer
 @@||passport.iqiyi.com^$important
+@@||passport.qidian.com^
 @@||passport.weibo.cn^
 @@||passport.weibo.com^
 @@||passport.yandex.ru^$stealth
 @@||passport.youdao.com^$important
+@@||passport.yuewen.com^
 @@||paste.asia^$generichide
 @@||pastehub.net/assets/ads/advertisement.js$domain=searchresults.cc
 @@||pastemod.com^$generichide
@@ -14592,6 +14615,7 @@
 @@||pic2.zhimg.com^
 @@||pic4.58cdn.com.cn^
 @@||pic5.58cdn.com.cn^
+@@||pic6.ajkimg.com^
 @@||pic640.weishi.qq.com^$important
 @@||pic7.iqiyipic.com^
 @@||pic8.58cdn.com.cn^
@@ -14979,6 +15003,7 @@
 @@||pt.afl.rakuten.co.jp^|
 @@||ptah.m3pd.com/key=$media,domain=porntop.com,stealth=referrer
 @@||ptitchef.com/js/ads.js
+@@||ptlogin.yuewen.com^
 @@||ptmi.gitv.tv^$important
 @@||pttcell.com.tr^$stealth=dpi
 @@||pttplay.com/js/momo/adsbygoogle.js
@@ -15101,6 +15126,7 @@
 @@||qcaptcha.so.com^
 @@||qccommunity.qcloudimg.com^$stealth,domain=cloud.tencent.com
 @@||qcheng.cc/x/statics/js/guanggao.
+@@||qdfepccdn.qidian.com^
 @@||qds.it/wp-content/plugins/digistream/digiplayer/js/videojs.ga.js?$script,~third-party
 @@||qdssw418am.xyz^
 @@||qertyus.celestialwallscapes.site^$stealth=referrer
@@ -15114,6 +15140,7 @@
 @@||qiantucdn.com/static/images/adsbygoogle.js
 @@||qiantucdn.com^$stealth,domain=58pic.com
 @@||qidian.gtimg.com/*/qd/js/component/ad_strategies.$script
+@@||qidian.gtimg.com^
 @@||qimingdao.com/Index/loadmore?tag_id=
 @@||qingcheng.com^*/ad
 @@||qingdaoport.net/adv/random.jsp
@@ -16719,6 +16746,7 @@
 @@||static1-azcdn.newser.com/javascript/
 @@||static2-azcdn.newser.com/javascript/
 @@||static3.iask.cn^
+@@||statics.123pan.com^
 @@||statics.itc.cn^$important
 @@||statics.zcool.com.cn/track/sensors.$script,~third-party
 @@||staticsns.cdn.bcebos.com^
@@ -16747,6 +16775,7 @@
 @@||statsig.com^
 @@||statusapi.micloud.xiaomi.net^$important
 @@||staty.portalradiowy.pl/wstats/$script,third-party
+@@||stawritecdn.yuewen.com^
 @@||stbemuprocode.com^$generichide
 @@||stc.cdncache.xyz/*/*.css$domain=streamz.ws
 @@||stc.cdncache.xyz/*/*.js$domain=streamz.ws
@@ -18475,6 +18504,7 @@
 @@||wqsd.jd.com^
 @@||wrestlinginc.com/wp-content/themes/unified/js/prebid.js$~third-party
 @@||wristreview.com^$generichide
+@@||write.qq.com^
 @@||writing.chegg.com/graphql$stealth,domain=citationmachine.net
 @@||wroffle.com/wp-content/plugins/ad-inserter^
 @@||wroffle.com^$generichide
@@ -18519,6 +18549,7 @@
 @@||www.9game.cn^
 @@||www.ali213.net^
 @@||www.alidns.com^$important
+@@||www.anjuke.com^
 @@||www.bilibili.com/html/iframemessage.html
 @@||www.bilibili.com^
 @@||www.biligame.com^
@@ -18606,6 +18637,8 @@
 @@||www.pussyspace.net/style/img/abuse.email.png#|
 @@||www.pussyspace.net/style/img/navbg.hover.png|
 @@||www.pussyspace.net/upload/no_img.jpg|
+@@||www.qdmm.com^
+@@||www.qidian.com^
 @@||www.recaptcha.net^$important
 @@||www.ruanyifeng.com^$csp=script-src 'self' * 'sha256-0McqMM66/wAVZmxF6zXpjNsb1UMbTl4LXBXdhqPKxws='
 @@||www.so.com^
@@ -18624,6 +18657,7 @@
 @@||www.youtube-nocookie.com
 @@||www.youtube.com^$generichide
 @@||www.youtube.com^$important
+@@||www.yuewen.com^
 @@||www.zee5.com^$stealth,domain=zee5.com
 @@||www.zhihu.com/api/v4/search_v3*
 @@||www.zhihu.com^
