@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-13 20:18:03（北京时间）
+! Version: 2025-03-13 21:19:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64216
+! Total count: 64228
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6532,6 +6532,7 @@
 @@||belezaedieta.net^$generichide
 @@||belkagomel.by^$stealth=dpi
 @@||bellinghamherald.com^$generichide
+@@||bellmts.ca^$stealth=dpi
 @@||beltelecom.by^$stealth=dpi
 @@||bengalinews.co.in^$generichide
 @@||benjaminphamchannel.com^$generichide
@@ -8974,6 +8975,7 @@
 @@||f-gear.ec-optimizer.com/speights/searchresult2fgear.js$script,domain=ec.f-gear.co.jp
 @@||f-gear.ec-optimizer.com^
 @@||f-gear.ec-optimizer.com^|
+@@||f-tra.com^$script,domain=pokemoncenter-online.com
 @@||f-vali.cp31.ott.cibntv.net^$important
 @@||f.51240.com^$important
 @@||f.bmcx.com^$important
@@ -14073,6 +14075,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=temp-mail.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=temp-phone-number.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tempatwisata.pro
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tempinbox.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=terabox.fun|hotmediahub.com|teralink.me|teraearn.com|terashare.me|fansonlinehub.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=texturecan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=theappstore.org
@@ -16704,6 +16707,7 @@
 @@||static.vidgyor.com/live/dai/js/videojs.ads.min.js
 @@||static.vrv.co^$media,domain=crunchyroll.com
 @@||static.webshark.pl/adserver/*/main_script.js?advertise_check=1
+@@||static.wikia.nocookie.net^$domain=fandom.com,stealth=referrer
 @@||static.ws.126.net^
 @@||static.yieldmo.com/ym.adv.min.js$domain=okdebrid.com
 @@||static.youporn.phncdn.com/cb/assets/css/$domain=youporn.com
@@ -36117,6 +36121,7 @@ hollywoodreporter.com##[id^="jwplayer"]
 holmasto.fi##gds-consent-manager
 holmesplace.at##.cookie-window
 holodilnik.ru##.alert-compliance
+holyart.it##.logopremium
 holymanga.net##.svl_ads_right
 holyrood.com##.col--ad
 holzhandlung-bremerhaven.de###cp-inner
@@ -49407,6 +49412,11 @@ pornjam.com##.publ11s-b0ttom
 pornjam.com##.r11ght-pl4yer-169
 pornjam.com##.r1ght-pl4yer-43
 pornjam.com##.right-player-43
+pornl.com###tags-scroll > h3.tag__item:has(> a[target="_blank"][href])
+pornl.com##.fah-btn
+pornl.com##.underplayer > section
+pornl.com##.video-ntv-wrapper
+pornl.com##section[style="padding: 20px;"]
 pornleaks.in,flightradar24.com##.noads
 pornleech.io##.block-content-r > div[align="justify"].b-content > table  > tbody > tr > td > div[style="text-align: center;"] > span[style="color: red; font-size: x-small;"]
 pornlib.com###lcams2
@@ -56932,6 +56942,8 @@ thenounproject.com##div[data-callback*="CookiesBanner"]
 theodysseyonline.com##.distroscale_p2
 theodysseyonline.com##.distroscale_side
 theoldie.co.uk##.placeholder-wrapper
+theoldreader.com###banner_container
+theoldreader.com##div[id$="-ad-container"]
 theonion.com##.block-visibility-hide-medium-screen
 theonlinesurgery.co.uk##.alert.ue-content
 theoutline.com##.post__body > p + div[class][data-id]
