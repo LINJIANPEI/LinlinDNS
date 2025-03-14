@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-14 20:17:02（北京时间）
+! Version: 2025-03-14 21:17:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64268
+! Total count: 64284
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2670,6 +2670,7 @@
 24k99.com,fx168.com##.ny2018_txtLink
 24k99.com,fx168.com##.yy_guangao
 24kplus.com###custom_html-3
+24legnica.pl###secondarySidebar > ul > .sticky-wrapper > .widget:has(> .textwidget > .adsbygoogle)
 24opony.pl##.easyNotificationBck
 24pdd.kz,livenewsof.com,librasol.com.br,yourlifeupdated.net,balkanteka.net,giuseppegravante.com,iggtech.com###td-outer-wrap + div[id][class*=" "]
 24rodopi.com,rodopi24.blogspot.com###HTML14
@@ -3297,6 +3298,7 @@
 51zxw.net###video div[class^="background"]
 520call.me,av99.us,yocoolnet.in###inplayer
 520call.me,yocoolnet.in###inplayer
+520cc.cc##div[id^="myad_alert_"]
 520cc.cc,v.5278.mobi,jizz99.com,bonbonyou.com,in99.org,av99.us,jav777.xyz,520call.me,hboav.com###inplayer
 520cc.me###back-to-top > a[href^="http"]
 520film.net##.wapimg
@@ -4740,6 +4742,7 @@
 @@||520click.com/ad.php$domain=520cc.cc
 @@||520click.com/ad.php$stealth
 @@||520click.com/ad.php$stealth=referrer
+@@||520click.com/ad.php?id=$script,domain=surirt.com
 @@||5278.cc/static/image/common/ad_close.gif
 @@||5278.cool^$generichide
 @@||52zy.com/gg/
@@ -6073,6 +6076,7 @@
 @@||apkmaza.net^$generichide
 @@||apkmb.com^$generichide
 @@||apkmirror.com^$generichide
+@@||apkmoddone.phongroblox.com^$generichide
 @@||apkpure.com^$generichide
 @@||aplayer.xyz/player/watch.php^$stealth
 @@||apm-and.zhipin.com^
@@ -13881,6 +13885,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jarochos.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=javball.com|idol69.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=javsunday.com|kin8-av.com|fikfok.net
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=javsunday.com|kin8-av.com|fikfok.net|javbee.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jazzradio.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=joblo.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=joktop.com
@@ -16915,6 +16920,7 @@
 @@||surfguru.com^$generichide
 @@||surfsees.com/wp-content/plugins/clickarsf/assets/fuckadblock.js
 @@||surfsees.com^$generichide
+@@||surirt.com/ad/ads.php?id=$script,domain=surirt.com
 @@||survey.devographics.com^$stealth=useragent
 @@||survey.feelgood.cn^
 @@||survey.g.doubleclick.net^$script,domain=sporcle.com
@@ -20867,6 +20873,7 @@ apkmirror.com##div[id^="adtester-container-"]
 apkmirror.com$$script[wildcard="*document.querySelector*.classList.add*.innerHTML*"][min-length="200"][max-length="700"]
 apkmoddone.com###adBlock
 apkmoddone.com###sn-Notif
+apkmoddone.phongroblox.com###fakeDown
 apkmodget.com##.adv_wrap
 apkmodvn.com,softfully.com,gamertweak.com,aastik.in,metrosaga.com##body .adsbygoogle:not(#style_important)
 apkmody.com##.above-ad-unit
@@ -21487,6 +21494,7 @@ autoampel.de###cookies
 autoblog.com##.btf-native
 autoblog.com##.gemini-native
 autoblog.com##.grv-related
+autoblog.com##div[id^="ad-in_content-"]
 autoblog.md##div[class^="PREFIX"][data-prefix-close-buttontrackid]
 autocar.co.uk##.block-autocar-ads-lazyloaded-mpu2
 autocar.co.uk##.block-autocar-ads-mpu-flexible1
@@ -47849,6 +47857,9 @@ parenting.pl##.article__container > .content-aside
 parenting.pl##.article__container--gallery > .content-aside
 parenting.pl##a[rel="sponsored noopener noreferrer"]
 parenting.pl,abczdrowie.pl##div[data-element="wide-placeholder"]
+parenting.pl,informacje.wp.pl,deliciousmagazine.pl,jastrzabpost.pl,genialne.pl,abczdrowie.pl##style + div[class]:has(> div:first-child:not([class]) + img[src^="https://v.wpimg.pl/"] + div:last-child)
+parenting.pl,informacje.wp.pl,deliciousmagazine.pl,jastrzabpost.pl,genialne.pl,abczdrowie.pl##style + div[class]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div:last-child)
+parenting.pl,informacje.wp.pl,deliciousmagazine.pl,jastrzabpost.pl,genialne.pl,abczdrowie.pl##style + div[class]:has(> img[src^="https://v.wpimg.pl/"]:only-child)
 parenting.pl,turystyka.wp.pl,sportowefakty.wp.pl,abczdrowie.pl,film.wp.pl,wiadomosci.wp.pl,moto.wp.pl,kobieta.wp.pl##body > div[class]:not([id]):empty
 parentmood.com##.nya-slot
 paris.fr##.paris-cookies-banner
@@ -48463,6 +48474,7 @@ piacenza24.eu##a.gofollow[data-track]
 piaf.io###midBotPanel
 pianba.net###jiedoubanban
 pianba.tv,pianba.net##.play-btn > a[target="_blank"]
+pianbas.com##.nopc.cpcad
 pianbus.com,pianmas.com##li[class]:not(.index):not(.hidden-ps):not(.hidden-xs):not(.active)
 pianetabambini.it##div[class*="clsads"]
 pianetadragonball.altervista.org##.alert-dismissible
@@ -50817,6 +50829,7 @@ raenonx.cc##.main_ads-content + div
 raenonx.cc##body > div[class] > style:first-child + div[class]:has(> button.button-clickable-bg-opaque > .transform-smooth > svg)
 raenonx.cc##div[style="display: flex; justify-content: center; align-items: center; position: relative;"] > iframe
 raenonx.cc##div[tabindex="-1"][class="w-full overflow-hidden outline-transparent focus:outline-2 focus:outline-offset-2"]
+raenonx.cc,raenonx.cc##div[class="flex flex-col place-content-center place-items-center text-center w-full h-\[100px\]"]
 raftaar.in##a[href="https://www.astrologyadvice.in/"] > img
 raftaar.in##body > div[style="margin-top:15px; margin-bottom:15px; text-align: center;"]
 raftaar.in##div[class^="story-footer-module__ad__"]
@@ -53779,6 +53792,7 @@ smjb.net##div[style*="height: 50%"]
 smm.cn##.ad_front_container
 smm.cn##.common-jinzhu-wrap
 smm.cn##.top_taishan_jinzhu
+smoothpre.com###adbd
 smorgasbord.com##.alert, #alert
 smotrisport.online,smotrisport.tv##.dont-add-our-site-pls
 sms.priv.pl###cookies
@@ -55511,6 +55525,7 @@ surfshark.com###__next > footer ~ div[class*="animationEnterDone"]
 surinenglish.com##.publiTop
 surinenglish.com##.roba
 surinenglish.com##.v-adv
+surirt.com,520cc.cc,v.5278.mobi,jizz99.com,bonbonyou.com,in99.org,av99.us,jav777.xyz,520call.me,hboav.com###inplayer
 survey-remover.com##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 surveycircle.com###consent_info
 surveyjs.io##.surveyjs-cookie-info
@@ -60556,6 +60571,7 @@ wagnardmobile.com##.cc01
 wagnardmobile.com##.region-preblocks:first-child
 wagnardsoft.com###page-body div.post:not([class*="has-profile"])
 wago.com##.wg-modal__overlay
+wago.io###stream-player
 wago.io##.ad-in-search
 wago.io##.embed-player
 wago.io##body .wago-ad-container
