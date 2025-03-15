@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-15 20:15:32（北京时间）
+! Version: 2025-03-15 21:14:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64298
+! Total count: 64301
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -31112,8 +31112,10 @@ fapnado.com##[class^="xpot"]
 fapnado.com##iframe[width="95%"][height="400"]
 fapnado.com,young-sexy.com##.popup
 fapnado.xxx##.pause-ad-pullup
+fapnado.xxx##.video-holder > center:has(+ div[id^="ts_ad_"])
 fapnado.xxx##.zpot-horizontal
 fapnado.xxx##.zpot-vertical
+fapnado.xxx##ul.primary > li:has(> a[class^="nav-"][class*=" gn"][target="_blank"])
 fapnow.xxx##.content center
 fapnow.xxx##.xpot-horizontal
 fapnow.xxx##div[style="width: 900px; height: 250px; margin: 0 auto;"]
@@ -32143,6 +32145,7 @@ formidable.com##.formidaCookie
 formula1.com##.f1-DFP--banner
 formula1.com##.f1-dfp-banner-wrapper
 formula1.com##.js-promo-item
+formula1.com##div:has(> div[id^="div-gpt-ad-"]:only-child)
 formula1game.com###root > div:not([class]) > div
 formula1news.co.uk,saddind.co.uk,fandomwire.com,windowsactivator.info,shubz.in##div[class^="code-block code-block-"][style*="margin: 8px auto; text-align: center;"]
 formulacionquimica.com###pck
