@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-16 15:09:45（北京时间）
+! Version: 2025-03-16 16:11:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64283
+! Total count: 64313
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -612,6 +612,21 @@
 /.*\.a\.market\.xiaomi\.com/
 /.*\.data\.hicloud\.com/
 /.*\.log\.aliyuncs\.com/
+/.*ad-sign.*/
+/.*ad.wtzw.com.*/
+/.*adservice.*/
+/.*adsmind.*/
+/.*aligames.*/
+/.*bytedance.*/
+/.*bytegoofy.*/
+/.*byteorge.*/
+/.*ibytedapm.*/
+/.*mgsdk-sign.*/
+/.*pangolin.*/
+/.*pglstatp.*/
+/.*tsyouto.*/
+/.*umeng.*/
+/.*zijieapi.*/
 /139.45.197.24\d/$network
 /193.200.64.24:/
 /1MObaudu.$script,xmlhttprequest
@@ -1666,6 +1681,7 @@
 1001games.com##.gc-halfpage
 1001games.com##.gc-leaderboard
 1001games.com##.gc-medium-rectangle
+1001games.com,3addedminutes.com,alistapart.com,anguscountyworld.co.uk,arcadebomb.com,armageddonexpo.com,banburyguardian.co.uk,bedfordtoday.co.uk,biggleswadetoday.co.uk,bikechatforums.com,birminghamworld.uk,blackpoolgazette.co.uk,bristolworld.com,bsc.news,btcmanager.com,bucksherald.co.uk,burnleyexpress.net,buxtonadvertiser.co.uk,ca-flyers.com,caixinglobal.com,caribvision.tv,chad.co.uk,cinemadeck.com,cmo.com.au,coryarcangel.com,csstats.gg,daventryexpress.co.uk,derbyshiretimes.co.uk,derbyworld.co.uk,derryjournal.com,dewsburyreporter.co.uk,dominicantoday.com,doncasterfreepress.co.uk,drops.live,dump.li,elyricsworld.com,euobserver.com,eurochannel.com,exalink.fun,falkirkherald.co.uk,farminglife.com,fifetoday.co.uk,filmmakermagazine.com,flvtomp3.cc,footballtradedirectory.com,forexpeacearmy.com,funpic.hu,gartic.io,garticphone.com,gizmodo.com,glasgowworld.com,gr8.cc,gsprating.com,halifaxcourier.co.uk,harboroughmail.co.uk,harrogateadvertiser.co.uk,hartlepoolmail.co.uk,hemeltoday.co.uk,hiphopdx.com,hortidaily.com,hucknalldispatch.co.uk,hyipexplorer.com,ibtimes.co.in,ibtimes.co.uk,imedicalapps.com,insidefutbol.com,ipwatchdog.com,irishpost.com,israelnationalnews.com,japantimes.co.jp,jpost.com,kissasians.org,koreaherald.com,lancasterguardian.co.uk,laserpointerforums.com,leightonbuzzardonline.co.uk,lep.co.uk,lincolnshireworld.com,liverpoolworld.uk,livescore.in,londonworld.com,lutontoday.co.uk,manchesterworld.uk,marinelink.com,meltontimes.co.uk,mercopress.com,miltonkeynes.co.uk,mmorpg.com,mob.org,nationalworld.com,newcastleworld.com,newryreporter.com,news.am,news.net,news12.com,newsletter.co.uk,northamptonchron.co.uk,northantstelegraph.co.uk,northernirelandworld.com,northumberlandgazette.co.uk,nottinghamworld.com,oncyprus.com,onlineconvertfree.com,peterboroughtoday.co.uk,pharmatimes.com,portsmouth.co.uk,powerboat.world,pulsesports.co.ke,pulsesports.ng,pulsesports.ug,roblox.com,rotherhamadvertiser.co.uk,sat24.com,scientificamerican.com,scotsman.com,shieldsgazette.com,slidescorner.com,smartcarfinder.com,speedcafe.com,sputniknews.com,starradionortheast.co.uk,stornowaygazette.co.uk,subscene.com,sumodb.com,sunderlandecho.com,surreyworld.co.uk,sussexexpress.co.uk,sweeting.org,swzz.xyz,tass.com,thefanhub.com,thefringepodcast.com,thehun.com,theoldreader.com,thescarboroughnews.co.uk,thesouthernreporter.co.uk,thestar.co.uk,timeslive.co.za,tmi.me,totallysnookered.com,townhall.com,toyworldmag.co.uk,unblockstreaming.com,vibilagare.se,vloot.io,wakefieldexpress.co.uk,walesworld.com,warwickshireworld.com,weatheronline.co.uk,weekly-ads.us,wigantoday.net,worksopguardian.co.uk,worldtimeserver.com,xbiz.com,ynetnews.com,yorkshireeveningpost.co.uk,yorkshirepost.co.uk##.banner
 1001games.com,3addedminutes.com,alistapart.com,anguscountyworld.co.uk,arcadebomb.com,armageddonexpo.com,banburyguardian.co.uk,bedfordtoday.co.uk,biggleswadetoday.co.uk,bikechatforums.com,birminghamworld.uk,blackpoolgazette.co.uk,bristolworld.com,bsc.news,btcmanager.com,bucksherald.co.uk,burnleyexpress.net,buxtonadvertiser.co.uk,ca-flyers.com,caixinglobal.com,caribvision.tv,chad.co.uk,cinemadeck.com,cmo.com.au,coryarcangel.com,csstats.gg,daventryexpress.co.uk,derbyshiretimes.co.uk,derbyworld.co.uk,derryjournal.com,dewsburyreporter.co.uk,dominicantoday.com,doncasterfreepress.co.uk,drops.live,dump.li,elyricsworld.com,euobserver.com,eurochannel.com,exalink.fun,falkirkherald.co.uk,farminglife.com,fifetoday.co.uk,filmmakermagazine.com,flvtomp3.cc,footballtradedirectory.com,forexpeacearmy.com,funpic.hu,gartic.io,garticphone.com,gizmodo.com,glasgowworld.com,gr8.cc,gsprating.com,halifaxcourier.co.uk,harboroughmail.co.uk,harrogateadvertiser.co.uk,hartlepoolmail.co.uk,hemeltoday.co.uk,hiphopdx.com,hortidaily.com,hucknalldispatch.co.uk,hyipexplorer.com,ibtimes.co.in,ibtimes.co.uk,imedicalapps.com,insidefutbol.com,ipwatchdog.com,irishpost.com,israelnationalnews.com,japantimes.co.jp,jpost.com,kissasians.org,koreaherald.com,lancasterguardian.co.uk,laserpointerforums.com,leightonbuzzardonline.co.uk,lep.co.uk,lincolnshireworld.com,liverpoolworld.uk,livescore.in,londonworld.com,lutontoday.co.uk,manchesterworld.uk,marinelink.com,meltontimes.co.uk,mercopress.com,miltonkeynes.co.uk,mmorpg.com,mob.org,nationalworld.com,newcastleworld.com,newryreporter.com,news.am,news.net,news12.com,newsletter.co.uk,northamptonchron.co.uk,northantstelegraph.co.uk,northernirelandworld.com,northumberlandgazette.co.uk,nottinghamworld.com,oncyprus.com,onlineconvertfree.com,peterboroughtoday.co.uk,pharmatimes.com,portsmouth.co.uk,powerboat.world,pulsesports.co.ke,pulsesports.ng,pulsesports.ug,roblox.com,rotherhamadvertiser.co.uk,sat24.com,scientificamerican.com,scotsman.com,shieldsgazette.com,slidescorner.com,smartcarfinder.com,speedcafe.com,sputniknews.com,starradionortheast.co.uk,stornowaygazette.co.uk,subscene.com,sumodb.com,sunderlandecho.com,surreyworld.co.uk,sussexexpress.co.uk,sweeting.org,swzz.xyz,tass.com,thefanhub.com,thefringepodcast.com,thehun.com,thescarboroughnews.co.uk,thesouthernreporter.co.uk,thestar.co.uk,timeslive.co.za,tmi.me,totallysnookered.com,townhall.com,toyworldmag.co.uk,unblockstreaming.com,vibilagare.se,vloot.io,wakefieldexpress.co.uk,walesworld.com,warwickshireworld.com,weatheronline.co.uk,weekly-ads.us,wigantoday.net,worksopguardian.co.uk,worldtimeserver.com,xbiz.com,ynetnews.com,yorkshireeveningpost.co.uk,yorkshirepost.co.uk##.banner
 1001mobiles.fr###cookiediv
 1001tracklists.com###head + div[id] div[class*=" "][id]:has(> div[data-freestar-ad]:only-child)
@@ -6051,6 +6067,7 @@
 @@||apis.kostprice.com/fapi/$script,domain=gadgets.ndtv.com
 @@||apis.wavve.com/fz/streaming$domain=wavve.com,stealth=ip
 @@||apischedule.ksyungslb.com^$important
+@@||apissl.ksapisrv.com^$app=com.kuaishou.nebula,important
 @@||apissl.ksapisrv.com^$important
 @@||apiwaka.azure-api.net/api/key/$stealth,domain=wakanim.tv
 @@||apiwz.midukanshu.com^
@@ -10679,6 +10696,7 @@
 @@||image.quark.cn^
 @@||image.shutterstock.com^$image,domain=icons8.com
 @@||image.uc.cn^$important
+@@||image.uczzd.cn^$app=com.UCMobile
 @@||imagebam.com/gallery-organizer$document
 @@||imagefap.com/jscripts/ad_loader.js
 @@||images*.imagebam.com/ad^
@@ -10692,6 +10710,7 @@
 @@||images.intellicast.com/Scripts/ad-v3.js
 @@||images.macrumors.com/*/article-new/
 @@||images4u.cc^$generichide
+@@||imapi5-oth-*.zijieapi.com^
 @@||imasdk.googleapis.com$domain=video.huffingtonpost.it
 @@||imasdk.googleapis.com/js/$domain=cari.com.my
 @@||imasdk.googleapis.com/js/core/bridge*.html$domain=~spotify.com
@@ -11135,6 +11154,7 @@
 @@||imgfx02.xyz/chapters/$stealth,image
 @@||imgs-2.2xstorage.com$image,stealth=referrer
 @@||imgs-2.virus2hub.com^$image,stealth=referrer
+@@||imgsa.baidu.com
 @@||imgservices-1252317822.image.myqcloud.com^
 @@||imgsrc.baidu.com^
 @@||imgtaxi.com/img-*.html
@@ -12828,8 +12848,11 @@
 @@||msn.com/spartan/dhp$jsinject
 @@||msn.wrating.com/a1.js
 @@||mss0.bdstatic.com^
+@@||mssdk.zijieapi.com^$app=com.dragon.read
+@@||mssdk3-normal-*.zijieapi.com^
 @@||mssdk3-normal-hj.zijieapi.com^
 @@||mssdk3-normal-lf.zijieapi.com^
+@@||mssdk5-normal-hl.zijieapi.com^
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=play.tv3.lt
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=tv3sport.dk
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=viasatsport.se
@@ -14991,6 +15014,7 @@
 @@||pss.bdstatic.com^
 @@||psstatic.cdn.bcebos.com^
 @@||pstatic.net^$image,stealth
+@@||pstatp.com^$app=com.viva.note
 @@||pt.afl.rakuten.co.jp^
 @@||pt.afl.rakuten.co.jp^|
 @@||ptah.m3pd.com/key=$media,domain=porntop.com,stealth=referrer
@@ -17050,6 +17074,7 @@
 @@||task.galaxy.p2cdn.com^
 @@||tatuajestatu.com^$generichide
 @@||tawk.to^$stealth
+@@||tb.himg.baidu.com
 @@||tb.himg.baidu.com^
 @@||tb.mgtv.com/sdk/*/ad-sdk.js$script
 @@||tb.mgtv.com/sdk/*/ad-sdk.js^$script
@@ -17304,6 +17329,9 @@
 @@||tickets.oebb.at^$generichide
 @@||ticonsiglio.com/wp-content/*/plugins/ad-ace/includes/adblock-detector/advertisement-*.js
 @@||tidal.com^$generichide
+@@||tieba.baidu.com
+@@||tiebac.baidu.com
+@@||tiebapic.baidu.com
 @@||tienganhedu.com^$generichide
 @@||tiengnhatpro.net^$generichide
 @@||tii.la^$generichide
@@ -17356,6 +17384,7 @@
 @@||tms.capitalone.com^|
 @@||tms.oracle.com/main/prod/utag.sync.js$~third-party
 @@||tn.voyeurhit.com^$domain=voyeurhit.tube
+@@||tnc11-aliec2.zijieapi.com^$app=com.dragon.read
 @@||tnc11-bjlgy.zijieapi.com^
 @@||tnc16-platform-useast1a.tiktokv.com^$important
 @@||tnc3-aliec2.snssdk.com^$important
@@ -18659,6 +18688,7 @@
 @@||wwwimage-tve.cbsstatic.com^
 @@||wwwstream.pro^$subdocument,stealth
 @@||wx.17u.cn^$important
+@@||wx.qlogo.cn^$app=com.tencent.mm
 @@||wx.qlogo.cn^$important
 @@||wx.qq.com/*/ad_$script
 @@||wx.qq.com/c/=/mpres/*/video_ad_
