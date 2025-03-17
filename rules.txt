@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-17 20:18:13（北京时间）
+! Version: 2025-03-17 21:20:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64323
+! Total count: 64335
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11919,6 +11919,7 @@
 @@||lightning.bleacherreport.com^*/launch-$~third-party
 @@||lightning.cnn.com^$script,domain=wfmz.com
 @@||lightningmaps.org/min/index.php?f=js/
+@@||lightnovelworld.com^$stealth=1p-cookie
 @@||lilymanga.net/wp-content/uploads/ad-inserter*/*/ads.js
 @@||limbopro.com^$important
 @@||limestart.cn^
@@ -18099,6 +18100,7 @@
 @@||video.matchtv.ru^$stealth=donottrack
 @@||video.onnetwork.tv/adblock_notify.js
 @@||video.onnetwork.tv/frame*.php$stealth=referrer,domain=radiozet.pl
+@@||video.onnetwork.tv/widget/$domain=natemat.pl
 @@||video.qq.com/fcgi-bin/
 @@||video.qq.com^*&refer=http$script
 @@||video.repubblica.it^$generichide
@@ -18504,6 +18506,7 @@
 @@||worldofbitco.in/application/views/script/advert.js
 @@||worldometers.info^|$stealth
 @@||worldssl.net/wp-content/themes/mts_ad_sense/js/ads.js
+@@||worldsurfleague.com/js/videojs8/nuevo/plugins/videojs-contrib-ads.min.js
 @@||worldwide.sogou.com^$important
 @@||wouterplanet.com^$generichide
 @@||wowclassicbis.com^$generichide
@@ -21766,6 +21769,7 @@ axminstertools.com##.axmcookie-notice-container, .axmcookie-notice-conatiner
 axn-asia.com,onetvasia.com##.pane-dart-dart-tag-300x250-rectangle
 axo-actifs.fr###cookies_frame
 axsam.az##.adsbymahimeta
+axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##body > :is(div, aside)[id]:has(> ul[class] > li > img.icon + a[href])
 axutongxue.com##ASIDE[style*='height:58px;overflow:hidden;width:322px;border:dashed .5px']
 axutongxue.com##DIV[style*='px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;']
 axutongxue.com##DIV[style*='z-index: 9999999;display: flex;justify-content: center;align-items: center;']
@@ -38138,6 +38142,8 @@ iplaysoft.com##div[style="background:#fcf0ef;width:680px;height:130px;border-rad
 iplaysoft.com##div[style="margin:-10px 0 0 0;overflow:hidden"]
 ipleaders.in##a[href^="https://lawsikho.com/"] > img
 ipleak.net##.details tr[data-tooltip^="A VPN based "]
+ipliroforia.gr##.in-article-adv-wrapper
+ipliroforia.gr##div[style]:has(> div > div[id^="_vidverto-"])
 iplocation.com##.ha
 iplocation.net###ipAdress + a[class="btn btn-danger"]
 iplocation.net##.ip-buttons > button[class="btn btn-danger"]
@@ -38372,6 +38378,7 @@ iseekgirls.com##a[href^="https://www.iseekgirls.com/af/"]
 isekaiscan.com##.advance-ads
 iseki.fr###cnil, .cnil, #CNIL
 iservoetbalvanavond.nl###__next > div:first-child:not(:only-child)
+ishadeed.com###carbonadsWrapper
 ishare.iask.sina.com.cn##.loginRedPacket-dialog
 ishare.ifeng.com##.callUpBox
 ishare.ifeng.com##div[class^="callup"]
@@ -39084,6 +39091,7 @@ jetload.tv##iframe[src^="https://www.topqualitylink.com"]
 jetphotos.com##.result--adv
 jetpunk.com##.banner-ad-outer
 jetpunk.com##.box-ad-outer
+jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,streamsb.online,rufiguta.com,abysscdn.com,player-cdn.com,kmo.to,nazarickol.com,redirect-ads.com##body > #player ~ div[style^="position: fixed; inset:"][style*="z-index:"]
 jetvis.ru##.stick-banner
 jetzendorf.de###privacy-container
 jeunesseglobal.com###toast-container
@@ -41277,6 +41285,7 @@ lightnovelpub.fan,lightnovelpub.vip,lightnovelpub.com,lightnovelspot.com,webnove
 lightnovelpub.fan,lightnovelpub.vip,lightnovelpub.com,lightnovelspot.com,webnovelpub.com##.container > div[class]:has(> .adsbygoogle)
 lightnovelworld.co##div[data-mobid]
 lightnovelworld.co,lightnovelpub.fan,lightnovelpub.com##div[class]:has(> div[id^="pf-"]:only-child)
+lightnovelworld.com##body div[id^="vn-slot-"]
 lightnovelworld.com##div[data-mobid]
 lightnovelworld.com,lightnovelspot.com,webnovelpub.com##.lnadcontainer
 lightnovelworld.com,lightnovelspot.com,webnovelpub.com,lightnovelpub.com##.leaderboard-large
@@ -46115,6 +46124,7 @@ newsweek.pl##.placeholder-flat-hpl
 newsweek.pl##.placeholder[data-run-module*=".placeholders"]
 newsweek.pl##.pwAds
 newsweek.pl##.pwPlistNin
+newsweek.pl##[class*="Ads_ph__"]
 newswiretoday.com,przoom.com##.sponsortd
 newsworthy.se##.Snack
 newsx.com##.leftaddsense
@@ -61564,6 +61574,7 @@ winandmac.com,nicekkk.com###custom_html-3
 winbuzzer.com##.mfp-figure::before
 wincofoods.com##mct-templater-cookie-consent
 wind.it###cookies, body > #track, .contentCntr + .messageOverlay
+windbreaker.me,fazy.online,wikijankari.com,greett.xyz,cricket12.com,stimotion.pl,thelastgamestandingexp.com,chart.services,moneysave.info,pornmz.com,yakisurume.com,tehnar.net.ua,rocdacier.com,audiotrip.org,flowsnet.com,brulosophy.com,reprezentacija.rs##body > div#page ~ div[id][class*=" "]
 windowcleaningforums.co.uk###elPostFeed .ipsSpacer_half a[href][target="_blank"][rel="nofollow noopener"] > img
 windowcleaningforums.co.uk###ipsLayout_footer a[href][rel="nofollow noopener"] > img
 windows-love.de###wl-cookie-datenschutz-message
@@ -61918,6 +61929,7 @@ worldstar.com##div[style^="width:972px;height:250px;"]
 worldstar.com,worldstarhiphop.com##div[style^="width:972px;height:250px;"]
 worldstreams.lol##iframe ~ script + div[style*="position: fixed"][style*="z-index"]
 worldsurfleague.com##.unicorn[data-unicorn-settings*="sponsor"]
+worldsurfleague.com##.vjs-ad-markers
 worldtimebuddy.com###toprek
 worldtimebuddy.com##.block2
 worldtimezone.com##.spon-menu
