@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-19 07:09:32（北京时间）
+! Version: 2025-03-19 08:45:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64340
+! Total count: 64348
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3999,6 +3999,8 @@
 @@//*.xvideos.com^$domain=xvideos.com
 @@//aka-cdn-ns.adtechus.com/images/$domain=cinemablend.com
 @@/520cc/myxedetectadsx.js$domain=520cc.cc|520cc.me
+@@/802/*$script,subdocument,xmlhttprequest,domain=07c225f3.online
+@@/984/*$script,subdocument,xmlhttprequest,domain=html-load.com
 @@/:\/\/.*[.]wp[.]pl\/[a-z0-9_]+[.][a-z]+[/:&?]?/
 @@/?article=$stealth=referrer,domain=m10.asd.quest
 @@/OutbrainWidgetConnector.js$domain=foxnews.com
@@ -11277,6 +11279,7 @@
 @@||intercelestial.com^$generichide
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^$important
+@@||interfans.org^$generichide
 @@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||interssh.com^$generichide
@@ -61686,6 +61689,7 @@ wired.com##.page > div[class*="MessageBanner"]
 wired.com##.recirc-most-popular__items > li.recirc-most-popular__item > .ad
 wired.com##.sponsored-stories-component
 wired.com##.with-link-banner
+wired.com##div[class^="StickyHeroAdWrapper-"]
 wired.com##div[class^="advertisement"]
 wired.com##div[data-testid="ContentFooterBottom"] > div[class^="RowWrapper-"]
 wired.com##div[role="presentation"][data-outbrain-url]
@@ -62112,6 +62116,10 @@ wuyong.fun##.riplus_ads_wrap
 wvnews.com##.automatic-ad
 wvnews.com,news-gazette.com##.automatic-ad
 ww-ag.com##.WW-cookiemodul
+ww2-weapons.com###sgpb-popup-dialog-main-div-wrapper
+ww2-weapons.com##.sgpb-popup-overlay
+ww2-weapons.com##[class*="warhist-"]
+ww2-weapons.com##[id*="media"]
 ww2.putlocker.onl##div[class="wrapper"][style^="left:25%;"][style*="text-align:center;"]
 wwdmag.com##.intercom-snippet > [class*="gdpr"]
 wwe.com##.l-hybrid-col-frame_rail-wrap
