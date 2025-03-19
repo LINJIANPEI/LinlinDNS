@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14723
+! Total count: 14726
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-03-18 20:44:41（北京时间）
+! Version: 2025-03-19 09:46:27（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -1522,6 +1522,8 @@
 @@//*.xvideos.com^$domain=xvideos.com
 @@//aka-cdn-ns.adtechus.com/images/$domain=cinemablend.com
 @@//store.donanimhaber.com/ad/*$domain=forum.donanimhaber.com
+@@/802/*$script,subdocument,xmlhttprequest,domain=07c225f3.online
+@@/984/*$script,subdocument,xmlhttprequest,domain=html-load.com
 @@/:\/\/.*[.]wp[.]pl\/[a-z0-9_]+[.][a-z]+[/:&?]?/
 @@/?article=$stealth=referrer,domain=m10.asd.quest
 @@/OutbrainWidgetConnector.js$domain=foxnews.com
@@ -14860,6 +14862,7 @@
 @@||integration.plarium.com^$stealth
 @@||intelyvale.com.mx/ads/images/$domain=valesdegasolina.mx
 @@||intercelestial.com^$generichide
+@@||interfans.org^$generichide
 @@||interia.hit.gemius.pl/hitredir/$domain=interia.pl
 @@||interia.hit.gemius.pl/redot.gif?$domain=m.interia.pl
 @@||intersport.peerius.com/tracker/*.page$domain=intersport.de
