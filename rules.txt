@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-20 20:18:17（北京时间）
+! Version: 2025-03-20 21:19:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64376
+! Total count: 64384
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3118,6 +3118,7 @@
 4c.cn##div[id^="mid_ad"]
 4c.cn##div[id^="top_ad"]
 4chan.org###bd > div[style="text-align:center;margin: 10px 0"]
+4chan.org##.danbo-slot
 4chan.org,4channel.org##.danbo-slot
 4chan.org,boards.4channel.org##.danbo-slot
 4clik.com##.kHolder
@@ -4159,6 +4160,7 @@
 @@/favicon.ico$domain=avaxhome.co
 @@/favicon.ico$domain=lubetube.com
 @@/favicon.ico$third-party,domain=thehouseofportable.com
+@@/file2/*==/*$xmlhttprequest,stealth=referrer,domain=megacloud.*
 @@/fingerprint.$domain=abchina.com
 @@/fingerprint2.js$domain=fangcloud.com|fx678.com|gxpf.cn|hnair.com|pop-fashion.com
 @@/fingerprint2.js$domain=fangcloud.com|fx678.com|gxpf.cn|pop-fashion.com
@@ -12506,6 +12508,7 @@
 @@||mega-debrid.eu/JS/advertisement.js
 @@||mega-debrit.com^$generichide
 @@||mega-p2p.net^$generichide
+@@||megacloud.*/embed-$stealth=referrer
 @@||megacloud.tv/embed-$stealth=referrer
 @@||megacuriosidades.pw^$generichide
 @@||megadrive-emulator.com^$generichide
@@ -21240,9 +21243,11 @@ asianage.com##div[id$="-ad-full-screen"]
 asianage.com##div[id*="_level_"].to-be-async-loaded-ad
 asiananimaltube.org##.view_block > .right_block.rightBs
 asiancorrespondent.com##.article-mpu
+asianetnews.com##.StickyAd
 asianetnews.com##.adsection
 asianetnews.com##.desktop-ad-1
 asianetnews.com##.site-banner
+asianetnews.com##body[id] .adsection
 asianetnews.com##div[class^="revive-ads"]
 asianetnews.com##div[class^="right-ad-"]
 asiangaysex.net,gaysex.tv##.float-ck
@@ -39602,6 +39607,7 @@ justthenews.com##.video
 justthenews.com##.video--vdo-ai
 justthenews.com##.view--breaking-news-sponsored
 justwatch.com##.jw-ad-block
+justwatch.com##.offer-container:has(> span > a[target="_blank"] p.offer__footnote)
 justwatch.com##.promoted-buybox
 justwatch.com##.sponsored-recommendation
 justwatch.com##publication-block
@@ -43476,6 +43482,7 @@ metatrader4.com###float-vertical-panel
 metbuat.az##.col-sm-8 > [class="wh_box hidden-sm hidden-xs"]
 metbuat.az##.row > div[class="col-sm-4 col-md-3 col-lg-3"] > div[class="scrool_news hidden-xs hidden-sm"]
 metbuat.az##.row > div[class="col-sm-8 col-md-9 col-lg-9"] > div[class="wh_box"]
+metbuat.az##.scrool_news:has(> a[target="_blank"] > img)
 metbuat.az##.wh_box a[href="https://livescore.az"]
 metbuat.az##div[style="margin-top: 10px; text-align: center"]
 metcheck.com###EUModal, .reveal-modal-bg
@@ -45946,6 +45953,7 @@ news.milli.az##.ad-holder + div.row
 news.milli.az##.quiz-holder > div[style^="margin"]
 news.milli.az##a[href][target="_blank"][style^="display: block; font-weight: bold;"]
 news.milli.az##div[class="hidden-sm hidden-xs"]
+news.milli.az##iframe[src^="https://newstube.az/embed/"]
 news.mn##div[data-banner-location]
 news.mydrivers.com##.baidu_left
 news.mydrivers.com##.main_right_div:nth-of-type(4)
