@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-20 23:10:54（北京时间）
+! Version: 2025-03-21 00:12:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64384
+! Total count: 64385
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12509,7 +12509,6 @@
 @@||mega-debrit.com^$generichide
 @@||mega-p2p.net^$generichide
 @@||megacloud.*/embed-$stealth=referrer
-@@||megacloud.tv/embed-$stealth=referrer
 @@||megacuriosidades.pw^$generichide
 @@||megadrive-emulator.com^$generichide
 @@||megafilmestorrenthd.net^$generichide
@@ -21244,7 +21243,6 @@ asianage.com##div[id*="_level_"].to-be-async-loaded-ad
 asiananimaltube.org##.view_block > .right_block.rightBs
 asiancorrespondent.com##.article-mpu
 asianetnews.com##.StickyAd
-asianetnews.com##.adsection
 asianetnews.com##.desktop-ad-1
 asianetnews.com##.site-banner
 asianetnews.com##body[id] .adsection
@@ -23443,6 +23441,7 @@ blog.sina.cn###pl-blog-artad
 blog.sina.cn###pl-blog-tbyy
 blog.sina.cn###pl-float-bar
 blog.sina.cn##div.item_hide+div,#pl-blog-artad
+blog.sina.com.cn##.top-ad-info
 blog.sina.com.cn##div[style*="WiDTH: 200px;"][style$="HeiGHT: 300px"]
 blog200porcento.com###consent_200
 blog2social.com##.cookie-cover
@@ -29086,6 +29085,8 @@ dragon-guide.net##.container > .gutter:first-child
 dragonpass.com.cn##.indexCookies
 dragonshop.gr##.header-banner
 dramacool9.io,vidcloud.icu##a[href^="https://bodelen.com/"]
+dramafren.net###btnOpnWinDiv
+dramafren.net##div[class^="teaser"]
 drank.nl##header ~ .fixed.bottom-0
 draytek.com##.cookie
 drdobbs.com###leaderboard1
@@ -43687,7 +43688,6 @@ militarywatchmagazine.com##.v-size--x-small.theme--light
 millenniumbcp.pt##div[id*="CookiesMsg"]
 milli.az###main > [style="clear: both; background: #dadada; margin: -38px  0 20px 0;"]
 milli.az##.ad-back
-milli.az##.ad-text_line
 milli.az##.large-ad-holder
 milliescookies.com##privacy-settings
 miloserdov.org,playstore.pw###custom_html-11
@@ -62018,6 +62018,7 @@ wowza.com###ck_pu
 wp.pl##[class^="_"]:has(> img[src*=".wp.pl"])
 wp.pl##a[href*="adv.wp.pl/"]
 wp.pl##body > b
+wp.pl$$script:contains(/var wp_gaf_rv[\s\S]*?\n.*"spin".*"dfpConfig".*"slots?"/)
 wpbakery.com##.top-message
 wpbeginner.com##.sidebardeals
 wpbeginner.com##.singleadthumbcontainer
