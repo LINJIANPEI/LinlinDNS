@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-20 07:10:46（北京时间）
+! Version: 2025-03-20 08:44:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64364
+! Total count: 64369
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8720,6 +8720,7 @@
 @@||ebay.*/makeOffer/$document,subdocument
 @@||ebay.co.uk/itm/like/*&adgroupid=$domain=ebay.com|ebay.co.uk
 @@||ebesucher.ru/js/fuckadblock.js
+@@||ebilet.tcddtasimacilik.gov.tr^$stealth=dpi
 @@||ebok.gkpge.pl^$jsinject,extension
 @@||ebookbb.com/wp-content/plugins/wp-minify/min/?f=
 @@||ebookdz.com^$generichide
@@ -18359,6 +18360,7 @@
 @@||weatherx.co.in^$generichide
 @@||web-ads.pulse.weatherbug.net/api/ads/targeting/$domain=weatherbug.com
 @@||web-ads.pulse.weatherbug.net/api/ads/targeting/v*/parameters?$domain=weatherbug.com
+@@||web-cloud-new.foreks.com^$stealth=referrer,domain=akbank.com
 @@||web-sdk.urbanairship.com/notify/$script,domain=etoro.com
 @@||web.any.do^$document
 @@||web.basemark.com^$generichide
@@ -45778,6 +45780,7 @@ netfly.lol##.module-tglist
 netfly.tv##.module-tglist
 neti.ee##.neti_reminder
 netia.pl##.cookies
+netmovies.to##.advertising-link
 netonnet.no##.topInfo
 netonnet.se##.topInfo
 netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,coomer.party,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com##.ad-container:not(#style_important)
@@ -58120,6 +58123,7 @@ torbay.gov.uk##.track
 torcedores.com###navve-cookie-block
 torebrings.se##.alert-info, .alert-warning, .alert-box
 torg-pc.ru##.marketing-popup
+tori.fi##iframe[title="Oikotie advertisement"]
 torinostar.it###footerprivacy
 torjackan.info##.c-medtitle-output
 torkitty.com,torrentkitty.app,torrentkitty.io,torrentkitty.lol,torrentkitty.net,torrentkitty.se,torrentkitty.tv##a[href*="/aff_"]
@@ -58696,6 +58700,7 @@ turbobit.net###__bgd_link
 turbobit.net##.brin-button
 turbobit.net##.download-top-aplayer
 turbobit.net##a[href*="&campaign="] > img
+turbobit.net##a[href="javascript:void(0);"]
 turbobit.net##body > a#body-link
 turbobit.net##img[width="600"][height="80"]
 turbobits.cc,turbobiyt.net,turbobit.net###adfrc_download_wrapper
