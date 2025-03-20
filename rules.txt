@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-20 15:09:53（北京时间）
+! Version: 2025-03-20 16:13:36（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64368
+! Total count: 64376
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -33065,6 +33065,8 @@ gamcore.com##li.d-md-block > a[rel]
 game-2u.com##aside.widget a[href^="https://bit.ly/"]
 game-debate.com##.scrolling-ad
 game-debate.com##.scrolling-ad-square
+game-maps.com##.adshide
+game-maps.com##.ga-bot-map-on
 game-news24.com###block-50
 game-tournaments.com##.dynban
 game-tournaments.com##.yaadstracker
@@ -37937,6 +37939,7 @@ interia.pl##.adStandardTop
 interia.pl##.dol_srodek_ads_box
 interia.pl##.main-sidebar > div[style="height: 600px;"] > div[style^="max-width:"][style*="position: sticky"]
 interia.pl##.main-sidebar a[href][target="_blank"][onclick*="&creation="]
+interia.pl##.wiadspec-ul > .wiadspec-li:has(> a[href^="https://ad.doubleclick.net/"])
 interia.pl##a[href][target="_blank"][onclick*="&creation="] > img[onload*="onDetected"]
 interia.pl##a[href][target="_blank"][onclick*="https://www.plushbezlimitu.pl/abo/"]
 interia.pl##a[href^="https://ad.doubleclick.net/"]
@@ -37946,6 +37949,7 @@ interia.pl##div[class^="crt-"]
 interia.pl##div[data-component^="ad-"]
 interia.pl##div[id^="crt-"]
 interia.pl##div[width] > div[class^="sc"][style*="overflow: auto;"]:has(> #feed_grupa:only-child > div > .ad)
+interia.pl##section > div[style^="padding-top: 25px;border-top:"]:has(> a[href][target="_blank"][onclick*="&creation="] > img[onload*="onDetected"])
 interion.cz##.mcc-modal
 intermarche.be##.cookies
 internationalchips.com##.ba
@@ -49037,6 +49041,7 @@ pocketracy.com##.dsclmr
 pockettactics.com,pcgamesn.com##.aff_widget
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__SlotRightColumn-"]
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__SlotTopContainer-"]
+poczta.interia.pl###main-container > .mail-frame-aside:has(> .ads-content)
 poczta.interia.pl##.ads-content
 poczta.interia.pl##.top-ad-placement
 poczta.interia.pl##div.ad[nxt-ad-place]
@@ -54680,6 +54685,7 @@ sport.detik.com##.paradetail
 sport.detik.com##.parallaxindetail
 sport.detik.com##.sbparallax
 sport.detik.com##.staticdetail_container
+sport.interia.pl##section[id^="react_component_"] > div:not([class], [id]) > div[class^="sc"]:has(> div[class^="sc"]:only-child > div[data-iwa-viewability-name="gora_srodek"]:only-child > .ad:only-child)
 sport.pl##.adsWrapper
 sport.pl##.art_embed div[name="gameheadsmall"] > .oddWrapper
 sport.pl##.bookmakerContainer
@@ -62339,6 +62345,8 @@ wybg666.com##.container div[id$="ad"] > a[target="_blank"]:only-child > img
 wybory.gov.pl##.cookies
 wydaily.com##.td-header-sp-logoleft
 wydaily.com##.td-header-sp-logoright
+wydarzenia.interia.pl,sport.interia.pl##div[class^="sc-"]:has(> div[data-iwa-viewability-name]:only-child > .ad:only-child)
+wydarzenia.interia.pl,sport.interia.pl##div[class^="sc-"]:has(> div[id^="ad-view-rectangle"]:first-child + div[data-iwa-viewability-name]:last-child > .ad:only-child)
 wydawca.com.pl###kuki
 wyevalegardencentres.co.uk###privacyStatement
 wyh.tv##.adverall
