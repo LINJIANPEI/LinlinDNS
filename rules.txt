@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-21 07:09:45（北京时间）
+! Version: 2025-03-21 08:45:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64390
+! Total count: 64397
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6070,6 +6070,7 @@
 @@||apibay.org^$script,xmlhttprequest,domain=thepiratebay.org
 @@||apibhx.tgdd.vn^$domain=bachhoaxanh.com,stealth=3p-auth
 @@||apiblogger.xyz/blogger/video-play.mp4$stealth
+@@||apim.canadiantire.ca^$stealth=referrer
 @@||apim.prd.natlot.be^$stealth
 @@||apis.google.com
 @@||apis.google.com/js/plusone.js$domain=pornhub.com
@@ -6606,6 +6607,7 @@
 @@||bigota.d.miui.com^$important
 @@||bigspeeds.com/ajax/advertisement.js
 @@||bigten.org/common/templates/dfp/dfp-component-template.html
+@@||bigwon-*.aliyuncs.com/product-pic/$image,stealth=referrer
 @@||bihoku-minpou.co.jp/img/ad_top.jpg$~third-party
 @@||bikeportland.org/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js$script,~third-party
 @@||bikeradar.com^$generichide
@@ -10559,6 +10561,7 @@
 @@||i*.gmx.com/image
 @@||i*.imagetwist.com^$image,domain=imagetwist.com
 @@||i-funbox.com/images/
+@@||i.cdn.turner.com/ads/adfuel/$domain=bleacherreport.com
 @@||i.cdn.turner.com/ads/adfuel/*/nba-teams-ais.min.js$domain=nba.com
 @@||i.cdn.turner.com/ads/adfuel/adfuel-*.min.js$domain=cnn.com
 @@||i.cdn.turner.com/ads/adfuel/ais/*/tbs-ais.min.js$domain=tbs.com
@@ -40586,6 +40589,7 @@ kyero.com##div[data-component="cookies_policy_modal"], .fixed[data-cookie-toast]
 kyivindependent.com###popup-banner-subscription-support
 kyivindependent.com##.ads-mobile--show
 kyivindependent.com##div[class*="Footer_cookies"]
+kyivindependent.com,nv.ua##body .nts-ad
 kyivpost.com##.ad_between_paragraphs
 kyivpost.com##.b-title
 kyivpost.com##.widget-300-250
@@ -50135,6 +50139,7 @@ propellets.at##.cc_container
 propermanchester.com###mvp-home-widget-wrap
 propermanchester.com##.pm-header-advert-wrap
 propermanchester.com##div[id^="prope-"]
+property24.com##.p24_tileContainer:has([src^="/Content/images/Optimized/Icons/icon_tag_highlight.svg?"])
 propertynews.pl##.sad
 propertynews.pl##.sad-billboard
 propertyshark.com###google-ads-directoryViewRight
@@ -57307,6 +57312,7 @@ thetimes.co.uk##[class^="responsive__InlineAdWrapper-"]
 thetimes.co.uk##article > div[class^="tc-view"]:has(> div > div#ad-header)
 thetimes.co.uk##div[class^="responsive__InlineAdWrapper"]
 thetimes.com###article-main > div:has(> div > div#ad-header)
+thetimes.com###react-app > div > section + div:has(> div > div.nuk-ad-placeholder)
 thetimes.com##.Sticky-AdContainer
 thetimes.com##.channel-header-ad
 thetimes.com##.responsive__InlineAdWrapper-sc-4v1r4q-14
@@ -63900,6 +63906,7 @@ zerochan.net##body > div:not([id]):not([class])[style*="fixed"], body > div:not(
 zeroco2.eco###loadingShadow
 zerogpt.net##.AdsenseAd
 zerohedge.com###content-pack
+zerohedge.com##.bottom-banner-container
 zerohedge.com##.contributor-teasers > .view-content > .carousel-placement
 zerohedge.com##.leaderboard-container:has(> #leaderboard:only-child:empty)
 zerohedge.com##.left-rail
