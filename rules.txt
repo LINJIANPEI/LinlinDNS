@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-21 15:10:05（北京时间）
+! Version: 2025-03-21 16:12:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64397
+! Total count: 64402
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11529,6 +11529,7 @@
 @@||js.tv.itc.cn/gg.seed.js
 @@||js.wpadmngr.com/static/adManager.js$domain=blog.carstopia.net|blog.coinsvalue.net|blog.cookinguide.net|blog.freeoseocheck.com|blog.makeupguide.net
 @@||js.wpadmngr.com/static/adManager.js$domain=crewbase.net|crewus.net|shinchu.net|thumb8.net|thumb9.net
+@@||js.wpadmngr.com/static/adManager.js$domain=poophd.video-src.com
 @@||jsc.adskeeper.co.uk/*/hhkungfu.tv.*.js$domain=hhkungfu.tv
 @@||jsc.adskeeper.co.uk/*/ipacrack.com.*.js$domain=ipacrack.com
 @@||jsc.adskeeper.co.uk/i/o/ios.codevn.net.*.js$domain=codevn.net
@@ -23098,6 +23099,7 @@ bing.com##li.b_ad,#b_notificationContainer_bop
 bing.com##li[class=""][data-bm][style*="margin-bottom"]
 bing.com##li[class="b_ans"][data-partnertag]:has(> div[class^="b_bza_"])
 bing.com##li[data-idx]:has(#mm-ebad)
+bing.com,cn.bing.net###bnp_rich_div
 bing.com,cn.bing.net##.ad_sc
 bing.com,cn.bing.net##.adsMvC
 bing.com,cn.bing.net##.b_algo:has(.rms_img[src*="/th?id=OADD2."][src$="21.2"])
@@ -28935,7 +28937,6 @@ doupocangqiong1.com##div[style="margin:10px auto;width: 930px;height: 250px;"]
 douxie.com##.ndxBanner
 douxie.com##.ndxChdjBox
 douyin.com###videoSideBar iframe
-douyin.com##[class*='h5-ad-']
 douyu.com###js-fix-download
 douyu.com###js-live-room-recommend
 douyu.com###js-room-activity
@@ -35637,6 +35638,7 @@ hejfish.com##div[class*="CookieConsent"]
 hejto.pl###sticky-bottom-ad
 hejto.pl##a[href^="https://clk.tradedoubler.com/click?"]
 helemaalshea.nl##.fancybox-overlay
+helicomicro.com##.backtoptop + div[id][class*=" "]
 helicomicro.com##.cp-info-bar
 helitransair.com##.privacyoption_overlay
 helium.com##article > footer ~ div
@@ -54033,6 +54035,9 @@ so.com##div[id^="guang-"]
 so.com##div[id^="mohe-biu_360"] > .g-card
 so.com##li[data-cpc_query]
 so.com##li[data-id^="cm_display_init_text_"]
+so.douyin.com##X-VIEW.container
+so.douyin.com##[class*='h5-ad-']
+so.douyin.com##[class^='layout-']
 so.lenovo.com.cn##.AdSite
 so.toutiao.com##.relative.pointer-events-none
 so.toutiao.com##DIV[id^='ad_']
