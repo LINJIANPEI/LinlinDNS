@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-22 20:15:21（北京时间）
+! Version: 2025-03-22 21:14:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64418
+! Total count: 64435
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12531,6 +12531,7 @@
 @@||megaurl.in/adi/advertisement.js
 @@||megaurl.in^$generichide
 @@||megawypas.com^$generichide
+@@||megaxh.com^$script,~third-party
 @@||megaxz.com/ext/*.png#/
 @@||megaxz.com^$generichide
 @@||mein.mobile.de/*/*id=
@@ -18773,11 +18774,26 @@
 @@||xfinity.com^$stealth
 @@||xfreehd.com^$generichide
 @@||xg4ken.com/trk/*&adgroupid=
+@@||xhaccess.com^$script,~third-party
 @@||xhamster.com/ajax/
+@@||xhamster.com^$script,~third-party
+@@||xhamster.desi^$script,~third-party
+@@||xhamster1.desi^$script,~third-party
+@@||xhamster3.com^$script,~third-party
+@@||xhbig.com^$script,~third-party
+@@||xhbranch5.com^$script,~third-party
 @@||xhcdn.com/*.mp4$domain=xhamster.com
 @@||xhcdn.com/*/fonts$font
+@@||xhchannel.com^$script,~third-party
+@@||xhmoon5.com^$script,~third-party
+@@||xhofficial.com^$script,~third-party
 @@||xhscdn.com^$image,stealth,domain=xiaohongshu.com
 @@||xhslink.com^$important
+@@||xhspot.com^$script,~third-party
+@@||xhtotal.com^$script,~third-party
+@@||xhvid.com^$script,~third-party
+@@||xhwide2.com^$script,~third-party
+@@||xhwide5.com^$script,~third-party
 @@||xia1ge.com/wp-content/plugins/detect-adblock/js/ads.js
 @@||xia1ge.com^$generichide
 @@||xianzhenyuan.cn/data/attachment/common/guanggao/adjs.htm
@@ -52676,6 +52692,7 @@ seemysex.com##.inline-video-adv__inner
 seemysex.com##.rain
 seewarte-schwerin.de###mc-consent-window
 seexh.com,valuexh.life,xhaccess.com,xhamster.com,xhamster.desi,xhamster2.com,xhamster3.com,xhamster42.desi,xhamsterporno.mx,xhbig.com,xhbranch5.com,xhchannel.com,xhchannel2.com,xhdate.world,xhlease.world,xhofficial.com,xhspot.com,xhtab4.com,xhtotal.com,xhtree.com,xhwide2.com,xhwide5.com##a[href^="https://flirtify.com/"]
+seexh.com,valuexh.life,xhaccess.com,xhamster.com,xhamster.desi,xhamster2.com,xhamster3.com,xhamster42.desi,xhamsterporno.mx,xhbig.com,xhbranch5.com,xhchannel.com,xhdate.world,xhlease.world,xhofficial.com,xhspot.com,xhtotal.com,xhtree.com,xhwide2.com,xhwide5.com##a[href^="https://flirtify.com/"]
 sefaireaider.com###cookies-charter
 sega.co.uk##.cp-wrap
 seganerds.com##[href^="https://betway.com/"]
