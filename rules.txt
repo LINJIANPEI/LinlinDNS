@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-24 15:10:38（北京时间）
+! Version: 2025-03-24 16:14:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 64461
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -5234,6 +5234,7 @@
 @@||ads-api.twitter.com^$domain=camcam.cc|euskalnews.tv|studybullet.com|e-kitapstore.com|studybullet.com|zapcourses.com|eventiavversinews.it|sysguides.com|branditechture.agency|cizgifilmizle.info|kawaguchimaeda.com|coursesdaddy.com|maos4alaw.online
 @@||ads-api.twitter.com^$domain=eurekaddl.skin
 @@||ads-i.org/images/ads3.jpg$~third-party
+@@||ads-static.conde.digital/production/cns/builds/vogue/v*.js$domain=vogue.com
 @@||ads-ti9ni4.blogspot.com^$generichide
 @@||ads-twitter.com/oct.js$domain=ncsoft.jp
 @@||ads-twitter.com/uwt.js$domain=aussiebum.com|factory.pixiv.net
@@ -54089,7 +54090,6 @@ so.com##div[id^="guang-"]
 so.com##div[id^="mohe-biu_360"] > .g-card
 so.com##li[data-cpc_query]
 so.com##li[data-id^="cm_display_init_text_"]
-so.douyin.com##X-VIEW.container
 so.douyin.com##X-VIEW.inner.PrimaryBG-light
 so.douyin.com##[class*='h5-ad-']
 so.douyin.com##[class^='layout-']
