@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-25 23:10:34（北京时间）
+! Version: 2025-03-26 00:10:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64486
+! Total count: 64493
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8465,6 +8465,7 @@
 @@||dnvodcdn.me/*/chunklist.m3u8$stealth=referrer
 @@||dnvodcdn.me/*/mp4$stealth,domain=iyf.tv
 @@||do0od.com^$generichide
+@@||do7go.com^$generichide
 @@||doc110.com^*/ad.css?$stylesheet
 @@||docodoco.jp^*/docodoco?key=$script,domain=jrtours.co.jp
 @@||docs.expo.io/*/static/*/pages/versions/latest/sdk/*.js$domain=docs.expo.io
@@ -19850,6 +19851,7 @@ ahtv.cn,sexbarss.net##.l1
 ahtv.cn,sexbarss.net##.r1
 ahzwx.com##script + div[style]
 ai-chatbot.top##.right-14
+ai-chatbot.top##header ~ form ~ div.fixed.right-14
 aia.com.my##.alert-dismissable
 aiarticlespinner.co,check-plagiarism.com,prepostseo.com##div[id*="ad"]
 aibing.cc##.adsense
@@ -28024,6 +28026,7 @@ deepai.org###primis-ads
 deepbrid.com##.content > div.rounded-md.text-theme-10
 deepdotweb.com###sidebar > div#text-5
 deepdotweb.com##img[width="330"][height="104"]
+deepfake-porn.com,sexkbj.com,x-picture.com##.happy-sidebar
 deepfake-porn.com,x-picture.com##.happy-sidebar
 deepfakeporn.net##.primary > li.highlight ~ li
 deepl.com###dl_cookieBanner
@@ -30889,6 +30892,7 @@ express.pl##.newWebsite
 expressandstar.com##.dfp-mpu
 expressen.se###ctl00_AllContent_SecondColumnSectionContent_SecondColumn_WidgetZone_ctl21_ctl00_ctl00_randomContainer
 expressen.se###ctl00_AllContent_SecondColumnSectionContent_SecondColumn_WidgetZone_ctl31_ctl00_ctl00_randomContainer
+expressen.se##.ad-slot:not(#style_important)
 expressen.se##.bam-ad-slot.bam-ad-slot--pre-sized
 expressen.se##div[id*="_randomContainer"]
 expresspharma.in,gamertweak.com,thelivemirror.com,nullpress.net,frendx.com##div[itemtype="https://schema.org/WPAdBlock"]
@@ -33332,6 +33336,7 @@ gameslay.net##a[rel="noreferrer nofollow"] > img
 gameslol.net##.pubGside
 gameslol.net,yabiladi.com##.pub_header
 gamesofdesire.com###chat
+gamesofdesire.com###maincol > div.game_box:has(> a[href="https://www.mnfclub.com"])
 gamesofdesire.com##[alt="banner"]
 gamesofdesire.com##[id^="skin_"]
 gamesofdesire.com##a#img_left
@@ -33735,6 +33740,7 @@ generatorlinkpremium.com##.thirdsky
 genesis-mining.com###cookie
 genesis-zone.com###cookie
 genesis.com##.privacy-dialog
+gengen17.com###jetpack-lazy-images-js + div[id][class*=" "]
 genialne.pl##.adc
 genickbruch.com##body > div > div[style*="fixed"]
 genius.com##.InreadContainer-sc-b078f8b1-0
@@ -46852,6 +46858,7 @@ nung2uhd.com,newseries-hd.com,movie22hd.com,moviehdfree.net##.banner
 nunido.de###klaro
 nuovatecnodelta.it##body > div[style]
 nur-positive-nachrichten.de###klaro
+nurumayu.net,twidouga.net##.item_w360
 nutraceuticalsworld.com###mainContentBodyDiv > hr.mag-border
 nutraceuticalsworld.com##div[id^="main-content-ad-"] + hr
 nutrimuscle.com###messageBox
