@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-26 07:09:02（北京时间）
+! Version: 2025-03-26 08:45:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64495
+! Total count: 64501
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6558,6 +6558,7 @@
 @@||beermoneyforum.com^$generichide
 @@||beian.miit.gov.cn^$important
 @@||beinconnect.com.tr^$extension="AdGuard Popup Blocker"
+@@||beinconnect.com.tr^$stealth
 @@||beinconnect.com.tr^$stealth=donottrack|webrtc
 @@||beinsports.com/wp-content/themes/bein/dist/scripts/fuckadblock.js
 @@||bejav.net^$generichide
@@ -9803,6 +9804,7 @@
 @@||gobrowse.net^$generichide
 @@||gocomics.com/assets/ad-dependencies-$script,~third-party
 @@||godisagamer.org^$generichide
+@@||godlikeproductions.com/adblock/js/checks/fingerprint.js$domain=godlikeproductions.com
 @@||gofobo.com^$generichide
 @@||gogoanime.*//page-recent-release*.html
 @@||gogoanime.cool^$generichide
@@ -19910,6 +19912,7 @@ airfactsjournal.com###media_image-3
 airfactsjournal.com##.avia_image
 airfleets.net###blur
 airgradient.com##.cookie-container
+airhint.com##div[data-fuse]
 airlinecheckins.com##.app-header + .layout-row
 airmail.news##am-display[fetched="fetched"]
 airmail.news,govevents.com,protipster.com##.display
@@ -34293,6 +34296,7 @@ gocompare.com###gc-stickee-cookie-banner
 godbolt.org###ces
 godisageek.com###custom_html-4
 godisageek.com###text-11
+godlikeproductions.com##.rightpanel_ipad > div:has(> center > [data-type="_mgwidget"])
 goetel.de##.cookieControl
 gofile.io###adsGoogle
 gofile.io##div[id^="adsGoogle"]
@@ -46359,6 +46363,7 @@ nhaccuatui.com###eventBannerTop
 nhaccuatui.com##div[class^="adv_"]
 nhc.no###dpm-consent-form
 nhentai.com##.pb-0.w-100[style]
+nhentai.com##main > .row:has(> a[target="_blank"])
 nhentai.to###content
 nhentai.website##a[href^="https://1xbet.onelink.me"]
 nhl.com##.-leaderboard
@@ -55102,6 +55107,7 @@ standardy.pl##div[class^="banner-"]:not(.banner-swiper-cls)
 stanley.ru##.test-mode__wrap
 staples.com##.SearchRootUX2__bannerAndSkuContainer
 staples.com##div[class^="sku-configurator__banner"]
+staples.com##div[class^="sku-configurator__banner"]:has([aria-label="Sponsored Products"])
 star-history.com###app > div.relative > div.relative.justify-end + div.fixed.right-0
 star-history.com##.fixed.right-0
 star-telegram.com,sacbee.com###zerg-target
