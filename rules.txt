@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-27 07:09:35（北京时间）
+! Version: 2025-03-27 08:45:16（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64510
+! Total count: 64530
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9919,6 +9919,7 @@
 @@||googleads.g.doubleclick.net/pagead/ads?client=ca-pub-$domain=dl.ccbluex.net
 @@||googleads.g.doubleclick.net/pagead/ads?client=ca-pub-$subdocument,domain=filecr.com
 @@||googleads.g.doubleclick.net/pagead/ads?client=ca-pub-*&adk=$~xmlhttprequest,~script,~image,domain=ytlarge.com
+@@||googleads.g.doubleclick.net/pagead/ads?gdpr=$subdocument,domain=decrypt.day
 @@||googleads.g.doubleclick.net/pagead/ff.js$domain=next-episode.net
 @@||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup.html$domain=forum.release-apk.com
 @@||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup.html$domain=tsubasa.im
@@ -10019,6 +10020,7 @@
 @@||googletagmanager.com/gtag/js?id=$domain=atozmath.com
 @@||googletagmanager.com/gtag/js?id=$domain=av01.tv
 @@||googletagmanager.com/gtag/js?id=$domain=blog.carstopia.net|blog.coinsvalue.net|blog.cookinguide.net|blog.freeoseocheck.com|blog.makeupguide.net
+@@||googletagmanager.com/gtag/js?id=$domain=decrypt.day
 @@||googletagmanager.com/gtag/js?id=$domain=freesolana.top
 @@||googletagmanager.com/gtag/js?id=$domain=linkneverdie.net
 @@||googletagmanager.com/gtag/js?id=$domain=senda.pl
@@ -17154,6 +17156,7 @@
 @@||tbsone.imtt.qq.com^
 @@||tcbk.com/application/files/4316/7521/1922/Q1-23-CD-Promo-Banner-Ad.png^$~third-party
 @@||tcbox.baidu.com^
+@@||tcddtasimacilik.gov.tr^$stealth=dpi
 @@||tce.alicdn.com^$domain=alimama.com
 @@||tcpvpn.com/ads/advertisement.js
 @@||tdid.m.qq.com^$important
@@ -23304,6 +23307,7 @@ bizasialive.com##.nipl-top-sony-banr
 bizasialive.com##.nipl_add_banners_inner
 bizasialive.com##.td-all-devices
 bizcommunity.com##.b-topbanner
+bizimyol.info##.col-left > a[href="https://www.bizimyol.info/az/reklam"]
 bizimyol.info##.sagqanad > div[style*="250px;"][style*="300px;"]:nth-of-type(-n+2)
 bizimyol.info##.site > div[style^="width:"][style*="1010px"]:first-of-type
 bizimyol.info##.textwidget > [style="text-align:center;"] > a[href][target="_blank"]
@@ -30274,6 +30278,7 @@ engadget.com##.da-container
 engadget.com##.post-article-ad
 engadget.com##.related-content-lazyload
 engadget.com##.wafer-benji
+engadget.com##div[class]:has(> div[id*="TF"][id*="-"]:empty)
 engadget.com##div[data-component="GeminiAdItem"]
 engadget.com##div[data-wf-image-beacons]
 engadget.com##div[id^="sda-LDRB2-"]
@@ -30493,7 +30498,9 @@ erome.com$$script[tag-content="tiPopAction"][min-length="4000"][max-length="6000
 eronity.com###wantcookies
 eroprofile.com###divVideoListAd2
 eroprofile.com##div[style="width:300px height:300px;"]
+erothots.co##.bnr
 erothots.co##.work-sites
+erothots.co,zenporn.com##.bnrs
 erotic-beauties.com##.sidebar > .widget_text
 eroticasearch.net###grid > .column > div[style]:not([id])
 erotichdworld.com##.main > div[style*="margin-left"]
@@ -37044,19 +37051,25 @@ idiva.com##.left-container > div[data-layout="content"] > div > div[class] > div
 idlix.asia##.asgdc
 idlixofficialx.net,idlixofficial.net,idlixofficial.co,idlixofficials.com###ads.module_single_ads
 idmlover.com###antiAdBlock
+idnes.cz###content > #space-c > div[style^="height:"]
 idnes.cz###idnes-premium-popup
+idnes.cz###main > .counters + script + table[id][class*=" "]
+idnes.cz###main > .counters + table[id][class*=" "]
 idnes.cz###main [id^="r98."]
 idnes.cz###portal > a#fellow[onmousedown] > img
 idnes.cz###r-native
 idnes.cz###r-super300
 idnes.cz###selfart-box
+idnes.cz###space-c-add > div[id][class*=" "]
 idnes.cz##.art-full > #text-out-box + div:not([class]):not([id]) > .r-head
 idnes.cz##.r-main
 idnes.cz##.r-main[id^="element-"]
 idnes.cz##[id^="r98."].r-box
+idnes.cz##body .r-main.s_branding_fotogalerie
 idnes.cz##div[id^="fix-block-"]
 idnes.cz##div[id^="r98."][class*="touch"]
 idnes.cz##table[id^="r-leaderboard"].s_branding
+idnes.cz$$script:contains(/\.(Branding|BrandingLayer)\(\{/)
 idokep.hu##.hird-label
 idokep.hu##.mitvegyekfel
 idope.se###VPNAdvert
@@ -44152,6 +44165,7 @@ modelsxxxtube.com##div[class^="adx-"]
 modelsxxxtube.com,pornexpanse.com,tubesex.me,tubevintageporn.com,xxxadd.com,whitexxxtube.com###invideo_new
 modeoutlet.nl###popup, .popup
 modern.az##.bnr_300_250
+modern.az##.bnr_col
 modern.az##.head_content_top
 modern.az##.manshet_adds
 modern.az##.manshet_adds_bottom
@@ -47506,6 +47520,7 @@ op.gg##div:has(> div[data-ad])
 op.gg##div[class*="eylegve"]
 op.gg##div[class^="Game Game--Result"] + div[result] + div[class^="css-"]:has(> div > div.vm-placement)
 op.gg##main >  div[style][class^="css-"]:has(> div:not([class]) > div.vm-placement)
+op.gg##tr.ad
 op.gg,thenewdaily.com.au##.min-h-\[100px\]
 opdown.com##.cq-recom
 opdown.com##.downnows
@@ -48842,6 +48857,7 @@ pixabay.com##.present-g-item
 pixabay.com##.show-gtty-item
 pixabay.com##.show-gtty-item > div[style="font-size:14px;color:#a5a8ab;margin:5px 9px"]
 pixabay.com##div[class*="sponsoredWithResults"]
+pixai.art##.content-start > .row-start-1:has(> a[href="https://go.getmogu.chat"])
 pixel-offers.com##.v-cookie-policy
 pixeldrain.com##.skyscraper
 pixelexperience.org###ezmobfooter
@@ -50138,6 +50154,7 @@ proboards.com##iframe[id^="ad-desktop-bottom"]
 proboards.com##tbody[class^="lm-content-"] > #ProBoards_com_InThread:empty
 probonoaustralia.com.au##.top-banner-text
 probonoaustralia.com.au##a[onclick*="AdRotatePro"]
+proboxtv.com##body > div[style^="position: fixed; top:"][style*="z-index:"][style*="display: flex;"]
 probuilds.net##.welcome-bnr
 probuilds.net##a[class^="dl-blitz-"]
 procrackerz.org,torrentdownload.info,freeappstorepc.com,masseurporn.com,rennlist.com,f4freesoftware.com,sadeempc.com,workingkeys.org##center > a[rel="nofollow"] > img
@@ -50234,6 +50251,7 @@ propermanchester.com###mvp-home-widget-wrap
 propermanchester.com##.pm-header-advert-wrap
 propermanchester.com##div[id^="prope-"]
 property24.com##.p24_tileContainer:has([src^="/Content/images/Optimized/Icons/icon_tag_highlight.svg?"])
+property24.com##.p24_tileContainer:has([src^="/Content/images/Optimized/Icons/icon_tag_tile.svg?"])
 propertynews.pl##.sad
 propertynews.pl##.sad-billboard
 propertyshark.com###google-ads-directoryViewRight
@@ -50255,6 +50273,7 @@ proptiger.com##div[style^="position:relative;"][style*="height:100px;"]
 propublica.org##.bb-ad
 prorun.nl##body > div[id]:not([class])
 prosenectute.ch###cookie
+prosettings.net##.placement
 prostata-hilfe-deutschland.de###ccModal, .modal-backdrop
 prostylex.org##.wrapper > div[style="text-align:center;font-family:Tahoma;"]:not([class]):not([id])
 prostylex.org,ettvcentral.com,skytorrents.to###vpnvpn
@@ -50844,6 +50863,7 @@ qushucheng.com##.appguide-wrap
 qushucheng.com##.hotcmd-wp
 qv.co.nz##.bootbox, .modal-backdrop
 qvc.com##[data-module-feature-name^="CRITEO"]
+qvc.com##[onclick^="cmCreateManualLinkClickTag"]
 qwant.com##.is-sidebar:has(a[data-testid="advertiserAdsLink"])
 qwant.com##.result__ext > div:has([data-testid="adResult"])
 qwant.com##div[class="_2NDle"]:has(div[data-testid="advertiserAdsDisplayUrl"])
