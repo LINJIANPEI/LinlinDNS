@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-28 07:10:15（北京时间）
+! Version: 2025-03-28 08:45:21（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64565
+! Total count: 64577
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4577,6 +4577,7 @@
 @@||*.twimg.com^$important
 @@||*.video.xiaomi.com^$important
 @@||*.xn--ngstr-lra8j.com^
+@@||*.yt2api.com/api/$domain=api.ytapi.cc,stealth=referrer
 @@||*ad*.ksyungslb.com^
 @@||*m.chenzhongtech.com^
 @@||*optout$domain=smartadserver.com
@@ -5700,6 +5701,7 @@
 @@||ams.cdn.arkadiumhosted.com/advertisement/display/stable/display-ads.js$domain=crosswordsolver.org
 @@||ams.cdn.arkadiumhosted.com/advertisement/display/stable/display-ads.js$domain=games.latimes.com
 @@||ams.cdn.arkadiumhosted.com/advertisement/display/stable/display-ads.js$domain=games.metro.us
+@@||ams.cdn.arkadiumhosted.com/advertisement/video/stable/games.msn.com/video-ads.js$domain=zone.msn.com
 @@||ams.cdn.arkadiumhosted.com/advertisement/video/stable/video-ads.js$domain=arkadium.com
 @@||ams.cdn.arkadiumhosted.com/advertisement/video/stable/video-ads.js$domain=bestforpuzzles.com
 @@||ams.cdn.arkadiumhosted.com/advertisement/video/stable/video-ads.js$domain=crosswordsolver.org
@@ -31241,6 +31243,7 @@ fapality.com,felizporno.com##.fluid_html_on_pause.fluid-b-container
 fapality.com,yourlust.com##.native-aside
 fapcat.com##.spot-list
 fapcat.com##a[href^="https://www.fapcat.com/redirect_cs.php"]
+fapcat.com,cambay.tv##.fp-logo
 fapdick.net##.fstory > div.scont > div.oblozhka + center
 fapdig.com##.right > .content
 fapello.com##.barbie_desktop
@@ -31348,6 +31351,7 @@ fastpic.ru,freesteam.io##.d-lg-block
 fastseduction.com###splash
 fastseduction.com,geekwire.com,landreport.com,vuejs.org,whenitdrops.com###sponsors
 fastseduction.com,independent.co.uk###partners
+fastt.gg##a[id="startDownload"][target="_blank"]
 fastweb.com##.a_cls_s
 fastweb.it##.ck_if
 fastweb.it##.sticky_fda
@@ -31504,6 +31508,7 @@ fiatklubpolska.pl###navbar_notice_1.restore
 fibreglassdirect.co.uk##.activedemand-popup
 fibs.it###privacy-wrapper
 fibs.it##a[href="http://www.aisla.it"] > img
+fiches-auto.fr##body > button#back-to-top ~ div[id][style="display: block;"]
 fidelidade.pt###cookies
 fieldandstream.com,outdoorlife.com,popsci.com,taskandpurpose.com,thedrive.com##.mtc-unit-prefill-container
 fieldandstream.com,popphoto.com##body .empire-unit-prefill-container
@@ -36512,6 +36517,7 @@ hotsouthindiansex.com##.on-player-wrap
 hotsouthindiansex.com##.wrapper > div.spots-wr
 hotspringsofbc.ca,studybullet.com##body > .clr + div[id][class*=" "]
 hotstar.com##div[data-testid="bbtype-video"]
+hotstar.com##div[data-testid^="ad-"]
 hotter.com##.enhanced-cookies__modal
 hotukdeals.com##div[id*="AdSlotPortal"]
 houdao.com###header-ban
@@ -43606,10 +43612,14 @@ metasrc.com##div#side-video
 metasrc.com##div[style="display: flex;justify-content: center;"] > div:first-child[class] + div[class] + div[class]:last-child:empty
 metatrader4.com###float-vertical-panel
 metbuat.az##.col-sm-8 > [class="wh_box hidden-sm hidden-xs"]
+metbuat.az##.col-sm-8 > div.wh_box:has(> div.row > div > ins)
+metbuat.az##.col-sm-8 > div.wh_box:has(> iframe[src^="https://azvision.az/"])
+metbuat.az##.news_in_content > div.visible-md:has(> div.row > iframe[src^="https://ad.adriver.ru/"])
 metbuat.az##.row > div[class="col-sm-4 col-md-3 col-lg-3"] > div[class="scrool_news hidden-xs hidden-sm"]
 metbuat.az##.row > div[class="col-sm-8 col-md-9 col-lg-9"] > div[class="wh_box"]
 metbuat.az##.scrool_news:has(> a[target="_blank"] > img)
 metbuat.az##.wh_box a[href="https://livescore.az"]
+metbuat.az##a[href="https://medialiteracy.media.gov.az"]
 metbuat.az##div[style="margin-top: 10px; text-align: center"]
 metcheck.com###EUModal, .reveal-modal-bg
 meteo.lt###ecl
@@ -50025,6 +50035,7 @@ pravda.com.ua##.advtext
 pravda.com.ua##.unit_side_banner
 pravda.ru##.cookie-container
 pravda.ru##.yaRtbBlock
+pravda.sk##.perex-adblock-warning
 prawdaobiektywna.pl###mcpc
 prawdziwyonline.pl###pp-consent
 prawfsblawg.blogs.com,thomhartmann.com##img[height="200"]
@@ -62143,6 +62154,7 @@ worldstar.com##div[style*="max-height:250px"]
 worldstar.com##div[style^="width:728px;height:90px;"]
 worldstar.com##div[style^="width:972px;height:250px;"]
 worldstar.com,worldstarhiphop.com##div[style^="width:972px;height:250px;"]
+worldstarhiphop.com##div[class]:has(> div[id*="_slot_"]:only-child)
 worldstreams.lol##iframe ~ script + div[style*="position: fixed"][style*="z-index"]
 worldsurfleague.com##.unicorn[data-unicorn-settings*="sponsor"]
 worldsurfleague.com##.vjs-ad-markers
