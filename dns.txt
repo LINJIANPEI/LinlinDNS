@@ -2,9 +2,9 @@
 ! Title: 林林dns
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-28 19:08:27（北京时间）
+! Version: 2025-03-28 20:17:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 102211
+! Total count: 102014
 *_index_ad_
 -120_600_
 -120x600-
@@ -96666,6 +96666,7 @@ y0utube.com.mx
 ||*feed_ad*^
 ||*get-ads*^
 ||*getappmsgad*^
+||*googleads*^
 ||*igd.xml*^
 ||*isAds*^
 ||*live-p2p*.bilibili*^
@@ -96701,6 +96702,7 @@ y0utube.com.mx
 ||1-b.tc
 ||1.1.1.1^
 ||1.cm
+||10.130.208.223^
 ||10010.gac.kim^
 ||10022020newfolder1002002131-service1002.space^
 ||10022020newfolder33417-01242510022020.space^
@@ -96776,6 +96778,7 @@ y0utube.com.mx
 ||110.93.143.144^
 ||111.175.219.*.js
 ||111.231.186.31^
+||111.51.128.172^
 ||111.59.67.*^
 ||111.90.150.149^
 ||111.90.159.132^
@@ -96817,13 +96820,19 @@ y0utube.com.mx
 ||118.122.74.39^
 ||118.144.88.216^
 ||118.24.199.184^
-||118.sound.ag^
+||119.28.83.28^
 ||119.29.207.87^
 ||119.29.80.185^
 ||119.4.249.166^
-||119.sound.ag^
 ||1199.yl.ag^
 ||120.132.57.41^
+||120.232.202.5^
+||120.232.202.6^
+||120.232.202.7^
+||120.232.207.80^
+||120.232.210.151^
+||120.232.210.153^
+||120.232.210.155^
 ||120.27.*.html
 ||120.27.34.156^
 ||120.77.166.49^
@@ -96838,7 +96847,6 @@ y0utube.com.mx
 ||121.41.60.207^
 ||121.43.114.38^
 ||121.43.235.135^
-||121.sound.ag^
 ||122.114.239.160^
 ||122.225.103.*.htm
 ||122.227.254.195^
@@ -97018,6 +97026,8 @@ y0utube.com.mx
 ||180.96.27.85^
 ||182.92.234.239^
 ||182.92.81.104^
+||183.232.114.245^
+||183.240.223.132^
 ||183.61.169.140^
 ||183.61.169.142^
 ||183.61.170.21^
@@ -97090,7 +97100,6 @@ y0utube.com.mx
 ||1yze.taimei-t373.vip^
 ||2.56.176.42^
 ||2.gy
-||2.sound.ag^
 ||200.72.40.46^
 ||2009.name
 ||200kp.vip^
@@ -97134,7 +97143,6 @@ y0utube.com.mx
 ||206.119.105.12
 ||206.119.115.170^
 ||206.54.181.250^
-||209.sound.ag^
 ||210.65.10.32^
 ||211.103.159.32^
 ||211.149.225.23^
@@ -97166,18 +97174,14 @@ y0utube.com.mx
 ||221.178.57.64^
 ||221.204.213.222^
 ||221.5.69.52^
-||221.sound.ag^
 ||222.186.12.235^
 ||222.186.27.90^
 ||222.45.224.77^
 ||222.47.26.21^
-||222.sound.ag^
 ||223.so
 ||22333.fun
 ||2267t.vip^
-||227.sound.ag^
 ||2281wa.ren
-||229.sound.ag^
 ||23.109.121.125^
 ||23.109.150.101^
 ||23.109.150.208^
@@ -97242,10 +97246,8 @@ y0utube.com.mx
 ||23.251.45.156^
 ||23.89.50.180^
 ||23.91.3.114^
-||232.sound.ag^
 ||23263.ooo^
 ||2345.gd
-||236.sound.ag^
 ||23us.so
 ||24log.*^
 ||24scor*.*^
@@ -97282,7 +97284,6 @@ y0utube.com.mx
 ||31.13.94.41^
 ||31.14.252.148^
 ||3132372e302e302e31^
-||33.sound.ag^
 ||33000.vip^
 ||33216.vip^
 ||3356534.work^
@@ -97634,7 +97635,6 @@ y0utube.com.mx
 ||ad.page^
 ||ad.sbb.bg^
 ||ad.sitelement.sk^
-||ad.sound.ag^
 ||ad.zurnal24.si^
 ||ad01.investor.bg^
 ||adad.ir^
@@ -97759,8 +97759,6 @@ y0utube.com.mx
 ||adspace.ro^
 ||adsrv.fashion.bg^
 ||adsrvmedia*.*^
-||adstat.ziyemy.shop^
-||adstat2.ziyemy.shop^
 ||adsystem*.*^
 ||adtima*.zadn.vn^
 ||adultgames.fun^
@@ -97824,13 +97822,9 @@ y0utube.com.mx
 ||aj2585.bid^
 ||aj2586.bid^
 ||aj2587.bid^
-||aj2599.bid^
 ||aj2605.bid^
 ||aj2615.bid^
-||aj2629.bid^
-||aj2634.bid^
 ||aj3*.bid^
-||aj3018.bid^
 ||aju.space
 ||akadigital.vn^
 ||akdashang.vip^
@@ -97848,11 +97842,9 @@ y0utube.com.mx
 ||alflying.bid
 ||alflying.win
 ||ali-p2p*pull*com^
-||ali.ski^
 ||alibabacdn.gds.aliyuncdn.space^
 ||alio.lt^
 ||aliyuntest0161.xin
-||allegrolokalnie.98124-92142.rest^
 ||allen86.store^
 ||allok.wang
 ||allsex.xxx^
@@ -97866,20 +97858,9 @@ y0utube.com.mx
 ||alu.cn*^
 ||alwaysdesign.xin
 ||amare.agency^
-||amazon-business.design^
-||amazon-business.faith^
-||amazon-ca.shop^
-||amazon-shope.vip^
 ||amazon.*^
-||amazon.selectedtodayalgw.quest^
-||amazon.selectedtodaylbqn.monster^
-||amazon.selectedtodaypwtq.monster^
-||amazon.selectedtodaysyyp.quest^
-||amazon.selectedtodayzayw.quest^
-||amazon.wondergadgetsampv.quest^
 ||amcdn.co.za^
 ||americandefense.ltd^
-||amicafarmacia.shop^
 ||amp.lk21official.mom^
 ||amp.vg^
 ||an.yandex.^
@@ -98202,7 +98183,6 @@ y0utube.com.mx
 ||api.peer2profit.global^
 ||api.pixai.art^
 ||api.seline.so^
-||api.sound.ag^
 ||apk.ohykbrkomm.work^
 ||apollo.auto
 ||app-department.report^
@@ -98211,8 +98191,6 @@ y0utube.com.mx
 ||app.leadspin.dk^
 ||app.rm
 ||appl.ist^
-||apple-shrimp.shop^
-||apple.go5.run^
 ||applepc.com.my^
 ||applovin*.*^
 ||applytics.my1337jog.run^
@@ -98227,7 +98205,6 @@ y0utube.com.mx
 ||arguments.wang^
 ||arkrecode.ero-labs.website^$important
 ||arthurchiao.art
-||aruukidy.xin^
 ||arwh3scr.world^
 ||asanradio.az^
 ||asdqwe.ltd^
@@ -98259,7 +98236,6 @@ y0utube.com.mx
 ||aves.art
 ||aviatica.rs^
 ||avkeyfinder.store^
-||avrasyahastanesi.com.tr^
 ||avtosfer.az^
 ||awe.sm^
 ||awm.trade^
@@ -98368,10 +98344,8 @@ y0utube.com.mx
 ||bigcock.one^
 ||bigdata.ren
 ||bigdick.tube^
-||biinance.exchange^
 ||bil.su^
 ||bimg.msk.bg^
-||binance-app-official.digital^
 ||bingohall.ag^
 ||biphim.mx^
 ||biquge.homes^
@@ -98439,7 +98413,6 @@ y0utube.com.mx
 ||boost.manatee.dk^
 ||borneobulletin.com.bn^
 ||bornwildadventures.co.ke^
-||bot-collab.land^
 ||bovadapromotions.lv^
 ||boyfriend.show^
 ||boyloves.fun^
@@ -98509,13 +98482,11 @@ y0utube.com.mx
 ||catch.tube^
 ||catechuscypphi.shop^
 ||cbcsport.az^
-||cc.sound.ag^
 ||ccav.website^
 ||cccf.store^
 ||ccdm*^
 ||ccoco.vip
 ||ccoi.ren
-||ccoinbase.trading^
 ||ccsshn137.shop^
 ||cctv5.name
 ||cctv5.name^
@@ -98614,7 +98585,6 @@ y0utube.com.mx
 ||cliphotnews.*^
 ||clk.asia^
 ||clk.wiki^
-||cloud.sound.ag^
 ||cloudad.asia
 ||cloudad.asia^
 ||clouddream.ltd^
@@ -98654,7 +98624,6 @@ y0utube.com.mx
 ||coding.red
 ||cohoi.tuoitre.vn^
 ||coinall.ltd
-||coinbasewallet.com.blinksblogger.com.ng^
 ||cokcok.stream^
 ||collector.hamsterix.^
 ||collector.hifiklubben.dk^
@@ -98666,7 +98635,6 @@ y0utube.com.mx
 ||collector.xhamster1.desi^
 ||collector.xhamster43.desi^
 ||com.mob.push.test^
-||com.sound.ag^
 ||comercial.multipublicacoes.pt^
 ||comunicare-relatiipublice.ro^
 ||concocting.wang^
@@ -98692,9 +98660,6 @@ y0utube.com.mx
 ||cookies.teraz.sk^
 ||cookiewarden-content.teb.com.tr^
 ||coolguy.store^
-||corp.sound.ag^
-||correo-paraguayo.my^
-||correospanama.vip^
 ||corupaylogged.shop^
 ||cos*.cos.ap-nanjing^
 ||counter*-yadro*-ru.unblocked.lol^
@@ -98728,7 +98693,6 @@ y0utube.com.mx
 ||crossed.wang^
 ||crypto-fire.website^
 ||cryy.vip^
-||cs.sound.ag^
 ||csdn.love^
 ||csgo.exchange^
 ||csgofast.cash^
@@ -98745,7 +98709,6 @@ y0utube.com.mx
 ||cw.peckerscatface.shop^
 ||cw9twua9.shop^
 ||cwssfg632.shop^
-||cx.metamask.cx^
 ||cydia.love
 ||d.cg
 ||d.uzfk0.vip^
@@ -98787,7 +98750,6 @@ y0utube.com.mx
 ||dbankcloud.asia
 ||dc.railgun.works^
 ||dc9eg11.vip^
-||dca.supplies^
 ||dcdn.lt^
 ||dcn.espncdn.shop^
 ||dcv.so
@@ -98809,14 +98771,12 @@ y0utube.com.mx
 ||delfi.lv^
 ||delivery.ced.cy^
 ||delphi.lv^
-||demo.sound.ag^
 ||dengbalt.fun^
 ||depressionk1d.ug^
 ||deshui.wang
 ||desktop-dna.osp.opera.software^
 ||desquer.ens.uabc.mx^
 ||deude.ltd^
-||dev.sound.ag^
 ||dewrain.life^
 ||dewrain.world^
 ||deyun.fun
@@ -98829,9 +98789,7 @@ y0utube.com.mx
 ||df.infra.sz.shopee.vn^
 ||dh.cx
 ||dhcc.wang
-||dhcp.sound.ag^
 ||di3fang.vip
-||dial.sound.ag^
 ||dian.so
 ||diariouno.pe^
 ||dicancele.fun^
@@ -98864,7 +98822,6 @@ y0utube.com.mx
 ||dmnews.lt^
 ||dn.pt^
 ||dnevnik.si^
-||dnrmi.srcha.web.id^
 ||dnss.vip
 ||dognet.sk^
 ||doit.am
@@ -98893,7 +98850,6 @@ y0utube.com.mx
 ||drtuber.desi^
 ||ds-2075.^
 ||ds.sourl.cf^
-||dsl.sound.ag^
 ||dssh.shop^
 ||dtu1.vip
 ||dubester.space
@@ -98935,7 +98891,6 @@ y0utube.com.mx
 ||edirect.asia
 ||edison.love^
 ||edmontonchina.*^
-||edpcare.help^
 ||eengbalu.fun^
 ||eetop.wang
 ||egmontpublishing.dk^
@@ -98952,7 +98907,6 @@ y0utube.com.mx
 ||elsynmlw.fun^
 ||elsyuulw.cam^
 ||email.channel.email^
-||emailing.ie.edu^
 ||embed.casa^
 ||emilyising.shop^
 ||emlak.az^
@@ -98985,7 +98939,6 @@ y0utube.com.mx
 ||etf.group
 ||etlanaberez.fun^
 ||etregh.fun^
-||eu.sound.ag^
 ||eua.design
 ||euliglsp.space^
 ||eureka.name
@@ -98997,7 +98950,6 @@ y0utube.com.mx
 ||evil22.aerostarmodel.buzz^
 ||ew3jd68.vip^
 ||exchange.bg^
-||exec.ie.edu^
 ||expedia.*^
 ||expressen.se*^
 ||extramovies.wiki^
@@ -99010,8 +98962,6 @@ y0utube.com.mx
 ||f3go4jpwa.shop^
 ||f450yz350.cfd^
 ||fabuye.vip^
-||facebook.cashappfund.m-tech.com.ng^
-||facebook.me-reviewing.digital^
 ||fadian.xin^
 ||faggyblotchy.shop^
 ||faka.cat
@@ -99114,7 +99064,6 @@ y0utube.com.mx
 ||fpo.xxx^
 ||fpt.shop^
 ||fqis.xin
-||fr.sound.ag^
 ||free.mk
 ||freecontent.*^
 ||freecontent.bid
@@ -99145,7 +99094,6 @@ y0utube.com.mx
 ||fsho.st^
 ||ft.bkprtiqueur.shop^
 ||ftanya.ltd^
-||ftp.appie-us.center^
 ||fuck-videos.xxx^
 ||fucktube.website^
 ||fullstack.love
@@ -99257,7 +99205,6 @@ y0utube.com.mx
 ||go-ctr-tracker.pub.24ur.si^
 ||go.^
 ||go.by^
-||go.minerva.edu^
 ||go.thunder.partners^
 ||go1.yare.work^
 ||goal.az^
@@ -99275,7 +99222,6 @@ y0utube.com.mx
 ||gongwuyuan.name^
 ||goo.mx^
 ||goodadvert.^
-||google.com.authentication.sbs^
 ||googleads.g.doubleclick.nes^
 ||googleadservices.^
 ||goonch^
@@ -99298,7 +99244,6 @@ y0utube.com.mx
 ||grs.dbankcloud.^
 ||grupovo.bg^
 ||gsgqwl.wang^
-||gsi.net.vn^
 ||gtm.electrolux.ro^
 ||gtm.electrolux.rs^
 ||gtmdev.jabra.^
@@ -99378,7 +99323,6 @@ y0utube.com.mx
 ||heimi.red^
 ||hellohang.love^
 ||helloweb.vip^
-||helpmw.shop^
 ||hengbalp.fun^
 ||hengximuye.ren^
 ||henri.ren
@@ -99448,7 +99392,6 @@ y0utube.com.mx
 ||hqtube.xxx^
 ||hrbpark.bid^
 ||hrsd.gov.sa^
-||hsbcs.com.mx^
 ||hsex.men^
 ||hssapp.shop^
 ||hsy0616.love^
@@ -99538,11 +99481,9 @@ y0utube.com.mx
 ||ikon.mn^
 ||ilex.asia^
 ||illegally.wang^
-||illgtinfuranet-faucet.metamask.cx^
 ||illicium.web.money^
 ||iloli.bid
 ||ilviaggionellatesta.hubhubhub.name^
-||imbalislp.co.za^
 ||imdn.pics^
 ||imdvisual.ltd^
 ||imer.ro^
@@ -99557,13 +99498,9 @@ y0utube.com.mx
 ||imgopen.vip^
 ||imguur.pictures^
 ||imhentai.xxx^
-||in.sound.ag^
 ||inbox.lv^
-||info.online.udel.edu^
 ||infobabo.*^
 ||infogr.am^
-||information.ie.edu^
-||infuranet-faucet.metamask.cx^
 ||inhe.*^
 ||inhi.kim
 ||inn.co.il^
@@ -99572,16 +99509,12 @@ y0utube.com.mx
 ||insbergs.lv^
 ||insider.az^
 ||insidesoci.al^
-||instagram.myworld0.ir^
-||int.sound.ag^
 ||intab.fun^
-||internal.sound.ag^
 ||internet7.vip^
 ||inverter.so
 ||ioio.cc*^
 ||iongsoni.uno^
 ||ionic.wang
-||ip1.sound.ag^
 ||ipad^
 ||ipaddr.host^
 ||iparty.asia^
@@ -99605,12 +99538,8 @@ y0utube.com.mx
 ||islamonline24.hubhubhub.name^
 ||isohunt.lol^
 ||isp.cx
-||it.sound.ag^
-||itbu.shop^
 ||itc.*^
-||itcs.sound.ag^
 ||itechpost.com*adbk
-||item-opensea-os3.cfd^
 ||ithaca.hubhubhub.name^
 ||iti.si^
 ||its.porn^
@@ -99732,7 +99661,6 @@ y0utube.com.mx
 ||kaas.am^
 ||kad.kaskus.co.id^
 ||kaijun.win
-||kaitio-opensea.lat^
 ||kaiyun.ky^
 ||kakadm.*^
 ||kampane.virtualstudio.sk^
@@ -99840,8 +99768,6 @@ y0utube.com.mx
 ||lazada.vn
 ||lbx777.*^
 ||lcr.kim^
-||le-test.sound.ag^
-||le48.paris^
 ||leadscoreapp.dk^
 ||leak.sx^
 ||leanback.digital^
@@ -99856,7 +99782,6 @@ y0utube.com.mx
 ||lemu.telecom.com.ar^
 ||leosirius.fun
 ||lequan.wang
-||letflix.hair^
 ||letssex.^
 ||levy.work
 ||lewang.ltd
@@ -99927,7 +99852,6 @@ y0utube.com.mx
 ||lk21static.buzz^
 ||lksogc.mon982.vip^
 ||llgo.work
-||lllgtinfuranet-faucet.metamask.cx^
 ||llsynmll.fun^
 ||lm8555.tiantangsan.vip^
 ||lnaevr.fun^
@@ -100012,8 +99936,6 @@ y0utube.com.mx
 ||machan.fans^
 ||madlan.co.il^
 ||mail.bg^
-||mail.just-eat.dk^
-||mail.popradmasaze.sk^
 ||main.dsn.ovh^
 ||mairuan.^
 ||maisu.vip
@@ -100095,13 +100017,11 @@ y0utube.com.mx
 ||mayuting0821.ltd^
 ||mc.fyi
 ||mc63rs.life^
-||mcclan.loan^
 ||mcmq.host^
 ||mdapi.lyvsas.fun^
 ||mddcloud.*^
 ||mdjf9vh9.shop^
 ||me511.win^
-||med.sound.ag^
 ||media-cdn.synkd.life^
 ||media.^
 ||media.cokcok.vip^
@@ -100220,7 +100140,6 @@ y0utube.com.mx
 ||mhsite.fun^
 ||mia.az^
 ||micheal.wang
-||microsofts.email^
 ||midea.com.tr
 ||midway.run
 ||midway.run^
@@ -100290,7 +100209,6 @@ y0utube.com.mx
 ||mtm.mo
 ||mtw.so
 ||mtw.so^
-||mueecnzdask.shop^
 ||muliglsn.space^
 ||multifbpixels.website^
 ||musan.love^
@@ -100345,13 +100263,11 @@ y0utube.com.mx
 ||neghes.fun^
 ||nemosa.co.za^
 ||neonime.*^
-||net.sound.ag^
 ||netrf.wang^
 ||netshare.ltd^
 ||netu.ac^
 ||new.gdtot.*^
 ||newbie.dk^
-||news.benefitsatwork.pt^
 ||newtab
 ||newton.pm^
 ||nextdoor.*^
@@ -100450,7 +100366,6 @@ y0utube.com.mx
 ||onion.photo^
 ||onlineshopping.co.za^
 ||only4.work
-||onlyfans.surf^
 ||onlyfuns.win^
 ||opai.red^
 ||openads.ab-daily.by
@@ -100505,18 +100420,7 @@ y0utube.com.mx
 ||partner.hidemy.name^
 ||paste.ee^
 ||paste.fo^
-||paypalloginin-usa.blogspot.com.uy^
-||paypalloginin-usa.blogspot.dk^
-||paypalloginin-usa.blogspot.li^
-||paypalloginin-usa.blogspot.md^
-||paypalloginin-usa.blogspot.my^
-||paypalloginin-usa.blogspot.ro^
 ||payperclick.co.il^
-||paytolldzcw.vip^
-||paytollmdi.vip^
-||paytollnmbu.vip^
-||paytollpwrv.vip^
-||paytollqatb.vip^
 ||pcgames.com.cn*^
 ||pdim.gs
 ||pdm.so
@@ -100531,7 +100435,6 @@ y0utube.com.mx
 ||pg.suiji.red^
 ||pgdskofjaloka.si^
 ||pho.so
-||photo-editing-programs-for-windows-1455.shop^
 ||photo.*.html^
 ||photo.*^
 ||photo2.tinhte.vn^
@@ -100582,7 +100485,6 @@ y0utube.com.mx
 ||plausible.pizzaedition.one^
 ||plausible.simpkb.id^
 ||plausible.web.umflint.edu^
-||play-google.rest^
 ||play.ht^
 ||play.tv3.ee^
 ||play1.flashx.^
@@ -100633,7 +100535,6 @@ y0utube.com.mx
 ||ports.co.za^
 ||pos.gold
 ||poshalim.^
-||post.toa.st^
 ||postback.monster^
 ||postgres.fun
 ||posthog.int.startitup.sk^
@@ -100646,7 +100547,6 @@ y0utube.com.mx
 ||povvldeo.lol^
 ||powvibeo.*^
 ||ppcnt.*^
-||ppp.sound.ag^
 ||primedia.co.za^
 ||primera52.co.id^
 ||primewire.life^
@@ -100661,7 +100561,6 @@ y0utube.com.mx
 ||probefahrt.gratis^
 ||procdn.asia^
 ||prod.one.lt^
-||prod.sound.ag^
 ||productivity.wiki
 ||profile.acpe.edu^
 ||profitshare.emag.ro^
@@ -100695,7 +100594,6 @@ y0utube.com.mx
 ||pzhantg6x.space^
 ||pznqjhh.life^
 ||pzpp88.space^
-||qa.sound.ag^
 ||qafqazinfo.az^
 ||qarant.az^
 ||qaynarinfo.az^
@@ -100800,7 +100698,6 @@ y0utube.com.mx
 ||renwai.ren^
 ||replay.az^
 ||reshare.pm^
-||resnet.sound.ag^
 ||resumes.ren^
 ||revanced.art^
 ||revistas.tec.ac.cr^
@@ -100841,7 +100738,6 @@ y0utube.com.mx
 ||rrr.plus^
 ||rrysogsiz.uno^
 ||rs.chagalcuticle.shop^
-||rsc.sound.ag^
 ||rsnoownmz.fun^
 ||rso.wang
 ||rsu.su
@@ -100866,17 +100762,13 @@ y0utube.com.mx
 ||s65m.win^
 ||sa.daily.mk^
 ||saglamolun.az^
-||sahaj.sc^
 ||sahara.work^
 ||saigao.fun
 ||sail.name
 ||saili.science
 ||salangane.asia^
 ||salidzini.lv^
-||salkic.co.ba^
 ||saloongkum.lpru.ac.th^
-||samazon.selectedtodaylbqn.monster^
-||samazon.selectedtodaypwtq.monster^
 ||same.new^
 ||samehadaku.homes^
 ||sams.com.mx^
@@ -100932,9 +100824,7 @@ y0utube.com.mx
 ||sexroom.xxx^
 ||sexvid.*^
 ||sexvid.xxx^
-||sfacebook.me-reviewing.digital^
 ||sfkj.vip
-||sftp.appie-us.center^
 ||sg.work
 ||sgegie.fun^
 ||sgnlaigb.fun^
@@ -100999,17 +100889,13 @@ y0utube.com.mx
 ||signals.a101.com.tr^
 ||signals.turkcell.com.tr^
 ||siguoya.name
-||sillgtinfuranet-faucet.metamask.cx^
 ||simp.red
 ||sina.cn*^
 ||sina.lt
-||sinfuranet-faucet.metamask.cx^
 ||singledog.fun^
 ||sirr.tiscali.buzz^
 ||sisafnib.space^
 ||site.flashx.^
-||sitemap.googl.vip^
-||sitemaps.opensea.lc^
 ||sixu.life
 ||siz3wxt8p.shop^
 ||sj1h.yl.ag^
@@ -101020,7 +100906,6 @@ y0utube.com.mx
 ||sl.al
 ||sl.al^
 ||slfango.ltd^
-||slllgtinfuranet-faucet.metamask.cx^
 ||slonlyuse.shop^
 ||slowbeat.fun^
 ||slsynmlb.fun^
@@ -101037,25 +100922,6 @@ y0utube.com.mx
 ||sobin.wang^
 ||socdm*.*^
 ||sogou.*^
-||solar-windows-13038.bond^
-||solar-windows-16427.bond^
-||solar-windows-17259.bond^
-||solar-windows-19344.bond^
-||solar-windows-20584.bond^
-||solar-windows-23398.bond^
-||solar-windows-26490.bond^
-||solar-windows-32292.bond^
-||solar-windows-34086.bond^
-||solar-windows-36792.bond^
-||solar-windows-36905.bond^
-||solar-windows-66110.bond^
-||solar-windows-69638.bond^
-||solar-windows-69748.bond^
-||solar-windows-71479.bond^
-||solar-windows-78428.bond^
-||solar-windows-82211.bond^
-||solar-windows-82523.bond^
-||solar-windows-87075.bond^
 ||solarmovie.*^
 ||solarmovie.fun^
 ||solarmovie.one^
@@ -101084,9 +100950,6 @@ y0utube.com.mx
 ||sports-stream.*^
 ||sports24.*^
 ||spot.download
-||spotapremiu.gratflix.gold^
-||spotify-avaliativo.shop^
-||spotlfy-premuim.optoform.rs^
 ||spotyfi.shop^
 ||spritzawapuhi.guru^
 ||spys.one^
@@ -101100,21 +100963,11 @@ y0utube.com.mx
 ||ss.lv^
 ||ssaya.win
 ||ssc.southpark*^
-||ssftp.appie-us.center^
-||ssillgtinfuranet-faucet.metamask.cx^
-||ssitemap.googl.vip^
 ||ssjy.shop^
 ||ssl4us.*^
-||sslllgtinfuranet-faucet.metamask.cx^
 ||sslproxy.dk^
 ||ssnoownmb.fun^
 ||sss.xxx^
-||sssftp.appie-us.center^
-||sssitemap.googl.vip^
-||ssslllgtinfuranet-faucet.metamask.cx^
-||ssssftp.appie-us.center^
-||ssssitemap.googl.vip^
-||sssssftp.appie-us.center^
 ||sstdk.staypro.dk^
 ||sta.extreme-down.^
 ||sta.hljk.wang^
@@ -101123,7 +100976,6 @@ y0utube.com.mx
 ||stackboom.xin
 ||stacy.hubhubhub.name^
 ||stads.dot-e.dk^
-||stage.sound.ag^
 ||stake.mba^
 ||stapadblockuser.art^
 ||stape.fun^
@@ -101139,7 +100991,6 @@ y0utube.com.mx
 ||static.asia^
 ||static.chilli.ee^
 ||static.httpool.com.mk^
-||static.sound.ag^
 ||static.superbot.works^
 ||static.vz.lt^
 ||statics88.vip^
@@ -101277,7 +101128,6 @@ y0utube.com.mx
 ||terabox.fun^
 ||terbit21.gdn^
 ||terra.com.mx^
-||test.sound.ag^
 ||text.wiki
 ||tf.wiki
 ||tf125.show^
@@ -101415,7 +101265,6 @@ y0utube.com.mx
 ||ts1701868912.xn--kcr500a391b.xn--io0a7i^$important
 ||ts1703360599.xn--gor54rzzhjt7b.xn--fiqs8s^$important
 ||ts1703360599.xn--vhqt2hvuhr1h113abiq.xn--fiqs8s^$important
-||tsbo.company^
 ||tsmedia.si^
 ||tsnoownmi.fun^
 ||tt4266acb88a1.ltd^
@@ -101456,7 +101305,6 @@ y0utube.com.mx
 ||ua.mk
 ||uanlisgt.fun^
 ||uao.so
-||uat.sound.ag^
 ||ubja.vip
 ||ubt.tracking.shopee.^
 ||ucam.xxx^
@@ -101470,12 +101318,8 @@ y0utube.com.mx
 ||uisafnit.space^
 ||uiteligularly.fun^
 ||uiuspakmn.bar^
-||uk.sound.ag^
-||ulesufeism.shop^
 ||ulog*.*^
 ||ulsynmlt.fun^
-||ulysse-cazabonne.cam^
-||umbrelladownload.uno^
 ||umke.shop
 ||unblocked.*^
 ||unblockit.foo^
@@ -101502,16 +101346,11 @@ y0utube.com.mx
 ||urlcut.ninja^
 ||ursegreatm.fun^
 ||urysogsit.uno^
-||us-bur32.xin^
-||us.sound.ag^
 ||usage*.*^
 ||usnoownmt.fun^
-||usps.paytolliqi.vip^
-||usps.paytollivi.vip^
 ||usst.store^
 ||ustc.edu
 ||usually.wang^
-||usuario-netflix-es.help^
 ||utom.design
 ||utt.pm^
 ||uwan.dad^
@@ -101522,7 +101361,6 @@ y0utube.com.mx
 ||v.laogu.wang^
 ||v4.4017089031.shop^
 ||vaicore.store^
-||valdoise-aventures.paris^
 ||vao.cdn.trm.digital^
 ||vccyb.ltd^
 ||vcmedia.vn^
@@ -101570,7 +101408,6 @@ y0utube.com.mx
 ||vozesencarnadas.hubhubhub.name^
 ||vp9t.608.vip^
 ||vpn.express^
-||vpn.sound.ag^
 ||vpnfortorrents.*^
 ||vqxfj.bar
 ||vrr.name^
@@ -101675,42 +101512,12 @@ y0utube.com.mx
 ||widget-social-proof-api.one.store^
 ||widget.cx^
 ||winbigdrip.life^
-||windows-19001.bond^
-||windows-19764.bond^
-||windows-20903.bond^
-||windows-2323.bond^
-||windows-29685.bond^
-||windows-30198.bond^
-||windows-32094.bond^
-||windows-34671.bond^
-||windows-37371.bond^
-||windows-40991.bond^
-||windows-41247.bond^
-||windows-48191.bond^
-||windows-50562.bond^
-||windows-63552.bond^
-||windows-63953.bond^
-||windows-69762.bond^
-||windows-72693.bond^
-||windows-76777.bond^
-||windows-78593.bond^
-||windows-81868.bond^
-||windows-82211.bond^
-||windows-83188.bond^
-||windows-88963.bond^
-||windows-91551.bond^
-||windows-93177.bond^
-||windows-blinds-gb-006.space^
-||windows-heros.bond^
-||windows-replacement-allsearchtd.store^
 ||winds.red
 ||wineworld.vip
 ||winporn.*^
-||wireless.sound.ag^
 ||wisafnie.space^
 ||wisdomvalley.wang^
 ||wiuspckmn.bar^
-||wlan.sound.ag^
 ||wlbqczk.vip
 ||wlovey.asia^
 ||wlsynmle.fun^
@@ -101787,11 +101594,9 @@ y0utube.com.mx
 ||www.huanbei.shop^
 ||www.hubhubhub.name^
 ||www.hxkyuwr1040.vip^
-||www.ingenieriaclinica.com.mx^
 ||www.instant.page^
 ||www.jianpian.vip^
 ||www.liangka.vip^
-||www.metamask.ro^
 ||www.mouser.*^
 ||www.mt*.vip^
 ||www.mt144ti.vip^$important
@@ -102010,7 +101815,6 @@ y0utube.com.mx
 ||yhgo.wang
 ||yhmh.vip
 ||yhty.bet^
-||yhw.d89.mytemp.website^
 ||yianju.ltd
 ||yidianting.xin
 ||yifysubtitles.vip^
@@ -102194,7 +101998,6 @@ y0utube.com.mx
 ||zp.do
 ||zpan.space
 ||zpe7z.fun^
-||zpetcrhe.vip^
 ||zpm.so
 ||zpm.wiki
 ||zpsh.shop^
