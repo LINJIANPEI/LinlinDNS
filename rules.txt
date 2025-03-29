@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-29 07:09:31（北京时间）
+! Version: 2025-03-29 08:45:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64595
+! Total count: 64609
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1794,6 +1794,7 @@
 10minutemail.com##[href="https://www.remove-metadata.com"]
 10minutemail.net###content > #right
 10minutemail.net##.leftXL
+10minutemail.net,eel.surf7.net.my###right
 10minutemail.net,eel.surf7.net.my,javatpoint.com###right
 10movs.com##.top_banner
 10news.com###column-41
@@ -3125,7 +3126,9 @@
 4algeria.com##.xenOverlay
 4allprograms.me##div[id][class^="popup"][class$="wrap"][style^="opacity"]
 4anime.gg,apkmody.io,bollyflix.how,bravoporn.com,dramacool.sr,gogoanime.co.in,gogoanime.run,harimanga.com,hdmovie2.rest,himovies.to,hurawatch.cc,instamod.co,leercapitulo.com,linksly.co,mangadna.com,manhwadesu.bio,messitv.net,miraculous.to,movies-watch.com.pk,moviesmod.zip,nkiri.com,prmovies.dog,putlockers.li,sockshare.ac,ssoap2day.to,sukidesuost.info,tamilyogi.bike,waploaded.com,watchomovies.net,y-2mate.com,yomovies.team,ytmp3.cc,yts-subs.com##iframe[style*="z-index: 2147483647"]
+4anime.gg,apkmody.io,bollyflix.how,bravoporn.com,dramacool.sr,gogoanime.co.in,gogoanime.run,harimanga.com,himovies.to,hurawatch.cc,instamod.co,leercapitulo.com,linksly.co,mangadna.com,manhwadesu.bio,messitv.net,miraculous.to,movies-watch.com.pk,moviesmod.zip,nkiri.com,prmovies.dog,putlockers.li,sockshare.ac,ssoap2day.to,sukidesuost.info,waploaded.com,watchomovies.net,y-2mate.com,yomovies.team,ytmp3.cc,yts-subs.com##iframe[style*="z-index: 2147483647"]
 4anime.gg,apkmody.io,bollyflix.nexus,bravoporn.com,dramacool.sr,gogoanime.co.in,gogoanime.run,harimanga.com,hdmovie2.rest,himovies.to,hurawatch.cc,instamod.co,leercapitulo.com,linksly.co,mangadna.com,manhwadesu.bio,messitv.net,miraculous.to,movies-watch.com.pk,moviesmod.zip,nkiri.com,prmovies.dog,putlockers.li,sockshare.ac,ssoap2day.to,sukidesuost.info,tamilyogi.bike,waploaded.com,watchomovies.net,y-2mate.com,yomovies.team,ytmp3.cc,yts-subs.com##[style*="width: 100% !important;"]
+4anime.gg,apkmody.io,bollyflix.nexus,bravoporn.com,dramacool.sr,gogoanime.co.in,gogoanime.run,harimanga.com,himovies.to,hurawatch.cc,instamod.co,leercapitulo.com,linksly.co,mangadna.com,manhwadesu.bio,messitv.net,miraculous.to,movies-watch.com.pk,moviesmod.zip,nkiri.com,prmovies.dog,putlockers.li,sockshare.ac,ssoap2day.to,sukidesuost.info,waploaded.com,watchomovies.net,y-2mate.com,yomovies.team,ytmp3.cc,yts-subs.com##[style*="width: 100% !important;"]
 4c.cn##div[id^="mid_ad"]
 4c.cn##div[id^="top_ad"]
 4chan.org###bd > div[style="text-align:center;margin: 10px 0"]
@@ -6284,6 +6287,7 @@
 @@||assets.macys.com/dyn_img/site_ads/
 @@||assets.modelmayhem.com/includes/js/ad.min.js
 @@||assets.msn.com/bundles/v*/edgeChromium/latest/native-ad-sales-highlight-v*.js$domain=ntp.msn.com
+@@||assets.msn.com/resolver/api/resolve/v3/config/?expType=AppConfig&expInstance=default&apptype=finance&$domain=msn.com
 @@||assets.msn.com/staticsb/statics/latest/adboxes/$script,~third-party
 @@||assets.revcontent.com/master/delivery.js$domain=mp4upload.com
 @@||assets.strossle.com^*/strossle-widget-sdk.js$script,domain=kaaoszine.fi
@@ -14090,7 +14094,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=production-api.androidacy.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=prostomob.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pvpoke-re.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pvpoke-re.com|pokegonews.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=q84sale.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=qrcodemonkey.net,xmlhttprequest
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=quackr.io
@@ -14462,7 +14465,6 @@
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ff14angler.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads*.js$domain=forum.release-apk.com,important,stealth
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl$script,domain=pvpoke-re.com
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl$script,domain=pvpoke-re.com|pokegonews.net
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_$script,domain=rekidai-info.github.io
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_$script,domain=rjno1.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=codingnepalweb.com
@@ -19241,6 +19243,7 @@ _view_pixel&$image
 _webanalytics.
 a-ads.com##.aa_container
 a-ads.com,ad-maven.com,adcash.com,admitad.com,adskeeper.co.uk,adskeeper.com,adspyglass.com,adstracker.info,adsupply.com,adsupplyads.com,adsupplyads.net,chpadblock.com,exoclick.com,hilltopads.com,join-admaven.com,joinpropeller.com,juicyads.com,luckyads.pro,monetag.com,myadcash.com,popads.net,propellerads.com,purpleads.io,trafficshop.com,yavli.com##HTML
+a-ads.com,ad-maven.com,adcash.com,admitad.com,adskeeper.co.uk,adskeeper.com,adspyglass.com,adstracker.info,adsupply.com,adsupplyads.com,adsupplyads.net,chpadblock.com,exoclick.com,hilltopads.com,joinpropeller.com,juicyads.com,luckyads.pro,monetag.com,myadcash.com,popads.net,propellerads.com,purpleads.io,trafficshop.com,yavli.com##HTML
 a-hentai.tv,javporn.tv##.support-frame
 a-i-l-s-a.com,buscodepto.com##div[style^="position: fixed;"]
 a-lohas.jp$$script:contains(puURLstrpcht)
@@ -19397,6 +19400,7 @@ abxxx.com##.video__wrapper > div.wrapper.headline
 abxxx.com,aniporn.com,missav.ai,missav.ws,missav123.com,missav888.com##div[style="width: 300px; height: 250px;"]
 abydos.pl##.configMessages
 abysscdn.com,hqq.ac,hqq.to,hqq.tv,linris.xyz,megaplay.cc,meucdn.vip,netuplayer.top,ntvid.online,plushd.bio,waaw.to,watchonlinehd123.sbs,wiztube.xyz##a[title="Free money easy"]
+abysscdn.com,hqq.ac,hqq.to,hqq.tv,linris.xyz,megaplay.cc,meucdn.vip,netuplayer.top,ntvid.online,waaw.to,watchonlinehd123.sbs,wiztube.xyz##a[title="Free money easy"]
 ac-room.cc##.ad.v-card
 ac.qq.com###qgirlRefreshLead
 ac.qq.com##.in-hd-mod
@@ -19807,6 +19811,7 @@ agar.io###mainui-ads
 agar.io##.mc-cookiebar
 agar.io##small[data-itr^="advertisement"]
 agcanada.com,allmusic.com,allrecipes.com,allthatsinteresting.com,autoaction.com.au,autos.ca,ballstatedaily.com,bdonline.co.uk,boardgamegeek.com,bravewords.com,broadcastnow.co.uk,cantbeunseen.com,cattime.com,chairmanlol.com,chemistryworld.com,citynews.ca,comingsoon.net,coolmathgames.com,crn.com.au,diyfail.com,dogtime.com,drugtargetreview.com,edmunds.com,europeanpharmaceuticalreview.com,explainthisimage.com,foodandwine.com,foodista.com,freshbusinessthinking.com,funnyexam.com,funnytipjars.com,gamesindustry.biz,gcaptain.com,gmanetwork.com,iamdisappoint.com,imedicalapps.com,itnews.asia,itnews.com.au,japanisweird.com,jta.org,legion.org,lifezette.com,liveoutdoors.com,macleans.ca,milesplit.com,monocle.com,morefailat11.com,moviemistakes.com,nbl.com.au,newsonjapan.com,nfcw.com,objectiface.com,passedoutphotos.com,playstationlifestyle.net,precisionvaccinations.com,retail-week.com,rollcall.com,roulettereactions.com,searchenginesuggestions.com,shinyshiny.tv,shitbrix.com,sparesomelol.com,spoiledphotos.com,spokesman.com,sportsnet.ca,sportsvite.com,stopdroplol.com,straitstimes.com,suffolknews.co.uk,supersport.com,tattoofailure.com,thedriven.io,thefashionspot.com,thestar.com.my,titantv.com,tutorialrepublic.com,uproxx.com,where.ca,yoimaletyoufinish.com##.leaderboard
+agcanada.com,allmusic.com,allrecipes.com,allthatsinteresting.com,autoaction.com.au,autos.ca,ballstatedaily.com,bdonline.co.uk,boardgamegeek.com,bravewords.com,broadcastnow.co.uk,cantbeunseen.com,cattime.com,chairmanlol.com,chemistryworld.com,citynews.ca,comingsoon.net,coolmathgames.com,crn.com.au,diyfail.com,dogtime.com,drugtargetreview.com,edmunds.com,europeanpharmaceuticalreview.com,explainthisimage.com,foodandwine.com,foodista.com,funnyexam.com,funnytipjars.com,gamesindustry.biz,gcaptain.com,gmanetwork.com,iamdisappoint.com,imedicalapps.com,itnews.asia,itnews.com.au,japanisweird.com,jta.org,legion.org,lifezette.com,liveoutdoors.com,macleans.ca,milesplit.com,monocle.com,morefailat11.com,moviemistakes.com,nbl.com.au,newsonjapan.com,nfcw.com,objectiface.com,passedoutphotos.com,playstationlifestyle.net,precisionvaccinations.com,retail-week.com,rollcall.com,roulettereactions.com,searchenginesuggestions.com,shinyshiny.tv,shitbrix.com,sparesomelol.com,spoiledphotos.com,spokesman.com,sportsnet.ca,sportsvite.com,stopdroplol.com,straitstimes.com,suffolknews.co.uk,supersport.com,tattoofailure.com,thedriven.io,thefashionspot.com,thestar.com.my,titantv.com,tutorialrepublic.com,uproxx.com,where.ca,yoimaletyoufinish.com##.leaderboard
 agcocorp.com##.disclaimerpopup
 age.tv,agedm.org##+js(noeval-if, devtoolsDetector)
 agedbeauty.net,data18.com,imgdrive.net,pornpics.com,pornpics.de,vipergirls.to##a[href*="/go/"]
@@ -28736,6 +28741,7 @@ dll-files.com##center[style^="font-size: 0.8em; padding"][style$="color: #2d2d2d
 dll-files.com##div[style="text-align: center; padding-bottom: 10px; padding-top: 10px;"]
 dllme.com##.captchabox > div
 dlraw.co,dlraw.to,manga-zip.info###avfap
+dlraw.to,manga-zip.info###avfap
 dlsharefile.com##a[href^="https://dlmonitize.com/"]
 dm010.com##a[href*=".apk"]
 dm5.com###a1
@@ -28886,6 +28892,7 @@ domainnamewire.com##.after-header
 domainnamewire.com##div[class^="bg-ad-"]
 domainnamewire.com,douglasnow.com,goodthingsguy.com##.g-single
 domainnamewire.com,i24news.tv,marinetechnologynews.com,maritimepropulsion.com,mumbrella.com.au,mutaz.pro,paste.fo,paste.pm,pasteheaven.com,petapixel.com,radiopaedia.org,rapidtvnews.com,telesurtv.net,travelpulse.com##.banners
+domainnamewire.com,i24news.tv,marinetechnologynews.com,maritimepropulsion.com,mumbrella.com.au,mutaz.pro,paste.fo,paste.pm,petapixel.com,radiopaedia.org,rapidtvnews.com,telesurtv.net,travelpulse.com##.banners
 domainnamewire.com,repeatreplay.com##.sidebar-primary
 domaintoipconverter.com###associates-1
 domaintools.com##.cookie-modal
@@ -32167,6 +32174,7 @@ foodhub.co.uk##.cookies
 foodingredientsfirst.com##.UpdateGaBanner
 foodingredientsfirst.com##a[onclick*="https://www.cargill.com/"]
 foodkombi.de##.warning-app
+foodlion.com##.product-grid-cell:has(.flag_label--sponsored)
 foodlion.com##[aria-label="Sponsored Ad"]
 foodmate.net##.ad5
 foodmate.net##.m[style="height:40px;"]
@@ -34342,6 +34350,7 @@ gobankingrates.com##.rate-table-header
 gobankingrates.com##.snippet-in-content
 goblinsguide.com##a > img[src*="-300x250-"]
 gocards.nl###cbar
+gocharting.com###ads-table
 gocomics.com##.amu-ad-leaderboard-atf
 gocomics.com##.amu-container-ad-wrapper
 gocomics.com##.gc-deck--is-ad
@@ -36129,6 +36138,7 @@ hindi.news18.com,bengali.news18.com##div[class*="right"] > div[class*="side"]:no
 hindikhabarwaala.com##.logo-banner div.pull-right
 hindikhabarwaala.com##.post-content > div.post-text > p > img[src^="http://hindikhabarwaala.com/"][width="400"]
 hindime.net##.stky-ads
+hindimearticles.net,solution-hub.com###bfix2
 hindinut.com##iframe[data-src^="//ws-in.amazon-adsystem.com/"]
 hindishouter.com##.inside-right-sidebar
 hindustantimes.com###affiliate-shop-now
@@ -39350,8 +39360,10 @@ jin10.com###J_wdgg_t
 jin10.com##.jin-popularize
 jin10.com##.l-main > div > .jin-timeline
 jin10.com##.l-main > div > div[class^="jin-"] > .jin-timeline > div[class^="jin-1"]
+jin10.com##.quoted-price__pro
 jin10.com##.side-module-2
 jin10.com##.top-ad
+jin10.com##.tradinghero
 jin10.com##div[id^="J_wdgg_"]
 jinbaodm.com##div[id^="a-loading"]
 jinbaodm.com##div[style^="position:fixed; top"]
@@ -55849,6 +55861,7 @@ sweclockers.com##body .ad:not(#style_important)
 swedoffice.se###cbckchangeholderFirst
 swedoor.dk###swedoor_privacy_widget
 swedroid.se###Sony_ad
+swedroid.se##.col > section:has(> div.textwidget > div[align="center"] > script[src^="https://lwadm.com/"])
 sweepsdb.com##tbody.sponsored
 sweet.tv###privacy_policy
 sweethentai.com##.long-ads
@@ -57180,6 +57193,7 @@ thelayoff.com##.epp-bf
 thelayoff.com##body > div[style*="position: fixed;"][style*="width: 100%; height: 100%;"][style*="z-index:"]
 thelibertydaily.com##.textwidget > a[target="_blank"] > img
 thelibertydaily.com##a[href^="https://www.mypillow.com"]
+thelibertydaily.com,toptenz.net##.kgbwvoqfwag
 thelibertydaily.com,toptenz.net,vitamiiin.com##.kgbwvoqfwag
 thelines.com##.cta-content
 thelines.com##.cta-row
