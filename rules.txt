@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-29 13:09:21（北京时间）
+! Version: 2025-03-29 14:12:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64608
+! Total count: 64609
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -30319,6 +30319,7 @@ engadget.com##.justify-center:has-text(Advertisement)
 engadget.com##.post-article-ad
 engadget.com##.related-content-lazyload
 engadget.com##.wafer-benji
+engadget.com##[data-test="top-ad"]
 engadget.com##div[class]:has(> div[id*="TF"][id*="-"]:empty)
 engadget.com##div[data-component="GeminiAdItem"]
 engadget.com##div[data-wf-image-beacons]
