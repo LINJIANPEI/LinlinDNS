@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-03-31 18:10:57（北京时间）
+! Version: 2025-03-31 19:09:10（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64604
+! Total count: 64608
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -964,6 +964,7 @@
 /ane-popup-banner.js$script
 /anti-adblock/*$~stylesheet
 /api/ad.$script
+/api/direct/*?s1=$script
 /api/front/v2/observability$ping
 /api/ping?$~xmlhttprequest
 /api/users?token=$popup
@@ -5397,6 +5398,7 @@
 @@||adsatt.espn.starwave.com^$domain=livenewschat.eu,~script
 @@||adsco.re/p$domain=shorterall.com
 @@||adsco.re^$domain=shinden.pl
+@@||adsdk.microsoft.com/ast/ast.js$script,domain=prisjakt.no
 @@||adsense.woso.cn^$~third-party
 @@||adserver.juicyads.com/js/jads.js$domain=netflav.com
 @@||adserver.rhombusads.com/api/$domain=spin.com
@@ -21345,6 +21347,7 @@ asianetnews.com##.site-banner
 asianetnews.com##body[id] .adsection
 asianetnews.com##div[class^="revive-ads"]
 asianetnews.com##div[class^="right-ad-"]
+asiangay.tv,asiangaysex.net,gaysex.tv,japangaysex.com##.float-ck
 asiangaysex.net,gaysex.tv##.float-ck
 asianjournal.com###fancybox-overlay
 asianjournal.com###fancybox-wrap
@@ -21642,6 +21645,7 @@ autocarindia.com##div[class^="ad-mod-section"]
 autocarpro.in##.skinad
 autocarpro.in##body div[class^="ad-section-"]
 autocentrum.pl##body > div[class]:empty
+autodoc.co.uk###traffic_banner_wrapper_interstitial
 autodoc.de##.gdpr-panel
 autoevolution.com###swipebox-right::before
 autoevolution.com###swipebox-top::before
