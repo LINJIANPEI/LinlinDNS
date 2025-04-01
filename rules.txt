@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-01 19:09:51（北京时间）
+! Version: 2025-04-01 20:19:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64309
+! Total count: 64311
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -720,6 +720,7 @@
 /^(\S+\.)?widgets?\./
 /^(\S+\.)?xpj[0-9]\.net$/
 /^(\S+\.)?ylx-[0-9].com$/
+/^(mon|tue|wed|thu|fri|sat|sun)\d{1,2}\.so\d{1,6}koaq\.com$/
 /^.+stat\.kugou\.com/
 /^139\.45\.197\.2(4[0-9]|5[0-4])/
 /^139\.45\.197\.2(4[0-9]|5[0-4]):/
@@ -21115,6 +21116,7 @@ arrivealive.co.za##.partnersheading
 arsene50.brussels##.cookies
 arstechnica.co.uk,arstechnica.com##.instream-wrap
 arstechnica.com###outbrain-recs-wrap
+arstechnica.com##.ars-interlude-container
 arsys.es##.drop[name="cookies"]
 arsys.fr##.drop[name="cookies"]
 arsys.net##.drop[name="cookies"]
