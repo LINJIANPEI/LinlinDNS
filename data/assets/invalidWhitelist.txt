@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14802
+! Total count: 14801
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-04-01 09:59:25（北京时间）
+! Version: 2025-04-01 20:47:12（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -11813,7 +11813,6 @@
 @@||eden.international/script/ad_banner/
 @@||eden.org.tw^*/ad_banner/
 @@||edge-*.gcdn.app/st/$stealth=referrer,domain=anilife.*
-@@||edge.api.brightcove.com/playback/v1/accounts/*/videos/$xmlhttprequest,domain=tver.jp,stealth=ip
 @@||edge.microsoft.com/translate/auth
 @@||edge.mycdn.live/live/*.m3u8$stealth
 @@||edge.mycdn.live^$stealth,domain=futebolplayhd.com
@@ -16469,7 +16468,6 @@
 @@||necksdesign.com^$generichide
 @@||neko-miku.com^$generichide
 @@||nekomeowmeow.com^$generichide
-@@||nekopoi.*/wp-content/themes/ThemeNekopoi/js/adsbygoogle.js$~third-party
 @@||nelonenmedia.fi/logger/logger-ini.json$xmlhttprequest,domain=embed.sanoma-sndp.fi|supla.fi
 @@||nemlog-in.dk/resources/js/adrum.js$~third-party
 @@||nensaysubs.net^$generichide
@@ -18027,6 +18025,7 @@
 @@||play.tv3.lt/static/scripts/ima3.js
 @@||play.tv3.lv^$generichide
 @@||play.vidyard.com^$stealth
+@@||playback.api.streaks.jp/*/projects/tver-*/medias/$domain=tver.jp,stealth=ip
 @@||playcode.io^$generichide
 @@||playep.pro/log_event$~third-party,xmlhttprequest
 @@||player*.cinestream.bid^$stealth
