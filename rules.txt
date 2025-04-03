@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-03 20:19:14（北京时间）
+! Version: 2025-04-03 21:21:48（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64329
+! Total count: 64343
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10896,6 +10896,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|sf.upns.xyz|showflix.upns.one|isekaitube.cfd
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.corriere.it
@@ -13285,6 +13286,7 @@
 @@||onet.pl^$generichide
 @@||onet.pl^$generichide,badfilter
 @@||onetag-sys.com/prebid-request$domain=linkneverdie.net
+@@||oneupload.net/*.html$stealth=referrer
 @@||onifile.com^$generichide
 @@||onitube.com^$generichide
 @@||onl.bz^
@@ -14265,6 +14267,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=watchx.top|phimlongtieng.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=webmail.email.it
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=webmatrices.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=weshare.is|skycall.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=whatsafterthemovie.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=winshell.org|wingeno.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=yoykp.com
@@ -22202,6 +22205,7 @@ baku.ws##.ban_mac
 baku.ws##.banners-right
 baku.ws##.main-container > div.main-right:has(> div.right-bnr:only-child)
 baku.ws##.row > div.d-lg-block:has(> div.cat-left-bnr)
+baku.ws##.side-bnr
 bakupost.az##.news-viewer-item-content > iframe
 balarm.it##.separatore-sidebar:empty
 balarm.it##.text-container > div[style^="margin: 40px 0 !important; width: 630px !important; height:170px !important; background: #"]
@@ -35675,6 +35679,7 @@ hentai2read.com##a[href^="https://arf.moe/"]
 hentai2read.com##div[data-type="leaderboard-top"]
 hentai2read.com##div[data-type^="ark-"] > a[href*="click.php"] > img
 hentai2read.com##div[data-type^="leaderboard"]
+hentai2read.com##iframe[src^="//adserver.juicyads.com/"]
 hentai2w.com##.aff-col
 hentai2w.com##.aff-content-col
 hentai2w.com##.ark-noAB
@@ -37936,6 +37941,8 @@ internet-law.ru###fab-enabled
 internetspeedtracker.com###gpdr, #GPDR, #gdpr, #GDPR
 internxt.com##div[class*="cookiesBgFallback"]
 interpals.net##div[style^="float: right;"][style*="min-height: 600px;"]
+interpunkcja.pl##.top-billboard
+interpunkcja.pl##div[id^="slot_"]
 interracial.com##.twocolumns > .aside > div[align="center"]
 interred.de###cookieconsentmodal
 intersurgical.de###ccPopup
@@ -45290,6 +45297,7 @@ n8n.io##.consent_modal
 na-2.gunwars.io,na.gunwars.io,na.throwz.io##div[style^="width:300;"][style*="height: 250;"]
 na-2.gunwars.io,na.gunwars.io,na.throwz.io##div[style^="width:336;"][style*="height: 280;"]
 na-kd.com###container > div > div:not([class])
+na.op.gg##.flex-col.gap-2 ~ section.w-full.bg-gray-0
 naacesrf.com###cklbox
 nabd.com##div[id^="nb-ad-"]
 nablog.org##.promo-archive-all
@@ -49367,6 +49375,8 @@ porngames.club##[href^="https://www.familyporngames.games/"]
 porngames.club##[href^="https://www.porngames.club/friends/out.php"]
 porngames.com##.contentbox:has(a[href="javascript:void(0);"])
 porngames.com##.contentbox:has(iframe[src^="//"])
+porngames.com##.maincontent div.contentbox:has(> div[style] > center > iframe[src^="https://a.adtng.com/"])
+porngames.com##.maincontent div.contentbox:has(> div[style] > center > table iframe[src^="https://a.adtng.com/"])
 porngames.games###bio_ep
 porngames.games###slide-ads
 porngames.games##.bnr-side
@@ -50200,6 +50210,7 @@ psprices.com###Psprices_MID
 psprices.com##.creative
 psprices.com##div[data-freestar-ad] + .text-center > a[href^="/premium"]
 pss-archi.eu###miam_div
+pstream.org##.max-w-full > .group:has(> button[aria-label="Dismiss ad"])
 psy.pl###infoPopup, .modal-backdrop
 psychcentral.com##aside:has([data-empty])
 psychcentral.com,healthline.com##hl-adsense
@@ -53571,6 +53582,7 @@ skrotymeczow.pl##[class^="cool-stuff"]
 sky.com.br###wrap-aviso-cookie
 skyandtelescope.org##.c-ad--label
 skyblock.bz##[id^="flips-"]
+skycall.online##body > #page + script + div[id][class*=" "]
 skycn.com###top970,ul.ul_Address>h3,a[href^="http://down.xiazaidc.com/"]
 skydy.top##.swiper-slide[style="width: 1170px;"]
 skyfi.com###app-body > div > div > div > .fixed.bottom-0
@@ -59201,6 +59213,7 @@ uiporn.com##.adv-in-video
 uiporn.com##.text-gray
 uiporn.com##.top-sponsor
 uiporn.com,porngem.com##.bottom-b-s
+uira.live##img[alt="Advertisement"]
 uisdc.com##.archive-pm-top
 uisdc.com##.post-pm-content
 uistore.design##.column > .ui-sps:has(> .adsbygoogle)
@@ -59320,6 +59333,7 @@ unify.com###cp
 unigine.com##.bottom-notice
 unihobby.cz##.cookies-confirm
 uniindia.com##.header_bottom > div[style^="float:"]:last-child
+unikal.az##.headBanner
 unikol.com.pl###cookie
 unikoshardware.com##.elementor-image > a[href^="https://bit.ly/"]
 unikoshardware.com##.elementor-popup-modal
