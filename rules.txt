@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-03 18:11:46（北京时间）
+! Version: 2025-04-03 19:09:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64327
+! Total count: 64330
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3478,6 +3478,8 @@
 6park.com##table[width][align="center"] > tbody > tr > td[bgcolor="#FFFFEE"]:has(> div[id*="ScriptRoot"])
 6park.com##table[width][align="center"] > tbody > tr > td[bgcolor="#FFFFEE"]:has(> table[width="100%"] > tbody > tr > td > div.adv-6park)
 6park.com,club.6parkbbs.com##.adv-6park
+6parknews.com##.InContent_0
+6parknews.com##.InContent_1
 6parknews.com##.ad-view
 6parknews.com##.other_list_ad
 6parknews.com##div[style="width:990px;height:140px;margin-left:auto;margin-right:auto;text-align:center;"]
@@ -31153,6 +31155,7 @@ fashion.qq.com##.rv-js-root
 fashionbiznes.pl##.cmpgn_adslot.slot_art_half > *
 fashionbiznes.pl##.cmpgn_adslot:not(.slot_art_half)
 fashionista.com##.m-fixedbottom-ad--container
+fashionmagazine.com##.assmbly-ad-wrapper
 fashionpulis.com,techiecorner.com##img[width="250"]
 fast-down.com,filedown.org,speed-down.org##div[style="width:336px; height:280px; background-color:#ffffff; text-align:center"]
 fast-mirror.de##body > div[align]
