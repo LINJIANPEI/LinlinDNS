@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-04 15:10:59（北京时间）
+! Version: 2025-04-04 16:14:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64354
+! Total count: 64356
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -17176,6 +17176,7 @@
 @@||th7.cn/sanda2015/css/ads.js
 @@||thaiairways.com/static/common/js/wt_js/webtrends.min.js$~third-party
 @@||thatoneguy.com.au^$generichide
+@@||thaudray.com^|$xmlhttprequest,domain=ipacrack.com
 @@||thdstatic.com/experiences/local-ad/$domain=homedepot.com
 @@||the-sun.com/wp-content/uploads/
 @@||theatlantic.com^$generichide
@@ -38091,6 +38092,7 @@ ip.sb##.rivencloud_ads
 ip.sb##div[class^="wwads-"]
 ip138.com###banana
 ipa4fun.com##div[style*="min-height:"]
+ipacrack.com##.ipacrack_sidebar > section.border:has(> div[id][style] > div > a[target="_blank"])
 ipadforums.net##.mainContent > div.sectionMain.funbox
 ipadforums.net##.pageContent > div.sectionMain.funbox
 ipaidia.gr##.inarticle-add
