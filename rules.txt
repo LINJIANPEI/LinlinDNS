@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-04 23:10:54（北京时间）
+! Version: 2025-04-05 00:12:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64358
+! Total count: 64363
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2470,6 +2470,7 @@
 2050.earth##.poster
 206.189.151.55###ffbp-bg
 206.189.151.55##.tvtubeads
+207.148.44.179$network
 212.117.190.201$network
 212.117.190.202$network
 212.117.190.210$network
@@ -5837,6 +5838,7 @@
 @@||api.apolomedia.com/static/libs/event-tracking.min.js$script
 @@||api.app.mobilelocker.eu/api/latest/application-environment/ahoy/events$~third-party
 @@||api.apple-mapkit.com^$stealth
+@@||api.asmr-200.com/api/$stealth=3p-auth
 @@||api.asmr-200.com/api/auth/$stealth=3p-auth
 @@||api.athom.com^$domain=my.homey.app,stealth
 @@||api.babbel.io/gamma/v1/$ping,domain=babbel.com
@@ -12537,6 +12539,7 @@
 @@||microsoft.com/*/signin.aspx$stealth
 @@||microsoft.com/*/signout.aspx$stealth
 @@||microsoft.com/*=wsign$stealth
+@@||microsoft.com/store/purchase/$stealth=referrer
 @@||microsoft.com/translate/auth
 @@||microsoftazuresponsorships.com^
 @@||microsoftedge.microsoft.com/addons^$stealth
@@ -13883,7 +13886,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=magdyman.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=magesy.blog|magesy.pro
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=malaysianwireless.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=maos4alaw.online|net4you.xyz|day4news.com|businessnews-nigeria.com|fx4ever.com|msic.site|sealat.com|offeergames.online|pedalpower.online|spidergame.online|jolk.online|glo-n.online|loiz.store|stelux.online|gooltok.com|wisw.online|abda3.xyz|elbadr.xyz|poptech.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=maos4alaw.online|net4you.xyz|day4news.com|businessnews-nigeria.com|fx4ever.com|msic.site|sealat.com|offeergames.online|pedalpower.online|spidergame.online|jolk.online|glo-n.online|loiz.store|stelux.online|gooltok.com|wisw.online|abda3.xyz|elbadr.xyz|poptech.online|foldrecipes.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mathdf.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=md5hashing.net
@@ -29497,6 +29499,8 @@ eastmoney.com##div[style^="position: fixed; z-index:"]
 eastmoney.com##iframe[src*=".eastmoney.com/banner/"]
 eastmoney.com##iframe[src^="//fund.eastmoney.com/trade/hqb_hq.html"]
 eastmoney.com##iframe[src^="//same.eastmoney.com/"]
+easy2boot.xyz##.wp-block-image:has(> a[href="https://kon-boot.com"])
+easy2boot.xyz##.wp-block-image:has(> a[href^="https://www.amazon.com/iodd/"])
 easyai.tech##.sidebar-inner > .widget_media_image:nth-child(n+2)
 easybell.de###cookieman-modal
 easybib.com##.ads_RT
@@ -47376,6 +47380,7 @@ op.gg##div:has(> div[data-ad])
 op.gg##div[class*="eylegve"]
 op.gg##div[class^="Game Game--Result"] + div[result] + div[class^="css-"]:has(> div > div.vm-placement)
 op.gg##main >  div[style][class^="css-"]:has(> div:not([class]) > div.vm-placement)
+op.gg##section:has(> div.min-h-\[250px\]):not(:has(> *:not(div.min-h-\[250px\])))
 op.gg##tr.ad
 op.gg,thenewdaily.com.au##.min-h-\[100px\]
 opdown.com##.cq-recom
