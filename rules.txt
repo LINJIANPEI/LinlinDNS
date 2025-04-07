@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-08 06:10:14（北京时间）
+! Version: 2025-04-08 07:09:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64446
+! Total count: 64453
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -30582,7 +30582,13 @@ etowine.com###cookie
 etr.fr##.no_block
 etsglobal.org###ets_popup_cookie_modal
 etstur.com##.protectionOfData
+etsy.com###search-results li:has([id^="ad-listing-title-"])
 etsy.com##.wt-alert--fixed-bottom
+etsy.com##[data-page-type="listing_page_similar_listings_grid"]:has([id^="ad-listing-title-"])
+etsy.com##[data-page-type="listing_page_similar_listings_row"]:has([id^="ad-listing-title-"])
+etsy.com##[data-page-type="market"]:has([id^="ad-listing-title-"])
+etsy.com##[data-page-type="similar-listing-page"]:has([id^="ad-listing-title-"])
+etsy.com##ul[data-results-grid-container] li:has([id^="ad-listing-title-"])
 ettoday.net###adsense-matched-content
 ettoday.net###for-ec
 ettoday.net###mobileweb_inread
@@ -39825,6 +39831,7 @@ kayak.com##.CGMG:has(.CGMG-logo-ad-wrapper)
 kayak.com##[role="button"]:has([class*="ad-marking"])
 kayak.com##[role="tab"]:has([class*="sponsored"])
 kayak.com##div[aria-label^="Advertisement "]
+kayak.com,momondo.com##.CGMG:has(.CGMG-logo-ad-wrapper)
 kayzen.az##.Blocksmaster
 kazvampires.com,linksly.co##div[aria-label="Close Ads"]
 kazwire.com##h3.tracking-widest
