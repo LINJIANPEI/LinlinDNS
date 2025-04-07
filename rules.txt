@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-07 15:11:01（北京时间）
+! Version: 2025-04-07 16:14:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64410
+! Total count: 64422
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4824,6 +4824,7 @@
 @@||ac.namu.la^$domain=arca.live,media,image,stealth
 @@||ac.namu.la^$image,domain=arca.live,stealth=referrer
 @@||acacdn.com/script/ippg.js$domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs
+@@||acacdn.com/script/ippg.js$domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs|pistona.xyz
 @@||acacdn.com/script/ippg.jsdomain=dflix.top
 @@||acapellas.eu^$generichide
 @@||accelcdn.com^$image,stealth,domain=mangaokutr.com
@@ -10246,6 +10247,7 @@
 @@||healthspiritbody.com^$generichide
 @@||healthytotal.net^$generichide
 @@||heardaccumulatebeans.com/*/*/*/*.js$domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs
+@@||heardaccumulatebeans.com/*/*/*/*.js$domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs|pistona.xyz
 @@||heartyhosting.com^$domain=muscleandfitness.com
 @@||heatmap.it^$domain=heatmap.com|heatmap.it|heatmap.me|heatmap.org
 @@||hectorstatic.baidu.com^$important
@@ -13186,6 +13188,7 @@
 @@||oa.tr.line.me^
 @@||oa.tr.line.me^|
 @@||oaphoace.net/*/$script,domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs
+@@||oaphoace.net/*/$script,domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs|pistona.xyz
 @@||oasjs.kataweb.it/adsetup*.js$domain=huffingtonpost.it
 @@||oasjs.kataweb.it/adsetup*.js$domain=video.lastampa.it
 @@||oasjs.kataweb.it/adsetup.js$domain=video.capital.it
@@ -16563,6 +16566,7 @@
 @@||statcounter.com/js/fusioncharts.js
 @@||statcounter.com/js/packed/statcounter-$script,~third-party
 @@||static*.akacdn.ru/assets/min/frontend/all.$script,stylesheet,domain=9anime.one
+@@||static*.mfcdn*.xyz^$image,stealth=referrer,domain=mangafire.to
 @@||static*.nytimes.com/newsgraphics/*/_assets/graphics/$xmlhttprequest,elemhide,jsinject,extension
 @@||static-*.xvideos.com/*/js/
 @@||static-cdn.spot.im/production/*/*.js$domain=bizpacreview.com
@@ -17254,6 +17258,7 @@
 @@||theregister.co.uk/*_adtech_
 @@||therichest.com^$generichide
 @@||thermometerinconceivablewild.com/*/*/*/*.js$domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs
+@@||thermometerinconceivablewild.com/*/*/*/*.js$domain=vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net|gsfjzmqu.sbs|pistona.xyz
 @@||thesaurus.com/assets/ads.js
 @@||theseotools.net^$generichide
 @@||thesouthern.com^$generichide
@@ -31930,6 +31935,7 @@ flixhd.cc###vpn-top
 flixscans.net##.adblock
 flobzoo.com##.preview2bannerspot
 flockler.com##.fl-cookie-banner[data-state="open"]
+flog.pl##.adlnk
 flograppling.com##flo-ad-leaderboard
 flograppling.com##flo-ad-rectangle
 flordeloto.site###cookiesbox + div[id][class*=" "]
@@ -34079,6 +34085,7 @@ glavcom.ua##.kyk_menu
 gleaks.pro##.samBannerUnit
 gleaks.pro$$script:contains(fuckAdBlock)
 gledaitv.live###abDetectorModal
+gledaitv.live##div[id^="anti-adblock-"]
 gledajcrtace.xyz###header-wrap-reklama
 gledajcrtace.xyz###sidebar > #HTML8
 gledajcrtace.xyz###sidebar-two > #HTML4
@@ -44786,6 +44793,7 @@ msr.ch##.msr-cookie-notification
 mssqltips.com###ad-slot-leader
 mssqltips.com###slideboxtop
 mstream.xyz##.player--container > div[id][style^="position: absolute;"][style*="z-index: 999"]
+msze.info##body > div[style*="min-height:"]:has(> div[id^="slot_"])
 mtbiker.sk###biscuitModal
 mtech.pl###content_jquery_bottom
 mtgnexus.com###logged_out_thin
@@ -47523,6 +47531,8 @@ opositatest.com##.otcn
 opovo.com.br##.notificacao-estatica
 opoyi.com##.hLYYlN
 opportunitydesk.info##a[href^="https://www.iu.org/"]
+ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##.top-billboard
+ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##div[id^="slot_"]
 opswat.com###cookie-ntc
 opti-wohnwelt.de##.accContentWrapper div[class*="gdprBar"]
 optical-center.fr###cookieOk
@@ -48746,6 +48756,8 @@ pirk.lt###toolbar_container
 pirkis.lt###alert_tuscias, #alertt
 pirolam.pl##body > div[style*="100%"]
 pisshamster.com###box-txtovka-con
+pistona.xyz,gaystream.click,gsfjzmqu.sbs,gaystream.click,go-streamer.net,vgfplay.xyz,elbailedeltroleo.site,tioplayer.com,listeamed.net,bembed.net,fslinks.org,embedv.net,vembed.net,vid-guard.com,v6embed.xyz,gaystream.online,vgembed.com##body > div[class]:empty
+pistona.xyz,gaystream.click,gsfjzmqu.sbs,go-streamer.net,vgfplay.xyz,elbailedeltroleo.site,tioplayer.com,listeamed.net,bembed.net,fslinks.org,embedv.net,vembed.net,vid-guard.com,v6embed.xyz,vgembed.com,vgfplay.com,fusevideo.net,erome.com,coolors.co,kropic.com##body > a[target="_blank"]
 pistonheads.com###leaderBoard
 pit.pl##.padded > div[id^="sas_"]
 pitax.pl###cookie
