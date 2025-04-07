@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-07 23:10:50（北京时间）
+! Version: 2025-04-08 00:11:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64437
+! Total count: 64445
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4185,6 +4185,7 @@
 @@/pub1/??$domain=banggo.com
 @@/pubads*theguardian.com
 @@/pubads_impl.js$domain=mytvsuper.com|tvb.com|tvbs.com.tw
+@@/remote_control.php?*&file=$stealth=referrer|ip
 @@/remote_control.php?file=$stealth=referrer|ip
 @@/rwd_cap.js$domain=ibf.tw
 @@/script/advert.js$domain=sunbtc.space|weatherx.co.in
@@ -13895,6 +13896,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=malaysianwireless.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=maos4alaw.online|net4you.xyz|day4news.com|businessnews-nigeria.com|fx4ever.com|msic.site|sealat.com|offeergames.online|pedalpower.online|spidergame.online|jolk.online|glo-n.online|loiz.store|stelux.online|gooltok.com|wisw.online|abda3.xyz|elbadr.xyz|poptech.online|foldrecipes.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mathdf.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mcappx.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=md5hashing.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mealcold.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mediastinger.com
@@ -22953,14 +22955,11 @@ bilibili.com##.banner-card
 bilibili.com##.bili-app
 bilibili.com##.bili-app-link-container
 bilibili.com##.bili-dyn-ads
-bilibili.com##.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-card__wrap
-bilibili.com##.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__wrap
 bilibili.com##.bili-video-card__wrap > a[href^="http"]:not([href*=".bilibili.com/"])
 bilibili.com##.btn-ad
 bilibili.com##.btn-ctnr
 bilibili.com##.clearfix.h5-download-bar
 bilibili.com##.container > div.bili-video-card.is-rcmd:not(:has(> *))
-bilibili.com##.container > div.feed-card:not(:has(> div > *))
 bilibili.com##.desktop-download-tip
 bilibili.com##.download-client-trigger.download-entry
 bilibili.com##.eva-banner
@@ -23628,6 +23627,9 @@ bolavip.com##.home-poll-block__ad
 bolavip.com##.primis-player-widget
 bolavip.com##.video-player-placeholder
 bolavip.com,worldsoccertalk.com##.boxbanner_container
+bold.dk###mofo
+bold.dk##.Article__right_column_banner
+bold.dk##div[class^="col"]:has(> div[class][style] > div[placement])
 boldsky.com###lightbox-popup-ad
 boldsky.com###nanoWdOut
 boldsky.com##.bd-header-ad
@@ -33805,6 +33807,7 @@ getmyuni.com##.squareDiv
 getnada.com###__layout > div > div > .pb-4.justify-center.w-full
 getpaidstock.com###anti_ab
 getpaidstock.com##.container > header.main-header + center
+getpczone.com##main > center > a[target="_blank"] > button
 getpocket.com##.\'syndication-ad\'
 getpocket.com##.syndication-ad
 getrad.co##.cookie-policy-modal
@@ -39738,6 +39741,7 @@ kapook.com##.fullbanner
 kapszulavadasz.hu###cook, .cook
 kapucyni.pl##.ofmcap-cookies, .top-screen
 karachicorner.com##.divimg
+karanpc.com##.entry-content div[style] > a[target="_blank"] > img
 karanpc.com##a[href^="http://bromson.com/redirect"]
 karaoke-lyrics.net##.ad_large_square
 karaoketexty.cz###sky_right_col
@@ -46764,6 +46768,8 @@ nude.hu##a[href*="/click/"]
 nudecams.xxx###adb
 nudeclap.com##.style75
 nudeclap.com##a[target="_blank"][rel="nofollow noopener"]
+nudemasta.com##a[href^="https://go.dzhjmp.com/?campaignId="]
+nudemasta.com##a[href^="https://go.smljmp.com/smartpop/"]
 nudespree.com###inplayer-banner
 nudespree.com##.main-menu > li > a[rel="nofollow"]
 nudespree.com##footer > .container > div[style*="height: 240px; background: white"]
@@ -51997,6 +52003,8 @@ rule34.xxx###halloween
 rule34.xxx##.desktop
 rule34.xxx##.nutaku-mobile
 rule34.xxx##a[href^="https://track.afcpatrk.com/"]
+rule34.xxx##iframe[src*="/aff_ad?"]
+rule34.xxx##span[data-nosnippet] > .a_list > a[target="_blank"]
 rule34hentai.net###main > div.blockbody
 rule34hentai.net##.blockbody > iframe[src^="https://rule34hentai.net/javascript_rotaor"]
 rule34porn.net,mangoporn.net##a[href="https://theporndude.com"]
@@ -52587,7 +52595,6 @@ seaheroquest.com##.tab-cookies
 seaheroquest.gr##.tab-cookies
 search.avast.com###AsbAdContainer
 search.b1.org##.adslabel
-search.bilibili.com##.video-list > div.col_3:has(> div.bili-video-card > div.bili-video-card__wrap > a[href*="&csource="])
 search.brave.com###shopping
 search.brave.com##.sponsored-unit_wrapper
 search.brave.com##div[data-advertiser-id]
@@ -54318,6 +54325,7 @@ sohu.com##div[id^="beans"]
 soignez-moi.ch##.gdpr-container
 sojson.com##._left_ad
 sojson.com##._right_ad
+sojson.com##.a-d-img
 sojson.com##.banner1
 sojson.com##.fly-hezuo
 sojson.com##a[href*=".upyun."]
@@ -57940,6 +57948,7 @@ tmall.com##.sn-mobile
 tmall.com##div[style*="z-index: 99999; display: block;"]
 tmearn.com##iframe[src*=".tmearn.com/"][style^="overflow:hidden;"]
 tmearn.net##.box-main > .row + .banner-captcha
+tmioe.com##.ekxhn
 tmioe.com##.hfggimg
 tmioe.com##.widget_image_img
 tmioe.com##.zttimg
@@ -61042,7 +61051,6 @@ wccftech.com##a.skin[rel^="sponsored"]
 wccftech.com##body .ads-container
 wccftech.com##button[rel="nofollow sponsored"]
 wccftech.com##div[data-amp-original-style] a[href][rel="sponsored"]
-wccftech.com,djmag.com,skysports.com,linuxinsider.com,pianistmagazine.com,meetdownload.com,gobankingrates.com,thestudentroom.co.uk,advertiserandtimes.co.uk,stylecraze.com,mulheresafoder.com,mapcarta.com,thetrendspotter.net,examtiger.com,gaana.com,etf.com,northern-scot.co.uk,pornwatchers.com,ftopx.com,dazeddigital.com,agame.com,beeg.com,blogto.com,eurogamer.net,eurogamer.pt,fijivillage.com,flashgames.ru,games.co.id,games.co.uk,gamesgames.com,giochi.it,gioco.it,girlsgogames.co.id,girlsgogames.co.uk,girlsgogames.com,girlsgogames.de,girlsgogames.fr,girlsgogames.it,girlsgogames.ru,globalrph.com,gry.pl,jetzspielen.de,jeu.fr,jeux.fr,juegos.com,juegosdechicas.com,moonbit.co.in,mousebreaker,mousebreaker.com,newsweek.com,ojogos.com.br,ourgames.ru,oyunskor.com,permainan.co.id,pornwatchers.com,spel.nl,spela.se,spelletjes.nl,spielen.com,stileproject.com,unogs.com,velonews.com,videogameschronicle.com##.advert
 wcjbb.com###frame2TVWk2
 wcjbb.com###frame37boCx
 wcjbb.com###frameo834m9
