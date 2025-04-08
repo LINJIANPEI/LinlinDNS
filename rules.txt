@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-08 15:10:31（北京时间）
+! Version: 2025-04-08 16:14:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64452
+! Total count: 64458
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -50517,6 +50517,7 @@ qdmm.com,qidian.com##.qdRead_client
 qdmm.com,qidian.com##.qdRead_redscan
 qdmnotizie.it###mvp-foot-logo
 qdmnotizie.it###mvp-wallpaper
+qds.it##div[style="min-height:110px!important; overflow: hidden;"]
 qhf168.com,qianhua.biz,qianhuaw.com###framelzHoHY
 qhnews.com###xwyc
 qianlima.com###bg
@@ -51899,10 +51900,13 @@ royalmail.com,heathrow.com,heathrowexpress.com,hsbc.co.uk,ti.com,nettbutikk.tele
 royalmailgroup.com###block-rmg-cookie-policy-cookie-policy
 royalora.hu###cc-holder
 royalroad.com##.portlet.text-center[style^="padding"][style*="!important"]
+royalroad.com##.portlet:has(> :is(span, div[style]) > a[target="_blank"])
 royalroad.com##.portlet:has(> span > a[target="_blank"])
 royalroad.com##.portlet[style^="padding-top: 5px !important;"]
 royalroad.com##.t-center-2
 royalroad.com##.text-center:has(> div[id^="Content_Top_"]:first-child + div[id^="Content_Top_"]:last-child)
+royalroad.com##:is(.text-center, .wide):has(> div[id^="Content_Top_"]:first-child + div[id^="Content_Top_"]:last-child)
+royalroad.com##a[href^="https://www.royalroad.com/"][href*="?campaign="][href*="&source="] > img
 royalroad.com##h6.bold.uppercase
 royalroadl.com##.portlet.text-center[style$="padding-top: 5px !important;"]
 rozrywka.radiozet.pl###onnetwork--html:empty
@@ -63895,10 +63899,12 @@ zb.zhaobiao.cn##div.box:nth-child(5) > div.advertisement.box:nth-child(2)
 zbiam.pl##.ct-shortcode
 zbiam.pl##a[target="_blank"] > img[alt^="reklama"]
 zbmath.org###cookie
+zbporn.com##.block-t > div[style*="height:"]
 zbporn.com##.box-f
 zbporn.com##.cs-link-holder
 zbporn.com##.head-spot
 zbporn.com##.p-ig
+zbporn.com##iframe[src^="https://sex-picsxxx.name/"]
 zbporn.com,pornid.xxx###sp-player
 zbporn.com,pornid.xxx##.spots-horizontal-title
 zbporn.com,zbporn.tv##.view-aside-block
