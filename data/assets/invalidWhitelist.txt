@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14814
+! Total count: 14813
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-04-07 20:47:07（北京时间）
+! Version: 2025-04-08 09:48:22（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -1786,6 +1786,7 @@
 @@/pub1/??$domain=banggo.com
 @@/pubads*theguardian.com
 @@/pubads_impl.js$domain=mytvsuper.com|tvb.com|tvbs.com.tw
+@@/remote_control.php?*&file=$stealth=referrer|ip
 @@/remote_control.php?file=$stealth=referrer|ip
 @@/rwd_cap.js$domain=ibf.tw
 @@/s_code_acdc.js$domain=adobe.com
@@ -9058,7 +9059,7 @@
 @@||api.apolomedia.com/static/libs/event-tracking.min.js$script
 @@||api.app.mobilelocker.eu/api/latest/application-environment/ahoy/events$~third-party
 @@||api.apple-mapkit.com^$stealth
-@@||api.asmr-200.com/api/$stealth=3p-auth
+@@||api.asmr-*.com/api/$stealth=3p-auth
 @@||api.athom.com^$domain=my.homey.app,stealth
 @@||api.babbel.io/gamma/v1/$ping,domain=babbel.com
 @@||api.babbel.io^$stealth
@@ -10006,7 +10007,6 @@
 @@||camsecure.co/httpswebcam/*.html$stealth
 @@||camsexvideo.net/js/advertising.js
 @@||camvideoshub.com/livejasmin.com.js$script
-@@||camvideosorg1.wpnrtnmrewunrtok.xyz/remote_control.php$domain=camvideos.org
 @@||camwhores.co^$generichide
 @@||canada.com/js/ooyala/comscore.js
 @@||canadacomputers.com/templates/ccnew/assets/js/jquery.browser-fingerprint-$~third-party
@@ -17279,6 +17279,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=malaysianwireless.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=maos4alaw.online|net4you.xyz|day4news.com|businessnews-nigeria.com|fx4ever.com|msic.site|sealat.com|offeergames.online|pedalpower.online|spidergame.online|jolk.online|glo-n.online|loiz.store|stelux.online|gooltok.com|wisw.online|abda3.xyz|elbadr.xyz|poptech.online|foldrecipes.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mathdf.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mcappx.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=md5hashing.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mealcold.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mediastinger.com
@@ -21683,8 +21684,6 @@
 @@||wpmienphi.com^$generichide
 @@||wpnrtnmrewunrtok.xyz/*preview/*/preview.jpg$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz/main/$image,domain=camwhores.tv
-@@||wpnrtnmrewunrtok.xyz/remote_control.php?file=
-@@||wpnrtnmrewunrtok.xyz/remote_control.php^$domain=camwhores.tv
 @@||wrestlinginc.com/wp-content/themes/unified/js/prebid.js$~third-party
 @@||wristreview.com^$generichide
 @@||writing.chegg.com/graphql$stealth,domain=citationmachine.net
