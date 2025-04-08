@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-08 07:09:30（北京时间）
+! Version: 2025-04-08 08:45:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64453
+! Total count: 64457
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5843,6 +5843,7 @@
 @@||api.apolomedia.com/static/libs/event-tracking.min.js$script
 @@||api.app.mobilelocker.eu/api/latest/application-environment/ahoy/events$~third-party
 @@||api.apple-mapkit.com^$stealth
+@@||api.asmr-*.com/api/$stealth=3p-auth
 @@||api.asmr-200.com/api/$stealth=3p-auth
 @@||api.athom.com^$domain=my.homey.app,stealth
 @@||api.babbel.io/gamma/v1/$ping,domain=babbel.com
@@ -51901,10 +51902,12 @@ royalmail.com,heathrow.com,heathrowexpress.com,hsbc.co.uk,ti.com,nettbutikk.tele
 royalmailgroup.com###block-rmg-cookie-policy-cookie-policy
 royalora.hu###cc-holder
 royalroad.com##.portlet.text-center[style^="padding"][style*="!important"]
+royalroad.com##.portlet:has(> span > a[target="_blank"])
 royalroad.com##.portlet:has(> span > a[target="_blank"][href="/p/r"])
 royalroad.com##.portlet[style^="padding-top: 5px !important;"]
 royalroad.com##.t-center-2
 royalroad.com##.t-center-3 > .text-center:has(> div[id^="Content_Top_"]:first-child + div[id^="Content_Top_"]:last-child)
+royalroad.com##.text-center:has(> div[id^="Content_Top_"]:first-child + div[id^="Content_Top_"]:last-child)
 royalroad.com##h6.bold.uppercase
 royalroadl.com##.portlet.text-center[style$="padding-top: 5px !important;"]
 rozrywka.radiozet.pl###onnetwork--html:empty
@@ -56671,6 +56674,7 @@ tft.op.gg##.content > div[class^="css-"] > div[class^="css-"] > div:is(.desktop,
 tft.op.gg##.css-16y0h5z
 tft.op.gg##.game-item > div[class^="css-"] > .tabs ~ div[class^="css-"]:has(> div[style*="min-height:"] > div[data-ad])
 tft.op.gg##div[class$="-wing"]:has(> div[style*="min-height:"] > div[data-ad])
+tft.op.gg##div[class^="flex-col justify-center items-center relative bg-darkpurple-800 rounded overflow-hidden box-border gap-1"]
 tft.op.gg##main .wrapper ~ .desktop:has(> div[style^="display"] > div)
 tft.op.gg##main > div[class] > div[class]:has(> div[style*="min-height:"] > div[data-ad])
 tftactics.gg##.wrapper-lb1
