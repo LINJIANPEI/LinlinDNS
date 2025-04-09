@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14818
+! Total count: 14816
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-04-09 09:48:27（北京时间）
+! Version: 2025-04-09 20:46:34（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -8536,7 +8536,6 @@
 @@||ads2.contentabc.com/ads?spot_id=$domain=8muses.com,xmlhttprequest
 @@||ads2.filescreed.buzz^$xmlhttprequest,domain=techcyan.com
 @@||ads2.opensubtitles.org/*www/delivery/afr.php?
-@@||ads3.xumo.com^$domain=2vnews.com
 @@||adsads.host-cdn.net/banners/$domain=maxstream.video
 @@||adsafeprotected.com/iasPET.$script,domain=independent.co.uk|reuters.com|wjs.com
 @@||adsafeprotected.com/vans-adapter-google-ima.js$script,domain=gamingbible.co.uk|ladbible.com|reuters.com|wjs.com
@@ -9111,6 +9110,7 @@
 @@||api.dropboxapi.com^$stealth
 @@||api.ebay-kleinanzeigen.de/api/ads/
 @@||api.eon.com/da/edg/cscs-account-api$stealth=3p-auth
+@@||api.evsports.opentv.com^$stealth=3p-auth,domain=eurovisionsport.com
 @@||api.foodthinkers.com/commercetools/graphql$stealth=3p-auth,domain=sageappliances.com
 @@||api.friends.ponta.jp/api/$~third-party
 @@||api.fw.tv/embed/$domain=filmibeat.com
@@ -11595,7 +11595,6 @@
 @@||dood.watch^$subdocument
 @@||dood.work^$generichide
 @@||dood.yt^$generichide
-@@||doodcdn.co^$domain=dood.la|dood.pm|dood.to|dood.ws
 @@||doods.pro^$generichide
 @@||doods.to^$generichide
 @@||doodstream.com^$font,image,script,stylesheet,xmlhttprequest,other,domain=dood.to|dood.watch
@@ -22010,7 +22009,6 @@
 @@||z.moatads.com/freewheel*/MoatFreeWheelJSPEM.js$domain=ncaa.com
 @@||z.moatads.com/freewheel*/MoatFreeWheelJSPEM.js$domain=pga.com
 @@||z.moatads.com/freewheel*/MoatFreeWheelJSPEM.js$domain=yahoo.com
-@@||z.moatads.com^$script,domain=standard.co.uk
 @@||zagl.info^$generichide
 @@||zagreb.info^$generichide
 @@||zaixianjisuan.com^$generichide
