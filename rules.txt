@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-09 23:12:53（北京时间）
+! Version: 2025-04-10 00:12:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64491
+! Total count: 64494
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -756,6 +756,7 @@
 /^duomeng\./
 /^dwtrack\./
 /^guanggao\./
+/^https:\/\/[a-z]{6,13}\.(cloud|xyz)\/[A-Za-z0-9_-]{48}[A-Z]{3}$/$document
 /^https:\/\/a\.[0-9a-f]{56}\.com$/
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$script,third-party,match-case,header=link:/adsco\.re\/>;rel=preconnect/
 /^https?:\/\/(.+?\.)?videogamesblogger\.com\/wp-content\/uploads\/.*[a-zA-Z0-9]{8,}\.*/$badfilter
@@ -18667,6 +18668,7 @@
 @@||www1.pcauto.com.cn^
 @@||www1.pconline.com.cn^
 @@||www3.doubleclick.net/|$xmlhttprequest,domain=hentaihaven.xxx
+@@||www3.doubleclick.net^$domain=classace.io
 @@||www3.doubleclick.net^$domain=missavtv.com
 @@||wwwcache.wral.com/presentation/v3/scripts/providers/analytics/ga.js$~third-party
 @@||wwwimage-tve.cbsstatic.com^
@@ -25694,6 +25696,7 @@ clark.center##clark-cookies
 clasebcn.com###cookies
 clashofstats.com##.adContainer_Y58xc
 clashroyalearena.com##a[href="https://brawlstarsup.com/"][rel="nofollow external"]
+classace.io##div[class^="GoogleInArticleAdsenseContainer"]
 classcentral.com##.cmpt-ad
 classcentral.com##body .cmpt-ad
 classcroute.com##.alert-info, .alert-warning, .alert-box
