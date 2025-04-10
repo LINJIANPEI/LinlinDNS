@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-10 07:09:24（北京时间）
+! Version: 2025-04-10 08:45:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64495
+! Total count: 64503
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4135,6 +4135,7 @@
 @@/invoke.js$domain=emurom.net
 @@/iplookup.$domain=cankaoxiaoxi.com|dongfeng-nissan.com.cn|huomao.com|loldk.com|sina.com.cn
 @@/jannah/*js/advertisement.js|$~third-party
+@@/javascripts/*ads-prebid/prebid-ads*.js^$script,domain=decompiler.com
 @@/jquery/*$domain=dm530.net|sobooks.cc
 @@/jquery/*$domain=sobooks.cc
 @@/js/*.js?ad*=popup&ads=DisplayAd$~third-party,script,domain=streamhide.to|ahvsh.com|streamwish.to|streamxxx.online|mwish.pro|embedwish.com|leakslove.net|awish.pro|wishfast.top|sfastwish.com|wolfstream.tv|vidhidevip.com|rubystm.com
@@ -13077,6 +13078,7 @@
 @@||nmac.to^$generichide
 @@||nmobi.kuwo.cn^$important
 @@||nnaa66.xyz^$generichide
+@@||nnxas.bustago.or.kr^$stealth=dpi
 @@||noahedu.com/ad/$~third-party
 @@||noahedu.com/advertising/
 @@||nobinbarta.com^$generichide
@@ -23387,6 +23389,7 @@ blockchair.com##.flow:has(> footer > a[href="https://blockchair.com/advertise"])
 blockchair.com##.native-sentence
 blockchair.com##.okane-top
 blockchair.com##.top-buttons-wrap
+blockchair.com##.ᴏkane-top__list
 blockchair.com##div[class*="adv-buttons-"]
 blockchair.com##div[class*="top-buttons-"]
 blocket.se##.placement_panorama
@@ -26396,6 +26399,8 @@ com.tw###space > a[target="_blank"] > img[width="160"]
 comarsport.com###cooking
 comau.com##.cookie__wrap
 combot.org###stickerset-list > div.tw-grid > a[target="_blank"]:not([href^="https://t.me/"])
+comdotgame.com##div[style^="text-align:"]:has(> [title="Hiqqu"])
+comdotgame.com##main div[style*="height:90px"][style*="overflow:hidden"]:not([class]):not([id])
 comedy.co.uk##.promo-wrapper
 comedy.com##.ad-placement-wrapper
 comedy.com##.advertisement-video-slot
@@ -47692,6 +47697,8 @@ osiander.de###onlyCookie
 osmanonline.co.uk##.stream-item-top > a[target="_blank"] > img
 osmanonline.co.uk,blisseyhusband.in##.adfoxly-wrapper
 osmanonline.co.uk,pridesource.com,fuxdeluxe.com,getintocourse.com,nationalchronicle.in,desiflix.club,techspite.com,aceofhacking.com,writeforreaders.com,softcobra.com,naijatechguide.com,freehtml5.co,copyblogger.com###custom_html-6
+ososedki.com###masonry > div.thumbs:has(> center > noindex > div[style^="min-height:"])
+ososedki.com##.grid-more > div.thumbs-more:has(> center > noindex > div[style^="min-height:"])
 osradar.com##a[href="http://insiderapps.com/"]
 oss-cn-hangzhou.aliyuncs.com##A.hm_item[href^='https://tcs-devops.aliyuncs.com/thumbnail/']
 osservatoriocalcioitaliano.it###dc-cnb-container
@@ -62063,6 +62070,7 @@ worlddata.info##.adtg
 worldfree4u-lol.online##img[width="468"][height="90"]
 worldhistory.org##.pubexchange_module
 worldhistory.org$$script:contains(adShield)
+worldhistory.org$$script[tag-content="adShield"]
 worldjournal.com###privacy-agreement
 worldjournal.com###wrapper > #popup-banner
 worldjournal.com##.banner-zone
