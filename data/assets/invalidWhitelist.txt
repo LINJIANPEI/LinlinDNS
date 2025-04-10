@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14816
+! Total count: 14814
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-04-09 20:46:34（北京时间）
+! Version: 2025-04-10 09:48:24（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -1733,6 +1733,7 @@
 @@/invoke.js$domain=emurom.net
 @@/iplookup.$domain=cankaoxiaoxi.com|dongfeng-nissan.com.cn|huomao.com|loldk.com|sina.com.cn
 @@/jannah/*js/advertisement.js|$~third-party
+@@/javascripts/*ads-prebid/prebid-ads*.js^$script,domain=decompiler.com
 @@/jquery/*$domain=sobooks.cc
 @@/js/*.js?ad*=popup&ads=DisplayAd$~third-party,script,domain=streamhide.to|ahvsh.com|streamwish.to|streamxxx.online|mwish.pro|embedwish.com|leakslove.net|awish.pro|wishfast.top|sfastwish.com|wolfstream.tv|vidhidevip.com|rubystm.com
 @@/js/*.js?ads*1&AdType=1&$~third-party,script,domain=streamhide.to|ahvsh.com|streamwish.to|streamxxx.online|mwish.pro|embedwish.com|leakslove.net|awish.pro|wishfast.top|sfastwish.com|wolfstream.tv|vidhidevip.com|rubystm.com
@@ -9955,7 +9956,6 @@
 @@||c.amazon-adsystem.com/aax2/apstag.js?_=$domain=skill4ltu.eu
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=atozmath.com
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$xmlhttprequest,domain=client.falixnodes.net
-@@||c.aps.amazon-adsystem.com/apstag.js$domain=ign.com
 @@||c.betrad.com/geo/ba.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|infinitiev.com|montrealgazette.com|saveur.com
 @@||c.betrad.com/geo/h1.js$domain=video.corriere.it
 @@||c.betrad.com/pub/c/*.js$domain=video.corriere.it
@@ -10527,8 +10527,6 @@
 @@||cdn.wwads.cn/js/makemoney.js$domain=docsmall.com
 @@||cdn.wwads.cn/js/makemoney.js$domain=nodejs.cn
 @@||cdn.yamibuy.net^$stealth
-@@||cdn.ziffstatic.com/pg/ign.js$domain=ign.com
-@@||cdn.ziffstatic.com/pg/ign.prebid.js$domain=ign.com
 @@||cdn1.img4kora.com/assets/js/clever_ads.js
 @@||cdn13.com/*.mp4?$domain=xhamster.com
 @@||cdn13.com/dash$domain=xhamster.com,stealth
@@ -11373,7 +11371,6 @@
 @@||deals.nextag.com^*/ClickTracker.jsp
 @@||debenhams.com/foresee/foresee-trigger.js
 @@||decomaniacos.es^$generichide
-@@||decompiler.com/javascripts/ads-prebid/prebid-ad*.js
 @@||decorardicas.com.br^$stealth
 @@||decrypt.day^$generichide
 @@||deep-vision.cloud/graphql$stealth=3p-auth,domain=doveze.cz
@@ -14484,7 +14481,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=html5.gamedistribution.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=humix.com|mistergadget.tech
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=hungama.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ign.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=iheartradio.ca
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ilmeteo.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=in.gr
@@ -16563,6 +16559,7 @@
 @@||nmac.to/cdn-cgi/pe/bag2?r[]=*histats.com
 @@||nmac.to^$generichide
 @@||nnaa66.xyz^$generichide
+@@||nnxas.bustago.or.kr^$stealth=dpi
 @@||noahedu.com/ad/$~third-party
 @@||noahedu.com/advertising/
 @@||nobinbarta.com^$generichide
@@ -21759,6 +21756,7 @@
 @@||www.youtube.com^$generichide
 @@||www.zee5.com^$stealth,domain=zee5.com
 @@||www3.doubleclick.net/|$xmlhttprequest,domain=hentaihaven.xxx
+@@||www3.doubleclick.net^$domain=classace.io
 @@||www3.doubleclick.net^$domain=missavtv.com
 @@||wwwcache.wral.com/presentation/v3/scripts/providers/analytics/ga.js$~third-party
 @@||wwwstream.pro^$subdocument,stealth
