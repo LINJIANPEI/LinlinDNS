@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-11 20:18:25（北京时间）
+! Version: 2025-04-11 21:20:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64504
+! Total count: 64515
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -28572,6 +28572,7 @@ distractify.com##aside > div[class*=" "]:has(> div[class*=" "] > .lngtd-dynamic-
 distractify.com##div[style="font-size:x-small;text-align:center;padding-top:10px"]
 distractify.com##main > div[class*=" "]:has(> .lngtd-dynamic-inarticle)
 distractify.com,greenmatters.com,inquisitr.com,okmagazine.com,radaronline.com##div[style="font-size:x-small;text-align:center;padding-top:10px"]
+distractify.com,inquisitr.com##.sc-fTZrbU
 distractify.com,inquisitr.com,radaronline.com##.sc-fTZrbU
 distri.cz##body > div:not([id]):not([class])
 distritopostal.es###ecl-container-box
@@ -33523,6 +33524,7 @@ gaytiger.com##.inner-box-container > .row > center
 gaytxxx.com##.index-page > div.wrapper > div.row + div[class]
 gaytxxx.com##.video-content > div[class] + div[class]:last-child
 gaytxxx.com##.wrapper + div[style="margin-top: 0px;"]
+gaytxxx.com##div[class^="video-conten"] > div[class] + div[class]:last-child
 gayvegas.com###background
 gayvegas.com,geekhistory.com,looktothestars.org,nintandbox.net,plurk.com,rockpasta.com,thebarentsobserver.com,tolonews.com,webtor.io##.adsense
 gayvideo.me,gaypornlove.net,pvstreams.com,evolutionofbodybuilding.net,embetronicx.com,analyticsinsight.net,firesticktricks.com##.sgpb-popup-dialog-main-div-wrapper
@@ -51948,6 +51950,7 @@ royaledudes.io##.gifts
 royalmail.com,heathrow.com,heathrowexpress.com,hsbc.co.uk,ti.com,nettbutikk.telenor.no,epson.com,lulu.com,3mpolska.pl,bosch-professional.com,centrum24.pl,cisco.com,command.pl,e.huawei.com,lavazzacoffee.pl,logitech.com,logitechg.com,post-it.pl,ups.com,vacansoleil.pl###__tealiumGDPRecModal
 royalmailgroup.com###block-rmg-cookie-policy-cookie-policy
 royalora.hu###cc-holder
+royalroad.com##.dKKumhSnWiFq75vPUVtmTanQ:has(a[href^="https://www.royalroad.com/a/r?campaign="]:not([href*="&url=https%3A%2F%2Fwww.royalroad.com"]))
 royalroad.com##.portlet.text-center[style^="padding"][style*="!important"]
 royalroad.com##.portlet:has(> .bold + a[target="_blank"])
 royalroad.com##.portlet:has(> :is(span, div[style]) > a[target="_blank"])
@@ -55746,6 +55749,8 @@ suzukimoto.pt##.policy-window
 svapoworld.com###policy-alert
 sveip.no##.kake_wrap
 svensktnaringsliv.se###warning
+svetandroida.cz##.bg-center[class*="img/ads.png"]
+svetandroida.cz##.sveta-target[data-sveta-trackid]:has(> .sveta-adlabel)
 svethardware.cz##.skyscraper
 svethardware.cz##div[data-rab*="svethardware.cz/article.jsp"]
 svetmobilne.cz###main > article ~ .art-bottom
@@ -58469,6 +58474,8 @@ transtxxx.com##.index-page > .wrapper > div[class]:has(> div[class] > div[id][cl
 transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
 transtxxx.com##.video-content > div + div
 transtxxx.com##.video-content div[class]:has(> div[class] > div[id][class] > noscript)
+transtxxx.com##div[class^="video-conten"] > div + div
+transtxxx.com##div[class^="video-conten"] div[class]:has(> div[class] > div[id][class] > noscript)
 transtxxx.com,txxx.com##.suggestion
 traum-pizza.de###gc_message_bar_open, #gc_message_bar
 travelbags.nl##.snackbar-container
@@ -59189,6 +59196,9 @@ txxx.com##.sugggestion
 txxx.com##.video-content > div[class] > div[class]:has(> a[href^="https://tubecorporate.com/"])
 txxx.com##a[href^="http://bongacams.com"]
 txxx.com##div.text > a
+txxx.com##div[class="video-conten"] > div:has(> div > a[href="/signin/"])
+txxx.com##div[class^="sugggest"]
+txxx.com##div[class^="video-conten"] > div[class] > div[class]:has(> a[href^="https://tubecorporate.com/"])
 txxx.com,txxx.tube##.video-content a[href="#"]
 txxx.com,txxx.tube##.video-content a[href="#"] + div.text
 txxxporn.tube##.iwhhmigmngx
@@ -60370,6 +60380,7 @@ vipleague.bz##.text-warning
 vipleague.bz##a[onclick="removeOverlayHTML();"]
 vipleague.bz##a[onclick="removeOverlayHTML();"]+div
 vipleague.bz##div.my-1[style="display: none !important;"] ~ .my-1
+vipleague.im##.btn[data-openuri*="/4/"][data-open="_blank"]
 vipleague.im##iframe[src^="//affelseaeinera.org"]
 vipleague.lc,vipbox.lc,worldcuplive.stream##.text-center > button.btn[data-longurli][data-open="_blank"]
 vipleague.pw,vipbox.im,vipleague.bz##div.text-center > button[data-open="_blank"]
