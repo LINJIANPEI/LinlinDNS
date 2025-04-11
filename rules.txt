@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-11 23:10:42（北京时间）
+! Version: 2025-04-12 00:12:10（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64519
+! Total count: 64515
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -20470,9 +20470,11 @@ android.com.pl##div[class^="welcome-screen" i]
 android1pro.com##.ai_widget
 androidaba.com##.sidebar-content > #media_image-2
 androidaba.com##.sidebar-content > #widget_sp_image-2
+androidadult.com##.adblock-wrapper
 androidadult.com##.adswait
 androidadult.com##.headerlinks
 androidadult.com##.navitem.color-3
+androidadult.com##a[aria-label="goto ads"]
 androidadult.com##a[href="https://tk007.fun/"]
 androidadult.com##center > a[href*="utm"] > img
 androidadult.com,homemoviestube.com##[href^="https://aoflix.com/Home"]
@@ -33523,7 +33525,6 @@ gaystream.pw##.entry-bottom-ads
 gaytiger.com##.content-inner-col > .aside-itempage-col
 gaytiger.com##.inner-box-container > .row > center
 gaytxxx.com##.index-page > div.wrapper > div.row + div[class]
-gaytxxx.com##.video-content > div[class] + div[class]:last-child
 gaytxxx.com##.wrapper + div[style="margin-top: 0px;"]
 gaytxxx.com##div[class^="video-conten"] > div[class] + div[class]:last-child
 gayvegas.com###background
@@ -58475,8 +58476,6 @@ transtv.co.id###bannerpop
 transtv.co.id##.banner__MGID
 transtxxx.com##.index-page > .wrapper > div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
 transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
-transtxxx.com##.video-content > div + div
-transtxxx.com##.video-content div[class]:has(> div[class] > div[id][class] > noscript)
 transtxxx.com##div[class^="video-conten"] > div + div
 transtxxx.com##div[class^="video-conten"] div[class]:has(> div[class] > div[id][class] > noscript)
 transtxxx.com,txxx.com##.suggestion
@@ -59196,14 +59195,11 @@ txxx.com##.nav-left > a.nav-hover[target="_blank"]
 txxx.com##.polumlluluoopp
 txxx.com##.pplayer div.jw-title-secondary:has(a[target="_blank"])
 txxx.com##.sugggestion
-txxx.com##.video-content > div[class] > div[class]:has(> a[href^="https://tubecorporate.com/"])
 txxx.com##a[href^="http://bongacams.com"]
 txxx.com##div.text > a
 txxx.com##div[class="video-conten"] > div:has(> div > a[href="/signin/"])
 txxx.com##div[class^="sugggest"]
 txxx.com##div[class^="video-conten"] > div[class] > div[class]:has(> a[href^="https://tubecorporate.com/"])
-txxx.com,txxx.tube##.video-content a[href="#"]
-txxx.com,txxx.tube##.video-content a[href="#"] + div.text
 txxxporn.tube##.iwhhmigmngx
 txxxporn.tube##.mangxgxnnaa
 txxxporn.tube##.video-videos-slider + div[class] + div[class]
