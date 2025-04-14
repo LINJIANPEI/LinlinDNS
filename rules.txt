@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-14 17:11:49（北京时间）
+! Version: 2025-04-14 18:11:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64378
+! Total count: 64380
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15483,6 +15483,7 @@
 @@||s.click.taobao.com^$important
 @@||s.click.taobao.com^$popup
 @@||s.click.tmall.com^$important
+@@||s.confluency.site/*.com/4/js/$script
 @@||s.graphiq.com/ad?_
 @@||s.img.mix.sina.com.cn^$important
 @@||s.jacquieetmichelelite.com/assets/popunder.js
@@ -38985,6 +38986,7 @@ javstream.us,javstream.co##.kumpulads-side
 javthe.com##footer div[style^="height: 250px;overflow: hidden;"]
 javtiful.com###livecams
 javtiful.com###showerm
+javtiful.com##.col.pb-3:has(.badge.bg-danger)
 javtiful.com##.dontblockme
 javtiful.com##.jk-money
 javtiful.com##.jtmoney-invideo
