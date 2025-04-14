@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14817
+! Total count: 14821
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-04-14 09:53:16（北京时间）
+! Version: 2025-04-14 20:46:56（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -7862,6 +7862,7 @@
 @@||*.anjuke.com$important
 @@||*.php?id=$subdocument,stealth=referrer,domain=dubznetwork.com
 @@||*.yt2api.com/api/$domain=api.ytapi.cc,stealth=referrer
+@@||*hubst.guru/uploads/$stealth=referrer
 @@||*optout$domain=smartadserver.com
 @@||*optout$domain=youronlinechoices.com
 @@||*status$domain=youronlinechoices.com
@@ -11561,7 +11562,6 @@
 @@||docs.expo.io/*/static/*/pages/versions/latest/sdk/*.js$domain=docs.expo.io
 @@||docs.google.com/*/viewdata$~third-party
 @@||docs.google.com^$generichide
-@@||docs.telemetry.mozilla.org^$domain=docs.telemetry.mozilla.org
 @@||docs.woopt.com/wgact/$image,~third-party,xmlhttprequest
 @@||doctor-groups.com^$generichide
 @@||doda.jp/brand/ad/img/icon_play.png
@@ -12465,6 +12465,7 @@
 @@||g.adspeed.net/ad.php?do=detectadblocker$domain=crewbase.net|crewus.net|shinchu.net|thumb8.net|thumb9.net
 @@||g.alicdn.com/??*/criteo
 @@||g.alicdn.com/AWSC/et/$domain=ele.me
+@@||g.alicdn.com/alilog/mlog/aplus_v2.js$domain=world.taobao.com
 @@||g.alicdn.com^*/banner_ad_
 @@||g.doubleclick.net/aclk?$popup,domain=bodas.com.mx|bodas.net|casamentos.com.br|casamentos.pt|casamiento.com.uy|casamientos.com.ar|mariages.net|matrimonio.com|matrimonio.com.co|matrimonio.com.pe|matrimonios.cl|pianobuyer.com|weddingspot.co.uk|zillow.com
 @@||g.doubleclick.net/gampad/ads$xmlhttprequest,domain=bloomberg.com|chromatographyonline.com|formularywatch.com|journaldequebec.com|managedhealthcareexecutive.com|medicaleconomics.com|physicianspractice.com
@@ -18785,6 +18786,7 @@
 @@||s.adadapter.netzathleten-media.de/*/naMediaAd.js$domain=wooco.de
 @@||s.bstarstatic.com/ogv/subtitle/$stealth
 @@||s.click.taobao.com^$popup
+@@||s.confluency.site/*.com/4/js/$script
 @@||s.go-mpulse.net/boomerang/$domain=royalmail.com
 @@||s.graphiq.com/ad?_
 @@||s.imgur.com/min/px.js$domain=imgur.com
@@ -19157,6 +19159,7 @@
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=manchestereveningnews.co.uk
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=purepeople.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=scotsman.com
+@@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=theglobeandmail.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=worldsurfleague.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl_page_level_ads.js$domain=filext.com
 @@||securepubads.g.doubleclick.net/pagead/ppub_config$domain=downdetector.in
@@ -19218,6 +19221,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=techcyan.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=telex.hu
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tetrads.io
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=theglobeandmail.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tractorsupply.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=usatoday.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=vogue.ru

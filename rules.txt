@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-14 20:18:29（北京时间）
+! Version: 2025-04-14 21:22:21（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64381
+! Total count: 64399
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4465,6 +4465,7 @@
 @@||*.xn--ngstr-lra8j.com^
 @@||*.yt2api.com/api/$domain=api.ytapi.cc,stealth=referrer
 @@||*ad*.ksyungslb.com^
+@@||*hubst.guru/uploads/$stealth=referrer
 @@||*m.chenzhongtech.com^
 @@||*optout$domain=smartadserver.com
 @@||*optout$domain=youronlinechoices.com
@@ -15832,6 +15833,7 @@
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=manchestereveningnews.co.uk
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=purepeople.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=scotsman.com
+@@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=theglobeandmail.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=worldsurfleague.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl_page_level_ads.js$domain=filext.com
 @@||securepubads.g.doubleclick.net/pagead/ppub_config$domain=downdetector.in
@@ -15887,6 +15889,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=techcyan.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=telex.hu
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tetrads.io
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=theglobeandmail.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tractorsupply.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=vogue.ru
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=whatgame.xyz
@@ -25505,6 +25508,7 @@ cieem.net##body > div:not([id]):not([class])
 ciekawostkihistoryczne.pl##.page-container > a[href^="https://www.empik.com/"][target="_blank"]
 ciekawostkihistoryczne.pl##.placeholderAds
 ciekawostkihistoryczne.pl##.wallpaper__link[target="_blank"]
+cielotv.it##div[type="atf-btf"]
 cifas.org.uk###cookies
 cifempleo.com###cookies
 ciiradio.com,hapskorea.com,thetruthwins.com##[height="300"]
@@ -31366,6 +31370,7 @@ fettspielen.de###cwarn
 feudalwars.net,shadowexplorer.com###skyscraper
 fextralife.com###content-add-a
 fextralife.com##div[class="container"][style="height:120px"][align="center"]
+ffcv.es###totop + div[id][class*=" "]
 fffdm.com##[style^="width"][style*="height"]
 ffmovies.ru##a[href^="https://ffmovies.ru/stream/"][target="_blank"]
 ffonts.net###sticky-popup
@@ -36894,6 +36899,7 @@ icon-icons.com##.bsa-placeholder
 icon-icons.com##.bsa-placeholder.fondo-blanco
 icon-icons.com##.istock-container
 icon-icons.com##div[id^="bsa-placeholder-search"]
+iconeye.com###topheaderadvert
 iconfinder.com###banner_upgrade_prompt
 iconfinder.com##.istockphoto-placeholder
 iconfinder.com##a[data-tracking^="iStock"]
@@ -47052,6 +47058,7 @@ okpedia.it##.privacy
 okpedia.org##.privacy
 okpeliz.com,ftuapps.dev,onehack.us###abDetectorModal
 oksofas.es##.jCookie
+okxxx1.com,ok.xxx##body .top_spot:not(#style_important)
 olafneumann.org###rg_container_cookie
 olavshallen.no###cookies
 olawa24.pl##.place-items-center > div > a[href^="https://olawa24.pl/redirect?token="][rel]
@@ -48576,6 +48583,14 @@ picnic.app##.cookies, #modal
 picoxr.com###pico_website > section:first-of-type:not(:only-of-type)
 picrew.me##.play-Imagemaker_Footer
 picrew.me##.st-Terms_Wrapper
+pics-x.com###footer-schmads
+pics-x.com###footer-video-desktop-banner
+pics-x.com###gallery-header-schmad
+pics-x.com###slider
+pics-x.com##.navbar[aria-label="additional navigation"]
+pics-x.com##.player-schmad
+pics-x.com##.schmad-container
+pics-x.com##a[href^="https://pics-x.com/marketing/"]
 pics4upload.com,imgsen.com##a[href="https://besthotgayporn.com/"] > img
 picsearch.com###adTopContainer
 picshick.com,imagetwist.com,imagexport.com###rang2
@@ -51693,6 +51708,7 @@ roblox.com###Skyscraper-Abp-Right
 roblox.com##.abp
 roblox.com##.abp-spacer
 roblox.com##.adp-gpt-container
+roblox.com##.game-sort-carousel-wrapper:has(> .game-sort-header-container > .container-header > a[href*="/Sponsored?"])
 roblox.com##.in-game-search-ad
 roblox.com##.leaderboard-abp
 roblox.com##.profile-ads-container
@@ -53550,6 +53566,7 @@ sixsigmastudyguide.com,topnewsshow.com###secondary > aside#custom_html-4
 sixt-neuwagen.de##.user-consent
 sixt.co.uk##.cro-background-shadow
 sixthcontinent.com##.MuiSnackbar-root
+sixyin.com##.custom-html-widget > a[target="_blank"] > img
 siz.tv###koddostu-com-adblocker-engelleme
 sizzle.co.uk##.alert, #alert
 sj.no###root header nav + .MuiBox-root, .experiencefragment > .MuiContainer-root:first-child
@@ -60223,6 +60240,7 @@ vindeurgent.ro##.bottom_notice
 vinepair.com##.pre-footer-ad-container
 vinidex.com.au###tde-gdpr
 vinmec.com###banner-middle
+vinstartheme.com##.AdBlocker
 vinstartheme.com,pngitem.com,clipartkey.com##.adhtml
 vintag.es###HTML7
 vintag.es###sticky_ads
