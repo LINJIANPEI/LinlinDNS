@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-15 10:24:22（北京时间）
+! Version: 2025-04-15 11:31:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64409
+! Total count: 64411
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -48794,6 +48794,7 @@ pixiv.net##iframe[height="520"][name="expandedFooter"]
 pixiv.net##iframe[src^="https://pixon.ads-pixiv.net/"]
 pixiv.net##iframe[width="300"][height="250"]
 pixiv.net##li.platform-pc
+pixiv.net##li:has([id^="ads"])
 pixiv.net##ul.pixiv.tri
 pixivision.net###ads-article-rectangle
 pixiz.com###adblock-detected
@@ -52446,6 +52447,7 @@ sciencefocus.com##.promotion-cards
 sciencenet.cn##.mbanner
 sciencenet.cn##.rbanner
 sciencenews.org##.ad-block-leaderboard__freestar___Ologr
+sciencenews.org##.ad-block__mq-wrapper
 sciencenews.org##.from-nature-index__wrapper___2E2Z9
 sciencenews.org##p:has-text(Sponsor Message)
 sciencenews.org##section[class^="ad-block-leaderboard__wrapper"]
