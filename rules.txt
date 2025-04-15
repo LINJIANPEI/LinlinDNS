@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-15 19:08:56（北京时间）
+! Version: 2025-04-15 20:18:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64423
+! Total count: 64428
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1065,6 +1065,7 @@
 /delivery/apu.php$script,subdocument
 /delivery/avw.php$script,subdocument
 /delivery/fc.php$script,subdocument
+/delivery/lg.php$image,script,subdocument
 /delivery/lg.php$script,subdocument
 /detroitchicago/anaheim.js$script
 /detroitchicago/augusta.js$script
@@ -33612,13 +33613,6 @@ geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[i
 geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-box"]
 geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-gora_"]
 geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-rectangle"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl###ad-adsearch
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl###ad-dol_srodek
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##.ids-ads-base
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-banner_"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-box"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-gora_"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-rectangle"]
 geekwire.com###engineering-centers-sidebar
 geekwire.com###geekwork
 geekwire.com###startup-resources-sidebar
@@ -37950,6 +37944,8 @@ interez.sk###rklm-pod-clankom
 interez.sk##.sidebar > #custom_html-2
 interface.com###myModal
 interglot.com,sodapdf.com,stopmalvertising.com##div[style^="width:728px;"]
+interia.pl###ad-adsearch
+interia.pl###ad-dol_srodek
 interia.pl###desktopPhSitebranding
 interia.pl##.ad
 interia.pl##.ad + .brief-placeholder-list
@@ -37957,6 +37953,7 @@ interia.pl##.ad#feed_grupa
 interia.pl##.ad-container
 interia.pl##.adStandardTop
 interia.pl##.dol_srodek_ads_box
+interia.pl##.ids-ads-base
 interia.pl##.main-sidebar > div[style="height: 600px;"] > div[style^="max-width:"][style*="position: sticky"]
 interia.pl##.main-sidebar a[href][target="_blank"][onclick*="&creation="]
 interia.pl##.wiadspec-ul > .wiadspec-li:has(> a[href^="https://ad.doubleclick.net/"])
@@ -37967,6 +37964,10 @@ interia.pl##body .ad-rectangle:not(#style_important)
 interia.pl##div[class*="ad ad_"]
 interia.pl##div[class^="crt-"]
 interia.pl##div[data-component^="ad-"]
+interia.pl##div[id^="ad-banner_"]
+interia.pl##div[id^="ad-box"]
+interia.pl##div[id^="ad-gora_"]
+interia.pl##div[id^="ad-rectangle"]
 interia.pl##div[id^="crt-"]
 interia.pl##div[width] > div[class^="sc"][style*="overflow: auto;"]:has(> #feed_grupa:only-child > div > .ad)
 interia.pl##section > div[style^="padding-top: 25px;border-top:"]:has(> a[href][target="_blank"][onclick*="&creation="] > img[onload*="onDetected"])
@@ -48788,6 +48789,7 @@ pixiv.net##.ad-mobile-anchor
 pixiv.net##.ads_anchor
 pixiv.net##.banner-ad-footer-scale
 pixiv.net##.fanbox-container
+pixiv.net##.list-none:has(> div > [id^="adsdk"])
 pixiv.net##.multi-ads-area
 pixiv.net##.premium-lead
 pixiv.net##.premium-lead-new-t-info-home-top
@@ -53590,6 +53592,7 @@ sixt-neuwagen.de##.user-consent
 sixt.co.uk##.cro-background-shadow
 sixthcontinent.com##.MuiSnackbar-root
 sixyin.com##.custom-html-widget > a[target="_blank"] > img
+sixyin.com##.widget_custom_html
 siz.tv###koddostu-com-adblocker-engelleme
 sizzle.co.uk##.alert, #alert
 sj.no###root header nav + .MuiBox-root, .experiencefragment > .MuiContainer-root:first-child
@@ -53691,9 +53694,11 @@ slashdot.org###announcement
 slashdot.org###cloud
 slashdot.org###main-nav-badge-link
 slashdot.org###slashdot_deals
+slashdot.org##.ad-blocked-newsletter
 slashdot.org##.adwrap
 slashdot.org##.article-nel-12935
 slashdot.org##.deals-wrapper
+slashdot.org##.fhitem-story.fhitem:has-text(Sponsored Content)
 slashfilm.com###primis-container
 slashfilm.com##.under-art
 slashfilm.com,healthdigest.com###primis-container
