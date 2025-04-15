@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-15 17:12:06（北京时间）
+! Version: 2025-04-15 18:11:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64413
+! Total count: 64423
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15678,6 +15678,7 @@
 @@||sealserver.trustwave.com/seal.js$domain=zoom.us
 @@||seamanmemories.com^$generichide
 @@||search.brave.com/search$xmlhttprequest
+@@||search.brave.com^$content
 @@||search.kuwo.cn^
 @@||search.sogoucdn.com^
 @@||search.spotxchange.com/vmap/*&content_page_url=www.bsfuji.tv$xmlhttprequest,domain=imasdk.googleapis.com
@@ -33611,6 +33612,13 @@ geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[i
 geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-box"]
 geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-gora_"]
 geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-rectangle"]
+geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl###ad-adsearch
+geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl###ad-dol_srodek
+geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##.ids-ads-base
+geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-banner_"]
+geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-box"]
+geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-gora_"]
+geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl,wydarzenia.interia.pl##div[id^="ad-rectangle"]
 geekwire.com###engineering-centers-sidebar
 geekwire.com###geekwork
 geekwire.com###startup-resources-sidebar
@@ -43974,6 +43982,7 @@ mobanwang.com##.g960
 mobanwang.com##.teagg
 mobdi3ips.com###ads-top
 mobdi3ips.com##.adsbygoogle
+mobdisc.com##a[class="b-download__button"][href^="//"][rel]
 mobidrome.com##.mobidrome-websiteStatisticsOptBox
 mobifap.com###container > li[class="box"][style*="background:"]
 mobifap.com,ok.xxx##.bn
@@ -46778,6 +46787,7 @@ nung2uhd.com,newseries-hd.com,movie22hd.com,moviehdfree.net##.banner
 nunido.de###klaro
 nuovatecnodelta.it##body > div[style]
 nur-positive-nachrichten.de###klaro
+nurumayu.net##.item:has(> iframe[srcdoc*="https://j.zucks.net.zimg.jp/"])
 nurumayu.net,twidouga.net##.item_w360
 nutraceuticalsworld.com###mainContentBodyDiv > hr.mag-border
 nutraceuticalsworld.com##div[id^="main-content-ad-"] + hr
