@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-15 07:09:33（北京时间）
+! Version: 2025-04-15 08:48:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64406
+! Total count: 64412
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10841,6 +10841,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sbs.com.au
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=shares.enetres.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=shotstv.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=skai.gr
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=slowopodlasia.pl
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=smashers.io
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sondakika.com
@@ -10944,6 +10945,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news8000.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=nick.com|nickjr.com|cc.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=play.virginmediatelevision.ie
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=skai.gr
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=southpark.*|southparkstudios.*
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=timesnownews.com
@@ -45455,6 +45457,7 @@ narkive.com##.post_wrapper div[onimpression="nk_playbuzz_impression"]
 narkive.com##a[href^="https://rfnm.io/?"]
 narkive.com##div[class^="adslot_"]
 narodowy.pl###cookies
+naruldonghua.com,donghuaworld.com,luciferdonghua.in,animekhor.xyz###overplay
 narzedziawarszawa.pl###cookie
 nas-forum.com##.ipsMessage_error
 nasdaq.com##[class^="ads_"]
@@ -47976,6 +47979,7 @@ passeidireto.com##pd-cookie-banner
 passiontimes.hk##.rectAd680
 passivevoiceconverter.com##a[href^="https://grammarly.go2cloud.org/aff_c?offer_id="] > img
 passmyparcel.com##.banner, #banner
+passportnews.co.il##.trg_banner
 passvigo.vigo.org###cookies
 passware.com##.notifino
 passwordsgenerator.net###ADCENTER
@@ -51360,6 +51364,8 @@ reed.co.uk##.cookie-legislation
 reef2reef.com##.reef-footer > div.reef-footer-left
 reef2reef.com##.reef-footer::before
 reelgood.com##.e11erxsk0
+reelgood.com##div[mode="grid"] > div:has(> div[class] > a[data-testid="content-listing-link"][href^="https://click.reelgood.com/"])
+reelgood.com##main > div[class] >div[class]:has(> div[id^="rg_promoted_"])
 reelrundown.com##.mm-in-content-ad-row--in-content
 reelviews.net##.picHolder
 ref.so##div#tg2_main
