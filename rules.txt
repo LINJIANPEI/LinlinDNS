@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-15 23:10:07（北京时间）
+! Version: 2025-04-16 00:10:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64429
+! Total count: 64427
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4566,6 +4566,7 @@
 @@||237solution.net^$generichide
 @@||24u.jp^$generichide
 @@||2cheat.net^$generichide
+@@||2chmatome2.jp/images/sp/320x250.png$~third-party
 @@||2kspecialist.net^$generichide
 @@||2mdn.net/instream/html5/ima3.js$script,domain=earthtv.com|zdnet.com
 @@||2urs.com/js/*_cpa_$script
@@ -21812,6 +21813,7 @@ azscore.com##.v-bonus
 azscore.com,bescore.com##.bn
 azscore.com,livescores.biz##.bonus-offers-container
 azubiheft.de###CookieModal
+azupro-sokuho.com,pokeca-chart.com,former-railroad-worker.com,noikiiki.info,sakanoya.net,akihabarahitorigurasiseikatu.com,pc-hobby.com,yakudachi.org,tiny-sparklies.com,veryfuntime.com,sufanblog.com,rail-log.net,10-train.com,e-food.jp,life-travel-blog.cfbx.jp,shimauma-log.com,kgs-invest.com,umabomber.com,r18blog.com,virtual-youtuber.jp,matomeiru.com,paris-tabi.com,tedenglish.site,goegoe.net,sararun.net,shopkensaku.com,welcometojapan.jp,maisondeas.com,yaspage.com,akihabarahitorigurasiseikatu.com,gnusocial.jp,doumura.com,habuteru.com,kurosuen.live,businesstrend.jp,fine-wings.com,sukuyou.com,gatagata.net,setsuyakutoushi.com,ranourano.xyz,reeell.com,it-money-life.com###go-to-top + div[id][class*=" "]
 azuremagazine.com##.hero__metadata-left-rail
 azuremagazine.com##div[class$="azoa"]
 azurewebsites.net###legal-info
@@ -22936,6 +22938,7 @@ bilibili.com##.banner-card
 bilibili.com##.bili-app
 bilibili.com##.bili-app-link-container
 bilibili.com##.bili-dyn-ads
+bilibili.com##.bili-video-card.is-rcmd:has(> div.bili-video-card__wrap .bili-video-card__stats--icon > path[d*="M16.9122 1.50323C17.4366 1.48358 17.99745 1.54938 18.4701 1.8207C18.9423 2.09168 19.28085"])
 bilibili.com##.bili-video-card.is-rcmd:has(> div.bili-video-card__wrap div.bili-video-card__stats > div.bili-video-card__stats--left:empty + span.bili-video-card__stats--text)
 bilibili.com##.bili-video-card__wrap > a[href^="http"]:not([href*=".bilibili.com/"])
 bilibili.com##.btn-ad
@@ -23091,6 +23094,7 @@ bip.um.wroc.pl###cookies
 bipandgo.com##.ucm_wrapper
 biphim.mx###footer_fixed_ads
 bippit.com###POPUPS_ROOT
+biqgg.com##a[onclick="guangtui();"]
 biqle.org##div[style="text-align: center;"]
 biqle.ru##.message-container
 biqle.ru##a[href="https://savevk.com/biqle.ru"]
@@ -23463,6 +23467,7 @@ bloomberg.com##div[class^="StoryCardSmall_adWrapper-"]
 bloomberg.com##div[class^="media-ui-BaseAd"]
 bloomberg.com##div[class^="media-ui-FullWidthAd"]
 bloomberg.com##div[data-ad-placeholder="Advertisement"]
+bloomberg.com##div[data-testid="sticky-segment"]:has(> div[class^="stickyScroll_stickyBox"] > div[class^="media-ui-BaseAd_"])
 bloomberg.com,speedtest.net##div[data-ad-placeholder]
 bloomberg.com,weatherpro.com,wordfinder.yourdictionary.com##.leaderboard-wrapper
 bloombergadria.com##.banner
@@ -30312,7 +30317,6 @@ eporner.com###addesktop
 eporner.com###admobileoutstream
 eporner.com###btasd
 eporner.com###deskadmiddle
-eporner.com###infopopup
 eporner.com###movieplayer-box-adv
 eporner.com##.ad300px
 eporner.com##.dropdown > li > a[rel="nofollow"]
@@ -33608,12 +33612,6 @@ geekspin.co##div[style*=";text-align: center;clear: both;min-height: 90px;"]
 geeksultd.com##.theiaStickySidebar > #text-html-widget-3
 geeksultd.com##.theiaStickySidebar > #text-html-widget-4
 geektonight.com##a[href^="https://click.linksynergy.com/"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl###ad-adsearch
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl###ad-dol_srodek
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-banner_"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-box"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-gora_"]
-geekweek.interia.pl,styl.interia.pl,zielona.interia.pl,kobieta.interia.pl##div[id^="ad-rectangle"]
 geekwire.com###engineering-centers-sidebar
 geekwire.com###geekwork
 geekwire.com###startup-resources-sidebar
@@ -48809,7 +48807,6 @@ pixiv.net##iframe[height="520"][name="expandedFooter"]
 pixiv.net##iframe[src^="https://pixon.ads-pixiv.net/"]
 pixiv.net##iframe[width="300"][height="250"]
 pixiv.net##li.platform-pc
-pixiv.net##li:has([id^="ads"])
 pixiv.net##ul.pixiv.tri
 pixivision.net###ads-article-rectangle
 pixiz.com###adblock-detected
@@ -59101,6 +59098,7 @@ twittervideodownloader.cam##.widget-area
 twkan.com##.txtcenter
 twojesoczewki.com##.popup_bg
 twojliquid.pl###message, .message
+twoplayergames.org##.game-page-ad
 twpkinfo.com###div_close_cf
 txahz.com###archy_ad2
 txone-networks.com###cookies_msak
