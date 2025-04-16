@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-16 07:09:43（北京时间）
+! Version: 2025-04-16 08:48:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64429
+! Total count: 64433
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -18786,6 +18786,7 @@
 @@||yalla-shoot-tv.io^$generichide
 @@||yalujailbreak.net^$generichide
 @@||yams.akamaized.net^$stealth
+@@||yandex.*/maps/$extension="AdGuard Extra"
 @@||yandex.com/search/?$generichide
 @@||yandex.ru/ads/system/adsdk.js$domain=gisher.org
 @@||yandex.ru/ads/system/context.js$domain=investing.com
@@ -37195,6 +37196,7 @@ ign.com##.userList-leaderboard-adunit
 ign.com##.wiki-bobble
 ign.com##.zad.native
 ign.com##div[class^="adkitmrec"]
+ign.com##div[data-pogo-fallback="primis"]
 ign.com$$script[tag-content="'iframe-network'"][min-length="10000"][max-length="30000"]
 ign.com,mashable.com,pcmag.com##.zad
 ignboards.com$$script[tag-content="runInIframe"][min-length="10000"][max-length="50000"]
@@ -43663,6 +43665,7 @@ mikronis.hr##.cookies
 mil.sohu.com##div.godR
 mil.tiexue.net##div.banner
 milan7.it###site-content > .row > h2
+milanjovanovic.tech##article > div.mb-12:has(> div > div.sponsorship-content)
 milanoajto.hu##.cdisclaimer
 milanoo.com###remember_cookie
 milanos.pl###rodo-pop
@@ -52588,6 +52591,7 @@ seaheroquest.com##.tab-cookies
 seaheroquest.gr##.tab-cookies
 search.avast.com###AsbAdContainer
 search.b1.org##.adslabel
+search.bilibili.com##.video-list > div:has(> .bili-video-card > .bili-video-card__wrap > .bili-video-card__info > .bili-video-card__info--right > .ad-feedback-entry)
 search.brave.com###shopping
 search.brave.com##.sponsored-unit_wrapper
 search.brave.com##div[data-advertiser-id]
