@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-17 15:11:11（北京时间）
+! Version: 2025-04-17 16:14:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64448
+! Total count: 64453
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25356,6 +25356,7 @@ chinanewsx.com##a[href^="/go/"]
 chinapdf.com###floatleft
 chinapdf.com###floatright
 chinapost-track.com##.tracking-pro-container
+chinapress.com.my##.ads-frame
 chinaqking.com###cnt-ad
 chinaqking.com###newsAD
 chinaqking.com###readerServiceDIV
@@ -27116,6 +27117,7 @@ cryptoslate.com##.top-sticky
 cryptotech.fun,skycall.online##body > #page + script + div[id][class*=" "]
 cryptoticker.io##.mso-cls-wrapper
 cryptoviet.com##p[style="text-align: center;"] > a[target="_blank"] > img
+crystalcomics.com,kolbook.xyz,hardlevel.com.br,orenoraresne.com##iframe[name="__tcfapiLocator"] + div[id][class*=" "]
 crystalmark.info###main-wrap > #top-container-widget:has(> .widget_text:only-child > .textwidget > .adsbygoogle)
 crystalmark.info##a[href^="https://suishoshizuku.com/"]
 crytek.com##.cookies
@@ -29173,6 +29175,7 @@ dshangyan.com##.advHeader
 dsm.com###cp
 dstreet.pl###ToplayerCover, #ToplayerConsent
 dt.no##.am-bazaar-ad
+dtnext.in,pornwhite.com,androidappsgame.com##div[class^="adv-"]
 dtnext.in,pornwhite.com,androidappsgame.com,txxx.com##div[class^="adv-"]
 dtruyen.com,dtruyen1.com##.wt-ads2
 dts24.pl##.jet-popup
@@ -47435,6 +47438,7 @@ op.gg##main >  div[style][class^="css-"]:has(> div:not([class]) > div.vm-placeme
 op.gg##section:has(> div.min-h-\[250px\]):not(:has(> *:not(div.min-h-\[250px\])))
 op.gg##tr.ad
 op.gg,thenewdaily.com.au##.min-h-\[100px\]
+opchapters.com,tresdaos.com,siikomik.lat,nekoscans.com##.mainholder + div[id][class*=" "]
 opdown.com##.cq-recom
 opdown.com##.downnows
 opdown.com##.gxxz-btn
@@ -58414,6 +58418,7 @@ transportfever.net##.notification
 transtv.co.id###bannerpop
 transtv.co.id##.banner__MGID
 transtxxx.com##.index-page > .wrapper > div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
+transtxxx.com##.suggestion
 transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
 transtxxx.com##div[class^="video-conten"] > div + div
 transtxxx.com##div[class^="video-conten"] div[class]:has(> div[class] > div[id][class] > noscript)
