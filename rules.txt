@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-18 07:09:31（北京时间）
+! Version: 2025-04-18 08:46:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64450
+! Total count: 64455
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -755,6 +755,8 @@
 /^duomeng\./
 /^dwtrack\./
 /^guanggao\./
+/^https:\/\/[a-z0-9]+\.[a-z0-9]+\.[a-z]{2,3}:\d{1,6}\/[a-z]{1,3}\/\d+\?is_not=/$all
+/^https:\/\/[a-z0-9]+\.[a-z0-9]+\.[a-z]{2,3}:\d{1,6}\/bug\?i=\d+$/
 /^https:\/\/[a-z]{6,13}\.(cloud|xyz)\/[A-Za-z0-9_-]{48}[A-Z]{3}$/$document
 /^https:\/\/a\.[0-9a-f]{56}\.com$/
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$script,third-party,match-case,header=link:/adsco\.re\/>;rel=preconnect/
@@ -15626,6 +15628,7 @@
 @@||sax.sina.com.cn^|
 @@||sb.scorecardresearch.com/beacon.js
 @@||sbdeloriranch.cfd/io/*.mp4$stealth=referrer
+@@||sberbank.com^$stealth=donottrack
 @@||sberbank.ru^$stealth=ip
 @@||sbfull.com/e/$stealth
 @@||sbs.demdex.net^
@@ -41681,6 +41684,7 @@ lk21official.life,lk21.am.in##div[id^="admad-"]
 lk21tv.com##.close-banner
 lkh.de##.cc-blur, .cc-overlay
 lkong.com##.lkong-ads
+lkvod.me##.ec-ad-img
 llbean.com##.user-consent
 lloyd.com###globalerror
 llss.bz###secondary img:not(.avatar)
@@ -46466,6 +46470,7 @@ nivod2.com,nivod2.tv,nivod4.com,nivod4.tv,nivod5.com,nivod5.tv,nivod7.com,nivod7
 nivod2.com,nivod2.tv,nivod4.com,nivod4.tv,nivod5.com,nivod5.tv,nivod7.com,nivod7.tv,nivod8.com,nivod8.tv,nivod9.com,nivod9.tv##a.focus_title_inner[href*=".ad_click"]
 nivod5.tv,nivod8.tv##.qy20-h-carousel__li:nth-child(-n+2)
 nivod9.tv,nivod8.tv,nivod7.tv##.nav-ads
+niyogbd.xyz##.popSc
 nizarstream.xyz,teamkong.tk,rulesofcheaters.net,codinghumans.xyz,rachidscience.com,technopratik.com,electricaleasy.com###HTML4
 nj.com##.module__ad-large
 nj.com##.revenue-display
