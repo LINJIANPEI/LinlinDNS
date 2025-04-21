@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-21 15:10:48（北京时间）
+! Version: 2025-04-21 16:14:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64497
+! Total count: 64498
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9547,7 +9547,6 @@
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth
 @@||get.docker.com^
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -62465,6 +62464,8 @@ wxrb.com##.AD305
 wxrb.com##.AD340
 wxrb.com##.AD640
 wxrb.com##.ADtxt
+wxsck.com###content > div[style^="clear:"]
+wxsck.com##.fixed-btn ~ div[style^="position:fixed; bottom:"]
 wybg666.com##.container div[id$="ad"] > a[target="_blank"]:only-child > img
 wybory.gov.pl##.cookies
 wydaily.com##.td-header-sp-logoleft
