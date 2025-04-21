@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-21 07:09:03（北京时间）
+! Version: 2025-04-21 08:51:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64490
+! Total count: 64495
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -32406,6 +32406,11 @@ foxbusiness.com##.pre-content
 foxcincinnati.com##a[href^="https://www.safeauto.com"]
 foxford.ru###cc_container
 foxgay.com##body > .pb_footer
+foxhq.com##.bar-items-block
+foxhq.com##.full-text:has(> h2 > a[href][target="_blank"] img)
+foxhq.com##.menu > ul > li:has(> a.sponsor)
+foxhq.com##.menu > ul > li:not(:has(> a[href^="https://www.foxhq.com/"]))
+foxhq.com##body > div[style]:has(> #popinContentDiv)
 foxhq.com##td[alt="FoxHQ BG"] > div[align="center"] > a[rel="nofollow"]
 foxnews.com##.notification-banner
 foxnews.com##.sticky-pre-header
