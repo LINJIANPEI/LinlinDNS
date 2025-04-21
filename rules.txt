@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-21 23:10:36（北京时间）
+! Version: 2025-04-22 00:11:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64502
+! Total count: 64507
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1030,6 +1030,7 @@
 /c.vialoops.com/*$image
 /c?siteID=$image,script
 /calcalist_gpt_ads.js$script
+/captha/cap/|$document,popup
 /cdn-cgi/ping?$image
 /cgi-bin/ad/*$~xmlhttprequest
 /click.*/q/*$image
@@ -6851,6 +6852,7 @@
 @@||canadapolicereport.ca^$generichide
 @@||canadiantire.ca/*?adlocation=
 @@||candidate.hr-manager.net/Advertisement/PreviewAdvertisement.aspx$subdocument,~third-party
+@@||canhan.gdt.gov.vn^$stealth=dpi
 @@||canlidershane.net^$generichide
 @@||canlidizi9.net^$generichide
 @@||canliplayer.com/fireplayer/$stealth=referrer
@@ -14153,6 +14155,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=aii.sh|tii.la|oko.sh|tpi.li|oii.la
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=alfred.camera
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=amritadrino.com|bhojpuritop.in
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=animehub.ac
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=api.ytapi.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=apkandroidhub.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=app.axenthost.com
@@ -14205,6 +14208,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=infinityscans.xyz|infinityscans.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=isi7.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=jaunpurmusic.info
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=javbee.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=kapang.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=kissanime.sx
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=labrador.mayaremix.in
@@ -64503,6 +64507,7 @@ zzcartoon.com##.right-banner
 zzkdhb.com##li[style*="important"]
 zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 zznews.cn##.ad:not([style])
+zzup.com##iframe[src^="/ad"][src$=".php"]
 zzztube.com,me-gay.com,gaysuperman.com##.mobile-random
 zzztube.com,videoporn.tube##.b-random-column
 zzztube.com,videoporn.tube,pornogram.tv,icegay.tv,24porn.com,gayporno.fm,gaymaletube.name,gayporn.fm,gaysuperman.com##.b-uvb-spot
