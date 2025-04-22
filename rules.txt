@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-22 07:09:36（北京时间）
+! Version: 2025-04-22 08:47:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64508
+! Total count: 64516
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2944,6 +2944,7 @@
 3dtube.xxx,milf.dk,nakedtube.com,pornmaki.com##.promotionbox
 3dtvmagazine.nl##.opt-in
 3dzip.org##.san_wrapper
+3dzip.org##.widget_twqub
 3dzip.org##img.sphyerf-image
 3g.163.com##+js(set,specialHideAd,true)
 3g.163.com##.big_boom
@@ -9019,6 +9020,7 @@
 @@||feed.adrelayer.com^
 @@||feed.adrelayer.com^|
 @@||feedback-pa.clients*.google.com/*/google.internal.feedback.$stealth
+@@||feedback-pa.clients6.google.com^$stealth=referrer
 @@||feedback.miui.com^$important
 @@||feedburner.com/~r/
 @@||feedly.com/i/^$jsinject
@@ -11414,6 +11416,7 @@
 @@||js.assemblyexchange.com/videojs-skip-ima3-unskippable.min.js$domain=worldstar.com|worldstarhiphop.com
 @@||js.assemblyexchange.com/wana.$domain=worldstar.com
 @@||js.assemblyexchange.com/wana.*.js$domain=worldstar.com|worldstarhiphop.com
+@@||js.datadome.co/tags.js$domain=thefork.it
 @@||js.datadome.co/tags.js$script,domain=monster.ca|sso.garena.com|thefork.com
 @@||js.digitalriverws.com/*/components/$stealth
 @@||js.hyra.io/*.js$~third-party
@@ -26688,6 +26691,11 @@ coopcad.it###Banner
 coopgames.eu##table.table-condensed > tbody > tr > td[colspan="6"]:only-child:empty:not([class]):not([id])
 coopmaster.it###h-navbar
 cooptravel.co.uk##.mailmunch-topbar
+coosavalleynews.com##.coosa-widget
+coosavalleynews.com##.et_pb_code:has(> div[class]:only-child > a > img)
+coosavalleynews.com##.widget_block:has(> a:only-child > img)
+coosavalleynews.com##.widget_media_image:has( a > img)
+coosavalleynews.com##div[id^="coosa-"]
 copenhagenstudios.com###cookie-layer
 copilot.microsoft.com##.b_ad
 copilot.microsoft.com##div[data-ads-rg]
