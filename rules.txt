@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-24 08:48:00（北京时间）
+! Version: 2025-04-24 10:24:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64597
+! Total count: 64590
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2337,8 +2337,6 @@
 18comic.org,18comic.vip,jmcomic1.city,jmcomic1.win,jmcomic1.group##.bot-per-context
 18comic.org,18comic.vip,jmcomic1.city,jmcomic1.win,jmcomic1.group##[data-group^='album_related'],[data-group^='all_bottom']
 18comic.org,18comic.vip,jmcomic1.city,jmcomic1.win,jmcomic1.group##[data-group^='photo_center_']
-18comic.vip##.container > div[style^="padding:"]:has(> [data-group="content_page"])
-18comic.vip##.tab-content + .row:has(> div[class] > div[class] > .group-notice)
 18comic.vip##IMG[src^='//18comic.vip/media/albums/']
 18h.animezilla.com###manga-bottom
 18h.avmimi.com##body > p[align="center"]:first-child
@@ -4161,7 +4159,6 @@
 @@/pic/ad/*$domain=ybjk.com
 @@/play.php?$stealth,domain=netlivetv.xyz
 @@/player/*$stealth,domain=ibomma.*
-@@/player/stats.php$domain=85po.com|watchporn.to|viralpornhub.com|watchmdh.to
 @@/player/stats.php$domain=85po.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com
 @@/player_ads.html$domain=85po.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|pornobit.me|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
 @@/playlist.m3u8$stealth
@@ -20320,10 +20317,6 @@ amazon.de,amazon.com,amazon.fr,amazon.it,amazon.co.uk##.adFeedback
 amazon.in,amazon.fr,amazon.co.uk,amazon.de##.s-result-list > li[id^="result_"][style*="display: block;"]
 amazonadviser.com,apptrigger.com,arrowheadaddict.com,bamsmackpow.com,fansided.com,gamesided.com,gojoebruin.com,hiddenremote.com,lastnighton.com,mlsmultiplex.com,netflixlife.com,playingfor90.com,stormininnorman.com,winteriscoming.net##.style_k8mr7b-o_O-style_1ts1q2h
 amazonadviser.com,apptrigger.com,fansided.com,hiddenremote.com,lastnighton.com,lawlessrepublic.com,mlsmultiplex.com,netflixlife.com,playingfor90.com,stormininnorman.com,winteriscoming.net##.header-billboard
-ambiente.tiscali.it###wp-dtop
-ambiente.tiscali.it##.cnt-text-article .vsb-block:has(> #veeplayer > ins)
-ambiente.tiscali.it##.cnt-text-article .vsb-block:has(> #wid-middle > .OUTBRAIN)
-ambiente.tiscali.it##.col-lg-4 .text-center > .entry-pos-vsb:has(> div:is(#skyscraper, [id^="admpu"], [id^="dotnAd-"]))
 ambientedirect.com##.ConsentOverlay, .ModalBackground
 ambitionspersonnel.com##body > div:not([id]):not([class])
 amc.com##.ad-tag-text
