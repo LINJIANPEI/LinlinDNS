@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-24 07:10:23（北京时间）
+! Version: 2025-04-24 08:48:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64580
+! Total count: 64597
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4162,6 +4162,7 @@
 @@/play.php?$stealth,domain=netlivetv.xyz
 @@/player/*$stealth,domain=ibomma.*
 @@/player/stats.php$domain=85po.com|watchporn.to|viralpornhub.com|watchmdh.to
+@@/player/stats.php$domain=85po.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com
 @@/player_ads.html$domain=85po.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|pornobit.me|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
 @@/playlist.m3u8$stealth
 @@/playlist/*caxi.m3u8$xmlhttprequest,stealth=referrer,domain=methstreamer.com|crackstreamer.net|thestreameast.ai|1stream.soccer|streameast.app|1stream.eu|buffstreams.app|meth-streams.ai
@@ -6462,6 +6463,7 @@
 @@||beian.miit.gov.cn^$important
 @@||beinconnect.com.tr^$stealth
 @@||beinconnect.com.tr^$stealth=donottrack|webrtc
+@@||beinconnect.com.tr^$stealth=dpi
 @@||beinsports.com/wp-content/themes/bein/dist/scripts/fuckadblock.js
 @@||bejav.net^$generichide
 @@||belajarbro.id^$generichide
@@ -19000,6 +19002,7 @@
 @@||zeebiz.com/ads/$image,~third-party
 @@||zeekmagazine.com/wp-content/plugins/wp-ad-guru/assets/js/adguru.js
 @@||zeemoontv-28.blogspot.com^$generichide
+@@||zegtrends.com^$domain=icutlink.com,stealth=referrer
 @@||zekozimo.blogspot.com^$generichide
 @@||zenfoneasus.com^$generichide
 @@||zergnet.com^$script,domain=zergnet.com
@@ -19848,6 +19851,7 @@ airmail.news##am-display[fetched="fetched"]
 airmail.news,govevents.com,protipster.com##.display
 airmore.com##.thead
 airnavradar.com,routinehub.co,unlimited.waifu2x.net,dutasex.info,redpornblog.com,freeromsdownload.com,roms-hub.com,roms-download.com,food-foto.jp,model-foto.jp,pro-foto.jp,4qrcode.com,findaphd.com,jokersplayer.xyz,grammaire.reverso.net,sportslogos.net,cyrobo.com,aliez.me,aliez.tv,ip-address.org###ads
+airplaydirect.com,americaoutloud.com,bigeye.ug,completesports.com,cryptomining-blog.com,cryptoreporter.info,dotsauce.com,espnrichmond.com,flsentinel.com,forexmt4indicators.com,freedomhacker.net,gamblingnewsmagazine.com,gameplayinside.com,goodcarbadcar.net,kenyabuzz.com,kiwiblog.co.nz,linuxhostsupport.com,mauitime.com,mkvcage.com,movin100.com,mycolumbuspower.com,naijaloaded.com.ng,newzimbabwe.com,oann.com,onislandtimes.com,ouo.press,portlandphoenix.me,punchng.com,reviewparking.com,robhasawebsite.com,sacobserver.com,sdvoice.info,seguintoday.com,themediaonline.co.za,theolivepress.es,therep.co.za,thewillnigeria.com,tntribune.com,up-4ever.net,waamradio.com,wantedinafrica.com,wantedinrome.com,wschronicle.com##img[width="300"]
 airplaydirect.com,americaoutloud.com,bigeye.ug,completesports.com,cryptomining-blog.com,cryptoreporter.info,dotsauce.com,espnrichmond.com,flsentinel.com,forexmt4indicators.com,freedomhacker.net,gamblingnewsmagazine.com,gameplayinside.com,goodcarbadcar.net,kenyabuzz.com,kiwiblog.co.nz,mauitime.com,mkvcage.com,movin100.com,mycolumbuspower.com,naijaloaded.com.ng,newzimbabwe.com,oann.com,onislandtimes.com,ouo.press,portlandphoenix.me,punchng.com,reviewparking.com,robhasawebsite.com,sacobserver.com,sdvoice.info,seguintoday.com,themediaonline.co.za,theolivepress.es,therep.co.za,thewillnigeria.com,tntribune.com,up-4ever.net,waamradio.com,wantedinafrica.com,wantedinrome.com,wschronicle.com##img[width="300"]
 airportinfo.live,audiokarma.org,audizine.com##.AdvallyTag
 airsoft.ch##.cb
@@ -20266,6 +20270,7 @@ am5.com##.ad-box-right-pc-1
 am730.com.hk##.adbox
 amadeus.com##.wayfinder-component, .country-lightbox.cookies
 amanguides.com##header > div[data-device] > div[data-row="bottom"] > .ct-container-fluid:has(> div[data-column="middle"] > div[data-items] .adxfire-ad)
+amanmi.com##.leaderboardcontainer
 amap.com##.app-download-panel
 amap.com##.app_download_box
 amara.com###consent-modal
@@ -29195,6 +29200,7 @@ drudgereport.com##body #DR-DESKTOP-NITRO-TOP
 drudgereport.com##body #DR_AE_AD_INJECTION
 drudgereport.com##div[style^="height: 250px;"]
 drugs.com##.ddc-overlay, .ddc-modal
+drugs.com##.display-ad
 drugs.com##.sideBoxStackedAdWrap
 drugs.com##.topbanner-wrap
 drugstore.bg##.consent, #consent
@@ -49438,6 +49444,11 @@ porn3dx.com##iframe[src="https://porn3dx.com/iframe-ads"]
 porn4days.com##.navbar-nav > li > a[href^="http"][target="_blank"]
 porn4days.com##a[href*="landing"][href*="campaign"]
 porn4days.net##body .navbar-nav > li > a[rel="nofollow"]
+porn4fans.com###spot_player_start
+porn4fans.com###swiper1
+porn4fans.com##.models-wrap
+porn4fans.com##.second_avd_index_wrap
+porn4fans.com##footer > div.section:has(>div.container > script[src*="slimespell.com"])
 porn555.com##.vda-x2
 porn5f.com###dprecommend
 porn5f.com###main_video_block > .m-t-5.pull-right
@@ -58012,10 +58023,14 @@ tiscali.cz##.box-offer
 tiscali.cz##body .bbtitle
 tiscali.cz$$iframe[srcdoc="XMLHttpRequest"]
 tiscali.it###meetic_quad
+tiscali.it###wp-dtop
 tiscali.it##.adv300x100vd
 tiscali.it##.banner320x250
 tiscali.it##.c1c6
+tiscali.it##.cnt-text-article .vsb-block:has(> #veeplayer > ins)
+tiscali.it##.cnt-text-article .vsb-block:has(> #wid-middle > .OUTBRAIN)
 tiscali.it##.cnt_b_2
+tiscali.it##.col-lg-4 .text-center > .entry-pos-vsb:has(> div:is(#skyscraper, [id^="admpu"], [id^="dotnAd-"]))
 tiscali.it##.container_b_1
 tiscali.it##.ofrtsrc
 tiscali.it##.oroscopo_n
@@ -58513,6 +58528,8 @@ trannylime.com##div.twocolumns > div.viewlist ~ div.aside
 trannytube.tv,icegaytube.tv##.b-secondary-column__banners
 trannyvideosx.com###ad-controls
 trannyvideosxxx.com###text-2
+trans.info##img[width="500"][height="180"]
+trans.info##img[width="756"][height="310"]
 transa.ch##.cookie-box
 transcend-info.com###legal_notice
 transcend.de###legal_notice
