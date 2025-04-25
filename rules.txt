@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-26 03:08:13（北京时间）
+! Version: 2025-04-26 04:10:52（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64617
+! Total count: 64619
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -46644,6 +46644,7 @@ noodlemagazine.com##.menu > a[href^="https://theporndude.com/"]
 noodlemagazine.com##div[style="width:900px;height:250px;margin:20px auto 0"]
 nookthem.com##body > [style*="z-index: 999999"][style*="margin-"][style*="bottom:"]:not([class]):not([id])
 noon.com###modules-renderer:has([class*="sponsored"])
+noon.com###noon-modules:has([class*="AdBrandVideo"])
 noon.com##.visibilitySensorWrapper:has(.adBannerModule)
 noonaspoiler.online###side_on_post > div[id^="HTML"]
 noonsite.com##.portlet-static-global-sponsors
@@ -52358,6 +52359,7 @@ samayam.com,navbharattimes.indiatimes.com##.hp-rhs-ads-container
 samayam.com,navbharattimes.indiatimes.com##.rhs-mrec-wrapper
 samayam.com,navbharattimes.indiatimes.com##.wdt_amz
 samebug.io###__next > div > .fixed
+sameday.costco.com##[aria-label="Product"]:has(sp-tag)
 samehadaku.email##.ads-float-bottom
 samehadaku.email##.hentry.has-post-thumbnail > [href]
 samehadaku.email##.post-body.site-main > [href]
