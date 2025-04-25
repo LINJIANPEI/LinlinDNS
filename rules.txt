@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-25 15:10:40（北京时间）
+! Version: 2025-04-25 16:14:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64603
+! Total count: 64613
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11900,6 +11900,7 @@
 @@||linkneverdie.com^$generichide
 @@||linkonclick.com/*/display.php$domain=maxstream.video
 @@||linkpoi.me^$generichide
+@@||links.e.theatlantic.com^
 @@||links.e.theatlantic.com^|
 @@||links.getblueshift.com^
 @@||links.getblueshift.com^|
@@ -12024,6 +12025,7 @@
 @@||login.mobywatel.gov.pl^$stealth
 @@||login.nvgs.nvidia.com^$stealth
 @@||login.nvidia.com^$stealth
+@@||login.sendpulse.com^
 @@||login.sendpulse.com^|
 @@||login.sina.com.cn^
 @@||login.taobao.com^
@@ -36089,6 +36091,7 @@ hindustantimes.com##.ht_taboola
 hindustantimes.com##.m_headBanner
 hindustantimes.com##.moreFrom
 hindustantimes.com##.noAdLabel
+hindustantimes.com##.oyoAd
 hindustantimes.com##.pramotedWidget
 hindustantimes.com##.rgtAdSection
 hindustantimes.com##.storyAd
@@ -48701,6 +48704,10 @@ pic.sogou.com##.floating
 pic.sogou.com##.sidebar_box.shut
 pic4you.ru,pic5you.ru##body > #bb
 picarto.tv##div[class*="CookieCompliance"]
+picazor.com##.bg-rose-500:has(> a[href="/livesex"])
+picazor.com##a[href="/livesex"]
+picazor.com##a[href="https://theporndude.com/"]
+picazor.com##main.h-full > div.mx-auto:has(iframe[src^="//bullionglidingscuttle.com/"])
 picbaron.com,imgbaron.com##a[href="https://forum.picbaron.com"] > img
 picbaron.com,imgbaron.com##a[href^="https://sexymeets.club/"]
 piccash.net##.pcash-user > div[id^="pcash-block"]
@@ -56658,6 +56665,9 @@ tellyreviews.com##.ezoic-ad
 tellyreviews.com##.td-post-content > div[adunitname]
 telset.id##.footer_sticky
 telugu.boldsky.com##.right-panel > div.gap10 > div[style="min-height:250px;"]
+telugu.hindustantimes.com##.advMasterSlot
+telugu.hindustantimes.com##.logoBandAdBox
+telugu.hindustantimes.com##.mainBodyWrapper div[class*="adv"]
 telugu360.com##.article_top_ads
 telugu360.com##.td-ss-main-sidebar > aside.td_block_template_5.widget
 telugupeople.com##.fineprint
