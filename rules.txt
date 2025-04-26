@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-26 15:09:05（北京时间）
+! Version: 2025-04-26 16:12:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64587
+! Total count: 64621
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -615,6 +615,21 @@
 /.*\.a\.market\.xiaomi\.com/
 /.*\.data\.hicloud\.com/
 /.*\.log\.aliyuncs\.com/
+/.*ad-sign.*/
+/.*ad.wtzw.com.*/
+/.*adservice.*/
+/.*adsmind.*/
+/.*aligames.*/
+/.*bytedance.*/
+/.*bytegoofy.*/
+/.*byteorge.*/
+/.*ibytedapm.*/
+/.*mgsdk-sign.*/
+/.*pangolin.*/
+/.*pglstatp.*/
+/.*tsyouto.*/
+/.*umeng.*/
+/.*zijieapi.*/
 /139.45.197.24\d/$network
 /193.200.64.24:/
 /1xhtml?$script
@@ -5971,6 +5986,7 @@
 @@||apis.kostprice.com/fapi/$script,domain=gadgets.ndtv.com
 @@||apis.wavve.com/fz/streaming$domain=wavve.com,stealth=ip
 @@||apischedule.ksyungslb.com^$important
+@@||apissl.ksapisrv.com^$app=com.kuaishou.nebula,important
 @@||apissl.ksapisrv.com^$important
 @@||apiwaka.azure-api.net/api/key/$stealth,domain=wakanim.tv
 @@||apiwz.midukanshu.com^
@@ -6810,6 +6826,7 @@
 @@||c.youdao.com^
 @@||c1.skype.com^
 @@||cache.ip138.com^
+@@||cache.umengcn.org^$app=com.paokeji.yiqu
 @@||cadpartners.biz^$generichide
 @@||cadsecs.com/*.js$domain=dropgalaxy.com
 @@||caf.fr^*/smarttag.js$script,~third-party
@@ -10609,6 +10626,7 @@
 @@||image.quark.cn^
 @@||image.shutterstock.com^$image,domain=icons8.com
 @@||image.uc.cn^$important
+@@||image.uczzd.cn^$app=com.UCMobile
 @@||imagebam.com/gallery-organizer$document
 @@||imagefap.com/jscripts/ad_loader.js
 @@||images*.imagebam.com/ad^
@@ -10622,6 +10640,7 @@
 @@||images.intellicast.com/Scripts/ad-v3.js
 @@||images.macrumors.com/*/article-new/
 @@||images4u.cc^$generichide
+@@||imapi5-oth-*.zijieapi.com^
 @@||imasdk.googleapis.com$domain=video.huffingtonpost.it
 @@||imasdk.googleapis.com/js/$domain=cari.com.my
 @@||imasdk.googleapis.com/js/core/bridge*.html$domain=~spotify.com
@@ -11068,6 +11087,7 @@
 @@||imgfx02.xyz/chapters/$stealth,image
 @@||imgs-2.2xstorage.com$image,stealth=referrer
 @@||imgs-2.virus2hub.com^$image,stealth=referrer
+@@||imgsa.baidu.com
 @@||imgservices-1252317822.image.myqcloud.com^
 @@||imgsrc.baidu.com^
 @@||imgtaxi.com/img-*.html
@@ -12777,8 +12797,11 @@
 @@||msn.com/spartan/dhp$jsinject
 @@||msn.wrating.com/a1.js
 @@||mss0.bdstatic.com^
+@@||mssdk.zijieapi.com^$app=com.dragon.read
+@@||mssdk3-normal-*.zijieapi.com^
 @@||mssdk3-normal-hj.zijieapi.com^
 @@||mssdk3-normal-lf.zijieapi.com^
+@@||mssdk5-normal-hl.zijieapi.com^
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=play.tv3.lt
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=tv3sport.dk
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=viasatsport.se
@@ -13478,6 +13501,7 @@
 @@||p3-tt.byteimg.com^
 @@||p3-webcast-sign.douyinpic.com^
 @@||p3.dcarimg.com^$important
+@@||p3.douyinpic.com/obj/joker^$app=com.dragon.read
 @@||p3.douyinpic.com^
 @@||p3.ssl.qhimg.com^
 @@||p30download.ir^$stealth=dpi
@@ -14957,6 +14981,7 @@
 @@||pss.bdstatic.com^
 @@||psstatic.cdn.bcebos.com^
 @@||pstatic.net^$image,stealth
+@@||pstatp.com^$app=com.viva.note
 @@||pt.afl.rakuten.co.jp^
 @@||pt.afl.rakuten.co.jp^|
 @@||ptah.m3pd.com/key=$media,domain=porntop.com,stealth=referrer
@@ -15389,6 +15414,7 @@
 @@||rizonesoft.com^$generichide
 @@||rltdxt.com/files/h5/app.js
 @@||rm.sina.com.cn/minisite/*/css/art_normal.css$domain=client.sina.cn
+@@||rmc.bytedance.com^$app=com.ss.android.ugc.aweme
 @@||rmdan.net^$generichide
 @@||rmdan.tv^$generichide
 @@||rmdown.com/ads.js
@@ -15689,6 +15715,7 @@
 @@||search.kuwo.cn^
 @@||search.sogoucdn.com^
 @@||search.spotxchange.com/vmap/*&content_page_url=www.bsfuji.tv$xmlhttprequest,domain=imasdk.googleapis.com
+@@||search.umengcn.org^$app=com.paokeji.yiqu
 @@||searchtap.net^$stealth=3p-auth,domain=designerframesoutlet.com
 @@||seattletimes.com/wp-content/plugins/st-privacy-detection/js/src/ads/ad-test.js
 @@||sec-cdn.static.xiaomi.net^$important
@@ -17027,6 +17054,7 @@
 @@||task.galaxy.p2cdn.com^
 @@||tatuajestatu.com^$generichide
 @@||tawk.to^$stealth
+@@||tb.himg.baidu.com
 @@||tb.himg.baidu.com^
 @@||tb.mgtv.com/sdk/*/ad-sdk.js$script
 @@||tb.mgtv.com/sdk/*/ad-sdk.js^$script
@@ -17285,6 +17313,9 @@
 @@||tickle.porn/player/html.php?aid=pre_roll$subdocument,domain=tickle.porn
 @@||ticonsiglio.com/wp-content/*/plugins/ad-ace/includes/adblock-detector/advertisement-*.js
 @@||tidal.com^$generichide
+@@||tieba.baidu.com
+@@||tiebac.baidu.com
+@@||tiebapic.baidu.com
 @@||tienganhedu.com^$generichide
 @@||tiengnhatpro.net^$generichide
 @@||tii.la^$generichide
@@ -17340,6 +17371,7 @@
 @@||tms.capitalone.com^|
 @@||tms.oracle.com/main/prod/utag.sync.js$~third-party
 @@||tn.voyeurhit.com^$domain=voyeurhit.tube
+@@||tnc11-aliec2.zijieapi.com^$app=com.dragon.read
 @@||tnc11-bjlgy.zijieapi.com^
 @@||tnc16-platform-useast1a.tiktokv.com^$important
 @@||tnc3-aliec2.snssdk.com^$important
@@ -18006,6 +18038,7 @@
 @@||verdirectotv.com^$generichide
 @@||vergol.com/adblock.js
 @@||vergol.com/player/ads.js
+@@||verify-hj.zijieapi.com^$app=com.ss.android.ugc.aweme
 @@||verify.cmpassport.com^$important
 @@||verify.snssdk.com^
 @@||verify.zijieapi.com^
@@ -18647,6 +18680,7 @@
 @@||wwwimage-tve.cbsstatic.com^
 @@||wwwstream.pro^$subdocument,stealth
 @@||wx.17u.cn^$important
+@@||wx.qlogo.cn^$app=com.tencent.mm
 @@||wx.qlogo.cn^$important
 @@||wx.qq.com/*/ad_$script
 @@||wx.qq.com/c/=/mpres/*/video_ad_
