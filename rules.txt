@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-27 06:08:37（北京时间）
+! Version: 2025-04-27 07:08:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65275
+! Total count: 65280
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1273,6 +1273,7 @@
 /module/ads/*$~xmlhttprequest
 /modules/ad/*$~xmlhttprequest
 /modules/ads/*$~xmlhttprequest
+/monitoring?o=$xmlhttprequest
 /mooncars/rover/chasra*/index.php$document
 /movie1168\.com\/storage\/go\/[0-9a-zA-Z]{0,40}\.gif/
 /mysimpleads/mysa_output.php$script
@@ -20446,6 +20447,7 @@ ahtv.cn,sexbarss.net##.l1
 ahtv.cn,sexbarss.net##.r1
 ai-chatbot.top##.right-14
 ai-chatbot.top##header ~ form ~ div.fixed.right-14
+ai-online.com##div[id^="onlin-"]
 aia.com.my##.alert-dismissable
 aiarticlespinner.co,check-plagiarism.com,prepostseo.com##div[id*="ad"]
 aibing.cc##.adsense
@@ -24756,6 +24758,8 @@ brusarul.com###cookies
 brushes8.com###flxgg
 brushes8.com##.baidugg580
 brushes8.com##.zjianad
+brushexpert.com##.boxAdvert
+brushexpert.com##.towerAdvert
 brusletto.no###main-header ~ footer ~ div + div:last-child
 brutal.io##.bannerBox
 bryk.pl##.omnibusBannerContainer
@@ -39517,6 +39521,7 @@ jajco.pl##div[id*="cookies-notification"]
 jak-ksiegowac.pl###message_wrap
 jak.se##.consent-backdrop
 jakaoferta.pl##a[href*="&utm_term=baner"][target="_blank"] > img
+jakartaglobe.id##.underlay-ad
 jal.co.jp###JS_ciBox, #JS_ciBox_filter, #JS_ciBox_filter_iframe
 jal.com###JS_ciBox, #JS_ciBox_filter, #JS_ciBox_filter_iframe, #JS_ciBox_style
 jalantikus.com##.ads
