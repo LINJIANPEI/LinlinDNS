@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-28 20:18:48（北京时间）
+! Version: 2025-04-28 21:34:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65293
+! Total count: 65303
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5993,6 +5993,7 @@
 @@||api.smartystreets.com/lookup$stealth,domain=att.com
 @@||api.solvemedia.com/papi/
 @@||api.splice.com/www/advertisement/community-explore$domain=splice.com
+@@||api.spotify.com^$stealth=3p-auth
 @@||api.spotify.com^$xmlhttprequest,stealth=3p-auth
 @@||api.stackcommerce.net^$stealth=3p-auth
 @@||api.surfeasy.com/*/geo_lookup$stealth
@@ -7298,6 +7299,7 @@
 @@||cdn.syndication.twimg.com/tweets.json?$domain=xda-developers.com
 @@||cdn.syndication.twimg.com/tweets.json?callback=$domain=wrestlinginc.com
 @@||cdn.taboola.com/libtrc/*/loader.js$domain=cnet.com
+@@||cdn.taboola.com/libtrc/unip/loader.js$domain=techedubyte.com
 @@||cdn.taboola.com/magazine/$domain=taboolanews.com
 @@||cdn.theatlantic.com/assets/static/*/js/advertisement.2.js
 @@||cdn.theguardian.tv/ad/*.m3u8$domain=theguardian.com
@@ -14457,6 +14459,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tarnowska.tv
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=taufiqhdyt.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techably.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techedubyte.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techhelpbd.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techkeshri.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techmize.net|atravan.net
@@ -15616,6 +15619,7 @@
 @@||qzs.qq.com^
 @@||r.*.awstrack.me^
 @@||r.*.tk/*/xox_*/jpeg$stealth
+@@||r.bat.bing.com/?ld=test$domain=mcappx.com
 @@||r.linksprf.com/v$domain=pepper.pl
 @@||r.trojmiasto.pl/adxmlrpc/json.php
 @@||r1---sn-npoldn76.gvt1.com^
@@ -18997,6 +19001,7 @@
 @@||widgets.outbrain.com/outbrain.js$domain=apkmirror.com,stealth
 @@||widgets.outbrain.com/outbrain.js$domain=elcorreo.com
 @@||widgets.outbrain.com/outbrain.js$domain=listeamed.net|gaystream.click
+@@||widgets.outbrain.com/outbrain.js$domain=techedubyte.com
 @@||widgets.outbrain.com/outbrain.js$domain=vinomo.xyz
 @@||widgets.outbrain.com/outbrain.js$xmlhttprequest,domain=work.ink
 @@||widgets.trustedshops.com/reviews/tsSticker/$domain=koziol-shop.de
@@ -19923,6 +19928,7 @@ aboardtheworld.com##.popmake
 about.me##.bubble[class*="cookie_notice"]
 aboutyou.de##li:has([data-testid="spons"])
 aboutyou.de##li[data-testid^="productTileTracker-"]:has([data-testid="sponsored"])
+aboutyou.de##li[data-testid^="productTileTracker-"]:has(button[data-testid="spo"])
 abovethelaw.com###div-id-for-middle-300x250
 abovethelaw.com###div-id-for-top-300x250
 abovethelaw.com##.sidebar-sponsored
@@ -22405,7 +22411,9 @@ avtoset.si##body > div[style*="2A2A2A"]
 avtosfer.az##.banner
 avtosfer.az##.bnr0
 avtosfer.az##.top_banners
+avtosfer.az##div[class^="banner-"]
 avtosfer.az##div[class^="bannerArea"]
+avtosfer.az##div[class^="top_banner_"]
 avtosfer.az##iframe[src^="http://avtosfer.az/banner"]
 avxhm.se##[data-localize]:has(a[href^="https://canv.ai/"])
 avxhome.in##.banner-links
@@ -29393,7 +29401,6 @@ doba.pl##.ads_row
 doba.pl##.ads_row + .link
 doba.pl##.special__box
 doba.pl##[id^="liliaA"]
-dobleaccion.xyz,appdoze.com##body > div.wrapper-page + div[id][class*=" "]
 dobrarada.com.pl###notice_bar
 dobreprogramy.pl##body > div[id][data-container] > div[class]:has(> div[class]:only-child > style:first-child + div[class*=" "]:last-child > div:first-child:not([class]) + img[src^="https://v.wpimg.pl/"] + div:last-child)
 dobreprogramy.pl##button[class][type="button"] + a[href*="?utm_source=dobreprogramy&utm_medium=avastseal&utm_campaign=download"]
@@ -31961,7 +31968,6 @@ fastp.org##.slide-out-div
 fastpeoplesearch.com##.ad-widget-container
 fastpeoplesearch.com##.admap
 fastpeoplesearch.com##div[id]:has(> div[class^="ad-widget-"])
-fastpeoplesearch.com##div[style]:has(> div#admap-footer)
 fastpeoplesearch.com##div[style]:has(> div[class^="ad-widget-"])
 fastpeoplesearch.com,videezy.com,infoq.com,english.newstracklive.com,irishtimes.com,libhunt.com,runemate.com,trends.gab.com,gotporn.com##.sponsored
 fastpic.ru##.bleft
@@ -40681,11 +40687,15 @@ keywin.org##.pindaolist
 kfc.co.uk##.cookies-view
 kfcvisit.com###toast-container
 khaberni.com##div[class$="-banners"]
+khaleejtimes.com##.add-wrap
 khaleejtimes.com##.fix-billboard-nf
 khaleejtimes.com##.fix-mpu-nf
 khaleejtimes.com##body .ad-unit
 khaleejtimes.com##body .fix-billboard-nf
 khaleejtimes.com##body .fix-mpu-nf
+khaleejtimes.com##div[class*="js_ad_"]
+khaleejtimes.com##div[id^="agora-article-below"]
+khaleejtimes.com##div[id^="ew-custom-html-"]
 khaosod.co.th##.ads_position_wrapper
 khboxhd.com##div[id$="-ad"]
 khelnow.com###header-adwords-section
@@ -48056,6 +48066,7 @@ oneyeartarget.com###sbox-window, #sbox-overlay
 onhockey.tv##img[width="710"][height="80"]
 onleihe.de##.cookie
 online-archive-extractor.com,rhymes-with.com,adjectives-for.com,find-words.com,word-count-tool.com,ocr-free.com,read-text.com,other-languages.com,how-to-say.com,online-screen-recorder.com,webcam-test.com,record-video-online.com,speaker-test.com,send-voice.com,share-my-location.com,online-mic-test.com##div[style^="min-height:280px;"]
+online-calculator.com##div[class^="pub_"]
 online-convert.com##.banner-ad-size
 online-converting.com###xyz
 online-fix.me##img[src*=";base64"]
@@ -49090,8 +49101,6 @@ pegasproductions.com##.cookies
 peizimenhu.com##a[href^="http"]:not([href*=".peizimenhu."]) > img[src^="data/attachment/portal/"]
 peka.poznan.pl###popup-peka
 pelando.com.br##main ~ div
-pelisxporno.net,aagmaal.vip,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,gayporntube.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx,pornmilo.me,freshscat.com##.adde_modal-overlay
-pelisxporno.net,aagmaal.vip,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,gayporntube.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx,pornmilo.me,freshscat.com##.adde_modal_detector
 pelit.fi##.notification
 pemersatu.org###pemersatuDiv
 pemp.pl###divCiacho
@@ -52284,6 +52293,7 @@ rephrase.info##.d-ad2-none
 rephrase.info##.text-center > span.text-center[style^="color:"]
 rephrase.info,paraphraser.io##.d-none > div[style="position:sticky;top:10px;"]
 rephraser.co##footer ~ div.justify-content-center
+replay.az##.widget-ad-unit
 replay.az##div[align="center"][style^="padding-top:"]
 replika.ai##div[class*="GdprPopup"]
 replika.com##div[class*="GdprPopup"]
@@ -53938,7 +53948,6 @@ shemale6.com##.adv-banner_under
 shemale6.com##.block-video > div.table
 shemale6.com##ul.primary > li:has(> a[href="https://theporndude.com"])
 shemale777.com##.covid19
-shemaleist.com##div[class^="adde_modal"]
 shemaleist.com,pelisxporno.net,aagmaal.vip,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,gayporntube.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx,pornmilo.me,freshscat.com##.adde_modal-overlay
 shemaleist.com,pelisxporno.net,aagmaal.vip,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,gayporntube.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx,pornmilo.me,freshscat.com##.adde_modal_detector
 shemalemodelstube.com##.barContAll
@@ -58248,6 +58257,7 @@ theweathernetwork.com##div[data-testid="post-ad-text"]
 theweathernetwork.com##div[data-testid="pre-ad-text"]
 theweathernetwork.com##div[data-testid="pre-ad-text"] + div[class]
 theweek.co.uk##.polaris__subscription.-standalone.-content.-article
+theweek.in##.advertising-area
 theweek.in##.pay-ad-box-wrapper
 thewikihow.com##div[class^="col-lg"] > div[class]:has(> div[id^="yandex_rtb"])
 thewindowsclub.blog##.position-sticky > .section  > a[target="_blank"] > img

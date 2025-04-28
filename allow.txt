@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-28 20:18:48（北京时间）
+! Version: 2025-04-28 21:34:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 20785
+! Total count: 20790
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -7738,7 +7738,7 @@
 @@||api.solvemedia.com/papi/
 @@||api.spendino.de/admanager^
 @@||api.splice.com/www/advertisement/community-explore$domain=splice.com
-@@||api.spotify.com^$xmlhttprequest,stealth=3p-auth
+@@||api.spotify.com^$stealth=3p-auth
 @@||api.sprig.com/sdk/$domain=paypal.com
 @@||api.stackcommerce.net^$stealth=3p-auth
 @@||api.surfeasy.com/*/geo_lookup$stealth
@@ -8883,6 +8883,7 @@
 @@||cdn.jsdelivr.net/npm/*.js$domain=faselhd.cafe
 @@||cdn.jsdelivr.net/npm/*/fuckadblock.min.js$domain=theandroidpro.com
 @@||cdn.jsdelivr.net/npm/*/videojs-contrib-ads.min.js$domain=24ur.com
+@@||cdn.jsdelivr.net/npm/@thumbmarkjs/$domain=dienynas.tamo.lt
 @@||cdn.jsdelivr.net/npm/fingerprintjs2$domain=wannadep.com
 @@||cdn.jsdelivr.net/npm/fuckadblock*/fuckadblock.js$domain=shinden.pl
 @@||cdn.jsdelivr.net/npm/fuckadblock@3.2.1/fuckadblock.min.js
@@ -9045,6 +9046,7 @@
 @@||cdn.taboola.com/libtrc/impl.*.js$domain=ilmeteo.it
 @@||cdn.taboola.com/libtrc/impl.*.js$domain=welt.de
 @@||cdn.taboola.com/libtrc/tipranks-tipranks/loader.js$domain=tipranks.com
+@@||cdn.taboola.com/libtrc/unip/loader.js$domain=techedubyte.com
 @@||cdn.taboola.com/libtrc/vhb-handelsblatt/loader.js$domain=handelsblatt.com
 @@||cdn.taboola.com/libtrc^$domain=msn.com
 @@||cdn.taboola.com/magazine/$domain=taboolanews.com
@@ -12384,6 +12386,7 @@
 @@||googletagservices.com/tag/js/gpt.js$domain=xn--allestrungen-9ib.de
 @@||googletagservices.com/tag/js/gpt.js$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|miuiflash.com|thecubexguide.com|jytechs.in
 @@||googletagservices.com/tag/js/gpt.js$xmlhttprequest,script,redirect=googletagservices-gpt,domain=acs.org
+@@||googletagservices.com/tag/js/gpt.js$xmlhttprequest,script,redirect=googletagservices-gpt,domain=asda.com
 @@||googletagservices.com/tag/js/gpt.js$xmlhttprequest,script,redirect=googletagservices-gpt,domain=wuzzuf.net
 @@||googletagservices.com/tag/js/gpt.js?ad_tag=$domain=clipmyhorse.tv
 @@||googletagservices.com/tag/js/gpt_mobile.js$domain=www.vulture.com
@@ -15944,7 +15947,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=quizack.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=radiotunes.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rain-alarm.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ravenscans.com|oatuu.org|techedubyte.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=receive-sms-online.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=receivesms.org|receivesms.co
@@ -16018,6 +16020,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tarnowska.tv
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=taufiqhdyt.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techably.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techedubyte.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techhelpbd.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techkeshri.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techmize.net|atravan.net
@@ -17043,6 +17046,7 @@
 @@||quizdiva.net^$generichide
 @@||quoteacademy.com^$generichide
 @@||r.*.tk/*/xox_*/jpeg$stealth
+@@||r.bat.bing.com/?ld=test$domain=mcappx.com
 @@||r.linksprf.com/v$domain=pepper.pl
 @@||r.trojmiasto.pl/adxmlrpc/json.php
 @@||r10s.jp/com/img/home/t.gif?$domain=24.rakuten.co.jp
@@ -20191,6 +20195,7 @@
 @@||widgets.outbrain.com/outbrain.js$domain=apkmirror.com,stealth
 @@||widgets.outbrain.com/outbrain.js$domain=elcorreo.com
 @@||widgets.outbrain.com/outbrain.js$domain=listeamed.net|gaystream.click
+@@||widgets.outbrain.com/outbrain.js$domain=techedubyte.com
 @@||widgets.outbrain.com/outbrain.js$domain=vinomo.xyz
 @@||widgets.outbrain.com/outbrain.js$xmlhttprequest,domain=work.ink
 @@||widgets.outbrain.com^*/comScore/comScore.htm
