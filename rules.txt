@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-04-30 15:10:26（北京时间）
+! Version: 2025-04-30 16:14:57（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65364
+! Total count: 65370
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4928,7 +4928,6 @@
 @@||act.vip.iqiyi.com^
 @@||act.zhuanzhuan.com^
 @@||act.zhuanzhuan.com^$important
-@@||action.metaffiliation.com^
 @@||action.metaffiliation.com^|
 @@||actiris.be/urchin.js
 @@||active.jd.com^
@@ -9899,6 +9898,7 @@
 @@||gnula.club/embed.php$stealth
 @@||go-ez.net^$generichide
 @@||go-links.net^$generichide
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -20542,7 +20542,6 @@ airmail.news,govevents.com,protipster.com##.display
 airmore.com##.thead
 airnavradar.com,routinehub.co,unlimited.waifu2x.net,dutasex.info,redpornblog.com,freeromsdownload.com,roms-hub.com,roms-download.com,food-foto.jp,model-foto.jp,pro-foto.jp,4qrcode.com,findaphd.com,jokersplayer.xyz,grammaire.reverso.net,sportslogos.net,cyrobo.com,aliez.me,aliez.tv,ip-address.org###ads
 airplaydirect.com,americaoutloud.com,bigeye.ug,completesports.com,cryptomining-blog.com,cryptoreporter.info,dotsauce.com,espnrichmond.com,financialmirror.com,flsentinel.com,forexmt4indicators.com,freedomhacker.net,gamblingnewsmagazine.com,gameplayinside.com,goodcarbadcar.net,kenyabuzz.com,kiwiblog.co.nz,linuxhostsupport.com,mauitime.com,mkvcage.com,movin100.com,mycolumbuspower.com,naijaloaded.com.ng,newzimbabwe.com,oann.com,onislandtimes.com,ouo.press,portlandphoenix.me,punchng.com,reviewparking.com,robhasawebsite.com,sacobserver.com,sdvoice.info,seguintoday.com,themediaonline.co.za,theolivepress.es,therep.co.za,thewillnigeria.com,tntribune.com,up-4ever.net,waamradio.com,wantedinafrica.com,wantedinrome.com,wschronicle.com##img[width="300"]
-airplaydirect.com,americaoutloud.com,bigeye.ug,completesports.com,cryptomining-blog.com,cryptoreporter.info,dotsauce.com,espnrichmond.com,flsentinel.com,forexmt4indicators.com,freedomhacker.net,gamblingnewsmagazine.com,gameplayinside.com,goodcarbadcar.net,kenyabuzz.com,kiwiblog.co.nz,linuxhostsupport.com,mauitime.com,mkvcage.com,movin100.com,mycolumbuspower.com,naijaloaded.com.ng,newzimbabwe.com,oann.com,onislandtimes.com,ouo.press,portlandphoenix.me,punchng.com,reviewparking.com,robhasawebsite.com,sacobserver.com,sdvoice.info,seguintoday.com,themediaonline.co.za,theolivepress.es,therep.co.za,thewillnigeria.com,tntribune.com,up-4ever.net,waamradio.com,wantedinafrica.com,wantedinrome.com,wschronicle.com##img[width="300"]
 airplaydirect.com,americaoutloud.com,bigeye.ug,completesports.com,cryptomining-blog.com,cryptoreporter.info,dotsauce.com,espnrichmond.com,flsentinel.com,forexmt4indicators.com,freedomhacker.net,gamblingnewsmagazine.com,gameplayinside.com,goodcarbadcar.net,kenyabuzz.com,kiwiblog.co.nz,mauitime.com,mkvcage.com,movin100.com,mycolumbuspower.com,naijaloaded.com.ng,newzimbabwe.com,oann.com,onislandtimes.com,ouo.press,portlandphoenix.me,punchng.com,reviewparking.com,robhasawebsite.com,sacobserver.com,sdvoice.info,seguintoday.com,themediaonline.co.za,theolivepress.es,therep.co.za,thewillnigeria.com,tntribune.com,up-4ever.net,waamradio.com,wantedinafrica.com,wantedinrome.com,wschronicle.com##img[width="300"]
 airportinfo.live,audiokarma.org,audizine.com##.AdvallyTag
 airsoft.ch##.cb
@@ -37078,6 +37077,7 @@ hometheaterreview.com##div[id^="amzn-assoc-ad-"]
 hometree.co.uk##.ht-nav-cookienotification
 homo.xxx##.footer.spot
 homo.xxx##.spot.column
+homo.xxx,hello.porn##.btn-dvd
 honda.com.br##.info-notification
 honestdocs.id##.banner-left
 honestdocs.id##.top-banner
@@ -47313,9 +47313,11 @@ nlc.gov.cn###lovexin12xx
 nld.com.vn###BorderMenutop > .bordertopmenuv4
 nlite.it###system-message, #system-messages, #system-message-container
 nltimes.nl##div[class^="r89-"]
+nmac.to##.adslot_buttom:has(> .adslot_buttom_inner > a[target="_blank"] img)
 nmac.to##.it-ad:not(:has(form.form-search))
 nmac.to##.nmac-after-content
 nmac.to##.nmac-before-content
+nmac.to##.panel-wrapper:has(> div[style] > div[id^="advads"])
 nmac.to##.sidebar-inner > div.widget-unwrapped:has(> iframe[src^="//acceptable.a-ads.com/"])
 nmac.to##a[href^="https://veepn.g2afse.com/"]
 nmac.to##div[class^="advads"]
@@ -50550,6 +50552,9 @@ pornstarchive.com##.squarebanner
 pornstargold.com###basePopping
 pornstargold.com###popup
 pornstargold.com##.et_bloom_popup
+pornstars.tube##.spot > .top
+pornstars.tube##a.btn-dvd[rel="sponsored"]
+pornstars.tube,pornmega.com##body .bottom-adv
 pornstream.org##.player > div.right
 pornstreams.eu###menu-menu > li > a[target="_blank"]
 porntop.com###offerbtn
@@ -50618,6 +50623,7 @@ pornyfap.com##.grid-container > div.item4-1
 pornyfap.com##div[class="ad"]
 pornzog.com##.video-adv
 pornzog.com##.video-ntv
+pornzog.com,pornl.com,vxxx.com,ooxxx.com,inporn.com,shemalez.com,vjav.com##.fah-btn
 porofessor.gg##div[class^="vertical-ad-"]
 porsche-toledo.com###popupbox
 porsche.com##.pocs-legal-disclaimer
