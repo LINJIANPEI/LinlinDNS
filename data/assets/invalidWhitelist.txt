@@ -70,6 +70,7 @@
 ! Apple addendum
 ! CN - Perfect World: https://help.steamchina.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
 ! Copyright (c) Digac.cc
+! Copyright (c) 周木木
 ! DNS ad blocking whitelist for AdGuard Home
 ! Description: Is it my Whitelist [use at your own risk no support or help will be done]
 ! Description: Whitelist to resolve false positives introduced by filters.txt
@@ -77,6 +78,7 @@
 ! Epic Games
 ! Expires: 1 days
 ! Expires: 12 Hours
+! Expires: 20991231
 ! Global: https: //help.steampowered.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
 ! Google
 ! Google addendum
@@ -97,21 +99,26 @@
 ! Title: GOODBYEADS
 ! Title: LWJ's white list
 ! Title: MMotti AdguardHome - whitelist.txt
+! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14851
+! Total count: 14856
 ! Total lines: 137
+! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-04-30 09:52:26（北京时间）
+! Version: 2025-04-30 20:45:51（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
+! https://gitee.com/zjqz/ad-guard-home-dns
 ! https://github.com/etotakeo/AdGuardDNSPassList
 ! https://github.com/unknownFalleN/xiaomi-dns-blocklist
 ! https://learn.microsoft.com/zh-cn/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide
 ! https://support.apple.com/zh-cn/HT210060
 ! https://support.google.com/chrome/a/answer/6334001?hl=zh-Hans
 ! https://www.epicgames.com/help/zh-CN/c5719357686683/c5719341353627/epic-games-fortnite-a5720352654107#whitelist
+! url=https://gitee.com/zjqz/ad-guard-home-dns/raw/master/white-list
 ! url=https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List
 ! version=2021031702
+! version=20241219000119
 ! ⠄⠄⠃⢰⣿⣿⣿⣿⣿⣿⡿⣿⣿⠴⠋⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⡟⢀⣾⠄⠄
 ! ⠄⠄⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⢁⣴⣿⣿⣿⣿⠗⠄⠄⣿⣿⠄⠄
 ! ⠄⠄⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣾⣿⣿⡿⠟⠄⠄
@@ -151,11 +158,45 @@
 ! 谷歌
 ! 送礼使用规则
 !*********************************************************
+!--------2345-------
+!--------360--------
 !--------Adult (Gay) used--------
 !--------BT/PT--------
 !--------Commonly used--------
+!--------The List End--------
 !--------WeChat public account platform--------
 !--------customize--------
+!--------vivo-------
+!--------个推--------
+!--------乐播投屏-------
+!--------京东--------
+!--------其他-------
+!--------哔哩哔哩-------
+!--------字节跳动--------
+!--------小米--------
+!--------工具网站-------
+!--------微软--------
+!--------快手-------
+!--------手机遥控器-------
+!--------新浪--------
+!--------新网-------
+!--------本地--------
+!--------深信服--------
+!--------电视相关-------
+!--------百度--------
+!--------移动--------
+!--------统计-------
+!--------网易-------
+!--------腾讯-------
+!--------苹果-------
+!--------谷歌--------
+!--------豆瓣--------
+!--------迅游手游-------
+!--------迅雷-------
+!--------金山--------
+!--------阿里--------
+!--------飞智--------
+!--------魅族--------
 !Bootcdn
 !B站弹幕
 !JD试用商品详情
@@ -8599,6 +8640,7 @@
 @@||aeprofree.com^$generichide
 @@||aeries.net^*/require/analytics/views/$script,~third-party
 @@||aeroxplorer.com^$generichide
+@@||aestheticcanvas.site^$stealth=referrer
 @@||aetv.com^$generichide
 @@||afasiaarchzine.com^$generichide
 @@||afdah.to/show-ad
@@ -10591,6 +10633,7 @@
 @@||cedexis.com/zones/*/customers/*/apps/*/decision$domain=play.history.com
 @@||ceesty.com^$generichide
 @@||celebfapper.com/js/adManager.js
+@@||celestialwallscapes.site^$stealth=referrer
 @@||centraldopirata.com^$generichide
 @@||centro.co.il^$generichide
 @@||certificateland.com^$generichide
@@ -11554,6 +11597,7 @@
 @@||doncorgi.com/ezoic/anchorfix.js
 @@||donghuanosekai.com^$generichide
 @@||dongknows.com^$generichide
+@@||donilasplay.com/embed/$stealth=referrer
 @@||donnaglamour.it^$generichide
 @@||dood.la^$generichide
 @@||dood.li^$generichide
@@ -12842,6 +12886,7 @@
 @@||google-analytics.com/analytics.js$domain=developers.google.com
 @@||google-analytics.com/analytics.js$domain=dirkzwager.nl
 @@||google-analytics.com/analytics.js$domain=displate.com
+@@||google-analytics.com/analytics.js$domain=dragonnest.com
 @@||google-analytics.com/analytics.js$domain=dramahd.me
 @@||google-analytics.com/analytics.js$domain=dtf.ru
 @@||google-analytics.com/analytics.js$domain=earthclassmail.com
@@ -13237,6 +13282,7 @@
 @@||googletagmanager.com/gtag/js$domain=dholic.co.jp
 @@||googletagmanager.com/gtag/js$domain=diudemy.com
 @@||googletagmanager.com/gtag/js$domain=dizzylab.net
+@@||googletagmanager.com/gtag/js$domain=dragonnest.com
 @@||googletagmanager.com/gtag/js$domain=duplichecker.com
 @@||googletagmanager.com/gtag/js$domain=earnhub.net
 @@||googletagmanager.com/gtag/js$domain=eririo.club|freshi.site|exe.app|linkpoi.me
@@ -16625,7 +16671,6 @@
 @@||nullpress.net^$generichide
 @@||nusantaraproject.my.id^$generichide
 @@||nutritiondata.self.com/ads/js/cn.dart.bun.min.js
-@@||nuyters.aestheticcanvas.site^$stealth=referrer
 @@||nv7s.com/key=*/referer=$media,stealth=referrer
 @@||nvidia.cn^*-300x250-
 @@||nvidia.com/*/drivers/results/$stealth=referrer
@@ -18403,7 +18448,6 @@
 @@||qccommunity.qcloudimg.com^$stealth,domain=cloud.tencent.com
 @@||qcheng.cc/x/statics/js/guanggao.
 @@||qds.it/wp-content/plugins/digistream/digiplayer/js/videojs.ga.js?$script,~third-party
-@@||qertyus.celestialwallscapes.site^$stealth=referrer
 @@||qhimg.com^*/monitor_analytic.
 @@||qhres.com^*/monitor_analytic.js$domain=mse.360.cn
 @@||qianpanso.cn/other/*.js$domain=cilimao.co|cilimao.one
@@ -20105,6 +20149,7 @@
 @@||stream4free.live^$generichide
 @@||stream4free.tv^$generichide
 @@||streamani.net/encrypt-ajax.php^
+@@||streambox*.xyz/cdn/down/$stealth=referrer,domain=ddizi.im
 @@||streamhide.com/js/dnsads.js?ads
 @@||streamingcommunity.$generichide
 @@||streamingcommunity.*/*.js
@@ -20592,6 +20637,7 @@
 @@||timebucks.com/publishers/js/prebid-ads.js
 @@||timeforbitco.in/application/views/script/advert.js
 @@||timeinc.net/people/static/mobile/j/tgx-ads.js$domain=people.com
+@@||timeprecei.com/ppot/$stealth=referrer
 @@||timesofindia.indiatimes.com/ad-banner-zedo^
 @@||timesofindia.indiatimes.com/ads_native_js^
 @@||timeweb.com/*/other-user-articles/google-ads
