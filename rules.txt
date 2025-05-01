@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-01 20:18:21（北京时间）
+! Version: 2025-05-01 21:20:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65389
+! Total count: 65391
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -20688,7 +20688,6 @@ alexa.cn##.importantList
 alexa.cn##.importantTop
 alexandriagazette.com,arlingtonconnection.com,burkeconnection.com,centre-view.com,coincost.net,connection-sports.com,fairfaxconnection.com,fairfaxstationconnection.com,greatfallsconnection.com,herndonconnection.com,mcleanconnection.com,mountvernongazette.com,phonearena.com,potomacalmanac.com,reston-connection.com,springfieldconnection.com,viennaconnection.com##.spot
 alexbacher.fr,bokugents.com,4horlover.com,jobsibe.com##body > div[id][class*=" "]:first-child
-alexbacher.fr,toramemoblog.com,bokugents.com,4horlover.com,jobsibe.com##body > div[id][class*=" "]:first-child
 alexfilm.cc##.panel-primary
 alexia.fr###_cc_a, ._cc_op::before
 alexmor.ru##.b-accept-cookie
@@ -59702,6 +59701,7 @@ tuolawa.pl##.widget-advert_placement
 tupaki.com##.live-ads
 tupaki.com##.pwa_Ad
 tupaki.com##.roadblocker-container
+tupaki.com##div[id^="ad_"]
 tuplus.com.co##.cookies
 tupowstalapolska.pl###menusDiv
 turbo.az,tap.az##.bg-bnr-container
@@ -62881,6 +62881,8 @@ woolrich.eu##.firstvisit
 woolworth.de###CybotCookiebotDialog
 woolworth.pl###CybotCookiebotDialog
 woolworths.com.au##.product-grid-v2--tile:has(.sponsored-text)
+woolworths.com.au##.search-banner-top-mbox
+woolworths.com.au##shared-mbox:has(> div[data-mbox^="acs.w-s.web."])
 woopread.com##.dcads
 woorkup.com##.kinsta
 woorkup.com##.perfmatters
