@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-01 15:10:57（北京时间）
+! Version: 2025-05-01 16:14:12（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65380
+! Total count: 65389
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4929,6 +4929,7 @@
 @@||act.vip.iqiyi.com^
 @@||act.zhuanzhuan.com^
 @@||act.zhuanzhuan.com^$important
+@@||action.metaffiliation.com^
 @@||action.metaffiliation.com^|
 @@||actiris.be/urchin.js
 @@||active.jd.com^
@@ -20686,6 +20687,7 @@ alevelgeography.com,shtfplan.com,yournews.com##.et_pb_code_inner
 alexa.cn##.importantList
 alexa.cn##.importantTop
 alexandriagazette.com,arlingtonconnection.com,burkeconnection.com,centre-view.com,coincost.net,connection-sports.com,fairfaxconnection.com,fairfaxstationconnection.com,greatfallsconnection.com,herndonconnection.com,mcleanconnection.com,mountvernongazette.com,phonearena.com,potomacalmanac.com,reston-connection.com,springfieldconnection.com,viennaconnection.com##.spot
+alexbacher.fr,bokugents.com,4horlover.com,jobsibe.com##body > div[id][class*=" "]:first-child
 alexbacher.fr,toramemoblog.com,bokugents.com,4horlover.com,jobsibe.com##body > div[id][class*=" "]:first-child
 alexfilm.cc##.panel-primary
 alexia.fr###_cc_a, ._cc_op::before
@@ -23461,9 +23463,11 @@ bestbuy.ca##.x-productListItem:has([data-automation="sponsoredProductLabel"])
 bestbuy.ca##div.x-productListItem:has([class^="sponsoredProduct"])
 bestbuy.ca##div[data-automation^="criteo-sponsored-products-carousel-"]
 bestbuy.ca,bestbuy.com##[id^="atwb-ninja-carousel"]
+bestbuy.com##.display-ad-wrapper
 bestbuy.com##.generic-morpher:has(.spns-label)
 bestbuy.com##.shop-dedicated-sponsored-carousel
 bestbuy.com##.shop-pushdown-ad
+bestbuy.com##div[id^="shop-display-ad-"]
 bestbuy.com##li.embedded-sponsored-listing
 bestcclm.com##.wp.cl > a
 bestcouponhunter.com,courseforfree.net,analogictips.com,mangadeep.com###text-9
@@ -36868,6 +36872,7 @@ history.com##.m-in-content-ad
 history.com##.m-in-content-ad-row
 historycollection.com##div[class^="cis_add_block"]
 historydaily.org,israelnationalnews.com,pwinsider.com,spaceref.com,usahealthcareguide.com##.banner-top
+historyextra.com##.stack__item:has(> .sticky-offset > .ad-slot)
 historyfacts.com##div[class^="ft-post-advertisement-"]
 historykon.pl##.adv_content
 historyofdatascience.com##.cookies-holder
@@ -51987,6 +51992,7 @@ rawpixel.com##div[data-test-id="check-cookie-consent"]
 rawranime.tv##.site-news[data-id="acceptcookies"]
 rawstory.com###rawstory_front_2_container
 rawstory.com###story-top-ad
+rawstory.com##.bigcrunch-ad-unit:not(html,body,article)
 rawstory.com##.connatix-hodler
 rawstory.com##.container_proper-ad-unit
 rawstory.com##.mgid_1x8
@@ -56787,6 +56793,7 @@ t66y.com##.tips
 t66y.com##.tpc_content.do_not_catch > span.f24
 t66y.com##a[href^="http://www.viidii.info/?https://po88_"]
 t66y.com##a[href^="http://www.viidii.info/?https://po88_"] ~ :nth-child(-n+115)
+ta3.com##.banner_bottom:has(> div[id^="div-gpt-ad-"])
 taadd.com,ninemanga.com##body > div[style*="width:100%;height:768px;overflow:hidden;visibility:hidden;"]
 tablademareas.com###cookies
 tableau.com##.cTableau_CookieConsent
@@ -59333,6 +59340,8 @@ transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty 
 transtxxx.com##div[class^="video-conten"] > div + div
 transtxxx.com##div[class^="video-conten"] div[class]:has(> div[class] > div[id][class] > noscript)
 traum-pizza.de###gc_message_bar_open, #gc_message_bar
+travelandtourworld.com##.left-main-bodybox > .g:has(.OUTBRAIN)
+travelandtourworld.com##.left-main-bodybox > .g:has(ins.adsbygoogle)
 travelbags.nl##.snackbar-container
 travelermaster.com##.__trm__adspot-title-container
 travelermaster.com##.__trm__adv-block
