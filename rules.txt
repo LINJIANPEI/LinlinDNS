@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-02 15:11:35（北京时间）
+! Version: 2025-05-02 16:14:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65406
+! Total count: 65408
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -36363,6 +36363,7 @@ healthline.com##.read-next__row-ad-box
 healthline.com##aside[class="css-bzwr8d"]
 healthline.com##div[class="css-1vcjrad"]
 healthline.com##div[class="css-y4sdpf"]
+healthline.com##div[data-testid="tabbed-article-section"] > div[class]:has(> aside[data-testid="sticky-inline-ad"])
 healthline.com##header#site-header > section[class]
 healthline.com##header#site-header~div[class^="css-"]:empty:last-child
 healthnfitness.net##.adTrack
@@ -50160,6 +50161,7 @@ popnable.com##.widget-main > div[class="col-md-4 col-sm-12"]
 popnable.com##div[class="profile-picture do-margin-top"]
 popphoto.com##.pane-taboola
 poppulo.com##.notice
+popsci.com###pw-iab-leaderboard
 popsci.com##.arcAdsBox
 popsci.com##.arcAdsContainer
 popsci.com##div[class*="-prefill-container"]
