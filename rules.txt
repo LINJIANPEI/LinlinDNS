@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-02 20:19:29（北京时间）
+! Version: 2025-05-02 21:22:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65409
+! Total count: 65419
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5519,6 +5519,7 @@
 @@||akamaized.net^$important
 @@||akashiro.co.id^$generichide
 @@||akatsukisubs.com^$generichide
+@@||akbaba.lol^$stealth=referrer,domain=setplay.cfd
 @@||akinator.mobi.cdn.ezoic.net^$domain=akinator.mobi
 @@||akoam.net^$generichide
 @@||akoam.ws^$generichide
@@ -19926,6 +19927,9 @@ abc7news.com###themeProvider > div[class]:has(> div > div > div.placeholderWrapp
 abc7ny.com##.StickyAdWrapper
 abchomeopathy.com###cookieQ
 abcnews.go.com###themeProvider > div[class]:has(> div[class] > div[data-box-type="fitt-adbox-thinbannerhome"])
+abcnews.go.com##.ScrollSpy_container > div[data-container="band"]:has(> div[class] > div.taboola)
+abcnews.go.com##.ScrollSpy_container > div[data-container="band"]:has(> div[class] > div[data-box-type^="fitt-adbox-thinbanner"])
+abcnews.go.com##.navigation__hulu
 abcnews.go.com##[data-testid="prism-sticky-ad"]
 abcnews.go.com##div[data-container="band"]:has(> div > div[data-box-type="fitt-adbox-thinbannerhome"])
 abcnews.go.com,edarabia.com##.leaderboard-970
@@ -23228,6 +23232,7 @@ bbs.my0511.com##div[style="margin-left:auto;margin-right:auto;text-align:center;
 bbs.my0511.com##embed[width="970"][height="70"]
 bbs.my0511.com##span.smalltxt
 bbs.nga.cn##div[style^="background:#423d35;box-shadow:"]
+bbs.oneplus.com##.oneplus-app
 bbs.pcbeta.com###diynavtop + style + div[class]
 bbs.pcbeta.com###pt + div[style] > div[style^="clear:both;"]
 bbs.pcbeta.com##div[style="width:998px;height:75px;border:1px solid #cdcdcd;border-top:3px solid #009ad9;margin:0 0 10px 0;background:#fff;"] + style + div[class]:style(height:270px !important;)
@@ -38275,7 +38280,6 @@ immoweb.be###result-list-header
 immoweb.be##.adfocus
 immoweb.be##.adims-homepage-container
 immoweb.be##.dpg
-immoweb.be##.mortgage-bank-banner
 immoweb.be##.result-section--ads
 immunspender.com###cookieman-modal
 imnks.com##.adTags
@@ -38405,6 +38409,8 @@ indiabusinessjournal.com##.cus-ad-img
 indiabusinessjournal.com##.pt--20
 indiaforums.com##.adBanner
 indiaglitz.com###main_slide_row > div.sidewrap
+indiaglitz.com##.resize > a[target="_blank"] > img
+indiaglitz.com##.top_cms_ads
 indiamart.com###Below_Related_Section:empty
 indiamart.com##.pd-ad2
 indiamart.com##.whcl
@@ -41892,6 +41898,7 @@ lenovo.com.cn##.bottom_ad_ban_bg
 lenovo.com.cn##.bottom_ad_fla
 lenovo.com.cn##.coffee-top
 lenovo.com.cn##.daily-hotwords
+lenovo.com.cn##.downloadBar
 lenovo.com.cn##.fixedLeftAd
 lenovo.com.cn##.game
 lenovo.com.cn##.game-bd
@@ -43056,7 +43063,6 @@ m.kuaidi100.com##.adsbygoogle + a
 m.kuku.lu###area_maillist > div > div > .horizontal ~ div[style="width:100%;min-height:90px;"]
 m.lelekan.com##div[id^="myads"]
 m.lenovo.com.cn##.bottomOpenAppBtn
-m.lenovo.com.cn##.downloadBar
 m.lianjia.com##.agent_download_head.arrow.agent_download.lazyload_ulog.flexbox.pictext
 m.lianjia.com##.contact_agent.fixed_bar
 m.lianjia.com##.download_fixed
@@ -43549,7 +43555,6 @@ manga18fx.com###detect_modal ~ .modal-backdrop
 manga18fx.com##.kadx
 mangabat.com##div[style$="overflow: hidden;"] > div[style^="width: 300px; height: 250px;"]
 mangabat.com##div[style$="overflow: hidden;"] > div[style^="width: 728px; height: 90px;"]
-mangabats.com##.ads-contain
 mangabats.com,nelomanga.net##.ads-contain
 mangabtt.com##div[class] > div[style*="height:"]
 mangabz.com###bb1
@@ -45377,6 +45382,7 @@ movieparadise.org##.fixed-sidebar-blank > #text-8
 movieplayer.it##.banner
 movierulzfree.com##a[href^="/watchfree.php"]
 movierulzfree.com,watchmovierulz.co##.ad_watch_now
+movies-2015.com###mdl-register
 movies.meetdownload.com##.col-md-9.justify-content-center
 movies.ndtv.com##.ndmv-ad-wrapper
 movies07.co##.sidebar > ul > #custom_html-3
@@ -48402,6 +48408,7 @@ opositatest.com##.otcn
 opovo.com.br##.notificacao-estatica
 opoyi.com##.hLYYlN
 opportunitydesk.info##a[href^="https://www.iu.org/"]
+opposhop.cn##.oc-hairline--bottom.welcome-wrapper
 ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##.top-billboard
 ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##div[id^="slot_"]
 opswat.com###cookie-ntc
@@ -50162,6 +50169,7 @@ popnable.com##.widget-main > div[class="col-md-4 col-sm-12"]
 popnable.com##div[class="profile-picture do-margin-top"]
 popphoto.com##.pane-taboola
 poppulo.com##.notice
+popsci.com###article-footer > .container:has(> div[data-rc-widget]:only-child)
 popsci.com###pw-iab-leaderboard
 popsci.com##.arcAdsBox
 popsci.com##.arcAdsContainer
@@ -55048,6 +55056,7 @@ socialstyrelsen.se##.sos-ck-cnsnt-mgnr
 societapiemonteseautomobili.com##.banner, #banner
 societegenerale.fr###c-message
 societegenerale.rs###sgs_cookie
+society19.com##div[style*="margin:"][style*="text-align:"][style*="display:"]:has(> div[id^="div-gpt-"])
 socigames.com##.socig-floating-footer
 socigames.com##a[href="https://lewdvideo.com/"]
 socigames.com##div[class^="socig-"] > center
@@ -57053,6 +57062,7 @@ teamos-hkrg.com##.sponsors__lead
 teamxnovel.com##.body-wrap > div[style^=" padding:50px "]
 teb.com.tr###cokieMain
 tebyan.net###ctl07_ctl00_ShowScriptBanner1_divScript
+tecadmin.net##.a-wrap:has(> .adsbygoogle)
 tecedo.at##.msg-banner
 tech-cambodia.com###above-thumbnail
 tech-cambodia.com###body_ads_0_0_3
