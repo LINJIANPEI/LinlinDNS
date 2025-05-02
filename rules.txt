@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-02 23:11:08（北京时间）
+! Version: 2025-05-03 00:12:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65420
+! Total count: 65428
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5421,6 +5421,7 @@
 @@||adx.adform.net/adx/$xmlhttprequest,other,domain=tvp.pl
 @@||adx.yiche.com/cityindex.ashx
 @@||adx.yiche.com/ssp/echo/v1.0/en?*,*,*&cs=
+@@||adysca78chshjajajhdhjs11.workers.dev/list/*.m3u8$stealth=referrer
 @@||adz7short.space/*js/viewad.js$domain=adz7short.space
 @@||adz7short.space^$generichide
 @@||adzsafe.com^$generichide
@@ -6576,6 +6577,7 @@
 @@||bestcripto.xyz^$generichide
 @@||besthealthyguide.com^$generichide
 @@||bestlistofporn.com^$generichide
+@@||bestreamsports.org^$generichide
 @@||beta.speedtest.net/api/
 @@||beta.speedtest.net/dist/
 @@||betaplayer.site/embed/$stealth=referrer
@@ -11864,6 +11866,7 @@
 @@||keepkoding.com^$generichide
 @@||kehai.com/front/dist/app/site/list/advertisement.js
 @@||keizai.biz^$generichide
+@@||kejilion.pro^$generichide
 @@||kemono.party^
 @@||kenitv.me/*embed$stealth=referrer
 @@||kenoshanews.com^$generichide
@@ -14291,6 +14294,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kaipkada.lt
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kawarthanow.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kdbhbd.blogspot.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kejilion.pro|bilinovel.com|mcappx.com|yeeach.com|blog.6ziz.com|docsmall.com|uiadmin.net|4horlover.com|23qb.net|4spaces.org|aboluowang.com|assbbs.com|chaojizhibo.net|chtoen.com|daxiaamu.com|demo.ama.pub|dizhishengcheng.com|doitwell.tw|ekamus.info|eu4cn.com|ff14angler.com|freedidi.com|fsbot.xyz|haoweichi.com|it365.abctool.info|linovelib.com|logi.im|mens1069.com|monnsutogatya.com|mpyit.com|myqqjd.com|numberempire.com|ozabc.com|pansearch.me|patch.ali213.net|pc3mag.com|reh.tw|shenfendaquan.com|sistersbedroom.com|sto520.com|vaptcha.com|wandhi.com|wenxuecity.com|wuyong.fun|xbeibeix.com|xiebruce.top|xugaoxiang.com|xxxxx520.com|yodu.org|yummy.best|zaixianjisuan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=keralatelecom.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=key-hub.eu
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kharisma-adzana.blogspot.com
@@ -17390,6 +17394,7 @@
 @@||stripe.com^$xmlhttprequest,domain=app.axenthost.com
 @@||stripflix.cam^$generichide
 @@||strmrdr*/index.php?id=$stealth
+@@||strmrdr-cf-worker-*.workers.dev/*.m3u8$stealth=referrer
 @@||studcat.infra.systems^$important
 @@||studioclassroom.com/ad/
 @@||studizba.com^$generichide
@@ -26480,6 +26485,7 @@ click108.com.tw##.AD_300250
 click108.com.tw##.AD_730280
 click2houston.com,clickondetroit.com,clickorlando.com,ksat.com,local10.com,news4jax.com##.floatingWrapper
 click2houston.com,clickondetroit.com,clickorlando.com,ksat.com,local10.com,news4jax.com##.topWrapper
+click?pid=*&sub2=Clickunder$all
 clickandtoner.es###beapp_cookies
 clickatell.com##.cookie-show
 clickbus.com.br###footer-policy
@@ -27160,6 +27166,8 @@ comick.fun##.float-right > .mx-auto > a[href^="https://comick.app/product/"]
 comick.fun##.images-reader-container .mx-auto > a[href^="https://comick.app/product/"]
 comick.fun##a[href^="https://comick.app/product/"] + a[href="/donate"]
 comick.fun##a[href^="https://comick.app/product/"] > img[alt="affilate"]
+comick.io##.reader-container > div > div#images-reader-container ~ div.py-16:has(> div[id^="pubadx-"])
+comick.io##.w-full.relative > div.pt-2:has(> div.w-full.flex.justify-center)
 comics.org##div[style="height:90px"]
 comicsands.com###c7da91bc-8e44-492f-b7fd-c382c0e55bda
 comicsheatingup.net###custom_html-5
