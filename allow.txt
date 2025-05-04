@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-04 20:17:55（北京时间）
+! Version: 2025-05-04 21:19:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 20813
+! Total count: 20816
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -55,6 +55,7 @@
 @@.jpg#/adengage1./$image,domain=gotxx.com
 @@.jpg$stealth,domain=manga1001.com
 @@.jpg?$image,domain=el7l.tv
+@@.m3u8$domain=rapid-cloud.co,xmlhttprequest,stealth=referrer
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$stealth=referrer,domain=edgedeliverynetwork.com
 @@.mp4$domain=crunchyroll.com,stealth
@@ -507,6 +508,7 @@
 @@s.click.tmall.com
 @@safari-extension://com.adguard.safari-$document
 @@safari-extension://com.adguard.safaridev-$document
+@@seg-*.*$domain=rapid-cloud.co,xmlhttprequest,stealth=referrer
 @@sh.st
 @@style/*/*jpeg$xmlhttprequest,stealth=referrer,domain=weakspell.to
 @@t.cn
@@ -8934,6 +8936,7 @@
 @@||cdn.onenote.net/livetile/?Language=en-US^$important
 @@||cdn.onlystream.tv/ads/pop.js
 @@||cdn.optimizely.com/datafiles/*.json$domain=hm.com
+@@||cdn.optimizely.com/datafiles/*.json$domain=pizzahut.co.uk
 @@||cdn.optimizely.com/datafiles/*.json$domain=shop.mango.com
 @@||cdn.optimizely.com/datafiles/*.json$domain=talktalk.co.uk
 @@||cdn.optimizely.com/datafiles/*.json/tag.js$domain=nike.com
@@ -14062,8 +14065,8 @@
 @@||libero.it^$generichide
 @@||libgen.li/ads.php
 @@||libros4.com^$generichide
+@@||libs.baidu.com^$domain=11bqg.com|xbotaodz.com|0794.org|12zw.net|1biqu.com|1kans.net|23hh.com|23sk.net|23wxx.com|33yq.org|3yt.com|4xiaoshuo.net|56shuku.info|777zw.net|81book.com|99mk.net|aiwx.info|aixs.la|aikushuge.com|bequmo.com|bimixsw.com|biqiuge8.cc|biqudu.tv|biquge775.com|biquge98.net|biqugecd.com|biquka.com|aidu123.com|biqutsxs.com|biquzw.info|bshuku.com|bxwx.live|bxwx.org|damengzhu1.com|gdbzkz.info|hongyeshuzhai.com|ibiquges.com|ibiquges.org|ibiquta.net|ibotaodz.org|imianhuatang.info|ishisetianxia.com|ishubao.org|xvipxs.net|iwurexs.info|ixs.la|lewenge.cc|liewenn.com|liudatxt.org|paoshu8.com|paoshuzw.com|pksge.com|qishuta.info|shu008.com|shumil.co|silukex.com|siluwx.org|sthuojia.org|tutengzw.com|u33.cc|wenxuem.com|x81zw.co|xbiquke.com|xdingdian.cc|xiaxs.info|xs5200.com|xszww8.net|xuanshu.org|xuessex.com|yqd6.com|yunxs.info|zjsw.org|zzs5.info
 @@||libs.baidu.com^$domain=m.supfree.net
-@@||libs.baidu.com^$domain=xbotaodz.com|0794.org|12zw.net|1biqu.com|1kans.net|23hh.com|23sk.net|23wxx.com|33yq.org|3yt.com|4xiaoshuo.net|56shuku.info|777zw.net|81book.com|99mk.net|aiwx.info|aixs.la|aikushuge.com|bequmo.com|bimixsw.com|biqiuge8.cc|biqudu.tv|biquge775.com|biquge98.net|biqugecd.com|biquka.com|aidu123.com|biqutsxs.com|biquzw.info|bshuku.com|bxwx.live|bxwx.org|damengzhu1.com|gdbzkz.info|hongyeshuzhai.com|ibiquges.com|ibiquges.org|ibiquta.net|ibotaodz.org|imianhuatang.info|ishisetianxia.com|ishubao.org|xvipxs.net|iwurexs.info|ixs.la|lewenge.cc|liewenn.com|liudatxt.org|paoshu8.com|paoshuzw.com|pksge.com|qishuta.info|shu008.com|shumil.co|silukex.com|siluwx.org|sthuojia.org|tutengzw.com|u33.cc|wenxuem.com|x81zw.co|xbiquke.com|xdingdian.cc|xiaxs.info|xs5200.com|xszww8.net|xuanshu.org|xuessex.com|yqd6.com|yunxs.info|zjsw.org|zzs5.info
 @@||lifeblogid.com^$generichide
 @@||lifestyle.bg^$generichide
 @@||lifesurance.info/-ads-banner.js
