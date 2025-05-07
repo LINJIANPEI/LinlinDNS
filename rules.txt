@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-07 20:20:46（北京时间）
+! Version: 2025-05-07 21:27:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65563
+! Total count: 65570
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -19911,6 +19911,7 @@ a2zcrack.com###header-banner468
 a2zcrack.com##a[href*="https://goo.gl/"]
 a2zcrack.com##a[href][target="blank"][rel="nofollow"] > h3
 a3quattro.de###popup
+a7la-home.com##.entry-content > div.code-block:has(> ins.adsbygoogle)
 a9vg.com###guide-download
 a9vg.com###qrcode
 a9vg.com##.a9-back-top_qrcode
@@ -24128,6 +24129,7 @@ bleepingcomputer.com##a[href="https://try.flare.io/bleeping-computer/"] > img
 bleepingcomputer.com##ul#bc-home-news-main-wrap > li:has(> div > ul > li > a[rel="noopener sponsored"])
 bleepingcomputer.com##ul#bc-home-news-main-wrap > li:has-text(Sponsored)
 blende-und-zeit.sirutor-und-compur.de###hinweise
+blenderartists.org##.side-block > #supporters:has(> a[target="_blank"])
 blenderartists.org,stonetoss.com###friends
 blendernation.com##.title
 blendtec.com###pixelpop
@@ -30777,6 +30779,9 @@ elektriker-wissen.de###f_cookie
 elektro-met.pl###cookie
 elektroaktivisten.de##.main-alert
 elektrobit.com###ckBar
+elektroda.de,elektroda.com,elektroda.pl##.JWzeW7p9as
+elektroda.de,elektroda.com,elektroda.pl##.VNByCMZS9T
+elektroda.de,elektroda.com,elektroda.pl##div[style="min-height: 265px;"]
 elektroda.pl###WelcomeAdContainer
 elektroda.pl###WelcomeAdContainer + #overlay
 elektroda.pl###topbb
@@ -37284,7 +37289,6 @@ hotleaks.tv,javrank.com##[class^="koukoku"]
 hotmilfzone.com##body > div:not([id]):not([class])
 hotmovs.com###in_va
 hotmovs.com##.app-banners
-hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##.nopop
 hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##a[href^="https://rtr2perf1.com/"]
 hotmovs.com,thegay.com##.fiioed
 hotmovs.tube##.app-banners__wrapper
@@ -43780,7 +43784,6 @@ manwa1.me,manwa2.me,manwa.me##[style*='15px'][style*='background-color:'][style*
 manwa1.me,manwa2.me,manwa.me##[style='transform-origin: left top; margin: 0px auto;']
 many.xxx##.avd-desc
 manyak.info$$script[tag-content="[][(![]+[])[+[]]"][min-length="15000"][max-length="25000"]
-manysex.com##.header__item
 manysex.com##.tajbjjt
 manysex.com,xjav.tube,tubepornclassic.com##.jwplayer > span[style="display:flex !important"] > div > div
 manytoon.com###floating_ads_bottom_textcss_container
@@ -46789,6 +46792,8 @@ netfly.fun##.player-box-main ~ [style^="display: flex; justify-content: space-be
 netfly.fun,netfly.tv,netflytv.xyz##.banner[href^="http"]
 netfly.fun,netfly.tv,netflytv.xyz##[style^="display: flex;"]
 netfly.lol##.module-tglist
+netfuck.net,majorscans.com,xerifetech.com,gokushiteki.com,warungkomik.com,tarotscans.com,chineseanime.org,ayatoon.com##body > #footer + div[id][class*=" "]
+netfuck.net,nullcms.ru,searchnsucceed.in,theberserkmanga.com,haxnode.net,farlad.com,mod18.com,hoofoot.net,thejujutsukaisenmanga.com,nxbrew.net,hiphopa.net,anysource.pro,adminreboot.com,kakiagune.com,savegame.pro,papa4k.online,my-ford-focus.de,stakes100.xyz,sp500-up.com,papafoot.click,f1gplive.xyz,gamevcore.com,papahd.club,yakyufan-asobiba.com,hadakanonude.com##body > #wrapper + div[id][class*=" "]
 neti.ee##.neti_reminder
 netia.pl##.cookies
 netmovies.to##.advertising-link
@@ -52854,6 +52859,9 @@ romania-insider.com##.job-item
 romaniajournal.ro##.geoc-container
 romanialibera.ro##body > div.m-auto[style="width: 1200px; height: 200px"]
 romaniatv.net###sam_branding
+romaniatv.net##.container[class*="mg-top-"] > .height-250:has(> div[id*="div-gpt-ad-"])
+romaniatv.net##.sam_placeholder
+romaniatv.net##div[data-platform="AdNow"]
 romarea.com,sportfacts.net,youboxtv.com,itdmusics.com##div[class*="__chp_branding__"]
 romarea.com,sportfacts.net,youboxtv.com,itdmusics.com##div[id*="__modal__"][class*="__modal__"]
 rome2rio.com###alert-banner
@@ -61768,7 +61776,6 @@ vvshu.com##.forviewda
 vw.com.br###warning
 vwg.de##.wgc-cookie-box
 vx666.com##.async[href^="http"]
-vxxx.com###fhvids
 vxxx.com###player-1 > div[style="display:flex !important"] > div
 vxxx.com##.emrihiilcrehehmmll
 vxxx.com##.itrrciecmeh
