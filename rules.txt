@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-07 15:11:37（北京时间）
+! Version: 2025-05-07 16:15:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65546
+! Total count: 65557
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11575,6 +11575,7 @@
 @@||ipw.cn^
 @@||ipxx.pro^$important
 @@||irasutoya.blogspot.com^$generichide
+@@||irdeto.com/widevine/$stealth=3p-auth,domain=paramountplus.com
 @@||ireez.com^$generichide
 @@||ireland101.com/assets/js/prebid-add.js
 @@||is-hl.snssdk.com^
@@ -41283,6 +41284,9 @@ koreaherald.com##.mythiell-mid-container
 koreanstreamer.xyz##[href^="https://www.saltycams.com"]
 koreanstreamer.xyz##section.korea-widget
 koreaporn.net##.bb_desktop
+koreatimes.co.kr##div[class^="homeLayoutWrapper"]:has(> div.wrap > div[class^="HomeTaboola"])
+koreatimes.co.kr##div[class^="homeLayoutWrapper_aside-contents-wrap"] > div[class^="homeLayoutWrapper_aside-contents"] > div:has(> div[id^="div-gpt-ad"])
+koreatimes.co.kr##div[class^="wrap DetailTabool"]
 koreatimes.co.kr##iframe[id^="nad_"]
 korisnaknjiga.com###kukiji
 korsrt.eu.org##.cutemag-scroll-top + div[id][class*=" "]
@@ -41742,6 +41746,7 @@ latimes.com##.trb_gptAd
 latimes.com##.trb_masthead_adBanner
 latimes.com,sandiegouniontribune.com##.revcontent
 latimes.com,sandiegouniontribune.com##.trb_ar_cont
+latinluchas.com##.zak-overlay-wrapper + div[id][class*=" "]
 latino-webtv.com###adb-enabled
 latino-webtv.com###ventana-flotante
 latinohentai.com##aside.widget_media_image > a:not([href*="latinohentai.com"], [href*="twitter.com"], [href*="discord.gg"]) > img
@@ -52854,6 +52859,8 @@ romhustler.org##.tower_ad_desktop
 romhustler.org##[class^="leaderboard_ad"]
 romo-tonder.dk##.elementor-popup-modal
 romper.com##.adWrapper
+romsfun.me###download-loading-vip > .text-center > a[target="_blank"]
+romsfun.me##center > a[target="_blank"] > button
 romsgames.net###td-top-leaderboard
 romsgames.net##.affiliate-container
 romsgames.net##.mmad
@@ -63899,8 +63906,12 @@ xmfish.com##.advert-entry-list
 xmfish.com##.bobing-theme
 xmfish.com##.readCon_right
 xmilf.com##.content-block > div.see-more-wrapper + div.wrapper
+xmilf.com##.header__nav > a[href][target="_blank"][rel="nofollow"]
 xmilf.com##.videoplayer + section > #und_ban
 xmilf.com##.videoplayer + section > #und_ban + h4
+xmilf.com,hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##.nopop
+xmilf.com,manysex.com##.header__item
+xmilf.com,vxxx.com###fhvids
 xmissy.nl##.noclick-small-banner
 xmissy.nl##.noclick-small-bnr
 xmlgold.eu##.cookie-window
