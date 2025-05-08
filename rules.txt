@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-08 18:11:48（北京时间）
+! Version: 2025-05-08 19:09:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65580
+! Total count: 65585
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -56308,7 +56308,9 @@ stockanalysis.com##.adu
 stockcharts.com###sccCookieBanner
 stockhouse.com##.sh-ad
 stockhouse.com##.sh-cookie-dialog
+stockingfetishvideo.com###flirtyBubble
 stockingfetishvideo.com###menu-main-menu > li > a:not([href*="stockingfetishvideo.com"])
+stockingfetishvideo.com##.item:has(> [href*="/?action=trace&"])
 stockingfetishvideo.com##a[href^="https://stockingfetishvideo.com/"][href*=".php"]
 stockinvest.us###IC_d_300x250_1
 stockinvest.us###IC_d_728x90_1
@@ -61299,7 +61301,10 @@ vidhub1.cc,vidhub.me,vidhub.tv##.adpwc
 vidhub1.cc,vidhub.me,vidhub.tv##.adwap
 vidhub1.cc,vidhub.me,vidhub.tv##.promolnk
 vidhub1.cc,vidhub.me,vidhub.tv##.promotelink
+vidhub1.cc,vidhub.me,vidhub.tv##div:is([class^="ad"], [class*="pwc"]):has(> div[class^="prom"][style] > img[onclick^="window.open"])
 vidhub1.cc,vidhub.me,vidhub.tv##div[class^="ad"]:has(> div[class^="prom"][style] > img[onclick^="window.open"])
+vidhub1.cc,vidhub.me,vidhub.tv##div[class^="prom"][class*="nk"][style]
+vidhub1.cc,vidhub.me,vidhub.tv##div[class^="prom"][style] > img[onclick^="window.open"]
 vidian.me##a[target="_blank"] > img[style="min-height:50px"]
 vidian.me##div[id^="hide_ads"]
 vidlii.com$$script[tag-content="|babasbmsgx|"][min-length="5000"][max-length="27000"]
