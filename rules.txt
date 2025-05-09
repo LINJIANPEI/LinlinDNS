@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-09 15:11:28（北京时间）
+! Version: 2025-05-09 16:14:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65597
+! Total count: 65601
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3155,6 +3155,7 @@
 4kporn.xxx,crazyporn.xxx,hoes.tube,love4porn.com##.item:has(> [class*="ads"])
 4kporn.xxx,crazyporn.xxx,hoes.tube,love4porn.com##.sponsorbig
 4kporn.xxx,hoes.tube,crazyporn.xxx,love4porn.com##.sponsorbig
+4kpornvideos.tv,pornogram.tv##.header-spot
 4pig.com###sponsorbanner
 4pig.com##.banner_page_right
 4pig.com,levelsex.com##.banner_page_right
@@ -13818,6 +13819,7 @@
 @@||openstream.io/hls/$stealth
 @@||openx.net/mw/1.0/jstag$domain=egmnow.com
 @@||openxlab.org.cn^
+@@||opex.xplan.iress.com.au/js/xiled/util/pageview.js$~third-party
 @@||oppo.yidianzixun.com^$important
 @@||opt.semasio.net/optsvc^$domain=youronlinechoices.com
 @@||optad360.io/*/*.min.js$xmlhttprequest,domain=realmadryt.pl
@@ -46085,6 +46087,7 @@ mydown.yesky.com##.rightGg
 mydowndown.com##p[style="color:#ff0000;"] > a[target="_blank"]
 mydramalist.com##.ad-removal-info
 mydramalist.com##.app-body > div:has(> div[class*="is-desktop-ads-"])
+mydramalist.com##.app-body > div[class] > div[class*="is-"]:has(> .htlad-header_top:only-child)
 mydramalist.com##.col-lg-4 > .clear
 mydramalist.com##.content-side > div[class*="_right"][style="min-height: 250px;"]
 mydramalist.com##.content-side > div[class*="_right_"]:has(> #insticator-container:only-child)
@@ -57562,6 +57565,7 @@ telegram.hr##.banner-separator + div.full
 telegram.hr##.disclaimer
 telegramchannels.me###btm-pr
 telegramchannels.me##.columns > .adNative-1
+telegramchannels.me##.columns.is-multiline > .column > .card.is-clmd:has(> a[href^="https://telegramchannels.me/goclimad/"]:only-child)
 telegramchannels.me##.is-climad
 telegramchannels.me##div[class*="adHeight"]
 telegramguide.com###stky-ads
