@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-10 19:07:48（北京时间）
+! Version: 2025-05-10 20:16:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65625
+! Total count: 65627
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6054,6 +6054,7 @@
 @@||api.twitter.com^$important
 @@||api.union.vip.com^
 @@||api.unipay.qq.com^
+@@||api.useinsider.com/api/web^$domain=barenecessities.com
 @@||api.val.qq.com/go/agame/resource/banner?bannerid=aclos_website_banner$domain=val.qq.com
 @@||api.vc.bilibili.com^
 @@||api.vhx.com^$stealth=3p-auth
@@ -20918,6 +20919,7 @@ allpcworld.com##body > div[id][class][style*="z-index: 9999"]
 allpcworld.com##body > div[id][class][style*="z-index: 9999"] + div[class][style*="z-index: 9999"]
 allplay.pl##body > div:not([id]):not([class])
 allpornstream.com##.min-h-\[237px\]
+allradio.net##.insWrap
 allradio.net##div[class^="GoogleAdsenseContainer_"]
 allrecipes.com###cal-app
 allrecipes.com##.mntl-jwplayer-broad
