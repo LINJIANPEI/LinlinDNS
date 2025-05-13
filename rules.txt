@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-14 03:08:43（北京时间）
+! Version: 2025-05-14 04:11:38（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65817
+! Total count: 65822
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25716,6 +25716,7 @@ carrotchou.blog,landiannews.com,woniuyulew.com,xingkbjm.com##.widget_media_image
 cars.bg##a[href^="http://www.ads.bg/"]
 cars.com###branded-canvas-click-wrapper:has(> #native-ad-html)
 cars.com###primary-hero
+cars.com##.vehicle-card.inventory-ad
 cars.com##[id$="-sponsored"]
 carsale24.com###cookies
 carsales.com.au##.csn-refine-ads
@@ -53521,6 +53522,10 @@ sampledrive.org###adblock-overlay
 sampledrive.org,rahim-soft.com,veganab.co,inter-news.it,azamericasat.net##.background-overlay + div[id][class*=" "]
 samplette.io##div[id^="pw-"][id$="-leaderboard"]
 samsaraubud.com###bottom-fixed
+samsclub.com##.sc-carousel-slide:has(.sc-sponsored-simple)
+samsclub.com##.sc-plp-cards-card:has(.sc-specials-label)
+samsclub.com##.sc-plp-cards-vast-ad
+samsclub.com##.sc-sba-modules:has(.sc-specials-label)
 samsonite.ro##.mainBlack
 samsung.com###operationBanner
 samsung.com##.helptips__container, #cookie_component, .js-smtc-cookie, #bgc-cookie-popup
