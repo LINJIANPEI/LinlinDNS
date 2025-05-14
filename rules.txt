@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-14 08:49:49（北京时间）
+! Version: 2025-05-14 10:27:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65831
+! Total count: 65829
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3967,8 +3967,6 @@
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/thumbs_5\/\d{1,2}(?:\(m=e[0-9A-Za-z]{5,7}aaaa\)\(mh=[-_0-9A-Za-z]{16}\))?\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/[a-z]?jz\/(?:[0-9a-f]\/){3,5}[0-9a-f]{42}-?(?:\d{2,3}|(?:(?:\d{3,4}-){3}h264)?\.(?:mp4-\d{1,2}|flv-\d))\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/sb\/t\/\d{6,8}\/\d\/\d\/w:300\/t\d{1,2}-enh\/(?:[0-9a-z]+-)*[0-9a-z]+\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
-@@/^https:\/\/manatoki[0-9]+\.net\//$stealth=searchqueries|donottrack|webrtc|push|referrer
-@@/^https:\/\/newtoki[0-9]+\.com\//$stealth=searchqueries|donottrack|webrtc|push|referrer
 @@/^https:\/\/st\.pussyspace\.(?:com|net)\/upload\/cat\.image\/[_3a-z]{2,16}\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/st\.pussyspace\.(?:com|net)\/upload\/poster_img_url\/par\/c3Rhci9[%0-9A-Za-z]{16,32}&size_width\/par\/160\/l\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/www\.[a-z]{7,14}\.com\/[a-z]{1,4}\.js/$script,third-party,domain=shinden.pl,badfilter
@@ -7519,7 +7517,6 @@
 @@||chaintv.xyz/homestatic/js/adjs.js
 @@||challenges.cloudflare.com/turnstile/$script
 @@||challenges.cloudflare.com^$domain=download.megaup.net
-@@||challenges.cloudflare.com^$stealth=location|ip
 @@||challenges.cloudflare.com^$stealth=location|ip|searchqueries|donottrack|webrtc|push|referrer
 @@||chamsko.pl/js/advertisement.js
 @@||chan.sankakucomplex.com^$generichide
@@ -13078,7 +13075,6 @@
 @@||milanworld.net^$generichide
 @@||milaulas.com^$generichide
 @@||mileyupdateuk.com^$generichide
-@@||milffox.com/player/config.php
 @@||milfnut.com^$generichide
 @@||milfnut.net/pop.js
 @@||milfzr.com^$generichide
@@ -28991,7 +28987,6 @@ defenseworld.net##.sidebar-section > div[style*="min-height:"]:has(> .adsbygoogl
 defenseworld.net##[href^="https://www.marketbeat.com/scripts/redirect.aspx"]
 defiantamerica.com##.defia-widget
 defiexplore.com###privacy-popup
-definebabe.com##.fp-ui > div[style^="position: absolute; inset: 0px; overflow: hidden;"]:not([class])
 definebabe.com##.right-sidebar
 definebabe.com##.subheader
 definebabe.com##.videos > div.d-flex
@@ -30761,6 +30756,7 @@ edufever.com##.inside-right-sidebar > aside[id="block-5"]
 edukacjakrytyczna.pl##a[href^="/przekierowanie/"] > img[alt="banner"]
 edukaroo.com##div[id*="-Ads"]
 edukaroo.com,shortix.co,learnmany.in,forex.soft3arbi.com,uptoearn.xyz,fxmag.com###popup
+edumail.icu##a[title="ShockVPN"]
 edumail.icu$$script:contains(enable_ad_block_detector)
 edumap.az##.single-post a[href^="https://bit.ly/"]
 edumap.az##.textwidget > a[href] > img
@@ -37292,7 +37288,6 @@ hmv.com##.ns-type-notice
 hnntube.com##.jumbotron
 hnonline.sk##.item__ad-center
 hnonline.sk##div[class^="position_break_"]
-hnonline.sk##div[class^="position_item_right_"]
 hnonline.sk##div[class^="position_item_right_"]:has(> div.ad--align:only-child)
 hobby.porn##.asg-vast-overlay
 hobby.porn##.pad
@@ -44884,7 +44879,6 @@ milffox.com###native
 milffox.com###side_content:has(div.bpalka_banner)
 milffox.com###thumbs:has(> div.con > ul > li > a[href^="https://faphouse.com/"])
 milffox.com##.inp__wrapper
-milffox.com##.offer
 milffox.com##.signup
 milffox.com##div[class^="bpalka"]
 milffox.com,definebabe.com##.fp-ui > div[style^="position: absolute; inset: 0px; overflow: hidden;"]:not([class])
@@ -48643,10 +48637,15 @@ op.gg##.h-\[287px\]
 op.gg##.min-h-\[50px\]
 op.gg##.min-h-\[66px\]
 op.gg##.mode-header-container ~ div[class^="css-"] > div[class^="css-"]:has(> div > div.vm-placement)
+op.gg##.mx-auto:has(> div[style^="min-width:"] > div[id^="div-gpt-ad"])
 op.gg##.w-full > section.bg-gray-0.md\:overflow-hidden.md\:rounded.flex-col.p-2.w-full
+op.gg##.z-ads
 op.gg##div:has(> div[data-ad])
 op.gg##div[class*="eylegve"]
 op.gg##div[class^="Game Game--Result"] + div[result] + div[class^="css-"]:has(> div > div.vm-placement)
+op.gg##div[id^="ad-container"]
+op.gg##div[style^="display:"]:has(> div[data-id="billboard"])
+op.gg##div[style^="display:"]:has(> div[data-id="leaderboard"])
 op.gg##main >  div[style][class^="css-"]:has(> div:not([class]) > div.vm-placement)
 op.gg##main > span[style^="display: flex; justify-content: center; align-items: center;"]
 op.gg##section:has(> div.min-h-\[250px\]):not(:has(> *:not(div.min-h-\[250px\])))
@@ -54527,7 +54526,6 @@ shorterall.com##.row > div[class] > style + div.sticky
 shortit.pw##a[href^="./out.php?w=a&id="]
 shortix.co##.popSc
 shortix.co,learnmany.in###blur-background
-shortix.co,learnmany.in,forex.soft3arbi.com,uptoearn.xyz,fxmag.com###popup
 shortlist.com##.align-xl-content-between
 shortnest.com###dl-bbtn
 shortpixel.com###shortpixel-cookies
