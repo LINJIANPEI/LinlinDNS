@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-15 16:14:45（北京时间）
+! Version: 2025-05-15 17:11:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65845
+! Total count: 65851
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -36887,6 +36887,7 @@ hentaigasm.com##a[href^="https://www.hentaiheroes.com"]
 hentaigasm.com##div[style*="width: 300px;"][style*="height:"]:has(> ins[data-zoneid])
 hentaigasm.com,channelmyanmar.org##div[id^="custom_html-"]
 hentaigasm.com,re-hentai.com,myslavegirl.org##div[style^="width: 300px; height: 250px;"]
+hentaigifz.com##.single-side > .side-widget:has(> ins[data-zoneid])
 hentaihand.com##main > div.row.mx-auto
 hentaihaven.com##iframe[src*="/www/delivery/afr.php?zoneid="]
 hentaihaven.icu,hentaihaven.xxx,hentaistream.tv,nhentai.io##.script_manager_video_master
@@ -36903,6 +36904,8 @@ hentaihere.com##.js-adzone
 hentaiheroes.com###iframe_wrapper
 hentaihorizon.com##.adsfront
 hentaihorizon.com,contactform7.com,techgeekbuzz.com###block-5
+hentaijuggs.com##.posts-grid > div.posts-grid-item:has(> div.pgi-wrapper a[href] > img[src^="https://hentaijuggs.com/uploads/banners/"])
+hentaijuggs.com##.shortcode-banner
 hentailove.tv##div[class^="ad-vid-"]
 hentaimama.io###text-3
 hentaimama.io##.in-between-ad-one-wrapper
@@ -46395,6 +46398,7 @@ myhack58.com##.adv32
 myhdporn.net##.afc_popup
 myhdporn.net##a[href="http://myhdporn.net/other.php"][rel="nofollow"] > img
 myhentaigallery.com##.header-image
+myhentaigallery.com##.pagination-image:has(> center > ins:is([data-zoneid], [id]))
 myhentaigallery.com##.pagination-image:has(> center > ins[data-zoneid])
 myhentaigallery.com,hdzog.com,voyeurhit.com##.footer-banners
 myhome.ge##body .h-banners
@@ -51236,6 +51240,7 @@ presearch.com###background-cover
 presearch.com##.items-center.bg-transparent
 presearch.com##.sx-top-bar-products
 presearch.com##[x-data*="kwrdAdFirst"]
+presearch.com##[x-show="showBanner"]
 presearch.com##div[\:class*="AdClass"]
 presearch.com##div[x-init^="showAdInfo"] > a[target="_blank"]
 presearch.com##div[x-show*="_ad_click"]
@@ -56183,6 +56188,7 @@ sports24.club##.row > .col[style="min-height: 250px; width: 300px; margin: 0px a
 sports24.club##a[href*=".php?u=aHR0c"][rel="nofollow"]
 sports24.club##a[href="/vpn"]
 sports24.club##div[id][style^="width:300px;height:250px;overflow:"]
+sportsbay.dk##.VideoPlayer + div[style]
 sportsbay.org###site-contenedor
 sportsbettingdime.com##.top-promos
 sportsbettingdime.com##div[id^="bet-"]
