@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-15 23:10:58（北京时间）
+! Version: 2025-05-16 00:13:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65868
+! Total count: 65870
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1780,6 +1780,7 @@
 10jqka.com.cn,88files.net,99files.net,actoys.net,beijing-air.com,bio1000.com,gter.net,hepuwang.com,jjwxc.net,ncdiy.com,qingdaonews.com,tgbus.com##.ad1
 10jqka.com.cn,hepan.com##.onead
 10khits.com##cloudflare-app[app="welcome-bar"]
+10minutemail.com###banner_ad
 10minutemail.com###secondary_ads
 10minutemail.com##.content > p[style]
 10minutemail.com##.explanation > br ~ p
@@ -14417,7 +14418,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=irishradiolive.com|myonlineradio.at|myonlineradio.de|myonlineradio.hu|myonlineradio.nl|myonlineradio.sk|myradioendirect.fr|myradioenvivo.ar|myradioenvivo.mx|myradioonline.cl|myradioonline.es|myradioonline.it|myradioonline.pl|myradioonline.ro|ukradiolive.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=itscybertech.com|premiumebooks.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jarochos.net
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|uploadsea.com|fikfok.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jazzradio.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=joblo.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=joktop.com
@@ -14739,7 +14739,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=3dtuning.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=4fuk.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=99corporates.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=ai18.pics|pig69.com|hentaicovid.com|sweetie-fox.com|blackwidof.org|fc2ppv.stream|xcamcovid.com|javball.com|idol69.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=aii.sh|tii.la|oko.sh|tpi.li|oii.la
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=alfred.camera
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=amritadrino.com|bhojpuritop.in
@@ -17896,7 +17895,6 @@
 @@||tellynews.us^$generichide
 @@||telolet.in^$generichide
 @@||teluguflix.lol^$generichide
-@@||teluguone.com^$extension="Disable AMP"
 @@||telva.com^$generichide
 @@||temp-phone-number.com^$generichide
 @@||temperosdavovo.com/*/*.m3u8$stealth=referrer
@@ -19329,6 +19327,7 @@
 @@||wpmienphi.com^$generichide
 @@||wpnrtnmrewunrtok.xyz/*preview/*/preview.jpg$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz/main/$image,domain=camwhores.tv
+@@||wpnrtnmrewunrtok.xyz^$domain=camwhores.ru.com
 @@||wpvip.duba.net^
 @@||wq.360buyimg.com^
 @@||wq.jd.com^$important
@@ -32360,6 +32359,8 @@ fbcnews.com.fj##.homepage-advert
 fbcnews.com.fj##.story-content #fbc-sl
 fbhvc.co.uk###cookies
 fbref.com,basketball-reference.com,onmsft.com,softperfect.com##.adblock
+fbstreams.pm,cracksports.me##.btn-danger
+fbstreams.pm,cracksports.me##.ratio > iframe ~ div[class*=" bg-opacity-"]
 fc-hansa.de##body > div:not([id]):not([class])
 fc-koeln.de##.mod-alert
 fc-lc.com###ignielAdBlock
@@ -37835,6 +37836,7 @@ huya.com##.huya-ab,#hy-ad,#hy-ab,#huya-ab
 huya.com##.j_posterItem[href^="http"]:not([href*=".huya."])
 huya.com##.jump-to-phone
 huya.com##.main-ab-close-mode
+huya.com##.main-bd > .item-nav > li:has(> .item-pic > .img-tips)
 huya.com##.nav-expand-list #J_tt_hd_category_ad
 huya.com##.new-reward-ab-wrap
 huya.com##.room-business-game
@@ -43614,7 +43616,6 @@ macitynet.it##div[id^="div-flx-intext-container-"]
 mackie100projects.altervista.org###fuckadblock
 macleans.ca##.assmbly-ad-block
 macmagazine.com.br##.adp-popup
-macmagazine.com.br,ubunlog.com,thesportsgrail.com,downtownbellevue.com,androidsis.com,voiceofmotown.com,thethaiger.com,unseki.co.jp,wikibio.us,nexus-games.net,freecoursesite.com,formu1a.uno,toolsai.net,rightrasta.com,kaystls.site,gamertweak.com,mrinformatico.it,pianetacellulare.it,inwepo.co,updoc.site,oliveoiltimes.com,cgmagonline.com,happymag.tv,cpophome.com##.code-block
 macmillandictionary.com,macmillanthesaurus.com,oxfordlearnersdictionaries.com###topslot_container
 macmusic.org##.block440Adv
 macorlux.pt##.cookie
@@ -48621,7 +48622,9 @@ onlynudes.tv##div[id^="adde_modal-"]
 onlyoffice.com###portal div[class*="snackbar"]
 onlyporn.tube##.block-video > div.right
 onlyporn.tube##.ft
+onlyporn.tube,pastebin.com,realgfporn.com##.promo-bar
 onlyporn.tube,porntop.com###s-suggesters
+onlyporn.tube,xjav.tube,xjav.tube,in-porn.com,inporn.com##.jw-channel-btn.nopop
 onlytech.com##body > div[class*=" "][style^="background:"]
 onlytik.com##.temporary-real-extra-block
 onmanorama.com##.mm-banner970-ad
@@ -48793,7 +48796,6 @@ opoyi.com##.hLYYlN
 opportunitydesk.info##a[href^="https://www.iu.org/"]
 opposhop.cn##.oc-hairline--bottom.welcome-wrapper
 ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##.top-billboard
-ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##div[id^="slot_"]
 opswat.com###cookie-ntc
 opti-wohnwelt.de##.accContentWrapper div[class*="gdprBar"]
 optical-center.fr###cookieOk
@@ -57887,6 +57889,7 @@ telugupeople.com##.fineprint
 telugupeople.com##td[width="300"]
 tematem.pl##div[data-widget_type="sidebar.default"] .widget_block:has(> .wp-block-group > .adsbygoogle)
 temi.pl##.gtmi
+temp-mail.io##.fixed.bottom-0
 temp-mail.org##.headerSeoLink
 temp-mail.org##.side-plugin-banner
 temp-mail.org##.topStickyBanner
@@ -64254,7 +64257,6 @@ xn--tream2watch-i9d.com,lalastreams.me##a[href$="/vpn/vpn"]
 xn--xxlmbel-d1a.de##.cookie-container
 xnotx.com###sidebar > div.box:first-child
 xnotx.com###sidebar > noindex
-xnxx-sexfilme.com,hd-easyporn.com,pornblade.com,pornfelix.com##.vjs-overlayed
 xnxx.com###content-ad-side
 xnxx.com###video-content > div[class]:has(a[href^="https://cams.xnxx.com/"])
 xnxx.com##.ad-footer
