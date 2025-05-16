@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-16 23:09:52（北京时间）
+! Version: 2025-05-17 00:12:08（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65882
+! Total count: 65884
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6945,7 +6945,6 @@
 @@||c.amazon-adsystem.com/aax2/apstag.js?_=$domain=skill4ltu.eu
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=atozmath.com
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=client.falixnodes.net
-@@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$xmlhttprequest,domain=client.falixnodes.net
 @@||c.betrad.com/geo/ba.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|infinitiev.com|montrealgazette.com|saveur.com
 @@||c.betrad.com/geo/h1.js$domain=video.corriere.it
 @@||c.betrad.com/pub/c/*.js$domain=video.corriere.it
@@ -32757,7 +32756,6 @@ financialpost.com,lfpress.com##.js-widget-flyercity
 financialpost.com,lfpress.com##body .vf-promo:not(#style_important)
 finans.dk##.baPosition
 finansavisen.no###finansavisen-gdpr-disclaimer
-finanse.wp.pl,kobieta.wp.pl,wiadomosci.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 finanze.it###bannerInfo
 finanzia.no##.theme-privacy-container
 finanzpartner.de###cc-button
@@ -38711,6 +38709,7 @@ indaily.com.au,posemaniacs.com##.h-\[250px\]
 indaily.com.au,thenewdaily.com.au##.h-\[100px\]
 indeed.com###mosaic-provider-jobcards li:has(.sponsoredJob)
 independent.co.ug##img[width="320"]
+independent.co.uk###billboard-wrapper
 independent.co.uk###main > div[class]:has(> div > div > a[href^="https://tv.apple.com/"])
 independent.co.uk###taboola-mid-article-thumbnails-ii
 independent.co.uk##.amp-live-list-item[id^="ad-"]
@@ -48173,6 +48172,7 @@ o2.pl##div[data-st-area="ST-Article-Body"] > div._1-MSN > div[style*="width: 970
 o2.pl##div[data-st-area="ST-Article-Body"] > div._1-MSN+div > div[style="padding-top: 20px;"] > div[class] > div[style*="height: 600px;"]
 o2.pl##div[data-st-area="st-article"] > div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 o2.pl##div[data-testid^="ad-placeholder-"]
+o2.pl,tech.wp.pl,finanse.wp.pl,kobieta.wp.pl,wiadomosci.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 o2family.cz###o2fCookieConsentDialog
 o2online.es##.cookies
 o8tv.com##.container > .row > .myui-panel-bg> .myui-panel-box > .myui-panel_bd > .myui-vodlist > .col-lg-8 > .myui-vodlist__box > a[target="_blank"]
@@ -48703,6 +48703,7 @@ op.gg##div[id^="ad-container"]
 op.gg##div[style^="display:"]:has(> div[data-id$="billboard"])
 op.gg##div[style^="display:"]:has(> div[data-id$="leaderboard"])
 op.gg##main >  div[style][class^="css-"]:has(> div:not([class]) > div.vm-placement)
+op.gg##main > section[class*="md:"]:has(> .justify-between:first-child > strong:first-child + a[href*="?utm_source="][href*="&utm_campaign=banner_frame"]:last-child)
 op.gg##main > span[style^="display: flex; justify-content: center; align-items: center;"]
 op.gg##section:has(> div.min-h-\[250px\]):not(:has(> *:not(div.min-h-\[250px\])))
 op.gg##section[class*="md:"]:has(> .items-center > div[data-id$="leaderboard"])
@@ -57913,6 +57914,7 @@ tempest.com##.search-result-item:has(.search-result-item__title--ad)
 templateshub.net##.col-lg-4.col-md-6:has(> div.singel-course)
 temple.edu###tu-cookies-eu-compliance
 tempmail.email##.open-mail__text > strong > a[target="_blank"]
+tempmail.ninja##.ads-container
 tempmail.plus##.main-mob-top-horizont
 tempmail.plus##div[class^="admain"]
 tempmail.run##.col-md-8 > .card:has(> div[id*="ScriptRoot"]:only-child)
