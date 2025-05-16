@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-16 15:10:52（北京时间）
+! Version: 2025-05-16 16:14:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65872
+! Total count: 65880
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3205,6 +3205,8 @@
 50gameslike.com,highdemandskills.com,yumyumnews.com##[href^="https://click.linksynergy.com/"]
 50sen.com###box-ads
 51.ca##._51_a_c
+51.ca##.a-list-carousel-d-box
+51.ca##.top-a-container
 51.com###game_advlayer
 51.com,55188.com##.couplet
 51.com,wnacg.org##.couplet
@@ -14793,6 +14795,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=getthit.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=gktech.uk
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=googledrivelinks.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=hacksnation.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=happy-living.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=hindustantimes.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=howkteam.vn
@@ -44781,6 +44784,7 @@ metservice.com##.Mrec-min-height
 metv.com##ark-bottom-ad
 metv.com,nydailynews.com##ark-top-ad
 meubella.nl##.cnotice
+mewingzone.com,opchapters.com,tresdaos.com,siikomik.lat,nekoscans.com##.mainholder + div[id][class*=" "]
 meyer.it###zf--alerts-panel
 mezha.media##a[aria-label^="Банер"]
 mezoko.com###cookie
@@ -48686,7 +48690,6 @@ op.gg##.h-\[287px\]
 op.gg##.min-h-\[50px\]
 op.gg##.min-h-\[66px\]
 op.gg##.mode-header-container ~ div[class^="css-"] > div[class^="css-"]:has(> div > div.vm-placement)
-op.gg##.mx-auto:has(> div[style^="min-width:"] > div[id^="div-gpt-ad"])
 op.gg##.w-full > section.bg-gray-0.md\:overflow-hidden.md\:rounded.flex-col.p-2.w-full
 op.gg##.z-ads
 op.gg##div:has(> div[data-ad])
@@ -48694,11 +48697,14 @@ op.gg##div[class*="eylegve"]
 op.gg##div[class*="md:"]:has(> div[style^="min-width:"] > div[id^="div-gpt-ad"])
 op.gg##div[class^="Game Game--Result"] + div[result] + div[class^="css-"]:has(> div > div.vm-placement)
 op.gg##div[id^="ad-container"]
+op.gg##div[style^="display:"]:has(> div[data-id$="billboard"])
+op.gg##div[style^="display:"]:has(> div[data-id$="leaderboard"])
 op.gg##div[style^="display:"]:has(> div[data-id="billboard"])
 op.gg##div[style^="display:"]:has(> div[data-id="leaderboard"])
 op.gg##main >  div[style][class^="css-"]:has(> div:not([class]) > div.vm-placement)
 op.gg##main > span[style^="display: flex; justify-content: center; align-items: center;"]
 op.gg##section:has(> div.min-h-\[250px\]):not(:has(> *:not(div.min-h-\[250px\])))
+op.gg##section[class*="md:"]:has(> .items-center > div[data-id$="leaderboard"])
 op.gg##tr.ad
 op.gg,thenewdaily.com.au##.min-h-\[100px\]
 opchapters.com,tresdaos.com,siikomik.lat,nekoscans.com##.mainholder + div[id][class*=" "]
@@ -58704,6 +58710,7 @@ thestranger.com##.fish-butter
 thestrayferret.co.uk##div[class^="BlockOfAdverts"]
 thestreamable.com###promo-signup-bottom-sheet
 thestreamable.com##.d-md-flex
+thestreamhub.net,gifyu.com,topperlearning.com,aap.org,bbcgoodfood.com,gardenersworld.com,historyextra.com,ndtv.com##.ad-banner
 thestreet.com##.csw-ae-wide
 thestreet.com##.m-balloon-header
 thestreet.com##.m-video-unit
@@ -61678,6 +61685,7 @@ vimm.net###headerAdContainerInline
 vimpay.eu###modalBackground, #modalCookieAcceptance
 vinaurl.in##.adsbygoogle
 vinchain.io##.bottom.stick
+vindecoder.pl##.adblock-overlay
 vindeurgent.ro##.bottom_notice
 vinepair.com##.pre-footer-ad-container
 vinidex.com.au###tde-gdpr
