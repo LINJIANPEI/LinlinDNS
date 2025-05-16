@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14905
+! Total count: 14908
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-05-15 20:48:52（北京时间）
+! Version: 2025-05-16 09:55:59（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -568,6 +568,7 @@
 #360杀毒官网
 #360清理大师
 #360热点
+#360网站卫士
 #360翻译
 #3dm
 #4399小游戏
@@ -655,6 +656,7 @@
 #B站APP关注列表
 #CC字幕加载
 #CC直播域名
+#CDN联盟
 #DCloud社区
 #EDGE浏览器网页翻译
 #FlowUs
@@ -705,6 +707,7 @@
 #UC浏览器
 #UC浏览器网盘
 #UP主主页商品页面加载
+#Webluker
 #X5内核文档插件下载
 #YouTube
 #adguard相关
@@ -785,6 +788,7 @@
 #一号店优惠券
 #一点资讯
 #一甜相机＆快影图片接口
+#七牛
 #七猫小说
 #七鱼官网
 #万年历查询
@@ -872,9 +876,11 @@
 #华风爱科气象
 #卡片加载
 #参考：https://h5.jd.com/article/247.html
+#又拍云
 #反向DNS查找
 #右上角登录布局
 #合集封面
+#同兴万点CDN
 #同时也是助力扫码跳转链接
 #同时也是官网的商品加载接口
 #同时也是懂车帝手机页面端文章顶部内容推荐＆热门推荐＆精彩推荐接口
@@ -1010,6 +1016,7 @@
 #快手评论图片
 #快手送礼物
 #快牙
+#快网
 #懂车帝
 #懂车帝一些图片加载
 #懂车帝图片
@@ -1122,6 +1129,7 @@
 #朋友圈图片
 #服务支持
 #木木一土dns官网
+#未知
 #极光推送
 #极弧
 #极狐
@@ -1189,8 +1197,11 @@
 #登录接口
 #登录页面跳转
 #登陆域名
+#白山云
 #百家号图片
 #百度
+#百度云CDN
+#百度云加速
 #百度地图街景
 #百度天气图标
 #百度好看视频
@@ -1257,6 +1268,7 @@
 #红包封面公众号
 #纵横小说图
 #维基百科
+#网宿
 #网易
 #网易云api
 #网易云信
@@ -1291,6 +1303,7 @@
 #老黄历查询
 #联通app推送
 #脚本之家
+#腾讯CDN
 #腾讯云实时音视频
 #腾讯健康系统
 #腾讯充值
@@ -1321,6 +1334,7 @@
 #菜鸟
 #菜鸟包裹侠
 #葫芦侠
+#蓝汛
 #虎扑
 #衡阳新闻网
 #表情消息
@@ -1393,6 +1407,7 @@
 #阅文集团官网
 #阿里app下载
 #阿里dns
+#阿里云CDN
 #阿里云盘
 #阿里图片
 #阿里巴巴购物
@@ -9244,6 +9259,7 @@
 @@||app.typetopia.com/media/ad/*.mp3|
 @@||app.veggly.net/plugins/cordova-plugin-admobpro/www/AdMob.js$script,~third-party
 @@||app.zyncfreesurveys.com/js/global/adverts.js
+@@||app2.putgate.org/static/*.html$xmlhttprequest,stealth=referrer
 @@||appapi.inspsearchapi.com^$domain=search.pch.com
 @@||appcdn01.xyz/vast.js
 @@||appdn.net/wp-content/plugins/chilly-pot/assets/js/advertisement.min.js
@@ -10019,7 +10035,6 @@
 @@||camiris.com^$generichide
 @@||camsecure.co/httpswebcam/*.html$stealth=referrer
 @@||camsexvideo.net/js/advertising.js
-@@||camvideo*.wpnrtnmrewunrtok.xyz^$domain=camwhores.ru.com
 @@||camvideoshub.com/livejasmin.com.js$script
 @@||camwhores.co^$generichide
 @@||canada.com/js/ooyala/comscore.js
@@ -13219,7 +13234,7 @@
 @@||googleads.g.doubleclick.net/pagead/interaction/$domain=quins.us
 @@||googleads.g.doubleclick.net/pagead/interaction/$domain=starkroboticsfrc.com|cryptednews.space|seoliv.com|waezg.xyz|blackwoodacademy.org|lifgam.online|crypto-radio.eu|tiktokcounter.net
 @@||googleads.g.doubleclick.net/pagead/interaction/|$xmlhttprequest,domain=ecosolardigest.com
-@@||googleads.g.doubleclick.net/pagead/interaction/|$xmlhttprequest,domain=finance240.com
+@@||googleads.g.doubleclick.net/pagead/interaction/|$xmlhttprequest,domain=finance240.com|2wheelslife.com
 @@||googleads.g.doubleclick.net/pagead/js/adsbygoogle.js$domain=sportshub.to
 @@||googleads.g.doubleclick.net/pagead/js/adsbygoogle.js$xmlhttprequest,domain=werfgt.fun
 @@||googleads.g.doubleclick.net^$domain=fplstatistics.com
@@ -16586,6 +16601,7 @@
 @@||nextbigfuture.s3.amazonaws.com/uploads$stealth=referrer
 @@||nextcloud.com/remote.php/$~third-party,xmlhttprequest
 @@||nextstream.org^$stealth=referrer,domain=animepahe.com|kwik.cx
+@@||nextwavepathfinders.xyz/content/*.html$xmlhttprequest,stealth=referrer
 @@||nflcdn.com/static/site/$script,domain=nfl.com
 @@||ngastatic.com/*/tracker.js$domain=ads.allegro.pl
 @@||nhk.or.jp^$content
@@ -19421,6 +19437,7 @@
 @@||sgxnifty.org^$generichide
 @@||sh.st$generichide
 @@||shaanig.se^$generichide
+@@||shadowlandschronicles.com/pl/*/master.m3u8$xmlhttprequest,stealth=referrer
 @@||shahid.mbc.net^$generichide
 @@||shaka-player-demo.appspot.com/lib/ads/ad_manager.js$script,~third-party
 @@||shana.pe.kr^$generichide
@@ -21768,6 +21785,7 @@
 @@||wpmienphi.com^$generichide
 @@||wpnrtnmrewunrtok.xyz/*preview/*/preview.jpg$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz/main/$image,domain=camwhores.tv
+@@||wpnrtnmrewunrtok.xyz^$domain=camwhores.ru.com
 @@||wrestlinginc.com/wp-content/themes/unified/js/prebid.js$~third-party
 @@||wristreview.com^$generichide
 @@||writing.chegg.com/graphql$stealth=3p-auth,domain=citationmachine.net
