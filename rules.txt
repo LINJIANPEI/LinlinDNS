@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-17 17:10:00（北京时间）
+! Version: 2025-05-17 18:09:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65890
+! Total count: 65910
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6037,6 +6037,7 @@
 @@||api.pzds.com^
 @@||api.qiniu.com^
 @@||api.revenuecat.com^$important
+@@||api.revved.com^
 @@||api.rhombusads.com/v*/embed/check$domain=spin.com
 @@||api.rikka.app^$important
 @@||api.rmr.rocks^$stealth=3p-auth
@@ -7834,6 +7835,7 @@
 @@||cmp.inmobi.com^|
 @@||cmp.sky.it/wrapperMessagingWithoutDetection.js$domain=tv8.it
 @@||cmp.telerama.fr/js/telerama.min.js$~third-party
+@@||cms-assets.unrealengine.com^
 @@||cms-bucket.ws.126.net^
 @@||cms-bucket.ws.126.net^$important
 @@||cmshow.qq.com^$important
@@ -7937,6 +7939,7 @@
 @@||community-wscdn.xmwol.com^$stealth=referrer,image,stylesheet
 @@||community.akamai.steamstatic.com^
 @@||community.brave.com/t/$xmlhttprequest
+@@||components.unrealengine.com^
 @@||comprasenoferta.com^$generichide
 @@||compriso.speedtestcustom.com/api/js/servers$stealth=ip
 @@||compriso.speedtestcustom.com^$third-party,stealth=ip
@@ -8604,6 +8607,7 @@
 @@||do0od.com^$generichide
 @@||do7go.com^$generichide
 @@||doc110.com^*/ad.css?$stylesheet
+@@||dockerstatic.com^
 @@||docodoco.jp^*/docodoco?key=$script,domain=jrtours.co.jp
 @@||docrdsfx76ssb.cloudfront.net^
 @@||docs.expo.io/*/static/*/pages/versions/latest/sdk/*.js$domain=docs.expo.io
@@ -8630,6 +8634,7 @@
 @@||dokuo666.blog98.fc2.com^$generichide
 @@||dolldivine.com^$generichide
 @@||dollsnews.com^$generichide
+@@||domains-ws.revved.com^
 @@||dompl3.info^$generichide
 @@||doncorgi.com/ezoic/anchorfix.js
 @@||donghuanosekai.com^$generichide
@@ -10474,7 +10479,6 @@
 @@||h5images.114la.com^$important
 @@||h5offline.zhuanzhuan.com^$important
 @@||h5static.cc.163.com^
-@@||h5vv6.video.qq.com^
 @@||haafedk2.com^$generichide
 @@||haaretz.co.il/htz/js/advertisement.js
 @@||haaretz.co.il/logger/p.gif?$image,xmlhttprequest
@@ -11018,6 +11022,9 @@
 @@||images.boosty.to^$stealth=ip
 @@||images.fm.tuba.pl/tuba*/_js/banner/advertisement.js
 @@||images.gmanetwork.com/res/dist/js/adsTracking.gz.js
+@@||images.google.cn^
+@@||images.google.com.hk^
+@@||images.google.com^
 @@||images.intellicast.com/App_Scripts/ad.min.js
 @@||images.intellicast.com/Scripts/ad-v3.js
 @@||images.macrumors.com/*/article-new/
@@ -15180,7 +15187,6 @@
 @@||pic.rmb.bdstatic.com^
 @@||pic.rmb.bdstatic.com^$important
 @@||pic.zol-img.com.cn/2009/pix_index.swf
-@@||pic1.zhimg.com
 @@||pic1.zhuanstatic.com^
 @@||pic2.58cdn.com.cn^
 @@||pic2.zhimg.com^
@@ -15195,7 +15201,6 @@
 @@||pic640.weishi.qq.com^$important
 @@||pic7.iqiyipic.com^
 @@||pic8.58cdn.com.cn^
-@@||pica.zhimg.com
 @@||picasso-static.xiaohongshu.com^
 @@||piccool.com/2home/phpAdsNew/
 @@||pichive.online^$subdocument,xmlhttprequest,stealth=referrer
@@ -15207,7 +15212,6 @@
 @@||picsearch.com/js/comscore.js$domain=dn.se
 @@||pictasty.com^$generichide
 @@||pictogo.net^$stealth=referrer,third-party
-@@||picx.zhimg.com
 @@||pifa.pinduoduo.com^
 @@||pikabu.ru/story/*_reklama_
 @@||pikafile.com^$generichide
@@ -15686,6 +15690,7 @@
 @@||pudelek.pl^$generichide
 @@||puds.ucweb.com^
 @@||puds.ucweb.com^$important
+@@||pull-m1.wxlivecdn.com^
 @@||pull2.91cloud.net^$important
 @@||puma.112.2o7.net^
 @@||punakong.com:*/Cloud/Down/$stealth=referrer,domain=zxzj.*
@@ -17080,6 +17085,7 @@
 @@||sp1.baidu.com^$important
 @@||sp2.baidu.com^
 @@||space.bilibili.com^$important
+@@||spaceship-cdn.com^
 @@||spanish.visorsmr.com^$generichide
 @@||spanishdict.com^$generichide
 @@||spankbang.com^*/prebid-ads.js$domain=spankbang.com
@@ -17526,10 +17532,14 @@
 @@||store-web.dynamics.com^$stealth=3p-auth
 @@||store.assistant.miui.com^
 @@||store.assistant.miui.com^$important
+@@||store.cdn.queniuqe.com^
+@@||store.fastly.steamstatic.com^
 @@||store.heytapimage.com^$important
 @@||store.meizu.com^
 @@||store.mktpl.minecraft-services.net/api/$stealth
 @@||store.playstation.com/html/webIframeRedirect.html?requestId$stealth=referrer
+@@||store.steamchina.com^
+@@||store.steamchina.queniuam.com^
 @@||store.steampowered.com/events/ajaxgetbesteventsforuser?$stealth=3p-cookie
 @@||store.steampowered.com^
 @@||store.storeimages.cdn-apple.com^$domain=apple.com,stealth=referrer
@@ -19068,7 +19078,6 @@
 @@||waaw.tv/js/adv/fuckadblock.js
 @@||waccoe.com^$generichide
 @@||wago.io/js/118.$script
-@@||waimai-guide.ele.me^
 @@||waimai-guide.ele.me^$important
 @@||wakatest.keydelivery.northeurope.media.azure.net^$stealth=3p-auth,domain=wakanim.tv
 @@||wakfutemporada2subs.blogspot.com^$generichide
@@ -19434,6 +19443,7 @@
 @@||www.douyin.com^
 @@||www.dpfile.com^
 @@||www.dxmpay.com^$important
+@@||www.epicgames.com^
 @@||www.ero-labs.com^
 @@||www.fbsbx.com^
 @@||www.fengxiaolong.cn^
@@ -19447,7 +19457,10 @@
 @@||www.google.*/search?$domain=google.ae|google.at|google.be|google.bg|google.by|google.ca|google.ch|google.cl|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.nz|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.br|google.com.co|google.com.ec|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.pe|google.com.ph|google.com.pk|google.com.py|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vn|google.cz|google.de|google.dk|google.dz|google.ee|google.es|google.fi|google.fr|google.gr|google.hr|google.hu|google.ie|google.it|google.lt|google.lv|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk
 @@||www.google.*/search?$generichide
 @@||www.google.*/search?q=*&oq=*&aqs=chrome.*&sourceid=chrome&$popup,third-party
+@@||www.google.cn^
+@@||www.google.com.hk^
 @@||www.google.com/ads/preferences/$image,script,subdocument
+@@||www.google.com^
 @@||www.google.com^$important
 @@||www.googleadservices.com^
 @@||www.googleadservices.com^$important
@@ -19540,6 +19553,7 @@
 @@||www.recaptcha.net^$important
 @@||www.ruanyifeng.com^$csp=script-src 'self' * 'sha256-0McqMM66/wAVZmxF6zXpjNsb1UMbTl4LXBXdhqPKxws='
 @@||www.so.com^
+@@||www.spaceship.com^
 @@||www.statcounter.com/images/$image,third-party
 @@||www.statcounter.com^
 @@||www.statcounter.com^|
@@ -19591,7 +19605,6 @@
 @@||wx.tenpay.com^
 @@||wx2.sinaimg.cn^$important
 @@||wxapp.lvyadx.cn^
-@@||wxapp.tc.qq.com^
 @@||wxaurl.cn^
 @@||wxmini-api.uyouqu.com^
 @@||wxsnsdy.wxs.qq.com^
@@ -27171,6 +27184,7 @@ codejie.net##.h--banner
 codejie.net##.h-ad-banner
 codejie.net##.s-ad-tit-box
 codeleading.com##div[id*="ads"]
+codelist.cc##a[href*=".pxf.io/"] > img
 codenong.com###sidebar aside[id^="text-"]
 codepad.co##body > .custom-banner
 codepen.io###footer-chunk-ad
@@ -64644,6 +64658,12 @@ yahoo.com##div[id^="gemini-ad-"]
 yahoo.com##div[id^="gemini-item-"]
 yahoo.com##div[id^="my-ads"]
 yahoo.com##div[style*="/ads/"]
+yahoo.com##div[style="height: 250px; width: 300px;"]
+yahoo.com##div[style="height: 250px; width: 970px;"]
+yahoo.com##div[style="height: 90px; width: 728px;"]
+yahoo.com##div[style="height:250px;width:300px"]
+yahoo.com##div[style="height:250px;width:970px"]
+yahoo.com##div[style="height:90px;width:728px"]
 yahoo.com##li[class="first"]:has([data-ylk*="affiliate_link"])
 yahoo.com##li[class^="Bgc(geminiBgc)"]
 yahoo.com##li[class^="gemini-ad-"]
