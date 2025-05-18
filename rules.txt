@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-18 22:08:38（北京时间）
+! Version: 2025-05-18 23:09:12（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65911
+! Total count: 65934
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -19881,6 +19881,7 @@
 @@||youtu.be^$important
 @@||youtube-nocookie.com
 @@||youtube.com/$stealth=useragent,app=MicrosoftEdgeCP.exe
+@@||youtube.com/ads/preferences/$popup
 @@||youtube.com/embed/$domain=masterani.me
 @@||youtube.com/get_video_info*&el=editpage
 @@||youtube.com/get_video_info?$xmlhttprequest,domain=music.youtube.com|tv.youtube.com
@@ -19889,7 +19890,11 @@
 @@||youtube.com/live_chat$stealth=referrer
 @@||youtube.com/live_chat?$stealth=referrer
 @@||youtube.com/my_video_ad$document
+@@||youtube.com/yt/advertise/medias/images/$image
+@@||youtube.com/yt/css/*-advertise.css
+@@||youtube.com/yt/js/www-advertise.min.js$domain=youtube.com
 @@||youtube.com^$domain=gsmarena.com
+@@||youtube.com^*_adsense_$xmlhttprequest
 @@||youtube.googleapis.com/embed^$stealth=referrer
 @@||youtubei.googleapis.com^$important
 @@||yoututosjeff.es^$generichide
@@ -43611,6 +43616,9 @@ m.youku.com##.hdwrap
 m.youku.com##.recommend
 m.youku.com##body > [style="width: 100px; height: 100px; position: fixed; top: auto; right: 0px; bottom: 0px; left: auto; z-index: 188;"]:not([class]):not([id])
 m.youtube.com###koya_child_6
+m.youtube.com##.companion-ad-container
+m.youtube.com##a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]:not([role]):not([class]):not([id])
+m.youtube.com##a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]:not([role]):not([class]):not([id]) + div
 m.youtube.com##lazy-list > ad-slot-renderer
 m.youtube.com##ytm-companion-slot[data-content-type] > ytm-companion-ad-renderer
 m.youtube.com##ytm-rich-item-renderer > ad-slot-renderer
@@ -63858,7 +63866,11 @@ www.yahoo.com##body#news-content-app li:has(.inset-0)
 www.yahoo.com##body.font-yahoobeta > div.items-center:has(style)
 www.ydyse.com##.left,.bottom,.right,.ad,.adimage
 www.yizhibo.com##.register_guide
+www.youtube.com###video-masthead
 www.youtube.com##.ytp-featured-product
+www.youtube.com##ytd-carousel-ad-renderer
+www.youtube.com##ytd-item-section-renderer.ytd-section-list-renderer:has( > div#contents > ytd-promoted-sparkles-text-search-renderer )
+www.youtube.com##ytd-promoted-sparkles-web-renderer
 www.zhihu.com##.KfeCollection-VipRecommendCard
 www.zhihu.com##.OpenInAppButton
 www.zhihu.com##A.MBannerAd
@@ -65107,6 +65119,7 @@ youthwant.com.tw##.side_adbox
 youtrannytube.com##.banner-td
 youtrannytube.com##.random-td
 youtube-nocookie.com##.ytp-ad-progress-list
+youtube.com###ad-image\:22
 youtube.com###contents>ytd-search-pyv-renderer
 youtube.com###masthead-ad
 youtube.com###mealbar-promo-renderer
@@ -65114,13 +65127,23 @@ youtube.com###player-ads
 youtube.com###shorts-inner-container > .ytd-shorts:has(> .ytd-reel-video-renderer > ytd-ad-slot-renderer)
 youtube.com###video-masthead
 youtube.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
+youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com##.YtdShortsSuggestedActionStaticHostContainer
+youtube.com##.ad-container
+youtube.com##.pyv-afc-ads-container
+youtube.com##.video-ads
+youtube.com##.ytd-action-companion-ad-renderer
 youtube.com##.ytd-merch-shelf-renderer
+youtube.com##.ytd-search-pyv-renderer
+youtube.com##.ytp-ad-overlay-container
+youtube.com##.ytp-ad-progress
+youtube.com##.ytp-ad-progress-list
 youtube.com##.ytp-suggested-action > button.ytp-suggested-action-badge
 youtube.com##AD-SLOT-RENDERER
 youtube.com##ytd-ad-slot-renderer
 youtube.com##ytd-rich-item-renderer:has(> #content > ytd-ad-slot-renderer)
 youtube.com##ytd-search-pyv-renderer
+youtube.com##ytm-promoted-video-renderer
 youtube4kdownloader.com,javout.net##.banner-bottom
 youtube4kdownloader.com,wantedbabes.com,softonic.com##.banner-center
 youtubedownload.altervista.org##.cookie
