@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-20 23:11:31（北京时间）
+! Version: 2025-05-21 00:12:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65986
+! Total count: 65983
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15961,7 +15961,6 @@
 @@||reddit.app.link^$stealth=useragent
 @@||reddit.com/r/*_advertising/
 @@||reddit.com/r/*_banner_ads_
-@@||reddit.com^$extension="AdGuard Popup Blocker"|"AdGuard Popup Blocker (Beta)"
 @@||reddit.com^$generichide
 @@||reddit.com^$generichide,badfilter
 @@||reddithelp.com/*/categories/advertising^
@@ -25762,6 +25761,7 @@ cargames.com,puzzlegame.com,yiv.com###game_middle_ad
 cargoboard.com##body > .fixed-bottom.bg-gray
 cargurus.co.uk##.leaderboardWrapper
 cargurus.com##.Gi1Z6i
+cargurus.com##.breadcrumbsAdsWrapper
 cargurus.com##[class^="_tileFrame_"]:has([data-cg-ft$="-sponsored"])
 cargurus.com##[data-cg-ft="car-blade"]:has([data-eyebrow^="FEATURED"])
 cargurus.com##[data-cg-ft="car-blade-link"]:has([data-cg-ft="srp-listing-blade-sponsored"])
@@ -47880,6 +47880,7 @@ nomadlist.com##.dynamic-fill
 nombra.me###privacy_w
 nomenclator.org###barrack
 nongjitong.com##.ad_sms
+noni-jav.com,luluvdo.com##div[oncontextmenu="return false;"][style="display: block;"]
 nono.games###closed-vid
 nonstop2k.com###consentFooter
 nontonanimeid.org##.banner_player
@@ -48250,16 +48251,12 @@ nzherald.co.nz##.story-card--sponsored--headline
 nzherald.co.nz##.story-card--sponsored-text-below
 nzherald.co.nz##.ticker-banner
 o2.pl##.relative.items-center .w-full > .flow-root:has(> div[class][style]:only-child > div[class*=" "]:first-child + script:last-child)
-o2.pl##article > .flex-col > div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
-o2.pl##article > div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 o2.pl##body > .mx-auto:has(> h6:first-child + div[data-testid^="ad-placeholder-"] + #section-for-you:last-child)
 o2.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:is(.wp-placeholder-img, .absolute):first-child + div:last-child)
 o2.pl##div[data-st-area="ST-Article-Body"] > div._1-MSN > div[style*="width: 970px;"]
 o2.pl##div[data-st-area="ST-Article-Body"] > div._1-MSN+div > div[style="padding-top: 20px;"] > div[class] > div[style*="height: 600px;"]
-o2.pl##div[data-st-area="st-article"] > div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 o2.pl##div[data-testid^="ad-placeholder-"]
 o2.pl,film.wp.pl,tech.wp.pl,finanse.wp.pl,kobieta.wp.pl,wiadomosci.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
-o2.pl,tech.wp.pl,finanse.wp.pl,kobieta.wp.pl,wiadomosci.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 o2family.cz###o2fCookieConsentDialog
 o2online.es##.cookies
 o8tv.com##.container > .row > .myui-panel-bg> .myui-panel-box > .myui-panel_bd > .myui-vodlist > .col-lg-8 > .myui-vodlist__box > a[target="_blank"]
