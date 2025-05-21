@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-21 23:11:44（北京时间）
+! Version: 2025-05-22 00:13:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65999
+! Total count: 66004
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9879,7 +9879,6 @@
 @@||geocode.search.hereapi.com/v1/geocode?xnlp=$stealth=referrer
 @@||geoguessr.com/_ads/
 @@||geoip-db.com/jsonp/$script,third-party
-@@||geoip.radio-canada.ca/geoip.js$script,domain=ici.radio-canada.ca
 @@||geoip.redirect-ads.com/js/$script,~third-party
 @@||geoip.redirect-ads.com^$subdocument,third-party
 @@||geojamal.com^$generichide
@@ -11377,6 +11376,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=engine.univtec.com|america.cgtn.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=gbnews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=mtv.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=mtvema.com|mtv.co.uk|mtv.de|mtv.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news4jax.com|gmg-wjxt-prod.cdn.arcpublishing.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news8000.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=nick.com|nickjr.com|cc.com
@@ -13369,6 +13369,7 @@
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=viasatsport.se
 @@||mssl.fwmrm.net/crossdomain.xml$domain=msn.com
 @@||mssl.fwmrm.net/crossdomain.xml$domain=vplayer.nbcsports.com
+@@||mssl.fwmrm.net/libs/adm/*/AdManager.js$domain=mtvema.com|mtv.co.uk|mtv.de|mtv.it
 @@||mssl.fwmrm.net/libs/adm/*/AdManager.js$domain=southpark.*|southparkstudios.*
 @@||mssl.fwmrm.net/libs/adm/*/LinkTag2.js$domain=play.tv3.lt
 @@||mssl.fwmrm.net/libs/adm/*/LinkTag2.js$domain=tv3play.skaties.lv
@@ -13540,7 +13541,6 @@
 @@||nbyts.online^$generichide
 @@||nc-myus.com/images/pub/www/uploads/merchant-logos/$image,~third-party
 @@||ncaa.com^$generichide
-@@||ncbi.nlm.nih.gov^$jsinject
 @@||nceea.cn/Content/images/ad/
 @@||ncomment.kuwo.cn^
 @@||neads.io^$domain=neads.io
@@ -31087,7 +31087,6 @@ elektroda.pl##.container > section > a[class][href]:not([href^="https://www.elek
 elektroda.pl##.container a[class][href*="&utm_medium=banner"]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
 elektroda.pl##.head ~ ul > li:not(.post):has(> div[class] a[href^="https://www.elektroda.pl/"][href*="/dsa.php?"])
 elektroda.pl##.position-relative > .sec-b > a[href]:not([href^="https://www.elektroda.pl/"]) > img
-elektroda.pl##.post ~ li:not(.post):has( .active > a[href^="https://www.elektroda.pl/rtvforum/dsa.php?adsid="])
 elektroda.pl##.sidebar-wrap .the-list > li[class]:not([class="clearfix"]) > a[href][rel="noopener"]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
 elektroda.pl##.sidebar-wrap > .row > .widgets > .boombox-content > a[href][target="_blank"][onclick*="'Navibox', 'Click', '"]
 elektroda.pl##.text-center > section a[href]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
@@ -31869,6 +31868,7 @@ everydayporn.co,danude.com,pornachi.com,pornchimp.com##.top
 everydayrussianlanguage.com##.border
 everydayrussianlanguage.com##aside img[src^="/wp-content/themes/edr/img/"]
 everydaytechvams.com##.popSc
+everyeye.it###tksfmcont
 everyeye.it###topskin_clicktag
 everyeye.it##.p-dealLink
 everyeye.it##.wrap_amazon_banner
@@ -37614,6 +37614,10 @@ hotels-insolites.com###cookie
 hotels.com###root > footer ~ section
 hotgirlclub.com##.spnsrd-block-aside-250
 hotklix.com###mvp-main-nav-top > .mvp-main-box
+hotleak.vip##a[href^="https://"][href*="realxxx.com/"]
+hotleak.vip,thotsbay.tv##.item:has(> article.movie-item > a[href][target="_blank"][rel="nofollow"])
+hotleak.vip,thotsbay.tv##header > a[href][target="_blank"]
+hotleak.vip,thotsbay.tv##header > section.container > div.row.d-md-none
 hotleaks.tv,hotleak.vip,leakedzone.com,thotsbay.tv##div[class^="koukoku"]
 hotleaks.tv,javrank.com##[class^="koukoku"]
 hotmilfzone.com##body > div:not([id]):not([class])
@@ -41337,6 +41341,7 @@ kiplinger.com##.kip-banner
 kiplinger.com##.post-gallery-item-ad
 kiplinger.com,autoexpress.co.uk,carbuyer.co.uk,theweek.co.uk##.polaris-ad--wrapper-desktop
 kirchengemeindeverband-koenigslutter.de###hinweis
+kireicosplay.com##.main-wrap ~ div[id][class*=" "]:not(.Ad-Container)
 kiryuu.id##.kln
 kiryuu.id##.wp-image-465340
 kiryuu.id##[width="1280"]
@@ -53142,7 +53147,6 @@ rkanr.com##.bill
 rkw-kompetenzzentrum.de###rkw-infolayer
 rlsbb.cc##[href^="https://rlsbb.cc/link.php"]
 rlsbb.ru##[href^="https://rlsbb.ru/link.php"]
-rlxoff.com,innateblogger.com,gfx-station.com##.popSc
 rlxtech24h.com##.popSc
 rmastri.it###cokadv
 rmdown.com###foo1ter
@@ -62066,6 +62070,7 @@ volkswagen.it###trackingPolicy
 volkswohnung.com##.vw-cookiebanner
 volnamista.cz##.MuiBox-root:has(> .MuiBox-root > .MuiBox-root > .sssp-posCont > div[data-cy="ad-content"])
 voloweb.it###popupDivC
+voltupload.com##.downloadLink
 voltus.de###c4sCookieOneClickModal
 volvic.fr###_legal
 volvocars-partner.pl##.cookies_relative
