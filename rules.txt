@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-23 23:10:45（北京时间）
+! Version: 2025-05-24 00:12:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66026
+! Total count: 66027
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7252,6 +7252,7 @@
 @@||cdn.fluidplayer.com/*/current/fluidplayer.min.js
 @@||cdn.flurry.com/js/flurry.js$domain=slantnews.com
 @@||cdn.fuseplatform.net/publift/tags/*/*/fuse.js$domain=zkillboard.com
+@@||cdn.fuseplatform.net/publift/tags/*/fuse.js$domain=pokemon-project.com
 @@||cdn.fuseplatform.net/publift/tags/*/fuse.js$domain=quackr.io
 @@||cdn.games.mobinozer.com/shared/loader/advert.js
 @@||cdn.gatehousemedia.com/gh-sites/global/ads/ads.js
@@ -15037,7 +15038,6 @@
 @@||pandora.com/web-version/*/*.json
 @@||pandora.com^$generichide
 @@||panel.play.hosting/js/jquery.openxtag.js
-@@||panel.sinema.cx/video/$stealth=referrer
 @@||pangzi.ca^$subdocument
 @@||panjiachen.github.io^$generichide
 @@||pantagraph.com^$generichide
@@ -35542,6 +35542,8 @@ goodrx.com##div[class^="adContainer"]
 goodrx.com##div[class^="adWrapper-"]
 goodrx.com##div[data-qa$="-ad"]
 goodrx.com##div[id*="-ad-"]
+goodstream.one##body > footer + script + div[class][oncontextmenu]
+goodstream.one$$script:contains(showADBOverlay)
 goodtoknow.co.uk,nme.com,trustedreviews.com##.header-advert-wrapper
 goodvibes.com###bottomAlert
 google-cache.de###meldungContainer
@@ -45397,6 +45399,7 @@ mobilesyrup.com##.sidebarSponsoredAd
 mobileworldcentre.com##.alert-warning
 mobilier-mirjan24.ro###window_overlay
 mobiliperufficio.com##.cookies
+mobilissimo.ro###emag_button
 mobills.com.br##.MuiSnackbar-root
 mobilmania.cz##.ads
 mobilmania.cz##.advantage-clip
@@ -50574,6 +50577,7 @@ point2homes.com,propertyshark.com##div[style^="min-height: 360px;"]
 pokebattler.com##.curse-ad
 pokeflix.tv###pokepoppinSquare
 pokeminers.com###ad-card
+pokemon-project.com$$script:contains(closePlayer)
 pokemon-project.com,reneweconomy.com.au,tenforums.com##div[data-fuse]
 pokemoncenter.com##footer > div ~ div
 pokemondb.net###gdpr-confirm
@@ -62602,8 +62606,6 @@ wcny.org###soliloquy-12716
 wco.tv##div[style*="float:right; width:500px;"][style*="height:3"]
 wco.tv,wcofun.net##div[style="float:right; margin-top:-5px"]
 wco.tv,wcofun.net##div[style]:has(> div[class^="reklam_"]:only-child)
-wcoanimedub.tv###sidebar_today > div[style="float:right; width:320px; height:250px"]
-wcoanimedub.tv##.video-page-main  + div[style^="background:"] > div[style="float:right; width:500px; height:320px"]
 wcoanimedub.tv,wco.tv##div[style^="float:right; width:300px; height:"]
 wcoanimesub.tv##div[style="float:right; width:420px; height:250px"]
 wcoanimesub.tv,wcoanimedub.tv##.video-page-main + div[style^="background:"] > div[style^="float:right;"]
@@ -65016,7 +65018,6 @@ ymovies.to###banner_publi
 ymp4.download###results a[href][target="__blank"]
 yn-dove.cn##div[style="margin-top: 10px; padding: 10px; "]
 yna.co.kr###layerAgree
-yna.co.kr##article ~ div[class^="aside-box"]
 ynet.co.il###blanket:empty
 ynet.co.il##.HomepageTwoDivAds
 ynet.co.il##.block.B1.spacer div.general-image
