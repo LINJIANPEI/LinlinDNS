@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-23 20:19:00（北京时间）
+! Version: 2025-05-23 21:22:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66019
+! Total count: 66026
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14446,6 +14446,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=imagetotext.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=imagetotext.io
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=imgo.info
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=indexsubtitle.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=infidrive.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=infotamizhan.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=insidertracking.com
@@ -26661,6 +26662,9 @@ cinemablind.com##div[id][class^="popup"][class$="wrap"]
 cinemacity.sk##.policy, #policy, .cpolicy
 cinemaexpress.com##.widget-container-133
 cinemagia.ro###banner_container_top
+cinemagia.ro##.box-NetflixMovieList
+cinemagia.ro##.btn-netflix
+cinemagia.ro##.netflix
 cinemapee.com##.button
 cinemark.cl###modal-cookies-template
 cinemotion-kino.de###cookie-layer
@@ -33842,7 +33846,6 @@ freewebarcade.com##.pnum
 freewebarcade.com##.rsads
 freewebarcade.com##.rxads
 freewebarcade.com##.rxse
-freex2line.online$$script:contains(/throw new Error/)
 freex2line.online$$script:contains(/throw new Error\(\)/)
 freexcafe.com###banner-tube-single
 freexcafe.com###join
@@ -48314,6 +48317,7 @@ obligacjeskarbowe.pl##.cookie
 obrazkowo.pl##.adVerticalBannerSize
 obrazkowo.pl##app-list .col-md-10 > .ng-star-inserted > .ng-star-inserted:has(> .row:only-child > .justify-content-center:only-child > .publiftAd)
 obrazkowo.pl##body .publiftAd
+observatornews.ro##.outstream-text
 observer.com###top-banner-container
 obserwatorgospodarczy.pl###tie-wrapper > .stream-item-above-header > a[target="_blank"]
 obserwatorgospodarczy.pl###tie-wrapper > div[style="text-align: center;"] > a:not([href*="obserwatorgospodarczy.pl"]) > img
@@ -50337,6 +50341,7 @@ play.tv3.lt##.c-track-bar__ad-cue-point
 play.typeracer.com##.newNorthWidget
 play44.net,videobug.net,videofun.me,vidzur.com,yucache.net##[style^="position: absolute; width: 100%;"]
 playallvideos.com,pron.co##.rmedia
+playav.cc###overlay
 playboard.co##.chart__row--ad
 playboy.com###__next > div[style*="flex"]
 playboyrussia.com##.disclamer
@@ -52632,6 +52637,7 @@ realestate.co.nz##.modal-ad-wrap
 realestate.co.nz##.topbar-ad-parent
 realestate.com.au###headerLeaderBoardSlot
 realestate.com.au##.header-leaderboard-portal
+realestate.com.au##.lead-gen__action-link
 realestate.com.au##.media-viewer__sidebar
 realestate.com.au##div[class^="FooterAd"]
 realestate.com.au##div[class^="PostLayout__AsideWrapper-"] > div[class^="styles__Medrec"]
@@ -54855,6 +54861,7 @@ simonly.nl###cookies
 simpasian.net##.hideme
 simpcity.su##.block-body > div.node:has(> div.node-body > div.node-main h3.node-title > a[href^="/link-forums/catflix"])
 simpcity.su##.block-body > div.node:has(> div.node-body > div.node-main h3.node-title > a[href^="/link-forums/catflix"]) ~ div.node
+simpcity.su##.blockitsowereplaceit
 simpcity.su##.notices:has(a[href^="https://catflix.su/"])
 simpcity.su##.p-body-inner > div:has(> iframe[style^="width:300px;"][style*="height:250px;"])
 simpcity.su##.p-body-sidebar > a[href^="https://catflix.su/"]
@@ -61717,11 +61724,9 @@ vidhub.me,vidhub.tv##.promonk
 vidhub.me,vidhub.tv##.promotelink
 vidhub1.cc,vidhub.me,vidhub.tv##.adpwc
 vidhub1.cc,vidhub.me,vidhub.tv##.adwap
-vidhub1.cc,vidhub.me,vidhub.tv##div:is([class^="ad"], [class*="pwc"]):has(> div[class][style] > img[onclick^="window.open"])
 vidhub1.cc,vidhub.me,vidhub.tv##div:is([class^="ad"], [class*="pwc"], [class^="ww"]):has(> div[class][style] > img[onclick^="window.open"])
 vidhub1.cc,vidhub.me,vidhub.tv##div[class][style^="position:"] > img[onclick^="window.open"]
 vidhub1.cc,vidhub.me,vidhub.tv##div[class^="pro"][class*="nk"][style]
-vidhub1.cc,vidhub.me,vidhub.tv##div[class^="pro"][style] > img[onclick^="window.open"]
 vidhub3.top,vidhub4.cc##div[style^="position:"]:has(> img[onclick^="window.open"])
 vidian.me##a[target="_blank"] > img[style="min-height:50px"]
 vidian.me##div[id^="hide_ads"]
@@ -62601,6 +62606,8 @@ wcoanimedub.tv###sidebar_today > div[style="float:right; width:320px; height:250
 wcoanimedub.tv##.video-page-main  + div[style^="background:"] > div[style="float:right; width:500px; height:320px"]
 wcoanimedub.tv,wco.tv##div[style^="float:right; width:300px; height:"]
 wcoanimesub.tv##div[style="float:right; width:420px; height:250px"]
+wcoanimesub.tv,wcoanimedub.tv##.video-page-main + div[style^="background:"] > div[style^="float:right;"]
+wcoanimesub.tv,wcoanimedub.tv##div[id^="sidebar_"] > div[style^="float:right;"]
 wcofun.com,wcoforever.net,thewatchcartoononline.tv###sidebar_r1
 wcofun.net##.reklam_kapat
 wcofun.net##div[style="width:160px; height:600px"]
