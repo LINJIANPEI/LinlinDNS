@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-25 19:08:04（北京时间）
+! Version: 2025-05-25 20:17:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65938
+! Total count: 65948
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11683,6 +11683,7 @@
 @@||isee.weishi.qq.com^
 @@||isee.weishi.qq.com^$important
 @@||isekaisubs.web.id^$generichide
+@@||iservice.10010.com^
 @@||island.lk/userfiles/image/danweem/island.gif
 @@||isolaillyon.it^$generichide
 @@||issuecdn.baidupcs.com^
@@ -11875,6 +11876,7 @@
 @@||js.datadome.co/tags.js$script,domain=monster.ca|sso.garena.com|thefork.com
 @@||js.digitalriverws.com/*/components/$stealth=referrer
 @@||js.hyra.io/*.js$~third-party
+@@||js.img.10010.com^
 @@||js.iplsc.com/inpl.abd/*/proxy.html?host=$generichide
 @@||js.iplsc.com/inpl.abd/latest/ads.js?$domain=pomponik.pl|interia.pl|js.iplsc.com
 @@||js.jansatta.com/ads_js.js
@@ -12598,6 +12600,7 @@
 @@||m.anjuke.com^
 @@||m.azonline.de/var/storage/images/*_image_300_250.jpg$~third-party
 @@||m.bilibili.com^
+@@||m.client.10010.com^
 @@||m.ctrip.com^
 @@||m.dbzstatic.com/assets/js/loader.js
 @@||m.dcinside.com/movie/$stealth,app=com.dcinside.app.android|com.dcinside.app
@@ -12667,6 +12670,7 @@
 @@||m1.pxb7.com^
 @@||m15.360buyimg.com^
 @@||m1tm.insideevs.com/gtm.js$~third-party
+@@||m2.img.10010.com^
 @@||m3m.1vkx.cn^
 @@||m7.music.126.net^
 @@||m7.pzds.com^
@@ -16045,6 +16049,7 @@
 @@||res.cloudinary.com^
 @@||res.duobaobuyu.net^
 @@||res.imtt.qq.com^$important
+@@||res.mall.10010.cn^
 @@||res.mi.baidu.com^
 @@||res.mi.baidu.com^$important
 @@||res.qiyukf.net^
@@ -19419,6 +19424,7 @@
 @@||wwo.wps.cn^$important
 @@||www-daftarharga.blogspot.com^$generichide
 @@||www-env.dropbox-dns.com^$important
+@@||www.10010.com^
 @@||www.114la.com^$important
 @@||www.123pan.com^
 @@||www.123pan.com^$important
@@ -19454,6 +19460,8 @@
 @@||www.bqgyy.com^
 @@||www.bytedance.com^
 @@||www.chemdraw.com.cn^$important
+@@||www.chinaunicom.com.cn^
+@@||www.chinaunicom.com^
 @@||www.clips4sale.com^
 @@||www.cloudflare-cn.com^
 @@||www.cloudflare.com^
@@ -35128,6 +35136,7 @@ gismeteo.by,gismeteo.ru##div[class^="stopblock"]
 gismeteo.com###weather-gis-news
 gismeteo.com,gismeteo.lt,gismeteo.lv##div#weather-right[id="weather-right"]
 gismeteo.com,meteofor.com,nofilmschool.com##.placeholder
+gismeteo.com,meteofor.com,nofilmschool.com,protothema.gr##.placeholder
 gismeteo.lt###weather-alfa
 gismeteo.lt,gismeteo.lv##div#weather-left[id="weather-left"]
 gismeteo.lv###weather-apollo
@@ -38008,6 +38017,7 @@ i.qq.com##.linwei-logo
 i.qq.com##.linwei-txt
 i.trackr.fr##.classInfoCoucou
 i24news.tv##.column-ads
+i24news.tv##div[class^="Advert_"]
 i4a.pl###hideMe
 i4wifi.cz###CPrivacy-Panel
 i8k.cc##.module-adslist
