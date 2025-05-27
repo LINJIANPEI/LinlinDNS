@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-27 19:09:19（北京时间）
+! Version: 2025-05-27 20:19:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65974
+! Total count: 65983
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7410,6 +7410,7 @@
 @@||cdn.vox-cdn.com/packs/js/concert_ads-*.js$domain=theverge.com
 @@||cdn.watch.aetnd.com/*/swf/FreeWheelAdManagerLoader.swf$domain=mylifetime.com
 @@||cdn.watch.aetnd.com^$domain=fyi.tv|cdn.watch.aetnd.com
+@@||cdn.web-global.fds.api.mi-img.com^
 @@||cdn.webclicks24.com^
 @@||cdn.wgchrrammzv.com/prod/ajc/loader.min.js$domain=journal-news.com
 @@||cdn.witchhut.com/network-js/witch-afg/ima3.js$domain=friv-2017.com
@@ -7483,6 +7484,7 @@
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads^$domain=in.gr
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls^
 @@||cdnjs.cloudflare.com^
+@@||cdnjs.com^
 @@||cdnqq.net/ad/api/popunder.js$script
 @@||cdns.*.gigya.com/gs/webSdk/Api.aspx$stealth=referrer
 @@||cdnssl.mediafire.com/js/
@@ -7728,7 +7730,6 @@
 @@||clickswin.tvchoicemagazine.co.uk/assets/advertisement/ads-*.js$domain=tvchoicemagazine.co.uk
 @@||clicktale.net^
 @@||client-api.arkoselabs.com^
-@@||client-rapi-missav.recombee.com^
 @@||client-uc.heytapmobi.com^$important
 @@||client.api.gdhczc.com^
 @@||client.app.coc.10086.cn^$important
@@ -9433,7 +9434,6 @@
 @@||fistfast.com/pop.js
 @@||fitdynamos.com^$generichide
 @@||fivemturk.com^$generichide
-@@||fivetiu.com^
 @@||flag.lab.amplitude.com^$domain=watch.outsideonline.com
 @@||flair.be/js/default/*_jq.$script
 @@||flash.sec.intl.miui.com^
@@ -9519,6 +9519,7 @@
 @@||fotor.com.cn/static/web/share/js/
 @@||fotored.net/ads/*.html
 @@||foundation.youdao.com^
+@@||fourhoi.com^
 @@||fourier-videoclip-eu.allawnos.com^$important
 @@||fox-url.com^$generichide
 @@||foxnews.com^$generichide
@@ -10865,6 +10866,7 @@
 @@||i.imgur.com^
 @@||i.kinja-img.com^$stealth=referrer
 @@||i.meituan.com^
+@@||i.mi.com^
 @@||i.pl^$generichide
 @@||i.postimg.cc/*/banner*.png$domain=scandal-heaven.com
 @@||i.pximg.net^
@@ -13152,7 +13154,9 @@
 @@||mirrors.163.com^
 @@||misc.360buyimg.com^
 @@||miscellaneous-c.blogspot.com^$generichide
-@@||missav.com^
+@@||missav.ai^
+@@||missav.live^
+@@||missav.ws^
 @@||missoulian.com^$generichide
 @@||mistermodzzforum.space^$generichide
 @@||mistore.jp/content/dam/isetan_mitsukoshi/advertise/$~third-party
@@ -19486,6 +19490,8 @@
 @@||www.douyin.com^
 @@||www.dpfile.com^
 @@||www.dxmpay.com^$important
+@@||www.enigmaprotector.cn^
+@@||www.enigmaprotector.com^
 @@||www.epicgames.com^
 @@||www.ero-labs.com^
 @@||www.fbsbx.com^
@@ -19518,6 +19524,7 @@
 @@||www.hoyoverse.com^
 @@||www.ijinshan.com^
 @@||www.infoq.com/scripts/ads.js
+@@||www.internetdownloadmanager.com^
 @@||www.ip138.com^
 @@||www.iqiyi.com^
 @@||www.iqiyi.com^$important
@@ -19560,6 +19567,7 @@
 @@||www.ntdtv.com^$important
 @@||www.nuomiphp.com^$important
 @@||www.nzherald.co.nz^$stealth=useragent
+@@||www.oreans.com^
 @@||www.ouyaoxiazai.com/*/*.gif|$image
 @@||www.paypal.com^
 @@||www.paypalobjects.com^
@@ -53677,6 +53685,7 @@ samsungmagazine.eu,letemsvetemapplem.eu,jablickar.cz##.lsads-banner
 samsungmagazine.eu,letemsvetemapplem.eu,jablickar.cz##.lsads-banner + .linesep
 samsungmagazine.eu,letemsvetemapplem.eu,jablickar.cz##.ownad
 samsungpromotions.claims##.v-cookie-policy
+san.com##.atf-top-banner
 sanarmed.com###__next > nav + div > div[class*="Wrapper"]
 sandiegouniontribune.com##.so_promo_headline_wrap
 sane.org.uk###jxcc-bar
