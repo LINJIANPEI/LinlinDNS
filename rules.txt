@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-28 15:10:59（北京时间）
+! Version: 2025-05-28 16:14:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65989
+! Total count: 66016
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -614,6 +614,18 @@
 /(https?:\/\/)216\.21\..{100,}/
 /(https?:\/\/)217\.182\.11\..{100,}/
 /(https?:\/\/)51\.195\.31\..{100,}/
+/.*.*.shouji.sogou.com/
+/.*.1rtb.com/
+/.*.a.market.xiaomi.com/
+/.*.ad.gameley.com/
+/.*.adintl.cn/
+/.*.adx.adwangmai.com/
+/.*.data.hicloud.com/
+/.*.log.aliyuncs.com/
+/.*.ubixioe.com/
+/.*.vlion.cn/
+/.*.yfanads.com/
+/.*.zhangyuyidong.cn/
 /.*\.*\.shouji\.sogou\.com/
 /.*\.1rtb\.com/
 /.*\.a\.market\.xiaomi\.com/
@@ -679,12 +691,19 @@
 /TrackView/*$xmlhttprequest
 /W*ity0*00Er00*/index.$document
 /Win0xixm07/?phone=$document
+/[a-zA-Z0-9.-]*-ad-[a-zA-Z0-9.-]*.byteimg.com/
 /[a-zA-Z0-9.-]*-ad-[a-zA-Z0-9.-]*\.byteimg\.com/
+/[a-zA-Z0-9.-]*-ad.sm.cn/
+/[a-zA-Z0-9.-]*-ad.video.yximgs.com/
+/[a-zA-Z0-9.-]*-ad.wtzw.com/
 /[a-zA-Z0-9.-]*-ad\.sm\.cn/
 /[a-zA-Z0-9.-]*-ad\.video\.yximgs\.com/
 /[a-zA-Z0-9.-]*-ad\.wtzw\.com/
+/[a-zA-Z0-9.-]*-be-pack-sign.pglstatp-toutiao.com/
 /[a-zA-Z0-9.-]*-be-pack-sign\.pglstatp-toutiao\.com/
+/[a-zA-Z0-9.-]*-normal-[a-zA-Z0-9.-]*.zijieapi.com/
 /[a-zA-Z0-9.-]*-normal-[a-zA-Z0-9.-]*\.zijieapi\.com/
+/[a-zA-Z0-9.-]*-normal.zijieapi.com/
 /[a-zA-Z0-9.-]*-normal\.zijieapi\.com/
 /\/[0-9][0-9][0-9][0-9][0-9]\?version_name=[a-z]$/$xmlhttprequest
 /\/t\/[0-9]{3}\/[0-9]{3}\/a[0-9]{4,9}\.js$/$script
@@ -1046,6 +1065,7 @@
 /clicks.*/q/*$image
 /clicks.email.$image
 /client_204?$image,other,ping,script
+/cloudinject[a-zA-Z0-9.-]*-dev.*.[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*.amazonaws.com/
 /cloudinject[a-zA-Z0-9.-]*-dev\.*\.[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*\.amazonaws\.com/
 /cls/check.php?$image
 /cms_ads.js$script
@@ -7649,6 +7669,7 @@
 @@||clarity.ms/tag/$script,domain=phileweb.com
 @@||classic-retro-games.com^$generichide
 @@||classic.comunio.de/clubImg.phtml/$image,~third-party
+@@||classliving.lpages.co^
 @@||classliving.lpages.co^|
 @@||cle0desktop.blogspot.com^$generichide
 @@||clerk.io/clerk.js$script,domain=trony.it
@@ -7668,6 +7689,7 @@
 @@||click.alternate.de^
 @@||click.appcast.io^
 @@||click.appcast.io^|
+@@||click.avs.io^
 @@||click.avs.io^|
 @@||click.chp.kohls.com^
 @@||click.cptrack.de^
@@ -7714,9 +7736,11 @@
 @@||click.trafficguard.ai^
 @@||click.trafficguard.ai^|
 @@||click.uol.com.br^$domain=uol.com.br
+@@||click.virt.exacttarget.com^
 @@||click.virt.exacttarget.com^|
 @@||click.virt.s*.exacttarget.com^|
 @@||click.zoom.us^
+@@||clickattr.wayup.com^
 @@||clickattr.wayup.com^|
 @@||clickcease.com^
 @@||clickdimensions.com^
@@ -34473,6 +34497,7 @@ gamesurf.it##div.container:has(> adv-element)
 gamesurf.it##div[class*="adv-"]
 gamesvillage.it##.post-detail-row > br
 gamesvillage.it##article[id^="post-"] > p[alig] + br
+gamesvillage.it##iframe[src^="https://adserver."]
 gamesystemrequirements.com##.act_eng
 gametech.ru,www.ixbt.com##body > div[class]:not([id])[style*="position"][style*="fixed"][style*="z-index:"][style*="background-color"]
 gametimers.it##.adsbygoogle
@@ -63630,6 +63655,7 @@ wp.pl$$script:contains(/var wp_gaf_rv[\s\S]*?\n.*"spin".*"dfpConfig".*"slots?"/)
 wpbakery.com##.top-message
 wpbeginner.com##.sidebardeals
 wpbeginner.com##.singleadthumbcontainer
+wpde.com##div[class^="HomePageContainer-module_empty"]
 wpengine.com##.opt-in-modal
 wpjam.com###wpjam_blog_300x250_1
 wplift.com##.widget_bsa
@@ -63748,6 +63774,7 @@ wuxia.click##.mantine-Container-root ~ div[class^="mantine-"]:has(> .mantine-Cen
 wuxia.click##.mantine-Container-root ~ div[class^="mantine-"]:has(> .mantine-Center-root > .mantine-Container-root > div[class^="mantine-"] > .mantine-Grid-root .mantine-Image-root img:is([src^="https://aieasypic.com/"], [src^="https://aieasyimage.com/"]))
 wuxia.click##.mantine-Paper-root > div:not([class], [id]) > div:not([class], [id]) > .mantine-Container-root:has(> div:not([class], [id]) > div[class^="mantine-"] > .mantine-Grid-root .mantine-Image-root img:is([src^="https://aieasypic.com/"], [src^="https://aieasyimage.com/"]))
 wuxia.click##.mantine-Paper-root > div:not([class], [id]) > div:not([class], [id]) > .mantine-Container-root:has(> div[class^="mantine-"] > .mantine-Grid-root .mantine-Image-root img:is([src^="https://aieasypic.com/"], [src^="https://aieasyimage.com/"]))
+wuxiabox.com##.chapter-content > div[align="center"] > div[class*=" "]:has(> div[id^="pf-"])
 wuxiap.com##.TPuhiHlg
 wuxiaworld.com##.container-fluid .pw-container > a[target="_blank"]
 wuxiaworld.com##[href^="https://go.onelink.me"]
