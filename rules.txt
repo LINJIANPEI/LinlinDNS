@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-28 23:10:11（北京时间）
+! Version: 2025-05-29 00:11:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66027
+! Total count: 66007
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15513,6 +15513,7 @@
 @@||porntop.com^
 @@||porntube.com/adb_detector.js|$~third-party
 @@||pornxp.com^$stealth=ip
+@@||pornxp.eu^$stealth=ip
 @@||pornxxx.tv/ads.js
 @@||pornzog.com^
 @@||port.hu/js/advert.min.js
@@ -25956,10 +25957,6 @@ cbndata.com##.Toastify
 cboard.cprogramming.com##.postrow > div[style*="300px; height:"]
 cbs12.com##div[class^="index-module_adAfterContent"]
 cbs12.com##div[id^="js-Taboola-Container"]
-cbs12.com,wjla.com,wpde.com##[class^="NewAd-"]
-cbs6albany.com##.displayAd
-cbs6albany.com##div[class^="NewAd-"]
-cbs6albany.com##div[class^="index-module_openwebAd_"]
 cbsnews.com###taboola-around-the-web-video-door
 cbsnews.com##.nativeAds
 cbssports.com##.GamblingPartnerAdWrapperHome
@@ -33569,10 +33566,6 @@ fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32c
 fox4news.com##.fox-bet-promo
 foxaholic.com##div[class*="foxaholic-publift-"][class*="_sticky"]
 foxaholic.com,manhwatop.com,webtoon.xyz,manhuas.net,mangarocky.com##.body-wrap > .c-bottom-sidebar
-foxbaltimore.com,foxchattanooga.com,foxillinois.com,foxnebraska.com,foxreno.com,foxrochester.com,foxsanantonio.com,nbcmontana.com,okcfox.com,siouxlandnews.com,wach.com,wchstv.com,wcyb.com,wfxl.com,wgxa.tv,wlos.com,wsbt.com,cbs2iowa.com,fox4beaumont.com,mycbs4.com,mynews4.com,news4sanantonio.com,abc6onyourside.com,wtov9.com,turnto10.com,fox11online.com,mynbc15.com,nbc16.com,dayton247now.com,fox23maine.com,nbc24.com,fox28media.com,myfox28columbus.com,fox42kptm.com,fox45now.com,fox56.com##div[class^="index_adBeforeContent__"]
-foxbaltimore.com,foxchattanooga.com,foxillinois.com,foxnebraska.com,foxreno.com,foxrochester.com,foxsanantonio.com,nbcmontana.com,okcfox.com,siouxlandnews.com,wach.com,wchstv.com,wcyb.com,wfxl.com,wgxa.tv,wlos.com,wsbt.com,cbs2iowa.com,fox4beaumont.com,mycbs4.com,mynews4.com,news4sanantonio.com,abc6onyourside.com,wtov9.com,turnto10.com,fox11online.com,mynbc15.com,nbc16.com,dayton247now.com,fox23maine.com,nbc24.com,fox28media.com,myfox28columbus.com,fox42kptm.com,fox45now.com,fox56.com##div[class^="index_displayAd__"]
-foxbaltimore.com,foxchattanooga.com,foxillinois.com,foxnebraska.com,foxreno.com,foxrochester.com,foxsanantonio.com,nbcmontana.com,okcfox.com,siouxlandnews.com,wach.com,wchstv.com,wcyb.com,wfxl.com,wgxa.tv,wlos.com,wsbt.com,cbs2iowa.com,fox4beaumont.com,mycbs4.com,mynews4.com,news4sanantonio.com,abc6onyourside.com,wtov9.com,turnto10.com,fox11online.com,mynbc15.com,nbc16.com,dayton247now.com,fox23maine.com,nbc24.com,fox28media.com,myfox28columbus.com,fox42kptm.com,fox45now.com,fox56.com##div[id^="interstory_first_ddb_"]
-foxbaltimore.com,foxchattanooga.com,foxillinois.com,foxnebraska.com,foxreno.com,foxrochester.com,foxsanantonio.com,nbcmontana.com,okcfox.com,siouxlandnews.com,wach.com,wchstv.com,wcyb.com,wfxl.com,wgxa.tv,wlos.com,wsbt.com,cbs2iowa.com,fox4beaumont.com,mycbs4.com,mynews4.com,news4sanantonio.com,abc6onyourside.com,wtov9.com,turnto10.com,fox11online.com,mynbc15.com,nbc16.com,dayton247now.com,fox23maine.com,nbc24.com,fox28media.com,myfox28columbus.com,fox42kptm.com,fox45now.com,fox56.com##div[id^="interstory_second_ddb_"]
 foxbusiness.com##.pre-content
 foxcincinnati.com##a[href^="https://www.safeauto.com"]
 foxford.ru###cc_container
@@ -41485,8 +41478,6 @@ klz9.com##center > center > a[target="_blank"][rel="noopener noreferrer"]
 klz9.com##div[style^="width:336px!important;height:250px!important;position:relative!important;"]
 kmbc.com,wlky.com##.article-content--body-wrapper-side-floater
 kmf.com##.g-kmf-906banner
-kmph.com,kfoxtv.com,fox17.com##div[class^="index_ad"]
-kmph.com,kfoxtv.com,fox17.com##div[class^="index_displayAd_"]
 kmplayer.com##.dim-layer
 kmplayer.com##.infeed-bottom
 kmplayer.com##.txt_advertisement
@@ -41874,7 +41865,6 @@ kutchuday.in##.td-post-content > p > img
 kutchuday.in##a[href="http://adityahealth.com"] > img
 kutchuday.in##a[href="https://adityahealth.com/"]
 kutchuday.in,worldfree4u-lol.online##img[width="300"][height="300"]
-kutv.com,wlos.com##div[class^="NewAd"]
 kuvake.net##div[style*="min-width: 300px; max-width: 450px;"]
 kuwo.cn##.qr_wrapper
 kuwo.cn##.tuiguang
@@ -46979,7 +46969,6 @@ nbastream.io##.w-100
 nbastream.net,nfl-stream.live##a[href^="http://v2.nflpass.net/register/"]
 nbastream.net,nfl-stream.live##a[href^="http://www.sportyplay.com/"]
 nbazar.sk##.eu
-nbcmontana.com##div[class^="index-"]:has(> div[class^="NewAd-module"])
 nbcnews.com##div[class="db-m dn"][style="height: 130px;"]
 nbcsports.com##bsp-reverse-scroll-ad
 nbk.io,senpa.io###ad-slot-center-panel
@@ -47437,9 +47426,6 @@ news24online.com##.desktop_new_ads
 news24online.com##.mini-list-story[style*="background: red;"]
 news24online.com##.n24_ads_div_title
 news365.co.za##.stream-item-widget-content
-news3lv.com##div[class^="NewAd-module"]
-news3lv.com,komonews.com##[class^="DisplayAdvert-module_"]
-news3lv.com,komonews.com##div[class^="index-module_taboolaContainerWrapper_"]
 news5.de###privacyContainer
 news9live.com###left_before_story
 newsandnews.com##.bottom-popup
@@ -49723,7 +49709,6 @@ people.cn###shengmingTip
 people.com##.article-footer > .articles-recirculation--see-also > .article-footer__section-title
 people.com##.articleContainer__rail
 people.com##.article__broad-video
-people.com,cnycentral.com,news3lv.com,upnorthlive.com,wcyb.com,wjactv.com,fortune.com##.outbrain
 people.com.cn##.ad_left
 people.com.cn##.cont_banner
 people.com.cn##.ipc_none
@@ -63403,11 +63388,6 @@ wizconnected.com##.wiz-cookie-policy
 wizdeo.com###cookieGA
 wjbc.com##a[href^="http://sweetdeals.com/bloomington/deals"]
 wjbc.com##a[href^="https://www.farmweeknow.com/rfd_radio/"]
-wjla.com##div[class^="DisplayAdvert-module_"]
-wjla.com##div[class^="ddb_300x250_"][class*="largeRectangleAd_container_"]
-wjla.com,wpde.com###js-SocialWidget-Container
-wjla.com,wpde.com##div[class^="index-module_adBeforeContent_"]
-wjla.com,wpde.com##div[class^="index-module_taboola_"]
 wjunction.com##.global-banner
 wjunction.com##.message--post + div[style="margin: 30px; text-align: center;"] > a[href][target] > img
 wjunction.com##a[href="http://katfile.com/make-money.html"]
