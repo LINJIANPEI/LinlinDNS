@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-29 23:10:58（北京时间）
+! Version: 2025-05-30 00:12:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66048
+! Total count: 66042
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3699,17 +3699,10 @@
 91mobiles.com,techyv.com##.td-header-header
 91porn.com##.preroll-blocker
 91porn.com##div:has(> a > .ad_img)
-91porna.com###app-nav > ul > li:has(> a.app-nav-item[target="_blank"]:not([href*="91porna.com"]))
-91porna.com##.ad-dialog
 91porna.com##.carousel-container-bottom
 91porna.com##.carousel-container:has(#carouselExampleInterval)
-91porna.com##.dx-banner-item
 91porna.com##.row > div.flex-container:has(> a[href][target="_blank"] > img)
 91porna.com##.row > div[class^="col"]:has(> .video-wrap > a.checkNum)
-91porna.com##.text-mini:has(> .dx-recommend-icons)
-91porna.com##.video-items > li:has(> a.checkNum)
-91porna.com##a.checkNum[target="_blank"]:not([href*="91porna.com"])
-91porna.com##div[class^="aspect-"]:has(> div > .swiper-backface-hidden)
 91porna.com##div[class^="col"] div.filters:has(a.checkNum)
 91porny.com###playerJsvLayer.jsv-layer
 91porny.com##.container-fluid.p-0[class*="mb-"]
@@ -51548,7 +51541,6 @@ productreview.com.au##div[class*="-ad__"]
 productreview.com.au##div[data-can-overlap="true"][style^="position:"]
 productreview.com.au##div[data-sticky-ad-container]
 productreview.com.au##div[style="line-height:0"]
-productreview.com.au,videohelp.com##a[rel="sponsored"]
 productreview.com.au,videohelp.com,techinferno.com,boyfriendtv.com##a[rel="sponsored"]
 productz.com##.productz-ad-container
 proelectronic.rs##.cookies-holder
@@ -57724,7 +57716,6 @@ techiedelight.com##.sidebar > #custom_html-16
 techiedelight.com##.sidebar > #custom_html-9
 techilife.com###sidebar > #text-4
 techilife.com###sidebar > #text-5
-techinferno.com,boyfriendtv.com##a[rel="sponsored"]
 techinformed.com##.ad-text-styles
 techipe.info,sonixgvn.net,skidrowcodex.net##.ipprtcnt
 techknow.ie###SITE_ROOT ~ div[data-reactid*="siteAspectsContainer"]
@@ -58815,6 +58806,8 @@ thesenior.com.au##div[id^="story-side-"]
 theseotools.net##.adsbygoogle
 theseotools.net##.xd_top_box
 theserverside.com###sponsored-news
+thesextube.net###bloglo-scroll-top + div[id][class*=" "]
+thesextube.net##.bloglo-sidebar-inner > div[id^="custom_html-"]
 theshovel.com.au##.banner-col
 thesimsresource.com###fb-root ~ div[class^="ad-"]
 thesimsresource.com##.group div[class^="ad-"]
@@ -60421,6 +60414,7 @@ tuttoandroid.net##.card-grid div.row > div.col-18.align-self-center
 tuttoandroid.net##.justify-content-around > div[class^="col-"] > a[href^="http://bit.ly/"][target="_blank"] > img
 tuttoandroid.net##.skin-img
 tuttoandroid.net##.ta-adblock-modal-open::before
+tuttoandroid.net##div[class^="widofferte23-"]
 tuttoandroid.net,tuttotech.net##body .banner:not(#style_important)
 tuttogreen.it##.advplace
 tuttogreen.it##.block-custom-content-50
