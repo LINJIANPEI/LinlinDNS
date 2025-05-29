@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-29 08:51:00（北京时间）
+! Version: 2025-05-29 10:29:57（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66017
+! Total count: 66019
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8366,6 +8366,7 @@
 @@||datacloudmail.ru^$domain=cloud.mail.ru,stealth=3p-cookie|referrer
 @@||datacomp.sk^$stealth=dpi
 @@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|hungryroot.com|usa.experian.com
+@@||datadome.monster.com.first-party-js.datadome.co^$script,domain=monster.com
 @@||dataprajna.net^
 @@||dataprajna.net^$important
 @@||datashare.spravazeleznic.cz/szdc-apps/theme-szdc/js/cms_ads.js
@@ -63202,6 +63203,7 @@ wikiwand.com##.article_footerStickyAd__wvdui
 wikiwand.com##.article_sectionAd__rMyBc
 wikiwand.com##.content_headerAd__USjzd
 wikiwand.com##div[class^="footer_wrapper__"]:has(> div > div[class^="wrapper_cta__"])
+wikiwand.com##div[class^="wrapper_wrapper"]:has(> div[id^="ezoic-pub-ad"])
 wikiwand.com##div[class^="wrapper_wrapper__"]:has(> div[class^="wrapper_cta__"])
 wikiwand.com##div[style="min-height: 325px; max-width: 600px;"]
 wikizero.com###btns_adz
