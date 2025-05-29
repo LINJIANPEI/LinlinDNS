@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-29 18:11:33（北京时间）
+! Version: 2025-05-29 19:09:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66054
+! Total count: 66055
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -53488,6 +53488,7 @@ rule34.xxx##.nutaku-mobile
 rule34.xxx##a[href^="https://track.afcpatrk.com/"]
 rule34.xxx##iframe[src*="/aff_ad?"]
 rule34.xxx##span[data-nosnippet] > .a_list > a[target="_blank"]
+rule34.xxx,slixa.com##a[rel="sponsored"]
 rule34hentai.net###main > div.blockbody
 rule34hentai.net##.blockbody > iframe[src^="https://rule34hentai.net/javascript_rotaor"]
 rule34porn.net,mangoporn.net##a[href="https://theporndude.com"]
