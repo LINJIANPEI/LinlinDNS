@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-30 15:10:46（北京时间）
+! Version: 2025-05-30 16:14:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66053
+! Total count: 66062
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -995,6 +995,7 @@
 /api/front/v2/observability$ping
 /api/pageview/*$ping
 /api/ping?$~xmlhttprequest
+/api/users/*&ev=$script
 /api/users?token=$popup
 /api/video/stats/*$xmlhttprequest
 /apopwin.js$script
@@ -14525,6 +14526,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mathdf.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mcappx.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=md5hashing.net
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mdbmax.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mealcold.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mediastinger.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=megane.com.pl
@@ -17028,7 +17030,6 @@
 @@||smstibo.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -24998,6 +24999,7 @@ bravenewcoin.com##.sevio-ad-wrapper
 bravofly.com##[class^="cmp_sponsoredLinks"]
 bravoporn.com##.box-left
 bravoporn.com##.content > .wrap ~  div.headline > p
+bravoporn.com##a[target="_blank"]:not([href*="bravoporn.com"])
 bravoteens.com###results > .relthumb + [id].relb[style^="float:"]
 bravoteens.com##.a352
 bravoteens.com##.main > noindex
@@ -37318,6 +37320,7 @@ hirtv.hu##.banner-fix
 hirtv.hu##.banner-horizontal
 hirtv.hu##.banner-media
 his-mobile.com##.cookieagree
+histmag.org###article > .my-12:has(> .mx-4:only-child > .py-4:first-child + #our-bread + .py-4:last-child)
 histmag.org###content > div[style="display:flex;font-size:14px;margin-top:30px;margin-bottom:5px"]
 histmag.org###content > div[style="display:flex;font-size:14px;margin-top:30px;margin-bottom:5px"] + .py-8
 histmag.org###content > div[style="display:flex;font-size:14px;margin-top:30px;margin-bottom:5px"] + .py-8 + div[style="display:flex;font-size:14px;margin-top:10px;margin-bottom:30px"]
@@ -53722,6 +53725,7 @@ sammobile.com##.rev
 sammyspizza.de##.responsiveFooterBar
 samnaprawiam.com##.adsbygoogle
 sampledrive.org###adblock-overlay
+sampledrive.org##body > div[id][style="display: block;"]:has(> div[id]:only-child > div[style*="margin: clamp"])
 sampledrive.org,rahim-soft.com,veganab.co,inter-news.it,azamericasat.net##.background-overlay + div[id][class*=" "]
 samplette.io##div[id^="pw-"][id$="-leaderboard"]
 samsaraubud.com###bottom-fixed
@@ -56839,6 +56843,8 @@ stream2watch.sx##.stream-single-player > center[style="background: black; color:
 stream2watch.sx##a[href="/vpn"]
 stream2watch.ws##img.fpi
 streamable.com##.top-ad-banner
+streambolt.tv##.video > div[style*="z-index:"]:not([class])
+streambolt.tv##div[style*="z-index: 2147483647;"][style*="position: fixed;"]
 streambtw.com###overlay
 streamcr7.com##.container > a[href].btn-outline-primary
 streamcraft.com##.privacy-wraper
@@ -60277,6 +60283,7 @@ tubesex.me,xxxadd.com##.adban1
 tubesweet.com,gifporntube.com,pornjk.com##.bottom-blocks
 tubev.sex##.sp_block_3-300-250
 tubewolf.com##.home-banner
+tubewolf.com##.network-links
 tubewolf.com##[id^="TA"][id*="-Native-"]
 tubexnxx.pro##.full-brkas-container
 tubous.com###good_money
@@ -60970,6 +60977,7 @@ underhentai.net##.hp-float-skb
 underhentai.net##.theiaStickySidebar > div:not(.telegram-txt)
 underhentai.net##div[class*="afi-"]
 undertow.club##.deskContent:has(> center > ins[id])
+undertow.club##div[class*="Content"]:has(> center > ins[id])
 undo.net###fullpersonal, #fullboxpersonal
 uneo-avantages.fr##.bCnil
 unesc.br##.lgpd
@@ -64071,6 +64079,7 @@ xasiat.com##.top:has(> [data-zoneid])
 xbabe.com###ipa-s
 xbabe.com##.bnnrs-aside
 xbabe.com##.nat-bottom
+xbabe.com##a[href^="https://xbabe.com/go/"]
 xbabe.com##div[class^="bnnr"]
 xbiquwx.la##.box_con > div[style="margin:10px auto;width: 930px;height: 250px;"]
 xbjav.com,javdragon.com##.poplayer
