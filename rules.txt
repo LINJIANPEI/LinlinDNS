@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-30 23:10:47（北京时间）
+! Version: 2025-05-31 00:12:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66068
+! Total count: 66062
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -18529,7 +18529,6 @@
 @@||tvn.adocean.pl^*/ad.xml$domain=miniminiplus.pl
 @@||tvn.hit.gemius.pl/*/redot.js$domain=uwaga.tvn.pl|tvn24.pl
 @@||tvn.hit.gemius.pl/*redataredir?url=*tvn.adocean.pl*ad.xml$domain=player.pl|teletoonplus.pl|get.x-link.pl
-@@||tvn.hit.gemius.pl/*redot.gif$domain=player.pl|vod.pl
 @@||tvn.hit.gemius.pl/*redot.gif$domain=player.pl|vod.pl|tvn24.pl
 @@||tvn.hit.gemius.pl/gplayer.js$domain=tvn24.pl
 @@||tvn.hit.gemius.pl/gstream.js$domain=uwaga.tvn.pl
@@ -61769,11 +61768,6 @@ videzz.net,vidoza.net,vidoza.org##.prevent-first-click
 vidguardto.xyz,pistona.xyz,gaystream.click,gsfjzmqu.sbs,gaystream.click,go-streamer.net,vgfplay.xyz,elbailedeltroleo.site,tioplayer.com,listeamed.net,bembed.net,fslinks.org,embedv.net,vembed.net,vid-guard.com,v6embed.xyz,gaystream.online,vgembed.com##body > div[class]:empty
 vidhub.me,vidhub.tv##.promonk
 vidhub.me,vidhub.tv##.promotelink
-vidhub1.cc,vidhub.me,vidhub.tv##.adpwc
-vidhub1.cc,vidhub.me,vidhub.tv##.adwap
-vidhub1.cc,vidhub.me,vidhub.tv##div:is([class^="ad"], [class*="pwc"], [class^="ww"]):has(> div[class][style] > img[onclick^="window.open"])
-vidhub1.cc,vidhub.me,vidhub.tv##div[class][style^="position:"] > img[onclick^="window.open"]
-vidhub1.cc,vidhub.me,vidhub.tv##div[class^="pro"][class*="nk"][style]
 vidhub2.top,vidhub3.top,vidhub4.cc,vidhub.me,vidhub.tv##.player-info div[class]:has(> div[class][style] > img[onclick^="window.open"]:first-child + span[style]:last-child)
 vidhub2.top,vidhub3.top,vidhub4.cc,vidhub.me,vidhub.tv##div[class][style*="position:"] > img[onclick^="window.open"]
 vidhub3.top,vidhub4.cc##div[style^="position:"]:has(> img[onclick^="window.open"])
