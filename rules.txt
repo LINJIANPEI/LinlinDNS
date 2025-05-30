@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-05-30 07:09:27（北京时间）
+! Version: 2025-05-30 08:50:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66043
+! Total count: 66050
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25108,6 +25108,9 @@ brisbanetimes.com.au,smh.com.au,theage.com.au,watoday.com.au###articlePartnerSto
 brisbanetimes.com.au,smh.com.au,theage.com.au,watoday.com.au###content > div > div:has(> div.container > div.adWrapper)
 brisbanetimes.com.au,smh.com.au,theage.com.au,watoday.com.au##._34z61
 brisbanetimes.com.au,smh.com.au,theage.com.au,watoday.com.au##[class] > [class]:has(> [data-testid="ad"])
+briskoda.net##.ipsData__item--advertisement
+briskoda.net##div[data-ips-ad]
+briskoda.net,linustechtips.com##div[data-role="sidebarAd"]
 bristoltransmissions.co.uk##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 britannia.co.uk###noticePanel
 britannica.com##.abl
@@ -28435,6 +28438,8 @@ currencyconverterx.com##.block-inside-blocks
 currencyrate.today##.cc-alert
 currys.co.uk##.cretio-sponsored-product
 currys.co.uk##.criteoproducts-container
+curs.md###bannerSide
+curs.md###bannerTop
 cursbnr.ro###avert_all_page
 curseforge.com###cdm-zone-03
 curseforge.com##.maho-container
@@ -58913,6 +58918,7 @@ thetimes.com###react-app > div > section + div:has(> div > div.nuk-ad-placeholde
 thetimes.com##.Sticky-AdContainer
 thetimes.com##.channel-header-ad
 thetimes.com##.responsive__InlineAdWrapper-sc-4v1r4q-14
+thetimes.com##.styles__PromotedContentContainer-sc-1ul3b7n-3
 thetimes.com##article[id="article-main"] > div:has(#ad-header)
 thetimes.com##div[class^="styles__PromotedContentContainer"]
 thetimestribune.com###floorboard_block
@@ -61204,6 +61210,7 @@ urtech.ca###text-17:last-child
 urteile-gesetze.de###stickyFooter
 usaa.com##+js(set-cookie, GPC, 1, , reload, 1)
 usabilitest.com##.alert-dismissible
+usamega.com###anchorPanel
 usamega.com##.aud
 usasexguide.nl###uiISGAdFooter
 usasexguide.nl##[href^="https://instable-easher.com/"]
