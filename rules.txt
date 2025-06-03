@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-03 08:53:10（北京时间）
+! Version: 2025-06-03 10:40:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66083
+! Total count: 66074
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -498,15 +498,7 @@
 .gif$domain=manga168.net
 .gif$domain=xn--72czpba5eubsa1bzfzgoe.com
 .gif$image,domain=javhd168.com
-.gif$third-party,domain=1024pa.com
-.gif$third-party,domain=922tp.com
-.gif$third-party,domain=avbebe.com
-.gif$third-party,domain=cb.wpio.xyz
-.gif$third-party,domain=cl.wpio.xyz
-.gif$third-party,domain=m.7ktw.com
 .gif$third-party,domain=phim33.com
-.gif$third-party,domain=yasem5.com
-.gif$third-party,domain=zxc.dongludi.top
 .gif$third-party,domain=zxc.dongludi.top|m.7ktw.com|922tp.com|cl.wpio.xyz|yasem5.com|1024pa.com|avbebe.com|cb.wpio.xyz
 .gif^$image,domain=dooporn24.com
 .gruene.de/lists/ut.php$image
@@ -9903,7 +9895,6 @@
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
 @@||get.docker.com^
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -10026,7 +10017,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-ez.net^$generichide
 @@||go-links.net^$generichide
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -20594,7 +20584,9 @@ adultgamescollector.com,adultgamesworld.com,porngames.tv###slideApple
 adultgamesportal.com##a[href^="http://www.crazyxxx3dworld.com/"]
 adultgamesportal.com##a[href^="https://t.frtyz.com/"]
 adultgamesportal.com##a[href^="https://t.grtyv.com/"]
+adultgamesworld.com##.masonry-layout__panel:has(> .masonry-layout__panel-content > .sponsored-post)
 adultgamesworld.com##.masonry-layout__panel:has(a[href^="https://access-the-website.com/"])
+adultgamesworld.com##.rel:has(> a[href^="https://animeamigos.org/"])
 adultgamesworld.com##.rel:has(a[href^="https://access-the-website.com/"])
 adultgamesworld.com##.tt
 adultgamesworld.com##a[href^="https://joystick.tv/t/?t="]
@@ -27924,7 +27916,6 @@ countdown.co.nz##cdx-card:has(product-badge-list)
 countdown.co.nz,jns.org,nscreenmedia.com,op.gg,rawinu.com,welovemanga.one,whoscored.com##.banner-container
 counter.dev,lindaikejisblog.com##.da
 counterpunch.org##.header-center
-counterstats.net,craiyon.com##.vm-placement
 countrylife.co.uk##.ipc-advert-class
 countwordsfree.com##.disclaimer
 coupdemy.com##div[class^="adp"]
