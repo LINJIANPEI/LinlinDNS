@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-03 15:12:22（北京时间）
+! Version: 2025-06-03 16:16:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66075
+! Total count: 66083
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -21827,6 +21827,7 @@ anysex.com###fluid_theatre > .center
 anysex.com##.content > div.center
 anysex.com##.desc.type2
 anysex.com##.headA
+anysex.com##.headZ
 anysex.com##.main > div.content_right
 anysex.com##.naf_dd
 anysex.com##.native_middle
@@ -36983,6 +36984,7 @@ hentaibaka.one##.paid-mix
 hentaibaka.one##.portfolio-items > div:not([style]):not([itemprop])
 hentaiblue.com,pornifyme.com##.widget_text
 hentaicity.com##.detail-side-bnr
+hentaicity.com##.leftnav_banner
 hentaicity.com,porntv.com##.detail-box > div.detail-con ~ div.detail-side-td
 hentaicity.com,porntv.com##.thumb-list > div[class^="outer-item _"]
 hentaicloud.com##.ad-display-unit
@@ -38716,6 +38718,8 @@ imginn.com##.page-search > .block-search:has(> div[id*="-"]:only-child > script[
 imginn.com##div[class$="-money"]
 imgixxx.com##body > script[src^="https://afshanthough.pro/"] + center
 imgmaze.pw##center > iframe[style^="width:100%; height:400px;"]
+imgouhmde.sbs,cloudgallery.net,imgair.net##.odlake
+imgouhmde.sbs,cloudgallery.net,imgair.net##.qwrcb
 imgpeak.com###container > center > div[style^="text-align:center;"]
 imgpile.com##.nt-lg
 imgpile.com##.upload-files
@@ -48835,6 +48839,7 @@ op.gg##div[class*="eylegve"]
 op.gg##div[class*="md:"]:has(> div[style^="min-width:"] > div[id^="div-gpt-ad"])
 op.gg##div[class^="Game Game--Result"] + div[result] + div[class^="css-"]:has(> div > div.vm-placement)
 op.gg##div[id^="ad-container"]
+op.gg##div[style*="padding:"]:has(> div[data-id]:empty)
 op.gg##div[style^="display:"]:has(> div[data-id$="billboard"])
 op.gg##div[style^="display:"]:has(> div[data-id$="leaderboard"])
 op.gg##main >  div[style][class^="css-"]:has(> div:not([class]) > div.vm-placement)
@@ -50512,6 +50517,7 @@ pocketnow.com###text-22:nth-child(6)
 pocketnow.com###text-23:first-child
 pocketracy.com##.dsclmr
 pockettactics.com,pcgamesn.com##.aff_widget
+poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##.is-detail-view > div[class^="go"]:has(> #onet-ad-flat-natmailing)
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__SlotRightColumn-"]
 poczta.gazeta.pl,kontakty.onet.pl,poczta.onet.pl##div[class^="styles__SlotTopContainer-"]
 poczta.interia.pl###main-container > .mail-frame-aside:has(> .ads-content)
@@ -50523,8 +50529,10 @@ poczta.o2.pl##dd-holder[slot="DOUBLE_BILLBOARD"]
 poczta.o2.pl##dd-holder[slot^="BOX_LEFT_"]
 poczta.o2.pl,poczta.wp.pl###topbar + div[class] > div[class^="css-"] > div[class]:empty:first-child + div[class^="css-"]:last-child > div[class^="css-"]:only-child:empty
 poczta.o2.pl,poczta.wp.pl##main > div[class] > div[class] > div[class*=" "]:has(> div[class]:empty:first-child + div[class]:last-child > div[class^="css-"] > div[class^="css-"]:empty)
+poczta.onet.pl###js_MailsContainer > div[class^="go"]:has(> div:first-child + div[id^="onet-ad-"] + div[class^="go"]:last-child)
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + div[class^="go"] > div[class^="go"] > nav + div[class^="go"]:last-child > div[class^="go"]:last-child:has(> div[class^="go"]:only-child > div[class^="go"]:only-child > div[class^="go"]:first-child + .onet-ad:last-child)
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + div[class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
+poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + div[class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:only-child > div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
 poczta.wp.pl##dd-holder[slot="DOUBLE_BILLBOARD"]
 poczta.wp.pl##dd-holder[slot="PANEL_PREMIUM"]
 poczta.wp.pl##div[ng-if="CommonController.showBannerTop"]
