@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-04 07:10:35（北京时间）
+! Version: 2025-06-04 08:52:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66110
+! Total count: 66117
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14780,6 +14780,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=youneed.win
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=yt-downloaderz.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ytstv.co
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ytstvmovies.me|ytstvmovies.xyz|ytstv.me|torrents.vip
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ytstvmovies.me|ytstvmovies.xyz|ytstv.me|ytsyifymovie.com|torrents.vip|ytsyifytorrent.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=z-lib.io
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=za.gl
@@ -15513,6 +15514,7 @@
 @@||porntube.com/adb_detector.js|$~third-party
 @@||pornxp.com^$stealth=ip
 @@||pornxp.eu^$stealth=ip
+@@||pornxp.net^$stealth=ip
 @@||pornxxx.tv/ads.js
 @@||pornzog.com^
 @@||port.hu/js/advert.min.js
@@ -20175,6 +20177,7 @@ _view_pixel&$image
 _webanalytics.
 a-ads.com##.aa_container
 a-ads.com,ad-maven.com,adcash.com,admitad.com,adskeeper.co.uk,adskeeper.com,adspyglass.com,adsupply.com,adsupplyads.com,adsupplyads.net,chpadblock.com,exoclick.com,hilltopads.com,joinpropeller.com,juicyads.com,luckyads.pro,monetag.com,myadcash.com,popads.net,propellerads.com,purpleads.io,trafficshop.com,yavli.com##HTML
+a-hentai.tv##.support-frame
 a-hentai.tv,javporn.tv##.support-frame
 a-i-l-s-a.com,buscodepto.com##div[style^="position: fixed;"]
 a-lohas.jp$$script:contains(puURLstrpcht)
@@ -29564,6 +29567,7 @@ digitalife.com.mx###cookieModal
 digitalland.de###ccm
 digitallydownloaded.net,canadiancouchpotato.com##div[class^="code-block code-block-"][style*="margin: 8px"]
 digitalmarktrend.com##div > a[target="_blank"] > img
+digitalmarktrend.com##iframe#iframe_id
 digitalmarktrend.com,webhostingpost.com##iframe#iframe_id
 digitalocean.com###DO_CC_PANEL
 digitalpoint.com###header_middle
@@ -31743,6 +31747,7 @@ etherealgames.com###widgets-wrap-after-content
 etherealgames.com###widgets-wrap-before-content
 etherealgames.com,androidmakale.com,tutorialspots.com,vivahentai4u.net,thetruedefender.com,nimtools.com,javhoho.com,thefappeningblog.com###text-4
 etherealgames.com,androidphone.fr,esports.net,movilforum.com,apkmb.com,snat.co.uk,coursesxpert.com,thefappeningblog.com,nimtools.com,javhoho.com###text-2
+etherealgames.com,phoenixnap.com,apkdlmod.com,freecoursesites.net,courseforfree.net,javhoho.com,playsexgames.xxx###text-6
 etherealgames.com,phoenixnap.com,javporn.tv,apkdlmod.com,freecoursesites.net,courseforfree.net,javhoho.com,playsexgames.xxx###text-6
 ethereumprice.org##.partner-highlight
 ethereumprice.org##.zxc-msg
@@ -37107,6 +37112,7 @@ hentaivideos.net,freehentaistream.com##.aside-banner
 hentaivn.net###over
 hentaivn.net##.qc_main
 hentaivn.net##div[id^="page_ads_"]
+hentaiworld.tv###floating-banner
 hentaiworld.tv###imagead
 hentaiworld.tv##.buton-main-link
 hentaiworld.tv##.card-container:not([href^="https://hentaiworld.tv"])
@@ -48250,6 +48256,7 @@ nuvexus.com,stream-together.org##.middle-banner
 nuvexus.com,stream-together.org##.top-banner
 nuvid.com##.download_adv_text_photo
 nuvid.com##.rel_right
+nuvid.com##a[class$="_premium_bar"]
 nuvid.com,nuvid.tv##div[style="height:477px; margin-bottom:15px;"]
 nuxt.com##.space-y-3:has(> div[class] > script[src^="https://cdn.carbonads.com/"])
 nv.ua##.brand_banner
