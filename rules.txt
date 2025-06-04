@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-04 20:20:56（北京时间）
+! Version: 2025-06-04 21:28:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66103
+! Total count: 66111
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -16957,6 +16957,7 @@
 @@||skidrowfull.com^$generichide
 @@||skincarie.com^$generichide
 @@||skiplinks.xyz/skipad.webp$domain=skiplinks.xyz
+@@||skiplinks.xyz/skipad.webp$domain=skiplinks.xyz|lewdsteam.com|adultcomixxx.com
 @@||skips.link^$generichide
 @@||sklinkstech.blogspot.com^$generichide
 @@||skmedix.pl/*/*.js$~third-party
@@ -25889,6 +25890,7 @@ cartoonmad.com##td[width="890"] > table > tbody > tr > td[valign="top"][height="
 cartoonmad.com##tr:nth-child(n+5) > td > table[width="732"]
 cartoonnetwork.com###tos-bar
 cartoonporn.com##.viewlist + div.aside
+cartoonporn.com,babestube.com,deviants.com##.spot_panel
 cartoonpornvideos.com##.detail-side-banner
 cartoonpornvideos.com##.detail-side-bnr
 cartoonpornvideos.com##div[class="outer-item _767p"]
@@ -31954,6 +31956,7 @@ evoke.ie##.jw-player-video-widget
 evoload.io##.xadb-msg
 evolutrans.fr###cookies
 evopayments.eu###zwcc
+evowars.io##div[id^="evowars-io_"]
 evreporter.com##.widget_media_image:not(:has(a[href^="https://evreporter.com/"]))
 evs.com##.language-switcher
 ew.com###article__primary-video-jw_1-0
@@ -37293,6 +37296,8 @@ hindustantimes.com###affiliate-shop-now
 hindustantimes.com###divTopNews:empty
 hindustantimes.com###divshopnowRight
 hindustantimes.com###section_news
+hindustantimes.com##.advInBtweenNewsCard
+hindustantimes.com##.advStoryDetailInline
 hindustantimes.com##.affilaite-widget
 hindustantimes.com##.cubeBox
 hindustantimes.com##.desktopAd
@@ -41344,6 +41349,7 @@ kijiji.ca##div[id^="gpt-leader-"]
 kijijiautos.ca##article[data-testid="SearchResultListItem"]:has(span[data-testid="PromotionLabel"])
 kijkonderzoek.nl##.uk-position-fixed
 kikar.co.il###__next > div.MuiBox-root > div.MuiContainer-maxWidthLg:has(> div > div > div > iframe[title^="Banner:"])
+kikar.co.il##article[itemprop="itemListElement"]:has(a[href^="https://nltx.kikar.co.il/"][target="_blank"])
 kikar.co.il##div[class^="MuiBox-root css-"] > script[type="application/ld+json"] + div.MuiContainer-maxWidthLg > div[class^="MuiBox-root css-"]:has(> div[class^="MuiBox-root css-"] > div[class^="MuiBox-root css-"] > div[style="left: 160px; top: 104.68px;"] > iframe[title^="Banner:"])
 kikatek.com###Piper-Consent
 kikinote.net##.pc_ad
@@ -42963,6 +42969,8 @@ livemint.com##.storyPage_storyblockAd__r4wwE
 livemint.com##.taboolaHeight
 livemint.com##div[class^="adHeight"]
 livemint.com##div[class^="outbrainAd"]
+livemint.com##div[class^="storyPage_contentSec__"]:has(> div[class^="storyPage_storyblockAd"])
+livemint.com##div[class^="storyPage_storyblockAd"]
 livemint.com##div[data-vars-widget-name="taboola-below-article-carousel"]
 livemint.com##div[id$="NotAdFree"]
 livenation.com###main > div > .chakra-container > div > div:has(> div > div > .ad-slot)
