@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-04 12:18:45（北京时间）
+! Version: 2025-06-04 13:12:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66099
+! Total count: 66098
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9894,6 +9894,7 @@
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
 @@||get.docker.com^
+@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -10017,6 +10018,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-ez.net^$generichide
 @@||go-links.net^$generichide
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -12370,16 +12372,13 @@
 @@||linguatec.org/VoiceReaderWeb15WebService^$stealth=referrer
 @@||link-to.net^$generichide
 @@||link.adtidy.org/forward.html
-@@||link.morningbrew.com^
 @@||link.morningbrew.com^|
-@@||link.sylikes.com^
 @@||link.sylikes.com^|
 @@||link.technics-goods.info^$generichide
 @@||link.zhihu.com^
 @@||link1s.*^$stealth=referrer
 @@||link1s.com/wp-banners.js
 @@||link1s.com^$generichide
-@@||linka.page^
 @@||linka.page^|
 @@||linkasm.com^$generichide
 @@||linkbucks.com/scripts/intermissionLink*.js
@@ -12396,9 +12395,7 @@
 @@||linkneverdie.com^$generichide
 @@||linkonclick.com/*/display.php$domain=maxstream.video
 @@||linkpoi.me^$generichide
-@@||links.e.theatlantic.com^
 @@||links.e.theatlantic.com^|
-@@||links.getblueshift.com^
 @@||links.getblueshift.com^|
 @@||links4u.me^$generichide
 @@||linksaya.com^$generichide
@@ -19560,7 +19557,6 @@
 @@||www.iqiyi.com^$important
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jiaoyimao.com^
 @@||www.jiaoyimao.com^$important
@@ -43514,7 +43510,6 @@ m.douban.com##.write-comment
 m.douban.com##.write-review
 m.douban.com##[href^="https://erebor.douban.com/monitor/"]
 m.douban.com##div.center > div
-m.douban.com##div.center [style*='padding: 4px;']
 m.douban.com##h2 > [href^="https://www.douban.com/doubanapp/card/get_app"]
 m.douyu.com##div[class*="OpenAppBtn"]
 m.economictimes.com##.bannerwrapper
@@ -58267,6 +58262,10 @@ th7.cn###PcPoPmarket
 th7.cn##.main > .mb5
 thagson.com##.init_message
 thaihubx.tv###spin-r
+thaihubx.tv##.adcen
+thaihubx.tv##div[id$="-l"]
+thaihubx.tv##div[id$="-r"]
+thaihubx.tv##img[class^="ads"]
 thairath.co.th###headerWraper ~ div[class]:has(> div:only-child > div[style]:only-child > #slot-billboard:only-child)
 thairath.co.th##.adsbox-style
 thairath.co.th##.article-body div[style*="overflow:"][style*="background:"]:has(> div[class^="ads-slot-"])
