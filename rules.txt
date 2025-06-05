@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-05 23:12:15（北京时间）
+! Version: 2025-06-06 00:14:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66136
+! Total count: 66131
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6757,7 +6757,6 @@
 @@||bleachernation.com/headerprebid/bn_prebid_logic_*.js
 @@||bleepingcomputer.com/*/*/*/$~script,~stylesheet,~xmlhttprequest,~image
 @@||bleepingcomputer.com/download/ads-spy/
-@@||blindhypnosis.com/abc-doubleclick.js
 @@||blindhypnosis.com/adsbygoogle.js
 @@||blisseyhusband.in^$generichide
 @@||blitz.gg/app^$stealth=useragent
@@ -7395,6 +7394,7 @@
 @@||cdn.taboola.com/libtrc/*/loader.js$domain=cnet.com
 @@||cdn.taboola.com/libtrc/unip/loader.js$domain=techedubyte.com
 @@||cdn.taboola.com/magazine/$domain=taboolanews.com
+@@||cdn.tagdeliver.com/cipt/18911.js$domain=thepinknews.com
 @@||cdn.theatlantic.com/assets/static/*/js/advertisement.2.js
 @@||cdn.theguardian.tv/ad/*.m3u8$domain=theguardian.com
 @@||cdn.thisiswaldo.com/static/js/*.js$domain=mdn.lol|techydino.net
@@ -8645,7 +8645,6 @@
 @@||doge.is^$generichide
 @@||dogefaucet.com^$generichide
 @@||dogemate.com/assets/img/cointiply_728x90.jpg
-@@||dogemate.com/banner/cointiply_72890.jpg$domain=dogemate.com
 @@||dogestar.website^$generichide
 @@||dogry.pl^$generichide
 @@||doka.guide/html^$elemhide,jsinject,extension
@@ -11548,6 +11547,7 @@
 @@||in-page-push.com^$script,domain=mylink.*|my1ink.*|myl1nk.*|myli3k.*
 @@||in-trend.biz^$generichide
 @@||in.appcenter.ms^$important
+@@||in.getclicky.com^$xmlhttprequest,domain=wouterplanet.com
 @@||in.gr^$generichide
 @@||in.treasuredata.com/js/*?api_key$script,domain=retty.me
 @@||inbox.lv/advert/?actionID=imp_login
@@ -14552,7 +14552,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mta-resource.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=musicforchoir.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=myfilmyzilla.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mypractically.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=myuploadedpremium.de
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=myviptuto.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=nabzclan.vip
@@ -14918,6 +14917,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=weshare.is|skycall.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=whatsafterthemovie.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=winshell.org|wingeno.org
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=wouterplanet.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=www.msn.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=yoykp.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zeroupload.com
@@ -19412,6 +19412,7 @@
 @@||worldssl.net/wp-content/themes/mts_ad_sense/js/ads.js
 @@||worldsurfleague.com/js/videojs8/nuevo/plugins/videojs-contrib-ads.min.js
 @@||worldwide.sogou.com^$important
+@@||wouterplanet.com/scripts/ads-front.min.js$domain=wouterplanet.com
 @@||wouterplanet.com^$generichide
 @@||wowclassicbis.com^$generichide
 @@||wowsai.com/data/files/ad/
@@ -21671,7 +21672,6 @@ anime-odcinki.pl$$script[tag-content="zfgloadedpushopt"][min-length="30000"][max
 anime-planet.com##.halo
 anime-planet.com##.video-banner
 anime-sharing.com,forums.bluemoon-mcfc.co.uk##.samUnitWrapper
-anime-sharing.com,macheforum.com,cybertruckownersclub.com,tdpri.com,xbunker.nu,broncosportforum.com,jeepgladiatorforum.com,titsintops.com,nudostar.com,satelliteguys.us,forums.macrumors.com,androidrepublic.org##.samCodeUnit
 anime-suba.com###light
 anime-suba.com##.Anadvertisement0
 anime-suba.com##img[src^="https://www.anime-suba.com/Anime-Suba/Admin/imgAnadvertisement/"]
@@ -23425,8 +23425,6 @@ bankmillennium.pl##wc-cookies-marketing
 bankomatfinder.at###c-cookie
 bankvacency.com###orquidea-slideup
 banma.com##div[id^="disapper"]
-banned.porn,shemaleist.com,pelisxporno.net,aagmaal.vip,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,gayporntube.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx,pornmilo.me,freshscat.com##.adde_modal-overlay
-banned.porn,shemaleist.com,pelisxporno.net,aagmaal.vip,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,gayporntube.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx,pornmilo.me,freshscat.com##.adde_modal_detector
 banneke.com###cookie-block
 bansdiving.de##.uk-notification
 banzou.name###ads_1
@@ -29119,7 +29117,6 @@ deepbrid.com##.content > div.rounded-md.text-theme-10
 deepdotweb.com###sidebar > div#text-5
 deepdotweb.com##img[width="330"][height="104"]
 deepfake-porn.com,deepfucks.com,hdpornflix.com,sexkbj.com,vpornhd.com,x-picture.com##.happy-sidebar
-deepfake-porn.com,deepfucks.com,sexkbj.com,vpornhd.com,x-picture.com##.happy-sidebar
 deepfake-porn.com,sexkbj.com,x-picture.com##.happy-sidebar
 deepfakeporn.net##.primary > li.highlight ~ li
 deepfucks.com###block-88
@@ -59016,16 +59013,13 @@ theultralinx.com##.l-content-recommendation > [id^="revcontent_"]
 theultralinx.com##.m-ad-card--grid-item
 theultralinx.com##aside[phx-content-rail-ad-block]
 theurbanlist.com##.LeaderboardAd
-theverge.com##.ad__athena_internal
 theverge.com##.connatix-feature-desktop
 theverge.com##.duet--layout--rail > div[class]:has(> div[class] > div[data-concert])
-theverge.com##.duet--layout--rail > div[class]:has(> div[style="display: none !important;"])
 theverge.com##.m-ad__btf_leaderboard_variable
 theverge.com##div[class]:has(> div[data-concert])
 theverge.com##div[class^="adblock-allowlist-messaging"]
 theverge.com##div[data-concert]
 theverge.com,amp.cnn.com,ampproject.org##amp-iframe[src^="https://widgets.outbrain.com/hub/amp.html"]
-theverge.com,washingtonpost.com##.outbrain-wrapper
 thevid.net###tbl1
 thevinylfactory.com###vf-pop
 thevouz.in##body > div.top-center:has(> script[src^="https://securepubads.g.doubleclick.net"])
@@ -63745,6 +63739,7 @@ wotactions.com###ads_warning
 wotinfo.net###coo
 wotinspector.com##div[style*="background-color:#5a0000;"][style*="font-size:0.7em;"]
 wotinspector.com##div[style="background-color:#5a0000;line-height:1;font-size:0.9em"]
+wouterplanet.com###minigameplayer > .container > .panel:has(> .panel-body > ng-adsense)
 wowbiz.ro##.container > div[style="display: none !important;"] ~ br
 wowcher.co.uk##.two-by-two-deal:has(a[href*="src=sponsored_search_"])
 wowclassicbis.com##.Banner
