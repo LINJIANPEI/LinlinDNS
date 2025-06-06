@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-06 17:12:41（北京时间）
+! Version: 2025-06-06 18:12:48（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66154
+! Total count: 66169
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4905,6 +4905,7 @@
 @@||account.adguard.*/api_acc/$stealth=3p-auth
 @@||account.adobe.com/newrelic.js$~third-party
 @@||account.adobe.com^$document,domain=services.adobe.com,stealth=useragent
+@@||account.agiso.com^
 @@||account.dianping.com^
 @@||account.leagueoflegends.com/pm.html$jsinject,elemhide
 @@||account.mail.ru^$stealth=useragent
@@ -5535,6 +5536,7 @@
 @@||ajax.googleapis.com/ajax/libs/$script,domain=vidoza.co|vidoza.net
 @@||ajax.googleapis.com/ajax/libs/jquery$domain=gaypornwave.com
 @@||ajax.googleapis.com/ajax/libs/jquery/
+@@||ajax.googleapis.com^
 @@||ajax.googleapis.com^$script,domain=imgbox.com
 @@||ajax.googleapis.com^$script,domain=rule34hentai.net
 @@||ajax.googleapis.com^$script,domain=up-4ever.net
@@ -7438,6 +7440,7 @@
 @@||cdn13.com/dash$domain=xhamster.com,stealth=referrer
 @@||cdn13.com^$stealth=referrer,media
 @@||cdn1d-static-shared.phncdn.com^
+@@||cdn2.jianshu.io^
 @@||cdn4.tennistemple.com/js/advert.js|$script,~third-party
 @@||cdn61.zvooq.com/track/stream^$stealth=referrer
 @@||cdn77-pic.xnxx-cdn.com^
@@ -9765,6 +9768,7 @@
 @@||game5s.com^$generichide
 @@||game735.com^$generichide
 @@||game8.jp/api/ad/advertisement_placements?*sp_under_archive
+@@||gamebanana.com^
 @@||gamebrew.org^$generichide
 @@||gamecode.win^$generichide
 @@||gamedrive.org^$generichide
@@ -11451,6 +11455,7 @@
 @@||img.ads.tvb.com/news/min.js$domain=news.tvb.com
 @@||img.ads.tvb.com^
 @@||img.ak.impact-ad.jp/sr/js/nissan_test_$script,domain=www3.nissan.co.jp
+@@||img.alicdn.com^
 @@||img.alicdn.com^$important
 @@||img.blesk.cz/js/base-cz/advert.js
 @@||img.blesk.cz/static/data/blesk/reklama/advertisment.js
@@ -16038,6 +16043,7 @@
 @@||register.xmpush.xiaomi.com^
 @@||registrierung.gmx.net^$stealth
 @@||registrierung.web.de^$stealth
+@@||registry.npmmirror.com^
 @@||reifenrechner.at^$generichide
 @@||reimg.org/images^$image,stealth=referrer
 @@||reit-tirement.com^$generichide
@@ -16957,6 +16963,7 @@
 @@||sinopac.com/applyweb/OpenAccount/js/oas.
 @@||siouxcityjournal.com^$generichide
 @@||site-banner.hange.jp/adshow?$domain=animallabo.hange.jp
+@@||site.tiantiantiaosheng.com^
 @@||siteapps.com^$script,domain=netcombo.com.br
 @@||sitelike.org^$generichide
 @@||siteseal.certerassl.com/validate/dynamic$stealth=referrer
@@ -18711,10 +18718,12 @@
 @@||upload*.jianshu.io^$stealth=referrer
 @@||upload-as0.qbox.me
 @@||upload-bbs.miyoushe.com^$important
+@@||upload-images.jianshu.io^
 @@||upload.9377s.com^$important
 @@||upload.admin5.com/201*/thumb_$image
 @@||upload.far7net.com^$generichide
 @@||upload.forumfree.net^$stealth=referrer
+@@||upload.jianshu.io^
 @@||upload.twitter.com^
 @@||upload.wikimedia.org/wikipedia/$image,media
 @@||upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Doramad_Advertisement.jpg
@@ -19270,6 +19279,7 @@
 @@||webex.com^$generichide
 @@||webfail.com/image
 @@||webfail.com^$generichide
+@@||webfiles.gamebanana.com^
 @@||webgains.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@||webhook.frontapp.com/forms/$stealth=referrer
 @@||webimg.bssdl.kugou.com^$important
@@ -19494,6 +19504,7 @@
 @@||www.56.com^$important
 @@||www.9377.com^$important
 @@||www.9game.cn^
+@@||www.agiso.com^
 @@||www.ali213.net^
 @@||www.alidns.com^$important
 @@||www.anjuke.com^
@@ -19545,6 +19556,7 @@
 @@||www.gdata.pl^$elemhide
 @@||www.ghproxy.cn^
 @@||www.goofish.com^
+@@||www.goofish.pro^
 @@||www.google-analytics.com^$important
 @@||www.google.*/adsense/$~third-party,domain=google.cn
 @@||www.google.*/search?$domain=google.ae|google.at|google.be|google.bg|google.by|google.ca|google.ch|google.cl|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.nz|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.br|google.com.co|google.com.ec|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.pe|google.com.ph|google.com.pk|google.com.py|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vn|google.cz|google.de|google.dk|google.dz|google.ee|google.es|google.fi|google.fr|google.gr|google.hr|google.hu|google.ie|google.it|google.lt|google.lv|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk
@@ -19576,6 +19588,7 @@
 @@||www.jd.com^
 @@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
+@@||www.jianshu.com^
 @@||www.jiaoyimao.com^
 @@||www.jiaoyimao.com^$important
 @@||www.jsdelivr.com^
@@ -19609,11 +19622,13 @@
 @@||www.nfmovies.com/static/side.jpg
 @@||www.nodeseek.com^
 @@||www.novelfm.com^
+@@||www.npmjs.com^
 @@||www.ntdtv.com^$important
 @@||www.nuomiphp.com^$important
 @@||www.nzherald.co.nz^$stealth=useragent
 @@||www.oreans.com^
 @@||www.ouyaoxiazai.com/*/*.gif|$image
+@@||www.patreon.com^
 @@||www.paypal.com^
 @@||www.paypalobjects.com^
 @@||www.paypalobjects.com^$important
