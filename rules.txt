@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-06 23:10:14（北京时间）
+! Version: 2025-06-07 00:14:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66177
+! Total count: 66185
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6054,6 +6054,7 @@
 @@||api.rhombusads.com/v*/embed/check$domain=spin.com
 @@||api.rikka.app^$important
 @@||api.rmr.rocks^$stealth=3p-auth
+@@||api.rtl.nl/watch/$stealth=3p-auth
 @@||api.schale.network^$stealth=referrer|3p-auth
 @@||api.sec.intl.miui.com^
 @@||api.sec.miui.com^
@@ -14677,7 +14678,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sportnews.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sportskeeda.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=srvy.ninja
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stfly.biz|explorosity.net|torovalley.net|optimizepics.com|blogesque.net|stfly.cc|bookbucketlyst.com|metoza.net|trekcheck.net|travize.net|techlike.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stfly.biz|explorosity.net|torovalley.net|optimizepics.com|blogesque.net|stfly.cc|bookbucketlyst.com|metoza.net|trekcheck.net|travize.net|techlike.net|airevue.net|veroan.com|amalot.net|carribo.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stockstracker.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=streamelements.com
@@ -26112,7 +26112,6 @@ celebwell.com##.vi-video-wrapper
 celebwell.com##.widget-postup-standalone-form
 celebwell.com##.widget_gm_karmaadunit_widget
 celebzcircle.com##body > main[id="site-content"] + div[id][class*=" "]
-celemusic.com,rollingglobe.online,sullacollina.it,weebee.me,richitt.com,berich8.com,luisgdato.com,techyrick.com,freshersgold.com###main-container + div[id][class*=" "]
 celiac.com##.cAnnouncements
 cell.com##.adplaceholders
 celle-uelzennetz.de###cookie
@@ -35081,9 +35080,13 @@ getrssfeed.com##.hero-section ~ br
 getsquire.com###__next > div:first-child
 getstoryshots.com###post_ad_container
 getthot.com##.redirect-iframe
+gettranny.com##.header__content > a.header__hotlink
 gettranny.com##.video-info__header + section
 gettranny.com##.video__wrapper > div.wrapper:has(> article > div.headline)
+gettranny.com##.wrapper:has(> h2:contains(Advertisement))
+gettranny.com,pornzog.com,pornl.com,vxxx.com,ooxxx.com,inporn.com,shemalez.com,vjav.com##.fah-btn
 gettranny.com,xjav.tube,manysex.tube,manysex.com##section[style="padding: 12px;"]
+gettranny.com,xmilf.com,hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##.nopop
 gettubetv.com##span[style*="font-size: 12px;"][style*="text-decoration: none;"]
 gettyimages.de###toaster-modal
 gettyimages.nl###toaster-modal
@@ -36243,6 +36246,8 @@ gwp.pl###notice_bar
 gwpharm.com##.main > .block.block-block.show
 gxeea.cn##.m-wrap-school
 gyanipandit.com##a[href^="https://wisetrolley.com/"]
+gyanitheme.com,call-bomber.info,newshuta.in###BR-Footer-Ads
+gyanitheme.com,call-bomber.info,newshuta.in###SoumyaHelp-Ads
 gyanitheme.com,paid4.link,miklpro.com##.blog-content
 gyanitheme.com,yotrickslog.tech,meclipstudy.in,adzz.in###adtera
 gymgrossisten.com##.overlay-banner
@@ -61164,6 +61169,9 @@ unknowncheats.me###bab
 unknowncheats.me###hmmk
 unknowncheats.me##[href="https://securecheats.com/"]
 unknowncheats.me##[href^="https://proxy-seller.com/"]
+unknowncheats.me##hr + div[style]:has(> a[rel="sponsored noopener"])
+unknowncheats.me##hr + div[style]:has(> a[rel="sponsored noopener"]) + div[style]
+unknowncheats.me##tbody[id^="threadbits_forum_"] > tr:has(> td.alt2 > span[style="float:right"] > img[alt^="advert"])
 unlockapk.com###aswift_2_expand
 unlockboot.com##.td-ads-home
 unlockboot.com##.ubhome-banner
