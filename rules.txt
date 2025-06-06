@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-06 20:20:19（北京时间）
+! Version: 2025-06-06 21:24:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66169
+! Total count: 66177
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14678,6 +14678,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sportskeeda.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=srvy.ninja
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stfly.biz|explorosity.net|torovalley.net|optimizepics.com|blogesque.net|stfly.cc|bookbucketlyst.com|metoza.net|trekcheck.net|travize.net|techlike.net
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stfly.biz|explorosity.net|torovalley.net|optimizepics.com|blogesque.net|stfly.cc|bookbucketlyst.com|metoza.net|trekcheck.net|travize.net|techlike.net|airevue.net|veroan.com|amalot.net|carribo.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stockstracker.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=streamelements.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=streetdir.com|roaddir.com
@@ -18970,6 +18971,7 @@
 @@||vidbom.com^$domain=anyanime.com
 @@||vidcache.net:*/*/*.mp4$stealth=referrer
 @@||vidcdn.co/iframe/$stealth=referrer
+@@||vide0.net^$generichide
 @@||videacesky.cz^$generichide
 @@||vidembed.cc/encrypt-ajax.php?id=
 @@||vidembed.re/stream$stealth=referrer
@@ -21669,6 +21671,7 @@ anichin.co.id###floatcenter
 anichin.vip##.kln
 anikore.jp##html[class^="loading"]:style(visibility: visible !important;)
 animade.tv##body > div[data-react-class="Cookies"]
+animal-hentai.com##a[href^="/out.cgi?"]
 animalcrossingworld.com##.at-sidebar-1
 animalfactguide.com,msn.com,portlandmonthlymag.com,romsgames.net,sportsmediawatch.com##.adlabel
 animalplanet.com##.bannerFlexHeader__main.banner-flexOne-main
@@ -27582,6 +27585,7 @@ comick.io##img[height="250"]
 comics.org##div[style="height:90px"]
 comicsands.com###c7da91bc-8e44-492f-b7fd-c382c0e55bda
 comicsheatingup.net###custom_html-5
+comicsporn.net###portfolio-items > div:has(> div.tac > i.xxx-banner)
 comicsxxxgratis.com,video.javdock.com##.video-container
 comidoc.net##.MuiContainer-root > div[style^="text-align: center; margin-left: auto; margin-right: auto; min-height:"]
 comidoc.net##.MuiContainer-root > div[style^="text-align:center;margin-left:auto;margin-right:auto;min-height"]
@@ -31103,8 +31107,6 @@ elaee.com###bcnil
 elahmad.com##div[id^="adsads"]
 elakolije.rs###kolacic
 elamigos-games.com##a[href^="https://track.wg-aff.com/"]
-elamigos-games.net##.content_store
-elamigos-games.net##.iframeDiv
 elamigos-games.net##.portfolio-item:has(> .card > a[href*="instant-gaming.com"])
 elamigos-games.net##a[href^="https://www.instant-gaming.com/"][href*="?igr="]
 elamigosedition.com##.tabs-b > div[class^="but"] > a[target="_blank"]
@@ -34408,6 +34410,8 @@ gamedev.net##.ad_leaderboard
 gamedev.net##.ad_text
 gamedev.net##.mb-3.align-items-center.justify-content-start
 gamedrive.org###BR-Footer-Ads
+gamedrive.org##.code-block > a[target="_blank"]:not([href*="gamedrive.org"]) > img
+gamedrive.org##div[class*="-banner"][onclick*="window.open"]
 gamedrive.org##div[id^="BR-Footer-"]
 gamefaqs.gamespot.com###deals_emr.pod
 gamefaqs.gamespot.com,gamefaqs.com##.message_mpu
@@ -45789,6 +45793,7 @@ morrisons.com##.fops-item:has([title="Advertisement"])
 mortgageafterlife.com###lawdiv
 morticeandgreensashwindowrepairs.co.uk##.b-modal, .pps-popup
 mortonsalt.com##.ms-privacy-disclaimer
+mortuaryward.site,celemusic.com,rollingglobe.online,sullacollina.it,weebee.me,richitt.com,berich8.com,luisgdato.com,techyrick.com,freshersgold.com###main-container + div[id][class*=" "]
 moser.com##.cookies
 mostlyblogging.com###media_image-5
 mostlyblogging.com,sarkarideals.com,tvarticles.me###custom_html-3
@@ -58639,8 +58644,11 @@ thehansindia.com##section[class^="editorial"][class*="-ad-"]
 thehansindia.com##section[class^="hocal_hide_on_"]
 thehardtimes.net##.sidebar > #ai_widget-14
 thehentai.net###balaoAdDireito
+thehentai.net##.box_partnerships
 thehentai.net##.menu_tags
 thehentai.net##.showAd
+thehentai.net##.tags_top
+thehentai.net##div[id^="Ad"]
 thehentai.net##div[style^="width:300px; height:250px;"]
 thehill.com##div[id^="block-dfp-rightrail-"]
 thehill.com##p[style="font-family:Arial;color:#666666;font-size:11px;text-align:right;margin-bottom:-10px;"]
