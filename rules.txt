@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-07 23:10:19（北京时间）
+! Version: 2025-06-08 00:12:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66187
+! Total count: 66192
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6662,6 +6662,7 @@
 @@||bhc.co.kr^$stealth=dpi
 @@||bhookedcrochet.com^$generichide
 @@||bi-girl.net^$generichide
+@@||bid.g.doubleclick.net/dbm/vast$xmlhttprequest,domain=safeframe.googlesyndication.com
 @@||bidder.criteo.com/cdb|$domain=app.axenthost.com
 @@||biddr.brealtime.com/*.js$domain=airlinepilotforums.com
 @@||bidobido.xyz^
@@ -7252,6 +7253,7 @@
 @@||cdn.exp.qq.com/img/
 @@||cdn.ferrari.com^
 @@||cdn.fios.tv^$stealth=3p-auth
+@@||cdn.flashtalking.com/*.mp4?cb=$media,domain=safeframe.googlesyndication.com
 @@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=nettavisen.no
 @@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=stirileprotv.ro
 @@||cdn.fluidplayer.com/*/current/fluidplayer.min.js
@@ -16745,6 +16747,7 @@
 @@||serve.bannertrack.net/promoload
 @@||serve.popads.net^$script,domain=shinden.pl
 @@||servedby.flashtalking.com/*iabeu$domain=cdn.flashtalking.com
+@@||servedby.flashtalking.com/imp/$xmlhttprequest,domain=safeframe.googlesyndication.com
 @@||servedbyadbutler.com/adserve/;$domain=beincrypto.com
 @@||servedbyadbutler.com/app.js?$domain=archpaper.com
 @@||server*cdn*.tk/hls/$stealth=referrer
@@ -64509,7 +64512,11 @@ xkeba.com###diy90
 xkeezmovies.com##.ofa
 xkeezmovies.com##a[href="https://nudetik.com/"] > img
 xkeezmovies.com##a[href="https://nudetiktok.com/"]
+xl01.com.de###ad-float
+xl01.com.de###ad-index
 xlecx.org##iframe[src^="https://promo-bc.com/"]
+xlys02.com###ad-float
+xlys02.com###ad-index
 xm.co.uk###cookies-block
 xman.idnes.cz###space-g
 xman.idnes.cz##body > div#main > table[id][class]
@@ -65164,8 +65171,6 @@ yiyouliao.com##.yyl-weiruan-news-ad-item
 yizhibo.com###J_reg_guide
 yjcf360.com##.side_box
 yjcf360.com##.side_box2
-yjys.top###ad-float
-yjys.top###ad-index
 ykt.ru##.n-banner--adblocked
 ykxs.cc##a[href^="javascript"]
 ylfx.com##.info_logrt
