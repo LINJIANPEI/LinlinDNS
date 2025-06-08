@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-08 08:57:18（北京时间）
+! Version: 2025-06-08 10:50:10（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 20891
+! Total count: 20894
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -8266,6 +8266,7 @@
 @@||bhg.com/web/js-min/common/js/dwr/RemoteTargetingService.js
 @@||bhookedcrochet.com^$generichide
 @@||bi-girl.net^$generichide
+@@||bid.g.doubleclick.net/dbm/vast$xmlhttprequest,domain=safeframe.googlesyndication.com
 @@||bidder.criteo.com/cdb|$domain=app.axenthost.com
 @@||biddr.brealtime.com/*.js$domain=airlinepilotforums.com
 @@||bids.proper.io/api/bidding$domain=salon.com
@@ -8866,6 +8867,7 @@
 @@||cdn.exmarketplace.com/bidder/video_scripts/video_updated_*.js$domain=tvserial.it
 @@||cdn.exp.qq.com/img/
 @@||cdn.fios.tv^$stealth=3p-auth
+@@||cdn.flashtalking.com/*.mp4?cb=$media,domain=safeframe.googlesyndication.com
 @@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=nettavisen.no
 @@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=stirileprotv.ro
 @@||cdn.fluidplayer.com/*/current/fluidplayer.min.js
@@ -17962,6 +17964,7 @@
 @@||serve.bannertrack.net/promoload
 @@||serve.popads.net^$script,domain=shinden.pl
 @@||servedby.flashtalking.com/*iabeu$domain=cdn.flashtalking.com
+@@||servedby.flashtalking.com/imp/$xmlhttprequest,domain=safeframe.googlesyndication.com
 @@||servedbyadbutler.com/adserve/;$domain=beincrypto.com
 @@||servedbyadbutler.com/app.js?$domain=archpaper.com
 @@||server*cdn*.tk/hls/$stealth=referrer

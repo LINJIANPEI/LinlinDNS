@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14942
+! Total count: 14945
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-06-07 20:44:20（北京时间）
+! Version: 2025-06-08 10:06:54（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -9707,6 +9707,7 @@
 @@||bhg.com/web/js-min/common/js/dwr/RemoteTargetingService.js
 @@||bhookedcrochet.com^$generichide
 @@||bi-girl.net^$generichide
+@@||bid.g.doubleclick.net/dbm/vast$xmlhttprequest,domain=safeframe.googlesyndication.com
 @@||bidder.criteo.com/cdb|$domain=app.axenthost.com
 @@||biddr.brealtime.com/*.js$domain=airlinepilotforums.com
 @@||bids.proper.io/api/bidding$domain=salon.com
@@ -10307,6 +10308,7 @@
 @@||cdn.exmarketplace.com/bidder/video_scripts/video_updated_*.js$domain=tvserial.it
 @@||cdn.exp.qq.com/img/
 @@||cdn.fios.tv^$stealth=3p-auth
+@@||cdn.flashtalking.com/*.mp4?cb=$media,domain=safeframe.googlesyndication.com
 @@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=nettavisen.no
 @@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=stirileprotv.ro
 @@||cdn.fluidplayer.com/*/current/fluidplayer.min.js
@@ -19403,6 +19405,7 @@
 @@||serve.bannertrack.net/promoload
 @@||serve.popads.net^$script,domain=shinden.pl
 @@||servedby.flashtalking.com/*iabeu$domain=cdn.flashtalking.com
+@@||servedby.flashtalking.com/imp/$xmlhttprequest,domain=safeframe.googlesyndication.com
 @@||servedbyadbutler.com/adserve/;$domain=beincrypto.com
 @@||servedbyadbutler.com/app.js?$domain=archpaper.com
 @@||server*cdn*.tk/hls/$stealth=referrer
