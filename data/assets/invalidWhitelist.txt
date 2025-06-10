@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14522
+! Total count: 14526
 ! Total lines: 137
 ! Update: 20241219
 ! Version: 202407191352
-! Version: 2025-06-10 10:00:06（北京时间）
+! Version: 2025-06-10 20:50:59（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -1911,6 +1911,7 @@
 @@analytics^$domain=wwe.com
 @@app.arizonawildcats.com/preferences
 @@assets/dist//bts2$xmlhttprequest,stealth=referrer,domain=previbes.online
+@@bcdn*.$image,stealth=referrer,domain=mangabuddy.com
 @@bit.ly
 @@cdn.*.qq.com
 @@cdn.eporner.com^$stealth=referrer
@@ -10352,6 +10353,7 @@
 @@||cdn.pogo.com/*/exhibit/imasdk/video_player.js
 @@||cdn.polarbyte.com^$domain=bab.la
 @@||cdn.popt.in/pixel.js$domain=userstyles.org
+@@||cdn.privacy.paramount.com^$stealth=ip,domain=southparkstudios.*
 @@||cdn.ptztv.live/flyads/streaming.js
 @@||cdn.pubfuture-ad.com/v2/unit/pt.js$domain=faqwiki.us
 @@||cdn.pubfuture-ad.com/v2/unit/pt.js^$domain=techedubyte.com
@@ -15736,7 +15738,6 @@
 @@||maxstream.video^$generichide
 @@||maxurlz.com^$generichide
 @@||mbank.pl^$stealth=dpi
-@@||mbcdn.xyz^$image,stealth=referrer,domain=mangabuddy.com
 @@||mbe.modelica.university/_next/static/*/pages/pageview.js$~third-party
 @@||mbid.marfeelrev.com/hub/mbidder/adx$domain=cleantechnica.com
 @@||mbid.marfeelrev.com/hub/mbidder/adx$domain=ghacks.net
@@ -16919,7 +16920,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=crazygames.com|shellshock.io|minijuegos.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutsy.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutty.app
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutlink.net|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|wyqe.online
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutlink.net|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|wyqe.online|cuttyy.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dailyrevs.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=darkwiki.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dausel.co
@@ -17036,7 +17037,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hqq.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=htmlsave.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hyipstats.net
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|uploadsea.com|fikfok.net|porn-pig.com|hentai4f.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|uploadsea.com|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=iembra2or.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ifate.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=igniel.com
@@ -19441,6 +19442,8 @@
 @@||sourcepointcmp.bloomberg.*/ccpa.js$script,domain=bloomberg.co.jp|bloomberg.com
 @@||sourcepointcmp.bloomberg.*/mms/get_site_data?$domain=bloomberg.co.jp|bloomberg.com
 @@||sourcepointcmp.bloomberg.*/mms/get_site_data?requestUUID=$domain=bloomberg.*
+@@||southpark.*^$stealth=ip
+@@||southparkstudios.*^$stealth=ip
 @@||sovrn.com/|$xmlhttprequest,domain=aoutoqw.xyz
 @@||sovrn.com^$domain=3dpchip.com
 @@||sovrn.com^$domain=mens1069.com
@@ -20436,6 +20439,7 @@
 @@||top.list.ru/counter?id=$domain=crimea-kurort.com
 @@||top.list.ru/jump?from=$domain=pvo.guns.ru
 @@||top1porn.com^$generichide
+@@||topaz.viacomcbs.digital^$stealth=ip
 @@||topembed.pw^$stealth=referrer
 @@||topflix.tv^$generichide
 @@||toplay.biz/log_event$~third-party,xmlhttprequest

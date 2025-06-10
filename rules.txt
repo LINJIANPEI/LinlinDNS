@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-10 20:20:38（北京时间）
+! Version: 2025-06-10 21:27:16（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65537
+! Total count: 65544
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4316,6 +4316,7 @@
 @@adm.fwmrm.net/p/aetn_live/AdManager.swf$domain=mylifetime.com|aetnd.com
 @@app.arizonawildcats.com/preferences
 @@assets/dist//bts2$xmlhttprequest,stealth=referrer,domain=previbes.online
+@@bcdn*.$image,stealth=referrer,domain=mangabuddy.com
 @@cdn.eporner.com^$stealth=referrer
 @@clicks.$domain=cimbclicks.com.my,~third-party
 @@dnsotls-ds.metric.gstatic.com^
@@ -7232,6 +7233,7 @@
 @@||cdn.pogo.com/*/exhibit/imasdk/application.js
 @@||cdn.pogo.com/*/exhibit/imasdk/imasdk-pogo-1.0.js
 @@||cdn.pogo.com/*/exhibit/imasdk/video_player.js
+@@||cdn.privacy.paramount.com^$stealth=ip,domain=southparkstudios.*
 @@||cdn.ptztv.live/flyads/streaming.js
 @@||cdn.pubfuture-ad.com/v2/unit/pt.js$domain=faqwiki.us
 @@||cdn.pubfuture-ad.com/v2/unit/pt.js^$domain=techedubyte.com
@@ -12658,7 +12660,6 @@
 @@||mb-mods.net^
 @@||mb.yidianzixun.com^$important
 @@||mbank.pl^$stealth=dpi
-@@||mbcdn.xyz^$image,stealth=referrer,domain=mangabuddy.com
 @@||mbd.baidu.com^
 @@||mbd.baidu.com^$important
 @@||mbdl.update.netease.com^
@@ -14071,6 +14072,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutsy.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutty.app
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutlink.net|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|wyqe.online
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutlink.net|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|wyqe.online|cuttyy.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dailyrevs.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=darkwiki.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dausel.co
@@ -14188,6 +14190,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=htmlsave.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hyipstats.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|uploadsea.com|fikfok.net|porn-pig.com|hentai4f.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|uploadsea.com|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=iembra2or.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ifate.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=igniel.com
@@ -16801,6 +16804,8 @@
 @@||sourcepointcmp.bloomberg.*/mms/get_site_data?$domain=bloomberg.co.jp|bloomberg.com
 @@||sourl.cn^$important
 @@||south-plus.net^
+@@||southpark.*^$stealth=ip
+@@||southparkstudios.*^$stealth=ip
 @@||souti-ims.sm.cn^
 @@||soutiapi.quark.cn^
 @@||sovrn.com/|$xmlhttprequest,domain=aoutoqw.xyz
@@ -17889,6 +17894,7 @@
 @@||top-shop.ru^$domain=top-shop.ru
 @@||top.17173.com^
 @@||top1porn.com^$generichide
+@@||topaz.viacomcbs.digital^$stealth=ip
 @@||topembed.pw^$stealth=referrer
 @@||topflix.tv^$generichide
 @@||toplay.biz/log_event$~third-party,xmlhttprequest
@@ -31647,6 +31653,7 @@ ezermester.hu##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd
 ezgif.com##div[style$="min-height:90px;display:block"]
 ezneering.com###media_image-2
 ezprice.com.tw##.col-md-3
+eztechx.blogspot.com###adblock-overlay
 eztv.tf,eztv.yt##a > img[alt="Anonymous Download"]
 eztv.unblocked.sh,vidzi.tv##body > div[id][style*="position: fixed"][style*="z-index"][style*="height:"][style*="height:"]:not(#container)
 eztv.wf##a > img[alt="Anonymous Download"]
@@ -37419,7 +37426,6 @@ huawei.com##.huawei-convergent-cookie, #cookieTipOut, .hwid-bannerBox-portal, .p
 huawei.ru###cookie__panel-help
 huaweipolska.pl##.huawei-cookie
 huaweivenicemarathon.it###cp-cont
-hub.pl,top.pl,interia.pl##.article-body__ad-gora-srodek
 hubcloud.club##.ads-btns
 hubcloud.day##[alt="New-Banner"]
 hubfiles.pw##a[href="/button/download.php"]
@@ -39599,6 +39605,7 @@ jable.tv###site-content > div.container > section.pb-3.pb-e-lg-40.text-center
 jable.tv##.badge
 jable.tv##.gutter-20 > .col-sm-4:has(> .video-img-box a[target="_blank"])
 jable.tv##.nav-item > a[target="_blank"]
+jable.tv##.right-sidebar > .mb-e-30
 jable.tv##.text-center > a[target="_blank"] > img
 jable.tv##.uu-ads
 jable.tv##a[href*="?banner="]
@@ -50175,7 +50182,6 @@ polygonscan.com##.col-md-9 + div.col-auto.mx-auto
 polygonscan.com,bscscan.com##.justify-content-center > span[style^="line-height:"]
 pommiers.com##body > center > div
 pomponik.pl###feed_grupa.ad
-pomponik.pl##.article-body__ad-gora-srodek
 pomponik.pl##.box.ad
 pomponik.pl##body .ad-container:not(#style_important)
 pomponik.pl##body .ad-rectangle:not(#style_important)
@@ -64861,6 +64867,7 @@ yugen.to,hitbits.io##iframe[src^="//ad.a-ads.com/"]
 yugioh.com###sidebar > .ad-01
 yule.iqiyi.com##div[style="width:180px;padding:25px 0 20px 20px;float:right;margin-right: 30px;"]
 yule.iqiyi.com##div[style="width:970px;margin:0 auto;padding:10px 0;text-align:center;"]
+yumeost.net,demooh.com###ruby-site + div[id][class*=" "]
 yummly.com##.external-promo-root
 yun.cn##div[class*="ad-block"]
 yunakhaber.com###safirPage + div[id][class*=" "]
