@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-10 19:09:16（北京时间）
+! Version: 2025-06-10 20:20:38（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65565
+! Total count: 65537
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4823,7 +4823,6 @@
 @@||abolishstand.net/embed$stealth=referrer
 @@||aboluowang.com^$generichide
 @@||about.gitlab.cn^$important
-@@||about.gitlab.com^
 @@||about.smartnews.com/ja/wp-content/assets/img/advertisers/ad_$~third-party
 @@||abre-videos.cdn1122.com^
 @@||abs-0.twimg.com^
@@ -4853,7 +4852,6 @@
 @@||account.adguard.*/api_acc/$stealth=3p-auth
 @@||account.adobe.com/newrelic.js$~third-party
 @@||account.adobe.com^$document,domain=services.adobe.com,stealth=useragent
-@@||account.agiso.com^
 @@||account.dianping.com^
 @@||account.leagueoflegends.com/pm.html$jsinject,elemhide
 @@||account.mail.ru^$stealth=useragent
@@ -6240,7 +6238,6 @@
 @@||assets.msn.com/staticsb/statics/latest/adboxes/$script,~third-party
 @@||assets.msn.com^
 @@||assets.oneweb.mercedes-benz.com^
-@@||assets.papegames.com^
 @@||assets.revcontent.com/master/delivery.js$domain=mp4upload.com
 @@||assets.sb-cd.com^
 @@||assets.strossle.com^*/strossle-widget-sdk.js$script,domain=kaaoszine.fi
@@ -8494,7 +8491,6 @@
 @@||dockerstatic.com^
 @@||docodoco.jp^*/docodoco?key=$script,domain=jrtours.co.jp
 @@||docrdsfx76ssb.cloudfront.net^
-@@||docs.doudou.fun^
 @@||docs.expo.io/*/static/*/pages/versions/latest/sdk/*.js$domain=docs.expo.io
 @@||docs.google.com/*/viewdata$~third-party
 @@||docs.google.com^$generichide
@@ -9523,7 +9519,6 @@
 @@||g.adspeed.net/ad.php?do=detectadblocker$domain=btcbunch.com
 @@||g.alicdn.com/$script,subdocument
 @@||g.alicdn.com/??*/criteo
-@@||g.alicdn.com^
 @@||g.alicdn.com^$important
 @@||g.alicdn.com^*/banner_ad_
 @@||g.csdnimg.cn/$script
@@ -9800,12 +9795,10 @@
 @@||github.com^
 @@||github.com^$generichide
 @@||github.io/videojs-ima/node_modules/video.$domain=setn.com
-@@||github.io^
 @@||github.io^$generichide
 @@||github.io^$generichide,badfilter
 @@||github.site^
 @@||github.store^
-@@||gitlab.cn^
 @@||gitlab.com/api/v4/projects/$~third-party
 @@||gitlab.com^
 @@||gitlab.com^$generichide
@@ -10844,7 +10837,6 @@
 @@||image.shutterstock.com^$image,domain=icons8.com
 @@||image.uc.cn^
 @@||image.uc.cn^$important
-@@||image.yijoys.com^
 @@||imagebam.com/gallery-organizer$document
 @@||imagecdn.clips4sale.com^
 @@||imagefap.com/jscripts/ad_loader.js
@@ -11261,7 +11253,6 @@
 @@||img.ads.tvb.com/news/min.js$domain=news.tvb.com
 @@||img.ads.tvb.com^
 @@||img.ak.impact-ad.jp/sr/js/nissan_test_$script,domain=www3.nissan.co.jp
-@@||img.alicdn.com^
 @@||img.alicdn.com^$important
 @@||img.blesk.cz/js/base-cz/advert.js
 @@||img.blesk.cz/static/data/blesk/reklama/advertisment.js
@@ -11627,7 +11618,6 @@
 @@||jiazhang.gm.163.com^
 @@||jiazhang.qq.com^
 @@||jiguang.coc.10086.cn^$important
-@@||jihulab.com^
 @@||jikipedia.com^
 @@||jimdo.com^
 @@||jin10.com^$generichide
@@ -13302,7 +13292,6 @@
 @@||n*-lf-webcast-cdn-tos-ncdn.bytegecko.com^
 @@||n.163.com^
 @@||n.sinaimg.cn^
-@@||n0va-static.mihoyo.com^
 @@||n0va.mihoyo.com^
 @@||n4mo.org/advert.js
 @@||n8s.jp^$script,domain=nikkei.com
@@ -14759,7 +14748,6 @@
 @@||pagead2.googlesyndication.com^$xmlhttprequest,domain=rekidai-info.github.io
 @@||pagerank.fr/js*/advert.js?$script
 @@||pages.c-ctrip.com^$important
-@@||pages.github.com^
 @@||pages.tmall.com^
 @@||paidtomoney.com^$generichide
 @@||pajaslocas.com^$generichide
@@ -14785,8 +14773,6 @@
 @@||papahd.live^$generichide
 @@||papalah.com^$generichide
 @@||papegames.qiyukf.com^
-@@||papegames.qiyukf.net^
-@@||paperpay.papegames.com^
 @@||paperzonevn.com^$generichide
 @@||papi-service.jd.com/ads/
 @@||papunika.com^$generichide
@@ -17039,7 +17025,6 @@
 @@||static-tapad.tapdb.net^
 @@||static-v*.trbo.com^|
 @@||static-web.last.fm/static/js-build/lib/ua-parser/ua-parser-*.min.js
-@@||static-web.mimikko.cn^
 @@||static.*.com/content/js/pubfig.*.js$domain=lightnovelpub.com|webnovelpub.com|lightnovelspot.com|lightnovelpub.vip
 @@||static.122.gov.cn^$important
 @@||static.1lan.tv^
@@ -17118,7 +17103,6 @@
 @@||static.foxnews.com^*/VisitorAPI.js$domain=foxbusiness.com|foxnews.com
 @@||static.gamecenter.qq.com^$important
 @@||static.gazetaprawna.pl/js/adverts.js
-@@||static.gitbook.com^
 @@||static.h-bid.com/prebid/*/prebid.js$domain=makeuseof.com
 @@||static.hdslb.com/ad-images/$image
 @@||static.hdslb.com^
@@ -18236,7 +18220,6 @@
 @@||type.jp/common/js/clicktag.js
 @@||typhoon.zjwater.gov.cn^$stealth=donottrack
 @@||typingtestnow.com^$generichide
-@@||u.10010.cn^
 @@||u.163.com^
 @@||u.oppomobile.com^
 @@||u1-000.ecukwai.com^$important
@@ -18880,7 +18863,6 @@
 @@||web.whatsapp.com^$stealth=webrtc
 @@||web1s.asia^$generichide
 @@||webapi.ctfile.com/getfile.php$stealth=referrer,domain=ct.999wan.wang
-@@||webapps.mimikko.cn^
 @@||webassistance.eu^$generichide
 @@||webassistanceita.com^$generichide
 @@||webaudioapi.com/samples/$stealth=webrtc
@@ -19113,7 +19095,6 @@
 @@||www.56.com^$important
 @@||www.9377.com^$important
 @@||www.9game.cn^
-@@||www.agiso.com^
 @@||www.ali213.net^
 @@||www.alidns.com^$important
 @@||www.anjuke.com^
@@ -19151,7 +19132,6 @@
 @@||www.dogpile.com^
 @@||www.dogpile.com^|
 @@||www.door2windows.com^$stealth=referrer
-@@||www.doudou.fun^
 @@||www.douyin.com^
 @@||www.dpfile.com^
 @@||www.dxmpay.com^$important
@@ -19165,9 +19145,7 @@
 @@||www.gamersky.com/gsinc/$subdocument
 @@||www.gdata.pl^$elemhide
 @@||www.ghproxy.cn^
-@@||www.gitbook.com^
 @@||www.goofish.com^
-@@||www.goofish.pro^
 @@||www.google-analytics.com^$important
 @@||www.google.*/adsense/$~third-party,domain=google.cn
 @@||www.google.*/search?$domain=google.ae|google.at|google.be|google.bg|google.by|google.ca|google.ch|google.cl|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.nz|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.br|google.com.co|google.com.ec|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.pe|google.com.ph|google.com.pk|google.com.py|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vn|google.cz|google.de|google.dk|google.dz|google.ee|google.es|google.fi|google.fr|google.gr|google.hr|google.hu|google.ie|google.it|google.lt|google.lv|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk
@@ -19190,7 +19168,6 @@
 @@||www.hisense.com^
 @@||www.hoyoverse.com^
 @@||www.ijinshan.com^
-@@||www.infoldgames.com^
 @@||www.infoq.com/scripts/ads.js
 @@||www.internetdownloadmanager.com^
 @@||www.ip138.com^
@@ -19222,7 +19199,6 @@
 @@||www.mhzd.net^
 @@||www.mi.com^
 @@||www.microsoft.com/onerfstatics/marketingsites-*/ad-$script
-@@||www.mimikko.cn^
 @@||www.mini1.cn^
 @@||www.mousouzoku-av.com^
 @@||www.msftconnecttest.com^
@@ -19233,7 +19209,6 @@
 @@||www.nfmovies.com/pic/tu/banner-03.jpg
 @@||www.nfmovies.com/pic/tu/banner03.jpg
 @@||www.nfmovies.com/static/side.jpg
-@@||www.nikkigames.cn^
 @@||www.nodeseek.com^
 @@||www.novelfm.com^
 @@||www.npmjs.com^
@@ -19242,8 +19217,6 @@
 @@||www.nzherald.co.nz^$stealth=useragent
 @@||www.oreans.com^
 @@||www.ouyaoxiazai.com/*/*.gif|$image
-@@||www.papegames.cn^
-@@||www.papegames.com^
 @@||www.patreon.com^
 @@||www.paypal.com^
 @@||www.paypalobjects.com^
@@ -19699,7 +19672,6 @@
 @@||zkres.myzaker.com^$important
 @@||zlavomat.sk/akcia^
 @@||zm.sm-tc.cn^$important
-@@||zmde.yijoys.com^
 @@||zmdownload.zoho.com/zm/imagedisplay$stealth=dpi
 @@||zmovs.com/js/pop.js
 @@||zmtt.net^$script,domain=luoqiuzw.com
