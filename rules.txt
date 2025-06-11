@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-12 03:08:16（北京时间）
+! Version: 2025-06-12 04:10:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65415
+! Total count: 65419
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1273,6 +1273,7 @@
 /links/popad$popup
 /links1.strava.com/*$image
 /lmaz-ads-bannesr/*$script
+/log_js_error$ping
 /mads.php$subdocument
 /mail-stat.airdroid.com/*$image
 /mail-tracking/*$image
@@ -36361,7 +36362,9 @@ helpinterview.com###bottom-columns
 helpnetsecurity.com##a[href^="https://helpnet.link/"] > img
 helpnetsecurity.com##aside[class][style] > div[id] > div[id][style] > a[target="_blank"]
 helpnetsecurity.com##aside[data-position]
+helpnetsecurity.com##aside[style="position:relative;display:block;box-sizing:border-box;margin:auto;padding:0;text-align:center;"]
 helpnetsecurity.com##div[class^="daninja-"]
+helpnetsecurity.com##div[style*="max-height: 250px; max-width: 300px;"]
 helpsetup.ru##.veramoy
 helpucover.co.uk###consent
 helpwithwindows.com###desc
@@ -44819,6 +44822,7 @@ mobimaniak.pl,gsmmaniak.pl##.rsidebar > div[style="margin:0 auto 10px auto; text
 mobimaniak.pl,gsmmaniak.pl##.rsidebar > div[style="margin:0 auto 20px auto; text-align:center;"]
 mobiquity.amsterdam##div[class*="CookieWarning"]
 mobrog.com##.mobrog-privacyM-first-container
+mobxvideos.com,pornogramxxx.com###bubble
 moby.it##.cookies
 mobygames.com##.buyGameLinkHolder
 mobygames.com##a[href^="https://atari.com/"] > img
