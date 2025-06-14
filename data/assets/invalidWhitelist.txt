@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14464
+! Total count: 14467
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-06-14 09:54:46（北京时间）
+! Version: 2025-06-14 20:44:16（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -10118,6 +10118,7 @@
 @@||cdn.betrad.com/pub/icon*.png$domain=ehow.co.uk
 @@||cdn.bewab.co/embed-$subdocument,stealth=referrer
 @@||cdn.bg/live/$stealth=referrer
+@@||cdn.bitmovin.com/analytics/web/*/bitmovinanalytics.min.js$script,domain=oe24.at
 @@||cdn.bluebillywig.com/apps/player/*/components/admanager.js$domain=eurogamer.net
 @@||cdn.blueconic.net/akc.js$domain=akc.org
 @@||cdn.blueconic.net/chronicle.js$domain=chronicle.com
@@ -21652,6 +21653,8 @@
 @@||youtube.com^$domain=gsmarena.com
 @@||youtube.googleapis.com/embed^$stealth=referrer
 @@||yoututosjeff.es^$generichide
+@@||youvisit.com/SmartScript/$script,domain=uaf.edu
+@@||youvisit.com/tour/$script,subdocument,domain=uaf.edu
 @@||ysokuhou.blog.jp^$generichide
 @@||ystream.gcdn.app/*/api/$stealth=referrer
 @@||yt.upshrink.com/adex.js
