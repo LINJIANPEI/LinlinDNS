@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-15 21:20:25（北京时间）
+! Version: 2025-06-15 22:08:44（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 20413
+! Total count: 20410
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -3500,7 +3500,6 @@
 @@|log-lf.snssdk.com^
 @@|log.snssdk.com^
 @@|log0-applog-lf.fqnovel.com^
-@@|log5-applog-lf.fqnovel.com^
 @@|login.360.cn^
 @@|login.aliexpress.com^$important
 @@|login.corsair.com^$important
@@ -10636,7 +10635,6 @@
 @@||file-upload.net/include/adserver.js$domain=file-upload.net
 @@||file-upload.net/include/werbebanner-ad.js
 @@||file.fm/f/$stealth=webrtc
-@@||file.market.xiaomi.com^$import
 @@||file.market.xiaomi.com^$importantcdn.ark.qq.com
 @@||file.myqcloud.com/*.mp4?token=$stealth=referrer
 @@||file.myqcloud.com^$stealth=referrer,image,domain=icezmz.com
@@ -14917,7 +14915,6 @@
 @@||nik-ser.at.ua/js/pagead2.ads.js$domain=remont-aud.net
 @@||nike.com/assets/measure/data-capture/analytics-client.min.js$script,~third-party
 @@||nike.com/checkout/analytics/js/analyticFunctions.js$domain=nike.com
-@@||nileapi.market.xiaomi.com^$import
 @@||ninja.io/js/dist/ads.js
 @@||ninja.onap.io/ninja-*.js$domain=olx.kz|olx.ua|olx.pl
 @@||nintendo.co.jp/ring/*/adv$~third-party
