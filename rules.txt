@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-19 04:12:59（北京时间）
+! Version: 2025-06-19 05:09:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65609
+! Total count: 65612
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -16878,6 +16878,7 @@
 @@||static*.nytimes.com/newsgraphics/*/_assets/graphics/$xmlhttprequest,elemhide,jsinject,extension
 @@||static-*.xvideos-cdn.com^
 @@||static-*.xvideos.com/*/js/
+@@||static-cdn.hotjar.com^$script,domain=mercadopublico.cl
 @@||static-cdn.spot.im/production/*/*.js$domain=bizpacreview.com
 @@||static-cdn.spot.im/production/ads/tags/*/ads/ads.css
 @@||static-cdn.spot.im/production/ads/tags/*/ads/ads.js$domain=cgmagonline.com
@@ -16977,6 +16978,7 @@
 @@||static.hdslb.com^
 @@||static.hentai.direct/$stealth=referrer,image
 @@||static.hentai.direct^$stealth=referrer
+@@||static.hotjar.com/c/hotjar-$script,domain=mercadopublico.cl
 @@||static.hotjar.com/c/hotjar-*.js$xmlhttprequest,domain=app.neilpatel.com
 @@||static.iask.cn^
 @@||static.iqiyi.com^
@@ -35484,6 +35486,7 @@ gsk.com,lufthansa.com,brusselsairlines.com,maxxim.de,drillisch-online.de,deutsch
 gsm55.com##div[class*="cookie-module"]
 gsmarena.com###subHeader2
 gsmarena.com###subHeader3
+gsmarena.com###subHeader3:has([href="deals.php3"])
 gsmarena.com###subHeader:has(> #topAdv)
 gsmarena.com###topAdv
 gsmarena.com##.module-arenaev
