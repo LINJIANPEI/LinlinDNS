@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-22 07:10:06（北京时间）
+! Version: 2025-06-22 08:56:57（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64756
+! Total count: 64758
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14467,6 +14467,7 @@
 @@||plantswith.com^$generichide
 @@||plantyn.com/optiext/optiextension.dll$~third-party
 @@||platform-eu.cloud.coveo.com^$stealth=3p-auth,domain=fiskars.com
+@@||platform.bombas.com/external/gtm.js$script,~third-party
 @@||platform.cloud.coveo.com^$stealth=3p-auth,domain=intel.*
 @@||platform.twitter.com/$domain=discovery.com
 @@||platform.twitter.com/js/moment~timeline~tweet.*.js$domain=gamerant.com
@@ -62070,6 +62071,7 @@ wionews.com##.ad_fixed
 wionews.com##.ads-box-300x300
 wionews.com##.ads-box-d90-m300
 wionews.com##body .posrelativebox
+wionews.com##div[class^="ads_adsBlock_"]
 wionews.com,hiphopza.com,gplinks.co,icutlink.com##p[style="text-align: center;"] > a[target="_blank"] > img
 wired.co.uk,wired.com##.ad-height-hold
 wired.com###veil
