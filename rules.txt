@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-23 19:10:11（北京时间）
+! Version: 2025-06-23 20:21:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64788
+! Total count: 64795
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4466,6 +4466,7 @@
 @@|ws://*$websocket,domain=flirt4free.com
 @@|www.daraz.pk^|
 @@|www3.doubleclick.net^|
+@@|wxpaylogo.qpic.cn^
 @@||*.a.yximgs.com^
 @@||*.alipay.com^
 @@||*.anjuke.com^
@@ -5946,6 +5947,7 @@
 @@||api.vidnode.net/stream.php?$subdocument,domain=vidcloud.icu
 @@||api.vip.miui.com^
 @@||api.vk.com/method/statEvents.$~third-party
+@@||api.weathercn.com^
 @@||api.youla.io^$stealth=referrer
 @@||api.zeeg.me/api/analytics/events/$~third-party
 @@||api.zhihu.com^
@@ -5960,6 +5962,7 @@
 @@||apiblogger.xyz/blogger/video-play.mp4$stealth=referrer
 @@||apim.canadiantire.ca^$stealth=referrer
 @@||apim.prd.natlot.be^$stealth=3p-auth
+@@||apimobile.meituan.com^
 @@||apis.google.com/js/plusone.js$domain=pornhub.com
 @@||apis.google.com^
 @@||apis.google.com^$domain=openload.co|oload.tv|javno.me|imagebam.com|imagevenue.com|playvid.com|4horlover.com|linkshrink.net
@@ -6202,6 +6205,7 @@
 @@||audio-cdn.shuqireader.com^
 @@||audiobookcup.com^$generichide
 @@||audiomodern.com^$stealth=ip
+@@||audiopay.pcdn.xmcdn.com^
 @@||audiopaydl.pcdn.xmcdn.com^
 @@||audiostream.com^$elemhide
 @@||audiotag.info/images/banner
@@ -9978,6 +9982,7 @@
 @@||gtimg.com/adplugin/swf/MediaPlugin.swf$domain=qq.com
 @@||gtimg.com/libs/$domain=18xs.org
 @@||gtimg.com/qqcdn/*/beacon.min.js$script,domain=qq.com
+@@||gtimg.wechatpay.cn^
 @@||gtoys.blog.fc2.com^$generichide
 @@||guahao.cn/common/js/plugins/fingerprint.js
 @@||guancha.cn/ad/m_
@@ -18212,6 +18217,7 @@
 @@||wl.jd.com/wl.js
 @@||wl.jd.com^
 @@||wm.makeding.com^
+@@||wmapi-mt.meituan.com^
 @@||wmdportal.com/wp-content/uploads/2012/05/cars_banner.png
 @@||wmflabs.org^
 @@||wodenongtian.com^
@@ -18436,6 +18442,7 @@
 @@||wxapp.lvyadx.cn^
 @@||wxapp.tc.qq.com^
 @@||wxmini-api.uyouqu.com^
+@@||wxpay.qpic.cn^
 @@||wxsnsdy.wxs.qq.com^
 @@||wxsnsencsvp.wxs.qq.com^
 @@||wyhifdpatl.com^|$xmlhttprequest,domain=kbjfree.com
