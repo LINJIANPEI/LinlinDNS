@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-23 20:21:00（北京时间）
+! Version: 2025-06-23 21:28:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64795
+! Total count: 64812
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10803,7 +10803,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=typingtest.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
@@ -10878,6 +10877,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=skai.gr
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=southpark.*|southparkstudios.*
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=southpark.*|southparkstudios.*|southpark.de
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=timesnownews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vix.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=winknews.com
@@ -15752,6 +15752,7 @@
 @@||seehd.pl/wp-content/plugins/wp-adblock-dedect/js/dedect.js
 @@||seehd.pl^$generichide
 @@||seeitworks.com/advertisement.js
+@@||seelen.io/jquery.ad.js$domain=seelen.io
 @@||seg-cdn.pumpkin.care/analytics.js/$~third-party
 @@||seg-cdn.pumpkin.care/next-integrations/integrations/mixpanel/$domain=get.pumpkin.care
 @@||seguridad.compensar.com/lib/js/fingerprint2.js$~third-party
@@ -21153,6 +21154,7 @@ athlonsports.com##.is-fallback-player
 athlonsports.com##.m-fixedbottom-ad--container
 athlonsports.com##section[id^="phxoutbrain-"]
 athlonsports.com,bringmethenews.com,meidastouch.com,si.com##.is-exco-player
+athomedaily.com,atworkdaily.com##.ad-backing
 atlant.by##.confirm-panel
 atlantablackstar.com,finurah.com,theshadowleague.com##.raptive-ddm-header
 atlantatribune.com,barrettsportsmedia.com,footballleagueworld.co.uk,ioncinema.com,marijuanamoment.net,ripplecoinnews.com,srilankamirror.com,tribune.net.ph###mvp-leader-wrap
@@ -24381,6 +24383,7 @@ cambro.tv##.container > div[style]:has(> div#object_container)
 camcam.cc###menu-top
 camcam.cc##.menu-item-5880
 camcam.cc##.videos-list > article.sticky
+camclips.tv##a[href^="https://t.amyfc.link/"]
 camcom.it###fine
 camellia.plc.uk##.sitealert
 camerabay.tv##.popupad
@@ -30325,6 +30328,8 @@ eroprofile.com##div[style="width:300px height:300px;"]
 erothots.co##.bnr
 erothots.co##.work-sites
 erothots.co,zenporn.com##.bnrs
+erothots1.com##.magic-sites > a:not([href="https://t.me/+A8WVFYmWOONjYTY0"])
+erothots1.com##a[href="https://simpshub.com/"]
 erotic-beauties.com##.sidebar > .widget_text
 eroticasearch.net###grid > .column > div[style]:not([id])
 erotichdworld.com##.main > div[style*="margin-left"]
@@ -34253,6 +34258,8 @@ golinuxcloud.com##.golin-video-content
 golinuxcloud.com##div[id^="golin-"]
 golvprofilshop.se###cookie-consent-modal, .modal-backdrop
 gom.ge##a[href="http://topkinoebi.com/"]
+gomagic.org###fullscreen_ad
+gomagic.org###fullscreen_ad_wrap
 gome.com.cn###gome-aside-app
 gome.com.cn###gome-aside-app-code
 gome.com.cn###gome-phone
@@ -41659,6 +41666,7 @@ livemint.com##.rightAdNew
 livemint.com##.rightblockAd
 livemint.com##.storyPage_storyblockAd__r4wwE
 livemint.com##.taboolaHeight
+livemint.com##div[class^="adBlockerPopup_"]
 livemint.com##div[class^="adHeight"]
 livemint.com##div[class^="outbrainAd"]
 livemint.com##div[class^="storyPage_contentSec__"]:has(> div[class^="storyPage_storyblockAd"])
@@ -51162,7 +51170,6 @@ rakuten.com##div[data-productid]:has(div.productList_sponsoredAds_RUS)
 rakuten.tv##div[data-testid="progress-bar"] > div[data-testid^="progress-ads-"]
 rambox.app##footer ~ .fixed
 randomarchive.com##.desktop[style="text-align:center"]
-randomlists.com,gameinfo.io,ernesto.it,cdromance.com,linkjust.com,updatesmarugujarat.in,mexashare.com,links4u.me,linku.us,skips.link,freemcserver.net,onvasortir.com,fcportables.com,thewindowsclub.com,javadecompilers.com,trackitonline.ru,socks24.org,sslproxies24.top,uploadcloud.pro,bravofly.com,socketloop.com,fileoops.com,medicalnewstoday.com,hdwallpapers.in,short.am,adbull.me,gofobo.com,file-upload.com,up-4ever.com,majesy.com,magesy.eu,magesy.blog,informer.com,cmacapps.com,computerera.co.in,download.mokeedev.com,shink.in,livenewschat.eu,onlinemschool.com,download.pixelexperience.org##.adsbygoogle
 randomsatoshi.win##.RS-Header-banner-xlg
 randomwordgenerator.com###RWG_Bottom_Banner_Desktop_970px
 randomwordgenerator.com###RWG_Sidebar_Banner_Desktop_970px
@@ -51183,6 +51190,7 @@ rankia.com###cookies
 rankinglekarzy.pl###message, .message
 rankomat.pl##.rank-cookie-bar
 ranobes.net##.free-support
+ranobes.net##.free-support-top
 ranobes.net##div[id^="pf-"]
 ranobes.top##.free-support-top
 ranorex.com###rx-cookie-wrapper
@@ -52561,7 +52569,6 @@ save-editor.com##.set_wrapper
 save.ca##.ad-box
 save.ca##.leaderboardMainWrapper
 savefiles.com##div[id^="clickCatcher"]
-savefiles.com,rubyvidhub.com,streamruby.com##body > div[class][oncontextmenu][style="display: block;"]
 savefree.in,surattimes.com##.bn-content
 savemyexams.co.uk##.fuse-desktop-h-250
 savemyexams.co.uk##.fuse-h-90
@@ -57784,6 +57791,7 @@ thomasmaurer.ch##.sidebar > #custom_html-2
 thomasmaurer.ch##.sidebar > #custom_html-4
 thomasmaurer.ch##.sidebar > #custom_html-5
 thoracic.org###cookie-law
+thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,watchmyexgf.net,alphaporno.com##.sponsor
 thothub.vip##a[href*="dowtyler.com"]
 thotimg.xyz##a[href^="https://thotsimp.com/"]
 thotstars.com##.col-lg-4 > center > a[target="_blank"]
@@ -58499,6 +58507,14 @@ tor.link##.col-md-12:has(> a[target="_blank"] > .adbanner)
 toradex.com###toast, .toast
 toramemoblog.com##.lity-hide + div[id][class*=" "]
 torbay.gov.uk##.track
+torbobit.net##a[href*="/weboffer/"] > img
+torbobit.net##a[id^="__bgd_link"]
+torbobit.net##div[id^="wpdl_"] > a > img
+torbobit.net,trubobit.com###formula
+torbobit.net,trubobit.com###formula + p
+torbobit.net,trubobit.com###window-body > div.top-text
+torbobit.net,trubobit.com##a[href="/ybrowser/download"]
+torbobit.net,trubobit.com##a[href="/ybrowser/download"] + p
 torcedores.com###navve-cookie-block
 torebrings.se##.alert-info, .alert-warning, .alert-box
 torg-pc.ru##.marketing-popup
@@ -58637,6 +58653,7 @@ traconelectric.com##.cookie-row
 tractorbynet.com##a[href][target="_blank"] > img[class^="attachment-large"]
 trade.bisonapp.com###root > div:first-child
 trademe.co.nz##.tm-display-ad__wrapper
+trademe.co.nz##.tm-display-s-listing__cards-flex:has(tm-sponsored-listings-tag)
 trademe.co.nz##.tm-display-sponsored-listing__cards-flex
 trademe.co.nz##.tm-stripe__SL-card-container:has([class^="tm-sponsored-"])
 trademe.co.nz##tm-display-ad
@@ -58679,6 +58696,7 @@ trannylime.com##div.twocolumns > div.viewlist ~ div.aside
 trannytube.tv,icegaytube.tv##.b-secondary-column__banners
 trannyvideosx.com###ad-controls
 trannyvideosxxx.com###text-2
+trannyvip.com##.banner-ads
 trans.info##.font-normal:has(+ .hidden > a[href*="_banner_ad"][target="_blank"] > img)
 trans.info##a[href*="_banner_ad"][target="_blank"] > img
 trans.info##img[width="500"][height="180"]
@@ -62706,7 +62724,6 @@ www.wp.pl##.wp-placeholder
 www.wp.pl##a[href^="https://direct.money.pl/landing-page/callcenter/"]
 www.wp.pl##aside > div[data-st-area="Pogoda"] + div[class^="sc-"]:has(a[href^="https://koszykrd.wp.pl?product_url="])
 www.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div:last-child:empty)
-www.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"][alt]:first-child + div:last-child:empty)
 www.wpdaxue.com##:not(.post-thumbnail) > a[target="_blank"] > img
 www.xda-developers.com##.adzone-above-latest
 www.xhfz2.com##A[href^='https://www.xhfz2.com/ad.php']
