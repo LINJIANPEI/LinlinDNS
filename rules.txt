@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-23 15:13:23（北京时间）
+! Version: 2025-06-23 16:16:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64772
+! Total count: 64788
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1599,6 +1599,7 @@
 /wp-content/plugins/banner-manager/*$script
 /wp-content/plugins/dh-anti-adblocker/*$stylesheet
 /wp-content/plugins/fasterim-optin/*$~xmlhttprequest
+/wp-content/plugins/lnw-ad-blocker-detector/*$script
 /wp-content/plugins/m-wp-popup/*$script
 /wp-content/plugins/platinumpopup/*$script,stylesheet
 /wp-content/plugins/popad/*$script,stylesheet
@@ -4492,6 +4493,7 @@
 @@||*status$domain=youronlinechoices.com
 @@||/template/conch/asset/js/hlhtml.js$domain=www.lldm.net|1anime.me
 @@||000714.xyz^
+@@||0115765.com^$generichide
 @@||011st.com^$stealth=dpi
 @@||012.tw^$script,domain=apk.tw
 @@||060s.com/images_ad/*.png
@@ -4776,6 +4778,7 @@
 @@||a.realsrv.com/ads.js$domain=javcl.com
 @@||a.realsrv.com/video-slider.js$domain=daemon-hentai.com
 @@||a.realsrv.com/video-slider.js$domain=manga1000.com
+@@||a.realsrv.com^$domain=m.4khd.com
 @@||a.sellpoint.net^
 @@||a.sellpoint.net^|
 @@||a.spolecznosci.net/pet?s=Shinden$domain=shinden.pl
@@ -8547,6 +8550,7 @@
 @@||e.weather.com.cn^
 @@||e9china.net^$generichide
 @@||eafyfsuh.net^$domain=eafyfsuh.net
+@@||eapi.pcloud.com/getpublinkdownload$stealth=referrer
 @@||eapteka.ru/*/personal/$stealth=ip
 @@||ear-phone-review.com^$generichide
 @@||earn4files.com^$generichide
@@ -9211,6 +9215,7 @@
 @@||friday.tw/backend/uploadpic/adindex/
 @@||friendbuy.com^$domain=butcherbox.com
 @@||friends.ponta.jp/app/assets/images/$~third-party
+@@||friv.com/z/assets/scripts/$domain=friv.com
 @@||frkn64modding.com^$generichide
 @@||frodo.douban.com^
 @@||frontier.tiktokv.com^
@@ -10794,6 +10799,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.corriere.it
@@ -15214,6 +15220,7 @@
 @@||rizonesoft.com^$generichide
 @@||rltdxt.com/files/h5/app.js
 @@||rm.sina.com.cn/minisite/*/css/art_normal.css$domain=client.sina.cn
+@@||rmbooru.org/data/image/$domain=rmbooru.org
 @@||rmdan.tv^$generichide
 @@||rmdown.com/ads.js
 @@||rmfon.pl^$stealth
@@ -16711,6 +16718,7 @@
 @@||syndicatedsearch.goog^$domain=paint.net
 @@||syndicatedsearch.goog^$domain=wotaku.moe|syndicatedsearch.goog
 @@||syndication.exosrv.com/splash.php$domain=vqtube.com|taxi69.com
+@@||syndication.realsrv.com^$domain=m.4khd.com
 @@||synology-forum.de^$generichide
 @@||syri.net/uploads/syri.net/images/*/300x150_*.jpg
 @@||syriancivilwarmap.com^$generichide
@@ -18338,7 +18346,6 @@
 @@||www.ip138.com^
 @@||www.iqiyi.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jiaoyimao.com^
 @@||www.kanjiantu.com^
@@ -18745,6 +18752,7 @@
 @@||zegtrends.com^$domain=icutlink.com,stealth=referrer
 @@||zekozimo.blogspot.com^$generichide
 @@||zenfoneasus.com^$generichide
+@@||zeperfs.com^$generichide
 @@||zergnet.com^$script,domain=zergnet.com
 @@||zerohedge.com^$generichide
 @@||zeroupload.com/js/js/prebid-ads.js
@@ -42004,6 +42012,7 @@ luga.ch###cookiegdpr
 luisaviaroma.com##.privacy-box
 lukedreyer.com##div[style$="width: 125px;z-index:2000;"]
 lululemon.com###promoted-alert-bar
+luluvdoo.com,savefiles.com,rubyvidhub.com,streamruby.com##body > div[class][oncontextmenu][style="display: block;"]
 lulz.net##a[href="https://www.furfling.com/"]
 luminpdf.com###app > div[style=""]:nth-child(2)
 lunamum.de##.cookies
@@ -42110,6 +42119,7 @@ m.163.com##.floatMenu-backflow
 m.163.com##.floatMenu-logo
 m.163.com##footer > span
 m.40407.com##.bt_ad
+m.4khd.com$$script:contains(/redirect|makeRequest/)
 m.56.com##a[data-statkey="newad_banner"]
 m.acfun.cn##.flex-center.down-app-button
 m.acfun.cn##.header-ico
@@ -54979,6 +54989,7 @@ sport.ro##.desktop-branding
 sport.sky.it##.advContainer
 sport.tvp.pl##.banner-lotto-wrapper
 sport24.gr###agora-inread
+sport24.gr###read-more-widget
 sport24.gr###someplaceholder
 sport24.gr##div[id^="ros-300x250"]
 sport24.gr##html > body [id^="ros"]:not(#style_important)
@@ -62687,6 +62698,7 @@ www.wp.pl##.relative >.relative > .items-center[style]:has(> img[src^="https://v
 www.wp.pl##.wp-placeholder
 www.wp.pl##a[href^="https://direct.money.pl/landing-page/callcenter/"]
 www.wp.pl##aside > div[data-st-area="Pogoda"] + div[class^="sc-"]:has(a[href^="https://koszykrd.wp.pl?product_url="])
+www.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div:last-child:empty)
 www.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"][alt]:first-child + div:last-child:empty)
 www.wpdaxue.com##:not(.post-thumbnail) > a[target="_blank"] > img
 www.xda-developers.com##.adzone-above-latest
@@ -64282,6 +64294,10 @@ zeoob.com##div[style^="min-height:"].col-xs-12
 zeoob.com,nasdaq.com##div[class^="ads_"]
 zepass.com##.bloc-notifications
 zeperfs.com###alertemsg
+zeperfs.com##iframe[src^="iframe-tm.php?tag=16&page="]
+zeperfs.com##iframe[src^="iframe-tm.php?tag=28&page="]
+zeperfs.com$$script:contains($(".adsbygoogle").length)
+zeperfs.com,randomlists.com,gameinfo.io,ernesto.it,cdromance.com,linkjust.com,updatesmarugujarat.in,mexashare.com,links4u.me,linku.us,skips.link,freemcserver.net,onvasortir.com,fcportables.com,thewindowsclub.com,javadecompilers.com,trackitonline.ru,socks24.org,sslproxies24.top,uploadcloud.pro,bravofly.com,socketloop.com,fileoops.com,medicalnewstoday.com,hdwallpapers.in,short.am,adbull.me,gofobo.com,file-upload.com,up-4ever.com,majesy.com,magesy.eu,magesy.blog,informer.com,cmacapps.com,computerera.co.in,download.mokeedev.com,shink.in,livenewschat.eu,onlinemschool.com,download.pixelexperience.org##.adsbygoogle
 zepsute.pl###overlay_uv, #ov_panel
 zer.gr###emgcookie
 zeriun.cc##.ad
