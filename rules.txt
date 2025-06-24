@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-24 20:20:07（北京时间）
+! Version: 2025-06-24 21:27:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65483
+! Total count: 65531
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -634,6 +634,21 @@
 /.*\.vlion\.cn/
 /.*\.yfanads\.com/
 /.*\.zhangyuyidong\.cn/
+/.*ad-sign.*/
+/.*ad.wtzw.com.*/
+/.*adservice.*/
+/.*adsmind.*/
+/.*aligames.*/
+/.*bytedance.*/
+/.*bytegoofy.*/
+/.*byteorge.*/
+/.*ibytedapm.*/
+/.*mgsdk-sign.*/
+/.*pangolin.*/
+/.*pglstatp.*/
+/.*tsyouto.*/
+/.*umeng.*/
+/.*zijieapi.*/
 /139.45.197.24\d/$network
 /193.200.64.24:/
 /1xhtml?$script
@@ -659,6 +674,7 @@
 /?request_ab*&zoneid=*&rb=$all
 /?s=from_notification_service&u=$image
 /?scontext_r=*&nrb=$all
+/?siteId=*&performerName=*&subAffId=$all
 /?t=popunder&$all
 /?tag=*&clickid=*&subid=$popup
 /?tm=1&subid4=*&kw=$all
@@ -6021,6 +6037,7 @@
 @@||apis.wavve.com/fz/streaming$domain=wavve.com,stealth=ip
 @@||apischedule.ksyungslb.com^
 @@||apissl.ksapisrv.com^
+@@||apissl.ksapisrv.com^$app=com.kuaishou.nebula,important
 @@||apiwz.midukanshu.com^
 @@||apjr.needrom.com/advert*.js
 @@||apk-packaging.tapimg.com^
@@ -6864,6 +6881,7 @@
 @@||c1.skype.com^
 @@||cache.ip138.com^
 @@||cache.soso.com^$important
+@@||cache.umengcn.org^$app=com.paokeji.yiqu
 @@||cache.video.iqiyi.com^
 @@||cadsecs.com/*.js$domain=dropgalaxy.com
 @@||caf.fr^*/smarttag.js$script,~third-party
@@ -7245,7 +7263,6 @@
 @@||cdn.staticfile.org^
 @@||cdn.staticfile.org^$domain=00ksw.com|147xiaoshuo.com|91zww.com|biququ.info|bxwx.live|lzbao.net|shenzu.org|tianz.la
 @@||cdn.staticfile.org^$domain=20me.net|fbqg.cc|xianguke.net|tellgillian.com|m-ia.net|cleavagecoverup.com|83kss.cc|memduh.net|56xiaoshuo.net|yourbiquge.com|00ksw.com|147xiaoshuo.com|91zww.com|bxwx.live|lzbao.net
-@@||cdn.staticfile.org^$domain=fbqg.cc|xianguke.net|tellgillian.com|m-ia.net|cleavagecoverup.com|83kss.cc|memduh.net|56xiaoshuo.net|yourbiquge.com|00ksw.com|147xiaoshuo.com|91zww.com|bxwx.live|lzbao.net
 @@||cdn.staticfile.org^$domain=m-ia.net|cleavagecoverup.com|83kss.cc|memduh.net|56xiaoshuo.net|yourbiquge.com|00ksw.com|147xiaoshuo.com|91zww.com|bxwx.live|lzbao.net|tianz.la
 @@||cdn.staticfile.org^$important
 @@||cdn.staticfile.org^$script,domain=00ksw.com|147xiaoshuo.com|31xiaoshuo.org|49zw.com|biququ.info|tsxsw.net|ziyouge.com
@@ -10756,6 +10773,7 @@
 @@||image.quark.cn^
 @@||image.shutterstock.com^$image,domain=icons8.com
 @@||image.uc.cn^
+@@||image.uczzd.cn^$app=com.UCMobile
 @@||imagebam.com/gallery-organizer$document
 @@||imagecdn.clips4sale.com^
 @@||imagefap.com/jscripts/ad_loader.js
@@ -10777,6 +10795,7 @@
 @@||images1-focus-opensocial.googleusercontent.com^
 @@||images2.imgbox.com^
 @@||images4u.cc^$generichide
+@@||imapi5-oth-*.zijieapi.com^
 @@||imasdk.googleapis.com$domain=video.huffingtonpost.it
 @@||imasdk.googleapis.com/js/$domain=cari.com.my
 @@||imasdk.googleapis.com/js/core/bridge*.html$domain=~spotify.com
@@ -11247,6 +11266,7 @@
 @@||imgdrive.net/anex/alt2.js
 @@||imgs-2.2xstorage.com$image,stealth=referrer
 @@||imgs-2.virus2hub.com^$image,stealth=referrer
+@@||imgsa.baidu.com
 @@||imgservices-1252317822.image.myqcloud.com^
 @@||imgslib.link^$image,xmlhttprequest,stealth=referrer
 @@||imgsrc.baidu.com^
@@ -13047,8 +13067,11 @@
 @@||msn.wrating.com/a1.js
 @@||msn.yidianzixun.com^
 @@||mss0.bdstatic.com^
+@@||mssdk.zijieapi.com^$app=com.dragon.read
+@@||mssdk3-normal-*.zijieapi.com^
 @@||mssdk3-normal-hj.zijieapi.com^
 @@||mssdk3-normal-lf.zijieapi.com^
+@@||mssdk5-normal-hl.zijieapi.com^
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=play.tv3.lt
 @@||mssl.fwmrm.net/*/MTG_Brightcove_HTML5/AdManager.js$domain=tv3sport.dk
 @@||mssl.fwmrm.net/crossdomain.xml$domain=msn.com
@@ -13761,6 +13784,7 @@
 @@||p3-webcast-sign.douyinpic.com^
 @@||p3-webcast.douyinpic.com^
 @@||p3.dcarimg.com^
+@@||p3.douyinpic.com/obj/joker^$app=com.dragon.read
 @@||p3.douyinpic.com^
 @@||p3.ssl.qhimg.com^
 @@||p30download.ir^$stealth=dpi
@@ -15201,6 +15225,7 @@
 @@||pss.bdstatic.com^
 @@||psstatic.cdn.bcebos.com^
 @@||pstatic.net^$image,stealth=referrer
+@@||pstatp.com^$app=com.viva.note
 @@||pt.afl.rakuten.co.jp^
 @@||pt.afl.rakuten.co.jp^|
 @@||pt.clickdata.37wan.com^$important
@@ -15657,6 +15682,7 @@
 @@||rltdxt.com/files/h5/app.js
 @@||rm.sina.com.cn/minisite/*/css/art_normal.css$domain=client.sina.cn
 @@||rmbooru.org/data/image/$domain=rmbooru.org
+@@||rmc.bytedance.com^$app=com.ss.android.ugc.aweme
 @@||rmdan.tv^$generichide
 @@||rmdown.com/ads.js
 @@||rmfon.pl^$stealth
@@ -15962,6 +15988,7 @@
 @@||search.kuwo.cn^
 @@||search.sogoucdn.com^
 @@||search.spotxchange.com/vmap/*&content_page_url=www.bsfuji.tv$xmlhttprequest,domain=imasdk.googleapis.com
+@@||search.umengcn.org^$app=com.paokeji.yiqu
 @@||searchtap.net^$stealth=3p-auth,domain=designerframesoutlet.com
 @@||seattletimes.com/wp-content/plugins/st-privacy-detection/js/src/ads/ad-test.js
 @@||sec-cdn.static.xiaomi.net^
@@ -17335,6 +17362,7 @@
 @@||taskofdeity.netlify.app^
 @@||tatuajestatu.com^$generichide
 @@||tawk.to^$stealth=referrer
+@@||tb.himg.baidu.com
 @@||tb.himg.baidu.com^
 @@||tb.mgtv.com/sdk/*/ad-sdk.js$script
 @@||tb.mgtv.com/sdk/*/ad-sdk.js^$script
@@ -17591,6 +17619,9 @@
 @@||tickle.porn/player/html.php?aid=pre_roll$subdocument,domain=tickle.porn
 @@||ticonsiglio.com/wp-content/*/plugins/ad-ace/includes/adblock-detector/advertisement-*.js
 @@||tidal.com^$generichide
+@@||tieba.baidu.com
+@@||tiebac.baidu.com
+@@||tiebapic.baidu.com
 @@||tienganhedu.com^$generichide
 @@||tiengnhatpro.net^$generichide
 @@||tii.la^$generichide
@@ -17651,6 +17682,7 @@
 @@||tms.oracle.com/main/prod/utag.sync.js$~third-party
 @@||tn.txxx.tube^
 @@||tn.voyeurhit.com^$domain=voyeurhit.tube
+@@||tnc11-aliec2.zijieapi.com^$app=com.dragon.read
 @@||tnc11-bjlgy.zijieapi.com^
 @@||tnc16-platform-useast1a.tiktokv.com^
 @@||tnc3-aliec2.snssdk.com^
@@ -18341,6 +18373,7 @@
 @@||verdirectotv.com^$generichide
 @@||vergol.com/adblock.js
 @@||vergol.com/player/ads.js
+@@||verify-hj.zijieapi.com^$app=com.ss.android.ugc.aweme
 @@||verify.cmpassport.com^
 @@||verify.snssdk.com^
 @@||verify.snssdk.com^$important
@@ -19085,6 +19118,7 @@
 @@||wwwstream.pro^$subdocument,stealth=referrer
 @@||wx.17u.cn^
 @@||wx.qlogo.cn^
+@@||wx.qlogo.cn^$app=com.tencent.mm
 @@||wx.qlogo.cn^$important
 @@||wx.qq.com/*/ad_$script
 @@||wx.qq.com/c/=/mpres/*/video_ad_
@@ -25058,6 +25092,7 @@ camgirlbay.net##.list-videos > .margin-fix > .place
 camgirlbay.net,camwhores.adult##body > .top[style="text-align:center;font-size:16px;"]:not([id])
 camgirls.casa##a[href^="/click.php?"]
 camh.ca##.alert-container
+camhub.tv##.player-holder a.paly-trigger
 caminspector.net##.block-video > .table .spot
 caminspector.net##.box > .list-videos > .margin-fix[id^="list_videos_"] > noindex > div.place
 caminspector.net##.box > .list-videos.list-live-models
@@ -25072,14 +25107,21 @@ camping-app.info###cokmodal, .modal-backdrop
 camping-les-loges.com###MenuCnil
 campingandcaravanningclub.co.uk###ml_banner
 campisiconserve.it##body > span
+camporn.is###overlayMod
+camporn.is###sliderBox
 camporn.to,camseek.tv,camstreams.tv,eurogirlsescort.com,hdtube.porn,sexu.com##.banners
 camporn.to,camseek.tv,camstreams.tv,eurogirlsescort.com,sexu.com##.banners
 campusonline.com##.ui-pnotify
 camseek.tv##.navigation > ul.primary > li > a:not([href^="http://camseek.tv/"])
 camslib.com##a[href^="https://k.adddm.in/"]
+camsmut.com##.info + div[class] > div.row:has(> div[class] > a[href][target="_blank"])
 camsmut.com##.navbar a[target="_blank"]
+camsmut.com##.navigation a[target="_blank"]
 camsmut.com##.related > div[class^="row"]:not([class="row"])
 camsmut.com##.rightpanel > .cnt > div[class]:not(.row,.clear)
+camsmut.com##.rightpanel div.cnt > a[href][target="_blank"]
+camsmut.com##.rightpanel div.cnt > div[class]:not(.row,.clear)
+camsmut.com##a[href^="/go/"]
 camsoda.com##div[class*="adHolder"]
 camsoda.com##div[class^="AdsRight-"]
 camstreams.tv##body #sliderBox
@@ -29042,6 +29084,7 @@ discountbabyequip.co.uk##.notify
 discounto.de##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd-alert-dismissible
 discountoffice.nl##.navbar-fixed-bottom
 discoup.com##.ch2
+discover-sharm.com##.js-antiadblocker
 discoverbooks.com###privacy_div
 discoverychannel.it##body > div:not([id]):not([class])
 discoveryfrance.fr##.elementor-popup-modal
@@ -37621,6 +37664,7 @@ icrypto.media##div[data-rtadcontent]
 ictnews.vn###page-wraper > .hidden-lg[style^="width:300px; height:250px;"]
 ictnews.vn##.header-banner
 ictvietnam.vn##.c-banner-ovelay
+icu##.banner-layout-box
 iculture.nl##.ad-container
 icutit.ca##.banner-captcha > .banner-inner > #headlineatas
 icutlink.com##.col-md-10 > div[style="text-align: center;"] > .row > .col-md-12 > form#link-view > .form-group ~ br
@@ -47994,6 +48038,7 @@ oncam.me##a[href^="https://pornwhitelist.com/"]
 oncam.me##a[href^="https://publishers.clickadilla.com/signup"]
 oncam.me##a[href^="https://torguard.net/aff.php"]
 oncam.me##a[href^="https://www.clickadu.com/?rfd="]
+oncams.tv,camporn.is,xxxn.club,camseek.tv,pornflix.to,theporngod.com,eurogirlsescort.com,xxxdl.net,manofmany.com,hotstunners.com,punishbang.com,hdtube.porn,pornburst.xxx,worldofmods.com,wantedbabes.com,wonderopolis.org,thehackernews.com,xxxadultphoto.com,teenfuckhd.com,mumbrella.com.au##.banners
 ondarock.it###bottom-banner
 ondemandkorea.com###gnbAds
 ondemandkorea.com###program-list .ThumbnailLink ~ div[style^="grid-column:"]
@@ -50942,7 +50987,6 @@ productreview.com.au##div[class*="-ad__"]
 productreview.com.au##div[data-can-overlap="true"][style^="position:"]
 productreview.com.au##div[data-sticky-ad-container]
 productreview.com.au##div[style="line-height:0"]
-productreview.com.au,videohelp.com,techinferno.com,boyfriendtv.com##a[rel="sponsored"]
 productz.com##.productz-ad-container
 proelectronic.rs##.cookies-holder
 proewildfire.cn##.comiis_nav ~ a
@@ -53792,6 +53836,9 @@ sex8.cc##.gd-list
 sex8.cc##.j-oscar
 sex8.cc##a[onclick^="window.open('/dasp.php?"]
 sexapi.xyz###banner
+sexbjcam.com###custom_html-6
+sexbjcam.com##.menu-item > a:not([href^="https://sexbjcam.com"])
+sexbjcam.com##iframe[data-link^="https://r.trackwilltrk.com/"]
 sexbot.com##div[style="width:300px;height:20px;text-align:center;padding-top:30px;"]
 sexbot.com##div[style^="width:300px;height:350px;"]
 sexcord.com##.spots-box
@@ -63929,6 +63976,7 @@ xronos.gr##.header-banner-adzone
 xs.cz##.cookie
 xscode.com##xsc-cookies-consent
 xsexvideos.pro,mature-tube.sexy,pornpipi.com###myads
+xshemale.tv##.player-holder + div.aside
 xsplit.com##.Toastify
 xt500parts.com##.amgdprcookie-modal-container
 xtapes.to##a[href="https://streamwish.com/"] > img
