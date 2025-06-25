@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-25 15:12:35（北京时间）
+! Version: 2025-06-25 16:15:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65539
+! Total count: 65548
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5913,6 +5913,7 @@
 @@||api.hostemb.ws^$stealth=referrer
 @@||api.huangye.miui.com^
 @@||api.imgur.com^$stealth=referrer
+@@||api.individual.githubcopilot.com^$stealth=3p-auth
 @@||api.infowarsmedia.com/videojs-event-tracking/dist/videojs-event-tracking.js
 @@||api.io.mi.com^
 @@||api.ipinfodb.com^$xmlhttprequest,domain=management30.com
@@ -21106,6 +21107,7 @@ anime-sugoi.com###bt-ads
 anime-sugoi.com##.center_lnwphp + center > br
 anime-sugoi.com##a[rel="nofollow"] > img[src*="bp.blogspot.com"]
 anime-sugoi.com##center > a[rel="nofollow"]~br
+anime3rb.com##div[x-data*="count"]
 anime47.com##.ad-container
 anime4i.com,anime4i.vip##.a--d-wrapper
 anime4i.com,anime4i.vip##div[class^="container-ads-"]
@@ -25309,6 +25311,7 @@ carscz.eu###cookiesI
 carsdirect.com##.adFooterWrapper
 carsguide.com.au##.ad.m-rec
 carsguide.com.au##.glance-leaderboard-container
+carsguide.com.au,coinranking.com,tutorialrepublic.com,adz7short.space,short.croclix.me,milesplit.com,adz7short.space,forum.xda-developers.com,countle.com,picmix.com,pornsfw.com##.leaderboard
 carsguide.com.au,lightnovelworld.com,coinranking.com,tutorialrepublic.com,adz7short.space,short.croclix.me,milesplit.com,adz7short.space,forum.xda-developers.com,countle.com,picmix.com,pornsfw.com##.leaderboard
 carsized.com###FreeStarVideoAdContainer
 carsized.com##.pl_header_ad
@@ -39890,6 +39893,7 @@ jelonka.com##.prywatnosc
 jelszo.co##.cookie-back
 jemogfix.dk###cookie
 jenksgroup.co.uk##body > div[class^="cookie"], #mySidenav
+jerkwell.com##.content > .top > a[target="_blank"] > img
 jeshoots.com##a[target="_blank"] > img[src^="https://jeshoots.com/wp-content/uploads/"][src$="/banner1.jpg"]
 jesse.trade###app > section > div > .fixed, #app > section > .fixed
 jestful.net###list-imga > center
@@ -42112,6 +42116,8 @@ lightnovelpub.fan,lightnovelpub.vip,lightnovelpub.com,lightnovelspot.com,webnove
 lightnovelpub.fan,lightnovelpub.vip,lightnovelpub.com,lightnovelspot.com,webnovelpub.com##.comment-list > div[class]:has(> .adsbygoogle)
 lightnovelpub.fan,lightnovelpub.vip,lightnovelpub.com,lightnovelspot.com,webnovelpub.com##.container > div[class]:has(> *:is([data-stpd], [id^="gpt_slot_"]))
 lightnovelpub.fan,lightnovelpub.vip,lightnovelpub.com,lightnovelspot.com,webnovelpub.com##.container > div[class]:has(> .adsbygoogle)
+lightnovelspot.com,webnovelpub.com##.lnadcontainer
+lightnovelspot.com,webnovelpub.com,lightnovelpub.com##.leaderboard-large
 lightnovelworld.co##div[data-mobid]
 lightnovelworld.co,lightnovelpub.fan,lightnovelpub.com##div[class]:has(> div[id^="pf-"]:only-child)
 lightnovelworld.com##body div[id^="vn-slot-"]
@@ -48263,6 +48269,7 @@ op.gg##.min-h-\[50px\]
 op.gg##.min-h-\[66px\]
 op.gg##.mode-header-container ~ div[class^="css-"] > div[class^="css-"]:has(> div > div.vm-placement)
 op.gg##.w-full > section.bg-gray-0.md\:overflow-hidden.md\:rounded.flex-col.p-2.w-full
+op.gg##.w-full:has(> div.flex > div[data-ad])
 op.gg##.z-ads
 op.gg##div:has(> div[data-ad])
 op.gg##div[class*="eylegve"]
@@ -61485,8 +61492,10 @@ vizzed.com##.header > .headerBanner
 vjav.com##.rek__link
 vjav.com##.vda-container
 vjav.com##.video-page__content > div.left + div:has(> div > div[id^="ntv_"])
+vjav.com##.video-videos-slider:has(.item-adlabel)
 vjav.com##[style="width: 728px; height: 90px;"]
 vjav.com##div[class^="content"] > .container + div[class]
+vjav.com,fuxxx.com,hdzog.tube,hdzog.com,hotmovs.com,privatehomeclips.com##.partners-wrap
 vjav.me##.right > div.content
 vjav.tube,privatehomeclips.com##.jwplayer > div.afs_ads + span[class]
 vjmedia.com.hk###ad900
