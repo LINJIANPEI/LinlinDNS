@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-25 07:10:26（北京时间）
+! Version: 2025-06-25 08:52:53（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65535
+! Total count: 65552
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6965,6 +6965,7 @@
 @@||cazzette.com^$generichide
 @@||cb.baidu.com/crossdomain.xml$domain=v.baidu.com
 @@||cb.baidu.com/ecom?*.baomihua.$domain=v.baidu.com
+@@||cb.cdnid.win^$stealth=referrer,domain=nontonx.com
 @@||cbg.163.com^
 @@||cbjs.baidu.com/js/m.js$domain=fxpan.com|iyingdi.com|pic.tiexue.net
 @@||cbjs.baidu.com/js/m.js$domain=fxpan.com|iyingdi.com|pic.tiexue.net|www.pctowap.com
@@ -17665,6 +17666,7 @@
 @@||titlestorage.xboxlive.com/json/*/data/Ads/$app=Solitaire.exe
 @@||titulky.com/ads/*.js$domain=titulky.com
 @@||titulky.com/ads/titulky-ads-banner.js$domain=titulky.com
+@@||titulky.com/exitpop.js
 @@||tj.gov.cn^
 @@||tkec.com.tw/api/ad/
 @@||tkqlhce.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
@@ -18534,6 +18536,7 @@
 @@||vkprime.com/embed-*.html$stealth=referrer
 @@||vle.aston.ac.uk/branding/themes/
 @@||vlist.se/advertisement.js
+@@||vlm-ads.aimatch.com/vlm/jserver/$domain=titulky.com
 @@||vlscppe.microsoft.com/fp/tags.js$stealth=referrer
 @@||vlscppe.microsoft.com^
 @@||vm.gtimg.cn^
@@ -24100,6 +24103,8 @@ bnonews.com##.bnone-widget
 bnonews.com##div[id^="div-gpt-ad"]
 bnpparibas.com##cts-disclaimer-cookies
 bo3.gg##.c-banner-custom
+bo3.gg##.c-banner-partner-branding
+bo3.gg##.c-banner-partner-header-button
 boardgamegeek.com###dfp-leaderboard-lg
 boardgamegeek.com###main_content .amazon_search_ad
 boardgamegeek.com##.global-body-ad
@@ -30834,6 +30839,7 @@ englishrussia.com##.code-block > .agoogle
 englishrussia.com##.post > .agoogle
 englishtools.org##.desktop-ad-header-footer
 englishtorrent.co##a[href="https://futaonfemale.com"]
+englismovies.pro,tmail.io,englishtorrent.co,4gay.fans,serialeonline.biz,bclikeqt.com,dailyporn.club,freefeds.com,teleriumtv.com,deportealdia.live,techgeek.digital,sharer.pw,za.gl,xozilla.com,analdin.com,fc.lc,mp4upload.com###overlay
 englismovies.pro,tmail.io,englishtorrent.co,4gay.fans,serialeonline.biz,bclikeqt.com,dailyporn.club,freefeds.com,teleriumtv.com,deportealdia.live,techgeek.digital,sharer.pw,za.gl,xozilla.com,analdin.com,sportsbay.org,fc.lc,mp4upload.com###overlay
 engvig.no###cookie
 eni.com##c-ecp-cookies-banner
@@ -40847,6 +40853,8 @@ kisscos.net###v-overlay
 kisscos.net##.video-sponsor
 kisscos.net##span[id$="related"] > div[id^="container-"]
 kisshentai.net,onworks.net##div[id^="ad"]
+kissjav.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.link-offer
+kissjav.com,hentai4k.com,viralxxxporn.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.asside-link
 kissjojo99.com###text-16
 kissjojo99.com##.g-adv
 kissjojo99.com##.single-top
@@ -46809,6 +46817,7 @@ news.pchome.com.tw##div[style="width:300px;height:450px"]
 news.pchome.com.tw##div[style="width:300px;height:600px"]
 news.pchome.com.tw##div[style="width:687px;height:145px"]
 news.pchome.com.tw##div[style="width:970px;height:250px"]
+news.qq.com###content-right div[class][style*='background-image: url("https://inews.gtimg.com/newsapp_bt/']:has(img[alt^="QQ"])
 news.qq.com###focus-bar
 news.qq.com##+js(set, SSPAd.prototype.loadAd, noopFunc)
 news.qq.com##.download-banner-wrap
@@ -48749,6 +48758,7 @@ pao.gr###section--sponsors
 paopaoche.net##.down_btn2.green
 paowen.net##.AD_D
 papahd.club##.entry button[onclick*="document.location"]:not([onclick*="http://papahd.club/"])
+papahd.club##button[onclick*="bitbillionaire.live"]
 papahd.club,papahd1.xyz##button[onclick*="bitbillionaire.live"]
 papahd1.xyz##.entry > p > button[onclick*="https://uvbyty.com/"]
 papahd1.xyz##.entry > pre
@@ -50740,6 +50750,7 @@ pott.de##.legacy
 poulpeo.com##.legal-banner
 poundshop.com###top-promo
 povaddict.com##a[title^="FREE "]
+povaddict.com,myxclip.com##.adv-square
 povxl.com##.video-holder > div:has([id^="ts_ad_native_"])
 power.baidu.com,www.baidu.com,zhidao.baidu.com##style[id*="s-m"] + div[id^="m"]
 power.baidu.com,zhidao.baidu.com##.wgt-clew[data-type="goods"]
@@ -57383,6 +57394,7 @@ teenfucking.org##.und-bns-wrap
 teenhost.net##.bottom-ban
 teenmushi.org##.su-box
 teenmushi.org##a[href^="http://keep2share.cc/code/"]
+teenporn.ws##.mask
 teenporn.ws##.pause-block
 teenporn.ws,sportsbay.org##.mask
 teenpornb.com###sidebar #text-6
@@ -58929,6 +58941,7 @@ titantv.com##td[style="vertical-align:top; position:relative; min-width:160px;"]
 titantv.com##tr.gridRow > td > [id] > div:first-child
 titantv.com##tr:has(> td[align="center"][valign="middle"][colspan="2"][class="gC"])
 titanwolf.org##.card-body[style^="min-height:"]
+titulky.com##a[href="/internetova-reklama/"]
 titulky.com##div[id^="bny"]
 tiv1.am##.banner
 tiv1.am##.footer_absolute_banner
@@ -60681,6 +60694,7 @@ uresmykker.dk##body > div:not([id]):not([class])
 urgayporn.com##.block-banvert
 urih.com##.ad193
 url.namaidani.com,coinsparty.com,passgen.icu##iframe#frame
+url.namaidani.com,passgen.icu##iframe#frame
 urlaubsgruss.com##.dscheck
 urlgalleries.net###ifrm
 urlgalleries.net##.gallerybody > center > table + center > table[width="100%"]
@@ -62036,6 +62050,7 @@ watchsomuch.to##.getVIPAds
 watchteencam.com##iframe[src^="http://watchteencam.com/images/"]
 watchthementalistonline.com###custom_html-7 #closeButton2
 watchtheofficeonline.net,watchhouseonline.net,watchsmallvilleonline.net,watchpsychonline.net,watchdoctorwhoonline.com,watcheverybodylovesraymond.com###contenedor > #keeper
+watchx.top##body > div[id] > div[style] > a[target="_blank"]
 watchx.top,chillx.top##body > div[id] > div[style] > a[target="_blank"]
 waterfall-d-mannose.com###cc-cont
 waterfordinyourpocket.com##.ntm_optin_popup
@@ -62301,6 +62316,8 @@ webtoolhub.com##.hdShade > div
 webtoolhub.com##.wth_zad_text
 webtools.fineaty.com##div[class*=" hidden-"]:has(.adsbygoogle)
 webtoon.xyz##.c-sidebar
+webtoonguide.com###recommend-swiper-group
+webtoonguide.com##div[id^="db-content"] .webtoonguide-pick-swiper-container
 webtor.io##DIV.ad
 webtor.io##IFRAME[scrolling='no']
 webtor.io##[data-element='empty']
