@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14416
+! Total count: 14418
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-06-25 10:00:23（北京时间）
+! Version: 2025-06-25 20:51:56（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -9087,6 +9087,7 @@
 @@||api.github.com^$stealth=3p-auth
 @@||api.hostemb.ws^$stealth=referrer
 @@||api.imgur.com^$stealth=referrer
+@@||api.individual.githubcopilot.com^$stealth=3p-auth
 @@||api.infowarsmedia.com/videojs-event-tracking/dist/videojs-event-tracking.js
 @@||api.ip.sb/geoip$domain=ip.skk.moe
 @@||api.ip.sb/geoip$domain=tauri.localhost
@@ -15318,7 +15319,6 @@
 @@||lightning.bleacherreport.com^*/launch-$~third-party
 @@||lightning.cnn.com^$script,domain=wfmz.com
 @@||lightningmaps.org/min/index.php?f=js/
-@@||lightnovelworld.com^$stealth=1p-cookie
 @@||lilymanga.net/wp-content/uploads/ad-inserter*/*/ads.js
 @@||limontec.com^$generichide
 @@||limontorrent.com^$generichide
@@ -18133,7 +18133,7 @@
 @@||pvtag.yahoo.co.jp^$script,domain=paypayfleamarket.yahoo.co.jp
 @@||pvtag.yahoo.co.jp^$script,domain=paypaymall.yahoo.co.jp
 @@||px-cdn.net/api/v2/collector/ocaptcha$xmlhttprequest
-@@||px.moatads.com/pixel.gif$domain=lightnovelpub.com|webnovelpub.com|lightnovelspot.com|lightnovelworld.com|lightnovelpub.vip
+@@||px.moatads.com/pixel.gif$domain=lightnovelpub.com|webnovelpub.com|lightnovelspot.com|lightnovelpub.vip
 @@||pythonmatplotlibtips.blogspot.com^$generichide
 @@||q-net.or.kr^$stealth=dpi
 @@||q32.ru/themes/default/reklama/advertising.js
@@ -18517,6 +18517,7 @@
 @@||s.visilabs.net/Target.js^$domain=boyner.com.tr
 @@||s.w.org/wp-content/$stylesheet,domain=wordpress.org
 @@||s.yimg.com/ja/ap/*/jquery.$domain=hk.news.yahoo.com|hk.yahoo.com|tw.news.yahoo.com|tw.stock.yahoo.com|tw.yahoo.com
+@@||s.yimg.com/ss/analytics3.js$domain=tw.news.yahoo.com
 @@||s.yimg.com/ss/rapid-*.js$domain=engadget.com
 @@||s.yimg.jp/images/listing/tool/cv/ytag.js$domain=redstoneonline.jp
 @@||s.yimg.jp/images/listing/tool/cv/ytag.js$domain=redstoneonline.jp|store-jp.nintendo.com
@@ -19773,6 +19774,7 @@
 @@||store.steampowered.com/events/ajaxgetbesteventsforuser?$stealth=3p-cookie
 @@||store.storeimages.cdn-apple.com^$domain=apple.com,stealth=referrer
 @@||store.storeimages.cdn-apple.com^*/appmeasurement.js$domain=apple.com
+@@||store.tildaapi.one/api/$stealth=referrer
 @@||stores.office.com/authredir
 @@||stores.office.com/myaccount/advancedinstalls.aspx
 @@||stpd.cloud/saas/$script,domain=dragontea.ink
