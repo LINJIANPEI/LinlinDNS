@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-26 08:52:13（北京时间）
+! Version: 2025-06-26 10:42:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65559
+! Total count: 65548
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10361,11 +10361,6 @@
 @@||hdslb.com/u_user/$~object,domain=bilibili.com
 @@||hdslb.com^$stealth=referrer,domain=bilibili.com
 @@||hdturk.club^$generichide
-@@||hdvid.tv/js/jquery.cookie.js
-@@||hdvid.tv/js/jquery.min.js
-@@||hdvid.tv/player*/jwplayer.html5.js
-@@||hdvid.tv/player*/jwplayer.js
-@@||hdvid.tv/player*/lightsout.js
 @@||hdwall.us/js/adsbygoogle.js
 @@||hdwatched.me/*/js/banger.js$domain=hdwatched.me
 @@||hdzog.ahcdn.com/key=$stealth=referrer
@@ -11899,7 +11894,6 @@
 @@||lags.win/ctf$websocket
 @@||laivanduc.com^$generichide
 @@||lamitadmas1.net^$generichide
-@@||lamoda.ru^$elemhide,jsinject,content,header=expires:0
 @@||lamoda.ru^$elemhide,jsinject,extension,content,header=Set-Cookie:/qrator_jsr=/
 @@||lamycosphere.com/cdn/shop/*/assets/pixel.gif$image,~third-party
 @@||lancdn.com/landian/public/js/ads.js
@@ -14029,7 +14023,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=faucetcrypto.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fc-lc.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fcportables.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fctvlive.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fetchpik.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ff14angler.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=filecr.com,important
@@ -17153,7 +17146,6 @@
 @@||strimov.site/embed$stealth=referrer
 @@||stripe.com^$domain=pay.openai.com
 @@||stripe.com^$xmlhttprequest,domain=app.axenthost.com
-@@||stripflix.cam^$generichide
 @@||strmrdr*/index.php?id=$stealth=referrer
 @@||studcat.infra.systems^
 @@||studioclassroom.com/ad/
@@ -18476,10 +18468,7 @@
 @@||vidlii.com^$generichide
 @@||vidload.lol/iframe/$stealth=referrer
 @@||vidload.net/popads.js
-@@||vidmoly.me/jws.php
-@@||vidmoly.net/jws.php
 @@||vidmoly.to/embed-$stealth=referrer|ip
-@@||vidmoly.to/jws.php
 @@||vidoser.org^$elemhide
 @@||vidoza.net/embed-*.html$subdocument
 @@||vidoza.net/js/pop.js
@@ -20295,7 +20284,6 @@ aii.life###index-left-bn
 aileen-novel.online##.c-sidebar
 aimazu.com###gotoTop
 aimazu.com##.fixediv
-aimhaven.com,comicsuniverse.it,macmagazine.com.br,ubunlog.com,thesportsgrail.com,downtownbellevue.com,androidsis.com,voiceofmotown.com,thethaiger.com,unseki.co.jp,wikibio.us,nexus-games.net,freecoursesite.com,formu1a.uno,toolsai.net,rightrasta.com,kaystls.site,gamertweak.com,mrinformatico.it,pianetacellulare.it,inwepo.co,updoc.site,oliveoiltimes.com,cgmagonline.com,happymag.tv,cpophome.com##.code-block
 aimtuto.com###ckWrap
 ain.capital##.big-ad-animation-box
 ainuody.com###sidebar > .widget:nth-child(-n+6)
@@ -21780,7 +21768,6 @@ asilmedia.org##a[href^="https://yourbonus.online/"]
 asix.com.tw###PrivacyNotes
 ask.com###ccbar, #cp-banner
 ask.com##.PartialKelkooResults
-ask4movie.net##div[id][class^="popup"][class$="wrap"][style^="opacity"]
 askabox.fr###id_div_bandeau
 askapache.com##.GAD
 askdifference.com##.alert-dismissible
@@ -49650,6 +49637,8 @@ pixelexperience.org###ezmobfooter
 pixelify.net##.content-ad-top
 pixelify.net##.under-download-button-ad-div
 pixelify.net##div[class^="google-ad-"]
+pixelmonmod.com###footer-banner-ad-all
+pixelmonmod.com##.panel-body:has(> #sideblock-body-ad)
 pixelmonmod.com##.panel-forum
 pixelpost.pl##.sidebar-inwrap > aside#text-3
 pixelpost.pl##.sidebar-inwrap > aside#text-4

@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14418
+! Total count: 14412
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-06-25 20:51:56（北京时间）
+! Version: 2025-06-26 09:59:22（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -13870,11 +13870,6 @@
 @@||hdslb.com/u_user/$~object,domain=bilibili.com
 @@||hdslb.com^$stealth=referrer,domain=bilibili.com
 @@||hdturk.club^$generichide
-@@||hdvid.tv/js/jquery.cookie.js
-@@||hdvid.tv/js/jquery.min.js
-@@||hdvid.tv/player*/jwplayer.html5.js
-@@||hdvid.tv/player*/jwplayer.js
-@@||hdvid.tv/player*/lightsout.js
 @@||hdwall.us/js/adsbygoogle.js
 @@||hdwatched.me/*/js/banger.js$domain=hdwatched.me
 @@||hdzog.ahcdn.com/key=$stealth=referrer
@@ -15210,7 +15205,7 @@
 @@||lager.com.tw/images/layer6_adbanner/
 @@||laivanduc.com^$generichide
 @@||lamitadmas1.net^$generichide
-@@||lamoda.ru^$elemhide,jsinject,content,header=expires:0
+@@||lamoda.ru^$elemhide,jsinject,extension,content,header=Set-Cookie:/qrator_jsr=/
 @@||lamycosphere.com/cdn/shop/*/assets/pixel.gif$image,~third-party
 @@||lancdn.com/landian/public/js/ads.js
 @@||landtop.com.tw/images/ad/
@@ -16915,7 +16910,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=faucetcrypto.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fc-lc.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fcportables.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fctvlive.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fetchpik.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ff14angler.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=filecr.com,important
@@ -17215,6 +17209,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=temp-mail.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=temp-phone-number.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tempatwisata.pro
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tempinbox.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=terabox.fun|hotmediahub.com|teralink.me|teraearn.com|terashare.me|fansonlinehub.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=texturecan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=theappstore.org
@@ -19808,7 +19803,6 @@
 @@||streanplay.cc^$stealth
 @@||strimov.site/embed$stealth=referrer
 @@||stripe.com^$xmlhttprequest,domain=app.axenthost.com
-@@||stripflix.cam^$generichide
 @@||strmrdr*/index.php?id=$stealth=referrer
 @@||studioclassroom.com/ad/
 @@||studizba.com^$generichide
@@ -20106,6 +20100,8 @@
 @@||telva.com^$generichide
 @@||temp-phone-number.com^$generichide
 @@||temperosdavovo.com/*/*.m3u8$stealth=referrer
+@@||tempinbox.xyz/storage/js/adex.js
+@@||tempinbox.xyz/storage/js/mnpw3.js
 @@||templates.marketo.net/template*/$script,stylesheet,domain=pages.addigy.com
 @@||tempmail.ninja^$generichide
 @@||tempmailpro.net^$generichide
@@ -20648,6 +20644,7 @@
 @@||typhoon.zjwater.gov.cn^$stealth=donottrack
 @@||typingtestnow.com^$generichide
 @@||uaprom.net/image/blank.gif?$image
+@@||ubisoft.com.first-party-js.datadome.co^$script,domain=connect.ubisoft.com
 @@||ubnem.com^$generichide
 @@||uceprotect.net^$stealth=flash
 @@||ucoz.net/cgi/uutils.fcg?$script,third-party
@@ -20953,10 +20950,7 @@
 @@||vidlii.com^$generichide
 @@||vidload.lol/iframe/$stealth=referrer
 @@||vidload.net/popads.js
-@@||vidmoly.me/jws.php
-@@||vidmoly.net/jws.php
 @@||vidmoly.to/embed-$stealth=referrer|ip
-@@||vidmoly.to/jws.php
 @@||vidoser.org^$elemhide
 @@||vidoza.net/embed-*.html$subdocument
 @@||vidoza.net/js/pop.js
