@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-27 15:11:30（北京时间）
+! Version: 2025-06-27 16:14:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65240
+! Total count: 65242
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6947,7 +6947,6 @@
 @@||catchapp.net/ad/img/$~third-party
 @@||catchmyjobs.com^$generichide
 @@||catchsms.com^$generichide
-@@||catchup.thisisdax.com^
 @@||catchup.thisisdax.com^|
 @@||cazzette.com^$generichide
 @@||cb.baidu.com/crossdomain.xml$domain=v.baidu.com
@@ -45005,6 +45004,7 @@ motorplus-online.com##.kcm__tower
 motorplus-online.com##.nkt__stick
 motorradonline.de##.mps-banner > span
 motorsport.com###ms_skins_top_box > div > img
+motorsport.com##.embed-item:not([data-embed-code*="motorsport.com"])
 motorsport.com##.ms-ap
 motorsport.com##.ms-ap-native
 motorsport.com##.ms-apb-dmpu
@@ -50023,6 +50023,7 @@ pornclassic.tube,tubepornclassic.com##.content > div > div.container + div
 pornclassic.tube,tubepornclassic.com##a[href^="http://www.theclassicporn.com/"]
 pornclassic.tube,tubepornclassic.com,xanimeporn.com,blackmod.net,multiup.eu,orbz.io##div[style="width: 300px; height: 250px;"]
 pornclipsxxx.com##div[align="right"][style="color:#333;text-align:center;"]
+porncomics.com,yande.re##iframe[width="300"][height="250"]
 porncomics.pics,freecomics.xxx##.xad
 porncomics.pics,freecomics.xxx##.xwdth > div[style*="width:"][style*="height:"][style*="margin:"]
 porncore.net##div[style="margin:10px auto;height:200px;width:800px;"]
@@ -59429,6 +59430,7 @@ tuandco.com##.jnotify-container
 tuasaude.com##.consent-bar-wrapper
 tuba.pl##.ban001_wrap
 tubacex.com##.containerBlack
+tubator.com###ivb_wrapper
 tubator.com###nva_block
 tubator.com##.ggg_container
 tubator.com##.recommend
