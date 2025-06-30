@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13869
+! Total count: 13874
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-06-30 10:05:25（北京时间）
+! Version: 2025-06-30 20:51:11（北京时间）
 ! Xiaomi
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
@@ -8941,6 +8941,7 @@
 @@||aosmark.com/ads.js
 @@||aphim.co^$generichide
 @@||api-*.cludo.com/api/$stealth=referrer
+@@||api-*.mappy.net^$stealth=referrer
 @@||api-*.netflix.com/win/uwa/$stealth=useragent
 @@||api-*.spot.im/v*/broadcasts/broadcasts/sp_$xmlhttprequest,domain=bizpacreview.com
 @@||api-*.spot.im/v*/config/launcher/sp_*/vendor,init,conversation$domain=bizpacreview.com
@@ -8953,7 +8954,6 @@
 @@||api-js.datadome.co/js/$domain=account.samsung.com
 @@||api-js.datadome.co/js/$domain=sso.garena.com
 @@||api-js.datadome.co/js/|$stealth=referrer,domain=auth.garena.com
-@@||api-map.mappy.net^$stealth=referrer
 @@||api-maps.yandex.$stealth=referrer
 @@||api-maps.yandex.ru/services/startup/$stealth=referrer
 @@||api-mg2.db-ip.com^$xmlhttprequest,domain=journal-news.com
@@ -14402,6 +14402,7 @@
 @@||img*.kangaroobro.com/images/$image,domain=leyuman.com
 @@||img*.kangaroobro.com/images/$stealth=referrer,image,domain=leyuman.com
 @@||img*.reimg.org/images/$stealth=referrer,domain=remanga.org
+@@||img-r1.2xstorage.com^$image,stealth=referrer
 @@||img.1fichier.com/css/
 @@||img.achost.top^$stealth=referrer,domain=galge.fun
 @@||img.ads.tvb.com/news/min.js$domain=news.tvb.com
@@ -16244,6 +16245,7 @@
 @@||omggamer.com/detroitchicago/dayton.js
 @@||omggamer.com/porpoiseant/banger.js
 @@||omglyrics.com^$generichide
+@@||omhm.qc.ca^$stealth=dpi
 @@||omns.americanexpress.com/b/ss/
 @@||oms.dowjoneson.com/b/ss/$image,domain=wsj.com
 @@||omtrdc.net/*/mbox/json$domain=apps.pnc.com
@@ -16546,7 +16548,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=crast.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=crazygames.com|shellshock.io|minijuegos.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutty.app
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|cuttyy.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|cuttyy.com|cuttty.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dailyrevs.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=darkwiki.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dausel.co
@@ -16801,6 +16803,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=reverse-dictionary.virock.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rimworldbase.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rjno1.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rjnovels.blogspot.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rockradio.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rollingstone.it
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rte.ie
@@ -17568,6 +17571,7 @@
 @@||poweredby.jads.co/js/jads.js$domain=javcl.com
 @@||poweredby.jads.co/js/jads2.js$domain=javcl.com
 @@||powerquality.eaton.com/include/js/elqScr.js$~third-party
+@@||powersports.honda.com/js/*/Popup2.js$~third-party
 @@||powv1deo.cc^$stealth=push
 @@||powvideo.net/$~third-party,popup
 @@||powvideo.net/new/css/fonts/font/custom-icons.$font
@@ -17607,7 +17611,7 @@
 @@||pro.hit.gemius.pl/gplayer.js$domain=nova.cz
 @@||pro.hit.gemius.pl/gstream.js$domain=embed.rtl.hu
 @@||pro.hit.gemius.pl/gstream.js$domain=ttv.pl
-@@||probableregret.com/*/*/*/$script,domain=kio.ac
+@@||probableregret.com/*/*/*/$script,xmlhttprequest,domain=kio.ac
 @@||prod.adobeccstatic.com/unav/*/AnalyticsProvider.*.bundle.js$domain=acrobat.adobe.com
 @@||prod.adspsp.com/adb.*.min.js$domain=healthline.com
 @@||prod.adspsp.com/adb.2418030m.min.js$domain=medicalnewstoday.com
@@ -20407,6 +20411,7 @@
 @@||video.onnetwork.tv/adblock_notify.js
 @@||video.onnetwork.tv/frame*.php$stealth=referrer,domain=radiozet.pl
 @@||video.onnetwork.tv/widget/$domain=natemat.pl
+@@||video.onnetwork.tv/widget/widget_shorts.php$domain=gazeta.pl
 @@||video.qq.com/getvinfo?*&otype=*&host=*&refer=htt$domain=v.qq.com
 @@||video.repubblica.it^$generichide
 @@||video.repubblica.it^*/nielsen.js
