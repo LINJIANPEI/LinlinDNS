@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-06-30 15:13:38（北京时间）
+! Version: 2025-06-30 16:16:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64591
+! Total count: 64607
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5765,6 +5765,7 @@
 @@||apd-vlive.apdcdn.tc.qq.com^
 @@||aphim.co^$generichide
 @@||api-*.cludo.com/api/$stealth=referrer
+@@||api-*.mappy.net^$stealth=referrer
 @@||api-*.netflix.com/win/uwa/$stealth=useragent
 @@||api-*.spot.im/v*/broadcasts/broadcasts/sp_$xmlhttprequest,domain=bizpacreview.com
 @@||api-*.spot.im/v*/config/launcher/sp_*/vendor,init,conversation$domain=bizpacreview.com
@@ -10979,6 +10980,7 @@
 @@||img-hw.xvideos-cdn.com^
 @@||img-l3.xnxx-cdn.com^
 @@||img-l3.xvideos-cdn.com^
+@@||img-r1.2xstorage.com^$image,stealth=referrer
 @@||img.1fichier.com/css/
 @@||img.360kuai.com^
 @@||img.achost.top^$stealth=referrer,domain=galge.fun
@@ -13658,6 +13660,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=crazygames.com|shellshock.io|minijuegos.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutty.app
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|cuttyy.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cutyion.com|jixo.online|cutnet.net|cety.app|emxaw.com|mrgec.com|ijvam.com|evernia.site|exe-urls.com|exnion.com|cutynow.com|cuttyy.com|cuttty.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dailyrevs.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=darkwiki.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dausel.co
@@ -14789,6 +14792,7 @@
 @@||pro.gooooal.com/ad/ad_2.js
 @@||pro.m.jd.com^
 @@||probableregret.com/*/*/*/$script,domain=kio.ac
+@@||probableregret.com/*/*/*/$script,xmlhttprequest,domain=kio.ac
 @@||prod-chat-kimi-tos.moonshot.cn^
 @@||prod.adspsp.com/adb.2418030m.min.js$domain=medicalnewstoday.com
 @@||prod.fennec.atp.fox/js/fennec.js$domain=freemcserver.net
@@ -17920,6 +17924,7 @@
 @@||video.onnetwork.tv/adblock_notify.js
 @@||video.onnetwork.tv/frame*.php$stealth=referrer,domain=radiozet.pl
 @@||video.onnetwork.tv/widget/$domain=natemat.pl
+@@||video.onnetwork.tv/widget/widget_shorts.php$domain=gazeta.pl
 @@||video.qq.com/fcgi-bin/
 @@||video.qq.com^*&refer=http$script
 @@||video.repubblica.it^$generichide
@@ -29280,6 +29285,7 @@ dukechronicle.com##.flytead
 dumetschool.com##.modal-promo-popup
 dummies.com##.ad-post > section.ads
 dummies.com##.footer-ads-slide
+dune.gaming.tools##div[id$="-160x600-container-main"]
 dunense.com##.elementor-popup-modal
 dungeondice.it###yn-gdpr
 duniaku.idntimes.com##amp-script[script="parallax-script"]
@@ -29473,6 +29479,7 @@ earnbitmoon.club,multiclaim.net,claimbits.net,coinadster.com###wcfloatDiv4
 earnhub.net##center ins
 earone.it##div[style^="width:968px;min-height:300px;background:url"]
 earth.com##.AdZone_adZone__2w4TC
+earth.com##a[href^="https://earthsnap.onelink.me/"][target="_blank"] > img
 earth.com##div[class^="AdZone"]
 earth.com##div[class^="PrebidAdSlot_"]
 earth.com##div[style="min-width:200px;min-height:250px"]
@@ -30434,6 +30441,7 @@ erotichdworld.com##.slideContent
 eroticmv.com##.ads-above-single-player
 eroticmv.com,xfantazy.com,analdin.com,xtits.com,sexu.com,javrave.club,mangamelon.com,vidoza.co,vintagetube.xxx,vidoza.org,xxxmom.pro##iframe[src^="//a.o333o.com/"]
 erotik.com##.swinger-consent
+erotikclub35.pw###aa-wp + div[id][class*=" "]
 eroxia.com,hypnotube.com##[class^="aff-"]
 errx01USAHTML/?bcda=$document
 erste-hilfe-fuer-kinder.de##.txBsdCookie
@@ -33361,6 +33369,7 @@ gamigo.net###stayhome
 gaming-age.com,freecoursesite.uk###ai_widget-7
 gaming-age.com,infotelematico.com,bestjoblive.com,geekermag.com###ai_widget-3
 gaming.co.ua,pingvin.pro##body > div[id][class][style*="z-index"][style*="9999"],body > div[id][class][style*="z-index"][style*="9999"] + div[class][style*="z-index"][style*="9999"]
+gaming.tools##div[class^="layout-side-"]:has(.rma)
 gamingbible.com##.css-1z9hhh
 gamingbible.com##div[class^="advert-"]
 gamingbible.com,ladbible.com,unilad.co.uk,unilad.com##div[class*="margin-Advert"]
@@ -40417,6 +40426,7 @@ koreatimes.co.kr##div[class^="homeLayoutWrapper"]:has(> div.wrap > div[class^="H
 koreatimes.co.kr##div[class^="homeLayoutWrapper_aside-contents-wrap"] > div[class^="homeLayoutWrapper_aside-contents"] > div:has(> div[id^="div-gpt-ad"])
 koreatimes.co.kr##div[class^="wrap DetailTabool"]
 koreatimes.co.kr##iframe[id^="nad_"]
+korektortekstu.pl##.container > .row> .col-md-12[style]:has(> .adsbygoogle)
 korisnaknjiga.com###kukiji
 korsrt.eu.org##.cutemag-scroll-top + div[id][class*=" "]
 kortingscouponcodes.nl##.spu-box
@@ -43848,6 +43858,7 @@ miniwebtool.com###videoad
 miniwebtool.com##.normalvideo
 miniwebtool.com##div[id$="banner"]
 miniwebtool.com##div[id^="div_"][align="center"]
+miniwebtool.com,airhint.com,pokemon-project.com,reneweconomy.com.au,tenforums.com##div[data-fuse]
 minmyndighetspost.se##.alertWrap
 minnemi.no##.popup-overlay
 minnpost.com###block-21
@@ -51794,6 +51805,8 @@ ritdye.com##.footer ~ div[class*="peach-300"]
 riteintherain.com###screen-overlay-white
 ritzau.dk##.footer__notification
 rivals.com##.Ads_adContainer__l_sg0
+rivianforums.com,macheforum.com##.samCodeUnit > .samItem:has(> .customizedBox > div[data-aa-adunit])
+rivianforums.com,redgifs.com##.bannerWrapper
 riwayat-word.com,tsubasatr.org,samuraiscan.cookni.net,galinhasamurai.com,twobluescans.com,swordalada.org,navernovel.com,marcialhub.xyz,infamous-scans.com,ragnarokscanlation.net,yuramanga.my.id,nocfsb.com,scansatlanticos.com,bokugents.com,lscomic.com,samuraiscan.org,nartag.com,mhscans.com,noblessetranslations.com,diamondfansub.com,atlantisscan.com,tecnoscann.com,mantrazscan.com##body > .wrap + div[id][class*=" "]
 rizonesoft.com##.rizon-before-posts
 rjfcw.cn##li[style*="1200px"]
@@ -57269,6 +57282,7 @@ thenewslens.com##div[class^="help-tnl-container-"]
 thenewsminute.com##div[class*="_ads_block"]
 thenewspaper.gr##.header-promo
 thenewspaper.gr##div[id*="thene-"]
+thenewstack.io##.tns-sponsor-note
 thenewstack.io##.tns-sponsors-rss
 thenextcloset.com##div[data-react-class*="CookieConsentBanner"]
 thenextweb.com##.ad-unit--center
@@ -60379,6 +60393,7 @@ view.inews.qq.com##div[class^="slider-top-bar_newSliderWrapper"]
 view.inews.qq.com##div[class^="slider-top-bar_sliderWrapper"]
 viewsonic.com##.alert-dismissible
 viewsoniceurope.com##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd-alert-dismissible
+viewweather.com###wwm_ads
 vifa-recht.de###tracking-info
 vigilantcitizen.com##.vigil-leaderboard-article
 vigilantcitizen.com##.vigil-leaderboard-home
@@ -64391,6 +64406,7 @@ zlotowskie.pl##.grid__ad
 zlotowskie.pl##.news > div[style^="min-height:"]
 zlotowskie.pl##.news__content > div[style="min-height: 500px;"]
 zlut.com##.add-bottom
+zmamobile.com,getpczone.com##main > center > a[target="_blank"] > button
 zmiedzi.pl##.aunit-center
 zmiedzi.pl##div[id^="zmied-"]
 zmiksowani.pl##.gad
