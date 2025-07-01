@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-01 10:59:27（北京时间）
+! Version: 2025-07-01 11:58:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64622
+! Total count: 64624
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -31073,6 +31073,7 @@ fandom.com###featured-video__player-container
 fandom.com##.aff-unit__wrapper
 fandom.com##.marketplace
 fandom.com##.top-ads-container
+fandom.com##.top_leaderboard-odyssey-wrapper
 fandom.com##div[class^="aff-unit"]
 fandom.com##iframe[data-s1search-id="mainline-top-ads-bing-top"]
 fandomwire.com##.g1-injected-unit
@@ -50397,6 +50398,7 @@ psprices.com###Psprices_MID
 psprices.com##.creative
 psprices.com##div[data-freestar-ad] + .text-center > a[href^="/premium"]
 pss-archi.eu###miam_div
+pstream.org##.group > .border-buttons-purple:has(> button[aria-label="Dismiss ad"])
 pstream.org##.max-w-full > .group:has(> button[aria-label="Dismiss ad"])
 pstream.org##.mb-2 > div.w-fit:has(> div.flex > div.rounded-xl > div.rounded-xl > button[aria-label="Dismiss ad"])
 psy.pl###infoPopup, .modal-backdrop
