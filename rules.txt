@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-01 15:12:43（北京时间）
+! Version: 2025-07-01 16:15:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64625
+! Total count: 64636
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13837,6 +13837,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mixrootmod.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mixrootmods.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mmacore.tv
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mmsbee42.com|mmsmasala.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mobile-tracker-free.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=moviemakeronline.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mpyit.com
@@ -30437,6 +30438,7 @@ erothots.co,zenporn.com##.bnrs
 erothots1.com##.magic-sites > a:not([href="https://t.me/+A8WVFYmWOONjYTY0"])
 erothots1.com##a[href="https://simpshub.com/"]
 erotic-beauties.com##.sidebar > .widget_text
+erotic-hentai.com,erogarga.com,javhdporn.net,eyerollorgasm.com###tracking-url
 eroticasearch.net###grid > .column > div[style]:not([id])
 erotichdworld.com##.main > div[style*="margin-left"]
 erotichdworld.com##.slideContent
@@ -30495,6 +30497,8 @@ espn.com##.Tooltip--fixed.Tooltip--fixed-bottom, .alert.alert--fixed
 espn.com##.mod-outbrain
 espncricinfo.com##.adSlotCnt
 espncricinfo.com##.ci-story-content-ad
+esporno.net##.row > li:has(> a[rel="nofollow sponsored"])
+esporno.net,eshentai.tv##.h-block-250
 esportnow.pl##aside a[href^="https://bit.ly/"] > img
 esports.gg###FreeStarVideoAdContainer_BesOfEsportsgg
 esports.gg###FreeStarVideoAdContainer_VCT
@@ -49186,6 +49190,10 @@ poczta.o2.pl##dd-holder[slot^="BOX_LEFT_"]
 poczta.o2.pl,poczta.wp.pl###topbar + div[class] > div[class^="css-"] > div[class]:empty:first-child + div[class^="css-"]:last-child > div[class^="css-"]:only-child:empty
 poczta.o2.pl,poczta.wp.pl##main > div[class] > div[class] > div[class*=" "]:has(> div[class]:empty:first-child + div[class]:last-child > div[class^="css-"] > div[class^="css-"]:empty)
 poczta.onet.pl###js_MailsContainer > div[class^="go"]:has(> div:first-child + div[id^="onet-ad-"] + div[class^="go"]:last-child)
+poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="go"] > div[class^="go"] > nav + div[class^="go"]:last-child > div[class^="go"]:last-child:has(> div[class^="go"]:only-child > div[class^="go"]:only-child > div[class^="go"]:first-child + .onet-ad:last-child)
+poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
+poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:only-child > div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
+poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="go"] > div[class^="go"]:last-child:has(> div[class^="go"]:only-child > div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + div[class^="go"] > div[class^="go"] > nav + div[class^="go"]:last-child > div[class^="go"]:last-child:has(> div[class^="go"]:only-child > div[class^="go"]:only-child > div[class^="go"]:first-child + .onet-ad:last-child)
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + div[class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + div[class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:only-child > div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
@@ -59733,6 +59741,7 @@ upload-4ever.com##a[onclick^="window.open("] ~ a[style*="text-align: left;"][sty
 upload-4ever.com##center > a.btn-success
 upload.ee##[href^="https://www.upload.ee/click.php"]
 uploadbox.io$$script[tag-content="replaceContentWithAdBlockerContent"][max-length="1500"]
+uploadcloud.pro###container > div[id][style*="display:"]:has(> div[class][style="z-index: 9999999;"])
 uploader.link##[class^="ads"]
 uploadev.com###direct_link > a[target="blank"][rel="nofollow"]:not(.directl)
 uploadev.com##a[href^="https://wronsironhow.club/"]
@@ -64350,6 +64359,8 @@ zhujiwiki.com##.sidebar > .widget:first-child
 zhujiwiki.com##.ssrtop
 zhujiwiki.com##.tips
 zhuna.cn##a[href*="quchuchai."]
+zhuostream.com###floatcenter
+zhuostream.com,oploverz.my,hentaihd.net,naruldonghua.com,donghuaworld.com,luciferdonghua.in,animekhor.xyz###overplay
 zhuwang.cc###main_newad
 zhuzhai.com##.news-details-ad
 zi.media##body > div[style="height: 300px;"]
