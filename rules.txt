@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-03 13:15:54（北京时间）
+! Version: 2025-07-03 14:17:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64699
+! Total count: 64703
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23822,6 +23822,7 @@ boundhub.com##div[class^="p"][class$="lace"]
 boundhub.com##noindex
 boundingbox.klokantech.com##.notice
 boundingintocomics.com##.tpd-incontent-ad-container
+boundingintocomics.com,thegrio.com##.tpd-incontent-ad-container
 bourse-immobilier.fr###cnil, .cnil, #CNIL
 boursorama.fr###cookie
 boutique.aero##.gdprModal
@@ -30590,12 +30591,14 @@ etherealgames.com,phoenixnap.com,apkdlmod.com,freecoursesites.net,courseforfree.
 ethereumprice.org##.partner-highlight
 ethereumprice.org##.zxc-msg
 etherscan.com,etherscan.io##.container-xxl > .row > div[style^="min-height:"][class*="order-"]
+etherscan.io###ContentPlaceHolder1_maintable > .card > .row:has(a[href="/contactusadvertise"])
 etherscan.io##.auto-results-wrapper > div.p-2
 etherscan.io##.container-xxl > div.align-items-center > div.col-md-9 + div.col-auto
 etherscan.io##.container-xxl:has(> div[class^="py-"] > div > span#ContentPlaceHolder1_lblAdResult)
 etherscan.io##.text-white.text-opacity-75.noindex-section.mb-0:has([style="text-decoration: none;"])
 etherscan.io##[data-t8xt5pt6kr-seq="0"]
 etherscan.io##div > a[target="_blank"][rel="nofollow"] > img[alt="Ads"]
+etherscan.io##div[data-nosnippet]:has(> ins[id])
 etherscan.io##div[id^="ContentPlaceHolder"][id*="_divMultichainAddress"] + .scrollbar-custom > .d-flex > .text-center > ins
 etherscan.io##form[action="/search"] + p.text-white
 etherscan.io##p[style="min-height:22px"]
@@ -57168,6 +57171,7 @@ thegradcafe.com##.text-center.py-3
 thegradcafe.com##.upcoming-events
 thegreatoutdoorsmag.com###VideoAdContainer
 thegreatoutdoorsmag.com##.pageskin-ads
+thegrio.com##.aspect-ratio-box
 thegrio.com##.tpd-featured-video
 theguardian.com##.dcr-1aq0rzi
 theguardian.com##.fc-slice__item--mpu-candidate
