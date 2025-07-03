@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-03 20:21:03（北京时间）
+! Version: 2025-07-03 21:25:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64710
+! Total count: 64727
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -41,6 +41,7 @@
 *$xmlhttprequest,redirect-rule=nooptext,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|thecubexguide.com|jytechs.in
 *$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz,badfilter
 *$xmlhttprequest,redirect-rule=nooptext,domain=sportshub.to
+*$xmlhttprequest,third-party,redirect-rule=noopjs,domain=asiaon.top
 *$xmlhttprequest,third-party,redirect-rule=noopjs,domain=asiaon.top|asiaontop.com
 *-160-600.jpg|$image
 *-300X250.$image,object
@@ -4790,6 +4791,7 @@
 @@||a.pub.network/core/pubfig/cls.css$domain=vrcmods.com
 @@||a.pub.network/vrcmods-com/pubfig.min.js$domain=vrcmods.com
 @@||a.pub.network^$domain=automobile-catalog.com
+@@||a.realsrv.com/ad-provider.js$domain=asiaon.top
 @@||a.realsrv.com/ad-provider.js$xmlhttprequest,domain=asiaon.top|asiaontop.com
 @@||a.realsrv.com/ads.js$domain=javcl.com
 @@||a.realsrv.com/video-slider.js$domain=daemon-hentai.com
@@ -7954,6 +7956,7 @@
 @@||csc-captcha-dre.security.dbankcloud.cn^$stealth=referrer
 @@||csdn.net/static/static/js/apps/popShow.js
 @@||csdnimg.cn^$stealth=referrer,domain=csdn.net
+@@||cse.google.com/adsense/search/async-ads.js$domain=asiaon.top
 @@||cse.google.com/adsense/search/async-ads.js$domain=asiaon.top|asiaontop.com
 @@||csgo-ranks.com^$generichide
 @@||csi.gstatic.com^
@@ -10829,6 +10832,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=soonersports.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=southpark.*|southparkstudios.*
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sportitalialive.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=spox.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=stack.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=startrek.com
@@ -13548,6 +13552,7 @@
 @@||pagead2.googlesyndication.com/pagead/*/show_ads_impl*_fy*.js$domain=forum.release-apk.com
 @@||pagead2.googlesyndication.com/pagead/*?fcd=true$domain=adshnk.com
 @@||pagead2.googlesyndication.com/pagead/gen_204$domain=ftuapps.io|userupload.net
+@@||pagead2.googlesyndication.com/pagead/images/adchoices/en.png$domain=asiaon.top
 @@||pagead2.googlesyndication.com/pagead/imgad?id=$image,domain=appleware.dev
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl$domain=adzsafe.com
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl$domain=aiarticlespinner.co
@@ -13608,6 +13613,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=arahdrive.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=arhplyrics.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=arkadium.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=asiaon.top
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=askpaccosi.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=assistouest.fr
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=audiostereo.pl
@@ -15211,6 +15217,7 @@
 @@||refer.discover.com^
 @@||refer.discover.com^|
 @@||refi-reklama.razitko.cz^$domain=refi-reklama.razitko.cz
+@@||refifa.com^$generichide
 @@||reg.163.com^
 @@||regapi.37.com/api/p_register.php?login_account=
 @@||register*mi.com^
@@ -19226,6 +19233,7 @@ absolutelyrics.com,cdrlabs.com,eonline.com,exiledonline.com,findtheword.info,rea
 abt-sportsline.de##.abt-cookieNotification
 abtc.ng##p:has(> ins.adsbygoogle)
 abtranny.com##div[style*="width:"][style*="height"]:not([class], [id]):has(> .ad__title)
+abtranny.com,xmilf.com##.header__nav > a[href][target="_blank"][rel="nofollow"]
 abv.bg###abv-GDPR-frame
 abxxx.com##.video-page__content > div.left > section
 abxxx.com##.video__wrapper > div.wrapper > section
@@ -20316,7 +20324,6 @@ amtraktrains.com,homebrewtalk.com,kitchenknifeforums.com##.productslider
 amundi.pl###disclaimer_amundi
 amw.com.pl##.cookies
 amz123.com##.two-activity-style
-an1.com,getsetclean.in,sexgames.cc##a[rel^="sponsored"]
 anaciroma.it##.w2t-banner
 anacom.pt##div[id^="cookieDiv"]
 analdin.com###lj-container
@@ -23821,7 +23828,6 @@ boundhub.com##div[class$=-adv]
 boundhub.com##div[class^="p"][class$="lace"]
 boundhub.com##noindex
 boundingbox.klokantech.com##.notice
-boundingintocomics.com##.tpd-incontent-ad-container
 boundingintocomics.com,thegrio.com##.tpd-incontent-ad-container
 bourse-immobilier.fr###cnil, .cnil, #CNIL
 boursorama.fr###cookie
@@ -25208,6 +25214,8 @@ cheater.ninja###AdvallyAdhesion
 cheatsheet.com##.sidebar
 cheatsheet.com##.top-ad
 check-host.net##.ra-elative
+check-host.net##div[class*="-f"]:has(> * > img[src*=".svg"])
+check-host.net##div[class*="ative"]
 check-host.net##div[class*="elative"]
 check.toys###COO
 checkdomain.de###notifications-container
@@ -25715,6 +25723,8 @@ clashroyalearena.com##a[href="https://brawlstarsup.com/"][rel="nofollow external
 classace.io##div[class^="GoogleInArticleAdsenseContainer"]
 classcentral.com##.cmpt-ad
 classcentral.com##body .cmpt-ad
+classcentral.com##li:has(iframe[src^="/catalog-iframe?"])
+classcentral.com##p + div:has(.responsive-post:has([href^="https://www.semrush.com"]))
 classcroute.com##.alert-info, .alert-warning, .alert-box
 classic-trader.com###jGrowl
 classic.gamcore.com###center > .flashes > .wide:has(> a[href][rel])
@@ -36361,6 +36371,8 @@ homehound.com.au##.left-banner
 homejardin.com##td[valign="top"] > p[style*="text-align:justify"]
 homelet.co.uk##.cp-wrapper
 homelyfe.com###root > div > div > .center-horizontal:not(.undefined)
+homemade.adult##.main-container > div[align="center"]
+homemade.adult,analdin.com,xhand.net###lj-container
 homemade.xxx###scrollhere
 homemade.xxx##div[align="center"]:not([class])
 homemoviestube.com###v_right
@@ -49473,14 +49485,10 @@ porn18videos.com##.playerRight
 porn1free.com,retrooh.com,hotclassicfuck.com,videos6.com##.player > #embed__pre
 porn2all.com##.primary > li:has(> a:not([href*="porn2all.com"]))
 porn2all.com##a[href][target="_blank"]:not([href*="porn2all.com"])
-porn300.com###multitubes-ad
 porn300.com##.a2c7txdxh
-porn300.com##.aan
-porn300.com##.aan__video-units
 porn300.com##.links-out
 porn300.com##.wrapper > ul[class$="video-units"]
 porn300.com##.wrapper__related-sites
-porn300.com##[class^="aaann_fake"]
 porn300.com##[class^="aan_"]
 porn300.com,porndroids.com###overlay-video
 porn300.com,porndroids.com##.hidden-under-920
@@ -49560,6 +49568,7 @@ porndictator.com,pornomovies.com,gaysearch.com,feetporno.com,freehardcore.com,de
 porndictator.com,submityourflicks.com##.aside > div
 porndig.com##.js_footer_partner_container_wrapper
 porndig.com##.vjs-toolbar
+pornditt.com##.primary > li:has(> a[href][target="_blank"])
 porndoe.com##.-ad-top-wrap
 porndoe.com##.-h-banner-svg-desktop
 porndoe.com##.\-f-banners
@@ -53366,6 +53375,7 @@ sheshaft.com##.nons
 sheshaft.com##.player-info > .under-player
 sheshaft.com##.thumbs-list > .content-side:has(> .banner)
 sheshaft.com##.undep_player_ad
+sheshaft.com,fetishshrine.com,youfreeporntube.net##.nav > li > a[target="_blank"]
 sheshaft.com,sleazyneasy.com,wankoz.com##.content-aside
 sheshaft.com,tubewolf.com,zedporn.com,hellmoms.com,alphaporno.com,pornwhite.com,xcum.com,wankoz.com,sleazyneasy.com,katestube.com##.bottom-banners
 shetland.gov.uk##body > .container > span
@@ -54064,6 +54074,8 @@ smallseotools.com##.mx-auto.d-block
 smallseotools.com##body .sticki_ssb
 smallseotools.com##div[style="height:90px"]
 smallseotools.com##div[style="height:90px"] + div.col
+smallseotools.com##div[style="min-height:250px"]
+smallseotools.com##div[style="width:300px;height:250px"]
 smallseotools.com##div[style="width:728px;height:250px;"]
 smallworldfs.com###barCookies
 smarkets.com##.notices-wrapper
@@ -54998,6 +55010,7 @@ sportingnews.com##.top-mpu-container
 sportingnews.com##[data-testid="outbrain-block"]
 sportingnews.com##ad a[target="_blank"]
 sportingnews.com##div[class^="ad-desktop"]
+sportitalialive.com###loadingSpinnerContainer
 sportium.es##.overlay
 sportklub.rs##.banner-placeholder
 sportland-erlangen.de##.cookieflag, .cookieset
@@ -55144,7 +55157,6 @@ spy-manga.com##.dessert-frame
 spy-manga.com##.wbnn
 spy.com##.multiple-products
 spy.com##.todays-top-deals-widget
-spycock.com,freeporn.info,ruleporn.com,shemaleporn.xxx,freepornhq.xxx##.aff-col
 spycock.com,jizz.us###alfa_promo_parent
 spycock.com,zetporn.com##.aside-itempage-col
 spycolor.com###policy-window
@@ -58671,6 +58683,10 @@ transtxxx.com##.suggestion
 transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
 transtxxx.com##div[class^="video-conten"] > div + div
 transtxxx.com##div[class^="video-conten"] div[class]:has(> div[class] > div[id][class] > noscript)
+transvids.tv##.footer-margin
+transvids.tv##.primary > li:has(> div > ul > li > a[href^="https://landing.transangelsnetwork.com/"])
+transvids.tv##.ribbonban
+transvids.tv,cartoonporn24.com,camwhores.ru.com,cliphunter.com,wxx.wtf,jizzoncam.com,camwhores.video,moreamateurs.com,faptor.com,porndude.wtf,pornwex.tv,pornfd.com,area51.porn,pornrabbit.com,milf-porn.xxx,sextaped.com,pornxpert.com,perverttube.com,fapnow.xxx,epicgfs.com,scatkings.com,pornflix.to,xbjav.com,heavyfetish.com,tabootube.xxx,amateur8.com,maturetubehere.com,crazyporn.xxx,pornissimo.org,lesbian8.com,enf-cmnf.com,filtercams.com,bigassporn.tv,porn00.org,keekass.com,fuckit.cc,camwhoresbay.com,camwhoreshd.com##.block-video > div.table
 traum-pizza.de###gc_message_bar_open, #gc_message_bar
 travelandtourworld.com##.left-main-bodybox > .g:has(.OUTBRAIN)
 travelandtourworld.com##.left-main-bodybox > .g:has(ins.adsbygoogle)
@@ -63591,6 +63607,7 @@ yeniqadin.biz##div[class*="reklam"]
 yenisafak.com##.ys-ad-video-widget
 yepi.com###top_banner_holder
 yeps.io##div[id^="yeps"]
+yeptube.com,proporn.com##.puFloatDiv
 yeptube.com,proporn.com,hd21.com##.puFloatDiv
 yer.nl##.headerCookie
 yes-news.com###adsc3
