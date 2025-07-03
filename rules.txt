@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-03 23:12:24（北京时间）
+! Version: 2025-07-04 00:14:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64728
+! Total count: 64719
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -42,7 +42,6 @@
 *$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz,badfilter
 *$xmlhttprequest,redirect-rule=nooptext,domain=sportshub.to
 *$xmlhttprequest,third-party,redirect-rule=noopjs,domain=asiaon.top
-*$xmlhttprequest,third-party,redirect-rule=noopjs,domain=asiaon.top|asiaontop.com
 *-160-600.jpg|$image
 *-300X250.$image,object
 *-300X250.$image,object,object-subrequest
@@ -465,6 +464,7 @@
 .com/api/users*^pii=&in=false^$document
 .com/click/?ct=*&cu=$all
 .com/ed/java.js$script
+.com/hit$ping
 .com/image/ll/$script
 .com/inc/poster.php$xmlhttprequest
 .com/redirect-zone/$all
@@ -4792,7 +4792,6 @@
 @@||a.pub.network/vrcmods-com/pubfig.min.js$domain=vrcmods.com
 @@||a.pub.network^$domain=automobile-catalog.com
 @@||a.realsrv.com/ad-provider.js$domain=asiaon.top
-@@||a.realsrv.com/ad-provider.js$xmlhttprequest,domain=asiaon.top|asiaontop.com
 @@||a.realsrv.com/ads.js$domain=javcl.com
 @@||a.realsrv.com/video-slider.js$domain=daemon-hentai.com
 @@||a.realsrv.com/video-slider.js$domain=manga1000.com
@@ -7957,7 +7956,6 @@
 @@||csdn.net/static/static/js/apps/popShow.js
 @@||csdnimg.cn^$stealth=referrer,domain=csdn.net
 @@||cse.google.com/adsense/search/async-ads.js$domain=asiaon.top
-@@||cse.google.com/adsense/search/async-ads.js$domain=asiaon.top|asiaontop.com
 @@||csgo-ranks.com^$generichide
 @@||csi.gstatic.com^
 @@||css-load.com^$stealth=referrer
@@ -16709,6 +16707,7 @@
 @@||stripe.com^$domain=pay.openai.com
 @@||stripe.com^$xmlhttprequest,domain=app.axenthost.com
 @@||strmrdr*/index.php?id=$stealth=referrer
+@@||sts.wavewalt.me/scripts/v*/embedv*.min.js$domain=cricstream.me
 @@||studcat.infra.systems^
 @@||studioclassroom.com/ad/
 @@||studizba.com^$generichide
@@ -20326,7 +20325,6 @@ amw.com.pl##.cookies
 amz123.com##.two-activity-style
 anaciroma.it##.w2t-banner
 anacom.pt##div[id^="cookieDiv"]
-analdin.com###lj-container
 analdin.com##.brazzers-link
 analdin.com##body[style="background: #000000; margin: 0; padding: 0"]:not([class*="video-page"])
 analdin.xxx##.banner-top
@@ -24800,7 +24798,6 @@ cartoonnetwork.com###tos-bar
 cartoonporn.com##.viewlist + div.aside
 cartoonporn.com,babestube.com,deviants.com##.spot_panel
 cartoonporn24.com##.content > .top:has(> center > .adsbyexoclick)
-cartoonporn24.com,camwhores.ru.com,cliphunter.com,wxx.wtf,jizzoncam.com,camwhores.video,moreamateurs.com,faptor.com,porndude.wtf,pornwex.tv,pornfd.com,area51.porn,pornrabbit.com,milf-porn.xxx,sextaped.com,pornxpert.com,perverttube.com,fapnow.xxx,epicgfs.com,scatkings.com,pornflix.to,xbjav.com,heavyfetish.com,tabootube.xxx,amateur8.com,maturetubehere.com,crazyporn.xxx,pornissimo.org,lesbian8.com,enf-cmnf.com,filtercams.com,bigassporn.tv,porn00.org,keekass.com,fuckit.cc,camwhoresbay.com,camwhoreshd.com##.block-video > div.table
 cartoonporno.xxx##.cart
 cartoonpornvideos.com##.detail-side-banner
 cartoonpornvideos.com##.detail-side-bnr
@@ -25216,7 +25213,6 @@ cheatsheet.com##.top-ad
 check-host.net##.ra-elative
 check-host.net##div[class*="-f"]:has(> * > img[src*=".svg"])
 check-host.net##div[class*="ative"]
-check-host.net##div[class*="elative"]
 check.toys###COO
 checkdomain.de###notifications-container
 checklistwebwinkel.nl###smbv_splash
@@ -31462,7 +31458,6 @@ fetishshrine.com,pornwhite.com,sleazyneasy.com##.container-aside
 fetishshrine.com,pornwhite.com,sleazyneasy.com##.items-holder
 fetishshrine.com,sleazyneasy.com##.bottom-container
 fetishshrine.com,vikiporn.com##.adv-aside
-fetishshrine.com,youfreeporntube.net##.nav > li > a[target="_blank"]
 fetlife.com##div[class="lg:w-200px"] > div[class="hidden py-8 lg:block"]
 fettspielen.de###cwarn
 feudalwars.net,shadowexplorer.com###skyscraper
@@ -35515,9 +35510,7 @@ hd-easyporn.com##.spc_height_80
 hd-trailers.net##.header-win
 hd.crichd-player.top,cdn.crichdplays.ru###floated
 hd.se##.gdpr
-hd21.com###abmessage
 hd21.com##.aside_video
-hd21.com##.drt-spot-visible
 hd21.com,winporn.com###spot_video_livecams
 hd21.com,winporn.com###spot_video_underplayer_livecams
 hdaud.io##img[alt="turbo"]
@@ -54702,6 +54695,7 @@ sourceforge.net##.main-nav-link
 sourceforge.net##.projects > li.nel[data-cid]
 sourceforge.net##.sterling
 sourceforge.net##a[data-label="avastjune"]
+sourceforge.net##a[data-label^="avast"]
 sourceforge.net,freepik.com##div[data-id^="div-gpt-ad-"]
 sourcenaturals.com###policy_div
 south-plus.net##a[onclick*="'ad'"]
@@ -62903,7 +62897,6 @@ xhamster.com,xhamster2.com##.wio-xbanner
 xhamster18.desi##.xplayer-banner
 xhamster2.com##.wio-xspa
 xhand.com##.video div[style^="text-align: center"]
-xhand.net###lj-container
 xhand.net##div[align="center"]:has(p[style="color: #000000;"])
 xhand.net##div[style]:has(> iframe)
 xhand.net##p[style="color: #000000;"]
@@ -63079,7 +63072,6 @@ xmfish.com##.advert-entry-list
 xmfish.com##.bobing-theme
 xmfish.com##.readCon_right
 xmilf.com##.content-block > div.see-more-wrapper + div.wrapper
-xmilf.com##.header__nav > a[href][target="_blank"][rel="nofollow"]
 xmilf.com##.videoplayer + section > #und_ban
 xmilf.com##.videoplayer + section > #und_ban + h4
 xmilf.com,manysex.com##.header__item
@@ -63609,7 +63601,6 @@ yenisafak.com##.ys-ad-video-widget
 yepi.com###top_banner_holder
 yeps.io##div[id^="yeps"]
 yeptube.com,proporn.com##.puFloatDiv
-yeptube.com,proporn.com,hd21.com##.puFloatDiv
 yer.nl##.headerCookie
 yes-news.com###adsc3
 yes-news.com###adsc4
