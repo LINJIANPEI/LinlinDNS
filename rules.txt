@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-05 07:11:09（北京时间）
+! Version: 2025-07-05 08:50:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64740
+! Total count: 64745
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3876,6 +3876,7 @@
 @@$websocket,domain=xvideos.com
 @@&ad_type=$domain=ultimate-guitar.com
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
+@@&http_referer=$domain=chaopx.com
 @@*$generichide,domain=faqwiki.*
 @@*$image,domain=hardwareluxx.de,~third-party
 @@*$script,third-party,domain=embedme.*|filemoon.*|finfang.*|hellnaw.*|moonembed.*|z12z0vla.*|fmoonembed.*
@@ -17577,6 +17578,7 @@
 @@||txmov2.a.kwimgs.com^
 @@||txori.com^$generichide
 @@||txwk.10010.com^
+@@||txws.yyzb456.top^$domain=857zb7.tv
 @@||txxx.ahcdn.com/key=$stealth=referrer
 @@||txxx.ahcdn.com^
 @@||txxx.com/embed/$stealth=referrer
@@ -30995,7 +30997,10 @@ f95zone.to##.p-nav-list > li:has(> div > a[href^="https://f95zone.to/link-forums
 f95zone.to##.samAlignCenter
 f95zone.to##a[data-nav-id="AIPorn"]
 f95zone.to##a[data-nav-id="AISexChat"]
+f95zone.to##a[href="https://lewdpatcher.com/"]
 f95zone.to##a[href^="https://www.deepswap.ai"]
+f95zone.to##ul > li:has(> div > a[href^="https://f95zone.to/link-forums/"])
+f95zone.to##ul > li:has(> div > a[href^="https://f95zone.to/link-forums/"]) ~ li
 f95zone.to,imagetwist.com##a[href^="https://candy.ai/"]
 f95zone.to,pornhub.com,pornhubpremium.com,redtube.com##a[href^="https://ads.trafficjunky.net/"]
 faapy.com##.footer > .container > .textlink
