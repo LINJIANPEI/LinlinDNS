@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-07 23:10:40（北京时间）
+! Version: 2025-07-08 00:14:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64576
+! Total count: 64581
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -39162,7 +39162,6 @@ jetbrains.com##.jba-agreement-panel
 jetphotos.com##.result--adv
 jetpunk.com##.banner-ad-outer
 jetpunk.com##.box-ad-outer
-jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,abysscdn.com,player-cdn.com,nazarickol.com##body > #player ~ div[style^="position: fixed; inset:"][style*="z-index:"]
 jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,abysscdn.com,player-cdn.com,nazarickol.com##body > #player ~ div[style^="position: fixed;"][style*="z-index:"]
 jetvis.ru##.stick-banner
 jetzendorf.de###privacy-container
@@ -41613,7 +41612,11 @@ livejournal.com##.xhtml_banner
 livejournal.com##[class*="categories"] + div[class]:has(> [class*="-commercial"])
 livejournal.com##[style$="width: 300px;"]
 livelaw.in###news_on_exit
+livelaw.in###sidebar-wrapper div[class*="trending_news_row"]:has(> div[id^="trending_"] > .ad_unit_wrapper)
 livelaw.in##body .ad_unit_wrapper_main
+livelaw.in##body .inside-post-ad:not(#style_important)
+livelaw.in##body .popup-ad-content-wrap:not(#style_important)
+livelaw.in##body div[id^="after_header_ad_"]:not(#style_important)
 livelaw.in##div[data-category="banner_ad"]
 liveleak.com##div[class^="runative-banner-"]
 livelo.com.br##.notifi
@@ -55281,6 +55284,7 @@ steroid.com##.header_right
 steroid.com##[href*="anabolics.com"]
 sterrenoptv.nl##body > div[class^="app"]
 steveharveyfm.com##.region-recommendation-right
+stevenuniverse.best###adblock-popup
 stheadline.com###jetso-wrapper
 stheadline.com##.section-popular
 stib-mivb.be##.cookie
@@ -58983,6 +58987,7 @@ tuttishop.ch##.noty_cont, .noty_bar
 tuttoabruzzo.it##a[href^="https://link.offerte2019.network/"] > img
 tuttoandroid.net###navbar .justify-content-end
 tuttoandroid.net###ta-adblock-modal
+tuttoandroid.net##.card-grid div.col-18:has(> article > span.ribbon)
 tuttoandroid.net##.card-grid div.row > div.col-18.align-self-center
 tuttoandroid.net##.justify-content-around > div[class^="col-"] > a[href^="http://bit.ly/"][target="_blank"] > img
 tuttoandroid.net##.skin-img
