@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-08 07:11:33（北京时间）
+! Version: 2025-07-08 08:53:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64581
+! Total count: 64587
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1539,6 +1539,7 @@
 /taboola-header.js$script
 /taboola_8.9.1.js$script
 /tabu/display.js$script
+/tag?name=PageView$xmlhttprequest
 /tardisrocinante/austin.js$script
 /tardisrocinante/surgeonv2.js$script
 /tardisrocinante/vitals.js$script
@@ -3815,6 +3816,7 @@
 ://links.paypal.*/eos/$image
 ://parcel-api.delivery-status.*/open/$image
 ://sli.*/imp?s=$image
+://stat.*/pageview/$xmlhttprequest
 ://t.order.*/r/?id=$image
 ://trk.*.run^$document
 :701/gd_xueersi/$popup
@@ -45582,6 +45584,7 @@ nativesurge.info##td:has(> div.adsbyadful)
 natlawreview.com##.\#div\.block-native_bf
 natlawreview.com##.block-content-ad_block
 natomanga.com##.ads-contain
+natomanga.com##.fly-ads-chapter-page
 nats.io###main_gdpr
 natural-cosmetology.ru##body > div[style*="background-color:#ff0000;color:#ffffff;"]
 naturalblaze.com##.n553lfzn75
@@ -45980,7 +45983,10 @@ news.china.com.cn##.Wrapper > div[style]
 news.cn2che.com##.banner01
 news.cnyes.com##.content-main > div:empty
 news.cnyes.com##.content-main > div:has(> div[id^="div-gpt-"])
+news.cnyes.com##.content-main > div[class]:has(div[id^="div-gpt-ad-"])
+news.cnyes.com##.section-aside-wrapper ~ div[class] > a[title] ~ div[class]:not([title])
 news.cnyes.com##article > div:has(> div[id^="div-gpt-"])
+news.cnyes.com##div[id^="desktop-ad-card-"]
 news.com.au###header-ads-container
 news.com.au###story > .iseDiv
 news.day.az##.mewtwo-flights--l
