@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-08 21:28:43（北京时间）
+! Version: 2025-07-08 22:11:34（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64599
+! Total count: 64603
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5872,6 +5872,7 @@
 @@||api.mapbox.com^$xmlhttprequest,stealth,domain=weather.com
 @@||api.mapy.cz/*/maptiles/$stealth=referrer
 @@||api.mapy.cz^$stealth
+@@||api.meituan.com^
 @@||api.mercari.jp^$stealth=3p-auth
 @@||api.mghubcdn.com/graphql$stealth=referrer
 @@||api.mi-img.com^$stealth=referrer
@@ -11125,6 +11126,7 @@
 @@||input.shouji.sogou.com^
 @@||input.shouji.sogou.com^$important
 @@||inputmag.dk/wp-content/themes/jannah/js/advertisement.js
+@@||inr-op.elemecdn.com^
 @@||inside-digital.de^$generichide
 @@||insidemarketing.eu/cdn/lib/js/adsframe.js
 @@||insideruser.microsoft.com^
@@ -14339,6 +14341,7 @@
 @@||pay.yandex.ru/web/sdk/$stealth=referrer
 @@||payapp.weixin.qq.com^
 @@||paybis.com/assets/*/responsive/*.js
+@@||paydns.wechatpay.cn^
 @@||payeer.com/bitrix/components/payeer/system.auth.form/$document,xmlhttprequest
 @@||payeer.com/style/images/adv_green.png$domain=payeer.com
 @@||payload.cargocollective.com^$image,~third-party
@@ -58491,6 +58494,7 @@ trademe.co.nz##tm-display-ad
 traderepublic.com##.consentCard
 traderie.com##.ae-fixed
 traderie.com##div[class^="AdSlot__"]
+traderscasa.com##[class^="overlay-"]:has(> .af-both-cont)
 tradetrucks.com.au##.middle-banner-list
 tradeville.eu###AccCooTab
 tradingreview.net###sidebar > .widget > a[rel*="nofollow"][target="_blank"] > img
