@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-08 23:12:04（北京时间）
+! Version: 2025-07-09 00:14:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64603
+! Total count: 64606
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4165,7 +4165,6 @@
 @@/nbc-ad*.js$domain=notebookcheck-hu.com|notebookcheck.com|notebookcheck.net|notebookcheck.org|notebookcheck.biz|notebookcheck.it|notebookcheck.nl|notebookcheck.info|notebookcheck-tr.com|notebookcheck.se|notebookcheck-ru.com
 @@/needsharebutton.min.js$domain=leetcode-cn.com
 @@/noadblock-nice-message/assets/js/ads.js?$script,~third-party
-@@/openads.js$domain=cnvids.com|cimanow.cc
 @@/owa/service.svc$document
 @@/pic/ad/*$domain=ybjk.com
 @@/player/*$stealth=referrer,domain=ibomma.*
@@ -7386,7 +7385,6 @@
 @@||ci.xiaohongshu.com^
 @@||cibntv.net/youku/*.mp4?$domain=v.youku.com
 @@||cimanow.cc/wp-content/themes/*/openads.js$script,~third-party
-@@||cimanow.cc/wp-content/themes/Cima%20Now%20New/Assets/js/gpt.js
 @@||cindyholbrook.lpages.co^
 @@||cindyholbrook.lpages.co^|
 @@||cinema.pia.co.jp/img/ad/$image,~third-party
@@ -9068,7 +9066,6 @@
 @@||flair.be/js/default/*_jq.$script
 @@||flash.sec.intl.miui.com^
 @@||flash.sec.miui.com^
-@@||flashtalking.com/oba/icon/consumer-privacy-logo.png$domain=cimanow.*|freex2line.online
 @@||flickr.com/cookie_$stealth=3p-cookie
 @@||flickr.com/register_cookies.gne?$stealth=3p-cookie
 @@||flickr.com/signin/$stealth=3p-cookie
@@ -15995,6 +15992,8 @@
 @@||sickworldmusic.com^$generichide
 @@||sigma4pc.com^$generichide
 @@||sign.mojebanka.cz$elemhide,jsinject
+@@||signaler-pa.clients6.google.com/punctual/*/chooseServer?key=$xmlhttprequest,stealth=referrer
+@@||signaler-pa.clients6.google.com/punctual/multi-watch/channel?$xmlhttprequest,stealth=referrer
 @@||signaler-pa.googleapis.com/punctual/*/chooseServer$stealth=3p-auth
 @@||signaler-pa.googleapis.com/punctual/multi-watch/channel$stealth=3p-auth
 @@||signalshares.com/webtrends.min.js$script,~third-party
@@ -24122,6 +24121,7 @@ buero-bedarf-thueringen.de###bbtCookieBG
 bueromarkt-ag.de###cC
 buffalonews.com##.subscriber-ad > .ad-col
 buffer.com###__next > div > [class*="Banner"]
+buffsports.io##a[role="button"][href="#"]
 buffsports.stream,sportcast.life###pr
 buffstreams.sx##.position-absolute
 buffstreams.sx##button[data-openuri*=".allsportsflix."]
@@ -35967,6 +35967,8 @@ hiboox.fr##body > div[id*="cookie"]
 hidden247.com##.oglSve
 hidden247.com##.oglSvePoc
 hidden4fun.com##.b166
+hide.cx##.ContainerAreaLeftVertical > img
+hide.cx##.ContainerAreaTopHorizontal a[target="_blank"] > img
 hide.me##.Slideout
 hidefninja.com##.underads
 hidemy.name###gdpr-block
@@ -40223,6 +40225,7 @@ klodzko24.eu##.addWrapper
 klopfers-web.de###kwcookieconsent
 klto9.com###aigirlfriendad
 klto9.com###list-imga > center > div[style^="width:336px"]
+klto9.com##[style^="width:336px"]
 klugo.de##div[class*="CookieHint"]
 klyingshi.net##.row > div.url-card:has(> div.url-body span.badge-danger)
 klz9.com###aigirlfriendad
