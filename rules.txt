@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-11 01:13:34（北京时间）
+! Version: 2025-07-11 02:16:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64727
+! Total count: 64731
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22716,11 +22716,14 @@ bestbuy.ca##.x-productListItem:has([data-automation="sponsoredProductLabel"])
 bestbuy.ca##div.x-productListItem:has([class^="sponsoredProduct"])
 bestbuy.ca##div[data-automation^="criteo-sponsored-products-carousel-"]
 bestbuy.ca,bestbuy.com##[id^="atwb-ninja-carousel"]
+bestbuy.com###sponsored-carousel-na
+bestbuy.com##.atwb-display-ad
 bestbuy.com##.display-ad-wrapper
 bestbuy.com##.generic-morpher:has(.spns-label)
 bestbuy.com##.shop-dedicated-sponsored-carousel
 bestbuy.com##.shop-pushdown-ad
 bestbuy.com##.slContainer:has(> .sponsored)
+bestbuy.com##.spotlight-ad
 bestbuy.com##div[id^="shop-display-ad-"]
 bestbuy.com##li.embedded-sponsored-listing
 bestcam.tv##.widget-banner
@@ -52438,6 +52441,7 @@ samayam.com,navbharattimes.indiatimes.com##.rhs-mrec-wrapper
 samayam.com,navbharattimes.indiatimes.com##.wdt_amz
 samebug.io###__next > div > .fixed
 sameday.costco.com##[aria-label="Product"]:has(sp-tag)
+sameday.costco.com##li:has([aria-label="Product"] sp-tag)
 samehadaku.email##.ads-float-bottom
 samehadaku.email##.hentry.has-post-thumbnail > [href]
 samehadaku.email##.post-body.site-main > [href]
