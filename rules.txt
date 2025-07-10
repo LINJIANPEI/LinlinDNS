@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-10 19:10:41（北京时间）
+! Version: 2025-07-10 20:21:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64750
+! Total count: 64751
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -42753,6 +42753,7 @@ majorgeeks.com##.geekycolumn > b > font[color="#000000"]
 majorgeeks.com##.geekycolumn > b > font[color="#000000"] + a[rel="nofollow"]
 majorgeeks.com##.highlight.content > center > font
 majorgeeks.com##.navigation-light
+majorgeeks.com##[style]:has([href*="&utm_source"])
 majorgeeks.com,cheatsheet.com##div[style^="width:728px;height:90px;"]
 majorgeeks.com/images/mg/ad$image
 makaidong.com###bdcs
