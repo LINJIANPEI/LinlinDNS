@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-13 07:12:05（北京时间）
+! Version: 2025-07-13 09:00:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64746
+! Total count: 64751
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5066,6 +5066,7 @@
 @@||adjust.com/adjust-latest.min.js$domain=anchor.fm
 @@||adkit.9pub.io/v2$script,domain=9now.nine.com.au
 @@||adligature.com^$domain=listeamed.net|gaystream.click
+@@||adligature.com^$xmlhttprequest,domain=bigbuttshub2.top|bigbuttshubvideos.com
 @@||adligature.com^|$xmlhttprequest,domain=vinomo.xyz
 @@||adligature.com^|$xmlhttprequest,domain=work.ink
 @@||adm.10jqka.com.cn^
@@ -15587,6 +15588,7 @@
 @@||secure.chase.com/web/auth/$stealth=referrer
 @@||secure.logmein.com/scripts/Tracking/$script,domain=logme.in|logmein.com
 @@||secure.quantserve.com/quant.js$domain=listeamed.net|gaystream.click
+@@||secure.quantserve.com/quant.js$xmlhttprequest,domain=bigbuttshub2.top|bigbuttshubvideos.com
 @@||secure.quantserve.com/|$xmlhttprequest,domain=facciabuco.com
 @@||secure.selfwealth.com.au^$stealth=ip
 @@||securecard.jp/card_input.html$stealth=referrer
@@ -16283,6 +16285,7 @@
 @@||srvtrck.com/assets/css/LineIcons.css$domain=vinomo.xyz
 @@||srvtrck.com/assets/css/LineIcons.css$domain=work.ink
 @@||srvtrck.com^$domain=listeamed.net|gaystream.click
+@@||srvtrck.com^$xmlhttprequest,domain=bigbuttshub2.top|bigbuttshubvideos.com
 @@||ss.phncdn.com^
 @@||ss.phncdn.com^$script,domain=redtube.com|redtube.net
 @@||ss0.bdstatic.com
@@ -18244,6 +18247,7 @@
 @@||widgets.outbrain.com/outbrain.js$domain=listeamed.net|gaystream.click
 @@||widgets.outbrain.com/outbrain.js$domain=techedubyte.com
 @@||widgets.outbrain.com/outbrain.js$domain=vinomo.xyz
+@@||widgets.outbrain.com/outbrain.js$xmlhttprequest,domain=bigbuttshub2.top|bigbuttshubvideos.com
 @@||widgets.outbrain.com/outbrain.js$xmlhttprequest,domain=work.ink
 @@||widgets.trustedshops.com/reviews/tsSticker/$domain=koziol-shop.de
 @@||wifi.vivo.com.cn^
@@ -22890,6 +22894,7 @@ bigbtc.win##body > div[style="position:fixed;left:3px;bottom:0px;z-index:999;"]
 bigbtc.win,downloadcrew.com##div[style^="width:160px;height:600px;"]
 bigbumfun.com##.col-video > div.container:has(> div#awe-customiframe-container)
 bigbumfun.com##.thumbs > div.thumb:has(> script[src*="ad-provider"])
+bigbuttshub2.top,bigbuttshubvideos.com##body > div ~ div[class]:empty
 bigcommerce.com##div[class*="ConsentManager"]
 bigear.cn##.adpicright
 bigear.cn##a[href^="/?module=dantian&"]
