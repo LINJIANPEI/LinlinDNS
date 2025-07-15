@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-15 23:11:20（北京时间）
+! Version: 2025-07-16 00:14:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64794
+! Total count: 64797
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -36562,6 +36562,7 @@ hotstar.com##div[data-testid="bbtype-video"]
 hotstar.com##div[data-testid^="ad-"]
 hotter.com##.enhanced-cookies__modal
 hotukdeals.com##.ad
+hotukdeals.com##div[id$="AdSlotPortal"]
 hotukdeals.com##div[id*="AdSlotPortal"]
 hotxv.com##.w3-main > div[style*="height:250px;"]
 houdao.com###header-ban
@@ -38966,6 +38967,8 @@ jak-ksiegowac.pl###message_wrap
 jak.se##.consent-backdrop
 jakaoferta.pl##a[href*="&utm_term=baner"][target="_blank"] > img
 jakartaglobe.id##.underlay-ad
+jakdorobic.pl##.banner-main-jd-container
+jakdorobic.pl##.sidebar-inner > .widget:has(> figure > a[target="_blank"])
 jal.co.jp###JS_ciBox, #JS_ciBox_filter, #JS_ciBox_filter_iframe
 jal.com###JS_ciBox, #JS_ciBox_filter, #JS_ciBox_filter_iframe, #JS_ciBox_style
 jalantikus.com##.ads
