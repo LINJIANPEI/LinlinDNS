@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13838
+! Total count: 13839
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-07-16 10:06:04（北京时间）
+! Version: 2025-07-16 20:53:59（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -10932,6 +10932,7 @@
 @@||countrygarden.com.cn/ad/
 @@||countrytabs.com^$generichide
 @@||coupang.com^$stealth=dpi
+@@||coupang.com^$stealth=useragent
 @@||courier-push-apple.com.akadns.net^$important^$important
 @@||courrier.jp^$generichide
 @@||cours-de-droit.net^$generichide
@@ -17527,6 +17528,7 @@
 @@||pos.baidu.com^$subdocument,domain=bigpixel.cn
 @@||pos.baidu.com^*?di=u3160754&$domain=bigpixel.cn
 @@||postazap.com^$generichide
+@@||postescanada-canadapost.ca/Capture/Interactive/$stealth=referrer
 @@||postex.com/api/ping?$~third-party
 @@||postfiles*.naver.net^$stealth=referrer
 @@||poststar.com^$generichide
@@ -17644,7 +17646,6 @@
 @@||pub.network^$script,domain=creaders.net
 @@||pub.pixels.ai/prebid_standard.js$domain=standard.co.uk
 @@||pub.pixels.ai/prebid_standard.js$script,domain=standard.co.uk
-@@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$domain=the-independent.com
 @@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$script,domain=independent.co.uk
 @@||pub.pixels.ai/wrap-independent-prebid-lib.js$domain=independent.co.uk
 @@||pubads.g.doubleclick.net/gampad/ad?$domain=nbc.com
