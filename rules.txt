@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-17 15:15:22（北京时间）
+! Version: 2025-07-17 16:16:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64798
+! Total count: 64802
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14905,7 +14905,6 @@
 @@||pubads.g.doubleclick.net^$domain=twitch.tv
 @@||pubdirecte.com/script/pop.php$domain=extreme-down.xyz
 @@||public-api.reviews.2gis.com^$stealth=3p-auth
-@@||public-cis.exponea.com^
 @@||public-cis.exponea.com^|
 @@||public-image-upload.s3.amazonaws.com^$stealth=3p-auth
 @@||public-ubiservices.ubi.com^$stealth=3p-auth
@@ -18450,7 +18449,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -41471,6 +41469,9 @@ life.tw###fbFixedAd
 life.tw##div[style="width:630px;height:700px;"]
 life365.eu##body > div:not([id]):not([class])
 lifeandstylemag.com###taboola-right-rail-thumbnails
+lifeandstylemag.com##.article__item--square:has(> div[id^="taboola-"])
+lifeandstylemag.com##.module-storyme:has(> #storifyme-widget-init)
+lifeandstylemag.com##.storifyme-inline-widget
 lifebutiken.se###top-anchor ~ div ~ div:last-child
 lifehack.org###article_desk_728x90_ATF11
 lifehack.org##.ad-wrap-transparent
@@ -56624,7 +56625,9 @@ techsauce.co###banner-link-c
 techspot.com##.billboard_placeholder_min
 techspot.com##.category > ul > li[style="padding: 25px 0 0 0;"]
 techspot.com##.downText > a > div
+techspot.com##.downloads-list > li:not([class]) > center > div[style^="min-height: 250px; text-align: center;"]
 techspot.com##.downloads_list > li:not([class]) > div[style="min-height: 250px; text-align: center;"]
+techspot.com##.entreprad
 techspot.com##.es3s
 techspot.com##.onejob
 techspot.com##.sesdc
@@ -58933,6 +58936,7 @@ truefittandhill.co.uk##.consent, #consent
 trueid.net##div[data-testid="adsComponent-div"]
 truepeoplesearch.com##.card > div:has(div.h5 > span[style="padding-bottom:5px;margin-top:-10px;font-size:.8rem;"])
 truetrophies.com,trueachievements.com,pockettactics.com,pcgamesn.com###nn_bfa_wrapper
+truetrophies.com,truesteamachievements.com,trueachievements.com##.nn_player_w
 truevalue.es##.cookies-lay
 truevirtualworld.com##.card-cookie
 trumparea.com###udmvid
