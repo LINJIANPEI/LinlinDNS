@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-17 08:55:58（北京时间）
+! Version: 2025-07-17 10:51:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64800
+! Total count: 64798
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14857,10 +14857,8 @@
 @@||pub.network/*/sites/netronline-com/configs$domain=netronline.com
 @@||pub.network/netronline-com/pubfig.min.js$domain=netronline.com
 @@||pub.network^$script,domain=creaders.net
-@@||pub.pixels.ai/prebid_standard.js$domain=standard.co.uk
 @@||pub.pixels.ai/prebid_standard.js$script,domain=standard.co.uk
 @@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$script,domain=independent.co.uk
-@@||pub.pixels.ai/wrap-independent-prebid-lib.js$domain=independent.co.uk
 @@||pub1-bjyt.s3.360.cn^$important
 @@||pubads.g.doubleclick.net/gampad/ad?$domain=nbc.com
 @@||pubads.g.doubleclick.net/gampad/ads$domain=cbs.com,~image,~script
@@ -34517,7 +34515,7 @@ googleads.g.doubleclick.net###mys-wrapper
 googleitfor.me,a2zcrack.com##center > a[href][target="blank"] > img
 googlesightseeing.com##.comm-square
 googlesyndication.com###abgb
-googlesyndication.com##.GoogleActiveViewElement > div:not(#reward_close_button_widget)
+googlesyndication.com##.GoogleActiveViewElement > div:not(#reward_close_button_widget):not(.recommend_book)
 gooienom.nl###notification_area
 goonlinetools.com##.grid + div.ml-4 + a[href][target="_blank"]
 goonlinetools.com##.grid > div.col-span-2 + div.ml-4.md\:block
