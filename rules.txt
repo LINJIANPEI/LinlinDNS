@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-17 21:31:45（北京时间）
+! Version: 2025-07-17 22:11:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64806
+! Total count: 64809
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22724,6 +22724,7 @@ best4you.sk##img[width="560"][height="90"]
 best4you.sk##img[width="690"][height="90"]
 bestbuy.ca##.pencilAd_EE9DV
 bestbuy.ca##.x-productListItem:has([data-automation="sponsoredProductLabel"])
+bestbuy.ca##[class^="sponsoredProdBoxGridArea"]
 bestbuy.ca##div.x-productListItem:has([class^="sponsoredProduct"])
 bestbuy.ca##div[data-automation^="criteo-sponsored-products-carousel-"]
 bestbuy.ca,bestbuy.com##[id^="atwb-ninja-carousel"]
@@ -23494,6 +23495,7 @@ bloomberg.com,speedtest.net##div[data-ad-placeholder]
 bloomberg.com,weatherpro.com,wordfinder.yourdictionary.com##.leaderboard-wrapper
 bloombergadria.com##.banner
 bloomberglinea.com##.arcad-feature-custom
+bloomingdales.com##.carousel-container:has(.header-sponsored-label)
 bloomingdales.com##.sortable-grid-monetization-items
 bloomreach.com##.exp-cookies-obal
 bloomsbury.com##.stickyFooter
@@ -36393,6 +36395,7 @@ homedepot.com###revjet_container
 homedepot.com##.browse-search__pod:has([id^="plp_pod_sponsored"])
 homedepot.com##[id*="sponsored"]
 homedepot.com##section[id^="browse-search-pods-"] > div.browse-search__pod:has(div.product-sponsored)
+homedepot.com,nordstrom.com###revjet_container
 homeful.ly###__next > .container
 homehound.com.au##.left-banner
 homejardin.com##td[valign="top"] > p[style*="text-align:justify"]
