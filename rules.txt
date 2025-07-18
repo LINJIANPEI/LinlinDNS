@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-19 06:11:28（北京时间）
+! Version: 2025-07-19 07:11:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64839
+! Total count: 64840
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -50565,6 +50565,7 @@ psprices.com###Psprices_ATF
 psprices.com###Psprices_BOT
 psprices.com###Psprices_MID
 psprices.com##.creative
+psprices.com##.creative:has-text(remove advertising)
 psprices.com##div[data-freestar-ad] + .text-center > a[href^="/premium"]
 pss-archi.eu###miam_div
 pstream.org##.group > .border-buttons-purple:has(> button[aria-label="Dismiss ad"])
