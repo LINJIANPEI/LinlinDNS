@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-19 17:11:33（北京时间）
+! Version: 2025-07-19 18:11:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64839
+! Total count: 64851
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11522,6 +11522,7 @@
 @@||keepassxc.org^
 @@||keepkoding.com^$generichide
 @@||kehai.com/front/dist/app/site/list/advertisement.js
+@@||keibana.com/wp-content/uploads/*/300x250_$~third-party
 @@||keizai.biz^$generichide
 @@||kejilion.pro^$generichide
 @@||kemono.party^
@@ -49801,7 +49802,9 @@ pornhub.com##.videos-morepad.videos.full-row-thumbs.videos-being-watched.logInHo
 pornhub.com##[srcset*="bloB:"]
 pornhub.com##a[href^="https://www.uviu.com"]
 pornhub.com##div[class="video-wrapper"] > .clear.hd:has(.adsbytrafficjunky)
+pornhub.com##div[onclick*="bp1.com"]
 pornhub.com##img[srcset]
+pornhub.com,pornhub.net,youporn.com###pb_template
 pornhub.com,pornhub.org###singleFeedSection > .emptyBlockSpace
 pornhub.com,pornhub.org,pornhub.net###abAlert
 pornhub.com,pornhub.org,pornhub.net###adBlockAlert
@@ -49825,11 +49828,16 @@ pornhub.com,pornhub.org,pornhub.net##iframe[style*="height: 60px;"]
 pornhub.com,pornhub.org,pornhub.net##iframe[width="315"]
 pornhub.com,pornhub.org,pornhub.net##iframe[width="950"]
 pornhub.com,pornhubpremium.com,pstargif.com,spankbang.com,sxyprn.com,tube8.com,tube8vip.com,xozilla.com,xxxymovies.com##a[href*="?ats="]
+pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com##[href*="base64"]
+pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com##[href*="data:"]
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com,youporngay.com##[href*="base64"]
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporn.com,youporngay.com##[href*="data:"]
+pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com##[style*="base64"]
+pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com##[style*="blob:"]:not(video)
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com,youporngay.com##[style*="base64"]
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com,youporngay.com##[style*="blob:"]:not(video)
 pornhub.com,spankbang.com##a[href^="http://ads.trafficjunky.net/"]
+pornhub.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com##img[src*="blob:" i]:not(video)
 pornhub.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com,youporngay.com##img[src*="blob:" i]:not(video)
 pornhub.com,youporngay.com##div[onclick*="bp1.com"]
 pornicom.com###data > #related_videos_col + #related_videos_col
@@ -51654,6 +51662,7 @@ redtube.com##.qb
 redtube.com##div > iframe
 redtube.com##div[class*="display: block; height:"]
 redtube.com##svg
+redtube.com,redtube.com.br,redtube.net###pb_block
 redtube.com,redtube.com.br,redtube.net,youporngay.com###pb_block
 redtube.com,redtube.net###top_main_menu > li > a[id^="paid_tab_"]
 redtube.com,redtube.net##.paid-tabs-information
@@ -59070,6 +59079,7 @@ tube8.com$$script[tag-content="loadPopUnder"][min-length="100000"][max-length="2
 tube8.com,tube8.es,tube8.fr##.adsbytrafficjunky
 tube8.com,tube8.es,tube8.fr##.col-3-lg.col-4-md.col-4
 tube8.com,youporn.com##div:has(> ins.adsbytrafficjunky)
+tube8.es,tube8.fr##video[autoplay]
 tube8.es,tube8.fr,youporngay.com##video[autoplay]
 tube8.net,tube8.es,tube8.com,tube8.fr###pb_template
 tube8.net,tube8.es,tube8.com,tube8.fr###result_container_fake
@@ -63907,6 +63917,7 @@ youjizz.com###rightVideoPrs
 youjizz.com##.top_pr
 youjizz.com##[data-i18n^="ads."]
 youjizz.com##[data-i18n^="ads."] + label
+youjizz.com##[img][src*="blob:"]
 youjizz.com##a[href^="//"][target="_blank"]:not([href*="https://www.youjizz.com"])
 youjizz.com##td[valign="top"] + td[width="301"]
 youjizz.com,youporngay.com##[img][src*="blob:"]
@@ -63956,6 +63967,7 @@ youngsexhd.net$$script[tag-content="api_host"][max-length="3500"]
 youngsexhd.net,eteenporn.com,teenfuckhd.com##.banner-on-player
 youngsextube.me##.player-ad
 youngsseafood.co.uk##.alert, #alert
+youporn.com##.footer-element-container
 youporn.com##.playWrapper > div[class][id] div[class] > img[src^="data:image"]
 youporn.com##aside:has(a.ad-remove)
 youporn.com$$script:contains(/window\.[\s\S]*?_zone_[\s\S]*?{"zone_id":/)
