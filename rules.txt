@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-22 07:11:42（北京时间）
+! Version: 2025-07-22 08:55:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64893
+! Total count: 64902
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2302,6 +2302,7 @@
 17track.net##.gad-container
 17travel.net##.ui_adblock
 17travel.net,fun01.net,itislooker.com,lookerpets.com,17goforward.com,lookforward.info,happyday543.com,starfocus.news##.ui_adblock
+17travel.net,itislooker.com,lookerpets.com,17goforward.com,lookforward.info,happyday543.com,starfocus.news##.ui_adblock
 17tui.cc,tropica.cn##.a_mu1
 17wtv.com##.ad3
 17yy.com###addiv
@@ -2405,6 +2406,7 @@
 1905.com##.zx-pic
 1905.com##.zx-small-pic
 1905.com,news.ltn.com.tw,commonhealth.com.tw,health.tvbs.com.tw,idreamx.com,xchina.co,99kubo.tv,manhuafen.com,world68.com##.ad
+1905.com,news.ltn.com.tw,commonhealth.com.tw,health.tvbs.com.tw,idreamx.com,xchina.co,manhuafen.com,world68.com##.ad
 1909.me,8se.me,crxs.me,xchina.biz,xchina.co##.media
 1909.me,8se.me,crxs.me,xchina.biz,xchina.co##.push-top
 192-168-1-1-ip.co,receivesms.co###adresp
@@ -11516,6 +11518,7 @@
 @@||kcjervis.github.io/jervis/static/media/src/images/ships/banner/
 @@||kdocs.cn^
 @@||kdpic.pchome.com.tw/img/js/xpcadshow.js$domain=game735.com
+@@||kdpic.pchome.com.tw/img/js/xpcadshow.js$script,domain=10co.xyz
 @@||kdpic.pchome.com.tw/img/js/xpcadshow.js$script,domain=10co.xyz|10co.me
 @@||kecapku.com^$generichide
 @@||keepassxc.org^
@@ -25465,6 +25468,7 @@ chinaz.com##.red[href*=".wsisp.net/"]
 chinaz.com##.scrollload-content > .single-mode:first-child
 chinaz.com##.titright
 chinaz.com##.txtAdBox
+chinaz.com##div[style^="width:300px;height:250px;"]
 chinaz.com,99kubo.tv##div[style^="width:300px;height:250px;"]
 chinaz.com,cnbeta.com,oschina.net##a[href^="http://click.aliyun.com/"]
 chinaz.com,mydrivers.com,oschina.net##a[href*="click.aliyun.com"]
@@ -42894,6 +42898,8 @@ mamecn.com##.jjMain_bg
 mamecn.com##.njjGsxzLeft > dl > .cont1
 mamecn.com##.njjGsxzRight
 mamibuy.com.tw##.content-ad-spa
+mamibuy.com.tw,avcao.cc##.layui-layer
+mamibuy.com.tw,avcao.cc##.layui-layer-shade
 mamibuy.com.tw,dyzd1.com,avcao.cc##.layui-layer
 mamibuy.com.tw,dyzd1.com,avcao.cc##.layui-layer-shade
 mamieastuce.com##.k39oyi
@@ -46590,6 +46596,7 @@ niagarathisweek.com##.polarBlock:has(.polarAds)
 niagarathisweek.com##.sticky-parent
 niaogebiji.com##.adImgBox
 niceareas.co.uk##.rayAlertBox
+nicekkk.com###custom_html-2
 nicekkk.com,briian.com###custom_html-4
 nicekkk.com,c4dm.live###custom_html-2
 nicelocal.com##.js-results-slot
@@ -46727,6 +46734,8 @@ niveamen.co.uk###popup, .popup
 niveau-huile.com##.modal
 nivod2.com,nivod2.tv,nivod4.com,nivod4.tv,nivod5.com,nivod5.tv,nivod7.tv,nivod8.tv,nivod9.tv##.img-list > .img-item:has(> a[href*=".ad_click"])
 nivod2.com,nivod2.tv,nivod4.com,nivod4.tv,nivod5.com,nivod5.tv,nivod7.tv,nivod8.tv,nivod9.tv##a.focus_title_inner[href*=".ad_click"]
+nivod2.com,nivod2.tv,nivod4.com,nivod5.com##.img-list > .img-item:has(> a[href*=".ad_click"])
+nivod2.com,nivod2.tv,nivod4.com,nivod5.com##a.focus_title_inner[href*=".ad_click"]
 nivod5.tv,nivod8.tv##.qy20-h-carousel__li:nth-child(-n+2)
 nivod9.tv,nivod8.tv,nivod7.tv##.nav-ads
 niyogbd.xyz##.popSc
