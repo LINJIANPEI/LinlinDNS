@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-23 20:22:34（北京时间）
+! Version: 2025-07-23 21:33:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64888
+! Total count: 64892
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4851,7 +4851,6 @@
 @@||accountapi.dianping.com^
 @@||accounts.ea.com^$stealth
 @@||accounts.ea.com^$stealth=3p-cookie
-@@||accounts.google.com/gsi/$stealth=referrer
 @@||accounts.google.com^$generichide
 @@||accounts.google.com^$popup
 @@||accounts.home.id/authui/client/assets/vendors/new-relic.min.js$~third-party
@@ -14410,6 +14409,7 @@
 @@||personalization.bloomberg.com/user/recommendations/cfru?$domain=bloomberg.com,stealth=referrer
 @@||pes-patch.com^$generichide
 @@||pesmaster.com^$generichide
+@@||petdrugsonline.co.uk/scripts/gtm.js$~third-party
 @@||petrochina.com.cn/advertisement_
 @@||peytonlist.ru^$generichide
 @@||pf.s.360.cn^
@@ -48171,6 +48171,9 @@ panelinha.com.br###lgpd
 panelook.com###container > #rightrow
 pani-teresa.com.pl##.head-page-information
 paninimania.com###id_acco
+pannunghd.com##.ad-box-widget
+pannunghd.com##a[target="_blank"] > img
+pannunghd.com##div[class^="banner-"]
 panodyssey.com###rgpdbox, .modal-backdrop
 pansci.asia##body > section.hide-on-print.mt-5
 pansci.asia##div[class^="pansc-"]
@@ -54929,8 +54932,6 @@ spaziogames.it##.adv
 spaziogames.it##.customads
 spaziogames.it##.mx-auto > div.text-center:has(> div.flex > div.not-prose > a[href^="https://www.amazon.it/"])
 spaziogames.it##div[id^="spazi-"]
-spazioplay.it##.stream-item
-spazioplay.it##.stream-item-widget
 spaziorock.it###bottom-banner
 spbo1.com##td[width="100%"][height="18"][bgcolor="#ffffff"][align="center"][colspan="13"]
 spbtv.com###app > div > div > [class*="container"]
@@ -58408,6 +58409,9 @@ today.az###banner_750x90
 today.com##.topbannerAd
 today.com##div[class^="styles_marqueeBreaking"]
 today.line.me##.adModule-root
+today.line.me##.scrollAd-root
+today.line.me##article > div[class^="css-"]:has(> .defaultAd)
+today.line.me##article > div[class^="css-"]:has(> div[class^="css-"]:only-child > .backdropAd-wrapper)
 today.line.me##div[id^="ad-module-"]
 today.ua##.politic_confidel
 todaygirls.co.uk##.addspace
