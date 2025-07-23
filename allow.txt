@@ -2,7 +2,7 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-23 08:56:34（北京时间）
+! Version: 2025-07-23 10:54:44（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 19802
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
@@ -14118,7 +14118,7 @@
 @@||metamani.blog15.fc2.com^$generichide
 @@||meteomedia.com^$generichide
 @@||metrics.bangbros.com/tk.js$~third-party
-@@||metrics.bitdefender.com/b/ss/*$domain=bitdefender.com
+@@||metrics.bitdefender.com/b/ss/*$~third-party
 @@||metrics.brooksbrothers.com/b/ss/$image
 @@||metrics.consumerreports.org/b/ss/cuglobal/
 @@||metrics.corus.ca/b/ss/corus-tv-globalnews/
@@ -15933,7 +15933,6 @@
 @@||player.avplayer.com/script/*/avcplayer.js$domain=sportbible.com
 @@||player.avplayer.com/script/*/libs/hls.min.js$domain=sportbible.com
 @@||player.avplayer.com/script/2/v/avcplayer.js$domain=adnkronos.com
-@@||player.avplayer.com^$script,domain=explosm.net|gamingbible.co.uk|justthenews.com|ladbible.com
 @@||player.avplayer.com^$script,domain=explosm.net|gamingbible.co.uk|justthenews.com|ladbible.com|tiz-cycling-live.io
 @@||player.backscreen.com^$stealth=ip
 @@||player.chillizet.pl^$generichide
@@ -17058,6 +17057,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=link.rota.cc
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=weshare.is
 @@||securepubads.g.doubleclick.net^$domain=hoyts.com.au
+@@||securepubads.shareus.io/scripts/tag/js/gpt.js$domain=wstream.cloud|viralharami.com|app.fileszero.com
 @@||secureservercdn.net/*.myftpupload.com/wp-content/themes/jannah/assets/js/advertisement.js$domain=sailuniverse.com
 @@||securetoken.googleapis.com^$stealth=referrer
 @@||securevideotoken.tmgrup.com.tr/webtv/secure^$stealth=ip
@@ -17546,7 +17546,7 @@
 @@||ssports.com/images/resources/web/live/js/LiveAds.js
 @@||sssbozh.com^$generichide
 @@||sst.soranews24.com/gtm.js$script,~third-party
-@@||sstats.bitdefender.com^$domain=bitdefender.com
+@@||sstats.bitdefender.com^$~third-party
 @@||sstats.omahasteaks.com/b/ss/
 @@||st-*.dynamicyield.com/st*&inHead=true&id=*&jsession=*scriptVersion=*&noConsent=
 @@||st-eu.dynamicyield.com/st$domain=amorelie.de
