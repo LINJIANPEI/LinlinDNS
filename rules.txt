@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-24 07:11:56（北京时间）
+! Version: 2025-07-24 08:55:57（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64896
+! Total count: 64901
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3426,6 +3426,7 @@
 591hx.com##.banner_w
 5dariyanews.com##a[href="https://www.5dariyanews.com/sponsored-ads.aspx"]
 5dm.app##[src*="sinaimg.cn"]
+5dm.link###player_pause
 5dm.tv##a > img[src*=".sinaimg."]
 5dm.tv##a[href*="suo.im"]
 5dm.tv##a[href^="/sina/"]
@@ -16604,6 +16605,7 @@
 @@||stats.statbroadcast.com/interface/webservice/event/$~third-party
 @@||stats.uptimerobot.com^
 @@||stats.wnba.com/templates/angular/tables/events/$~third-party
+@@||stats.wp.com/w.js$script,domain=wordpress.com
 @@||stats.wp.com^$domain=sportshub.to
 @@||stats.wp.com^|$domain=topsporter.net
 @@||stats.wp.com^|$xmlhttprequest,domain=werfgt.fun
@@ -37163,6 +37165,8 @@ idnes.cz###r-super300
 idnes.cz###selfart-box
 idnes.cz###space-c-add > div[id][class*=" "]
 idnes.cz##.art-full > #text-out-box + div:not([class]):not([id]) > .r-head
+idnes.cz##.r-head
+idnes.cz##.r-head + div.r-body
 idnes.cz##.r-main
 idnes.cz##.r-main[id^="element-"]
 idnes.cz##[id^="r98."].r-box
@@ -59486,6 +59490,7 @@ tweakreviews.com##.banner-placement__article
 tweaktown.com###DesktopTop
 tweaktown.com###background_skin
 tweaktown.com###content-container > center.center-tag
+tweaktown.com###toppbnf
 tweaktown.com##.DesktopRightBA
 tweaktown.com##.adcon
 tweaktown.com##.center-tag-rightad
