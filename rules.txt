@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-24 08:55:57（北京时间）
+! Version: 2025-07-24 10:53:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64901
+! Total count: 64899
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9639,7 +9639,6 @@
 @@||godlikeproductions.com/adblock/js/checks/fingerprint.js$domain=godlikeproductions.com
 @@||gofobo.com^$generichide
 @@||gogoanime.*//page-recent-release*.html
-@@||gogoanime.cool^$generichide
 @@||gogodl.com/*/js/advertisement.js
 @@||gogoplay5.com^$subdocument
 @@||goha.ru/app/video/adblock.teaser.js|$script,domain=goha.ru
@@ -28778,6 +28777,7 @@ doci.pl###video-ad-preroll
 doci.pl##.span4 > .content > div[style="font-size:10px;color:grey;float:left;padding-left:5px;"]
 docin.com###docindex_ad
 docin.com##.cpro_mod
+docin.com##.mini-series-container
 docin.com##.moneyBox
 docin.com##.sider_gg
 docs.cfw.lbyczf.com###推广
@@ -34399,7 +34399,6 @@ gogetaroomie.com###top-space
 gogetaroomie.com##.left-space
 gogift.com##.iziToast-wrapper
 gogo.mn##.gg_ban_div
-gogoanime.co.at##.megavid > .mvelement > .kln
 gogoanime2.org##.adsverting
 gogoanimes.fi##.ads_watch_top
 gogonu.com##.special-image
@@ -62045,7 +62044,6 @@ wiki.cs.money###modal
 wiki.gg###wikigg-sl-footer
 wiki.gg###wikigg-sl-header
 wiki.gg###wikigg-sl-rail
-wiki.gg##.wikigg-showcase__reserved--mrec
 wiki.gg##.wikigg-showcase__unit
 wiki.gg##[href^="https://app.wiki.gg/showcase/"]
 wiki.gg##div[class^="games-showcase"]
