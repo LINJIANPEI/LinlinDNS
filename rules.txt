@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-27 15:12:19（北京时间）
+! Version: 2025-07-27 16:14:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64927
+! Total count: 64933
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4901,6 +4901,7 @@
 @@||act.qzone.qq.com^$important
 @@||act.vip.iqiyi.com^
 @@||act.zhuanzhuan.com^
+@@||action.metaffiliation.com^
 @@||action.metaffiliation.com^|
 @@||actiris.be/urchin.js
 @@||active.jd.com^
@@ -9631,6 +9632,7 @@
 @@||go.onelink.me/*?pid=
 @@||go.redirectingat.com/*&url=$domain=forums.redflagdeals.com
 @@||go.redirectingat.com^$document
+@@||go.scorptec.com.au^
 @@||go.scorptec.com.au^|
 @@||go.tnshort.net^$stealth=referrer
 @@||go.xliirdr.com/?*targetDomain=fikfapcams.com$domain=fikfap.com
@@ -23584,9 +23586,12 @@ bnonews.com##.advertisement
 bnonews.com##.bnone-widget
 bnonews.com##div[id^="div-gpt-ad"]
 bnpparibas.com##cts-disclaimer-cookies
+bo3.gg##.c-baner-custom
+bo3.gg##.c-baner-partner-branding
 bo3.gg##.c-banner-custom
 bo3.gg##.c-banner-partner-branding
 bo3.gg##.c-banner-partner-header-button
+bo3.gg##.c-banner-partner-top-manager
 bo3.gg##.c-editorjs-elements-banner-image
 boardgamegeek.com###dfp-leaderboard-lg
 boardgamegeek.com###main_content .amazon_search_ad
@@ -62317,6 +62322,7 @@ wjunction.com##.global-banner
 wjunction.com##.message--post + div[style="margin: 30px; text-align: center;"] > a[href][target] > img
 wjunction.com##a[href="http://katfile.com/make-money.html"]
 wjunction.com##a[href^="https://xpornium.net/"]
+wjunction.com##div[style^="text-align: center;"] > a[target="_blank"] > img
 wjx.cn###ctl01_ContentPlaceHolder1_divProMsg
 wk.baidu.com###na-dialog-root
 wk.baidu.com##.bottom-bar-guid-to-univer.bottom-bar-global
