@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-29 15:17:24（北京时间）
+! Version: 2025-07-29 16:16:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64961
+! Total count: 64960
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13202,7 +13202,6 @@
 @@||ofertasahora.com^$generichide
 @@||offgamers.com/checkout/buyNow/$document,xmlhttprequest
 @@||officeapps.live.com/*.aspx$stealth
-@@||official.paymaya.com^
 @@||official.paymaya.com^|
 @@||oglaszamy24.pl/*js-css/reklamy/bannery/*/adv.js
 @@||ogrenciyegelir.com^$generichide
@@ -13239,7 +13238,6 @@
 @@||omggamer.com/porpoiseant/banger.js
 @@||omglyrics.com^$generichide
 @@||omhm.qc.ca^$stealth=dpi
-@@||omniture.walmart.com^
 @@||omniture.walmart.com^|
 @@||omns.americanexpress.com/b/ss/
 @@||omofun.link^
@@ -59542,6 +59540,7 @@ tw.yahoo.com##.tabads
 tw.yahoo.com##.travelads
 tw.yahoo.com##[class*="has-beacon-click"][data-wf-beacons^="https://*.gemini.yahoo.com/"]
 tw.yahoo.com##div[id^="applet_p_"][class^="dealstdv2wafer"]
+tw.yahoo.com,news.yahoo.com##div[id^="sda-"]
 tw100s.com##div[class="ui_adblock"]
 tw116.com###t365
 twavking.com##.da_single_video
