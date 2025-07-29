@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-29 09:01:52（北京时间）
+! Version: 2025-07-29 11:43:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64951
+! Total count: 64958
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23166,6 +23166,10 @@ birdwatchingdaily.com##.mobile-incontent-ad-label
 birja-in.az##.right_banner
 birja.com##body .left-banner
 birja.com##body .right-banner
+birminghammail.co.uk,dailyrecord.co.uk###right-aside-wrapper
+birminghammail.co.uk,dailyrecord.co.uk##.react-loading-skeleton
+birminghammail.co.uk,dailyrecord.co.uk##div[class^="sc-"]:has(> span[aria-live="polite"] > .react-loading-skeleton)
+birminghammail.co.uk,dailyrecord.co.uk##div[data-testid^="commercial-"]
 birminghammail.co.uk,mirror.co.uk###taboolaRightRailsResponsive
 birminghammail.co.uk,mirror.co.uk,liverpoolecho.co.uk##div[class*="BoxStyles_commercial"]
 birminghammail.co.uk,mirror.co.uk,liverpoolecho.co.uk##div[class^="Article_below-article-commercial-box"]
@@ -32495,7 +32499,6 @@ forward.com###wp_piano_top_wrapper
 forward.com##div.sticky-container:first-child
 forzearmate.org###WPS_popup_message
 fossbytes.com##a[href^="https://www.linkev.com/order?a_fid="][target="_blank"] > img
-fossforce.com##[href^="https://go.nextcloud.com/r/"]
 fossforce.com##div[id^="fossf-"]
 fosspost.org###media_image-5
 fotav.hu##.consent__dialog
@@ -39676,6 +39679,7 @@ jpost.com##.banner-h-270
 jpost.com##.banner-h-880
 jpost.com##.divConnatix
 jpost.com##.hide-for-premium
+jpost.com##.main-banner-container
 jpost.com##.right-side-banner
 jpost.com##.spotim-banner
 jpost.com##.sticky-top-banner
@@ -46325,6 +46329,9 @@ news.xfastest.com##.vw-sticky-sidebar-wrapper #custom_html-5
 news.xiaomi-miui.gr##aside div.widget:has(> div[class^="google_responsive_"])
 news.xiaomi-miui.gr##div[class^="google_responsive_"]
 news.yahoo.com###module-mktBanner
+news.yahoo.com###sda-mid-right-2-iframe
+news.yahoo.com###sda-mid-right-iframe
+news.yahoo.com###sda-top-right-iframe
 news.yahoo.com##.caas-iframe.fireplace
 news.yahoo.com##div[id^="sda-"]
 news.zindaa.mn,24tsag.mn,zaluucom.mn##.banner
