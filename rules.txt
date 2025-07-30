@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-30 20:23:03（北京时间）
+! Version: 2025-07-30 21:34:53（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 64971
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -2680,6 +2680,7 @@
 24rodopi.com,rodopi24.blogspot.com##.sidebar-inner
 24rodopi.com,rodopi24.blogspot.com##a[style="float:left;width:254px;"]
 24sata.hr###didomi-host
+24sata.hr##.js_topProducts
 24smi.org##.cookie-modal
 24timezones.com##.ad-container-diff
 24timezones.com##.ad-container-top-index
@@ -16098,6 +16099,7 @@
 @@||slidesharedownloader.ngelmat.net^$generichide
 @@||slike.indiatimes.com/feed/stream/*.json$domain=timesofindia.indiatimes.com
 @@||slimjet.com/translate.php^$document
+@@||slingcommerce.com/graphql$stealth=3p-auth
 @@||slink.bid^$generichide
 @@||slit.cn/source/plugin/unadblock/*.js
 @@||sltrib.com/pb/resources/scripts/utils/ads/ads.js
@@ -49448,6 +49450,7 @@ poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="g
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="go"] > div[class^="go"]:first-child:has(> div[class^="go"]:only-child > div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
 poczta.onet.pl##.main-container > div[class^="go"]:only-child > nav + [class^="go"] > div[class^="go"]:last-child:has(> div[class^="go"]:only-child > div[class^="go"]:first-child + div[class^="go"]:last-child > .onet-ad:only-child)
+poczta.onet.pl##div[data-screening-append] > div[class^="go"] > main + div[class^="go"]:has(> div[class^="go"]:only-child > div[class^="go"]:only-child > div[class^="go"]:only-child > div[class^="go"]:first-child + .onet-ad:last-child)
 poczta.wp.pl##dd-holder[slot="DOUBLE_BILLBOARD"]
 poczta.wp.pl##dd-holder[slot="PANEL_PREMIUM"]
 poczta.wp.pl##div[ng-if="CommonController.showBannerTop"]
@@ -61549,8 +61552,6 @@ wcjbb.com###frame37boCx
 wcjbb.com###frameo834m9
 wcny.org###soliloquy-12716
 wco.tv##div[style*="float:right; width:500px;"][style*="height:3"]
-wco.tv,wcofun.net##div[style="float:right; margin-top:-5px"]
-wco.tv,wcofun.net##div[style]:has(> div[class^="reklam_"]:only-child)
 wcoanimedub.tv,wco.tv##div[style^="float:right; width:300px; height:"]
 wcoanimesub.tv##div[style="float:right; width:420px; height:250px"]
 wcoanimesub.tv,wcoanimedub.tv##.video-page-main + div[style^="background:"] > div[style^="float:right;"]
@@ -61570,7 +61571,6 @@ wcostream.com##.reklam_pve
 wcostream.com,watchcartoonsonline.eu,animeflv.net##div > div[id][style*="overflow:"][style*="hidden;"][style*="height:"]
 wcostream.net##.reklam_pve
 wcostream.net##img[src^="premiumad"][src$=".png"]
-wcostream.tv,wcofun.net,wcostream.net,wco.tv,wcoanimesub.tv,wcoforever.net,wcoanimedub.tv##.anti-ad
 wd.znds.com##.dxb_bc
 wd40.nl##div[x-data="cookieModal"]
 wddty.com###SiteMessageWrap

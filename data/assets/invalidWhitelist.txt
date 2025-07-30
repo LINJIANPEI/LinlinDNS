@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13870
+! Total count: 13873
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-07-30 10:10:08（北京时间）
+! Version: 2025-07-30 20:55:43（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -16047,6 +16047,7 @@
 @@||nextcloud.com/remote.php/$~third-party,xmlhttprequest
 @@||nextstream.org^$stealth=referrer,domain=animepahe.com|kwik.cx
 @@||nextwavepathfinders.xyz/content/*.html$xmlhttprequest,stealth=referrer
+@@||nfl.com^$generichide
 @@||nflcdn.com/static/site/$script,domain=nfl.com
 @@||ngastatic.com/*/tracker.js$domain=ads.allegro.pl
 @@||nhk.or.jp^$content
@@ -17365,6 +17366,7 @@
 @@||platform-eu.cloud.coveo.com^$stealth=3p-auth,domain=fiskars.com
 @@||platform.bombas.com/external/gtm.js$script,~third-party
 @@||platform.cloud.coveo.com^$stealth=3p-auth,domain=intel.*
+@@||platform.pubadx.one/pubadx-ad.js$domain=embed.wcostream.com
 @@||platform.twitter.com/$domain=discovery.com
 @@||platform.twitter.com/js/moment~timeline~tweet.*.js$domain=gamerant.com
 @@||platform.twitter.com/js/tweet.*.js$domain=gamerant.com
@@ -18791,6 +18793,7 @@
 @@||slike.indiatimes.com/feed/stream/*.json$domain=timesofindia.indiatimes.com
 @@||slike.indiatimes.com/feed^$domain=tvid.in
 @@||slimjet.com/translate.php^$document
+@@||slingcommerce.com/graphql$stealth=3p-auth
 @@||slink.bid^$generichide
 @@||slit.cn/source/plugin/unadblock/*.js
 @@||sltrib.com/pb/resources/scripts/utils/ads/ads.js
