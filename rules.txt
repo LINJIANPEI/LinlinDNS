@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-07-30 15:17:48（北京时间）
+! Version: 2025-07-30 16:16:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64966
+! Total count: 64971
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9618,7 +9618,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -13239,6 +13238,7 @@
 @@||omggamer.com/porpoiseant/banger.js
 @@||omglyrics.com^$generichide
 @@||omhm.qc.ca^$stealth=dpi
+@@||omniture.walmart.com^
 @@||omniture.walmart.com^|
 @@||omns.americanexpress.com/b/ss/
 @@||omofun.link^
@@ -14545,6 +14545,7 @@
 @@||platform-eu.cloud.coveo.com^$stealth=3p-auth,domain=fiskars.com
 @@||platform.bombas.com/external/gtm.js$script,~third-party
 @@||platform.cloud.coveo.com^$stealth=3p-auth,domain=intel.*
+@@||platform.pubadx.one/pubadx-ad.js$domain=embed.wcostream.com
 @@||platform.twitter.com/$domain=discovery.com
 @@||platform.twitter.com/js/moment~timeline~tweet.*.js$domain=gamerant.com
 @@||platform.twitter.com/js/tweet.*.js$domain=gamerant.com
@@ -22842,6 +22843,7 @@ bewustnieuwbouw.nl###c-bar
 beyondgames.biz,ecoustics.com###zox-lead-bot
 beyondthebox.it##.elementor-popup-modal
 bezpiecznedane.gov.pl##.cookie-popup-modal, .modal-backdrop
+bezprawnik.pl##.newAd
 bezprawnik.pl##.wall-bg-link
 bezprawnik.pl##div[class^="ad_slot_"]
 bezprzeplacania.pl##div[style="text-align: center; margin: 0; padding: 0;"] > a[target="_blank"] > img
@@ -61553,6 +61555,9 @@ wcoanimedub.tv,wco.tv##div[style^="float:right; width:300px; height:"]
 wcoanimesub.tv##div[style="float:right; width:420px; height:250px"]
 wcoanimesub.tv,wcoanimedub.tv##.video-page-main + div[style^="background:"] > div[style^="float:right;"]
 wcoanimesub.tv,wcoanimedub.tv##div[id^="sidebar_"] > div[style^="float:right;"]
+wcoflix.tv,wco.tv,wcofun.net##div[style="float:right; margin-top:-5px"]
+wcoflix.tv,wco.tv,wcofun.net##div[style]:has(> div[class^="reklam_"]:only-child)
+wcoflix.tv,wcostream.tv,wcofun.net,wcostream.net,wco.tv,wcoanimesub.tv,wcoforever.net,wcoanimedub.tv##.anti-ad
 wcofun.com,wcoforever.net,thewatchcartoononline.tv###sidebar_r1
 wcofun.net##.reklam_kapat
 wcofun.net##div[style="width:160px; height:600px"]
