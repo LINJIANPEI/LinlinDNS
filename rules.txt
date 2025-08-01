@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-01 15:19:02（北京时间）
+! Version: 2025-08-01 16:16:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64991
+! Total count: 64997
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13205,6 +13205,7 @@
 @@||ofertasahora.com^$generichide
 @@||offgamers.com/checkout/buyNow/$document,xmlhttprequest
 @@||officeapps.live.com/*.aspx$stealth
+@@||official.paymaya.com^
 @@||official.paymaya.com^|
 @@||oglaszamy24.pl/*js-css/reklamy/bannery/*/adv.js
 @@||ogrenciyegelir.com^$generichide
@@ -18485,6 +18486,7 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
+@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -33653,6 +33655,7 @@ gays-cruising.com##.m-row.h_250
 gays-cruising.com##.m-row.h_335
 gays-cruising.com##.w-100.h_250
 gaystream.click,gaystream.pw,pornsos.com##.a-box
+gaystream.pro##body > div[class]:empty
 gaystream.pw###sponsored
 gaystream.pw##.entry-bottom-ads
 gaytiger.com##.content-inner-col > .aside-itempage-col
@@ -40066,6 +40069,8 @@ kastinger.com##.cache-notice
 kastown.com##.tkyrwhgued
 katadata.co.id##.center-belt
 katadata.co.id##.footer_sticky
+kataloq.gomap.az##.left-content-container > #partners
+kataloq.gomap.az##div[class*="banner-r"]
 katerionews.com##body > div[id][style^="position: fixed;top:"][style*="z-index:"]
 katestube.com###bottom-adv.bottom-adv
 katestube.com###end-block
@@ -58742,6 +58747,7 @@ toronto.citynews.ca##.big-box-ad
 toronto.citynews.ca##div[data-ad-type]
 toros.co##.trtbl
 torquenews.com##.header-wrapper
+torquenews.com,robots.net,tel-no.com,pdfforge.org##body .adsense
 torrends.to##.notice-top
 torrentdownloads.cc##.inner_container > div:not([class]):not([id]) > div[style^="float:left"]
 torrentdownloads.cc##a[href*="bit.ly"][rel="nofollow"] > img[alt]
