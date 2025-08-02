@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-02 17:12:55（北京时间）
+! Version: 2025-08-02 18:11:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65010
+! Total count: 65014
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -29111,6 +29111,7 @@ download.hr##.ad_unit_label
 download.hr##.add_responsive_fullrow_box
 download.hr##.add_right_big
 download.it##.opera-spt
+download.megaup.net##[style*="display: inline-flex; flex-wrap: wrap; justify-content: center; padding: 26px 0"]
 download.mokeedev.com##.ad-wrapper+div[class="center-align"] > span[class="grey-text text-darken-2"]
 download.net.pl##.sidebar-container a[href^="https://amzn.to/"]
 download.oxy.st###izobrazhenie-1
@@ -55574,8 +55575,11 @@ startmail.com##footer ~ .banner
 startnext.com###toast, .toast
 startpage.com###main > div[style^="margin-bottom:"] > div[style^="display: block; padding:"]:has(> div[style^="margin-bottom:"] > svg)
 startpage.com##.a-bg
+startpage.com##.a-bg-result
 startpage.com##.css-1j5r2ie
 startpage.com##.pa-bg
+startpage.com##.pa-bg + section
+startpage.com##div[style="display: block; padding: 12px; margin: 0px 0px 10px; border-radius: 4px; border: 1px solid rgb(59, 67, 91);"]
 startribune.com###highImpactAd
 startribune.com##[class*="htlad-"]
 startribune.com##div[data-testid="breaker-ad"]
