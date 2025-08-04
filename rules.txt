@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-04 18:15:44（北京时间）
+! Version: 2025-08-04 19:12:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65029
+! Total count: 65034
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15399,6 +15399,7 @@
 @@||s.206ads.com/js/data/androidauthority.com.js$domain=androidauthority.com
 @@||s.206ads.com/prebid.js$domain=androidauthority.com
 @@||s.360.cn^$important
+@@||s.bluecore.com^|
 @@||s.bstarstatic.com/ogv/subtitle/$stealth=referrer
 @@||s.click.alimama.com^
 @@||s.click.taobao.com^
@@ -17429,6 +17430,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^|
 @@||tron-free.com^$generichide
 @@||trpc.gamecenter.qq.com^$important
 @@||trstx.org/overroll/$domain=jetfilmizle.link|trstx.org
@@ -23347,6 +23349,7 @@ bladi.info##.notice
 blanco-germany.com##.privacyTop
 blankcharacter.net##.side-banner
 blanktext.co##.min-h-\[230px\]
+blanktext.co,finbold.com,gizmodo.com,op.gg,outsideonline.com,radio.net##.min-h-\[250px\]
 blanktext.co,finbold.com,gizmodo.com,op.gg,radio.net##.min-h-\[250px\]
 blasapisguncuevas.blogcindario.com##body > div[id][class]
 blasternation.com###xobda
@@ -48121,7 +48124,9 @@ outofbit.it##.ct-code-block
 outofmemory.cn##.iloveoutofmemory660
 outofmemory.cn##.tgBar
 outputter.io###content > section.html
+outsideonline.com##.min-h-\[150vh\]
 outsideonline.com##.notice
+outsideonline.com##.prestitial-ad
 outsphera.it##.activebar-container
 outsports.com##.adb-os-lb-top
 outsports.com##.bg-gray-100:has(.adb-os-lb-incontent)
