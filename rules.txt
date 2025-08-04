@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-04 23:13:33（北京时间）
+! Version: 2025-08-05 00:16:16（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65042
+! Total count: 65049
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13235,6 +13235,7 @@
 @@||okteve.com/*&*=*&*&_=$xmlhttprequest,~third-party
 @@||olacast.live^$stealth=referrer
 @@||olamovies.cam^$generichide
+@@||olamovies.mom^$generichide
 @@||oldskool.vip^$generichide
 @@||olgame.tw^$generichide
 @@||oloadcdn.net/dl/*.mp4
@@ -13870,6 +13871,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=nsfw247.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=okdebrid.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olamovies.cam
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olamovies.mom
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olarila.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=onehack.us
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=onehack.us|competentedigitale.ro
@@ -15403,6 +15405,7 @@
 @@||s.206ads.com/js/data/androidauthority.com.js$domain=androidauthority.com
 @@||s.206ads.com/prebid.js$domain=androidauthority.com
 @@||s.360.cn^$important
+@@||s.bluecore.com^
 @@||s.bluecore.com^|
 @@||s.bstarstatic.com/ogv/subtitle/$stealth=referrer
 @@||s.click.alimama.com^
@@ -17434,6 +17437,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||tron-free.com^$generichide
 @@||trpc.gamecenter.qq.com^$important
@@ -47025,7 +47029,6 @@ notrehistoire.ch###top > [data-promo*="cookie"]
 notthebee.com##div[id^="commentList"] + div.overflow-hidden:has(> div > a[href="/join"])
 nottinghamforest.co.uk##.popup-wrapper
 nottinghampost.com##.div-gpt-ad-vip-slot-wrapper
-nottinghampost.com,birminghammail.co.uk,football.london##.topbox-cls-placeholder
 nouw.com###ConsentBanner
 nova.rs##.banner-promotion
 nova.rs##.uc-in-feed-banner
@@ -54301,6 +54304,7 @@ slovaknet.sk##iframe#ad365
 slovenskenovice.si###pos-banner
 slovnik.seznam.cz##.BannerSSP
 slovnik.seznam.cz##.TextSSP
+slow-manga.com##.header-ads-section
 sltrib.com##.grid-ad-container-2
 sltrib.com##.sltrib_medrec_sidebar_atf
 slupsk.eu##body > div > div[style*="182968"], body > #cookies
@@ -55406,6 +55410,7 @@ sportsv.net##.adv01
 sportsv.net##.box.ad
 sportsvideo.net##.admin-content > .container-fluid > div[style="width:970px;height:90px;margin: auto; margin-top: 50px;"]:not([class]):not([id])
 sportsvideo.net##.container > #banner
+sportswordz.com,raftarsamachar.in##div[class^="pro_ad"]
 sporttery.cn###newDiv
 sporttotal.tv###root > div[role="navigation"] ~ div
 sportzwiki.com###myDIV
@@ -59041,6 +59046,8 @@ tri-shop24.de##.cookie
 tri247.com##.show-ad
 triangletribune.com##.fba_links
 triblive.com###storyContent > div[data-type="float"][data-stn-player]
+tribuna.com##div[class$="__main-layout__empty-block"]
+tribuna.com##div[class^="_structured-body_"] > div[class^="_"]:has(> div > span)
 tribune.net.ph###banner-lead
 tribune.net.ph##.skinner
 tribune.net.ph##div[id^="ads-"]
