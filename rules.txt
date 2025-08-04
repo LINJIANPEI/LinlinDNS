@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-04 15:22:17（北京时间）
+! Version: 2025-08-04 16:18:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65025
+! Total count: 65029
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9505,7 +9505,6 @@
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
 @@||get.docker.com^
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -10853,6 +10852,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store|w1tv.xyz
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.corriere.it
@@ -18489,7 +18489,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -21806,6 +21805,7 @@ axutongxue.com,axutongxue.net###jjjagl
 axutongxue.com,axutongxue.net##[style^="height:58px;"]
 axutongxue.net##body > article[style]
 axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##body > [id]:has(> ul[class] > li > img.icon + a[href])
+axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##div[style*="z-index: 9999999"][style*="position: absolute"]
 axway.com##div[id*="cookiePolicyWarning"]
 ayobandung.com##.banner-top
 ayobandung.com##.sticky-banner
@@ -34992,6 +34992,7 @@ gsmarena.com###subHeader3
 gsmarena.com###subHeader3:has([href="deals.php3"])
 gsmarena.com###subHeader:has(> #topAdv)
 gsmarena.com###topAdv
+gsmarena.com##.justify-center:has(.ad-c-label)
 gsmarena.com##.module-arenaev
 gsmarena.com##.pt-10
 gsmarena.com##div[style*="padding-bottom: 24px;"]
@@ -39670,6 +39671,7 @@ joemonster.org###main_billboard
 joemonster.org###main_glowna > video[id^="vjs-rcp"]:empty
 joemonster.org##.sky-wrapper
 joemonster.org##.stored-adverts-container
+joemonster.org##.videoAdLightContainer
 joemonster.org##div[id*="Rect"]
 johanneswerk.de###cc
 johncodeos.com##.johnc-widget
@@ -44334,6 +44336,7 @@ mob.hr##.noa-banner > a
 mob.hr##.side_banner
 mob.iyingdi.com##.down-load-app-container
 mob.iyingdi.com##.reply
+mobafire.com##.r-home__guides__ad
 mobafire.com##.venatus-responsive-ad
 mobalytics.gg##div[style^="width: 400px; height:"]
 mobalytics.gg##main > div[class]:has(> div[class]:only-child > div[data-fuse]:only-child)
@@ -45135,6 +45138,7 @@ mtbiker.sk###biscuitModal
 mtech.pl###content_jquery_bottom
 mtgnexus.com###logged_out_thin
 mtgrocks.com##.htl-inarticle-ad
+mtgsalvation.com##.secondary-content:has(> .xt-placement)
 mtgsalvation.com##.xt-placement
 mthai.com###masthead
 mthai.com##.banner-wrap
