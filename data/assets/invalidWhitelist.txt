@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13871
+! Total count: 13873
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-08-05 10:18:57（北京时间）
+! Version: 2025-08-05 20:56:52（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -11147,6 +11147,7 @@
 @@||data.simpleupload.net/download/$stealth=referrer
 @@||datacloudmail.ru^$domain=cloud.mail.ru,stealth=3p-cookie|referrer
 @@||datacomp.sk^$stealth=dpi
+@@||datacrate18.xyz/file2/$stealth=referrer
 @@||datadoghq-browser-agent.com/datadog-logs-v*.js$domain=radiotimes.com
 @@||datadoghq-browser-agent.com/datadog-logs.js$domain=linktr.ee
 @@||datadoghq-browser-agent.com/datadog-rum-v*.js$domain=voici.fr|gala.fr
@@ -19812,7 +19813,7 @@
 @@||titlestorage.xboxlive.com/json/*/data/Ads/$app=Solitaire.exe
 @@||titulky.com/ads/*.js$domain=titulky.com
 @@||titulky.com/ads/titulky-ads-banner.js$domain=titulky.com
-@@||titulky.com/exitpop.js
+@@||titulky.com/exitpop*.js$domain=titulky.com
 @@||tkec.com.tw/api/ad/
 @@||tkqlhce.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@||tlc.com^$generichide
@@ -20391,6 +20392,7 @@
 @@||viamichelin.*/ntpagetag_vm.js
 @@||vibefm.pl^$generichide
 @@||victor-mochere.com^$generichide
+@@||vid.speedtodayz.site^$stealth=referrer
 @@||vid.springserve.com/vast/*einthusan.ca
 @@||vid.springserve.com/vast/*einthusan.com
 @@||vid.springserve.com/vast/*einthusan.tv

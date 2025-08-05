@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-05 20:23:31（北京时间）
+! Version: 2025-08-05 21:36:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65053
+! Total count: 65048
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -17214,6 +17214,7 @@
 @@||titlestorage.xboxlive.com/json/*/data/Ads/$app=Solitaire.exe
 @@||titulky.com/ads/*.js$domain=titulky.com
 @@||titulky.com/ads/titulky-ads-banner.js$domain=titulky.com
+@@||titulky.com/exitpop*.js$domain=titulky.com
 @@||titulky.com/exitpop.js
 @@||tj.gov.cn^
 @@||tkec.com.tw/api/ad/
@@ -47702,13 +47703,7 @@ online.pubhtml5.com##.ph5---banner---container
 online.sberbank.ru##footer > div > div + div
 online24.pt##.clm
 online2pdf.com###privacy_msg
-online2pdf.com##.adboxcontainer
-online2pdf.com##.side_bar div[class$="_title_vertical"]
-online2pdf.com##.side_bar div[id$="_blocked_vertical"]
 online2pdf.com##div[class*="adbox_"]
-online2pdf.com##div[class^="adv_"]
-online2pdf.com##div[id$="_horizontal_box"]
-online2pdf.com##td:has(> .c84a1a > div.c84a4a.adbox_container)
 onlinebarcodereader.com##.fadein-wrap
 onlinecourse24.com##.tl-topromote
 onlinecoursebay.com###matched-ads
@@ -53628,8 +53623,6 @@ shemalemodelstube.com##.featured-sites
 shemalemodelstube.com##.wrapper > .main-video ~ .heading.cf
 shemalemodelstube.com##.wrapper > .sidebar-video
 shemaleporn.xxx##.content-inner-col > .aside-itempage-col small
-shemalepower.xyz,full-hd-tube.com,xloveb.com,xbgporn.com,biporn.net,hentai-space.com,pornmoza.com,hotmoza.com,banned.porn,shemaleist.com,pelisxporno.net,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx##.adde_modal-overlay
-shemalepower.xyz,full-hd-tube.com,xloveb.com,xbgporn.com,biporn.net,hentai-space.com,pornmoza.com,hotmoza.com,banned.porn,shemaleist.com,pelisxporno.net,taradinhos.com,pasarbokep.com,tubebular.com,pornfeel.com,bootyexpo.net,demo.wp-script.com,dvdgayonline.com,hutgay.com,hen-tie.net,sogirl.so,gayguy.top,camcam.cc,stepmoms.xxx##.adde_modal_detector
 shemalesin.com##.pignu:has(span.is-av)
 shemalesin.com,bigtitslust.com,freeporn8.com###player_add
 shemalesin.com,ebony8.com,sortporn.com,freeporn8.com,amateur8.com,maturetubehere.com##.invideo.pignr
@@ -55830,6 +55823,7 @@ strava.com###stravaCookieBanner
 strawpoll.com##.strawpoll-container .mx-auto[style*="min-height:"]:has(> .adsbygoogle)
 strawpoll.com##.wrapsense
 strawpoll.de###consent-overlay
+stream.cz$$script:contains(_isNativeFunction)
 stream.offidocs.com###adxx
 stream.offidocs.com##.image-container:has(> a[href^="https://amzn.to/"])
 stream.offidocs.com##.image-container:has(> a[href^="https://track.flexlinkspro.com/"])
@@ -56662,6 +56656,7 @@ tech.hindustantimes.com##.m-to-add
 tech.hindustantimes.com##.primeDay
 tech.hindustantimes.com##.sponsoredBox
 tech.hindustantimes.com##.topGadgetsAppend
+tech.ifeng.com##body > div[style^="width:"][style*="margin: 0px auto; transition:"][style*="position: fixed; z-index:"]
 tech.qq.com##.kjad2
 tech.sina.com.cn##.zc-app
 tech.sina.com.cn##.zc-app-btn.right-bar-btn
@@ -58456,6 +58451,7 @@ titantv.com##td[id^="menutablelogocell"]
 titantv.com##td[style="vertical-align:top; position:relative; min-width:160px;"]
 titantv.com##tr.gridRow > td > [id] > div:first-child
 titantv.com##tr:has(> td[align="center"][valign="middle"][colspan="2"][class="gC"])
+titulky.com##.bnx
 titulky.com##a[href="/internetova-reklama/"]
 titulky.com##div[id^="bny"]
 tiv1.am##.banner
@@ -63676,7 +63672,6 @@ y.qq.com##.top_box
 y.qq.com##.top_operation_bar__btn
 y.qq.com##.top_operation_box
 y2down.cc##.text-center > a[href="https://loader.to/loader.apk"]
-y2mate.com###ads_spot1
 y2mate.com###adv_box
 y2mate.com##div[style$="text-align: center"] > p[style$="text-align: center"] > i
 y2mate.com##img[alt="advertisement"]
