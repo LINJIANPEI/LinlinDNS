@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-05 23:15:04（北京时间）
+! Version: 2025-08-06 00:12:49（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65048
+! Total count: 65051
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -566,6 +566,7 @@
 .redsift.com/e/o/$image
 .revolut.com/q/$image
 .ru/ads/$~xmlhttprequest
+.salesforce.com/servlet/servlet.ImageServer?$image
 .sendcloud.net/track/$image
 .sendemail.gate.io/o/$image
 .sendibt2.com/tr/op/$image
@@ -16307,6 +16308,7 @@
 @@||sportsvideo.net^$generichide
 @@||spotify.com/ad/
 @@||spotify.com^
+@@||spotifycdn.com/audio/$redirect=noopmp4-1s,app=com.apple.Safari
 @@||spotifycdn.net^
 @@||spotops.spot.im/spot/sp_*/v*?platform=$domain=bizpacreview.com
 @@||spring-plus.net^
@@ -17215,7 +17217,6 @@
 @@||titulky.com/ads/*.js$domain=titulky.com
 @@||titulky.com/ads/titulky-ads-banner.js$domain=titulky.com
 @@||titulky.com/exitpop*.js$domain=titulky.com
-@@||titulky.com/exitpop.js
 @@||tj.gov.cn^
 @@||tkec.com.tw/api/ad/
 @@||tkqlhce.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
@@ -30229,6 +30230,8 @@ emarketer.com##.skyContainer
 emathhelp.net$$script[tag-content="if (window.TextDecoder)return(new window.TextDecoder(""utf-8"")).decode("][max-length="30000"]
 embed.dugout.com##div[data-testid="keep-watching"]
 embed.listcorp.com##a[href^="https://j.moomoo.com/"]
+embed.wcostream.com###announcement
+embed.wcostream.com##.announcement-backdrop
 embedrise.com,mangoporn.net,mangoporn.co,xxxmoviestream.xyz,watchpornfree.info,streamporn.pw###overlays
 embedsports.me##.bg-dark.position-absolute
 embedy.me###video_iframe+div
