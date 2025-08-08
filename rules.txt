@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-08 07:12:22（北京时间）
+! Version: 2025-08-08 08:57:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65067
+! Total count: 65071
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23333,6 +23333,7 @@ bjd.com.cn##.screenadButtom
 bjhockey.org###homeVideoModal
 bjnews.com.cn##a[href*="/ads/"]
 bjr.de###cc
+bjs.com##.banner-cta-wrap:has([src="//retailmedia-static.criteo.com/"])
 bjx.com.cn##.layer_right2
 bjxfqc.net##script ~ ul[style]
 bkill.com##.alliance-ad
@@ -27486,6 +27487,7 @@ cw.com.tw##.bottombar
 cw.com.tw##.cw__advertising
 cw.com.tw##.emailorder
 cw.no##.cw-cookie-confirmation
+cwc.utah.gov##body > #scroll-top + div[id][class]
 cwm.edu.pl###cookies-glass
 cwtv.com###ad_728x90
 cwtvembeds.com,caminspector.net##.hola_top_element
@@ -37465,6 +37467,7 @@ igg-games.com###tm-sidebar > .uk-grid-stack > div[class="uk-grid-margin uk-first
 igg-games.com##.post > a > img
 igg-games.com##.taxonomy-description
 igg-games.com##.uk-panel.widget-text
+igg-games.com##a[href*="?aaffer="]
 igg-games.com##div[id][style^="overflow:"] > div[style="position: relative"] > a[href^="/wp-includes/"][href$=".jpg"][rel="noindex nofollow"] > img
 igg-games.com##slot + div[class]
 igg-games.com,pcgamestorrents.com##.uk-margin-medium-top a[target="_blank"] > img
@@ -52728,6 +52731,7 @@ samayam.com,navbharattimes.indiatimes.com##.rhs-mrec-wrapper
 samayam.com,navbharattimes.indiatimes.com##.wdt_amz
 samebug.io###__next > div > .fixed
 sameday.costco.com##[aria-label="Product"]:has(sp-tag)
+sameday.costco.com##li:has([aria-label="Product"] [data-dfp-eligible])
 sameday.costco.com##li:has([aria-label="Product"] sp-tag)
 samehadaku.email##.ads-float-bottom
 samehadaku.email##.hentry.has-post-thumbnail > [href]
