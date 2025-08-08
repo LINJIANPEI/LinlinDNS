@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-08 15:18:52（北京时间）
+! Version: 2025-08-08 16:16:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64865
+! Total count: 64908
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -401,12 +401,35 @@
 -ad-manager/$~stylesheet
 -ad-sidebar.$image
 -ad.jpg.pagespeed.$image
+-asset-tag.
 -assets/ads.$~script
 -banner-ads-$~script
 -click-tracker.
+-consent-banner.
 -contrib-ads.$~stylesheet
+-cookie-banner.
+-cookie-cnil.
+-cookie-dialog.
+-cookie-law-popup.
+-cookie-msg-bar.
+-cookie-notice.
+-cookie-policy.
+-cookie-popup.
+-cookies-policy.
+-eucookie.
+-facebook-share.
+-facebook-widget.
+-follow-icons.
+-follow-us-icons.
+-followicons.
+-footer-newsletter.
 -inview-tracker.
 -monero-miner.$domain=~wp-monero-miner.com
+-share-buttons2.
+-share-sprite.
+-sharebar.
+-social-panel.
+-social-sidebar.
 -sponsor-ad.$image
 -track-inview.
 -tracking-pixel.
@@ -432,6 +455,7 @@
 .advert.$domain=~advert.ae|~advert.ge|~advert.io|~advert.ly|~advert.media|~advert.org.pl
 .ar/ads/$~xmlhttprequest
 .aveda.com/t/$image
+.avito.www.booking.
 .awstrack.me/$image
 .az/adv/$~xmlhttprequest
 .backblaze.com/e2t/$image
@@ -471,6 +495,11 @@
 .com/stat-qq.html?*&click_url_final=$all
 .com/zz/*2.txt$xmlhttprequest
 .consent-$domain=pcgames.de
+.cookie_law.
+.cookienotice.
+.cookiepolicy.
+.cookiesdirective.
+.cookiesmessage.
 .crsend.com/stats/$image
 .css$script,third-party,domain=miztv.shop
 .ct.sendgrid.net/$image
@@ -491,6 +520,7 @@
 .facebook.com/tr/$image
 .facebook.com/tr?$image
 .fiverr.com/js_event_tracking/v1/track_email_open/$image
+.fscookieconsent.
 .fuse-cloud.com/$popup
 .fuse-cloud.com/$~xmlhttprequest
 .getsendmail.com/p/$image
@@ -503,6 +533,7 @@
 .gif$third-party,domain=zxc.dongludi.top|m.7ktw.com|922tp.com|cl.wpio.xyz|yasem5.com|1024pa.com|avbebe.com|cb.wpio.xyz
 .gif^$image,domain=dooporn24.com
 .gruene.de/lists/ut.php$image
+.hit.stat24.
 .hongi7ie8owiie*.site^$script,third-party
 .icu/*?zoneid=*&visitor_id=$all
 .info^$domain=hdyayinmac1.com|sleeptimer.org
@@ -560,6 +591,7 @@
 .popup_im.
 .prebid-bundle.js$script
 .prebid.$domain=~prebid.org
+.privacydatanotice.
 .prtrackings.com$popup
 .pw/ads/$~xmlhttprequest
 .recolution.de/tools/emails/open/$image
@@ -18888,13 +18920,22 @@ _advertisment.$~xmlhttprequest
 _bannerad.
 _billboard_320x100.iframe.
 _clickunder&pb=$popup
+_cookie_cnil.
+_cookie_compliance.
+_cookie_policy.
+_cookielaw_mip.
+_cookiewarn.
 _dasiqq315.
 _dating3/index.html?aref=$all
+_europecookielaw.
+_footer_twitter.
 _images/ad.$image
 _popAds.
 _prebid.js$script
 _reklama_$domain=~youtube.com
 _rony.js$script,third-party
+_share_bookmark.
+_small_share.
 _trackWebtrekkEvents.
 _view_pixel&$image
 _webanalytics.
@@ -22742,6 +22783,7 @@ bicyclette-verte.fr##div[class*="cookies"]
 biddit.be##app-cookies-notification-v2
 bielawa.pl###wiadomosccookie
 bielskiedrogi.pl##.blok-r
+bielsko.info,bielsko.tv##.blok-r-wrapper
 bien-dans-mon-train.com##.cookiecall
 bien.hu##.lapozos_728x90_cikk_elott
 biertijd.com,biertijd.xxx##div[style="text-align: center"] > a[target="_blank"] > img
@@ -59352,6 +59394,7 @@ tvn24.pl##.ad-ph
 tvn24.pl##.video-player > .videoPlayer.player-initialized .vjs-switching .vjs-loading-spinner
 tvnotas.com.mx###zone-headertwo-wrapper
 tvnz.co.nz##.AdOnPause
+tvnz.co.nz##.ad-on-pause
 tvnz.co.nz,world-nuclear-news.org##.Advert
 tvo.fi###tietosuojainfo
 tvonline123.com###ab-message

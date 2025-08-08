@@ -2,9 +2,9 @@
 ! Title: 林林dns
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-08 15:18:52（北京时间）
+! Version: 2025-08-08 16:16:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 100434
+! Total count: 100534
 *-ad.sm.cn*
 *_index_ad_
 -120_600_
@@ -30,13 +30,32 @@
 -980x60-
 -adblock-notice-
 -adobeDatalayer_bridge.js
+-banner-iklan-
 -bobo_recommend_
 -coin-hive.js
+-consent-banner-
+-cookie-banner-
+-cookie-consent.js
+-cookie-law.js
+-cookie-message.js
+-cookie-notice-
+-cookieconsent-
 -didomi.js
+-follow-icon-
+-gdpr-min.js
 -gdpr-min.js^
 -geoIP.js
 -monero-miner-
+-privacy-cookie-
+-rodo.min.js
 -scroll-tracker.js
+-share-sprite-
+-share-tools-
+-sharebar-
+-sharebuttons_
+-sharetools-
+-slide-social-
+-sprite-social-
 .1.1.1.l80.js^
 .160x600_
 .3.n.2.1.l50.js
@@ -53,14 +72,28 @@
 .ay.delivery^
 .beacon.min.js
 .content_tracking.js
+.cookielaw.js
+.cookiesdirective.js
+.cookiesdirective_
+.demandbase.*.js
+.divascookies-
 .eloqua.js
+.fbshare.js
 .gatracking.js
+.gdpr.js
+.gdpr.min
+.histats.*.js
+.hit.gemius.*.js
+.icon-google-plus
 .n.2.1.js^
 .n.2.1.l50.js^
 .n.2.1.l60.js^
 .outbound-links.pageview-props.revenue.tagged-events.js
 .pageview-props.js
+.sharebar.js
+.sharing.js
 .skimlinks.js
+.uk-cookie-consent-js.js
 ||0-l.x-tut.space^
 ||0.0.0.0^
 ||0.de.pool.ntp.org.domain.name^
@@ -92032,11 +92065,21 @@ _adblocker_detected
 _adobe_analytics.js
 _box_ad_
 _chartbeat.js
+_cookie_policy_
+_cookiebar_
+_eu_cookie_
+_eucookie_compliance_
 _fioiwhfo_
 _float_fuo.js
+_follow_me-b.png
 _naimabdd_
 _nedstat.js
+_share_widget_
+_social-button-
+_social-buttons-
+_social_footer_
 _social_tracking.js
+_social_tracking.js^
 _tm11_pmt_
 _yad_jsonp_
 accounts.mx
@@ -92113,6 +92156,7 @@ csmoney.exchange
 csmoney.money
 cyberchampion.space
 dfile.su
+directtrack.*.js
 do2a.money
 dota2.money
 dota2tool.su
@@ -92196,6 +92240,7 @@ ledger.limited
 ledgerwallet.life
 ledgerweb.exchange
 legendary-skins.fun
+lj_bookmarklet
 loot-kings.fun
 lootversus.wtf
 loreplace.wtf
@@ -92929,6 +92974,7 @@ y0utube.com.mx
 ||1.cm
 ||1.vg^
 ||10.130.208.223^
+||10022020newfolder1002002131-service1002.space^
 ||10086.win
 ||100web.store
 ||101.201.224.23
@@ -93811,6 +93857,7 @@ y0utube.com.mx
 ||23.109.87.139^
 ||23.109.87.14^
 ||23.109.87.15^
+||23.109.87.170^
 ||23.109.87.182^
 ||23.109.87.192^
 ||23.109.87.213^
@@ -94011,6 +94058,7 @@ y0utube.com.mx
 ||3movs.xxx^
 ||3s.work
 ||3v.do
+||3xns.waterfilter.in.ua^
 ||3xx.vip^
 ||4.192.72.110^
 ||4.217.184.17^
@@ -94058,6 +94106,7 @@ y0utube.com.mx
 ||45.144.139.171^
 ||45.144.139.204^
 ||45.144.139.64^
+||45.15.156.210^
 ||45.192.210.216^
 ||45.192.215.110^
 ||45.192.216.143^
@@ -94302,6 +94351,7 @@ y0utube.com.mx
 ||8pay.wang^
 ||91.204.226.224^
 ||91.207.192.31^
+||91455.vip^
 ||9178.work
 ||91p20.space^
 ||921118.wang
@@ -94391,11 +94441,17 @@ y0utube.com.mx
 ||ad.^
 ||ad.bfm.my^
 ||ad.global^
+||ad.investor.bg^
 ||ad.kaskus.co.id^
 ||ad.kissanime.ac^
 ||ad.kisscartoon.su^
 ||ad.kisstvshow.*^
+||ad.msn.co.il^
+||ad.mylook.ee^
+||ad.orbitel.bg^
 ||ad.page^
+||ad.psu.edu^
+||ad.sitelement.sk^
 ||ad.umassmed.edu^
 ||ad.uwm.edu^
 ||ad.zankhana.ltd^
@@ -94689,6 +94745,8 @@ y0utube.com.mx
 ||analytics.gatech.edu^
 ||analytics.gncc.ge^
 ||analytics.gonzaga.edu^
+||analytics.gorilla.marketing^
+||analytics.govinfo.gov^
 ||analytics.grip.events^
 ||analytics.haraj.com.sa^
 ||analytics.harbor.rodeo^
@@ -94936,6 +94994,7 @@ y0utube.com.mx
 ||atomicblast.lol^
 ||atop.fun
 ||atopiccharks.shop^
+||atrochaxctl.shop^
 ||att1.trk.alexandro.agency^
 ||atube.xxx^
 ||aucheng.vip
@@ -94962,6 +95021,8 @@ y0utube.com.mx
 ||avaz.ba^
 ||aves.art
 ||aviatica.rs^
+||avito.avito.avito.^
+||avito.avito.www.avito.^
 ||avkeyfinder.store^
 ||avril.cat^
 ||avtosfer.az^
@@ -95078,6 +95139,7 @@ y0utube.com.mx
 ||beautynewsnyc.cfd^
 ||bedirtdunt.cfd^
 ||bedlessplating.shop^
+||beeryfolding.qpon^
 ||begrimecolter.shop^
 ||behance.ltd
 ||beigongsheying.buzz^
@@ -95163,6 +95225,7 @@ y0utube.com.mx
 ||bkoffice.work^
 ||blackfridaysales.ro^
 ||blameless.work^
+||blearspellaea.shop^
 ||blessthis.agency^
 ||bllzgqbyp^
 ||bln.portofelulmeu.ro^
@@ -95209,11 +95272,14 @@ y0utube.com.mx
 ||bonito.asia^
 ||bonprix.*^
 ||bonzeryzephyr.shop^
+||booking.com-id*
+||booklng.com-*
 ||boom.ro^
 ||boost.manatee.dk^
 ||borneobulletin.com.bn^
 ||borschtinurns.shop^
 ||bot.nightbotnet.my.id^
+||bovse.shop^
 ||bowsmanguarder.shop^
 ||boxoffice.world^
 ||boxofficecollection.world^
@@ -95253,6 +95319,7 @@ y0utube.com.mx
 ||buhgalter.com.ua^
 ||bujo439.xn--qprw1e7zgh30b1b3a.xn--55qx5d^$important
 ||bulbusscabish.shop^
+||bundlelane.shop^
 ||bunkersparring.shop^
 ||bunkieloris.shop^
 ||bunkr.*^
@@ -95265,6 +95332,7 @@ y0utube.com.mx
 ||business-credit-cards-40677.bond^
 ||business24.ro^
 ||businessinsider.vip^
+||buskerreshoes.website^
 ||button.blogs.yandex.^
 ||buxnet.ir^
 ||buy-custom-label-oxhgkk.bond^
@@ -95315,6 +95383,7 @@ y0utube.com.mx
 ||campaigns.yad2.co.il^
 ||campaignsb.i-in.co.il^
 ||campongfother.rest^
+||canangafierier.uno^
 ||canvart.art^
 ||capelimit.best^
 ||capi.tr.ee^
@@ -95352,6 +95421,8 @@ y0utube.com.mx
 ||cctv5.name
 ||cctv5.name^
 ||cdn-apple.store^
+||cdn-cloud1.asia^
+||cdn-cloud9.cfd^
 ||cdn-fusion.imgcdn.store^
 ||cdn.admatic.com.tr^
 ||cdn.advg.agency^
@@ -95439,6 +95510,7 @@ y0utube.com.mx
 ||cintent.streanplay.^
 ||ciscenje.net.jumia.com.ng^
 ||cisco.website^
+||citronsstealed.website^
 ||cits.com.mo
 ||ciyuan.men
 ||ciyzmd.degrees.post.edu^
@@ -95697,6 +95769,7 @@ y0utube.com.mx
 ||data-getway.pixai.art^
 ||data-huya2-live-hd-center.win^
 ||data.angel.digital^
+||data.anisearch.^
 ||data.comunicaciones.ficohsa.com.gt^
 ||data.console.pendo.legion.work^
 ||data.emails.metro.ua^
@@ -95706,6 +95779,7 @@ y0utube.com.mx
 ||data.service.9mil.co.il^
 ||datadelivery.shop^
 ||datafeed.bet^
+||date.cursorinfo.co.il^
 ||dato.porn^
 ||dauvwl.cottonink.co.id^
 ||davidandgoliath.asia^
@@ -96139,6 +96213,7 @@ y0utube.com.mx
 ||face-book.com.vn^
 ||face-time-apple-live-video-chat-invite.life^
 ||facebook-ads.sbs^
+||faciendtabour.shop^
 ||facultymembers.sbu.ac.ir^
 ||fadian.xin^
 ||fadkra.footway.pt^
@@ -96220,6 +96295,7 @@ y0utube.com.mx
 ||findme.wang
 ||findyou.xin
 ||fins.az^
+||fintora.mom^
 ||fir.vip
 ||firefaucet.win^
 ||firemail.wang
@@ -96346,6 +96422,7 @@ y0utube.com.mx
 ||fumidsciniph.shop^
 ||fungifysinal.shop^
 ||funky-time-live.games^
+||funoriblithe.space^
 ||furuijiaju.vip
 ||fus.yad2.co.il^
 ||fusion.design
@@ -96519,6 +96596,7 @@ y0utube.com.mx
 ||grecqueedict.shop^
 ||greeksastart.digital^
 ||green-live.shop^
+||greenedenlarge.uno^
 ||greenmah.shop^
 ||groove.so^
 ||group.citic
@@ -96830,6 +96908,7 @@ y0utube.com.mx
 ||imgcacaca.vip^
 ||imgderviches.work^
 ||imglink.win
+||imgpfx.arenavision.^
 ||imguur.pictures^
 ||imhentai.xxx^
 ||imoniumlenity.shop^
@@ -96848,6 +96927,7 @@ y0utube.com.mx
 ||infocab888.life^
 ||infogr.am^
 ||infopost.center^
+||informer.minfin.com.ua
 ||ingest.sentry^
 ||inhe.*^
 ||inhi.kim
@@ -96932,9 +97012,11 @@ y0utube.com.mx
 ||izarsisals.shop^
 ||izgodni.bg^
 ||izi.su^
+||izleskulked.shop^
 ||j8.game^
 ||ja.lunkspygmean.shop^
 ||jackal.ltd^
+||jalopycarrel.cfd^
 ||jampo.com.ua^
 ||janemcnichol.art^
 ||jartto.wang
@@ -97128,6 +97210,7 @@ y0utube.com.mx
 ||knee-pain-treatment-67735.bond^
 ||knightswap.financial^
 ||knotoknot.asia^
+||knurleddeblock.guru^
 ||koalaai.vip^
 ||komoot.*^
 ||kompaz.win
@@ -97261,6 +97344,7 @@ y0utube.com.mx
 ||libgen.mx^
 ||libidexfastdelivery.shop^
 ||libreddit.domain.glass^
+||lidosquey.shop^
 ||lierenzy.fun
 ||lifeclick.ir^
 ||lightblue.red^
@@ -97463,6 +97547,7 @@ y0utube.com.mx
 ||makewallperfect.store^
 ||malayska.ug^
 ||malmierregroup.life^
+||malrau-trois-six-cinq.name^
 ||manatee.dk^
 ||mangafunc.fun
 ||manguan.vip^
@@ -97521,6 +97606,7 @@ y0utube.com.mx
 ||matt.mercadopago.com.mx^
 ||maturesex.fun^
 ||mautic.*.vn^
+||mautic.bdev.co.th^
 ||mawedbellon.life^
 ||maxhub.vip
 ||maxline.by^
@@ -97661,9 +97747,11 @@ y0utube.com.mx
 ||mention-me.email^
 ||meqjjl.bubbleroom.dk^
 ||mercut.ro^
+||messenger-notify.digital^
 ||mestierediscrivere.hubhubhub.name^
 ||meta.ua^
 ||metbuat.az^
+||metrezaannatto.shop^
 ||metrics.28yearslater.movie^
 ||metrics.abbott.com.my^
 ||metrics.abigboldbeautifuljourney.movie^
@@ -98503,6 +98591,7 @@ y0utube.com.mx
 ||push.knd.ro^
 ||push.mayads.store^
 ||push.world^
+||pushmeup.art^
 ||pushpro.co.za^
 ||pussyspace.^
 ||pussyspace.*^
@@ -98643,6 +98732,7 @@ y0utube.com.mx
 ||redubboodh.shop^
 ||regardviolas.shop^
 ||regentsuproots.life^
+||regletsminings.shop^
 ||rein.blue^
 ||rekicairned.help^
 ||reklama.eforum.lt^
@@ -98652,6 +98742,7 @@ y0utube.com.mx
 ||reliable-human.static.domains^
 ||relqfn.shop^
 ||remark.dance
+||remastcoolth.life^
 ||remote-office-kits.cfd^
 ||remoteofficesquad.shop^
 ||rengbali.fun^
@@ -99229,6 +99320,7 @@ y0utube.com.mx
 ||study-medical-assistant-vqlpbd.bond^
 ||stuppmisrule.shop^
 ||stw.extreme-down.^
+||stw.zone-telechargement.^
 ||styleweb.lv^
 ||su.pr^
 ||subbasebiggest.shop^
@@ -99474,6 +99566,7 @@ y0utube.com.mx
 ||thread-nova-live.store^
 ||threecd.name^
 ||thri.xxx^
+||thripelbertie.website^
 ||thscore.fun^
 ||thugdomgranum.shop^
 ||thujaoswego.shop^
@@ -99519,6 +99612,7 @@ y0utube.com.mx
 ||tny.so^
 ||toastscubism.qpon^
 ||toffice.space^
+||tojaubec.shop^
 ||tokenized.autos^
 ||tokopedia-tiktok.shop^
 ||tom.cat
@@ -99566,6 +99660,7 @@ y0utube.com.mx
 ||tracker.mediageneral.digital^
 ||tracker.twenga.^
 ||tracking.financialintelligence.ro^
+||tracking.news360.store^
 ||tracking.olx.^
 ||tracking.prd.infra.olx.co.id^
 ||tracking.shopee.co.id^
@@ -99690,7 +99785,6 @@ y0utube.com.mx
 ||ulerkr.ukrzoloto.ua^
 ||ulog*.*^
 ||uloodhuy.shop^
-||ultrasource.co.za^
 ||ulysse-cazabonne.cam^
 ||umami-proxy.hide.cx^
 ||umami.carasso-nadlan.co.il^
@@ -99982,6 +100076,7 @@ y0utube.com.mx
 ||wnzikn.labas.lt^
 ||wo188.win
 ||woiden.id^
+||wollybelayer.shop^
 ||wolwo.ltd
 ||woman.africa^
 ||womm.com.tr^
@@ -100033,11 +100128,13 @@ y0utube.com.mx
 ||www.azadliq.az^
 ||www.bangtuoc.vn^
 ||www.baywest.ac^
+||www.casalparis.cat^
 ||www.cg
 ||www.com.my
 ||www.digikey.*^
 ||www.djijrsh270.vip^
 ||www.ebay.*^
+||www.ereklama.mk^
 ||www.gg86639.vip^
 ||www.gio.ren^
 ||www.grwprms1188.vip^
@@ -100220,6 +100317,9 @@ y0utube.com.mx
 ||yallashoot-live.plus^
 ||yandex-agent.store^
 ||yandex.*^
+||yandex.avito.sber*
+||yandex.avito.www.^
+||yandex.pay.avito.^
 ||yangjie.asia^
 ||yangjie.li
 ||yangyi.vip
