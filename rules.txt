@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-11 18:13:38（北京时间）
+! Version: 2025-08-11 19:11:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64894
+! Total count: 64897
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22967,6 +22967,7 @@ bing.com##li[data-idx]:has(#mm-ebad)
 bing.com,cn.bing.net###bnp_rich_div
 bing.com,cn.bing.net##.ad_sc
 bing.com,cn.bing.net##.adsMvC
+bing.com,cn.bing.net##.b_algo:has(.b_ads1line)
 bing.com,cn.bing.net##.b_algo:has(.rms_img[src*="/th?id=OADD2."][src$="21.2"])
 bing.com,cn.bing.net##.b_algo:has(.rms_img[src*="=AdsPlus"])
 bing.com,cn.bing.net##.b_ans:has([class^="xm_"][class*="_ansCont"])
@@ -22974,6 +22975,7 @@ bing.com,cn.bing.net##.pa_sb
 bing.com,cn.bing.net##a[h$=",Ads"]
 bing.com,cn.bing.net##a[href*="/aclick?ld="]
 bing.com,cn.bing.net##li.b_ad
+bing.com,cn.bing.net##li:has(a[h$=",Ads"])
 bingato.com##.player-wrap1
 bingdou.com.cn,hoteastday.com##.float_ad
 bingfeng.tw###adbt
@@ -25814,6 +25816,7 @@ cn-healthcare.com##.fh_advent_wrap
 cn.bing.com##.b_bza_pole
 cn.bing.com##.bnp_rich_div_visible.bottom
 cn.bing.com##.bnp_rich_div_visible.top
+cn.bing.com,cn.bing.net##.b_bza_pole
 cn.msn.com##div.topAd.cf,div.left_Bg,div.right_Bg,div.bottomAd.cf
 cn.torrentkitty.app###note
 cna.com.tw##.ad_336_2
