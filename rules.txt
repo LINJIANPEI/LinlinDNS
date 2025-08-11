@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-11 07:11:11（北京时间）
+! Version: 2025-08-11 08:58:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64877
+! Total count: 64889
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -27,6 +27,7 @@
 &zoneid=*&request_ab$all
 (com?$script
 (com|$script
+*$denyallow=qiexs.cc,domain=qiexs.cc,xmlhttprequest,image,script
 *$doc,removeparam=/^(sp|ut|fro?)m(_|\b)/
 *$document,csp=script-src-attr 'none',domain=cruciverba.it|motscroises.fr|palabr.as|word-grabber.com|wort-suchen.de|lamire.jp|picrew.me|badmouth1.com|jin115.com|gloria.hr|etnews.com|sportsseoul.com|hoyme.jp|heraldm.com|tbsradio.jp
 *$image,redirect-rule=1x1.gif,domain=youku.com
@@ -2364,20 +2365,31 @@
 18board.com,18p2p.com##a[target="_blank"] > img[width="320"]
 18board.com,18p2p.com##a[target="_blank"] > img[width="330"]
 18board.com,18p2p.com##a[target="_blank"] > img[width="728"]
+18comic.org,18comic.vip###guide-modal
 18comic.org,18comic.vip##.container > div[style^="margin-bottom:"]:has(> div.col-lg-3 > div[data-exo])
 18comic.org,18comic.vip##.container > div[style^="padding:"]:has(> [data-group="content_page"])
+18comic.org,18comic.vip##.div_sticky2
+18comic.org,18comic.vip##.modal-backdrop
 18comic.org,18comic.vip##.modal-body > ul.pop-list
+18comic.org,18comic.vip##.row[style="display: flex;flex-wrap: wrap;"]
 18comic.org,18comic.vip##.tab-content + .row:has(> div[class] > div[class] > .group-notice)
 18comic.org,18comic.vip##.top-a2db
+18comic.org,18comic.vip##a[herf*="//"]:not([href*="comic."]) > img
+18comic.org,18comic.vip##a[href*="//"]:not([href*="comic."]) > [style*="back"]
+18comic.org,18comic.vip##a[href*="//"]:not([href*="comic."]) > div[style]
+18comic.org,18comic.vip##a[href*="//"]:not([href*="comic."]) > img
+18comic.org,18comic.vip##a[href*="//"]:not([href*="comic."]) > img + [style]
 18comic.org,18comic.vip##a[href^="http"]:not([href*="18comic."]) > img
 18comic.org,18comic.vip##body .bot-per
 18comic.org,18comic.vip##div[class="row"][style="display: flex;flex-wrap: wrap;"]
+18comic.org,18comic.vip##div[data-group][data-width="300"]
 18comic.org,18comic.vip##div[data-group^="photo_center_games_"]
 18comic.org,18comic.vip##div[data-group^="skyscraper_"]
 18comic.org,18comic.vip##div[data-height="250"][data-width="300"]
 18comic.org,18comic.vip##div[data-height="90"][data-width="728"]
 18comic.org,18comic.vip##div[style^="position: fixed; top:"]
 18comic.org,18comic.vip##img[style*="300px"]
+18comic.org,18comic.vip##style + div[style="cursor: pointer; position: relative;"]
 18comic.org,18comic.vip,52movieba.com,5dm.tv,acglala.net,ainuody.com,awaker.cn,bimiacg.com,cangku.in,ccav1.com,cdsoso.me,cgown.com,cn163.net,cosersuki.org,dzbhdm.com,epinv.com,eroacg.com,galacg.me,gmgard.com,halitv.com,haochi123.com,hexieshe.cn,hexieshe.com,hexieshe.xyz,hggard.com,hmghmg.com,hmog.me,htcui.com,huan.moe,idanmu.at,jitapu.com,kisssub.org,languang.co,liuli.pw,meijutt.tv,mikuclub.org,mtrend.cn,mydrivers.com,nxing.cn,oyksoft.com,rijutv.com,souxue8.com,speedtest.cn,toutiao.com,tucao.one,vpansou.com,xxshe.info,xxshe.xyz,youku.com##a[href*=".taobao.com"]
 18comic.org,18comic.vip,jmcomic1.city,jmcomic1.win,jmcomic1.group##.bot-per-context
 18comic.org,18comic.vip,jmcomic1.city,jmcomic1.win,jmcomic1.group##[data-group^='album_related'],[data-group^='all_bottom']
