@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-12 23:12:28（北京时间）
+! Version: 2025-08-13 00:14:36（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64501
+! Total count: 64505
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2047,6 +2047,8 @@
 12tomatoes.com###footboard
 12tomatoes.com##.sheknows-infuse-ad-callout
 12tomatoes.com,allwomenstalk.com,bloomberg.com,datpiff.com,hockeybuzz.com,koreaboo.com,logotv.com,news.sky.com,news.tvguide.co.uk,onthesnow.ca,onthesnow.co.nz,onthesnow.co.uk,onthesnow.com,penny-arcade.com,publishersweekly.com,skysports.com,sportsnet.ca,thedrinknation.com,theserverside.com,vacations.info###leaderboard
+131400.best,vikacg.com,vikacg.icu,vikacg.xyz##.post-card-list > a
+131400.best,vikacg.com,vikacg.icu,vikacg.xyz##a[href^="http"] > img[src*="/assets/next/"]
 131400.best,vikacg.com,vikacg.xyz##.post-card-list > a
 131400.best,vikacg.com,vikacg.xyz##a[href^="http"] > img[src*="/assets/next/"]
 131458.com###header_gg
@@ -18244,6 +18246,7 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
+@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -52830,6 +52833,7 @@ servedez.com##.sp_block > a[href="https://nexusbytes.com"] > img
 serverfault.com,stackoverflow.com##.everyonelovesstackoverflow
 serverhunter.com##.special-offer
 serverhunter.com##.this-html-will-keep-changing-these-ads-dont-hurt-you-advertisement
+serverhunter.com##[class*="this-ad-keeps-"]
 serverstoplist.com##.mobile_ad
 serverstoplist.com##.pcOnly
 service.gov.uk##.cbanner-govuk-cookie-banner, #dm-cookie-banner
