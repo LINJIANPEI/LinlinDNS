@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-12 20:21:18（北京时间）
+! Version: 2025-08-12 21:28:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64493
+! Total count: 64501
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7342,6 +7342,7 @@
 @@||cindyholbrook.lpages.co^|
 @@||cinema.pia.co.jp/img/ad/$image,~third-party
 @@||cinemaxxl.de^$stealth=donottrack
+@@||cinemaz.club/video/$stealth=referrer
 @@||cintateknologi.com^$generichide
 @@||circuiteasy.com^$generichide
 @@||cirokun.blogspot.com^$generichide
@@ -33906,6 +33907,7 @@ global.americanexpress.com##.text-align-center.pad-tb
 global.bible###root > section + div:not(:last-child)
 global.espreso.tv##.ym-video--wrapper
 global.ketchcdn.com$domain=~forbes.com
+global.novelpia.com##div[style^="max-width:728px;width:100%;"]
 globalassicurazioni.it##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 globalcement.com###wrapperInner div.bannergroup:has(> .banneritem a[href][target="_blank"]:not([onclick]):not([title*="Sign up"]) > img)
 globalcement.com##div[id^="skybanner"]
@@ -49554,7 +49556,6 @@ porno247.net##.vertbars
 pornoaffe.com,hd-pornos.net##div[id^="wa_"].widget
 pornoaffe.com,hd-pornos.net,hd-easyporn.com,porn-monkey.com##aside[id^="special"]
 pornoaffe.net,xnxx-porno.com##.cf aside[id]
-pornoamatorialeitaliano.it,animehentaihub.com,bestjavporn.com,hentaiasmr.moe##.happy-header
 pornobae.com##.barra-txt
 pornobae.com##.promo-cabecera
 pornoeggs.com##.mediaPlayerBanner
@@ -49688,7 +49689,6 @@ pornx.to###player-api-over
 pornx.to##.above-single-player
 pornx.to##.ads-above-single-player
 pornx.to##.elementor-element-e8dcf4f
-pornxbit.com,pornoamatorialeitaliano.it,sexkbj.com,mundoxgay.com,pornxday.com,animehentaihub.com,twinkybf.com,gaytail.com##.happy-sidebar
 pornxs.com##.video__container > .video__inner > div > div[data-place^="ntv"]
 pornxs.com##div[data-ad-index-parent]
 pornxs.com##div[id^="div_theAd"]
@@ -51473,6 +51473,11 @@ resinet.pl###cookie-bg
 resistthemainstream.com###ez-content-blocker-container
 resizepixel.com##.d-flex.d-sm-none.align-items-center
 resizepixel.com##.d-none.d-md-flex.align-items-center
+resourcepack.net##.ab-rpnet-archive-bottom
+resourcepack.net##.ab-rpnet-archive-header
+resourcepack.net##.ab-rpnet-archive-infeed
+resourcepack.net##.ab-rpnet-single-bottom
+resourcepack.net##.ab-rpnet-single-header
 resourcepack.net##div[class^="ab-rpnet-"]
 respawn.pl##a[href*=".adsrv.eacdn.com/"]
 respawn.pl##a[href="https://pl.genesis-zone.com/"][target="_blank"] > img
@@ -63936,6 +63941,9 @@ zb.zhaobiao.cn##div.box:nth-child(5) > div.advertisement.box:nth-child(2)
 zbiam.pl##.ct-shortcode
 zbiam.pl##a[target="_blank"] > img[alt^="reklama"]
 zbmath.org###cookie
+zbozi.cz##div[class^="AdBanner"]
+zbozi.cz##div[class^="ResultsRedesigned_ads"]
+zbozi.cz##div[class^="TextOfferContainer"]
 zbporn.com##.block-t > div[style*="height:"]
 zbporn.com##.box-f
 zbporn.com##.cs-link-holder
