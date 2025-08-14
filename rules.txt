@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-14 15:14:19（北京时间）
+! Version: 2025-08-14 16:16:34（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64521
+! Total count: 64530
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -27,6 +27,7 @@
 &zoneid=*&request_ab$all
 (com?$script
 (com|$script
+*$denyallow=efuxs.com,domain=efuxs.com,script,subdocument,xmlhttprequest
 *$denyallow=qiexs.cc|ququge.cc,domain=qiexs.cc|ququge.cc,xmlhttprequest,image,script
 *$denyallow=xpxs.net|jiasucdn.com,domain=xpxs.net,xmlhttprequest,image,script
 *$doc,removeparam=/^(sp|ut|fro?)m(_|\b)/
@@ -9526,6 +9527,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -9541,6 +9543,7 @@
 @@||go.onelink.me/*?pid=
 @@||go.redirectingat.com/*&url=$domain=forums.redflagdeals.com
 @@||go.redirectingat.com^$document
+@@||go.scorptec.com.au^
 @@||go.scorptec.com.au^|
 @@||go.tnshort.net^$stealth=referrer
 @@||go.xliirdr.com/?*targetDomain=fikfapcams.com$domain=fikfap.com
@@ -16152,6 +16155,7 @@
 @@||ssports.com/images/resources/web/live/js/LiveAds.js
 @@||ssr.m.goofish.com^
 @@||sssbozh.com^$generichide
+@@||ssstik.io^$generichide
 @@||sst.soranews24.com/gtm.js$script,~third-party
 @@||st.bebi.com/bebi_v*.js$domain=bluemediafiles.*|bluemediafile.*|bluemediadownload.*|urlbluemedia.*|bluedownload.*
 @@||st.jingxi.com^
@@ -20529,8 +20533,10 @@ aoxx69.net##.Banner_slick
 aoxx69.net##.GTM-sub-Banner
 aoxx69.net##.toast
 aoxx69.net##.touch_icon_ball
+ap7am.com###prakModal
 ap7am.com##.ad-pvt
 ap7am.com##.first-ad
+ap7am.com##.logo-bar
 ap7am.com##.pr-1
 ap7am.com##.pr-2
 ap7am.com##.pr-pvt
@@ -27830,6 +27836,7 @@ demonslayermanga.com,readjujutsukaisen.com,readneverland.com##.js-a-container
 demotywatory.pl##article > .demotivator > video[id="vjs-rcp1"]:empty
 denic.de##.notification
 denik.cz##.reklama-box-leaderboard
+denik.cz##body .ad:not(#style_important)
 denik.cz##div[class^="reklama-box"]
 denikreferendum.cz##.PopupBackground, .GDPRPopup
 denizbank.com###fixedFooterBar
@@ -56533,6 +56540,8 @@ telugu.hindustantimes.com##.advMasterSlot
 telugu.hindustantimes.com##.logoBandAdBox
 telugu.hindustantimes.com##.mainBodyWrapper div[class*="adv"]
 telugu360.com##.article_top_ads
+telugu360.com##.box-container
+telugu360.com##.gogleAds_left
 telugu360.com##.td-ss-main-sidebar > aside.td_block_template_5.widget
 telugupeople.com##.fineprint
 telugupeople.com##td[width="300"]
