@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-14 08:53:56（北京时间）
+! Version: 2025-08-14 10:45:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64525
+! Total count: 64521
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2391,6 +2391,7 @@
 1905.com,news.ltn.com.tw,commonhealth.com.tw,health.tvbs.com.tw,idreamx.com,xchina.co,manhuafen.com,world68.com##.ad
 1909.me,8se.me,crxs.me,xchina.biz,xchina.co##.media
 1909.me,8se.me,crxs.me,xchina.biz,xchina.co##.push-top
+1909.me,8se.me,crxs.me,xchina.site,xchina.biz,xchina.co##.media
 192-168-1-1-ip.co,receivesms.co###adresp
 192.243.59.12$network
 192.243.59.13$network
@@ -3398,6 +3399,7 @@
 5dariyanews.com##a[href="https://www.5dariyanews.com/sponsored-ads.aspx"]
 5dm.app##[src*="sinaimg.cn"]
 5dm.link###player_pausex
+5dm.link##div[id^="player_p"]
 5dm.tv##a > img[src*=".sinaimg."]
 5dm.tv##a[href*="suo.im"]
 5dm.tv##a[href^="/sina/"]
@@ -4266,7 +4268,6 @@
 @@://www.liquidweb.com/kb/wp-content/themes/lw-kb-theme/images/ads/vps-sidebar.jpg
 @@://www.sinya.com.tw^$stealth=ip
 @@://www3.doubleclick.net^|$xmlhttprequest
-@@://www3.doubleclick.net^|$xmlhttprequest,domain=sshkit.com
 @@://xhamster.$script,~third-party
 @@=mywebloadt1&$domain=myweb.hinet.net
 @@?adType=$domain=taotaosou.com
@@ -8189,7 +8190,6 @@
 @@||dixonsretail.*.omtrdc.net/b/ss/dixonsrtcurrysprod/*/REDIR/*currys.co.uk*api.dcg-search.co*curry
 @@||diysideas.com^$generichide
 @@||dizhi99.com^$generichide
-@@||dizi*.life/assets/js/main.js
 @@||dizipal*.com^$generichide
 @@||dj.1688.com^
 @@||djnf6e5yyirys.cloudfront.net/js/friendbuy.min.js$domain=coursera.org
@@ -12132,7 +12132,6 @@
 @@||marketing.net.idealo-partner.com^|
 @@||marketing.unionpayintl.com/offer-promote/static/sensorsdata.min.js$script,~third-party
 @@||marketingautomation.services^$script,domain=leeuwerik.nl
-@@||marketingplatform.google.com/about/enterprise/$domain=hydrogen.lat
 @@||marketmovers.it^$generichide
 @@||marketools.plus500.com/Widgets/RegistrationWidget/*$domain=investing.com
 @@||marketplace.ofeminin.pl/static/$domain=lamoda.pl
@@ -18366,9 +18365,6 @@
 @@||www1.appcleanermac.com^
 @@||www1.pcauto.com.cn^
 @@||www1.pconline.com.cn^
-@@||www3.doubleclick.net/|$xmlhttprequest,domain=hentaihaven.xxx
-@@||www3.doubleclick.net^$domain=classace.io
-@@||www3.doubleclick.net^$domain=missavtv.com
 @@||wwwcache.wral.com/presentation/v3/scripts/providers/analytics/ga.js$~third-party
 @@||wwwimage-tve.cbsstatic.com^
 @@||wwwstream.pro^$subdocument,stealth=referrer
@@ -52372,6 +52368,7 @@ save.ca##.ad-box
 save.ca##.leaderboardMainWrapper
 savefiles.com##div[id^="clickCatcher"]
 savefree.in,surattimes.com##.bn-content
+savefrom.net##.tz-quality-link
 saverioriotto.it###policy_id
 savetik.co##.ads-slot-top
 saveur.com##body div[class^="empire-organic"][class*="-prefill-container"]
@@ -58936,7 +58933,6 @@ tuttoandroid.net##.card-grid div.row > div.col-18.align-self-center
 tuttoandroid.net##.justify-content-around > div[class^="col-"] > a[href^="http://bit.ly/"][target="_blank"] > img
 tuttoandroid.net##.skin-img
 tuttoandroid.net##.ta-adblock-modal-open::before
-tuttoandroid.net##div[class^="widofferte23-"]
 tuttoandroid.net,tuttotech.net##body .banner:not(#style_important)
 tuttoandroid.net,tuttotech.net##div[class^="widofferte23-"]
 tuttogreen.it##.advplace
