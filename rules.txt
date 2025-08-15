@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-15 23:11:49（北京时间）
+! Version: 2025-08-16 00:13:53（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64557
+! Total count: 64556
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15944,7 +15944,6 @@
 @@||smartphonehrvatska.com^$generichide
 @@||smartrobot-drcn.dbankcdn.com^
 @@||smartstore.naver.com^$stealth
-@@||smartstore.naver.com^$stealth=useragent
 @@||smashingmagazine.com/20*-ad-$~script,domain=smashingmagazine.com
 @@||smashresume.com^$generichide
 @@||sme.sk^$generichide
@@ -24978,7 +24977,6 @@ cheatsheet.com##.top-ad
 check-host.net###amain > div:has(a[href*="pq.hosting"])
 check-host.net##.ra-elative
 check-host.net##div[class*="-f"]:has(> * > img[src*=".svg"])
-check-host.net##div[class*="ative"]
 check-host.net##div[id^="antpeayvraea"]
 check.toys###COO
 checkdomain.de###notifications-container
@@ -28845,9 +28843,6 @@ dragon-guide.net##.container > .gutter:first-child
 dragonpass.com.cn##.indexCookies
 dragonshop.gr##.header-banner
 dramacool9.io##a[href^="https://bodelen.com/"]
-dramafren.net###btnOpnWinDiv
-dramafren.net##body > div[id][style="display: block;"]:has(> div[id]:only-child > div[style*="margin: clamp"])
-dramafren.net##div[class^="teaser"]
 dramaviki.com##.blogdata_stt + div[id][class*=" "]
 drank.nl##header ~ .fixed.bottom-0
 draytek.com##.cookie
@@ -63083,7 +63078,11 @@ xw.qq.com##div[data-boss*="modular"]
 xw.qq.com##div[data-boss-expo="&modular=quicknews_m"]
 xw.qq.com##section[style="display: block;"]
 xwhite-tube.com##.content--ads
+xxbrits.com##.aside-spot
 xxbrits.com##.block-offer
+xxbrits.com##.group-links > button.click-fun ~ button
+xxbrits.com##.network
+xxbrits.com##.top-header
 xxbrits.com##button[class^="click-fun"]
 xxe.fr##.cookies
 xxooo.cf###overlay
