@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-16 16:13:47（北京时间）
+! Version: 2025-08-16 17:11:38（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64567
+! Total count: 64568
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -35432,6 +35432,7 @@ healthline.com##.dfooterlb
 healthline.com##.dlb__sticky-container--pagefair
 healthline.com##.hl-loading-mask
 healthline.com##.read-next__row-ad-box
+healthline.com##article > [class] > [class^="css"]:has([data-ad="true"])
 healthline.com##aside[class="css-bzwr8d"]
 healthline.com##div[class="css-1vcjrad"]
 healthline.com##div[class="css-y4sdpf"]
