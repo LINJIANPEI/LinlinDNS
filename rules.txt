@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-17 23:10:25（北京时间）
+! Version: 2025-08-18 00:12:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64580
+! Total count: 64583
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3581,7 +3581,10 @@
 80.lv##.BrandingPromo_skeleton
 80.lv##.ImagePromo_default
 80.lv##[class*="BrndigPrmo_"]
+80.lv##[class*="BrndngBigPrm_"]
+80.lv##[class*="ImgPrmo"]
 80.lv##[id*="Image_bnnr"]
+80.lv##[id^="Image_bner_"]
 80.lv##a[id^="Image_Banner_Mid"]
 80.lv##div[class*="BrndngPrmo"]
 808sbo.com,livesports088.com,808fubo.com,score808.tv,score808pro.com##.banner
