@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-18 15:16:21（北京时间）
+! Version: 2025-08-18 16:17:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64590
+! Total count: 64607
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9048,6 +9048,7 @@
 @@||forexprostools.com/?columns=$domain=investmentwatchblog.com
 @@||forexprostools.com^$domain=shougedui.com
 @@||forexprostools.com^$subdocument,domain=fx-rashinban.com
+@@||forexrw7.com^$generichide
 @@||forgeofempires.com/game/json
 @@||forjson.7boexyu9.com^
 @@||forms.ministryforms.net/*.aspx^$stealth=referrer,domain=app.clovergive.com
@@ -13529,6 +13530,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=decrypt.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dgb.lol
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=digiclown.com|sattanewss.com|djflpduniya.com|gadix.in|raftarsamachar.in|cinedesi.in|health.blueridgegeorgia.us|openhouseperthinsurance.com|spatsify.com|marathivacancy.com|cyberlynews.com|bongguider.com|inklix.com|india.studentshelp.in|india.bgmiproconfig.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=digiclown.com|sattanewss.com|djflpduniya.com|gadix.in|raftarsamachar.in|cinedesi.in|health.blueridgegeorgia.us|openhouseperthinsurance.com|spatsify.com|marathivacancy.com|cyberlynews.com|bongguider.com|inklix.com|india.studentshelp.in|india.bgmiproconfig.com|web.quizrent.com|india.ctfest.org|hindi.sarkarijobinformation.com|health.wikizinsider.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=digitalinformationworld.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=diglink.blogspot.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dishy.co.ke
@@ -16960,6 +16962,7 @@
 @@||threatbook.cn/public/asset/js/zhugeIo.
 @@||thron.com/shared/plugins/tracking/current/tracking-library-min.js$domain=dainese.com
 @@||thu.edu.tw/upload/ad_upload/
+@@||thuedientu.gdt.gov.vn^$stealth=dpi
 @@||thuglink.com^$generichide
 @@||thumbnail*.coupangcdn.com/thumbnails/$stealth=referrer,image
 @@||thumbnail.thench.net^|
@@ -18273,6 +18276,7 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
+@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -23257,6 +23261,7 @@ blogtruyen.vn##.BT-Ads
 blogtruyen.vn##body > .modal ~ div[style^="display: block; position: fixed; "]
 blogtruyen.vn##div[style*="position: fixed;"][style*="z-index: 2147483647;"]
 blogue.tech###jeg_forgotform + div[id][class*=" "]
+blogue.tech###jeg_forgotform + div[id][class]
 blogvporn.com##.blue-btns
 blokas.io###__layout > div .bg-success
 blonded.co##.FooterNotice
@@ -29507,6 +29512,8 @@ edmunds.com###adhesion-container
 edmunds.com##.car-news-marquee
 edn.com###SideBarWrap
 edn.com,planetanalog.com###bannerWrap
+edp24.co.uk##.evvnt-ad
+edp24.co.uk,dorsetecho.co.uk##.mar-leaderboard--top
 edrawsoft.cn###bottom-banner-activity-md
 edrawsoft.cn##.activity-banner
 edrawsoft.cn##.bottom-banner-activity
@@ -33536,6 +33543,8 @@ genialne.pl##.adc
 genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + div[class*=" "] + script:last-child)
 genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 genickbruch.com##body > div > div[style*="fixed"]
+genius.com###application > div[class^="sc-"]:has(div[id^="div-gpt-ad-"])
+genius.com###lyrics-root > div[data-exclude-from-selection="true"]:has(div[id^="div-gpt-ad-"])
 genius.com##.InreadContainer-sc-b078f8b1-0
 genius.com##.Leaderboard-sc-78e1105d-0
 genius.com##.SectionLeaderboard-sc-dbc68f4-0
@@ -33548,6 +33557,7 @@ genius.com##div[class^="DfpAd__Container-"]
 genius.com##div[class^="InreadAd_"]
 genius.com##div[class^="InreadContainer-"]
 genius.com##div[class^="LeaderboardOrMarquee__"]
+genius.com##div[class^="SectionScrollSentinel_"] > div[class^="SectionLeaderboard_"]:has(div[id^="div-gpt-ad-"])
 genius.com##div[class^="SidebarAd-"]
 genius.com##div[class^="SidebarAd_"]
 genius.com##div[class^="StubhubLink"]
@@ -37166,6 +37176,7 @@ ilewazy.pl##.ecomm-content-widget
 ilfattoalimentare.it##.ad
 ilfattoalimentare.it##.background-cover
 ilfattoquotidiano.it##.adv-pushbar
+ilfattoquotidiano.it##.fqm-adv-rullo-horizontal
 ilfattoquotidiano.it##.ifq-adv-flux
 ilfattoquotidiano.it##.rullo-item.special
 ilfattoquotidiano.it##.widget_outbrain_widget
@@ -45255,6 +45266,10 @@ myshows.me##a.DefaultLayout-promo
 myshows.me##div[id^="clickioadunit"]
 myshrinker.com##a[onclick] > button
 myslavegirl.org##.signature
+myslenice-itv.pl,checkpress.pl,kulisy.net,magazynnaszczycie.pl,palukimogilno.pl,zycie.pl##.grid__ad
+myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.adv
+myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
+myslenice-itv.pl,kulisy.net##.custom-html-box:has(> .box__container:only-child > div:only-child > p:only-child)
 mysnapp.co.uk##.cookies-content
 mysocceraustralia.com##div[style="text-align: -webkit-center;margin-bottom: 20px;min-height: 250px;"]
 myspace.com###termsOfService
@@ -48912,6 +48927,7 @@ play44.net,videobug.net,videofun.me,vidzur.com,yucache.net##[style^="position: a
 playallvideos.com,pron.co##.rmedia
 playav.cc###overlay
 playboard.co##.chart__row--ad
+playboard.co,emojiall.com,computerhope.com,amkstation.com,issitedownrightnow.com##.ad
 playboy.com###__next > div[style*="flex"]
 playboyrussia.com##.disclamer
 playbuzz.com##.ad-top-1-wrapper
@@ -64083,6 +64099,7 @@ zegtrends.com##.tpm-ads-unit
 zehnporn.com,freyalist.com,jennylist.xyz,sharkyporn.com,zoompussy.com##.stripper
 zehnthof-weickert.de###agever
 zeijakunahiko.com,buzzpit.net,nakiny.com,azupro-sokuho.com,pokeca-chart.com,former-railroad-worker.com,noikiiki.info,akihabarahitorigurasiseikatu.com,pc-hobby.com,yakudachi.org,tiny-sparklies.com,veryfuntime.com,sufanblog.com,rail-log.net,10-train.com,e-food.jp,life-travel-blog.cfbx.jp,kgs-invest.com,r18blog.com,paris-tabi.com,tedenglish.site,goegoe.net,sararun.net,shopkensaku.com,welcometojapan.jp,maisondeas.com,yaspage.com,akihabarahitorigurasiseikatu.com,gnusocial.jp,doumura.com,habuteru.com,kurosuen.live,businesstrend.jp,fine-wings.com,sukuyou.com,gatagata.net,setsuyakutoushi.com,ranourano.xyz,reeell.com,it-money-life.com###go-to-top + div[id][class*=" "]
+zeijakunahiko.com,buzzpit.net,nakiny.com,azupro-sokuho.com,pokeca-chart.com,former-railroad-worker.com,noikiiki.info,akihabarahitorigurasiseikatu.com,pc-hobby.com,yakudachi.org,tiny-sparklies.com,veryfuntime.com,sufanblog.com,rail-log.net,10-train.com,e-food.jp,life-travel-blog.cfbx.jp,kgs-invest.com,r18blog.com,paris-tabi.com,tedenglish.site,goegoe.net,sararun.net,shopkensaku.com,welcometojapan.jp,maisondeas.com,yaspage.com,akihabarahitorigurasiseikatu.com,gnusocial.jp,doumura.com,habuteru.com,kurosuen.live,businesstrend.jp,fine-wings.com,sukuyou.com,gatagata.net,setsuyakutoushi.com,ranourano.xyz,reeell.com,it-money-life.com###go-to-top + div[id][class]
 zeitzeugen-portal.de###cookiebg, #hdg-cookie-accept
 zen.com##.disable-background::before, div[id*="ppms_cm"]
 zencare.org##.elementor-popup-modal
