@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-19 23:12:23（北京时间）
+! Version: 2025-08-20 00:13:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64630
+! Total count: 64634
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4250,6 +4250,7 @@
 @@/wp-content/uploads/*$image,stealth=referrer,domain=realmscans.*
 @@/wp-content/uploads/WP-manga/*$image,stealth=referrer,domain=mangasehri.net
 @@/ws$websocket,domain=speedtest.net
+@@/|$xmlhttprequest,domain=link.codevn.net
 @@127.0.0.1:10111$network
 @@185.88.236.76:443$network
 @@185.88.236.77:443$network
@@ -13584,6 +13585,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fox.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebinchecker.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|tatangga.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|paste1s.com|ipacrack.com|codevn.net|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|akw.cam|indokontraktor.com|shahee4u.cam|batch-kun.com|shahid4u.*|neosatsu.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|tatangga.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|paste1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|akw.cam|indokontraktor.com|shahee4u.cam|batch-kun.com|shahid4u.*|neosatsu.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freecoursesonline.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freeiptvgen.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freemagazines.top
@@ -19648,6 +19650,8 @@ aktieninvestor.net##body > [data-bg]
 aktionen.payback.de##.notification
 aktionspreis.de##.leiste_vollstaendig
 aktivo.nl###epd
+aktuality.sk##.banner-padding-top
+aktuality.sk##.banner-padding-top + a[data-event*="|click_"]
 aktualne.cz###kulublu-mulu
 aktualne.cz###kulubulu-mulu
 aktualne.cz###reklama-exchange_eko
@@ -25004,6 +25008,7 @@ cheatsheet.com##.top-ad
 check-host.net###amain > div:has(a[href*="pq.hosting"])
 check-host.net##.ra-elative
 check-host.net##div[class*="-f"]:has(> * > img[src*=".svg"])
+check-host.net##div[class*="border-l-8"]
 check-host.net##div[id^="antpeayvraea"]
 check.toys###COO
 checkdomain.de###notifications-container
@@ -25975,6 +25980,7 @@ coderwall.com##._300x250
 codeshare.io###codeshare > .sp-tile
 codesignal.com##.elementor-popup-modal
 codesnail.com##.inside-right-sidebar > #custom_html-2
+codevn.net##.swal2-container
 codexiu.cn##.blog-twitter:first-child
 codexqr.app###adblocker-warning
 codexworld.com##.SidebarBox ~ div.adsense_widget:not(.adsSt_widget)
@@ -33550,8 +33556,6 @@ genesis-zone.com###cookie
 genesis.com##.privacy-dialog
 gengen17.com###jetpack-lazy-images-js + div[id][class*=" "]
 genialne.pl##.adc
-genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + div[class*=" "] + script:last-child)
-genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 genickbruch.com##body > div > div[style*="fixed"]
 genius.com###application > div[class^="sc-"]:has(div[id^="div-gpt-ad-"])
 genius.com###lyrics-root > div[data-exclude-from-selection="true"]:has(div[id^="div-gpt-ad-"])
