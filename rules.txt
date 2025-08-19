@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-19 20:20:32（北京时间）
+! Version: 2025-08-19 21:23:49（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64626
+! Total count: 64630
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5943,6 +5943,7 @@
 @@||apis.google.com^
 @@||apis.google.com^$domain=openload.co|oload.tv|javno.me|imagebam.com|imagevenue.com|playvid.com|4horlover.com|linkshrink.net
 @@||apis.kostprice.com/fapi/$script,domain=gadgets.ndtv.com
+@@||apis.naver.com^$stealth=dpi
 @@||apis.wavve.com/fz/streaming$domain=wavve.com,stealth=ip
 @@||apischedule.ksyungslb.com^
 @@||apissl.ksapisrv.com^
@@ -28800,6 +28801,7 @@ download.cnet.com##.c-pageProductDetail_productAlternativeAd
 download.cnet.com##.product-single-left-rail-offer
 download.cnet.com##div[data-meta="placeholder-slot"]
 download.cnet.com##div[id^="ypaAdWrapper"]
+download.cnet.com##div[role="tabpanel"] > div[class] > div[class]:has(> div[data-track-placement="hero_home"])
 download.csdn.net##.ad_area_1
 download.csdn.net##.quake-slider
 download.hr##.ad_unit_label
@@ -46250,6 +46252,7 @@ nexusmods.com##.agroup
 nexusmods.com##.areplacer
 nexusmods.com##.border-b:has(> div[data-testid^="ad-container"])
 nexusmods.com##.items-center:has(>div[data-testid^="ad-container-"])
+nexusmods.com##.next-container > div[class^="space-"] > div[data-testid^="ad-container-"]
 nexusmods.com##[data-testid="ad-container-player"]
 nexusmods.com##div[style="float: left; width: 728px; height: 90px; background: #313131;"]
 nfcw.com##.sidebar-display
@@ -49332,9 +49335,6 @@ porn.com##div[class$="-znr"]
 porn.com##div[class*="-zne"]
 porn.com##div[class*="-zone"]
 porn.sex##.footer-a
-porn00.com,porn00.org##.content [class^="headline"][style^="margin:"]
-porn00.com,porn00.org##.member2link
-porn00.com,porn00.org##a[href="https://porn00.org/best-casino/"]
 porn00.org##.headline > a[rel="nofollow"]
 porn00.org##.video-holder > .headline
 porn00.tv##.member1link
@@ -50390,6 +50390,8 @@ puck.news##.entry-content td:has(> a[href^="https://www.hbomaxfyc.com/"])
 pudelek.pl##[class*="-"] > div[class*="-"][class*=" "]:has(> img[src="https://i.wpimg.pl/O/56x45/i.wp.pl/a/i/stg/pkf/bg.png"])
 pudelek.pl##body > #__next > div[data-testid="container"] > div[class] > div[class]:not([id]):empty
 pudelek.pl##div[class^="_"][style^="position: relative;"] > a[href][target="_blank"]:only-child > div[style^="position:"][style*="background-image: url"]
+pudelek.pl,genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + div[class*=" "] + script:last-child)
+pudelek.pl,genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div[class*=" "] + script:last-child)
 pudelek.pl,o2.pl,moneyv.wp.pl,money.pl##div[class*="sc-"]:has(> img[src="https://i.wpimg.pl/O/56x45/i.wp.pl/a/i/stg/pkf/bg.png"])
 pugski.com##.forum-sponsor
 pugski.com##.section.sponsors
@@ -55857,6 +55859,7 @@ swissict.ch###dpcc-wrapper
 swisslife.fr##.mod-disclaimer
 swissre.com##.Notification
 swisstours.com##.cookiesApproval
+swisstransfer.com##.promoCard
 switcher-shop.ch##.ec-notices
 switcher.com##.ec-notices
 swoodie.de##.module-wrap[data-label="Popup"].showPopup, .gf-popupOverlay
@@ -58475,6 +58478,7 @@ tp-link.com##div[id*="tp-cookie"]
 tp.lpp.si##body > table[height="20"]
 tpb.party##a[href="https://mysurferprotector.com/"]
 tpd.sk##.header__notice
+tpi.li$$script:contains(checkAdblockUser)
 tpi.li,nft-tracker.daic.capital##.banner > a
 tporn.xxx##.sug-bnrs
 tportal.hr##.kaufland-w
