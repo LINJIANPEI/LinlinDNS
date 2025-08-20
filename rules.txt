@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-20 20:20:32（北京时间）
+! Version: 2025-08-20 21:25:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64632
+! Total count: 64631
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2394,7 +2394,6 @@
 1905.com##.pauseInfoWrap:remove()
 1905.com##.zx-pic
 1905.com##.zx-small-pic
-1905.com,news.ltn.com.tw,commonhealth.com.tw,health.tvbs.com.tw,idreamx.com,xchina.co,manhuafen.com,world68.com##.ad
 1909.me,8se.me,crxs.me,xchina.biz,xchina.co##.media
 1909.me,8se.me,crxs.me,xchina.biz,xchina.co##.push-top
 1909.me,8se.me,crxs.me,xchina.site,xchina.biz,xchina.co##.media
@@ -14202,6 +14201,7 @@
 @@||passiontimes.hk^$generichide
 @@||passiontimes.hk^*-ad.php?
 @@||passport.360.cn^
+@@||passport.baidu.com^$stealth=referrer
 @@||passport.bilibili.com^
 @@||passport.biligame.com^
 @@||passport.bobo.com^
@@ -29272,7 +29272,6 @@ e23.cn##div[id*="adv"]
 e2mv.com##.left_advert
 e3zy.com##.jiacu
 e3zy.com##img[style="height: 80px; width: 100%;"]
-eachporn.com##.link-sponsor
 eachporn.com##body.no-touch > .top[style]
 eagle.mn##a[href="https://sodon-callcenter.mn/"]
 eagle1065.com##.featureRotator
