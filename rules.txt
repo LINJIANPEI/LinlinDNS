@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-20 15:11:54（北京时间）
+! Version: 2025-08-20 16:15:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64629
+! Total count: 64631
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15978,7 +15978,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -16585,6 +16584,7 @@
 @@||superyachtfan.com^$generichide
 @@||support-beacon.nakanohito.jp^
 @@||support-beacon.nakanohito.jp^|
+@@||support-widget.nakanohito.jp^
 @@||support-widget.nakanohito.jp^|
 @@||support.google.com/google-ads/
 @@||support.google.com^$domain=support.google.com
@@ -16599,6 +16599,7 @@
 @@||survey.devographics.com^$stealth=useragent
 @@||survey.feelgood.cn^
 @@||survey.g.doubleclick.net^$script,domain=sporcle.com
+@@||surveymyopinion.researchnow.com^
 @@||surveymyopinion.researchnow.com^|
 @@||suumo.jp/sp/js/beacon.js$script,~third-party
 @@||suwonlib.go.kr^$stealth=dpi
@@ -18279,7 +18280,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -22645,6 +22645,7 @@ bhamnow.com##.bhamn-adlabel
 bhamnow.com##.bhamn-story
 bhaptics.com###__next > .fixed.w-full
 bhaskar.com###db-portal ~ div:not([style]), div[id*="gdpr"], .gdrpOverlay
+bhaskar.com##div[style^="margin-bottom:"]:has(> div[id^="Ad-"])
 bhaskar.com,divyabhaskar.co.in##div[style*="overflow:hidden;min-height:"][style*="max-height:"]
 bhg.com,eatingwell.com,foodandwine.com,realsimple.com,southernliving.com##.mntl-notification-banner
 bho_infobar.js^$domain=ruecken-zentrum.de
@@ -40147,6 +40148,7 @@ kmweg.de###colorbox, #cboxOverlay
 kmzu.com##.sticky-footer-promo-container
 knaben.xyz,thepiratebay.zone,pirateproxylive.org,tpb.party##.download > a[target="_blank"]:not([href*="magnet:"], [href*="tpb.party"], [href*="pirateproxylive.org"])
 knaf.nl###cp-wrap
+knews.com.tw,1905.com,news.ltn.com.tw,commonhealth.com.tw,health.tvbs.com.tw,idreamx.com,xchina.co,manhuafen.com,world68.com##.ad
 knigogid.ru##.b-cookie
 knime.com##.cookie-modal
 knoema.com###gdpr
