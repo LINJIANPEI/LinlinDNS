@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-21 20:20:43（北京时间）
+! Version: 2025-08-21 21:24:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64652
+! Total count: 64657
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -16137,6 +16137,7 @@
 @@||src.litix.io/shakaplayer/*/shakaplayer-mux.js
 @@||src.litix.io/videojs/*/videojs-mux.js
 @@||srtb.msn.com^
+@@||srv.*/*/*.png$stealth=referrer,domain=vctplay.site
 @@||srv.clickfuse.com/showads/adunit.php$domain=aha-music.com
 @@||srv.clickfuse.com/showads/showad.js$domain=aha-music.com
 @@||srv.sec.miui.com^
@@ -17304,6 +17305,7 @@
 @@||tunion-api.m.taobao.com^
 @@||tunovelaligera.com^$generichide
 @@||turbo.az^$stealth=referrer
+@@||turboplayers.xyz/t/$stealth=referrer
 @@||turbovidhls.com/t/$stealth=referrer
 @@||turing.captcha.gtimg.com^
 @@||turiver.com^$generichide
@@ -31945,6 +31947,7 @@ footy.to##.ad-modal
 footybite.cc###kis
 footybite.cc##div[style^="border: 2px solid "]
 footybite.to##.news-right-sec-div > a[target="_blank"] > img
+footybite.to##a[href^="https://sportey.tv/"]
 footyfull.com##.float_bottom
 footyfull.com##div[id^="tw_float_ads"]
 footztube.com##[href^="/tp/out"]
@@ -37098,18 +37101,20 @@ igeeksblog.com##div[id^="igeek-"]
 igetintopc.com##.blocks > li.block:has(a[id^="dl-banner-"])
 igg-games.co,igg-games.com##a[href^="http://s.igg-games.com/index.php?qc="]
 igg-games.co,igg-games.com##body > div[id][style^="position: fixed; z-index:"][style*="overflow: auto; background-color:"]
+igg-games.co,igg-games.com,pcgamestorrents.com##[width="300"][height^="25"]
+igg-games.co,igg-games.com,pcgamestorrents.com##a[href^="/"][href*="?"]
+igg-games.co,igg-games.com,pcgamestorrents.com##img:not([class]):not([decoding])
 igg-games.com###tm-sidebar > .uk-grid-stack > div[class="uk-grid-margin uk-first-column"] > .widget-text > .textwidget > p > a[href][target="_blank"] > img
 igg-games.com##.post > a > img
 igg-games.com##.taxonomy-description
 igg-games.com##.uk-panel.widget-text
 igg-games.com##a[href*="?aaffer="]
+igg-games.com##a[href^="/"][href*="?"]
 igg-games.com##div[id][style^="overflow:"] > div[style="position: relative"] > a[href^="/wp-includes/"][href$=".jpg"][rel="noindex nofollow"] > img
+igg-games.com##img:not([class]):not([decoding])
 igg-games.com##slot + div[class]
 igg-games.com,pcgamestorrents.com##.uk-margin-medium-top a[target="_blank"] > img
-igg-games.com,pcgamestorrents.com##[width="300"][height^="25"]
 igg-games.com,pcgamestorrents.com##a[href][aria-label=""], [width="300"][height^="25"], [width="660"][height^="8"], [width="660"][height^="7"]
-igg-games.com,pcgamestorrents.com##a[href^="/"][href*="?"]
-igg-games.com,pcgamestorrents.com##img:not([class]):not([decoding])
 igizmo.it##body > a[href^="https://igizmo.it/linkto/"][target="_blank"] > img
 ign.com###blogrollInterruptDeals
 ign.com###king
@@ -47431,6 +47436,7 @@ op.gg##.css-uz5vk3
 op.gg##.css-zpq3c5
 op.gg##.e17e77tq6
 op.gg##.e17e77tq8
+op.gg##.flex-col:has(> div.flex > a[href^="https://member.op.gg/membership"][href*="&utm_campaign=banner_frame"])
 op.gg##.h-\[287px\]
 op.gg##.justify-between:has(> .title:first-child + a[href*="?utm_source="][href*="&utm_campaign=banner_frame"]:last-child)
 op.gg##.min-h-\[50px\]
@@ -52468,7 +52474,6 @@ saverioriotto.it###policy_id
 savetik.co##.ads-slot-top
 saveur.com##body div[class^="empire-organic"][class*="-prefill-container"]
 saveur.com##div[class*="arcAds"]
-savevideo.me##body .ads
 savevideo.me##div[id^="ads_notice_"]
 savio.it###box-overlay
 savvytime.com##.converter-ad
