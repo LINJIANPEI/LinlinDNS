@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-22 23:11:35（北京时间）
+! Version: 2025-08-23 00:13:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64670
+! Total count: 64667
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13662,7 +13662,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kharisma-adzana.blogspot.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kimochi.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kisahdunia.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kissanime.com.ru|kissanime.co
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kissanime.com.ru|kissanime.co|kissanime.sx|kissanime.is
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kitguru.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=laptrinhx.com
@@ -13893,6 +13892,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=userupload.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=utkarshonlinetest.com|techbezzie.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=vector-eps.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=vectorizer.kiwi
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=veev.to|doods.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=videopoker.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=vidlii.com
@@ -13984,7 +13984,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=japangaysex.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=javbee.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=kapang.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=kissanime.sx
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=leakshaven.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=lenouvelliste.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=linetv.tw
@@ -37112,7 +37111,8 @@ igg-games.co,igg-games.com##a[href^="http://s.igg-games.com/index.php?qc="]
 igg-games.co,igg-games.com##body > div[id][style^="position: fixed; z-index:"][style*="overflow: auto; background-color:"]
 igg-games.co,igg-games.com,pcgamestorrents.com##[width="300"][height^="25"]
 igg-games.co,igg-games.com,pcgamestorrents.com##a[href^="/"][href*="?"]
-igg-games.co,igg-games.com,pcgamestorrents.com##img:not([class]):not([decoding])
+igg-games.co,igg-games.com,pcgamestorrents.com,pcgamestorrents.org##[width="300"][height^="25"]
+igg-games.co,igg-games.com,pcgamestorrents.com,pcgamestorrents.org##a[href^="/"][href*="?"]
 igg-games.com##.taxonomy-description
 igg-games.com##.uk-panel.widget-text
 igg-games.com##slot + div[class]
@@ -38335,8 +38335,6 @@ iqiyi.com##li[id^="100000"]
 iqiyi.com##section[class^="ChannelHomeBanner"]
 iqoption.com##div[data-test-id="notification-position-container-block"]
 iqshw.com##.iqshwad-comm
-iranianuk.com##.ads
-iranianuk.com##.banners_container
 iranianuk.com##div[data-actirise-slot]:not(#style_important)
 irctc.co.in##body > a[href^="https://amzn.to/"][target="_blank"]
 irctc.co.in##div#cube
@@ -58517,7 +58515,6 @@ tp-link.com##div[id*="tp-cookie"]
 tp.lpp.si##body > table[height="20"]
 tpb.party##a[href="https://mysurferprotector.com/"]
 tpd.sk##.header__notice
-tpi.li$$script:contains(checkAdblockUser)
 tpi.li,nft-tracker.daic.capital##.banner > a
 tporn.xxx##.sug-bnrs
 tportal.hr##.kaufland-w
