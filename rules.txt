@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-23 07:10:36（北京时间）
+! Version: 2025-08-23 08:46:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64672
+! Total count: 64682
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -19332,6 +19332,7 @@ advfn.com##.plus500
 advfn.com##.primis-container
 advfn.com##.recent-stocks-sibling
 advfn.com##.top-ban-wrapper
+advisorperspectives.com###dfp-ap-2016-interstitial
 advocate.com##.ad_tag
 advocate.com##.bigbox_top_ad-wrap
 advocate.com##.block-heremedia-ads
@@ -24528,11 +24529,14 @@ cargames.com,puzzlegame.com,ubestgames.com,mixfreegames.com##div[id$="AdDiv"]
 cargames.com,puzzlegame.com,yiv.com###game_middle_ad
 cargoboard.com##body > .fixed-bottom.bg-gray
 cargurus.co.uk##.leaderboardWrapper
+cargurus.com###leaderboardWrapper
 cargurus.com##.Gi1Z6i
 cargurus.com##.breadcrumbsAdsWrapper
+cargurus.com##.ranxnv:has(.leaderboard_inline)
 cargurus.com##[class^="_tileFrame_"]:has([data-cg-ft$="-sponsored"])
 cargurus.com##[data-cg-ft="car-blade"]:has([data-eyebrow^="FEATURED"])
 cargurus.com##[data-cg-ft="car-blade-link"]:has([data-cg-ft="srp-listing-blade-sponsored"])
+cargurus.com##[data-testid="VDPBillboardAdWrapper"]
 cargurus.com##div[data-cg-ft="car-blade"]:has(div[data-cg-ft="sponsored-listing-badge"])
 carhartt-wip.com##.standard-message
 cari.com.my###cvidloader
@@ -44441,8 +44445,12 @@ motorsport.com##.outstream_partner
 motorsport.com##.takeOverAdLink
 motorsportz.nl##.overlay_div, .alert_wrapper
 motortrend.com###mt_mobile_app_promo
+motortrend.com##.cls-helper-250-90-250
 motortrend.com##.justify-center:has(.nativo-news)
+motortrend.com##.lg\:min-h-\[90px\]
 motortrend.com##.mb-6:has([data-ad="true"])
+motortrend.com##.min-h-\[100px\]
+motortrend.com##.min-h-\[120px\]
 motortrend.com##[data-ad="true"]
 motortrend.com##[data-ids="AdContainer"]
 motortrend.com,mumsnet.com,stocktwits.com##.min-w-\[300px\]
@@ -52501,6 +52509,7 @@ sbermarket.ru##div[class*="Cookies"]
 sblunwen.com###popupService
 sblunwen.com##.c11
 sbnation.com###chorus_notifiations
+sbnation.com##[data-concert="medium_rectangle_variable"]
 sbonline.net###footer.tekst
 sbs.com.au##.MuiBox-root:has(> .desktop-ads)
 sbs.com.au##.css-p21i0d
@@ -60775,6 +60784,7 @@ vova.com##.activity-cookie
 vox.com###content > div[class*=" "]:has(> div[class][data-concert*="_leaderboard"]:only-child)
 vox.com##.dfp-ad--connatix
 vox.com##.duet--navigation--wiki-banner
+vox.com##[class]:has(> [data-concert])
 vox.com##[data-concert="outbrain_post_tablet_and_desktop"]
 vox.com,theverge.com##.duet--layout--rail > div[class]:has(> div[class] > div[data-concert])
 voxar.io###gas-home-rect
