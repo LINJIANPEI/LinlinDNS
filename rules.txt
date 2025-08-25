@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-25 23:12:11（北京时间）
+! Version: 2025-08-26 00:13:21（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64707
+! Total count: 64713
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3793,6 +3793,8 @@
 9to5mac.com##.post-content > hr.wp-block-separator:has(+ p > a[href^="https://mosyle.net/"][target="_blank"][rel])
 9to5mac.com##.single-custom-post-ad
 9to5mac.com##:is(.post-content, .extended) > .wp-block-image > a[href^="https://mosyle.net/"] > img
+9to5toys.com###openweb-pitc
+9to5toys.com##.pitc
 9tour.cn##a[href^="http://union.zhuna.cn/"]
 9u8u.com##.tc-box
 9upk.com,ouyaoxiazai.com##.ad_show
@@ -13101,6 +13103,7 @@
 @@||oktatas.hu^$stealth=dpi
 @@||okteve.com/*&*=*&*&_=$xmlhttprequest,~third-party
 @@||olacast.live^$stealth=referrer
+@@||olamovies.blog^$generichide
 @@||olamovies.mom^$generichide
 @@||oldskool.vip^$generichide
 @@||olgame.tw^$generichide
@@ -13730,6 +13733,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=nmac.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=nsfw247.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=okdebrid.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olamovies.blog
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olamovies.mom
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olarila.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=onehack.us
@@ -18456,6 +18460,7 @@
 @@||xda-developers.com/adsninja_package/js/adsninja-refreshing-ad-zone.js
 @@||xda-developers.com/app/plugins/xda-kco-affiliate/public/js/xda-kco-affiliate-public.js
 @@||xdiv.space/io/p/?token=$stealth=referrer
+@@||xe.awinriglet.com/*/$domain=olamovies.blog
 @@||xeroshoes.co.uk/affiliate/scripts/trackjs.js$~third-party
 @@||xes.pl/sign-in.html$stealth=ip
 @@||xfinity.com/stream/js/api/fingerprint.js$~third-party
@@ -53219,6 +53224,7 @@ sharetechnote.com##div.content > table > tbody > tr > td > p > .adsbygoogle
 shareus.io##.padded > div[class$="-tag"]
 shareus.io##.recent-purchased
 shareus.io##.seperator-tag
+sharevideo.pl##iframe[src^="//hwithyouryrety.org/"]
 sharkz.io##.frontPageAdvertisementHeader
 sharphomeappliances.com###cookieModuleModal
 sharpspixley.com##.otpOut
