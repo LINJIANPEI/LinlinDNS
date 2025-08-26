@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-26 08:50:05（北京时间）
+! Version: 2025-08-26 10:27:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64720
+! Total count: 64722
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8030,6 +8030,7 @@
 @@||datacloudmail.ru^$domain=cloud.mail.ru,stealth=3p-cookie|referrer
 @@||datacomp.sk^$stealth=dpi
 @@||datacrate18.xyz/file2/$stealth=referrer
+@@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|espn.com|hungryroot.com|usa.experian.com
 @@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|hungryroot.com|usa.experian.com
 @@||datadome.monster.com.first-party-js.datadome.co^$script,domain=monster.com
 @@||dataprajna.net^
@@ -13104,7 +13105,6 @@
 @@||okteve.com/*&*=*&*&_=$xmlhttprequest,~third-party
 @@||olacast.live^$stealth=referrer
 @@||olamovies.blog^$generichide
-@@||olamovies.mom^$generichide
 @@||oldskool.vip^$generichide
 @@||olgame.tw^$generichide
 @@||oloadcdn.net/dl/*.mp4
@@ -13734,7 +13734,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=nsfw247.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=okdebrid.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olamovies.blog
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olamovies.mom
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=olarila.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=onehack.us
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=onehack.us|competentedigitale.ro
@@ -48829,6 +48828,9 @@ pit.pl##.padded > div[id^="sas_"]
 pitax.pl###cookie
 pitch.com##.platform--cookies--container
 pitiurl.com,chikonori.com,freedom3d.org,roms4ever.com##.wp-site-blocks + div[id][class*=" "]
+pitpass.com###indexad300x250l
+pitpass.com###indexsmallads
+pitpass.com##.adcontainer300x250l
 pixabay.com##.affil_images[data-ad-impression-id]
 pixabay.com##.carbon-ad
 pixabay.com##.external-media
@@ -52397,6 +52399,7 @@ samsclub.com##.sc-carousel-slide:has(.sc-sponsored-simple)
 samsclub.com##.sc-plp-cards-card:has(.sc-specials-label)
 samsclub.com##.sc-plp-cards-vast-ad
 samsclub.com##.sc-sba-modules:has(.sc-specials-label)
+samsclub.com##[data-testid="buy-box-ad"]
 samsonite.ro##.mainBlack
 samsung.com###operationBanner
 samsung.com##.helptips__container, #cookie_component, .js-smtc-cookie, #bgc-cookie-popup
@@ -62067,7 +62070,6 @@ wiresoft.com##.Cookie
 wirexapp.com##wx-cookie-policy-notification
 wirklichweiterkommen.de##.lsa-dialog.lsa-js-active
 wirtualis.pl###info_container
-wirtualnemedia.pl###article-content > .border-b:has(> div[class*=" "]:only-child > img[src^="/staticfiles/wm-placeholder.png"]:first-child + div[class*=" "] + script:last-child)
 wirtualnemedia.pl###article-content > .border-b:has(> div[class*=" "]:only-child > img[src^="/staticfiles/wm-placeholder.png"]:first-child + div[class] + script:last-child)
 wirtualnemedia.pl##.partner-news-wrapper
 wirtualnemedia.pl##div[class*=" "]:has(> img[src^="/staticfiles/wm-placeholder.png"]:first-child + div[class*=" "] + div[class*=" "] + script:last-child)
