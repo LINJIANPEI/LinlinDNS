@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-26 07:10:48（北京时间）
+! Version: 2025-08-26 08:50:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64715
+! Total count: 64720
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -37583,6 +37583,7 @@ indianexpress.com##.o-taboola-story
 indianexpress.com##.osv-ad-class
 indianexpress.com##.rhs-banner-carousel
 indianexpress.com##.rhs-banner-wrapn
+indianexpress.com##.taboola-parent
 indianexpress.com##div[data-slug="ie-insurance-form"]
 indianexpress.com##div[id*="google_ads_iframe"][id*="GDPR"]
 indiangaysite.com##.col-lg-4 > .post-meta + .hidden-xs
@@ -40720,6 +40721,7 @@ landiannews.com##.article-content > div[class]:first-child
 landiannews.com##.sidebar > section#block-4
 landiannews.com##.title > .more
 landiannews.com##a[href*="ourl.co"]
+landiannews.com##article > .content-gg > a[target="_blank"][rel="nofollow"]
 landiannews.com##section[id^="media_image"]
 landiannews.com,meijumi.net##.widget_metaslider_widget
 landkreis-ostallgaeu.de###cookie
@@ -44026,6 +44028,7 @@ mob.iyingdi.com##.down-load-app-container
 mob.iyingdi.com##.reply
 mobafire.com##.r-home__guides__ad
 mobafire.com##.venatus-responsive-ad
+mobafire.com##.vid-wrap
 mobalytics.gg##div[style^="width: 400px; height:"]
 mobalytics.gg##main > div[class]:has(> div[class]:only-child > div[data-fuse]:only-child)
 mobalytics.gg##section[data-section-id] > div[class]:has(> section#ad-placeholder-id)
@@ -62065,6 +62068,7 @@ wirexapp.com##wx-cookie-policy-notification
 wirklichweiterkommen.de##.lsa-dialog.lsa-js-active
 wirtualis.pl###info_container
 wirtualnemedia.pl###article-content > .border-b:has(> div[class*=" "]:only-child > img[src^="/staticfiles/wm-placeholder.png"]:first-child + div[class*=" "] + script:last-child)
+wirtualnemedia.pl###article-content > .border-b:has(> div[class*=" "]:only-child > img[src^="/staticfiles/wm-placeholder.png"]:first-child + div[class] + script:last-child)
 wirtualnemedia.pl##.partner-news-wrapper
 wirtualnemedia.pl##div[class*=" "]:has(> img[src^="/staticfiles/wm-placeholder.png"]:first-child + div[class*=" "] + div[class*=" "] + script:last-child)
 wirtualnemedia.pl##div[class*=" "]:has(> img[src^="/staticfiles/wm-placeholder.png"]:first-child + div[class*=" "] + script:last-child)
@@ -63461,6 +63465,7 @@ yahoo.com##div[class*="ads-"]
 yahoo.com##div[class*="bg-Ad"]
 yahoo.com##div[class*="gemini-ad"]
 yahoo.com##div[data-ad-feedback-beacon]
+yahoo.com##div[data-article-body] > div.hidden:has(div.ad-container)
 yahoo.com##div[data-beacon] > div[class*="streamBoxShadow"]
 yahoo.com##div[data-content="廣告"]
 yahoo.com##div[data-content="廣告"]:not(#sda-MAST-iframe)
