@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-26 15:12:11（北京时间）
+! Version: 2025-08-26 17:12:35（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64734
+! Total count: 64747
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -31,6 +31,7 @@
 *$denyallow=foodtechnos.in|fonts.googleapis.com|bootstrapcdn.com|blogger.googleusercontent.com|ajax.googleapis.co|fonts.gstatic.com,domain=foodtechnos.in
 *$denyallow=qiexs.cc|ququge.cc,domain=qiexs.cc|ququge.cc,xmlhttprequest,image,script
 *$denyallow=tszw.org,subdocument,script,xmlhttprequest,domain=tszw.org
+*$denyallow=ucloud140.xyz,domain=jiuse.io,image
 *$denyallow=xpxs.net|jiasucdn.com,domain=xpxs.net,xmlhttprequest,image,script
 *$doc,removeparam=/^(sp|ut|fro?)m(_|\b)/
 *$document,csp=script-src-attr 'none',domain=cruciverba.it|motscroises.fr|palabr.as|word-grabber.com|wort-suchen.de|lamire.jp|picrew.me|badmouth1.com|jin115.com|gloria.hr|etnews.com|sportsseoul.com|hoyme.jp|heraldm.com|tbsradio.jp
@@ -12767,6 +12768,7 @@
 @@||mylivesignature.com/js/adblocker.js
 @@||mylivesignature.com^$generichide
 @@||mylogin.abc.net.au^$stealth=referrer
+@@||mynameiscanavar.site/embed/$stealth=referrer
 @@||myneobuxportal.com/wp-content/plugins/*/adblock-detector/advertisement.js
 @@||mypapercraft.net^$generichide
 @@||myqcloud.com/vod-player/$domain=guancha.cn
@@ -14022,6 +14024,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=scamwatcher.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=slashview.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=smallseotools.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=sms-ol.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spigotunlocked.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=sshkit.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=ssstik.io
@@ -18295,6 +18298,7 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
+@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -28750,6 +28754,7 @@ douploads.net##a[href^="https://href.li/?"]
 douxie.com##.ndxBanner
 douxie.com##.ndxChdjBox
 douyin.com###videoSideBar iframe
+douyin.com##xg-controls + div[class]:has(> div[style] > a[href^="https://gad.netease.com/gad/"])
 douyu.com###js-fix-download
 douyu.com###js-live-room-recommend
 douyu.com###js-room-activity
@@ -31484,6 +31489,7 @@ filmyone.com###mvp-post-main a[target="_blank"] > img
 filmyone.com##div[id$="-top-scroll-shadow"][style^="position: absolute"]
 filmyplex123.blogspot.com##.sidebar > div[id^="HTML"]
 filmypoints.in##div[id][class^="popup"][class$="wrap"][style]
+filmzi.tv##div[maxwidth][maxheight]:has(> div.bg-grey6[role="progressbar"]:only-child)
 filologikosxoleio.gr###block-4
 filologikosxoleio.gr###wrapper div[id^="custom_html-"]:has(div.textwidget:empty)
 filsh.net##div[id^="sovendus-container-"]
@@ -39274,6 +39280,9 @@ jisuxz.com##.dl_gaosu
 jitashe.org##.bc_side_250
 jitashe.org##a[href*=".makeding.com/"]
 jiumodiary.com###forum-panel
+jiuse.io###rd0
+jiuse.io###rd1
+jiuse.io##div[class^="column is-one-quarter-tablet"]
 jiyingdm.com###otherWindowBox
 jiyingdm.com##.abcde
 jiyingw.net##a[href*="fulibus.me"]
@@ -41582,6 +41591,7 @@ live-tv-channels.org,socketloop.com###adsense
 live.bilibili.com##.container-wrapper[style="height:180px;min-width:1280px"]
 live.bilibili.com##.container-wrapper[style="height:446px;min-width:1280px"]
 live.bilibili.com##.fans-medal-item-ctnr
+live.bilibili.com##.layerWrapperRoot > div[class^="_root_bhaoj_"]
 live.bilibili.com##.video-section+a
 live.win007.com###notify > a[target="_blank"]
 live2.thapcam24.net##.bg-overlay
@@ -47420,6 +47430,8 @@ onlineszerszam.hu##.cookie
 onlinethreatalerts.com##.googleResponsive-label
 onlinevideoconverter.com##div[class^="banner728"]
 onlinevideoconverter.video##.music-container a[href][target="”_blank”"] > img
+only-brunettes.com##div[style^="width:"]:has(> script[class^="__clb-"])
+only-brunettes.com,xnxxporns.com,spycock.com,freeporn.info,ruleporn.com,shemaleporn.xxx,freepornhq.xxx##.aff-col
 only.com##.overlay-backdrop
 onlyandsons.com##.overlay-backdrop
 onlydudes.tv##.b-footer-place
@@ -61786,6 +61798,7 @@ whcykj.cn##.swt_bottom
 whdh.com,wsvn.com###leader_1
 wheelofnames.com##.ad-declaration
 whentai.com###modalegames
+whentai.com##.bg-inject
 which.co.uk##body > div[data-which-id="eprivacy-banner"]
 whinfo.net##div[class^="adw"]
 whiskybase.com##.cookie-question
