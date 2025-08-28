@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-28 13:11:41（北京时间）
+! Version: 2025-08-28 14:16:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64779
+! Total count: 64788
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -27392,6 +27392,7 @@ daijiworld.com##.navbar-static-top a[onclick^="recordOutboundLink("] > img
 daijiworld.com##.paddingRight0px > a[onclick^="recordOutboundLink("] > img
 daijiworld.com##.row > div[class="col-md-4 padding3px"] a[onclick^="recordOutboundLink("] > img
 daijiworld.com##[href="http://www.expertclasses.org/"]
+daijiworld.com##[href="https://sjec.ac.in/"]
 daijiworld.com##a[onclick^="recordOutboundLink("][target="_blank"] > img
 dailiantong.com##.appDwn
 daily-choices.com##[id^="sticky_"]
@@ -31808,9 +31809,14 @@ flight.qunar.com##.l_rside > .b_fly_ban_b:nth-child(2)
 flightaware.com##.homepage_skin_container
 flightconnections.com##.display-box
 flightconnections.com##.display-box-2
+flightconnections.com##.display-box-first-click
+flightconnections.com##.flc-text-blocked-route
+flightconnections.com##.native-ad-btn
 flightconnections.com##.parallax-container
 flightconnections.com##.right-column:has(> .route-display-box-container)
 flightconnections.com##.route-display-box
+flightconnections.com##.unpublished-flights
+flightconnections.com##.waldo-footer
 flightconnections.com##div[class^="waldo-"]
 flightconnections.com##div[title="Remove ads"]
 flightglobal.com##.adwrap_MPU
@@ -44415,6 +44421,9 @@ morningpost.com.cn###\33 60hot
 morningpost.com.cn##.gg-2
 morningpost.com.cn##.gg-stl
 morningpost.com.cn##div[style="margin:0;padding:0;width:648px;height:345px;overflow:hidden;background-color:#fff;"]
+morningstar.com.au##.section-adzone
+morningstar.com.au##.section-container--ads__2
+morningstar.com.au##.section-container--ads__3
 morningstar.de###divAudienceConfirmation #investmentInUK ~ div
 morningstar.fr##.audienceTypeConfirmPopupContentCss, #dialog-mask
 morningstar.in##.add-container
