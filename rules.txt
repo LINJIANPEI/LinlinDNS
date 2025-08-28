@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-28 23:11:29（北京时间）
+! Version: 2025-08-29 00:13:35（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64794
+! Total count: 64802
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11812,7 +11812,6 @@
 @@||liveapi.cleverpush.com/websocket$websocket,domain=heise.de
 @@||livefootball77.blogspot.co.id^$generichide
 @@||livehd7.com^$generichide
-@@||livehindustan.com/*ad$script
 @@||liveindex.org/wp-content/plugins/imedia-basic/*.js
 @@||livejasmin.com/en/promotion/get?noRedirect=*&streamType=$domain=pt.protoawe.com
 @@||livekoora.info^$generichide
@@ -12795,6 +12794,7 @@
 @@||myshrinker.com^$generichide
 @@||mysmth.net/nForum/*/ADAgent_$~third-party
 @@||mysocceraustralia.com^$generichide
+@@||myspacecat.pictures^$stealth=referrer
 @@||myssl.com/scripts/analyze.js
 @@||mystyle.archosaur.com^
 @@||mytuner-radio.com^$generichide
@@ -13771,6 +13771,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=podu.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=popcrush.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=populistpress.com|canadafreepress.com|thelibertydaily.com|writerscafe.org|populist.press|welovetrump.com|grammarist.com|protrumpnews.com|gamersheroes.com|letocard.fr|100percentfedup.com|thepalmierireport.com|kresy.pl|beforeitsnews.com|thepatriotjournal.com|phoenixnewtimes.com|thepoke.co.uk|comicallyincorrect.com|thegatewaypundit.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=populistpress.com|canadafreepress.com|thelibertydaily.com|writerscafe.org|populist.press|welovetrump.com|grammarist.com|protrumpnews.com|gamersheroes.com|letocard.fr|100percentfedup.com|thepalmierireport.com|kresy.pl|beforeitsnews.com|thepatriotjournal.com|phoenixnewtimes.com|thepoke.co.uk|comicallyincorrect.com|thegatewaypundit.com|toptenz.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=porn4f.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=portmiamiwebcam.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pracezdopravy.cz
@@ -15011,8 +15012,10 @@
 @@||rd.ias.global.rakuten.com/adv/$domain=24.rakuten.co.jp
 @@||rddywd.com/adcode.png$domain=joblo.com
 @@||rddywd.com/adcode.png$domain=populistpress.com|canadafreepress.com|thelibertydaily.com|writerscafe.org|populist.press|welovetrump.com|grammarist.com|protrumpnews.com|gamersheroes.com|letocard.fr|100percentfedup.com|thepalmierireport.com|kresy.pl|beforeitsnews.com|thepatriotjournal.com|phoenixnewtimes.com|thepoke.co.uk|comicallyincorrect.com|thegatewaypundit.com
+@@||rddywd.com/adcode.png$domain=populistpress.com|canadafreepress.com|thelibertydaily.com|writerscafe.org|populist.press|welovetrump.com|grammarist.com|protrumpnews.com|gamersheroes.com|letocard.fr|100percentfedup.com|thepalmierireport.com|kresy.pl|beforeitsnews.com|thepatriotjournal.com|phoenixnewtimes.com|thepoke.co.uk|comicallyincorrect.com|thegatewaypundit.com|toptenz.net
 @@||rddywd.com/advertising.js$domain=herokuapp.com
 @@||rddywd.com/advertising.js$domain=populistpress.com|canadafreepress.com|thelibertydaily.com|writerscafe.org|populist.press|welovetrump.com|grammarist.com|protrumpnews.com|gamersheroes.com|letocard.fr|100percentfedup.com|thepalmierireport.com|kresy.pl|beforeitsnews.com|thepatriotjournal.com|phoenixnewtimes.com|thepoke.co.uk|comicallyincorrect.com|thegatewaypundit.com
+@@||rddywd.com/advertising.js$domain=populistpress.com|canadafreepress.com|thelibertydaily.com|writerscafe.org|populist.press|welovetrump.com|grammarist.com|protrumpnews.com|gamersheroes.com|letocard.fr|100percentfedup.com|thepalmierireport.com|kresy.pl|beforeitsnews.com|thepatriotjournal.com|phoenixnewtimes.com|thepoke.co.uk|comicallyincorrect.com|thegatewaypundit.com|toptenz.net
 @@||rdelivery.qq.com^
 @@||rdrtr.com/*url=
 @@||reactandshare.com^$domain=maanmittauslaitos.fi
@@ -28411,6 +28414,7 @@ distractify.com,inquisitr.com##.sc-fTZrbU
 distri.cz##body > div:not([id]):not([class])
 distritopostal.es###ecl-container-box
 distrowatch.com##a[href*="3cx.com"]
+distrowatch.com##td > table:has(> tbody > tr a[href^="https://www.3cx.com/"])
 distrowatch.com##td[style="width: 19%; vertical-align: top; border: none"] > table[class="News"]+br+table[width="100%"]
 distrowatch.com##td[style="width: 60%; vertical-align: top; border: none"] > table > tbody > tr > td[style="width: 100%; border: 0; margin: 0; padding: 0; vertical-align: top; overflow: hidden"]
 ditu.so.com##.label-ads
@@ -38190,6 +38194,7 @@ iphonesoft.fr,iphonetweak.fr###msgUser
 ipill.de###cookie-message ~ .design
 ipip.net##.row[style="width:1000px;margin:0px auto 25px auto;"]
 iplark.com##body > div:not([class]):not([style])
+iplark.com##div[class^="banner"]
 iplaysoft.com###_cblzx
 iplaysoft.com###link1111
 iplaysoft.com###section_event
@@ -40245,6 +40250,7 @@ kmzu.com##.sticky-footer-promo-container
 knaben.xyz,thepiratebay.zone,pirateproxylive.org,tpb.party##.download > a[target="_blank"]:not([href*="magnet:"], [href*="tpb.party"], [href*="pirateproxylive.org"])
 knaf.nl###cp-wrap
 knews.com.tw,1905.com,news.ltn.com.tw,commonhealth.com.tw,health.tvbs.com.tw,idreamx.com,xchina.co,manhuafen.com,world68.com##.ad
+knews.com.tw,shiyrj.top,yalishi.com,guozaoke.com,100ec.cn,159i.com,1905.com,22vd.com,2345.cn,234fang.com,3gsc.com.cn,52youpiao.com,72g.com,8se.me,acg.bz,acg13.cn,acgbenzi.com,baiduyunpan.net,baike.com,bbs-mychat.com,cdyee.com,ce.cn,chinaqking.com,chinatimes.com,chinatruck.org,chinaz.com,cnforex.com,cnsoftnews.com,codepub.com,cq.xinhuanet.com,cxryun.cn,dav01.com,discuss.com.hk,djwma.com,dmzj.com,dmzj1.com,dngz.net,douban.com,dzwww.com,eastday.com,fengniao.com,focus.cn,fx112.com,gongkong.com,henan100.com,honglingjin.co.uk,house.jschina.com.cn,iciba.com,ifeng.com,ipeen.com.tw,isharebest.com,itavcn.com,jojf.cn,jrj.com.cn,kumi.cn,landiannews.com,lawtv.com.cn,lieyunwang.com,lncn.org,loveshang.com,ltn.com.tw,luo8.com,maxpda.com,mm111.net,moxing.net,mvcat.com,ncdiy.com,neotv.com.cn,newsmth.net,njdaily.cn,pc0359.cn,people.com.cn,pharmnet.com.cn,pixnet.net,pptv.com,ptbus.com,qncye.com,r3sub.com,sogou.com,sozi.cn,toolfk.com,tv.sohu.com,u-car.com.tw,weather.com.cn,xianbao.fun,yawin.cn,yb983.com,ydss.cn,yesky.com,yiche.com,yqxxs.com,zhihu.com,ziyuanyo.com##.ad
 knigogid.ru##.b-cookie
 knime.com##.cookie-modal
 knoema.com###gdpr
@@ -57377,6 +57383,8 @@ themeparktycoon2.com##.wix-blog-print-in-full-width > div.wix-blog-hide-in-print
 themeslide.com##.bsac-container
 themighty.com##.tm-ads
 themilitarystore.co.uk###pixelpop
+themirror.com##div[data-testid^="commercial-"]
+themirror.com##div[data-tmdatatrack-type="commercial"]
 themirror.com##reach-billboard
 themirror.com,myyearbook.com###takeover
 themodellingnews.com##.adblcr
