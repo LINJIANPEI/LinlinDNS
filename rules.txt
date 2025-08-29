@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-29 07:10:51（北京时间）
+! Version: 2025-08-29 08:47:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64805
+! Total count: 64821
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6648,6 +6648,7 @@
 @@||browser.covatic.io/sdk/v1/bauer.js$script,domain=hellorayo.co.uk
 @@||browser.events.data.msn.com^
 @@||browser.pipe.aria.microsoft.com^
+@@||browser.sentry-cdn.com^$domain=acustica-audio.com|alphaxiv.org|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|members.bifa.film|menshealth.com|ocado.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
 @@||browser.sentry-cdn.com^$domain=acustica-audio.com|alphaxiv.org|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|menshealth.com|ocado.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
 @@||browser.yandex.*/sync/$stealth=useragent
 @@||browserbench.org^$generichide
@@ -10838,6 +10839,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=f5haber.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=zattoo.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=10play.com.au|10.com.au
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=247sports.com|4029tv.com|bet.com|bloomberg.co.jp|bloomberg.com|cbc.ca|cbssports.com|cc.com|clickorlando.com|digi24.ro|gbnews.com|history.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mynbc5.com|paramountplus.com|s.yimg.jp|sbs.com.au|tv.rakuten.co.jp|vk.sportsbull.jp|wapt.com|watchcharge.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|worldsurfleague.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=247sports.com|4029tv.com|bet.com|bloomberg.co.jp|bloomberg.com|cbc.ca|cbssports.com|cc.com|clickorlando.com|digi24.ro|gbnews.com|history.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mynbc5.com|paramountplus.com|s.yimg.jp|sbs.com.au|tv.rakuten.co.jp|vk.sportsbull.jp|wapt.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|worldsurfleague.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=bloomberg.com,stealth=referrer
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=cbs.com|paramountplus.com|history.com
@@ -22809,6 +22811,7 @@ bilibili.com##.bili-video-card__wrap > a[href^="http"]:not([href*=".bilibili.com
 bilibili.com##.btn-ad
 bilibili.com##.btn-ctnr
 bilibili.com##.clearfix.h5-download-bar
+bilibili.com##.container > .bili-feed-card:has(> div.bili-video-card  div.bili-video-card__info--no-interest + h3 > a[target="_blank"]:not([href^="https://www.bilibili.com/"]))
 bilibili.com##.container > div.bili-video-card.is-rcmd:not(:has(> *))
 bilibili.com##.desktop-download-tip
 bilibili.com##.download-client-trigger.download-entry
@@ -23109,6 +23112,9 @@ bjhockey.org###homeVideoModal
 bjnews.com.cn##a[href*="/ads/"]
 bjr.de###cc
 bjs.com##.banner-cta-wrap:has([src="//retailmedia-static.criteo.com/"])
+bjs.com##.banner-cta-wrap:has(img[src*="criteo.com"])
+bjs.com##.lazyload-wrapper:has(> #promoteIqContent)
+bjs.com##[data-cnstrc-recommendations="true"]:has(.sponsored-products)
 bjx.com.cn##.layer_right2
 bjxfqc.net##script ~ ul[style]
 bkill.com##.alliance-ad
@@ -26715,6 +26721,8 @@ cozadzien.pl##.section--ad
 cozadzien.pl##a.imd-radio
 cp.pt##.cookies
 cpanel.net##.consent-container
+cpbj.com##.header-bottom-adboard-area
+cpbj.com##.leaderboard-ad-section
 cpd.com.cn###left_bdad
 cpd.com.cn###right_ad1
 cpd.com.cn###right_ad2
@@ -44882,6 +44890,7 @@ msn.com##partner-upsell-card
 msn.com##views-native-ad
 msn.com$$li[class="hasimage"][tag-content="""NativeAdHeadlineItemViewModel"""][max-length="2000"]
 msnbc.com##.dy_bottom_notification
+msnbc.com##.header-and-footer--banner-ad
 msp360.com##.use-cookie
 mspoweruser.com###sidebar_btf_placeholder
 mspoweruser.com##aside[class^="widget shunno_widget_sidebar_"]
@@ -51747,6 +51756,7 @@ reuters.com##.StandardArticleBody_container + div > span ~ div
 reuters.com##.TwoColumnLayout_container > .TwoColumnLayout_column + div[id] > div:not([class]):not([id]) + div[class$=" "]:last-child
 reuters.com##.TwoColumnLayout_container > .TwoColumnLayout_column > .StandardArticleBody_container > .StandardArticleBody_body + div:not([class]):not([id]) + div[class$=" "]
 reuters.com##.TwoColumnLayout_container > .TwoColumnLayout_column > .StandardArticleBody_container > .StandardArticleBody_body + div:not([class]):not([id]) + div[id] > div[class$=" "] ~ *
+reuters.com##.workspace-article-banner-module__image__F14iP
 reuters.com##.workspace-article-banner__image__2Ibji
 reuters.com##[data-testid="CnxPlayer"]
 reuters.com##[data-testid="Leaderboard"]
@@ -53166,6 +53176,7 @@ sexseeimage.com##.video-block-happy
 sexseeimage.com,thisav.me,thisav.video##.happy-player-beside
 sexseeimage.com,thisav.me,thisav.video##.happy-player-under
 sexseeimage.com,thisav.me,thisav.video##.happy-section
+sextb.date##.sextb_300
 sextb.date,sextb.net##.right div[data-asg-ins]
 sextb.net##.asg-overlay
 sextb.net##.right.hidden-md
@@ -56183,6 +56194,7 @@ talkfx.co###frameff1Hu9_left
 talkfx.co##.slidebox
 talkfx.com##.slidebox
 talkingpointsmemo.com##.--span\:12.AdSlot
+talkingpointsmemo.com##.js_preheader-ad-container
 talkingtomandfriends.com###cookie-settings
 talkshop.live##.notifications-wrapper ~ div[style*="black"]
 talksport.com##.stack-recirc--ad-slot
@@ -57437,6 +57449,8 @@ theoldie.co.uk##.placeholder-wrapper
 theoldreader.com###banner_container
 theoldreader.com##div[id$="-ad-container"]
 theonion.com##.block-visibility-hide-medium-screen
+theonion.com##.theonion-frame-ad-large
+theonion.com##.theonion-frame-ad-small
 theonlinesurgery.co.uk##.alert.ue-content
 theoutline.com##.post__body > p + div[class][data-id]
 theoutline.com##[data-campaign2]
@@ -58922,6 +58936,7 @@ trustedrevie.ws##.col-md-12 > div:not(.rw-detail-companiews-area).see-all-info-a
 trustedreviews.com##.keystone-deal
 trustedreviews.com##.keystone-single-widget
 trustedreviews.com##.page_header_container
+trustedreviews.com##.phoenix-deals-block
 trustmate.io##div[class*="CookiesWrapper"]
 trustnet.com###deployment_banner
 trustpid.com##footer > button
@@ -59534,6 +59549,7 @@ ubereats.com##.dw.ec
 ubereats.com##div[role="alert"][data-baseweb="toast"]
 ubergizmo.com###sidebar_card_spon
 ubergizmo.com##.article_card_promoted
+ubergizmo.com##.label_advertising_text
 ubergizmo.com##.leaderboardcontainer
 ubergizmo.com##.mediumbox_container
 ubergizmo.com##.postcontainer_home > div[role="ad"]
