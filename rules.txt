@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-08-30 15:09:32（北京时间）
+! Version: 2025-08-30 16:13:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64832
+! Total count: 64833
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -16008,7 +16008,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -42849,6 +42848,8 @@ mangamiso.net##.container > div.v-sheet--outlined
 mangaowl.com,037hdd.com##div[id^="ads_"]
 mangapark.net##.ad-page-3x
 mangapark.net##div[claass="ad-970x250"]
+mangaplus.shueisha.tv,shueisharaw.tv###ads_mobile
+mangaplus.shueisha.tv,shueisharaw.tv###left-banner
 mangaraw.org,rawmanga.top##.banner-landscape
 mangaraw.org,rawmanga.top,cointelegraph.com##.banner-blocked
 mangaraw.org,theync.com##.banner-block
