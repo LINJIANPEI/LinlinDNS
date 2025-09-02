@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-02 20:21:04（北京时间）
+! Version: 2025-09-02 21:24:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64885
+! Total count: 64891
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5716,6 +5716,7 @@
 @@||anyporn.com/key.jsx
 @@||anyporn.com/player/kt_player.js
 @@||anyporn.com/player/kt_player_*.jsx
+@@||anythinktech.com^
 @@||anzplus-web.app.link^$stealth=useragent
 @@||aobi.100bt.com/play/ad/ad*.swf
 @@||aod.cos.tx.xmcdn.com^
@@ -9986,7 +9987,7 @@
 @@||h.trace.qq.com^
 @@||h18.update.netease.com^
 @@||h1g.jp/img/ad/ad_heigu.html$~third-party
-@@||h35.ynodd.cn^$important
+@@||h35.ynodd.cn^$
 @@||h42.update.netease.com^
 @@||h5-box.onethingpcs.com^
 @@||h5.360buyimg.com^
@@ -20680,6 +20681,7 @@ apk4all.com##.ny-down > a[rel="nofollow"][class="more-link"][title="Download"]:n
 apk4free.net##.post-content > center > a[href^="http://www.apk-download-market.com/apk_download_app.php"]
 apkcombo.app##.diseanmevrtt
 apkcombo.app##div[style^="margin-bottom"]:has(> script[data-cfasync])
+apkcombo.com##.ad-pss
 apkcombo.com##.ads-revamp
 apkcombo.com##.calc-container
 apkcombo.com##.diseanmevrtt
@@ -24823,8 +24825,6 @@ cdn.htmlgames.com###afgContainer
 cdn.javpornsite.com##.inplayer-wrapper
 cdnm4m.nl###directAds
 cdnstream.top,gaytry.com##div[style="position:relative;"] ~ div[style*="position:fixed;inset:0px;"][style*="background:black;opacity"]
-cdr.cz##div[id^="revive-ad-"]
-cdr.cz##iframe[src^="https://openads.aira.cz/"]
 cdrab.com,offerinfo.net##.adslr
 cdromance.org##.sidebar > .widget_custom_html:has(div[id^="ezoic-pub-ad-placeholder-"])
 cdromance.org,dailymusicroll.com,cdromance.com,pridesource.com,watchtv24.com,4sysops.com,artificialintelligencestechnology.com,paradacreativa.es,cdromance.com,techspite.com,aceofhacking.com,nationalchronicle.in,valuewalk.com###custom_html-8
@@ -34283,6 +34283,8 @@ gokom.eu###gokom-cookies
 gold-24.net,bedavahesap.org##.back-top + div[id][class*=" "]
 goldbet.it###drop-cookie, .cookieOC
 goldderby.com##.adma
+goldengoalsfinance.com###AdbModel
+goldengoalsfinance.com##div[class^="pro_ad_"]
 golder.com##.popcookies
 golderotica.com,nudeplayboygirls.com##body > div#topbar
 goldprice.org##.kenbi
@@ -52836,6 +52838,8 @@ scriptinghelpers.org##.shvertise-skyscraper
 scroll.in##.in-article-adx
 scrolller.com###object_container
 scrolller.com##.gallery-view > .vertical-view > .vertical-view__columns > .vertical-view__column > a[href^="https://trk.scrolller.com/"]
+scrolller.com##.popup--sticky:has(img[class^="HeaderImage_"][src*="-ads.png"])
+scrolller.com##.popup--sticky:not(:has(:is(div.login_popup_box, button[class^="PrimaryCloseButton_"])))
 scrolller.com##.popup--sticky:not(:has(div.login_popup_box))
 scrolller.com##.vertical-view__column > .vertical-view__item:has(> div[style$="overflow: hidden;"])
 scrolller.com##a[href^="https://trk.scrolller.com/"]
@@ -57777,7 +57781,9 @@ theweathernetwork.com##.woahbar
 theweathernetwork.com##[data-testid="content-feed-ad-slot"]
 theweathernetwork.com##[data-testid="header-ad-content"]
 theweathernetwork.com##[data-testid="pre-ad-text"]
+theweathernetwork.com##div[data-testid="ad-with-pre-text"]
 theweathernetwork.com##div[data-testid="div-gpt-ad-topbanner"]
+theweathernetwork.com##div[data-testid="forecast-module-row"] > div[class^="sc-"]:has(> div[data-testid="ad-with-pre-text"]:only-child)
 theweathernetwork.com##div[data-testid="post-ad-text"]
 theweathernetwork.com##div[data-testid="pre-ad-text"]
 theweathernetwork.com##div[data-testid="pre-ad-text"] + div[class]
