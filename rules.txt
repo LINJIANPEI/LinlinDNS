@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-02 08:48:33（北京时间）
+! Version: 2025-09-02 10:23:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64873
+! Total count: 64872
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -30014,8 +30014,6 @@ emarketer.com##.skyContainer
 emathhelp.net$$script[tag-content="if (window.TextDecoder)return(new window.TextDecoder(""utf-8"")).decode("][max-length="30000"]
 embed.dugout.com##div[data-testid="keep-watching"]
 embed.listcorp.com##a[href^="https://j.moomoo.com/"]
-embed.wcostream.com###announcement
-embed.wcostream.com##.announcement-backdrop
 embedrise.com,mangoporn.net,mangoporn.co,xxxmoviestream.xyz,watchpornfree.info,streamporn.pw###overlays
 embedsports.me##.bg-dark.position-absolute
 embedy.me###video_iframe+div
@@ -34793,6 +34791,7 @@ gsm55.com##div[class*="cookie-module"]
 gsmarena.com###subHeader2
 gsmarena.com###subHeader3
 gsmarena.com###subHeader3:has([href="deals.php3"])
+gsmarena.com###subHeader3:has-text(daily deals)
 gsmarena.com###subHeader:has(> #topAdv)
 gsmarena.com###topAdv
 gsmarena.com##.justify-center:has(.ad-c-label)
