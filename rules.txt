@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-02 15:11:46（北京时间）
+! Version: 2025-09-02 16:15:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64873
+! Total count: 64881
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4677,6 +4677,7 @@
 @@||5278.cc/static/image/common/ad_close.gif
 @@||5278.cool^$generichide
 @@||52zy.com/gg/
+@@||5471782.fls.doubleclick.net^
 @@||5471782.fls.doubleclick.net^|
 @@||5692.com.ua/assets/*/ads-complain.js
 @@||58.com/adJump?adType=
@@ -4698,6 +4699,7 @@
 @@||70.86.24.120:8060/*/
 @@||720static.com/resource/$stealth=referrer
 @@||75.125.41.29:8080/*/
+@@||79423.analytics.edgekey.net^
 @@||79423.analytics.edgekey.net^|
 @@||795pao.com:88/999pc/ckplayer.js
 @@||7k7k.com/channel$subdocument
@@ -24925,6 +24927,8 @@ ceskenoviny.cz##.crossroad-grid > .list > .list-item:has(> .crossroad-light > di
 ceskenoviny.cz##.px-ads
 ceskenoviny.cz##div[id^="nativPodclanek"]
 cestfrais.fr###cnil, .cnil, #CNIL
+cestovinky.cz,diit.cz,cdr.cz##div[id^="revive-ad-"]
+cestovinky.cz,diit.cz,cdr.cz##iframe[src^="https://openads.aira.cz/"]
 cesu.ai##div[class^="money_"]
 cetelem.es###modalCookies
 cewe-print.de###cookies
@@ -28787,6 +28791,8 @@ dotesports.com,primagames.com##.wp-block-gamurs-ad
 dotesports.com,progameguides.com###gg-masthead
 dotnetconf.net###cookie-consent
 dotnetfiddle.net##.container-sponsor
+dotyk.cz,fitzivot.cz,kafe.cz,poznatsvet.cz,iglanc.cz,kondice.cz,nationalgeographic.cz,kvety.cz,ireceptar.cz,vlasta.cz,dumazahrada.cz##.content-box-wrap::before
+dotyk.cz,fitzivot.cz,kafe.cz,poznatsvet.cz,iglanc.cz,kondice.cz,nationalgeographic.cz,kvety.cz,ireceptar.cz,vlasta.cz,dumazahrada.cz##.content-box-wrap__inner--placeholder
 douban.com##.bottom_ad_download
 douban.com##.channel_promo
 douban.com##.lnk-doubanapp
@@ -53012,6 +53018,7 @@ selectel.ru##.ui-cookies
 selectminds.com###notify-banner, #cboxOverlay, #colorbox
 selectos.eu###selectos-cookie-background
 selexion.be###splash_footer
+self.com##.promo-box
 self.com,pitchfork.com,wired.com,vanityfair.com##div[class^="StickyHeroAdWrapper"]
 selfhost.de##.cookies
 selle-proust.fr##.elementor-popup-modal
@@ -63394,6 +63401,7 @@ xw.qq.com##div[data-boss*="modular"]
 xw.qq.com##div[data-boss-expo="&modular=quicknews_m"]
 xw.qq.com##section[style="display: block;"]
 xwhite-tube.com##.content--ads
+xx.knit.bid##.clickadu-container
 xxbrits.com##.aside-spot
 xxbrits.com##.block-offer
 xxbrits.com##.group-links > button.click-fun ~ button
