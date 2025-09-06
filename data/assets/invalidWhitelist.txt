@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13935
+! Total count: 13936
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-09-05 20:45:13（北京时间）
+! Version: 2025-09-06 09:43:00（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1619,7 +1619,6 @@
 @@/admanager/*$domain=woego.cn
 @@/adpartner.min.js$domain=starkroboticsfrc.com|cryptednews.space|seoliv.com|blackwoodacademy.org|crypto-radio.eu|tiktokcounter.net
 @@/adpic/*$domain=baike.baidu.com|czsrc.com|nieyou.com|ontheup.com.tw|zform.net
-@@/adpro.js$domain=tingfm.com
 @@/adrum.js$domain=usbank.com
 @@/ads-api.$domain=moneysave.info|zxmee.com
 @@/ads.*.js$domain=notebookcheck-hu.com|notebookcheck.com|notebookcheck.net|notebookcheck.org|notebookcheck.biz|notebookcheck.it|notebookcheck.nl|notebookcheck.info|notebookcheck-tr.com|notebookcheck.se|notebookcheck-ru.com
@@ -1725,6 +1724,7 @@
 @@/fuckadblock.js$domain=meucdn.vip|yandexcdn.com|hqq.tv|waaw.tv
 @@/gen.php?playerid$subdocument,stealth=referrer,domain=fastreams.live|fastreams.com|ftmstreams.com
 @@/gettoken.php?$xmlhttprequest,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|thecubexguide.com|jytechs.in
+@@/ggjs/*$domain=tingfm.com
 @@/google-adwords$domain=t3n.de,~third-party
 @@/gtm.js$domain=amd.com
 @@/guanggao/*$domain=icbc.com.cn|igame.qq.com
@@ -10858,6 +10858,7 @@
 @@||connatix.com*/connatix.player.$script,domain=ebaumsworld.com|funker530.com|tvinsider.com|washingtonexaminer.com
 @@||connatix.com/min/connatix.renderer.infeed.min.js$domain=accuweather.com|collider.com|gamepress.gg|salon.com
 @@||connatix.com^$domain=accuweather.com
+@@||connatix.com^$domain=euronews.com
 @@||connatix.com^$domain=sport-fm.gr|sport24.gr|variety.com
 @@||connect.facebook.*/en_US/AudienceNetworkPrebid.js$domain=cbssports.com
 @@||connect.facebook.net/*/fbevents.js$domain=smartstore.naver.com
@@ -11173,7 +11174,6 @@
 @@||data.mistat.xiaomi.com^$app=com.tencent.mm
 @@||data.reactandshare.com/api/plugin/$stealth=referrer,domain=maanmittauslaitos.fi
 @@||data.simpleupload.net/download/$stealth=referrer
-@@||data.tm-awx.com^$script,domain=birminghammail.co.uk|bristolpost.co.uk|dailyrecord.co.uk|hulldailymail.co.uk|liverpoolecho.co.uk|manchestereveningnews.co.uk|stokesentinel.co.uk
 @@||datacloudmail.ru^$domain=cloud.mail.ru,stealth=3p-cookie|referrer
 @@||datacomp.sk^$stealth=dpi
 @@||datacrate18.xyz/file2/$stealth=referrer
@@ -20698,6 +20698,7 @@
 @@||web-sdk.urbanairship.com/notify/$script,domain=etoro.com
 @@||web.any.do^$document
 @@||web.basemark.com^$generichide
+@@||web.map-m.com/*/api?appKey=$domain=toyota.jp,stealth=referrer
 @@||web.np.playstation.com/api^$stealth=3p-auth
 @@||web.skype.com^$stealth=webrtc
 @@||web.snrbox.com/*?tracker=$domain=carrefourpl.snrpage.com
