@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-09 20:21:39（北京时间）
+! Version: 2025-09-09 21:25:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65019
+! Total count: 65022
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2695,6 +2695,10 @@
 24ur.com##onl-eurojackpot-teaser
 24ur.com##onl-iframe-banner
 24video.xxx##.adt
+24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,magazynnaszczycie.pl,palukimogilno.pl,zycie.pl##.grid__ad
+24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.adv
+24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
+24wroclaw.pl,24jgora.pl,myslenice-itv.pl,kulisy.net##.custom-html-box:has(> .box__container:only-child > div:only-child > p:only-child)
 24xxx.porn###under-player-promo
 24zdrave.bg###cookies
 25ans.jp,ellegirl.jp,harpersbazaar.com##div[class*="css-"]:has(> div.ad-disclaimer)
@@ -4962,7 +4966,6 @@
 @@||ad.crwdcntrl.net^$script,domain=rtl.nl
 @@||ad.doubleclick.net/*/adi/com.ytbc/$domain=youtube.com
 @@||ad.doubleclick.net/*/pfadx/$domain=m.youtube.com
-@@||ad.doubleclick.net/ad/test.png$image,domain=citroen-club.cz
 @@||ad.doubleclick.net/ad/test.png$image,domain=citroen-club.cz|renault-club.cz
 @@||ad.doubleclick.net/clk*&destinationURL=$popup
 @@||ad.doubleclick.net/clk;$urlblock
@@ -5326,7 +5329,6 @@
 @@||adtech.de/dt/common/DAC.js$domain=worldsnooker.com
 @@||adtng.com/get/$subdocument,domain=hanime.tv
 @@||adtraction.com^$image,domain=ebjudande.se
-@@||adtrafficquality.google/sodar/$script,domain=rekidai-info.github.io
 @@||adulttvlive.net/advertisement.js
 @@||adv.*.ch^$xmlhttprequest,other,script,domain=tio.ch
 @@||adv.asahi.com^$popup
@@ -8695,6 +8697,7 @@
 @@||emoji.gg^$generichide
 @@||emoji.qpic.cn^
 @@||emoji.uc.cn^
+@@||emojipedia.org/ab_fl.js
 @@||emome.net/files/advertising/
 @@||emturbovid.com/t/$stealth=referrer
 @@||emturbovid.com/t/*?poster=$stealth=referrer
@@ -8712,6 +8715,7 @@
 @@||encrypted-tbn3.gstatic.com^
 @@||encurtandourl.com^$generichide
 @@||energy.de^*/ivw.js?$domain=energy.de
+@@||enerjisa.com.tr^$stealth=dpi
 @@||enfermeria.gnomio.com^$generichide
 @@||engagently.com/graphql$stealth=3p-auth,xmlhttprequest
 @@||engine.univtec.com^$generichide
@@ -9801,7 +9805,6 @@
 @@||googletagmanager.com/gtag/js$domain=taming.io
 @@||googletagmanager.com/gtag/js$domain=themarysue.com
 @@||googletagmanager.com/gtag/js$domain=xfreehd.com
-@@||googletagmanager.com/gtag/js$script,domain=rekidai-info.github.io
 @@||googletagmanager.com/gtag/js$xmlhttprequest,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|thecubexguide.com|jytechs.in
 @@||googletagmanager.com/gtag/js$xmlhttprequest,domain=getthit.com
 @@||googletagmanager.com/gtag/js?$domain=bitcotasks.com
@@ -10804,6 +10807,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store|w1tv.xyz|cdnstream.top|javboys.upn.one|coflix.upn.one
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store|w1tv.xyz|cdnstream.top|javboys.upn.one|coflix.upn.one|animeshqip.uns.bio
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.corriere.it
@@ -13823,7 +13827,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=receive-sms-online.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=receivesms.org|receivesms.co
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rekidai-info.github.io
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rendimentibtp.it
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=replica-watch.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=repo.hackyouriphone.org
@@ -13979,7 +13982,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zeriun.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zobacz.ws
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=bdstream.site
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=citroen-club.cz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=citroen-club.cz|renault-club.cz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=panel.waifly.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=uploadmall.com
@@ -14146,7 +14148,6 @@
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ff14angler.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads*.js$domain=forum.release-apk.com,important,stealth
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl$script,domain=pvpoke-re.com
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_$script,domain=rekidai-info.github.io
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_$script,domain=rjno1.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=codingnepalweb.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=copyseeker.net
@@ -14156,7 +14157,6 @@
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=toolxox.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=tsubasa.im
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=zefoy.com
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy$script,domain=citroen-club.cz
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy$script,domain=citroen-club.cz|renault-club.cz
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2019.js$domain=beatsnoop.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2019.js$domain=dafontvn.com
@@ -14200,7 +14200,6 @@
 @@||pagead2.googlesyndication.com^$domain=battlecats-db.com
 @@||pagead2.googlesyndication.com^$domain=fplstatistics.com
 @@||pagead2.googlesyndication.com^$domain=ytlarge.com
-@@||pagead2.googlesyndication.com^$xmlhttprequest,domain=rekidai-info.github.io
 @@||pagerank.fr/js*/advert.js?$script
 @@||pages.tmall.com^
 @@||pakkotoisto.com/js/siropu/am/ads.min.js$domain=pakkotoisto.com
@@ -44779,12 +44778,9 @@ moviesdoofree.com###content > div[style="width: 100%; margin: 0 auto;"]
 moviesfoundonline.com##a[href^="https://www.purevpn.com/"]
 movieshd.watch$$script[min-length="10000"][max-length="1000000"][tag-content="$.BD"]
 moviesjoy.to###overlay-container
-moviesroom.pl###hook_after_title
 moviesroom.pl##.mx-auto > .relative > img[alt]
-moviesroom.pl##.popup-ad
 moviesroom.pl##a[href^="https://bit.ly/"]
 moviesroom.pl##a[href^="https://gde-default.hit.gemius.pl/"] > img
-moviesroom.pl##a[href^="https://kloti.pl"]
 moviestillsdb.com###app > [style*="fixed"]
 moviewatcher.is##a#show-button[target="_blank"][rel][href^="/"]
 moviezone.cz##.ad
@@ -45704,6 +45700,7 @@ nanfengyl.com##.top-ad-txt
 nangaspace.com###header
 nani.baidu.com,ala.baidu.com##.tbui_aside_float_bar + .clearfix
 nano-reef.com##.nrsp
+nano.komputronik.pl##div[id^="nano-"]
 nano.org##.cookie-consent
 nanopay.net##.gdrp
 nanoreview.net###float-sb-right
@@ -49945,6 +49942,7 @@ pornogramxxx.com##.container > center > iframe[sandbox*="allow-popups"]
 pornogramxxx.com##div[style^="margin: 30px 0;"][style*="height: 250px;"]
 pornogratisdiario.com,xcafe.com##.bnr
 pornohammer.com##.video_header > div[id^="wa_"]
+pornohans.net##aside:has(.adsbyexoclick)
 pornokeep.com,xxxtubedot.com,enjoyfuck.com,fuckgonzo.com###invideo_2
 pornomovies.com###fist-visit
 pornone.com##.overheaderbanner
@@ -50772,7 +50770,6 @@ pussyspot.net##div[class^="content"] > div[align="center"]
 pussystate.com##li[style="clear:both;float:none;width:600px;margin:0;overflow:hidden;margin-left:-5px;"]
 pussytorrents.org##body > [style^="position: fixed;"][style*="z-index: 999999"]
 pusvid.com,kissjav.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.link-offer
-pusvid.com,kissjav.com,hentai4k.com,viralxxxporn.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.asside-link
 putlocker-9.co##div[align] > a[title*="HD"][rel="nofollow"][class]
 putlocker.bet###downhd
 putlocker.bet##.movgre
@@ -52517,6 +52514,11 @@ sad24.pl##.sad24-target
 sad24.pl##.td-header-sp-recs
 saddind.co.uk##aside[aria-label="Side Sidebar"] a[rel="noopener noreferrer"][onclick^="javascript:window.open("] > img
 sadeczanin.info###topContainer
+sadeczanin.info##.hidden > .w-full > article > p > a[target="_blank"] > img
+sadeczanin.info##.hidden[style^="height:"]:empty
+sadeczanin.info##.hidden[style^="height:"]:has(> .w-full:only-child > article > p > ins[class^="staticpubads"])
+sadeczanin.info##article > div[class^="max-w-"]:empty
+sadeczanin.info##article > div[class^="max-w-"]:has(> .items-center:only-child > div[id^="div-gpt-"]:only-child)
 sadeempc.com##center > a[onclick][rel="nofollow"]
 sadeempc.com##center > div[style="text-align:center;"] > img
 sadem.it###cookies
@@ -64399,6 +64401,7 @@ za.gl##._winwin
 za.gl##.winbig
 za.gl##.winwin
 za.gl,za.uy##.test > div[class*="-badge"][class*="-banner"]
+zabrze24.info##.header__banner
 zacks.com##.disclosure-fixed-slab
 zacks.com##.inline_bottom_ad_commentary
 zacks.com##.inline_top_ad_commentary
