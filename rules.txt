@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-09 07:11:09（北京时间）
+! Version: 2025-09-09 08:47:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64999
+! Total count: 65004
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6449,6 +6449,7 @@
 @@||belkagomel.by^$stealth=dpi
 @@||bellinghamherald.com^$generichide
 @@||bellmts.ca^$stealth=dpi
+@@||belpost.by^$stealth=dpi
 @@||beltelecom.by^$stealth=dpi
 @@||benheim.co.kr^$stealth=dpi
 @@||benkhouya.com/ads.js$domain=anonymousemail.me
@@ -19721,6 +19722,7 @@ aktionspreis.de##.leiste_vollstaendig
 aktivo.nl###epd
 aktuality.sk##.banner-padding-top
 aktuality.sk##.banner-padding-top + a[data-event*="|click_"]
+aktuality.sk##div:has(> .rs-advertisement:only-child)
 aktualne.cz###kulublu-mulu
 aktualne.cz###kulubulu-mulu
 aktualne.cz###reklama-exchange_eko
@@ -20305,6 +20307,7 @@ androidauthority.com##._--_-___xl
 androidauthority.com##.d_3i:has-text(Latest deals)
 androidauthority.com##.d_um
 androidauthority.com##.e_4j:has-text(See all deals)
+androidauthority.com##[class] > [class] > [class]:has(div[data-ad-type="leaderboard_atf"])
 androidauthority.com##div[class]:has(> .pw-incontent)
 androidauthority.com##div[class]:has(> .pw-incontent:only-child)
 androidauthority.com##div[class]:has(> [data-ad-type="leaderboard_atf"])
@@ -55287,6 +55290,8 @@ sportskeeda.com###video-player-container--
 sportskeeda.com##.consent-pop-up
 sportskeeda.com##.primis-player-container
 sportskeeda.com##.right-sidebar
+sportskeeda.com##.sk-ads-taboola-container
+sportskeeda.com##.sk-promotional-banner
 sportskeeda.com##.vidazoo-player-container
 sportslens.com###sidebar > div[id^="text-"]:not(#text-34):not(#text-42)
 sportslens.com##div[id^="FMAds"]
