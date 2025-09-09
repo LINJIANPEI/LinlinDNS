@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-09 23:12:05（北京时间）
+! Version: 2025-09-10 00:13:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65022
+! Total count: 65018
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10806,7 +10806,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=typingtest.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store|w1tv.xyz|cdnstream.top|javboys.upn.one|coflix.upn.one
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store|w1tv.xyz|cdnstream.top|javboys.upn.one|coflix.upn.one|animeshqip.uns.bio
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
@@ -20475,6 +20474,8 @@ animenewsnetwork.com##.iab
 animeporngif.com##.block-vda
 animerigel.com##.adflexbox
 animeschedule.net##.custom-consent
+animeshqip.org##.app-section > .row > .col:has(> .list-movie > a[target="_blank"] .ads-embed)
+animeshqip.org##body .ads-sticky:not(#style_important)
 animet.net###fbox-background
 animet.net###inx-content
 animet.net###inx-overlay
@@ -45543,10 +45544,6 @@ myshows.me##a.DefaultLayout-promo
 myshows.me##div[id^="clickioadunit"]
 myshrinker.com##a[onclick] > button
 myslavegirl.org##.signature
-myslenice-itv.pl,checkpress.pl,kulisy.net,magazynnaszczycie.pl,palukimogilno.pl,zycie.pl##.grid__ad
-myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.adv
-myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
-myslenice-itv.pl,kulisy.net##.custom-html-box:has(> .box__container:only-child > div:only-child > p:only-child)
 mysnapp.co.uk##.cookies-content
 mysocceraustralia.com##div[style="text-align: -webkit-center;margin-bottom: 20px;min-height: 250px;"]
 myspace.com###termsOfService
@@ -52513,7 +52510,6 @@ sad24.pl##.pp-adds-under-menu
 sad24.pl##.sad24-target
 sad24.pl##.td-header-sp-recs
 saddind.co.uk##aside[aria-label="Side Sidebar"] a[rel="noopener noreferrer"][onclick^="javascript:window.open("] > img
-sadeczanin.info###topContainer
 sadeczanin.info##.hidden > .w-full > article > p > a[target="_blank"] > img
 sadeczanin.info##.hidden[style^="height:"]:empty
 sadeczanin.info##.hidden[style^="height:"]:has(> .w-full:only-child > article > p > ins[class^="staticpubads"])
