@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-09 15:11:58（北京时间）
+! Version: 2025-09-09 16:15:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65005
+! Total count: 65017
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4962,6 +4962,7 @@
 @@||ad.doubleclick.net/*/adi/com.ytbc/$domain=youtube.com
 @@||ad.doubleclick.net/*/pfadx/$domain=m.youtube.com
 @@||ad.doubleclick.net/ad/test.png$image,domain=citroen-club.cz
+@@||ad.doubleclick.net/ad/test.png$image,domain=citroen-club.cz|renault-club.cz
 @@||ad.doubleclick.net/clk*&destinationURL=$popup
 @@||ad.doubleclick.net/clk;$urlblock
 @@||ad.doubleclick.net/ddm/$domain=prad.de
@@ -6667,8 +6668,6 @@
 @@||browser.sentry-cdn.com^$domain=acustica-audio.com|alphaxiv.org|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|menshealth.com|ocado.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
 @@||browser.yandex.*/sync/$stealth=useragent
 @@||browserbench.org^$generichide
-@@||browserleaks.com/img/9.gif$domain=browserleaks.com
-@@||browserleaks.com^$generichide
 @@||brutalmania.io/ads.js
 @@||bs-origin.pull.yximgs.com^
 @@||bs.cimanow.cc/*/watching/$stealth=referrer
@@ -8949,6 +8948,7 @@
 @@||feed-image.baidu.com^
 @@||feed.4strokemedia.com^$domain=video.corriere.it
 @@||feed.4strokemedia.com^$domain=video.gazzetta.it
+@@||feed.adrelayer.com^
 @@||feed.adrelayer.com^|
 @@||feedback-pa.clients*.google.com/*/google.internal.feedback.$stealth=referrer
 @@||feedback-pa.clients6.google.com^$stealth=referrer
@@ -9640,7 +9640,6 @@
 @@||google-analytics.com/analytics.js$domain=orbitum.com
 @@||google-analytics.com/analytics.js$domain=plugincrack.com
 @@||google-analytics.com/analytics.js$domain=receive-sms-online.info
-@@||google-analytics.com/analytics.js$domain=renault-club.cz
 @@||google-analytics.com/analytics.js$domain=sznlink.xyz
 @@||google-analytics.com/analytics.js$domain=theverge.com
 @@||google-analytics.com/analytics.js$domain=toyota-club.eu
@@ -10712,6 +10711,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=news.tvb.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=news4jax.com|gmg-wjxt-prod.cdn.arcpublishing.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=news8000.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nfl.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ninja.io
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=njbeachcams.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nova.cz
@@ -13979,6 +13979,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zobacz.ws
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=bdstream.site
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=citroen-club.cz
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=citroen-club.cz|renault-club.cz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=panel.waifly.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=uploadmall.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,domain=topsporter.net
@@ -14155,6 +14156,7 @@
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=tsubasa.im
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=zefoy.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy$script,domain=citroen-club.cz
+@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy$script,domain=citroen-club.cz|renault-club.cz
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2019.js$domain=beatsnoop.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2019.js$domain=dafontvn.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2021.js$domain=alliptvlinks.com
@@ -23995,7 +23997,6 @@ browardpalmbeach.com,dallasobserver.com,miaminewtimes.com,phoenixnewtimes.com,we
 browsehappy.pl##a[href^="https://brave.com/"][target="_blank"] > img
 browser-update.org##.adt
 browserleaks.com###vpn_text
-browserleaks.com##.adsbygoogle
 brp.com###consent-dialog
 brtn.cn,btime.com##.business-box
 brtn.cn,btime.com##.business-item
@@ -26906,6 +26907,9 @@ credit-agricole.it##section[class^="Cookies_dck-manager"]
 creditlose.com##div[id*="-ad-container"]
 creepypasta.com##center:has(+ #ad-container-1)
 crello.com##div[class*="footerNotification"]
+cremz.com##.block-inner
+cremz.com##a[href^="https://www.cremz.com/link/"]
+cremz.com,pusvid.com,kissjav.com,hentai4k.com,viralxxxporn.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.asside-link
 crescent.se##body > div[data-am-cookie-information]
 crew-united.com##.opt-action-bar
 crex24.com##div[class*="cookies_block"]
@@ -44774,6 +44778,7 @@ moviesfoundonline.com##a[href^="https://www.purevpn.com/"]
 movieshd.watch$$script[min-length="10000"][max-length="1000000"][tag-content="$.BD"]
 moviesjoy.to###overlay-container
 moviesroom.pl###hook_after_title
+moviesroom.pl##.mx-auto > .relative > img[alt]
 moviesroom.pl##.popup-ad
 moviesroom.pl##a[href^="https://bit.ly/"]
 moviesroom.pl##a[href^="https://gde-default.hit.gemius.pl/"] > img
@@ -49956,7 +49961,13 @@ pornotube.xxx,vidsvidsvids.com,hardcoreinhd.com,hdpornstar.com,freefuckvidz.com#
 pornotube.xxx,xxxx.se,vidsvidsvids.com,freefuckvidz.com,hardcoreinhd.com,hdpornstar.com###tabVideo > div.rmedia
 pornova.org##.head-t
 pornoxo.com###invideo_wrapper
+pornoxo.com##.js-toggle-content-wrapper:has(> .adblock)
+pornoxo.com##.new-videoplayer-overlay
+pornoxo.com##.site-center-wrapper > div[style]:not([class]):has(> a.blinker)
+pornoxo.com##a[href^="https://www.pornoxo.com/link/out/"]
 pornoxo.com##div[class*="advi"]
+pornoxo.com##li.media-item.no-popup
+pornoxo.com##li:has(> .ads-stripchat-link)
 pornpapa.com##.js-mob-popup
 pornpaw.com##div[style="height:250px;display:block;"]
 pornpics.app##main > ul.pics:first-child > li
@@ -52479,6 +52490,7 @@ ryuugames.com,yaoimangaonline.com##[href^="https://l.erodatalabs.com/s/"] > img
 ryzerobotics.com##footer > div[class*="pop-up"]
 rzeszow-news.pl##div[id^="rzesz-"]
 rzeszow.pl###__next > .fixed
+rzeszow.pl##.news-slot-center
 s.yimg.com##.cta-wrapper
 s0ft4pc.com##.popup02778wrap
 s0ft4pc.com,tutcourse.com###text-html-widget-2
