@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-11 23:11:01（北京时间）
+! Version: 2025-09-12 00:12:49（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65070
+! Total count: 65075
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4828,6 +4828,7 @@
 @@||abre-videos.cdn1122.com^
 @@||abs-0.twimg.com^
 @@||abs.twimg.com^
+@@||abstream.to/embed-$stealth=referrer
 @@||abt.s3.yandex.net/expjs/latest/exp.js$script,domain=some.porn
 @@||abtest.mistat.xiaomi.com^
 @@||abtest3-misc-lf.zijieapi.com^
@@ -42216,7 +42217,6 @@ luga.ch###cookiegdpr
 luisaviaroma.com##.privacy-box
 lukedreyer.com##div[style$="width: 125px;z-index:2000;"]
 lululemon.com###promoted-alert-bar
-luluvdoo.com,savefiles.com,rubyvidhub.com,streamruby.com##body > div[class][oncontextmenu][style="display: block;"]
 luluvdoo.com,savefiles.com,rubyvidhub.com,streamruby.com,lulustream.com,luluvdo.com##body > div[class][oncontextmenu][style="display: block;"]
 lulz.net##a[href="https://www.furfling.com/"]
 luminpdf.com###app > div[style=""]:nth-child(2)
@@ -52995,6 +52995,7 @@ scribd.com##.wrapper__doc_page_shared_recommender_list div[data-testid="sticky-w
 scribd.com##div[class]:has(> [data-e2e="dismissible-ad-header-scribd_adhesion"])
 scribd.com##div[data-testid="bottom-right-mrec"]
 scribd.com##div[data-testid="sticky-wrapper"]
+scribd.com##div[data-testid="sticky-wrapper"]:has(> div[class] > div[class] > a[class^="ButtonCore-"][href^="https://www.scribd.com/oauth/signup?behavior_tag=download"])
 scribd.vpdfs.com##[href^="https://accounts.binance.com"]
 script-stack.com,thewpclub.net##.bsac
 scriptinghelpers.org##.shvertise-banner
@@ -63427,6 +63428,10 @@ xn--24-3qi3cza1b2a4dxc2byb.com##.bottom-center > .widget_media_image > img[src*=
 xn--24-3qi3cza1b2a4dxc2byb.com##[class^="ad-float-"]
 xn--24-3qi3cza1b2a4dxc2byb.com##[class^="ad_"]
 xn--30-wka.de###privacy-bar
+xn--7-5wfs0cq1gd9b9d2epci.com##.adv
+xn--7-5wfs0cq1gd9b9d2epci.com##div[id$="-f"]
+xn--7-5wfs0cq1gd9b9d2epci.com##div[id$="-l"]
+xn--7-5wfs0cq1gd9b9d2epci.com##div[id$="-r"]
 xn--72cf9bd9fk5a.com##.ad_cen
 xn--72cf9bd9fk5a.com##.banner-top
 xn--72czp7a9bc4b9c4e6b.video##.ads-comment
