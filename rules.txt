@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-12 07:10:16（北京时间）
+! Version: 2025-09-12 08:45:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65075
+! Total count: 65080
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1476,6 +1476,7 @@
 /sendy/t/*$image
 /servead/request/*$script,subdocument
 /serveads.php$script
+/server-side/amsweb.php?$document
 /servlet/view/*$script
 /sessioncam.min.$script
 /set_adcode?$image
@@ -29819,9 +29820,13 @@ egamersworld.com##.match_wrap > span > a.primary-btn
 egamersworld.com##.styles_bb__hb10X
 egamersworld.com##.styles_sidebar__m6yLy
 egamersworld.com##[class^="styles_tb__"]
+egamersworld.com##a[aria-label^="Go to site "][rel="noindex nofollow noopener noreferrer"]
 egamersworld.com##a[class^="styles_bigimage__"]
 egamersworld.com##a[href^="https://geni.us/"]
+egamersworld.com##div[class^="styles_list__"] > a[rel="noindex nofollow noopener noreferrer"]
 egamersworld.com##div[class^="styles_sideBar__"]
+egamersworld.com##div[class^="styles_sidebar__"] > div[class^="styles_wrap__"]:has(> a[class^="btns_btnOrange__"])
+egamersworld.com##div[class^="styles_sidebar__"] > div[class^="styles_wrap__"]:has(div[class^="styles_list__"] > a[rel="noindex nofollow noopener noreferrer"])
 egarage.de###fpub-popup
 eggnsemulator.com##.e-con-inner > .e-con-boxed:has(> .e-con-inner:only-child > .elementor-widget-html:only-child > .elementor-widget-container > center > .adsbygoogle)
 eglue.it##div[style*="inherit"] > div > div > div[style*="92"]
