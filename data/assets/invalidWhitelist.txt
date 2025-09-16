@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13940
+! Total count: 13943
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-09-15 20:48:39（北京时间）
+! Version: 2025-09-16 09:44:17（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1813,7 +1813,7 @@
 @@/scripts/*js|$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|1stream.eu|streameast.app|thecrackstreams.live|buffstreams.app
 @@/scripts/*m3u8$xmlhttprequest,stealth=referrer,domain=1stream.eu|streameast.app|thecrackstreams.live
 @@/scripts/adv.js$domain=securenetsystems.net
-@@/sd0embed/*$subdocument,stealth=referrer,domain=vipbox.lc
+@@/sd0embed/*$subdocument,stealth=referrer,domain=vipbox.lc|vipleague.*
 @@/sensorsdata-$domain=aixiaoyuan.cn|zkh.com
 @@/sensorsdata.$domain=36kr.com|53zaixian.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
 @@/setCookie?$domain=ctrip.com|ctrip.com.hk|pinyin.cn
@@ -11146,6 +11146,7 @@
 @@||dailymail.co.uk/brightcove/tracking/ted3.js
 @@||dailymail.co.uk^$generichide
 @@||dailymotion.com/embed/video/$subdocument,domain=xataka.com
+@@||dailymotion.com/nativeads.js$domain=dailymotion.com
 @@||dailyprogress.com^$generichide
 @@||dajya-ranger.com^$generichide
 @@||damasgate.com^$generichide
@@ -15428,6 +15429,7 @@
 @@||maptiles.ping-admin.ru^$image,domain=ping-admin.com
 @@||marbas.com.tr^$stealth=dpi
 @@||marca.com^$generichide
+@@||marinetraffic.live^$generichide
 @@||mariouniverse.com^$generichide
 @@||marketing.dropbox.com/?referrer=$stealth=searchqueries
 @@||marketing.unionpayintl.com/offer-promote/static/sensorsdata.min.js$script,~third-party
@@ -19967,6 +19969,7 @@
 @@||towideo.pl/assets/ads_configs/sas_vod.js
 @@||townhall.com/resources/dist/js/prebid-pjmedia.js$script,domain=pjmedia.com
 @@||townwork.net/js/AppMeasurement.js$~third-party
+@@||towtooma.net/*/master.m3u8$stealth=referrer
 @@||toy-people.com^$generichide
 @@||toyota.com/recall/static/js/custom/facebookPixel.js$~third-party
 @@||tpc.googlesyndication.com/archive/$image,subdocument,xmlhttprequest,domain=adstransparency.google.com
