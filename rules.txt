@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-17 16:15:01（北京时间）
+! Version: 2025-09-17 17:11:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64523
+! Total count: 64535
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6955,6 +6955,8 @@
 @@||cdn.consentmanager.net/delivery/js/cmp*.min.js$stealth=referrer
 @@||cdn.consentmanager.net/delivery/lang/langpurpose*.min.js$stealth=referrer
 @@||cdn.contentful.com/spaces^$stealth=3p-auth
+@@||cdn.cookielaw.org/consent/*.json$domain=dmax.de
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=dmax.de
 @@||cdn.cpex.cz/cmp/v*/cpex-cmp.min.js$domain=zive.cz
 @@||cdn.cpex.cz/logos/cnc.png$domain=zive.cz
 @@||cdn.cpmstar.com/cached/js/*.js$xmlhttprequest,domain=anime47.com
@@ -11188,6 +11190,7 @@
 @@||kapsamaharitasi.turktelekom.com.tr^$stealth=ip
 @@||karanpc.com^$generichide
 @@||karaoke-tutor.com^$generichide
+@@||kargoist.com^$stealth=dpi
 @@||karte.io/libs/tracker.$domain=online.ysroad.co.jp|zf1.tohoku-epco.co.jp|zozo.jp
 @@||karwan.tv^$generichide
 @@||kaspersky.com/advert/
@@ -12773,6 +12776,7 @@
 @@||odc.officeapps.live.com/odc/$elemhide,jsinject,extension
 @@||oddee.com/w_files/scripts/adblock.js
 @@||odkrywamyzakryte.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/
+@@||odleglosci.pl/arcads.js
 @@||odnoklassniki.ru/get$stealth=referrer
 @@||oemdtc.com^$generichide
 @@||ofeminin.pl/*srcc=$stealth=referrer
@@ -13983,6 +13987,7 @@
 @@||pesmaster.com^$generichide
 @@||petdrugsonline.co.uk/scripts/gtm.js$~third-party
 @@||petrochina.com.cn/advertisement_
+@@||petrolofisi.com.tr^$stealth=dpi
 @@||peytonlist.ru^$generichide
 @@||pf.s.360.cn^
 @@||pg-wuming.com/js/*/adblocker-1.js
@@ -17520,6 +17525,7 @@
 @@||web-ads.pulse.weatherbug.net/api/ads/targeting/$domain=weatherbug.com
 @@||web-ads.pulse.weatherbug.net/api/ads/targeting/v*/parameters?$domain=weatherbug.com
 @@||web-cloud-new.foreks.com^$stealth=referrer,domain=prime.tebyatirim.com.tr|isbank.com.tr|akbank.com|trade.isbank.com.tr
+@@||web-cloud-new.foreks.com^$stealth=referrer,domain=prime.tebyatirim.com.tr|isbank.com.tr|akbank.com|trade.isbank.com.tr|ziraatyatirim.com.tr
 @@||web-sdk.urbanairship.com/notify/$script,domain=etoro.com
 @@||web.any.do^$document
 @@||web.basemark.com^$generichide
@@ -20680,7 +20686,9 @@ audiophilereview.com##.f7e65-sidebar-ad-widget
 audioreview.com###bottom-leaderboard
 audioreview.com,carlow-nationalist.ie,cellmapper.net,craigclassifiedads.com,duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion,g.doubleclick.net,ip-address.org,irannewsdaily.com,kildare-nationalist.ie,laois-nationalist.ie,photographyreview.com,quiz4fun.com,roscommonherald.ie,waterford-news.ie###ads
 audiostereo.pl###ban
+audiostereo.pl##.adds:has(a[href*="advertisement"])
 audiostereo.pl##.baner_display
+audiostereo.pl##iframe[src*="/www/delivery/"]
 audiotag.info##.awt
 audiotools.in##body > .container + div[id][class*=" "]
 audiotop.pl###cookie
@@ -21925,6 +21933,7 @@ bellesa.co##div[width="337px"][height="283px"]
 bellesa.co##img[alt="Deeper Pause Ad"]
 bellevue-hamburg.de##body > div > .fixed.bottom-0
 bellflight.com##.bg-gold.active
+bellinghamherald.com,bnd.com,bradenton.com,centredaily.com,charlotteobserver.com,cleaner.com,cults3d.com,elnuevoherald.com,fresnobee.com,heraldonline.com,heraldsun.com,idahostatesman.com,islandpacket.com,kansas.com,kansascity.com,kentucky.com,ledger-enquirer.com,macon.com,mcclatchydc.com,mercedsunstar.com,miamiherald.com,modbee.com,montrealgazette.com,myrtlebeachonline.com,newsobserver.com,sacbee.com,sanluisobispo.com,star-telegram.com,sunherald.com,thenewstribune.com,theolympian.com,thestate.com,tri-cityherald.com,weekand.com##.zone-el
 bellinghamherald.com,bnd.com,bradenton.com,centredaily.com,charlotteobserver.com,cleaner.com,cults3d.com,elnuevoherald.com,fresnobee.com,heraldonline.com,heraldsun.com,idahostatesman.com,islandpacket.com,kansas.com,kansascity.com,kentucky.com,ledger-enquirer.com,macon.com,mcclatchydc.com,mercedsunstar.com,miamiherald.com,modbee.com,myrtlebeachonline.com,newsobserver.com,sacbee.com,sanluisobispo.com,star-telegram.com,sunherald.com,thenewstribune.com,theolympian.com,thestate.com,tri-cityherald.com,weekand.com##.zone
 bellinghamherald.com,bnd.com,bradenton.com,centredaily.com,charlotteobserver.com,cleaner.com,cults3d.com,elnuevoherald.com,fresnobee.com,heraldonline.com,heraldsun.com,idahostatesman.com,islandpacket.com,kansas.com,kansascity.com,kentucky.com,ledger-enquirer.com,macon.com,mcclatchydc.com,mercedsunstar.com,miamiherald.com,modbee.com,myrtlebeachonline.com,newsobserver.com,sacbee.com,sanluisobispo.com,star-telegram.com,sunherald.com,thenewstribune.com,theolympian.com,thestate.com,tri-cityherald.com,weekand.com##.zone-el
 belloflostsouls.net,ginx.tv,op.gg,paladins.guru,smite.guru,theloadout.com##.vm-placement
@@ -24105,6 +24114,7 @@ cartoonmad.com##tr:nth-child(n+5) > td > table[width="732"]
 cartoonnetwork.com###tos-bar
 cartoonporn.com##.viewlist + div.aside
 cartoonporn.com,babestube.com,deviants.com##.spot_panel
+cartoonporn.to##.ai-sticky-widget
 cartoonporn.to,redmanga.org,mangatoo.com,mangatone.com,toonily.net,reaperscans.com,mangaread.org##.c-top-second-sidebar
 cartoonporn24.com##.content > .top:has(> center > .adsbyexoclick)
 cartoonporno.xxx##.cart
@@ -43296,6 +43306,7 @@ miamiherald.com###zoneContainer
 miamiherald.com##.videoInstance
 miamiherald.com##.zone-el[stnplayerkill]
 miamiherald.com,heraldonline.com,charlotteobserver.com##.htlad-web-fixed-bottom
+miamiherald.com,montrealgazette.com###zoneContainer
 miaminewtimes.com,westword.com##.comp-shell-stnplayer
 miaminewtimes.com,westword.com##div[gpt-slot-config-id]
 miaminewtimes.com,westword.com##div[gpt-slot-div-id-base]
@@ -46705,6 +46716,7 @@ odishabytes.com,techcodex.com,cgtips.org,themeslide.com,prajwaldesai.com,onlinef
 odishatv.in##[class$="-ad"]
 odishatv.in##div[class^="otv-"][class$="-ad"]
 odjechani.com.pl##.guest_warn
+odleglosci.pl##[class*="aside-"][class*="-750"]:has(> .adsbygoogle)
 odmiana.net,dowcip.net,antonim.net,krzyzowka.net,synonim.net,zagadkidladzieci.net##img[src^="/adr/"][onclick]
 odmladzanienasurowo.com###POPUPS_ROOT
 odrabiamy.pl##.Toastify ~ [class*="Rodo"]
