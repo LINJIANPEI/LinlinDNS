@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13940
+! Total count: 13946
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-09-17 09:44:19（北京时间）
+! Version: 2025-09-17 20:47:59（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -10110,6 +10110,8 @@
 @@||cdn.consentmanager.net/delivery/js/cmp*.min.js$stealth=referrer
 @@||cdn.consentmanager.net/delivery/lang/langpurpose*.min.js$stealth=referrer
 @@||cdn.contentful.com/spaces^$stealth=3p-auth
+@@||cdn.cookielaw.org/consent/*.json$domain=dmax.de
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=dmax.de
 @@||cdn.cpex.cz/cmp/v*/cpex-cmp.min.js$domain=zive.cz
 @@||cdn.cpex.cz/logos/cnc.png$domain=zive.cz
 @@||cdn.cpmstar.com/cached/js/*.js$xmlhttprequest,domain=anime47.com
@@ -13153,6 +13155,7 @@
 @@||googletagmanager.com/gtm.js$domain=dengekionline.com
 @@||googletagmanager.com/gtm.js$domain=dholic.co.jp
 @@||googletagmanager.com/gtm.js$domain=displate.com
+@@||googletagmanager.com/gtm.js$domain=dmax.de
 @@||googletagmanager.com/gtm.js$domain=domains.google
 @@||googletagmanager.com/gtm.js$domain=duolingo.com
 @@||googletagmanager.com/gtm.js$domain=dziennikbaltycki.pl|dzienniklodzki.pl|dziennikpolski24.pl|dziennikzachodni.pl|echodnia.eu|expressbydgoski.pl|expressilustrowany.pl|gazetakrakowska.pl|gazetalubuska.pl|gazetawroclawska.pl|gk24.pl|gloswielkopolski.pl|gp24.pl|gs24.pl|kurierlubelski.pl|nowiny24.pl|nowosci.com.pl|nto.pl|pomorska.pl|poranny.pl|to.com.pl|wspolczesna.pl|polskatimes.pl|sportowy24.pl|strefaagro.pl|strefabiznesu.pl|stronakobiet.pl|gol24.pl|gra.pl|naszemiasto.pl|miastakobiet.pl|stronazdrowia.pl
@@ -14870,6 +14873,7 @@
 @@||kapsamaharitasi.turktelekom.com.tr^$stealth=ip
 @@||karanpc.com^$generichide
 @@||karaoke-tutor.com^$generichide
+@@||kargoist.com^$stealth=dpi
 @@||karte.io/libs/tracker.$domain=online.ysroad.co.jp|zf1.tohoku-epco.co.jp|zozo.jp
 @@||karte.io/libs/tracker.$domain=zf1.tohoku-epco.co.jp
 @@||karte.io/libs/tracker.$domain=zozo.jp
@@ -16244,6 +16248,7 @@
 @@||odcdn.com^*/cm.js
 @@||oddee.com/w_files/scripts/adblock.js
 @@||odkrywamyzakryte.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/
+@@||odleglosci.pl/arcads.js
 @@||odnoklassniki.ru/get$stealth=referrer
 @@||oemdtc.com^$generichide
 @@||ofeminin.pl/*srcc=$stealth=referrer
@@ -17335,6 +17340,7 @@
 @@||pesmaster.com^$generichide
 @@||petdrugsonline.co.uk/scripts/gtm.js$~third-party
 @@||petrochina.com.cn/advertisement_
+@@||petrolofisi.com.tr^$stealth=dpi
 @@||peytonlist.ru^$generichide
 @@||pg-wuming.com/js/*/adblocker-1.js
 @@||pg-wuming.com^$generichide
@@ -20696,7 +20702,7 @@
 @@||weatherx.co.in^$generichide
 @@||web-ads.pulse.weatherbug.net/api/ads/targeting/$domain=weatherbug.com
 @@||web-ads.pulse.weatherbug.net/api/ads/targeting/v*/parameters?$domain=weatherbug.com
-@@||web-cloud-new.foreks.com^$stealth=referrer,domain=prime.tebyatirim.com.tr|isbank.com.tr|akbank.com|trade.isbank.com.tr
+@@||web-cloud-new.foreks.com^$stealth=referrer,domain=prime.tebyatirim.com.tr|isbank.com.tr|akbank.com|trade.isbank.com.tr|ziraatyatirim.com.tr
 @@||web-sdk.urbanairship.com/notify/$script,domain=etoro.com
 @@||web.any.do^$document
 @@||web.basemark.com^$generichide
