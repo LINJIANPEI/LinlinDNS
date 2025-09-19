@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-19 20:20:27（北京时间）
+! Version: 2025-09-19 21:21:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64580
+! Total count: 64589
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -24780,8 +24780,10 @@ chineseinla.com##.text-ads-col
 chineseinla.com##div[style^="position:absolute;"][style$=":0px;top:30px;"]
 chinesenewyear.net##.js-alert
 chip.pl##.cbad
+chip.pl##.fc-Card14:has(> a[href="https://www.plus.pl/5g"])
 chip.pl##.fc-sidebar > .fc-widget
 chip.pl##.sticky-sb-on.sidebar-wrap > .sidebar
+chip.pl##a[href="https://www.plus.pl/5g"]
 chipchick.com##.noskim.ntv-moap
 chiphell.com###diy2 + div
 chipinfo.pro###warning
@@ -31616,6 +31618,8 @@ forbes.pl##.placeholder
 forbes.pl##div[data-run-module="local/main.stickyAloneAd"]
 forbesenespanol.com##.fixed[data-toast*="cookies"]
 forbit.it##.page > div[id*="cookie"]
+forbot.pl##.targetDivClass > a[target="_blank"] > img
+forbot.pl##div[style*="margin: 0 auto; text-align: center; position: relative;"]:has(> .targetDivClass:only-child > a[target="_blank"] > img)
 forced-tube.net,hqasianporn.org##.coverup
 ford-esklep.pl###box_alert
 ford-maiwald.de###popupDiv, #overlayDiv
@@ -35302,6 +35306,8 @@ hentaibaka.one##.portfolio-items > div:not([style]):not([itemprop])
 hentaiblue.com,pornifyme.com##.widget_text
 hentaiblue.net###blue-video-slider
 hentaiblue.net##.theiaStickySidebar
+hentaicb.help##div[id*="-catfish"]
+hentaicb.help##div[id^="ban-top"]
 hentaicity.com##.detail-side-bnr
 hentaicity.com##.leftnav_banner
 hentaicity.com,porntv.com##.detail-box > div.detail-con ~ div.detail-side-td
@@ -41520,7 +41526,9 @@ lovehoney.co.uk##.dis_message
 lovehoney.com##.dis_message
 lovehoney.com.au##.dis_message
 lovehoney.eu##.dis_message
+lovekrakow.pl##.lk-ad-banner
 lovekrakow.pl##.lk-ad-place
+lovekrakow.pl##div[class^="layout-"][class$="-banner"]
 lovelydrum.com$domain=insidermonkey.com
 lovense.com##.u-cookie
 lovepedia.net##.policy-banner
@@ -41661,6 +41669,7 @@ lunar.az##div[class$="areklam"]
 lunchtime.de##.overlay_gray_bg
 luogu.com.cn##.side > div:last-child:not([class])
 luogu.com.cn##.side > div:not(.l-card):has(> span > svg.fa-rectangle-ad)
+luogu.me##.propaganda
 luoqiuzw.com##DIV[id^="a-loading-"]
 lupa.cz###adsGalleryDesktop
 lupa.cz##.design-page__content-row > .leaderboard-dynamic-height-wrapper
