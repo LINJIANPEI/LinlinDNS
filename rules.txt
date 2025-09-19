@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-19 23:10:53（北京时间）
+! Version: 2025-09-20 00:12:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64589
+! Total count: 64592
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12775,6 +12775,7 @@
 @@||obengplus.com^$generichide
 @@||obituaries.therecord.com^
 @@||obituaries.therecord.com^|
+@@||obituaries.thestar.com^
 @@||obituaries.thestar.com^|
 @@||objectivequiz.com^$generichide
 @@||ocdn.eu/ucs/static/*/onesignal.js$script,domain=pulsonline.rs
@@ -24225,6 +24226,7 @@ cbsnews.com###taboola-around-the-web-video-door
 cbsnews.com##.nativeAds
 cbssports.com##.GamblingPartnerAdWrapperHome
 cbssports.com##.skybox-top-wrapper
+cbssports.com,dpm.lol,celebmafia.com,deeplol.gg,opynew.com,imginn.com##div[data-ad]
 cbssports.com,popsugar.com,scout.com,thedodo.com,thrillist.com##.leaderboard-wrap
 cbtnuggets.com###__next [class*="BannerContainer"]
 cc.cz##.b-cookie-bar
@@ -35677,7 +35679,6 @@ hitomi.la##.container > div[class$="content"] > div[class]:empty
 hitomi.la##.container > div[class$="content"] > div[class]:has(> div[data-clickadilla-banner])
 hitomi.la##.content > div[class]:not([class*="-"]) {min-height:40px !important;}
 hitomi.la##.content > div[class]:not([class*="-"]) {min-height:45px !important;}
-hitomi.la##.top-content > div:not(.list-title):has(> ins)
 hitomi.la##.top-content > div[class]:not([class*="-"]) {min-height:40px !important;}
 hitomi.la##.top-content > div[class]:not([class*="-"]) {min-height:45px !important;}
 hivecomic.com##div[class*="SimpleIconsGoogleadsense"] > div[style] > a[href="https://store.hivetoon.com/"] > img
@@ -60096,7 +60097,9 @@ vente-unique.nl###vu_consent
 vente-unique.pl###vu_consent
 vente-unique.pt###vu_consent
 ventilation-system.com##.cookie-wr
+venturebeat.com##.article-body > div[class]:has(> div[id*="-"]:only-child:empty)
 venturebeat.com##.tude-cw-wrap
+venturebeat.com##.vb-ad-slot
 veoh.com###RelatedVideosContainer
 veporn.com##.sidebar > div.widget_text
 veporn.com##.video-content > div.search_result + div[style="position: relative;width: 100%;background:transparent;"]
