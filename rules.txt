@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-24 15:12:00（北京时间）
+! Version: 2025-09-24 16:15:12（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64463
+! Total count: 64473
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12236,6 +12236,7 @@
 @@||moyu.im/*.jpg$stealth=referrer
 @@||mozu.com^*/monetate.js$script,domain=acehardware.com
 @@||mp.163.com^
+@@||mp.mmvideocdn.com/mini-player/$domain=theplayerstribune.com
 @@||mp.mmvideocdn.com/mini-player/prod/voltax_mp.js$domain=earth.com
 @@||mp3fiber.com^$generichide
 @@||mp3fy.com^$generichide
@@ -15475,6 +15476,7 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
+@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -17241,11 +17243,13 @@
 @@||vmc.org.pl^$generichide
 @@||vmeas.cloud/hls/$stealth=referrer
 @@||vms-players.minutemediaservices.com/mplayer-bridge.html$domain=beargoggleson.com
+@@||vms-players.minutemediaservices.com/voltax_player_embed_mount.js$domain=theplayerstribune.com
 @@||vms-players.minutemediaservices.com^$script,domain=beargoggleson.com
 @@||vms-players.minutemediaservices.com^$script,domain=si.com
 @@||vms-videos.minutemediaservices.com/*/m3u8/$domain=reignoftroy.com
 @@||vms-videos.minutemediaservices.com/*/mpd/$xmlhttprequest,domain=beargoggleson.com
 @@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=si.com
+@@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=theplayerstribune.com
 @@||vmware.com^
 @@||vnecdn.net/vnexpress/video/video/$stealth=referrer,domain=vnexpress.net
 @@||vnhax.com^$generichide
@@ -30294,6 +30298,7 @@ familyporn.tv##.media_spot_holder
 familyporn.tv##.row > div.col-last:has(> div.player-adverts)
 familyporn.tv##.textlink
 familyporn.tv,mywebcamsluts.com,transhero.com##.side_spot
+familystrokesvid.com,erotic-hentai.com,erogarga.com,javhdporn.net,eyerollorgasm.com###tracking-url
 familystylefood.com##.email-highlight
 familyxxxhd.com,datingsitespot.com,tips-and-tricks.co,rlsbb.to###text-11
 famousinternetgirls.com##.sidebar > div[id^="text-"][class="widget widget_text"]
@@ -34046,6 +34051,8 @@ greek-weather.org##.notice-top
 greekcitytimes.com##.greek-adlabel
 greekcitytimes.com##.greek-after-content
 greekcitytimes.com##aside[class^="ad_"]
+greekherald.com.au##.adsanity-ad-text
+greekherald.com.au##.wpb_wrapper:has(> .td-fix-index > .adsanity-ad-text)
 greekreporter.com##.td-all-devices > a[href][target="_blank"] > img
 greekreporter.com##.td-is-sticky p > a[target="_blank"] > img
 greekreporter.com##.tdi_18
@@ -49276,6 +49283,7 @@ pornlib.icu##.wrapper_content:has(> .row_container:only-child > .wrap_container:
 pornlist.tv##iframe[src*="/rek/"]
 pornlist.tv##iframe[src="/myvids/showx.php"]
 pornlizer.com##a[href^="https://tezfiles.com/store/"]
+pornlore.com##.koukoku_1
 pornloupe.com##.banner-column
 pornlulu.com##.container-fluid[style="background:#000;height:40px;"]
 pornlulu.com##.links:not([role="menu"]:last-child)
@@ -52193,6 +52201,8 @@ scania.com##.m-cookie
 scatboi.com##a[href="https://crackstuffers.com/"]
 scavino.it###fanback
 scb.co.th##.consent_section
+scegliauto.com###container > table[width]:has(> tbody > tr > td > ins.adsbygoogle)
+scegliauto.com###container > table[width][style^="height: 286px;"]
 scentre.pl##.consent, #consent
 scez.nl###overlay2
 schaapcitroen.nl###cookie-wall
