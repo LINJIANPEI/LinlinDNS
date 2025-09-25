@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-26 05:10:07（北京时间）
+! Version: 2025-09-26 06:09:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64493
+! Total count: 64497
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22203,6 +22203,8 @@ bing.com##[id$="adsMvCarousel"]
 bing.com##a.sb_meta[href^="http://advertise.bingads.microsoft.com"]
 bing.com##a[href*="/aclick?ld="]
 bing.com##cs-native-ad-card
+bing.com##cs-responsive-card[ad][data-t*="nativead"]
+bing.com##cs-responsive-card[ad][id^="nativead-"]
 bing.com##div[aria-label$="ProductAds"]
 bing.com##div[class="ins_exp tds"]
 bing.com##div[class="ins_exp vsp"]
@@ -23777,6 +23779,7 @@ canadianlisted.com##.pageclwideadv
 canadianoutages.com###overlay.container
 canadianrealestatemagazine.ca##.new-topice-wrapper
 canadiansolar.com###cookies
+canadiantire.ca##.sponsoredproductcarousel
 canarianweekly.com##.banner-in-content
 canarianweekly.com##div[id^="footer_bottom_"]
 canarymedia.com##.inset-x-0
@@ -31360,6 +31363,7 @@ food.ru##div[class*="cookieNotice"]
 food52.com###jw_iframe
 foodandwine.com##.lrs__wrapper
 foodandwine.com##div[class*="mm-ads-"]
+foodandwine.com##section[id*="mntl-four-post--sponsored"]
 foodbeast.com##.fdbst-ad-placement
 foodgroot.com###POPUPS_ROOT
 foodhub.co.uk##.cookies
