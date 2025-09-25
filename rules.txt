@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-25 20:20:58（北京时间）
+! Version: 2025-09-25 21:23:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64486
+! Total count: 64488
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4230,6 +4230,7 @@
 @@/scripts/*js|$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|1stream.eu|streameast.app|thecrackstreams.live|buffstreams.app
 @@/scripts/*m3u8$xmlhttprequest,stealth=referrer,domain=1stream.eu|streameast.app|thecrackstreams.live
 @@/scripts/adv.js$domain=securenetsystems.net
+@@/sd0embed/*$subdocument,stealth=referrer
 @@/sd0embed/*$subdocument,stealth=referrer,domain=vipbox.lc|vipleague.*
 @@/sensorsdata-$domain=aixiaoyuan.cn|zkh.com
 @@/sensorsdata.$domain=36kr.com|53zaixian.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
@@ -13528,6 +13529,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=api.ytapi.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=apkandroidhub.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=app.axenthost.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=arahcloud.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=arahtekno.com|gnaija.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=archivebate.live
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=automap.it
@@ -33068,6 +33070,7 @@ genshin.gg##.wrapper-lb1
 genshin.gg##.wrapper-mpu1
 genshin.honeyhunterworld.com##.ad_sidebar_video
 genshin.honeyhunterworld.com##div[id^="ad-genshin"]
+genshinlab.com##div[id^="pw-incontent"]
 genuineactivator.com##.entry-content center > a[href][onclick]
 geo-fs.com##.geofs-adbanner
 geo-fs.com##.geofs-cooked
@@ -34803,7 +34806,6 @@ hclips.com##.video-page__content > div.left + div:not([class])
 hclips.com##.video__wrapper > section[style]
 hclips.com##.wrapper__block > div.pagination + section[style]
 hclips.com$$script[tag-content="neverblock"][max-length="7000"]
-hclips.com,aniporn.com##.right
 hclips.com,hotmovs.tube##.partners-wrap
 hclips.com,thegay.com,tporn.xxx,tubepornclassic.com##.footer-banners
 hcomic.net##.main-container > .swiper
@@ -42385,7 +42387,6 @@ manwa1.me,manwa2.me,manwa.me##.swiper-container.swiper-container-horizontal
 manwa1.me,manwa2.me,manwa.me##[data-group^='ad_chapter'][data-width='300'][data-height='250']
 manwa1.me,manwa2.me,manwa.me##[style*='15px'][style*='background-color:'][style*='margin: 10px'][style*='margin-top: 14px'][style*='border-radius: 20px'],.fas.fa-times
 manwa1.me,manwa2.me,manwa.me##[style='transform-origin: left top; margin: 0px auto;']
-many.xxx##.avd-desc
 manysex.com##.tajbjjt
 manysex.com,xjav.tube,tubepornclassic.com##.jwplayer > span[style="display:flex !important"] > div > div
 manytoon.com###floating_ads_bottom_textcss_container
@@ -42746,6 +42747,7 @@ meczyki.pl##body .ejected-banner
 meczyki.pl##div[class^="col-md-"] > .row > div[class^="col"] > .widget-wrapper:has(> .widget-wrapper__header > h3[title="Bukmacherzy"])
 meczyki.pl##div[data-area-id] > a[href^="https://bit.ly/"]
 meczyki.pl##div[id^="screeningBackground"]
+med-techinsights.com##.techi-target > a[target="_blank"] > img
 med66.com##.banner
 med66.com##.coach_pic
 medarbejdernet.dk###modalLayer
