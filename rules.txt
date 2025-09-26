@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-26 15:11:49（北京时间）
+! Version: 2025-09-26 16:15:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64515
+! Total count: 64522
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9316,6 +9316,7 @@
 @@||gigaho.com^$generichide
 @@||gigya.com$domain=dailystar.co.uk
 @@||gigya.com/comments.getComments$domain=muscleandfitness.com
+@@||gildia.pl/static/*/Smile_ElasticsuiteTracker/js/tracking.min.js$~third-party
 @@||gips2.baidu.com^
 @@||gismeteo.ru/api/informer/*/180x150
 @@||gist.github.com/ad^
@@ -22222,6 +22223,7 @@ bing.com,cn.bing.net##.adsMvC
 bing.com,cn.bing.net##.b_algo:has(.b_ads1line)
 bing.com,cn.bing.net##.b_algo:has(.rms_img[src*="/th?id=OADD2."][src$="21.2"])
 bing.com,cn.bing.net##.b_algo:has(.rms_img[src*="=AdsPlus"])
+bing.com,cn.bing.net##.b_algo:has([tabindex="0"][role="link"])
 bing.com,cn.bing.net##.b_ans:has([class^="xm_"][class*="_ansCont"])
 bing.com,cn.bing.net##.pa_sb
 bing.com,cn.bing.net##a[h$=",Ads"]
@@ -25701,6 +25703,7 @@ complex.com##.AdWrapper__AdPlaceholderContainer-sc-15idjh1-0
 complex.com##.base__header-ad
 complex.com##.latest-stories__ad
 complex.com##.suitcase-ad
+compositesworld.com##div[class^="adBlock--"]
 compoundsemiconductor.net##.mega-bar
 compoundsemiconductor.net##.popular__section-newsx
 compress-or-die.com##.component_global-ad
@@ -32035,6 +32038,8 @@ frprn.com##.video-info
 frprn.com,youtrannytube.com##.footer-spot
 fruitnet.com##.dk-ad-250
 fruitnet.com##.midpageAdvert
+frvr.com###frvr-takeover
+frvr.com##.advads-content
 fs.com##.cookie
 fsclzs.com###qvod
 fsdpp.cn##.sidebox > a > img
@@ -36615,6 +36620,7 @@ ifenpaidy.com##.post > .div
 ifi-audio.com##.l-cookie
 ifkdy.com##.hb
 ifkdy.com,ilxdh.com##a[href*=".yhm11.com"]
+iflscience.com###Billboard
 iflscience.com###BillboardAd
 iflscience.com##.header-secondary
 iflscience.com##.trendmd-container
@@ -60419,6 +60425,7 @@ vivat.de##.cs-cookie__wrapper
 vivatechnologyparis.com###content > .full > .fixed
 vivatube.com##iframe#spot_video_underplayer_livecams
 vivereurbino.it##div[class^="box_adv_"]
+vividproductions.ca##.convert-iframe > center > a[target="_blank"]
 vividscreen.info##.page .as
 vivo.com###vcm-v-consent-sdk
 vivo.com.cn##.vp-vivo-app
