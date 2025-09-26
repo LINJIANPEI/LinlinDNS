@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-26 13:11:16（北京时间）
+! Version: 2025-09-26 14:16:35（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64508
+! Total count: 64515
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -33414,6 +33414,7 @@ gizguide.com###fixedbox
 gizguide.com##a[href^="http://bit.ly/"][target^="_blank"]
 gizguide.com##a[href^="spr.ly/"][target^="_blank"]
 gizguide.com,techcracked.com,novelasesp.blogspot.com###HTML7
+gizmodo.com##.aspect-video
 gizmodo.com##.comp-p
 gizmodo.com##.lg\:min-h-\[300px\]
 gizmodo.com##.min-h-\[1000px\]
@@ -39889,6 +39890,10 @@ koreaherald.com##.mythiell-mid-container
 koreanstreamer.xyz##[href^="https://www.saltycams.com"]
 koreanstreamer.xyz##section.korea-widget
 koreaporn.net##.bb_desktop
+koreatimes.co.kr###koreatimes_Minarticle6thpg_b_300_250
+koreatimes.co.kr###koreatimes_MinterplayPB_b_300_250
+koreatimes.co.kr###koreatimes_inarticle6thpg_b_580_400
+koreatimes.co.kr###koreatimes_righttop4_b_300_250
 koreatimes.co.kr##div[class^="Detail_ad-container_"]
 koreatimes.co.kr##div[class^="homeLayoutWrapper"]:has(> div.wrap > div[class^="HomeTaboola"])
 koreatimes.co.kr##div[class^="homeLayoutWrapper_aside-contents-wrap"] > div[class^="homeLayoutWrapper_aside-contents"] > div:has(> div[id^="div-gpt-ad"])
@@ -64251,6 +64256,8 @@ ziggogo.tv##.notifications-manager
 zillow.com##.vPTHT
 zillow.com##[data-test="search-list-first-ad"]
 zillow.com##[data-testid="right-rail-ad"]
+zillow.com##[data-testid="search-list-first-ad"]
+zillow.com##[data-testid="search-list-second-ad"]
 zillow.com##li:has(> div[id^="nav-ad-container"])
 zillow.com##li[class^="ListItem-"]:has(#nav-ad-container)
 zimlive.com##img[width="300"][height="400"]
