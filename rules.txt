@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-27 00:13:36（北京时间）
+! Version: 2025-09-27 01:09:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64524
+! Total count: 64526
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12013,6 +12013,7 @@
 @@||metrics.icloud.com^
 @@||metrics.target.com/b/ss/targetcom$domain=target.com
 @@||metrics.vrch.at^
+@@||metrics1-drcn.dt.dbankcloud.cn^$important
 @@||mettablog.com^$generichide
 @@||meusfilmestorrents.com^$generichide
 @@||mexa.sh/advertisements.js
@@ -15463,6 +15464,7 @@
 @@||smartadserver.com/config.js$domain=synonimy.pl
 @@||smartadserver.com/genericpost$domain=filmweb.pl
 @@||smartage.pl^$generichide
+@@||smarthome-drcn.dbankcdn.com^$important
 @@||smartnator.com/assets/js/prebid-ads.js
 @@||smartphonehrvatska.com^$generichide
 @@||smartstore.naver.com^$stealth
