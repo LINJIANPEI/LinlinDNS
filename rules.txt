@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-27 07:10:30（北京时间）
+! Version: 2025-09-27 08:45:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64526
+! Total count: 64530
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25188,6 +25188,7 @@ cnet.com##.c-asurionInteractiveBanner
 cnet.com##.c-asurionInteractiveBanner_wrapper
 cnet.com##.c-avLazyStickyVideo
 cnet.com##.c-pageReviewContent_ad
+cnet.com##.c-shortcodeBuyButton
 cnet.com##.c-shortcodeVideo_wrap
 cnet.com##.manualMpu > a[href^="https://www.cnet.com/best-web-hosting-companies-and-services-comparison/"] > img
 cnet.com##.stickySkyboxSpacing
@@ -63980,6 +63981,9 @@ zddream.com##div[style^="width:100%;height:100%;border:2px"]
 zdfans.com##.btn11 + .btn11
 zdfans.com##ul[id^="gaosuxiazai"]
 zdnet.com##.c-adDisplay_container_incontent-all-top
+zdnet.com##.c-articleContent > .c-ShortcodeContent > .c-bestListDeals
+zdnet.com##.c-reviewCard_buttons > a[rel*="sponsored"]
+zdnet.com##.c-shortcodeMiniListicle-recommendsRedesign
 zdnet.com##.content-top-leaderboard
 zdnet.com##.sharethrough-top.placeholder
 zdnet.com##.sponsoredItem
