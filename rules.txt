@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-28 08:53:09（北京时间）
+! Version: 2025-09-28 10:26:34（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64531
+! Total count: 64530
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4821,6 +4821,7 @@
 @@||abv-p.com/Images/adv.png
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth=referrer
 @@||ac.dun.163yun.com^
+@@||ac.ebis.ne.jp^
 @@||ac.ebis.ne.jp^|
 @@||ac.kr^$stealth=dpi
 @@||ac.namu.la^$domain=arca.live,media,image,stealth=referrer
@@ -8498,10 +8499,8 @@
 @@||elpais.com^$generichide
 @@||em.hk/wp-content/uploads/*_300_250.
 @@||email.*.skyeng.ru^|
-@@||email.awscloud.com^
 @@||email.awscloud.com^|
 @@||email.corp.skyeng.ru^|
-@@||email.elitedangerous.com^
 @@||email.elitedangerous.com^|
 @@||email.it/js/prebid-ads.js
 @@||email.procook.co.uk^|
@@ -9268,7 +9267,6 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -14771,7 +14769,6 @@
 @@||s.206ads.com/helper.js$domain=androidauthority.com
 @@||s.206ads.com/js/data/androidauthority.com.js$domain=androidauthority.com
 @@||s.206ads.com/prebid.js$domain=androidauthority.com
-@@||s.bluecore.com^
 @@||s.bluecore.com^|
 @@||s.bstarstatic.com/ogv/subtitle/$stealth=referrer
 @@||s.click.alimama.com^
@@ -56510,6 +56507,8 @@ terenyinwestycyjne.info##.advert-block-wide
 termalfurdo.hu###layout_advertising_bottom
 termedia.pl##.adPartner
 terminal.hackernoon.com##.right
+ternity.net###playerdavLayer
+ternity.net##.da
 teroradio.com###leaderboard
 teroradio.com##.policy
 terra.bio###root [aria-label="cookie consent banner"]
