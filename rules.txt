@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-29 20:21:27（北京时间）
+! Version: 2025-09-29 21:23:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64541
+! Total count: 64548
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7497,6 +7497,7 @@
 @@||cmp.inmobi.com/choice/*/choice.js$domain=express.co.uk
 @@||cmp.inmobi.com/tcfv2/*.js$domain=express.co.uk
 @@||cmp.inmobi.com^
+@@||cmp.inmobi.com^$domain=glasgowlive.co.uk
 @@||cmp.inmobi.com^|
 @@||cmp.sky.it/wrapperMessagingWithoutDetection.js$domain=tv8.it
 @@||cmp.telerama.fr/js/telerama.min.js$~third-party
@@ -13172,7 +13173,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=forum.release-apk.com,stealth,important
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fox.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebinchecker.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|tatangga.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|paste1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|akw.cam|indokontraktor.com|shahee4u.cam|batch-kun.com|shahid4u.*|neosatsu.com|shahidd4u.net|shahiid4u.net|shahid-4u.day|shaid4u.day|shahhid4u.cam
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|tatangga.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|paste1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|akw.cam|indokontraktor.com|shahee4u.cam|batch-kun.com|shahid4u.*|neosatsu.com|shahidd4u.net|shahiid4u.net|shahid-4u.day|shaid4u.day|shahhid4u.cam|shhahid4u.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freecoursesonline.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freeiptvgen.com
@@ -33228,13 +33228,13 @@ gg-animes.com##.container_ads
 gg-animes.com##div[id^="ads"]
 gg-animes.com##img[width="750"][height="150"]
 gg-led.com##.regg
-gg.deals###content-banner-image
 gg.deals###top-banner-image
 gg.deals##.banner-full-link
 gg.deals##.banner-side-link
 gg.deals##.gg-side-full-plane-link
 gg.deals##.site-banner-content-widget
 gg.deals##.with-banner
+gg.deals##body div[id^="content-banner-image"]:not(#style_important)
 gg.pl###sr-advert-container
 gg163.net###container > table[width="960"]
 ggcj.com##.dbxf
@@ -36293,6 +36293,7 @@ iask.sina.com.cn##.sj_300x250
 iask.sina.com.cn##.sj_680x250
 iaspaper.net##.iaspa-right-skyscraper
 iasparliament.com##div[class*="prstrm"]
+iatropedia.gr##.sticky-wrapper
 ibaotu.com##.bg-feedback
 ibaotu.com##.comVip-tg
 ibaotu.com##.ibaotu-md-click[ibaotu-md-value="detail_top_ad"]
@@ -47058,7 +47059,10 @@ ontools.net###modal_blocker
 ontools.net##.modal-backdrop
 ontools.net,writedroid.eu.org,doibihar.org,freemagazines.top,torkitty.com,torrentkitty.vip,torrentkitty.tv###fixedbanner
 ontvtonight.com##.body-container > div:has(script[src^="https://live.primis.tech/"])
+ontvtonight.com##.body-container > div[class*="custom-min-height-"]:has(> .col > div[data-pw-desk="med_rect_atf"])
 ontvtonight.com##.row > .col > div[style]:has(div[style] > div[id^="ad-"])
+ontvtonight.com##.scrollContent > .last:has(> td:only-child)
+ontvtonight.com##.scrollContent > .spacerRow:has(> .dynamicStuffHere:only-child > div:empty)
 onvasortir.com###pub_rectangle
 onvz.nl##.popup_overlay
 onworks.net###adonworksbot
@@ -48090,6 +48094,8 @@ pervertstore.com,squirtingclips.com,nastybulb.com,wholevideos.com###im-layer
 perverttube.com##.fp-ui > div > a[target="_blank"]
 perverttube.com##[href="https://usasexcams.com/"]
 pesgaming.com###top_content_advert
+pesktop.com##.a728_90
+pesktop.com##.uk-container > .program_slidshow + .program_deatils_size > .program_deatils:has(> .a300_600)
 pesstatsdatabase.com##.ad-tag + center > a > img
 petalmaps.com###app > [class*="privacy"]
 petanikode.com###antiadblock
@@ -52011,6 +52017,7 @@ salaamedia.com##.vc_custom_1527841947209
 salary.com##.sovrn-content-research
 salary.com##.sovrn-content-wide
 salary.com##.sovrn-leaderboard
+salarysport.com##div[id^="snack_dex"]
 salesforce.com##.slds-notify_container, .toast-success, div[class*="GlobalBanner__Wrapper"]
 salesmanago.pl###popup, .popup
 salesmate.io##.footer-popup
