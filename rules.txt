@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-30 15:12:25（北京时间）
+! Version: 2025-09-30 16:15:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64565
+! Total count: 64577
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7690,6 +7690,7 @@
 @@||copilot.microsoft.com/?ncedge=$elemhide,jsinject,extension,content
 @@||copypastecharacter.com^$generichide
 @@||coral.coralproject.net^$stealth
+@@||core-api.upvotyfeedback.com^$stealth=3p-auth
 @@||core-nmaps-renderer-nmaps.maps.yandex.net/tile?x=$stealth=referrer
 @@||core.tantanapp.com^
 @@||core.windows.net^*/annonser/$image,domain=kmauto.no
@@ -33741,6 +33742,8 @@ goodmenproject.com##.GMP_728_top
 goodmenproject.com##.gmp-instream-wrap
 goodmorningamerica.com##.recirculation-module
 goodnewsfromindonesia.id###mybot-adcover
+goodpornvids.com##.mi-links
+goodpornvids.com,zzztube.com,videoporn.tube,pornogram.tv,icegay.tv,24porn.com,gayporno.fm,gaymaletube.name,gayporn.fm,gaysuperman.com##.b-uvb-spot
 goodreads.com##.SponsoredProductAdContainer
 goodreturns.in###couponPromoWdg
 goodreturns.in###headerTopAd
@@ -36349,6 +36352,8 @@ iceporn.com##.puffery
 iceporn.com##.spot-300x100
 iceporn.com##.video-options > div[style="position:relative;"]
 iceporn.net##.partner_text_link
+iceporn.tv##.JoinChannel
+iceporn.tv##h6[style^="margin:"][style*="color: gray;"]
 icex.es###cookies, #cookies-message-new
 ichacha.net###breadcrumb + div[style^="width:"]
 ichhabediewahl.de###idCP33Message
@@ -45540,6 +45545,7 @@ newatlas.com###native_index_desktop_1
 newatlas.com##.Page-above-content
 newatlas.com##.Page-aside
 newatlas.com##body > div[style*="transparent"]
+newatlas.com$$script:contains(head.appendChild.bind)
 newbharatyojna.com###adb
 newcastleherald.com.au##div[id^="mrec-"]
 newcger.com##.banner_recom
@@ -53645,12 +53651,14 @@ slidesgo.com##div[id^="list_ads"]
 slideshare.net###above-recs-desktop-ad-sm
 slideshare.net###between-recs-ad-1-container
 slideshare.net###between-recs-ad-2-container
+slideshare.net###notification-root[class^="Header_adSpace"]
 slideshare.net##.StickyVerticalInterstitialAd_root__f7Qki
 slideshare.net##.fallback-ad-container
 slideshare.net##.inbetween-overlay
 slideshare.net##.lms-notice-wrapper
 slideshare.net##.scribd-ad
 slideshare.net##body li.ss-ad-thumbnail
+slideshare.net##div[class*="AdComponent"]
 slideshare.net##div[class^="AdContainer_"]
 slideshare.net##div[class^="FreestarAdContainer_"]
 slideshare.net##div[class^="StickyVerticalInterstitialAd_"]
@@ -53881,6 +53889,7 @@ sneakernews.com##.adv-parent
 sneakernews.com##.advertisement-section
 sneakernews.com##.full-width-ad-blk
 snipboard.io##.non-pro > .main-page-parent > div > .ad-container + .call-to-action
+snipcash.com,tmearn.net##.box-main > .row + .banner-captcha
 snokido.com##.bigsquare
 snopes.com##.banner_ad_between_sections
 snopes.com##.card-body > p+div.creative
@@ -63574,6 +63583,8 @@ yodiz.com###footMsgYodiz
 yodobashi.com##.srcResultPromotionItem
 yodot.com##.yodotcookienotice
 yofreesamples.com##.com-ad
+yogaporn.net##.media_spot
+yogaporn.net,3dporndude.com##.spot
 yogenfruz.pl##.shotimoo
 yoho.games##div[class^="ads-area-"]
 yoigo.com##.bw-overlay-cookies, .bw-overlay-cookies ~ div
@@ -64061,6 +64072,7 @@ zencare.org##.elementor-popup-modal
 zend.com##.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable
 zenhotels.com##.zen-privacypolicypopup
 zenith.gr###cookies
+zenlesslab.com,wutheringlab.com##.e-con-boxed:has(div[id^="pw-incontent"])
 zentia.com##.enigmaint_cookie-notice
 zentica-global.com##.gdpr-settings
 zeny.tiscali.cz##.exchange-box
