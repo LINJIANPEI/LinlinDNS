@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-09-30 20:21:08（北京时间）
+! Version: 2025-09-30 21:23:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64577
+! Total count: 64580
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2983,7 +2983,6 @@
 3dmgame.com##a[href^="https://down.hyds360.com/"] > div[style]
 3dmgame.com##div.content:nth-child(3) > div.Content_R:nth-child(3) > div.dj_warp_e.mg_bt30:nth-child(8)
 3dporndude.com##.grid-temp > li:has(> script)
-3dporndude.com##.spot
 3dporndude.com,xcadr.tv,fapnow.xxx,bobs-tube.com##.fp-brand
 3dprint.com##.lap-block-items
 3dprinting.com##.mdl-js-bigsnackbar
@@ -3880,6 +3879,7 @@
 @@&ad_type=$domain=ultimate-guitar.com
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@&http_referer=$domain=chaopx.com
+@@*$app=com.kakao.talk,stealth=dpi
 @@*$generichide,domain=faqwiki.*
 @@*$image,domain=hardwareluxx.de,~third-party
 @@*$script,third-party,domain=embedme.*|filemoon.*|finfang.*|hellnaw.*|moonembed.*|z12z0vla.*|fmoonembed.*
@@ -11791,6 +11791,7 @@
 @@||manta.com^$generichide
 @@||manualdamulher.net^$generichide
 @@||manwa.me^
+@@||maol.meb.gov.tr^$stealth=dpi
 @@||map.bmcx.com^
 @@||map.poketrack.xyz/js/ads-min.js
 @@||map.qq.com^
@@ -45796,6 +45797,7 @@ newseveryday.com###vplayer_large
 newsfirst.lk###sponsored-content-1
 newsfirst.lk##div:has(> [class*="hide_ad"])
 newsgram.com##img[onclick^="window.location.href"][onclick*="&utm_medium=banner"]
+newsguides.in,gujaratcareerhub.in,rajssoid.online,importantclass.com,thevouz.in,smartfityoga.com,mangareleasedate.com###AdbModel
 newshaifakrayot.net##.banner_con
 newshub.co.nz##.vjs-onceux-ad-container
 newshub.co.nz##.vjs-overlay.vjs-overlay-onceux-countdown
@@ -46295,6 +46297,9 @@ northernvirginiamag.com##.website-header__ad--leaderboard
 northumberlandgazette.co.uk##div[class^="sc-"]::before
 nos.io##div[class*="gdprBanner"]
 nosalty.hu##.rubAd
+nosdevoirs.fr,brainly.com,brainly.com.br,brainly.co.id,brainly.in,brainly.ph,brainly.pl,brainly.lat,brainly.in,brainly.ro,eodev.com,znanija.com##.brn-ads-box
+nosdevoirs.fr,brainly.com,brainly.com.br,brainly.co.id,brainly.in,brainly.ph,brainly.pl,brainly.lat,brainly.in,brainly.ro,eodev.com,znanija.com##.js-new-ad-placeholder
+nosdevoirs.fr,brainly.com,brainly.com.br,brainly.co.id,brainly.in,brainly.ph,brainly.pl,brainly.lat,brainly.in,brainly.ro,eodev.com,znanija.com##div[data-testid="brainly_ads_placeholder"]
 nosolosalud.com###downbar
 nosteamgames.ro###fanback
 nosteamgames.ro##body > div[id^="c_window_"][style="width: 300px; height: 280px;"]
@@ -57946,7 +57951,6 @@ tmall.com##.mui-mbarp-qrcode-tip
 tmall.com##.sn-mobile
 tmall.com##div[style*="z-index: 99999; display: block;"]
 tmearn.com##iframe[src*=".tmearn.com/"][style^="overflow:hidden;"]
-tmearn.net##.box-main > .row + .banner-captcha
 tmioe.com##.dsawss
 tmioe.com##.ekxxhn
 tmioe.com##.widget_image_img
@@ -64580,5 +64584,4 @@ zznews.cn##.ad:not([style])
 zzup.com##iframe[src^="/ad"][src$=".php"]
 zzztube.com,me-gay.com,gaysuperman.com##.mobile-random
 zzztube.com,videoporn.tube##.b-random-column
-zzztube.com,videoporn.tube,pornogram.tv,icegay.tv,24porn.com,gayporno.fm,gaymaletube.name,gayporn.fm,gaysuperman.com##.b-uvb-spot
 zzzyk.com###Tinfo
