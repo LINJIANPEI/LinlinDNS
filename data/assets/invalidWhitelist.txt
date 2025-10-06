@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 13980
+! Total count: 13981
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-10-05 20:41:34（北京时间）
+! Version: 2025-10-06 09:47:54（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1514,6 +1514,7 @@
 @@.com/embed2.php?player=$stealth=referrer
 @@.com/js/a_d/$domain=colamanga.com
 @@.com/logo/ad.$domain=colamanga.com
+@@.com:*/vip/?url=$subdocument,stealth=referrer,domain=agedm.io
 @@.dmf.link/dl/$stealth=referrer
 @@.doubleclick.net^$domain=mcstatic.com
 @@.gif#$domain=b168.net|cnprint.org|huhupan.com|tgfcer.com|wgun.net
@@ -9828,7 +9829,7 @@
 @@||buydekhke.com^$generichide
 @@||by-promokod.by^$stealth=useragent
 @@||byfly.dualstack.speedtestcustom.com^$stealth=referrer
-@@||bytecdntp.com^$script,domain=hushuge.com|51eshu.com|qingqingxs.top
+@@||bytecdntp.com^$script,domain=hushuge.com|51eshu.com
 @@||bytedance.com/ttwid/union/register/
 @@||bytegoofy.com/ad/$domain=jinritemai.com
 @@||c-web.cedyna.co.jp/customer/img/spacer.gif?$~third-party
