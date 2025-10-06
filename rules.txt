@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-07 00:13:24（北京时间）
+! Version: 2025-10-07 01:10:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64660
+! Total count: 64664
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -37846,6 +37846,7 @@ ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##div[tpl^="soft"] >
 ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##style[data-for] + style ~ #\31 [data-click^="\7b \"rsv_bdr\":\"0\",\"p5\":"]
 ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##style[id^="s-"] + script + div[id]
 ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##style[id^="s-"] + script + script + div[id]
+ipvoid.com##.banner-wrap
 ipwatchdog.com##.meda--sidebar-ad
 ipwithease.com##.ipwit-adlabel
 iqcode.com##div[class^="ansbanner"]
@@ -42360,7 +42361,9 @@ mangacanblog.com###adrtop
 mangacanblog.com###btm_banner
 mangacanblog.com##.ad
 mangaclassics.mboards.com##body > div[id][class]
+mangadex.org##.md-content .justify-center > a[target="_blank"] > img
 mangadex.org##[id] > .w-full:has([href$="?tab=recommendations"])
+mangadex.org##iframe[src*="/embed/external/ads.html"]
 mangadog.club##a[onclick*="ad_config"]
 mangafox.la###content > div#spotlights
 mangafox.la##body > a[href][target="_blank"]
@@ -58440,6 +58443,7 @@ traderie.com###ad-rails
 traderie.com##.ae-fixed
 traderie.com##.cool-slot
 traderie.com##div[class^="AdSlot__"]
+tradersarea.pl##.g-single > a[target="_blank"] > img
 traderscasa.com##[class^="overlay-"]:has(> .af-both-cont)
 tradetrucks.com.au##.middle-banner-list
 tradeville.eu###AccCooTab
