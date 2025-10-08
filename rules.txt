@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-08 20:21:23（北京时间）
+! Version: 2025-10-08 21:23:44（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64680
+! Total count: 64684
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10079,6 +10079,7 @@
 @@||html-load.com^$stealth=referrer
 @@||html5.5games.cc^$stealth=referrer,third-party
 @@||html5.gamedistribution.com/*/$stealth=referrer
+@@||htnovo.net^$generichide
 @@||htz-*upload.spac.me/pics_upload/$stealth=referrer
 @@||hu.adocean.pl/files/js/ado.js$domain=retroradio.hu
 @@||huacolor.com/js/$script
@@ -11929,6 +11930,7 @@
 @@||mealcold.com^$generichide
 @@||mealty.ru/js/ga_events.js$~third-party
 @@||meanwell.com^$stealth=dpi
+@@||meb.gov.tr^$stealth=dpi
 @@||med-fe.cdn.bcebos.com^
 @@||medeberiya1.com^$generichide
 @@||medevel.com^$generichide
@@ -18077,6 +18079,7 @@
 @@||zmovs.com/js/pop.js
 @@||zmtt.net^$script,domain=luoqiuzw.com
 @@||zohopublic.com^*/ADManager_$subdocument,xmlhttprequest,domain=manageengine.com|zohopublic.com
+@@||zol-img.com.cn^$stealth=referrer,domain=zol.com.cn
 @@||zombicide.com^$stealth
 @@||zonatmo.com/index.php/view_uploads/$stealth=referrer
 @@||zone.msn.com/js/gameplayer/admanager.js$domain=zone.msn.com
@@ -26077,6 +26080,7 @@ coursedown.com##.sidebar > #custom_html-2
 coursewikia.com##.custom-infeed-wrap-article
 coursewikia.com##.gt-section-ad
 cover-4-less.com##.elementor-popup-modal
+coveragemap.com##.placement-wrapper
 coverapi.store##.home_lefts
 covertimes.com###privacyPolicy
 coveteur.com###native_1
@@ -35815,6 +35819,7 @@ hongkongfp.com###block-54
 hongkongfp.com##a[href="https://hongkongfp.com/advertise/"] > img
 honglingjin.co.uk##.rs-side-ads
 honglingjin.co.uk##.rsads
+honkailab.com,genshinlab.com##div[id^="pw-incontent"]
 hoodtrendspredict.com##.generate-back-to-top + div[class*=" "]
 hookerhillstudios.com##div.items-center:has(> #articlead)
 hop-on-hop-off-bus.com##.ckPol
@@ -42372,7 +42377,6 @@ mangacanblog.com###btm_banner
 mangacanblog.com##.ad
 mangaclassics.mboards.com##body > div[id][class]
 mangadex.org##.md-content .justify-center > a[target="_blank"] > img
-mangadex.org##[id] > .w-full:has([href$="?tab=recommendations"])
 mangadex.org##a[href^="https://www.runoperagx.com/"]
 mangadex.org##iframe[src*="/embed/external/ads.html"]
 mangadog.club##a[onclick*="ad_config"]
@@ -45609,7 +45613,6 @@ newatlas.com###native_index_desktop_1
 newatlas.com##.Page-above-content
 newatlas.com##.Page-aside
 newatlas.com##body > div[style*="transparent"]
-newatlas.com$$script:contains(head.appendChild.bind)
 newbharatyojna.com###adb
 newcastleherald.com.au##div[id^="mrec-"]
 newcger.com##.banner_recom
@@ -60828,6 +60831,7 @@ vuejsdevelopers.com##.navbar.is-fixed-bottom
 vuetifyjs.com###patrons
 vuetifyjs.com##.v-sponsors
 vueuse.org###bb-banner
+vuinsider.com###adblock-message
 vulco.hr##.cookie
 vulture.com###article > #bottom > div.nymab-response
 vumoo.life,hexari.com##center > a[href][target="_blank"][rel="nofollow"] > img
