@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-08 08:46:08（北京时间）
+! Version: 2025-10-08 10:16:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64680
+! Total count: 64674
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3157,7 +3157,6 @@
 4hu.tv##.couplet-left
 4hu.tv##.wrap > div.mod > div.row > dl:has(> dt > a[target="_blank"]:not([href^="/html/"]) > img)
 4khd.com##.centbtd
-4khd.com##.popup
 4khd.com##.popup-iframe
 4kporn.xxx###bannerbelow
 4kporn.xxx###top
@@ -4794,7 +4793,6 @@
 @@||a.realsrv.com/ads.js$domain=javcl.com
 @@||a.realsrv.com/video-slider.js$domain=daemon-hentai.com
 @@||a.realsrv.com/video-slider.js$domain=manga1000.com
-@@||a.realsrv.com^$domain=m.4khd.com
 @@||a.sellpoint.net^
 @@||a.sellpoint.net^|
 @@||a.spolecznosci.net/pet?s=Shinden$domain=shinden.pl
@@ -16130,7 +16128,6 @@
 @@||sync.opera.com/api/sync/$stealth=useragent
 @@||synchrobox.adswizz.com/register2.php$script,domain=player.amperwave.net|tunein.com
 @@||syndication.exosrv.com/splash.php$domain=vqtube.com|taxi69.com
-@@||syndication.realsrv.com^$domain=m.4khd.com
 @@||synology-forum.de^$generichide
 @@||syri.net/uploads/syri.net/images/*/300x150_*.jpg
 @@||syriancivilwarmap.com^$generichide
@@ -26647,7 +26644,6 @@ cybernews.com##.a-label__wrapper
 cybernews.com##.a-wrapper
 cybernews.com##.adds__wrapper
 cybernews.com##.adds__wrapper + .line
-cybernews.com##.adds__wrapper + hr
 cybernews.com##.custom-banner
 cybernews.com##div:has(> div.main-deals)
 cybernews.com##div:has(> div.main-deals) + hr
@@ -41717,7 +41713,6 @@ m.163.com##.floatMenu-backflow
 m.163.com##.floatMenu-logo
 m.163.com##footer > span
 m.40407.com##.bt_ad
-m.4khd.com$$script:contains(/redirect|makeRequest/)
 m.56.com##a[data-statkey="newad_banner"]
 m.acfun.cn##.flex-center.down-app-button
 m.acfun.cn##.header-ico
@@ -60237,7 +60232,6 @@ vgtimes.com##.adfshift
 vgtimes.com##.banner_in_news
 vgtimes.com##.thisad
 vgtimes.com##.vgt_orig_bg
-vgtimes.com,vgtimes.ru##.banner_in_news
 vgtimes.ru##.banner_in_news
 vgtv.no###player.pulse-isPauseAdVisible > .jw-overlays
 vh-polska.pl###cookies__new
