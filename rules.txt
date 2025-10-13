@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-13 23:11:45（北京时间）
+! Version: 2025-10-14 00:13:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64735
+! Total count: 64740
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6476,7 +6476,6 @@
 @@||bing.com/translator/api/Translate/TranslateArray?$third-party,xmlhttprequest
 @@||bing.com^
 @@||bing.com^$generichide
-@@||bing.com^$stealth=ip
 @@||bing.com^$stealth=ip|referrer|push
 @@||bing.net^
 @@||bingfeng.tw/data/attachment/common/ad/common_ad_icon.png
@@ -6621,6 +6620,7 @@
 @@||bs.serving-sys.com/crossdomain.xml$domain=rte.ie
 @@||bscfsdf.azzureedge.xyz/scripts/*.m3u8$stealth=referrer
 @@||bsp.needrom.com/advert*.js
+@@||bstlar.com^$generichide
 @@||bt*.t-ru.org^$stealth=useragent
 @@||bt.dk/build/prebid-ads-advertisement_adbanner.*.js
 @@||btc.sldc.pl/libs/advertisement.js?ad_ids=
@@ -27547,6 +27547,7 @@ di.se##.site-header__panorama
 dia.es##.cookie
 diablotools.com##.x-consent
 diaexpert.de##.dx_cookiebanner
+diaforetiko.gr##.thecontent > div:has(> ins.adsbygoogle)
 dialdirect.co.uk##.elementor-popup-modal
 dialight.com##.notice
 diamantor.fr##.st_notification_wrap
@@ -35692,6 +35693,8 @@ hltv.org##.mid-container + div[id]:has(> a[href] > img[alt][src])
 hltv.org##.world-ranking-banner
 hltv.org##csmoney-skins-widget
 hm4tech.info##.popSc
+hmanga.world##.d-flex:has(> div#ts_ad_video_ttocl)
+hmanga.world##.v-container > div.v-card[style="text-align:center;"]
 hmb-gorzow.pl##aside.widget
 hmc.org.uk###modal-mask
 hmerologio.gr###sid-container
@@ -48418,6 +48421,7 @@ picazor.com##a[href="https://theporndude.com/"]
 picazor.com##main.h-full > div.mx-auto:has(iframe[src^="//bullionglidingscuttle.com/"])
 picbaron.com,imgbaron.com##a[href="https://forum.picbaron.com"] > img
 picbaron.com,imgbaron.com##a[href^="https://sexymeets.club/"]
+piccalil.li##.advert
 piccash.net##.pcash-user > div[id^="pcash-block"]
 picdumps.com###pcdc
 picfont.com###central_block > #block_a
@@ -55824,7 +55828,6 @@ swzz.xyz##div[class^="italianews"]
 sxclub.net##.topAdv
 sxqjdy.com##.gg2
 sxrom.com##.tmk
-sxyporn.org,sxyprn.com,sxyprn.net##.post_el_wrap > a.tdn
 sxyprn.com##.cbd
 sxyprn.com##.tbd
 sxyprn.com##[href*="/re/"]
@@ -56496,7 +56499,6 @@ tehnomanija.rs##.CookiesConsentSlot
 tehnotone.com###adboxartbottom
 tehnotone.com##body > div#content > div#list-area + div[id][class*=" "]
 tehrantimes.com##a[href^="/redirect/ads/"]
-tei.ai,cutw.in###link-view > a[target="_blank"] > img
 teichdiscount24.de##.v-overlay, .v-dialog__content
 teijin.com###assistClone
 tejanonation.net##.wpcnt
@@ -58506,6 +58508,10 @@ traderie.com###ad-rails
 traderie.com##.ae-fixed
 traderie.com##.cool-slot
 traderie.com##div[class^="AdSlot__"]
+traderie.com##div[height="250px"][width="300px"]
+traderie.com##div[height="600px"][width="160px"]
+traderie.com##div[height="600px"][width="300px"]
+traderie.com##div[height="90px"]
 tradersarea.pl##.g-single > a[target="_blank"] > img
 traderscasa.com##[class^="overlay-"]:has(> .af-both-cont)
 tradetrucks.com.au##.middle-banner-list
@@ -64223,7 +64229,6 @@ zeg-holz.de###ucShadowRoot
 zegtrends.com##.tpm-ads-unit
 zehnporn.com,freyalist.com,jennylist.xyz,sharkyporn.com,zoompussy.com##.stripper
 zehnthof-weickert.de###agever
-zeijakunahiko.com,buzzpit.net,nakiny.com,azupro-sokuho.com,pokeca-chart.com,former-railroad-worker.com,noikiiki.info,akihabarahitorigurasiseikatu.com,pc-hobby.com,yakudachi.org,tiny-sparklies.com,veryfuntime.com,sufanblog.com,rail-log.net,10-train.com,e-food.jp,life-travel-blog.cfbx.jp,kgs-invest.com,r18blog.com,paris-tabi.com,tedenglish.site,goegoe.net,sararun.net,shopkensaku.com,welcometojapan.jp,maisondeas.com,yaspage.com,akihabarahitorigurasiseikatu.com,gnusocial.jp,doumura.com,habuteru.com,kurosuen.live,businesstrend.jp,fine-wings.com,sukuyou.com,gatagata.net,setsuyakutoushi.com,ranourano.xyz,reeell.com,it-money-life.com###go-to-top + div[id][class]
 zeitzeugen-portal.de###cookiebg, #hdg-cookie-accept
 zen.com##.disable-background::before, div[id*="ppms_cm"]
 zena.aktualne.cz##.e-ads-banner
