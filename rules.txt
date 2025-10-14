@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-14 16:14:07（北京时间）
+! Version: 2025-10-14 17:12:35（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64747
+! Total count: 64752
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8800,6 +8800,7 @@
 @@||feed-image.baidu.com^
 @@||feed.4strokemedia.com^$domain=video.corriere.it
 @@||feed.4strokemedia.com^$domain=video.gazzetta.it
+@@||feed.adrelayer.com^
 @@||feed.adrelayer.com^|
 @@||feedback-pa.clients*.google.com/*/google.internal.feedback.$stealth=referrer
 @@||feedback-pa.clients6.google.com^$stealth=referrer
@@ -9400,6 +9401,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -32304,6 +32306,7 @@ futurecurrencyforecast.com##.cwc-tor-widget
 futuregaming.io##.ez-video-wrap
 futurelearn.com##.m-heads-up-banner[aria_label="Cookie banner"]
 futurezone.at##.outbrain
+futurism.com###pw-top-right-sidebar-aib
 futurism.com##.tracking-wider
 futurism.com##div[class="pb-2 text-center"] > h4
 futurism.com,popsci.com###pw-iab-leaderboard
@@ -40344,6 +40347,7 @@ lalulalu.com##.overture_banner
 lamaletaintima.com##.st_notification_wrap
 lambdatest.com##.cookiesdiv
 lambgoat.com###pwDeskLbAtf-container
+lame.buanzo.org##.box:has(> ins.adsbygoogle)
 lame.buanzo.org,mmorpg.com,airnavradar.com,routinehub.co,unlimited.waifu2x.net,dutasex.info,redpornblog.com,freeromsdownload.com,roms-hub.com,roms-download.com,food-foto.jp,model-foto.jp,4qrcode.com,findaphd.com,grammaire.reverso.net,sportslogos.net,cyrobo.com,aliez.me,aliez.tv,ip-address.org###ads
 lamiareport.gr###backgroundlink
 lamiareport.gr##.head728
@@ -59097,6 +59101,7 @@ tv2.no##.tv2-ad
 tv24.co.uk##.panorama
 tv24.co.uk##li > .sky-player
 tv24.co.uk##li[id^="infeed"]
+tv247us.live###root > .flex-col > .fixed.bottom-5.right-5:has(> .flex > .flex-grow > a[href^="https://go.nordvpn.net/"])
 tv3.lt##img[height="200px"][width="980px"]
 tv3play.skaties.lv###ad_banner_skin
 tv5.ca##.top-alertes
