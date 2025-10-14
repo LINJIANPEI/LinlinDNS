@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-14 23:12:51（北京时间）
+! Version: 2025-10-15 00:13:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64753
+! Total count: 64760
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -552,6 +552,7 @@
 .mjt.lu/oo/$image
 .mozilla.org/eos/$image
 .mpd$xmlprune=//*[name()="Period"][.//*[@value="Ad"]] | //*[name()="Period"]/@start,xmlhttprequest,domain=amazon.com|amazon.co.jp|amazon.de|amazon.co.uk|primevideo.com
+.mpd$xmlprune=//*[name()="Period"][.//*[@value="Ad"]] | //*[name()="Period"]/@start[boolean(//*[@value="Ad"])],xmlhttprequest,domain=amazon.com|amazon.co.jp|amazon.de|amazon.co.uk|primevideo.com
 .n.2.1.js^$third-party
 .n.2.1.l50.js^$third-party
 .n.2.1.l60.js^$third-party
@@ -16359,6 +16360,7 @@
 @@||teraearn.com^$generichide
 @@||teralink.me^$generichide
 @@||terashare.me^$generichide
+@@||terminvereinbarung.leipzig.de^$stealth=dpi
 @@||terrarium.com.pl^$generichide
 @@||tesco.com^$stealth=ip
 @@||test.nextdns.io^
@@ -19335,6 +19337,8 @@ alwafd.news##.banner
 alwafd.news##center > a[href="#"]
 alypw.com##.adbkk
 alypw.com##.ceadd
+alysse.dev,ebooksyard.com,swatalk.com,bibliopanda.com,meicho.marcsimz.com,luciferdonghua.in,hallofseries.com,filecatchers.com,boredbat.com,veo-hentai.com,reit-hentai.com,fap-nation.com,myfilmyzilla.com,computer76.ru,pawastreams.pro,superpsx.com,siikomik.com,questloops.com,pawastreams.info,repack-games.com,xn--deepinenespaol-1nb.org,fumettologica.it,daemon-hentai.com,imwmi.com,the-scorpions.com,ftuapps.io,wikibuff.com,ftuapps.dev,bdix.app,isekaitube.com,lacittadisalerno.it,tutsnode.org,diznr.com,fairyhorn.cc,mentourpilot.com,acdriftingpro.com,m3uiptv.com,tutsnode.com,hulnews.top,ebookbb.in,territorioleal.com,lilymanga.net,nakiny.com,7daystodiemods.com,avitter.net,truyentranhfull.net,kargotakiptr.com,netchimp.co.uk,javhdvideo.org,nemumemo.com,savingsomegreen.com,toramemoblog.com,gameost.net,oceanofcompressed.xyz,crackedresource.com,peppe8o.com,sajhanotes.com,bi-girl.net,jpopsingles.eu,usanewstoday.club,earnme.club,tipblogg.com,ticonsiglio.com,tutsnode.net,freecoursesonline.me,clujust.ro,topnewreview.com,skincarie.com,astro.qc.ca,7review.com,techcyan.com,animehunch.com,ifreemagazines.com,softfully.com,luckystudio4u.com,shineads.in,rimworldbase.com,doctorrouter.ru,theinsaneapp.com,azad.co,theupspot.com,freemagazines.top,iproductkeys.com,miauscan.com,thenewzealandtimes.com,trytutorial.com,spytm.com,dev2qa.com,minemodpacks.ru,qzlyrics.com,freshersnow.com,apkmodhub.in,uberkasta.pl,marugujarat.in,prajwaldesai.com,mobilanyheter.net,apkmb.com,flinsetyadi.com,populistpress.com,starwarsnews.it,programmiedovetrovarli.it,gamingdeputy.com,fabiofood.com,puspas.com.np,almanilan.com,exbulletin.com,magesypro.com,magesy.blog,thecustomrom.com,keralatelecom.info,courseunity.com,webdeyazilim.com,freeiphone.fr,dafontfree.io,ebookmela.co.in,freevstplugins.net,fifaultimateteam.it,tgsup.group,scubidu.eu,gkpb.com.br,ilifehacks.com,frkn64modding.com,parzibyte.me,googledrivelinks.com,world4.eu,sysnettechsolutions.com##[style*="cursor:"][style*="z-index:"][style*="position: fixed;"]
+alysse.dev,ebooksyard.com,swatalk.com,bibliopanda.com,meicho.marcsimz.com,luciferdonghua.in,hallofseries.com,filecatchers.com,boredbat.com,veo-hentai.com,reit-hentai.com,fap-nation.com,myfilmyzilla.com,computer76.ru,pawastreams.pro,superpsx.com,siikomik.com,questloops.com,pawastreams.info,repack-games.com,xn--deepinenespaol-1nb.org,fumettologica.it,daemon-hentai.com,imwmi.com,the-scorpions.com,ftuapps.io,wikibuff.com,ftuapps.dev,bdix.app,isekaitube.com,lacittadisalerno.it,tutsnode.org,diznr.com,fairyhorn.cc,mentourpilot.com,acdriftingpro.com,m3uiptv.com,tutsnode.com,hulnews.top,ebookbb.in,territorioleal.com,lilymanga.net,nakiny.com,7daystodiemods.com,avitter.net,truyentranhfull.net,kargotakiptr.com,netchimp.co.uk,javhdvideo.org,nemumemo.com,savingsomegreen.com,toramemoblog.com,gameost.net,oceanofcompressed.xyz,crackedresource.com,peppe8o.com,sajhanotes.com,bi-girl.net,jpopsingles.eu,usanewstoday.club,earnme.club,tipblogg.com,ticonsiglio.com,tutsnode.net,freecoursesonline.me,clujust.ro,topnewreview.com,skincarie.com,astro.qc.ca,7review.com,techcyan.com,animehunch.com,ifreemagazines.com,softfully.com,luckystudio4u.com,shineads.in,rimworldbase.com,doctorrouter.ru,theinsaneapp.com,azad.co,theupspot.com,freemagazines.top,iproductkeys.com,miauscan.com,thenewzealandtimes.com,trytutorial.com,spytm.com,dev2qa.com,minemodpacks.ru,qzlyrics.com,freshersnow.com,apkmodhub.in,uberkasta.pl,marugujarat.in,prajwaldesai.com,mobilanyheter.net,apkmb.com,flinsetyadi.com,populistpress.com,starwarsnews.it,programmiedovetrovarli.it,gamingdeputy.com,fabiofood.com,puspas.com.np,almanilan.com,exbulletin.com,magesypro.com,magesy.blog,thecustomrom.com,keralatelecom.info,courseunity.com,webdeyazilim.com,freeiphone.fr,dafontfree.io,ebookmela.co.in,freevstplugins.net,fifaultimateteam.it,tgsup.group,scubidu.eu,gkpb.com.br,ilifehacks.com,frkn64modding.com,parzibyte.me,googledrivelinks.com,world4.eu,sysnettechsolutions.com##[style*="cursor:"][style*="z-index:"][style*="transform"]
 alyt.com###ALYT_privacyCookie
 alza.sk##.gtm-promo-binded
 am.lk##.bannergroup
@@ -20107,6 +20111,8 @@ apps.npr.org##.has-sponsorship
 apps.npr.org##.has-sponsorship[id^="ad-"][id$="-wrap"]
 apps112.com###s112_accept_cookies
 appsample.com##div[class^="MapLayout_Bottom"]
+appscross.com##.master-slider-parent
+appscross.com##.w-ad
 apptrigger.com,fansided.com,lastnighton.com,mlsmultiplex.com,netflixlife.com,playingfor90.com,winteriscoming.net##.mosaic-banner
 appuals.com##.ad-popup
 appuals.com##.appua-reimage-top
@@ -28328,6 +28334,7 @@ downloadfreecourse.com##a[href="https://play.google.com/store/apps/details?id=ka
 downloadhub.host##a[target="_blank"] > img[width="300"][height="300"]
 downloadhub.ltd##a[href^="https://bestbuyrdp.com/"]
 downloadlynet.ir##.wpb_wrapper > center > a[rel="nofollow"]
+downloadpirate.com##.entry-content > center
 downloadprivacy.com##div[data-styleslug="top-vpn-offers"]
 downloads-anymovies.com###e15
 downloads.codefi.re###spo
@@ -33934,6 +33941,7 @@ gosu.ai##gosu-notification
 gosugamers.net##.shopProductWrapper
 gosunoob.com##.vntsvideocontainer
 gosunoob.com##div[class^="ad-holder-"]
+gosunoob.com,indianexpress.com,matrixcalc.org,medicalxpress.com,philstarlife.com,phys.org,roblox.com,speakerdeck.com,spotify.com,techxplore.com##.ads-container
 gosunoob.com,indianexpress.com,matrixcalc.org,medicalxpress.com,philstarlife.com,phys.org,roblox.com,spotify.com,techxplore.com##.ads-container
 got-it.ai##.gi-Cookie
 gota.io###main-rb
@@ -52065,7 +52073,6 @@ ryuugames.com##a[href^="https://quickdrop.link"]
 ryuugames.com##center > a[href^="https://folynexartho.pro/"]
 ryuugames.com##div:not([id]):has(> center > a[href^="https://lkfjoiers.cfd/"])
 ryuugames.com##div[style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;"]
-ryuugames.com,biqle.org,shemaleporn.xxx##a[href^="https://theporndude.com/"]
 ryuugames.com,gizchina.com###block-32
 ryuugames.com,yaoimangaonline.com##[href^="https://l.erodatalabs.com/s/"] > img
 ryzerobotics.com##footer > div[class*="pop-up"]
