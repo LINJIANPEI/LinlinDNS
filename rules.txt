@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-17 04:12:33（北京时间）
+! Version: 2025-10-17 05:10:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64791
+! Total count: 64793
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23850,6 +23850,7 @@ canadianoutages.com###overlay.container
 canadianrealestatemagazine.ca##.new-topice-wrapper
 canadiansolar.com###cookies
 canadiantire.ca##.sponsoredproductcarousel
+canadiantire.ca##li[data-testid="product-grids"]:has(.nl-product-card__sponsored)
 canarianweekly.com##.banner-in-content
 canarianweekly.com##div[id^="footer_bottom_"]
 canarymedia.com##.inset-x-0
@@ -53715,6 +53716,7 @@ skyradar.pl##div[id^="crosscol-"] > .widget:has(> .widget-content > .adsbygoogle
 skyradar.pl##div[id^="crosscol-"] > .widget:has(> .widget-content > center > .adsbygoogle)
 skyroad.downallbook.com##IMG[height='60'][width='98%']
 skysails-marine.com##.am-notification
+skyscanner.com##[data-testid="inline-ad-panel-desktop-layout"]:has([data-testid="adInfoBtn"])
 skyscrapercity.com##img[src^="http://www.skyscrapercity.com/images/ads/"]
 skysports.com##.sdc-site-outbrain
 skysports.com##.site-component-vertical-margin
