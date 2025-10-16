@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-16 20:21:24（北京时间）
+! Version: 2025-10-16 21:25:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64771
+! Total count: 64789
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10632,7 +10632,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news4jax.com|gmg-wjxt-prod.cdn.arcpublishing.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news8000.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=nick.com|nickjr.com|cc.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=play.aetv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=play.aetv.com|play.mylifetime.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=play.virginmediatelevision.ie
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=skai.gr
@@ -20354,6 +20353,7 @@ ashemaletube.com##.vast-overlay
 ashemaletube.com##.vidItem > div[class*="advi"]
 ashemaletube.com$$script:contains(popunder)
 ashemaletube.com,pornoxo.com,fetishpapa.com##.video-extra-overlay
+ashemaletv.com##.video__title-wrapper
 asheville.com##.injected-ads
 ashkelonim.co.il##.Banner
 ashkelonim.co.il##.FloatingAd
@@ -29296,6 +29296,7 @@ elektroda.pl##.container > div > div[class] > section[class]:has(> div[id^="div-
 elektroda.pl##.container > section > a[class][href]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
 elektroda.pl##.container a[class][href*="&utm_medium=banner"]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
 elektroda.pl##.head ~ ul > li:not(.post):has(> div[class] a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"]))
+elektroda.pl##.head ~ ul > li:not(.post):has(> div[class] a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"], [href^="https://www.elektroda.pl/"][href*="dsaue.php?"]))
 elektroda.pl##.position-relative > .sec-b > a[href]:not([href^="https://www.elektroda.pl/"]) > img
 elektroda.pl##.sidebar-wrap .the-list > li[class]:not([class="clearfix"]) > a[href][rel="noopener"]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
 elektroda.pl##.sidebar-wrap > .row > .widgets > .boombox-content > a[href][target="_blank"][onclick*="'Navibox', 'Click', '"]
@@ -29326,6 +29327,7 @@ elektroda.pl##div:only-child > a[href]:not([href^="https://www.elektroda.pl/"]):
 elektroda.pl##div:only-child > a[href]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]):only-child > img:has(+ img[width="300"])
 elektroda.pl##section[class] > [id]:has(> .text-center:only-child > div[class]:first-child + div[id^="div-gpt-ad-"]:last-child)
 elektroda.pl##section[class] > [id]:has(> div a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"]))
+elektroda.pl##section[class] > [id]:has(> div a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"], [href^="https://www.elektroda.pl/"][href*="dsaue.php?"]))
 elektromobilni.pl##div[id^="elekt-"] > a[target="_blank"] > img
 elektromobilni.pl##main .elementor-widget-container > a[target="_blank"] > img
 elektrotanya.com##.rside_ad
@@ -33279,7 +33281,9 @@ gettranny.com##.navigation > a[href^="/playlists/latest-updates"] + div.collapse
 gettranny.com##.navigation > a[href^="/playlists/latest-updates"] + div.collapse + div.collapse + a[href][target="_blank"]
 gettranny.com##.video-info__header + section
 gettranny.com##.video__wrapper > div.wrapper:has(> article > div.headline)
+gettranny.com,fuxxx.com,shemalez.tube##.jwplayer > [class][style*="display"][style*="!important"]
 gettranny.com,xjav.tube,manysex.tube,manysex.com##section[style="padding: 12px;"]
+gettranny.com,xmilf.com,vxxx.com###fhvids
 gettubetv.com##span[style*="font-size: 12px;"][style*="text-decoration: none;"]
 gettyimages.de###toaster-modal
 gettyimages.nl###toaster-modal
@@ -36462,6 +36466,9 @@ iciba.com##div[class|=ad],div.newpc-entry
 icicibank.co.uk##.siteCapture
 icims.com###multy-lang-betanotifier
 icl-group.de###drkf5_overlay
+icma.az##.banners
+icma.az##.news_banner
+icma.az##div[class*="_label"]:has(> .banners:only-child)
 icodrops.com##.Project-Card--promo
 icodrops.com##.Promo-Line
 icodrops.com##.Tbl-Row--promo
@@ -38450,6 +38457,10 @@ japan-whores.com##.premium-thumb
 japan-whores.com##.top-r-all
 japan-whores.com##.vp-info
 japan-whores.com##aside[style="padding: 5px 13px 5px 5px;"]
+japan-whores.com##body > center:has(> div.spot)
+japan-whores.com##nav > div.item.header_link
+japan-whores.com,camwhoria.com,camwhores.ru.com,xxx-sex.fun##.fh-line
+japan-whores.com,redfans.org,ryuugames.com,biqle.org,shemaleporn.xxx##a[href^="https://theporndude.com/"]
 japanese-sex-porn.com##.bierlien > .lieviev:first-child + .lieviev > .bovie > .goagil > .title
 japanese-sex-porn.com##.lieviev > .ohuayo
 japanesekorean.aliendictionary.com###adblock-engelleyici
@@ -40549,6 +40560,8 @@ lbprate.com###Ad2
 lbprate.com###Ad3
 lbprate.com###Ad4
 lbry.tv##.nag
+lbtube.com,ourladyboys.com,24pornvideos.tv,goodpornvids.com,zzztube.com,videoporn.tube,pornogram.tv,icegay.tv,24porn.com,gayporno.fm,gaymaletube.name,gayporn.fm,gaysuperman.com##.b-uvb-spot
+lbtube.com,ourladyboys.com,youtrannytube.com##.random-td
 lbx777.com,lbx777.net##table[width="325"][height="280"]
 lbyczf.com##.content__default > .list
 lca.pl###popupDiv
@@ -42090,6 +42103,7 @@ m4ufree.co##a > img[title*="Free Download"]
 m4ufree.com##a[href^="//look.ichlnk.com/"]
 m9.news###single-top-ad
 m9.news##.ads-wrap-qqq
+m9.news##.m9-banner-ad
 m9.news##.main-content > p:has(> ins.adsbygoogle)
 ma-calculatrice.fr###manger-des-minis-gateaux
 ma-x.org##.k2cd89-hide
@@ -52904,6 +52918,7 @@ sex-videos.xyz,xnxx.fit###fluid-onpause_spot
 sex.com###ad-div
 sex3.com##.add-box
 sex3.com##.adv-leftside
+sex3.com##.block-info
 sex3.com##.search-page-adv
 sex3.com##.tall_advertising
 sex8.cc###nv > ul.cl > li > a[href^="http"]
@@ -58568,6 +58583,8 @@ traningspartner.se##.top > .container > .sd-surface > .sd-object-if
 tranny.one###atop
 tranny.one##.container-content > div[style^="padding-top: 10px; overflow: hidden; height:"]
 tranny.one##.content > div.c1 > ul.menu:has(> li > a[href="https://gaygo.tv/"])
+tranny.one##.fapc
+tranny.one##.flirt-solo
 tranny.one##.th-ba
 tranny.one##nav > span.for-desktop
 tranny.one,sunporno.com##.thumbs-container > .th-ba
@@ -63346,6 +63363,7 @@ xxxtubedot.com##.adv-b
 xxxvogue.net###embed-embed-overlay
 xxxvogue.net###embed-parrot
 xxxvogue.net##.banners-container
+xxxvogue.net##.faphouse-adv
 xxxvogue.net##.link-adv
 xxxvogue.net##.live-model
 xxxvogue.net##.player-section__ad-w
