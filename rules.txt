@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-16 23:12:33（北京时间）
+! Version: 2025-10-17 00:14:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64790
+! Total count: 64791
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2689,7 +2689,6 @@
 24porn.com##.b-head-6
 24pornvideos.tv##.b-advertisement
 24pornvideos.tv##.b-nav-wrapper > nav ~ a[href][data-banner-id]
-24pornvideos.tv##.b-uvb-spot
 24rodopi.com,rodopi24.blogspot.com###HTML14
 24rodopi.com,rodopi24.blogspot.com##.sidebar-inner
 24rodopi.com,rodopi24.blogspot.com##a[style="float:left;width:254px;"]
@@ -5825,6 +5824,7 @@
 @@||api.github.com^$stealth=3p-auth
 @@||api.hostemb.ws^$stealth=referrer
 @@||api.huangye.miui.com^
+@@||api.ibb-prod.istanbulsenin.kobil.com^$stealth=dpi
 @@||api.imgur.com^$stealth=referrer
 @@||api.individual.githubcopilot.com^$stealth=3p-auth
 @@||api.infowarsmedia.com/videojs-event-tracking/dist/videojs-event-tracking.js
@@ -23838,7 +23838,6 @@ camwhores.video,camwhores.tv##body > .top[style="text-align:center;font-size:16p
 camwhores.video,camwhores.tv,thecambabes.com##.list-videos > div.margin-fix > div.place
 camwhoresbay.com##.related-videos ~ div[class^="visible-"][style="border:1px solid #ccc;text-align: center;margin-top: 10px;padding:5px"] > center
 camwhoresbay.com##div[style^="width:300px;"][style*="height:250px"]
-camwhoria.com,camwhores.ru.com,xxx-sex.fun##.fh-line
 canada411.ca##.c411TopBanner
 canadacomputers.com##.privacy-modal
 canadaglobalinfo.com###content + div[id][class*=" "]
@@ -24830,12 +24829,14 @@ cined.com###right-widget-top-ads_widget-23
 cined.com##.affiliates-banner-container-block
 cined.com##.alternative-links
 cined.com##.recommended-course-card
+cinejosh.com##.col-xs-12 > div.panel:has(> div[style] > div > a[href="https://www.youtube.com/watch?v=blTLDzamx2w"])
 cinejosh.com##.googleAdPanel
 cinejosh.com##.googleAdsSponsered
 cinejosh.com##.home_dt_mob_responsive_top_middle_container
 cinejosh.com##.panel-default > div[style]:has(> .adsbygoogle)
 cinejosh.com##.rw_footer_sticky
 cinejosh.com##.stick-desktop-right
+cinejosh.com##a[href="https://www.youtube.com/watch?v=blTLDzamx2w"]
 cinejosh.com##span > div.text-center:has(> div.googleAdsSponsered)
 cinema-3d.xyz,androidonepro.com,almafhm.online##.popSc
 cinema.dinamalar.com##.gallery-embed-container > ul > li[class^="gal-img"][style^="width:"][style*="overflow:"]
@@ -29296,7 +29297,6 @@ elektroda.pl##.container .topic-lists .topic-box > div > div > a[class][href]:no
 elektroda.pl##.container > div > div[class] > section[class]:has(> div[id^="div-gpt-ad-"]:only-child)
 elektroda.pl##.container > section > a[class][href]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
 elektroda.pl##.container a[class][href*="&utm_medium=banner"]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
-elektroda.pl##.head ~ ul > li:not(.post):has(> div[class] a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"]))
 elektroda.pl##.head ~ ul > li:not(.post):has(> div[class] a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"], [href^="https://www.elektroda.pl/"][href*="dsaue.php?"]))
 elektroda.pl##.position-relative > .sec-b > a[href]:not([href^="https://www.elektroda.pl/"]) > img
 elektroda.pl##.sidebar-wrap .the-list > li[class]:not([class="clearfix"]) > a[href][rel="noopener"]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]) > img
@@ -29327,7 +29327,6 @@ elektroda.pl##body > #main > .content-wrap > .container > .container + section[c
 elektroda.pl##div:only-child > a[href]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]):only-child > img + img[width="300"]
 elektroda.pl##div:only-child > a[href]:not([href^="https://www.elektroda.pl/"]):not([href^="https://obrazki.elektroda.pl/"]):only-child > img:has(+ img[width="300"])
 elektroda.pl##section[class] > [id]:has(> .text-center:only-child > div[class]:first-child + div[id^="div-gpt-ad-"]:last-child)
-elektroda.pl##section[class] > [id]:has(> div a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"]))
 elektroda.pl##section[class] > [id]:has(> div a:is([href^="https://www.elektroda.pl/"][href*="dsa.php?"], [href^="https://www.elektroda.pl/"][href*="dsaeu.php?"], [href^="https://www.elektroda.pl/"][href*="dsaue.php?"]))
 elektromobilni.pl##div[id^="elekt-"] > a[target="_blank"] > img
 elektromobilni.pl##main .elementor-widget-container > a[target="_blank"] > img
@@ -30992,6 +30991,7 @@ filmyone.com###mvp-post-main a[target="_blank"] > img
 filmyone.com##div[id$="-top-scroll-shadow"][style^="position: absolute"]
 filmyplex123.blogspot.com##.sidebar > div[id^="HTML"]
 filmypoints.in##div[id][class^="popup"][class$="wrap"][style]
+filologika.gr##.sidebar > div.widget_container:has(> div.textwidget > p > a[href^="https://vivliopoleiopataki.gr/"])
 filologikosxoleio.gr###block-4
 filologikosxoleio.gr###wrapper div[id^="custom_html-"]:has(div.textwidget:empty)
 filsh.net##div[id^="sovendus-container-"]
@@ -32334,7 +32334,6 @@ fuxxx.com##.partners-wrap + div[class]
 fuxxx.com##.video-info + section
 fuxxx.com##.video-ntv-wrapper
 fuxxx.com##.video__related + section[style]
-fuxxx.com,shemalez.tube##.jwplayer > [class][style*="display"][style*="!important"]
 fuyang.net###portal_block_474
 fuyang.net###portal_block_502
 fuyang.net##.eis_fbox_260:nth-child(n+3)
@@ -33827,7 +33826,6 @@ goodmenproject.com##.GMP_728_top
 goodmenproject.com##.gmp-instream-wrap
 goodmorningamerica.com##.recirculation-module
 goodnewsfromindonesia.id###mybot-adcover
-goodpornvids.com,zzztube.com,videoporn.tube,pornogram.tv,icegay.tv,24porn.com,gayporno.fm,gaymaletube.name,gayporn.fm,gaysuperman.com##.b-uvb-spot
 goodreads.com##.SponsoredProductAdContainer
 goodreturns.in###couponPromoWdg
 goodreturns.in###headerTopAd
@@ -44972,6 +44970,8 @@ mylomza.pl##div[style="min-height: 362px;"]
 mylomza.pl##div[style="min-height: 500px;"]
 mylomza.pl##div[style="min-height: 634px;"]
 mylust.com###fluid_video_wrapper_main_video > div#main_video_fluid_html_on_pause
+mylust.com###headC
+mylust.com###headDA
 mylust.com###player > div#kt_b
 mylust.com###wrapper > div[style*="color:#7f7f7f;font-family:Arial,Tahoma;font-size:14px;"]:not([id]):not([class])
 mylust.com##.content > .cs-bnr
@@ -45199,6 +45199,7 @@ nameberry.com##.Pagination-ad
 nameberry.com##.htlad-InContent_Flex
 nameberry.com##.htlad-Leaderboard_Flex
 namemc.com###skin_wrapper
+namemc.com##.mb-3:has(> div[id^="nn_player"])
 namemc.com##.small-gutters > div[class="col-12"]
 namemc.com##[style="min-height: 238px"]
 namemc.com##div.ad-container
@@ -45910,6 +45911,7 @@ newsbomb.gr##.banner-section
 newsbomb.gr##.inread-banner
 newsbomb.gr##.textlinks > div.textlink > a[rel="nofollow noopener"]
 newsbreak.com##div[style*="position:relative;width:100%;height:0;padding-bottom:"]
+newsbreak.gr##.gAdCentered
 newscaststudio.com##.top-bar div.iframe-post
 newscientist.com##.Outbrain
 newscientist.com##.prompt--modal.section
@@ -51283,7 +51285,6 @@ reddxxx.com##.w-screen.backdrop-blur-md
 redenacionalderadio.com.br###viewlet-disclaimer
 redfans.org##a[href="#"][onclick^="window.open(atob("]
 redfans.org$$script:contains(initSite)
-redfans.org,ryuugames.com,biqle.org,shemaleporn.xxx##a[href^="https://theporndude.com/"]
 redferret.net##.redfads
 redflagdeals.com###rfd-primis-wrapper
 redflagdeals.com##.inline_leaderboard
@@ -53141,6 +53142,7 @@ shellsmart.com###modal_container
 shemale.movie##.player-section__ad-b
 shemale.movie,hdsex.org##.player__inline
 shemale.movie,matureclub.com##.player__banner
+shemale.movie,xxxvogue.net##.faphouse-adv
 shemale.pub,sunporno.com##.abottom
 shemale.pub,tranny.one,sunporno.com###amiddle
 shemale.taxi##.invideo-native-adv
@@ -63116,7 +63118,6 @@ xmilf.com##.content-block > div.see-more-wrapper + div.wrapper
 xmilf.com##.videoplayer + section > #und_ban
 xmilf.com##.videoplayer + section > #und_ban + h4
 xmilf.com,manysex.com##.header__item
-xmilf.com,vxxx.com###fhvids
 xmissy.nl##.noclick-small-banner
 xmissy.nl##.noclick-small-bnr
 xmlgold.eu##.cookie-window
@@ -63187,6 +63188,7 @@ xozilla.com##.right-video-dvertisement
 xozilla.com##[style="height: 220px !important; overflow: hidden;"]
 xozilla.com##div[style="height: 220px !important; overflow: hidden;"]
 xozilla.com,analdin.com##body > .popup
+xozilla.com,homemade.adult,analdin.com,xhand.net###lj-container
 xozilla.xxx###scrollhere
 xozilla.xxx##div[style="height: 130px !important; overflow: hidden;"]
 xozilla.xxx##div[style="height: 250px !important; overflow: hidden;"]
@@ -63964,7 +63966,6 @@ youth.cn##div[style="width:960px;height:90px;margin:0 auto;"]
 youthwant.com.tw##.flex-container
 youthwant.com.tw##.side_adbox
 youtrannytube.com##.banner-td
-youtrannytube.com##.random-td
 youtube-nocookie.com##.ytp-ad-progress-list
 youtube.com###ad-image\:22
 youtube.com###contents>ytd-search-pyv-renderer
