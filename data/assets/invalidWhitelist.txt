@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14009
+! Total count: 14010
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-10-16 20:50:49（北京时间）
+! Version: 2025-10-17 09:47:49（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1925,7 +1925,6 @@
 @@://localhost/$generichide
 @@://localhost:$generichide
 @@://streamcdn.xyz/hls/$stealth=referrer
-@@://www.atlassian.com^$elemhide,jsinject,extension
 @@://www.coinbase.com^$stealth=webrtc
 @@://www.fedex.com/Tracking?
 @@://www.liquidweb.com/kb/wp-content/themes/lw-kb-theme/images/ads/vps-sidebar.jpg
@@ -9090,6 +9089,7 @@
 @@||api.getgrover.com/api/*/user$stealth=3p-auth
 @@||api.github.com^$stealth=3p-auth
 @@||api.hostemb.ws^$stealth=referrer
+@@||api.ibb-prod.istanbulsenin.kobil.com^$stealth=dpi
 @@||api.imgur.com^$stealth=referrer
 @@||api.individual.githubcopilot.com^$stealth=3p-auth
 @@||api.infowarsmedia.com/videojs-event-tracking/dist/videojs-event-tracking.js
@@ -20433,6 +20433,7 @@
 @@||userupload.in^$generichide
 @@||usgamer.net/static/scripts/AdsLoad.js
 @@||usgamer.net/static/scripts/SidebarAds.js
+@@||usine-digitale.fr/*/stormcaster.js$script,~third-party
 @@||usplastic.com/js/hawk.js
 @@||ut.pubmatic.com/geo?pubid=$domain=zeenews.india.com
 @@||utorrentgamesps2.blogspot.com^$generichide
