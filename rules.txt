@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-19 22:09:04（北京时间）
+! Version: 2025-10-19 23:09:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64826
+! Total count: 64828
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22288,6 +22288,7 @@ bing.com##.promotion-panel-inner
 bing.com##.ra_car_block
 bing.com##.shop_page .br-poleoffcarousel
 bing.com##.slide:has(.rtb_ad_caritem_mvtr)
+bing.com##.ta_c:has-text(Sponsored)
 bing.com##.text-ads-container
 bing.com##[id$="adsMvCarousel"]
 bing.com##a.sb_meta[href^="http://advertise.bingads.microsoft.com"]
@@ -43341,6 +43342,7 @@ mg.co.za###partner-content
 mg.co.za##article:has(.sponsored-single)
 mg21.com##a[href="https://www.mg21.com/zunjiazq"]
 mgbbs.cn##td[width="960"][height="60"]
+mgeko.cc##.nsad
 mggp.com.pl##.navbar-fixed-bottom
 mgnacg.com##a[href^="https://fanqiev2.work/auth/register?code="]
 mgnet.xyz##.container-bns
