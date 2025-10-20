@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-20 20:21:10（北京时间）
+! Version: 2025-10-20 21:24:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64841
+! Total count: 64865
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4522,6 +4522,7 @@
 @@||*.video.xiaomi.com^
 @@||*.xn--ngstr-lra8j.com^
 @@||*.yt2api.com/api/$domain=api.ytapi.cc,stealth=referrer
+@@||*.yt2api.com/api/$domain=ytapi.cc,stealth=referrer
 @@||*ad*.ksyungslb.com^
 @@||*hubst.guru/uploads/$stealth=referrer
 @@||*m.chenzhongtech.com^
@@ -10622,6 +10623,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=redefine.pl|redcdn.pl|polsatnews.pl|polsatsport.pl|twojapogoda.pl|geekweek.pl|polsatboxgo.pl
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=winknews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=ksl.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$xmlhttprequest,domain=packers.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=24ur.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=blackbird.zoomin.tv
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=f5haber.com
@@ -13689,6 +13691,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=winshell.org|wingeno.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=wouterplanet.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=www.msn.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=ytapi.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zeroupload.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zippyshare.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zsexf.com
@@ -20098,6 +20101,7 @@ appledaily.com.tw##.adblock_splash
 appledaily.com.tw##.owl-lazy[tcode^="AD:"]
 appleinsider.com###mobile-article-anchor
 appleinsider.com##.article-body > div.block:has(> div.ad)
+appleinsider.com##.block:has(> div.ad)
 appleinsider.com##.bottom
 appleinsider.com##.col-sm-12 > :has([id^="div-gpt-ad-"])
 appleinsider.com##.deals-widget
@@ -31579,6 +31583,8 @@ forbes.com##.top-placeholder
 forbes.com##.vestpocket
 forbes.com##[data-testid="locked-top-ad-container"]
 forbes.com##body fbs-ad:not(#style_important)
+forbes.com##div[class]:has(> fbs-ad)
+forbes.com##div[class]:has(> script[id^="article-"][id*="connatix-"])
 forbes.com##div[class^="fbs-ad"]
 forbes.com##div[class^="fbs-ad--"]
 forbes.com##div[data-testid^="fbs-ad"]
@@ -34057,6 +34063,7 @@ gpblog.com###article-blocks > .raw-html-component:has(> center > #videoAd)
 gpblog.com##.betting-article-insert
 gpblog.com##.promo-element
 gpblog.com##.raw-html-component:has(> center div[id^="snack-"])
+gpblog.com##.raw-html-component:has(> script[src*="aniview.com/"])
 gpblog.com##[class^="ArticlePromoItem_ArticlePromoItem"]
 gpblog.com##body .ad:not(#style_important)
 gpblog.com##li[class^="NewsList_injection"]:has(> div:only-child > .ad:only-child)
@@ -43564,6 +43571,7 @@ minitab.com###cpToaster
 minitokyo.net##body > div:not([id]):not([class])
 miniurl.pw##.box-main > script[src] + div[class^="_"]
 miniwebtool.com###btop
+miniwebtool.com###chrome-extension-prompt
 miniwebtool.com###contain300-1
 miniwebtool.com###contain300-2
 miniwebtool.com###videoad
@@ -43768,6 +43776,7 @@ mo9x.com##.adsbtn_right
 mob.hr###billboard_ad_container
 mob.hr##.noa-banner > a
 mob.hr##.side_banner
+mob.iyingdi.com##.down-button
 mob.iyingdi.com##.down-load-app-container
 mob.iyingdi.com##.reply
 mobafire.com##.r-home__guides__ad
@@ -45856,6 +45865,7 @@ news.qq.com##.download-banner-wrap
 news.qq.com##.download-content
 news.qq.com##.godown.qqcom_fb-item
 news.qq.com##.time > a[style="position: absolute;top: -8px;left: 296px;"]
+news.qq.com##div[id="download-btn-wrapid"]
 news.sina.com.cn##.news_weixin_ercode
 news.sky.com##.mpu-1
 news.sky.com##.sdc-article-body > .sdc-site-layout-sticky-region[data-format="floated-mpu"]
@@ -45955,6 +45965,7 @@ newscon.org##.adblock-warning
 newsday.com##.fullBanner
 newsday.com##.midPg
 newsday.com##.policy-alert
+newseco.site,wikisharing.com,celemusic.com,rollingglobe.online,weebee.me,richitt.com,berich8.com,luisgdato.com,techyrick.com,freshersgold.com###main-container + div[id][class*=" "]
 newser.com###DivStoryAdContainer
 newser.com###divAB
 newser.com###divCM
@@ -46586,6 +46597,8 @@ noypigeeks.com##div[align="center"] > a[href][target="_blank"][rel] > img
 nperf.com###consent
 npl.co.uk##.cookie
 nplus1.ru##footer .fixed
+npmmirror.com##.ant-alert:has(a[target="_blank"])
+npmmirror.com##a[target="_blank"] > img:is([alt="ad"], [alt="vps-ad"])
 npr.org##.ad-config
 nra.lv##.bl-cont-ad
 nrc.nl##.user-confirmation-screen
@@ -48568,6 +48581,8 @@ pilifx.com##.home_row_1
 pilifx.com##.imoney
 pilipali.cc##.tips-widget-weixin
 pilipili.site##.block-sales
+pilkareczna.com##.sticky > .hidden:has(> .rounded-lg:only-child > .ad-container)
+pilkareczna.com##body > .w-full:has(> .w-full:only-child > .adsbygoogle)
 pilkarskiswiat.com###secondary > #custom_html-37
 pilkarskiswiat.com##center > a[href*="/go/"][target="_blank"] > img
 pilkarskiswiat.com##iframe[data-src="https://typuje.pl/rectangle"]
@@ -54877,6 +54892,8 @@ sport.pl,gazeta.pl##div[id^="DFP-007-CONTENTBOARD"]
 sport.ro##.desktop-branding
 sport.sky.it##.advContainer
 sport.tvp.pl##.banner-lotto-wrapper
+sport1.pl##.entry-content > .wp-block-buttons > .wp-block-button > a.wp-block-button__link:not([href])
+sport1.pl##.wp-block-image:has(> figure > a:is([target="_blank"], [rel="sponsored"]) > img)
 sport24.gr###agora-inread
 sport24.gr###read-more-widget
 sport24.gr###someplaceholder
@@ -55430,6 +55447,7 @@ storia.ro###root > footer ~ div
 storiepoesie.it###stpo_cookielaw_banner
 storm.mg###dablewidget_KoEeAWoB
 storm.mg###floating_btns_wrapper
+storm.mg##.adGeneral
 storm.mg##.storm_magic_placeholder
 storm.mg##div[data-addom="storm_ad_wrapper"]
 storm.mg,mobile01.com##div[id^="dablewidget_"]
@@ -58019,6 +58037,7 @@ timesofisrael.com##.banner-label
 timesofisrael.com##.banner-placeholder
 timesofisrael.com##.crm-post-module
 timesofisrael.com##.sellwild-label
+timesofisrael.com,ipvoid.com,mp4compress.com,changenow.io##.banner-wrap
 timesofmalta.com###article-sponsored
 timesofmalta.com###inscroll-banner
 timesofmalta.com##.sw-Top
@@ -59227,6 +59246,9 @@ tvguide.co.uk##main div[style="min-width\:300px;min-height\:250px"]
 tvguide.com##.c-tvListingsSchedule_adRow
 tvguide.com##.c-tvListingsSchedule_video
 tvguide.com##.c-tvListingsSchedule_video:has(.c-adDisplay_container)
+tvguru.cz,techsvet.cz###leaderboard-bottom
+tvguru.cz,techsvet.cz##.mobileHide > div[style^="height:"]
+tvguru.cz,techsvet.cz##body .code-block
 tvhay.org##.ad_location
 tvhay.org##.float-ck
 tvhayz.top###ads-preload
@@ -59767,6 +59789,8 @@ unitconversion.org##a[href="../noads.html"]
 unite-db.com###ds_lb1
 unite-db.com###ds_lb2
 unite.pvpoke.com##div[id^="nitro-unite-"]
+uniteapi.dev##main > div[class*=" "] > div[class^="sc-"]:first-child:empty
+uniteapi.dev##main > div[class*=" "] > div[class^="sc-"]:has(> div:only-child > div[id^="nn_lb"])
 united.com##aside[class^="app-components-MyUnited-Landing-styles__chaseAd"]
 united.com##div[class*="cookiedisclaimer"]
 united.com##div[class^="app-components-HomeTop-homeTop__adPlacement"]
