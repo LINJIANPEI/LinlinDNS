@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-21 20:21:31（北京时间）
+! Version: 2025-10-21 21:28:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64871
+! Total count: 64878
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3984,6 +3984,7 @@
 @@.ru.com/*/tracks-$xmlhttprequest,stealth=referrer
 @@.ru/mylivetv/stream-*.php$stealth=referrer
 @@.ru/premiumtv/*.php$subdocument,xmlhttprequest,stealth=referrer
+@@.ts$stealth=referrer,domain=omuzaani.me
 @@.ts^$stealth=referrer
 @@.vaughnsoft.net/abvs.php?a=
 @@.vmall.com/oauth
@@ -4218,6 +4219,7 @@
 @@/live/*/*jpeg|$xmlhttprequest,stealth=referrer,domain=weakspell.org|weakspell.to
 @@/log/report/*$script,domain=bilibili.com
 @@/mangakakalot/*$stealth=referrer,image,domain=mangakakalot.com
+@@/master.m3u8$stealth=referrer,domain=omuzaani.me
 @@/media/*$image,stealth=referrer,domain=bato.to
 @@/media/*/js/adblock_detector.js$domain=eska.pl|eskarock.pl|voxfm.pl|vibefm.pl|radiosupernova.pl
 @@/mobileads.$domain=naviking.localking.com.tw
@@ -6554,6 +6556,7 @@
 @@||bmap6.cn^
 @@||bnet.163.com/
 @@||bnonews.com^$generichide
+@@||boanki.net/*/*$stealth=referrer,domain=omuzaani.me
 @@||board-game.co.uk/cdn-cgi/zaraz/s.js$script,~third-party
 @@||board4all.biz^$stealth=referrer|location
 @@||boards.4chan.org/adv/
@@ -30128,6 +30131,7 @@ everythingrf.com##.baseboard-ad
 everythingrf.com##.headerblock
 everythingrf.com##.mid-ads
 everythingrf.com##.stickyRHSAds
+everythingrf.com##[id^="wallpaper_"]
 everythingrf.com##div[data-adtag]
 everythingrf.com##div[id^="ucHeader_Panel"]
 everythingrf.com,futbol24.com##.skyscrapper
@@ -36595,6 +36599,7 @@ idnes.cz###main > .counters + table[id][class*=" "]
 idnes.cz###main [id^="r98."]
 idnes.cz###portal > a#fellow[onmousedown] > img
 idnes.cz###r-native
+idnes.cz###r-nativeadvertorial
 idnes.cz###r-super300
 idnes.cz###selfart-box
 idnes.cz###space-c-add > div[id][class*=" "]
@@ -58533,6 +58538,7 @@ torrentleech.org##.login-banner
 torrentleech.org##div[style="height:640px; width:160px;"]
 torrentleech.org##iframe[src="https://www.weminecryptos.com/forum/"]
 torrentproject.cc##a[href="/vn/?yd=?"]
+torrentqq390.com##.row-banner
 torrentz.eu.com###torrentz2
 torrentz2.is##div[class$="onToleratds"]
 torrinomedica.it##.entry-content > .code-block:has(> .adsbygoogle)
@@ -60559,6 +60565,7 @@ vidplay.lol##body > div > div[class][style]:has(> div > div > a[target="_blank"]
 vidup.io##.sponsored-container
 vidwatch.me###impo_overlay
 vidwatch.me###over_main
+viefaucet.com##.offerwall-widget
 viennaticketoffice.com###hinweis
 vienormali.it##.info
 vietcetera.com##div[class^="!items-end"]
