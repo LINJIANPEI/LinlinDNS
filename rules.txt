@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-22 20:21:37（北京时间）
+! Version: 2025-10-22 21:27:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64872
+! Total count: 64879
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5987,6 +5987,7 @@
 @@||app.appsflyer.com/id*&*navigate_url*shopee.co
 @@||app.appsflyer.com^
 @@||app.appsflyer.com^|
+@@||app.axenthost.com^$generichide
 @@||app.bilibili.com^
 @@||app.biligame.com^
 @@||app.chat.xiaomi.net^
@@ -14860,6 +14861,7 @@
 @@||s.nitropay.com/ads-*.js$domain=soccerguru.live
 @@||s.nitropay.com/ads-*.js$domain=th.gl
 @@||s.nitropay.com/ads-437.js$domain=wago.io
+@@||s.nitropay.com^$domain=app.axenthost.com
 @@||s.ntv.io/serve/load.js$domain=bloomberg.com
 @@||s.ntv.io/serve/load.js$domain=titantv.com
 @@||s.optnx.com^
@@ -15652,6 +15654,7 @@
 @@||sozcu.com.tr^$generichide
 @@||sozcukbul.com^$generichide
 @@||sozi.cn/images/ad/tj
+@@||sp.auth.adobe.com/reggie/*/regcode$stealth=3p-auth
 @@||sp.ele.me^
 @@||sp0.baidu.com^
 @@||sp1.baidu.com^
@@ -15878,6 +15881,7 @@
 @@||static.cloudflareinsights.com/beacon.min.js$domain=topsporter.net
 @@||static.cloudflareinsights.com/beacon.min.js$xmlhttprequest,domain=werfgt.fun
 @@||static.cloudflareinsights.com/beacon.min.js^$domain=sportshub.to
+@@||static.cloudflareinsights.com^$domain=app.axenthost.com
 @@||static.criteo.net/images/pixel.gif$domain=diariodenavarra.es
 @@||static.criteo.net/js/ld/publishertag.js$domain=shinden.pl
 @@||static.criteo.net/js/ld/publishertag.prebid.js$domain=streetdir.com|roaddir.com
@@ -16089,6 +16093,7 @@
 @@||streamwish.com/js/dnsads.js?ads
 @@||streanplay.cc^$stealth
 @@||strimov.site/embed$stealth=referrer
+@@||stripe.com^$domain=app.axenthost.com
 @@||stripe.com^$domain=pay.openai.com
 @@||stripe.com^$xmlhttprequest,domain=app.axenthost.com
 @@||strmrdr*/index.php?id=$stealth=referrer
@@ -51368,6 +51373,7 @@ redgifs.com##.adSideBar > *
 redgifs.com##.d_300x250_double
 redgifs.com##.placard-wrapper
 redgifs.com##.trafficstars_ad
+redgifs.com##div[class*="liveAdButton"]
 redgifs.com##div[class^="_adLiveButton_"]
 redgifs.com##div[class^="_liveAdButton_"]
 redgifs.com##ul.SideBar > li.SideBar-Item:has(> div[class] > div[class^="LiveButton_"])
@@ -60467,6 +60473,7 @@ vicuspelle.ch##.cookie-model
 vid.crictime.com###HDVideo
 vid.onlymu.site##.tips
 vidahost.com###vh-cookie-terms
+vidapi.xyz###gate
 vidcloud9.me##.backdrop
 videa.hu###videa-video-overlay
 videa.hu##.ad-manager-container
