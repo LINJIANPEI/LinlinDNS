@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14025
+! Total count: 14030
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-10-23 09:49:50（北京时间）
+! Version: 2025-10-23 20:51:30（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1510,6 +1510,7 @@
 @@*$app=com.kakao.talk,stealth=dpi
 @@*$generichide,domain=faqwiki.*
 @@*$image,domain=hardwareluxx.de,~third-party
+@@*$popup,~third-party,domain=canna.to|canna-power.to
 @@*$script,third-party,domain=embedme.*|filemoon.*|finfang.*|hellnaw.*|moonembed.*|z12z0vla.*|fmoonembed.*
 @@*$stealth=referrer,domain=cdnbuzz.buzz
 @@*.flyme.cn
@@ -1810,7 +1811,7 @@
 @@/log/report/*$script,domain=bilibili.com
 @@/mangakakalot/*$stealth=referrer,image,domain=mangakakalot.com
 @@/master.m3u8$stealth=referrer,domain=omuzaani.me
-@@/media/*$image,stealth=referrer,domain=bato.to
+@@/media/*$image,stealth=referrer,domain=bato.to|mangapark.org
 @@/media/*/js/adblock_detector.js$domain=eska.pl|eskarock.pl|voxfm.pl|vibefm.pl|radiosupernova.pl
 @@/mobileads.$domain=naviking.localking.com.tw
 @@/mono.m3u8$stealth=referrer
@@ -8489,6 +8490,7 @@
 @@||ads.nextday.media/prebid/jw-video/*.min.js$domain=gpblog.com
 @@||ads.pinterest.com^$domain=3dpchip.com
 @@||ads.pinterest.com^$popup
+@@||ads.poshtata.online/adsbygoogle.js$domain=seir-sanduk.com
 @@||ads.poshtata.online/adsbygoogle.js$domain=seirsanduk.net
 @@||ads.privacy.qq.com^$domain=privacy.qq.com
 @@||ads.programattik.com/yoc$domain=youronlinechoices.com
@@ -11328,9 +11330,9 @@
 @@||deutsches-museum.de^$stealth=dpi
 @@||dev.virtualearth.net/REST/*/Autosuggest?query=$stealth=referrer
 @@||dev.virtualearth.net/webservices/$domain=multiroute.de
-@@||dev.visualwebsiteoptimizer.com/j.php$domain=dominos.jp
 @@||dev.visualwebsiteoptimizer.com/j.php$script,domain=kb.arlo.com
 @@||dev.visualwebsiteoptimizer.com/server-side/settings?a=$domain=olx.co.id
+@@||dev.visualwebsiteoptimizer.com^$script,domain=dominos.jp
 @@||dev.visualwebsiteoptimizer.com^$stylesheet,script,domain=hancomdocs.com
 @@||devcourseweb.com^$generichide
 @@||developer.qcloudimg.com/http-save/$image,stealth=referrer
@@ -13097,6 +13099,7 @@
 @@||googletagmanager.com/gtag/js$domain=starblast.io
 @@||googletagmanager.com/gtag/js$domain=taming.io
 @@||googletagmanager.com/gtag/js$domain=themarysue.com
+@@||googletagmanager.com/gtag/js$domain=tvtropes.org
 @@||googletagmanager.com/gtag/js$domain=xfreehd.com
 @@||googletagmanager.com/gtag/js$domain=xl-bygg.no
 @@||googletagmanager.com/gtag/js$domain=zf1.tohoku-epco.co.jp
@@ -14881,6 +14884,7 @@
 @@||js.sentry-cdn.com^$script,domain=app.homebinder.com|bolt.new|book.dmm.com|etsy.com|interacty.me|jobs.ch|pizzahut.com.au
 @@||js.spotx.tv/directsdk/*.js$domain=bloomberg.com
 @@||js.srvtrck.com/v1/js?api_key=$xmlhttprequest,domain=vinomo.xyz
+@@||js.stripe.com^$stealth=referrer
 @@||js.vpro.nl/vpro/*/statcounter.js?
 @@||js.wpadmngr.com/static/adManager.js$domain=poophd.video-src.com
 @@||jsc.adskeeper.co.uk/*/hhkungfu.tv.*.js$domain=hhkungfu.tv
@@ -18829,6 +18833,7 @@
 @@||shine.cn/showadcode2.asp?posid=68&
 @@||shink.in$generichide
 @@||shinsori.com^$generichide
+@@||ship.bigcrunch.com/prebid/$domain=tvtropes.org
 @@||shipstation.com^$generichide
 @@||shmeea.edu.cn^$generichide
 @@||shoemoney.com^$generichide
