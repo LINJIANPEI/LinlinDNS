@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-24 23:12:09（北京时间）
+! Version: 2025-10-25 00:13:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64876
+! Total count: 64888
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5415,6 +5415,7 @@
 @@||airevue.net$generichide
 @@||airplaydirect.com/openx/www/images/$image
 @@||airportinfo.live/images/ads.gif
+@@||aisandbox-pa.googleapis.com/v1:checkAppAvailability$stealth=referrer
 @@||aisite.wejianzhan.com^
 @@||aisubtitle.hdslb.com^
 @@||aixifan.com/acfun-H5/public/script/sensorsdata.
@@ -6712,6 +6713,7 @@
 @@||c.amazon-adsystem.com/aax2/apstag.js?_=$domain=skill4ltu.eu
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=atozmath.com
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=client.falixnodes.net
+@@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=falixnodes.net
 @@||c.betrad.com/geo/ba.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|montrealgazette.com|saveur.com
 @@||c.betrad.com/geo/h1.js$domain=video.corriere.it
 @@||c.betrad.com/pub/c/*.js$domain=video.corriere.it
@@ -7104,6 +7106,7 @@
 @@||cdn.snigelweb.com/adconsent/adconsent.js$domain=notebookcheck-ru.com
 @@||cdn.snigelweb.com/adengine/calculator-online.net/loader.js$xmlhttprequest,domain=calculator-online.net
 @@||cdn.snigelweb.com/adengine/falixnodes.net/loader.js$domain=client.falixnodes.net
+@@||cdn.snigelweb.com/adengine/falixnodes.net/loader.js$domain=falixnodes.net
 @@||cdn.snigelweb.com/adengine/imagetotext.info/loader.js$domain=imagetotext.info
 @@||cdn.sophi.io/assets/$script,domain=nationalpost.com
 @@||cdn.springserve.com/assets/0/playerJS/chegg_unlocked_cm.js$domain=citationmachine.net
@@ -10577,7 +10580,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=typingtest.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ultimedia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=umterps.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store|w1tv.xyz|cdnstream.top|javboys.upn.one|coflix.upn.one|animeshqip.uns.bio|rpmvid.com|onion.upns.blog|securecdn.shop|embed4me.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=upns.online|upns.xyz|upns.one|isekaitube.cfd|upns.live|javlion.xyz|hlsfast.com|ultrastream.online|streamcasthub.store|w1tv.xyz|cdnstream.top|javboys.upn.one|coflix.upn.one|animeshqip.uns.bio|rpmvid.com|onion.upns.blog|securecdn.shop|embed4me.com|jhdanime.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=uptostream.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.capital.it
@@ -11447,6 +11449,7 @@
 @@||lib.hatenablog.com^$generichide
 @@||lib.wtg-ads.com/lib.min.js$domain=dnevnik.hr
 @@||lib.wtg-ads.com/prebid/prebid_*.js$domain=tvn.pl
+@@||lib.wtg-ads.com/publisher/kio.ac/sb_interstitial_wtg.js$domain=kio.ac
 @@||lib.wtg-ads.com/publisher/mmorpg.org.pl/lib.min.js$xmlhttprequest,domain=mmorpg.org.pl
 @@||libero.it^$generichide
 @@||libgen.li/ads.php
@@ -14674,6 +14677,7 @@
 @@||redirect.disqus.com^
 @@||redirector.gvt1.com/videoplayback/id/*/source/gfp_video_ads/$media,domain=poki-gdn.com|repuls.io
 @@||redventures.io/lib/dist/prod/bidbarrel-$script,domain=cnet.com|zdnet.com
+@@||ref.rbauction.com^
 @@||ref.rbauction.com^|
 @@||refer.discover.com^
 @@||refer.discover.com^|
@@ -30412,6 +30416,7 @@ faktopedia.pl,mistrzowie.org##.evo_rect
 faktykaliskie.info##.widget-advert_placement
 faktykaliskie.pl$$script[wildcard="*(document.getElementById*babasbmsgx*"][min-length="5000"][max-length="40000"]
 falano.de###overlay
+falixnodes.net$$script:contains(showAdblockCard)
 falkirkherald.co.uk##.piano-article-banner
 falkirkherald.co.uk##div[class^="MarkupAds_"]
 falkirkherald.co.uk##div[id^="sidebarMPU"]
@@ -45575,6 +45580,7 @@ nen.com.cn##.for3gagzy
 nen.com.cn##.w610
 nend.io,shemaletubevideos.com,tube.shegods.com###advert
 nendaz.org###disclaimerCtn
+neo.usachannel.info,slotlog.net,zeijakunahiko.com,buzzpit.net,nakiny.com,azupro-sokuho.com,pokeca-chart.com,former-railroad-worker.com,noikiiki.info,akihabarahitorigurasiseikatu.com,pc-hobby.com,yakudachi.org,tiny-sparklies.com,veryfuntime.com,sufanblog.com,rail-log.net,10-train.com,e-food.jp,life-travel-blog.cfbx.jp,kgs-invest.com,r18blog.com,paris-tabi.com,tedenglish.site,goegoe.net,sararun.net,shopkensaku.com,welcometojapan.jp,maisondeas.com,yaspage.com,akihabarahitorigurasiseikatu.com,gnusocial.jp,doumura.com,habuteru.com,kurosuen.live,businesstrend.jp,fine-wings.com,sukuyou.com,gatagata.net,setsuyakutoushi.com,ranourano.xyz,reeell.com,it-money-life.com###go-to-top + div[id][class]
 neo24.pl##div[class*="cookiesBlock"]
 neobiznes.pl###cpolicyHolder
 neobuggy.net##a[href="http://www.agama-rc.com/"]
@@ -49201,6 +49207,13 @@ pomponik.pl##.box.ad
 pomponik.pl##body .ad-container:not(#style_important)
 pomponik.pl##body .ad-rectangle:not(#style_important)
 pomponik.pl,hub.pl,top.pl,interia.pl##body .article-body__ad-gora-srodek:not(#style_important)
+pomponik.pl,interia.pl###ad-adsearch
+pomponik.pl,interia.pl###ad-dol_srodek
+pomponik.pl,interia.pl##.ids-ads-base
+pomponik.pl,interia.pl##div[id^="ad-banner_"]
+pomponik.pl,interia.pl##div[id^="ad-box"]
+pomponik.pl,interia.pl##div[id^="ad-gora_"]
+pomponik.pl,interia.pl##div[id^="ad-rectangle"]
 poncy.ru###hide-adblock
 poneranuncios.com###index_cookies
 ponovnauporaba.si##.cookies
@@ -63886,7 +63899,6 @@ yodobashi.com##.srcResultPromotionItem
 yodot.com##.yodotcookienotice
 yofreesamples.com##.com-ad
 yogaporn.net##.media_spot
-yogaporn.net,3dporndude.com##.spot
 yogenfruz.pl##.shotimoo
 yoho.games##div[class^="ads-area-"]
 yoigo.com##.bw-overlay-cookies, .bw-overlay-cookies ~ div
