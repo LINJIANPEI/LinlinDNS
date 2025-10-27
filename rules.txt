@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-27 23:12:31（北京时间）
+! Version: 2025-10-28 00:14:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64910
+! Total count: 64907
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2399,6 +2399,8 @@
 18h.animezilla.com###manga-bottom
 18h.avmimi.com##body > p[align="center"]:first-child
 18h.avmimi.com##body > table[width="100%"]:nth-child(2)
+18j.tv##div[class="container"] > div.main > div[class]:has(> a[href][target="_blank"][rel="nofollow"])
+18j.tv##div[class="container"] > div[class="warp"]
 18moe.org##.alignnone[alt="恰饭广告"]
 18moe.vip##a[href^="http"]:not([href*="18moe.vip"]) > img[src*="tc.18moe.net"]
 18porn.sex,18teensex.tv,429men.com,4kporn.xxx,4wank.com,alotporn.com,amateurporn.co,amateurporn.me,bigtitslust.com,camwhores.tv,danude.com,daporn.com,epicgfs.com,fapnow.xxx,fpo.xxx,freeporn8.com,fuqer.com,gayck.com,hentai-moon.com,hentai0day.com,heroero.com,hoes.tube,intporn.com,japaneseporn.xxx,javpoint.com,javwind.com,jizzberry.com,mrdeepfakes.com,multi.xxx,onlyhentaistuff.com,pornchimp.com,porndr.com,pornmix.org,sexjav.tv,sextubespot.com,sortporn.com,tabootube.xxx,watchmygf.xxx,xcavy.com,xgroovy.com,xmateur.com,xxxshake.com##.table
@@ -11454,7 +11456,6 @@
 @@||lib.hatenablog.com^$generichide
 @@||lib.wtg-ads.com/lib.min.js$domain=dnevnik.hr
 @@||lib.wtg-ads.com/prebid/prebid_*.js$domain=tvn.pl
-@@||lib.wtg-ads.com/publisher/kio.ac/sb_interstitial_wtg.js$domain=kio.ac
 @@||lib.wtg-ads.com/publisher/mmorpg.org.pl/lib.min.js$xmlhttprequest,domain=mmorpg.org.pl
 @@||libero.it^$generichide
 @@||libgen.li/ads.php
@@ -27017,6 +27018,7 @@ dailywire.com##div[style] > div[style="width: 300px; height: 250px;"]:empty
 dailywire.com##div[style] > div[style="width: 728px; height: 90px;"]:empty
 dailyxporno.com##div[class*="wps-player__happy-inside--"]
 daimonin.org###ecl_outer
+dairybusinessmea.com###modal-extended-adblocker
 daiwa-info.hu###wrap
 dajie.com##.envelop_layer
 dajie.com##.register_layer
@@ -38585,7 +38587,6 @@ jav.gallery##[href^="https://jjgirls.com/sex/"]
 jav.guru##.banner-widget
 jav.guru##.inside-right-sidebar > aside.widget_custom_html
 jav.land,picyield.com###clck_ntv
-jav.re,transvids.tv,cartoonporn24.com,camwhores.ru.com,cliphunter.com,wxx.wtf,jizzoncam.com,camwhores.video,moreamateurs.com,faptor.com,porndude.wtf,pornwex.tv,pornfd.com,area51.porn,pornrabbit.com,milf-porn.xxx,sextaped.com,pornxpert.com,perverttube.com,fapnow.xxx,epicgfs.com,scatkings.com,pornflix.to,xbjav.com,heavyfetish.com,tabootube.xxx,amateur8.com,maturetubehere.com,crazyporn.xxx,pornissimo.org,lesbian8.com,enf-cmnf.com,filtercams.com,bigassporn.tv,porn00.org,keekass.com,fuckit.cc,camwhoresbay.com,camwhoreshd.com##.block-video > div.table
 jav.watch##.banner_top_right
 jav1080.com,sex-leaks.com,gay1080.com,javsister.com###boxzilla-overlay
 jav1080.com,sex-leaks.com,gay1080.com,javsister.com##.boxzilla-container
@@ -53347,7 +53348,6 @@ shooshtime.com##.primary > .plugs + .plugs
 shooshtime.com##.video_sponsor_anchor
 shooshtime.com##.wrap > ul > li > a:not([href*="shooshtime"])
 shooshtime.com##:is(.navbar_new, .bottomNav2) > a[target="_blank"]
-shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 shootup.io###main-wrap > #bottom-wrap
 shootup.io###main-wrap > #left-wrap
 shootz.io###readyDiv #col1 > div[style^="width:300; height: 330;"] > div[style="width:300; height: 250; background-color: #000"]
@@ -56117,7 +56117,6 @@ tabletsmagazine.nl##.opt-in
 tabloidpulsa.co.id###sp642
 taboola.com###tbp-consent
 taboolanews.com##div[class*=" trc_elastic_sponsored-"]
-tabootube.xxx##.spot-primary
 tacklewarehouse.com###data_protection
 tacklifetools.com##.cookie
 tacobot.tf##.cdk-overlay-container
@@ -57669,7 +57668,6 @@ thetoyinsider.com##.header-drop-zone
 thetoyshop.com###entCNDiv
 thetranet.fr##.TelerikModalOverlay, #RadWindowWrapper_ctl00_CPH1_RdWRgpd
 thetranny.com##ul.primary > li:has(> a[href*="tsyndicate.com"])
-thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
 thetrek.co##.post__in-content-ad
 thetrendspotter.net##div[class^="thetr-adsense-"]
 thetruthaboutcars.com##.ads-fluid-wrap
@@ -58756,7 +58754,6 @@ transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty 
 transtxxx.com##a[href^="https://candyai.gg/"]
 transtxxx.com##div[class^="video-conten"] > div + div
 transtxxx.com##div[class^="video-conten"] div[class]:has(> div[class] > div[id][class] > noscript)
-transvids.tv##.footer-margin
 transvids.tv##.primary > li:has(> div > ul > li > a[href^="https://landing.transangelsnetwork.com/"])
 transvids.tv##.ribbonban
 traum-pizza.de###gc_message_bar_open, #gc_message_bar
