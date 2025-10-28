@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14041
+! Total count: 14042
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-10-27 20:51:50（北京时间）
+! Version: 2025-10-28 09:49:58（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1825,6 +1825,7 @@
 @@/player_ads.html$domain=85po.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
 @@/playlist.m3u8$stealth=referrer|ip
 @@/playlist/*caxi.m3u8$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|streameast.app|1stream.eu|buffstreams.app
+@@/playlists/*/play*.jpeg$xmlhttprequest,stealth=referrer
 @@/pop.js|$domain=pornve.com
 @@/prebid-js-$domain=mytvsuper.com|tvb.com|tvbs.com.tw
 @@/prebid.$script,domain=mingpao.com
@@ -9899,7 +9900,6 @@
 @@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=diep.io
 @@||c.amazon-adsystem.com/aax2/apstag.js?_=$domain=skill4ltu.eu
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=atozmath.com
-@@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=client.falixnodes.net
 @@||c.amazon-adsystem.com/bao-csm/aps-comm/aps_csm.js$domain=falixnodes.net
 @@||c.betrad.com/geo/ba.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|montrealgazette.com|saveur.com
 @@||c.betrad.com/geo/h1.js$domain=video.corriere.it
@@ -17955,6 +17955,7 @@
 @@||quoteacademy.com^$generichide
 @@||r.*.tk/*/xox_*/jpeg$stealth=referrer
 @@||r.bat.bing.com/?ld=test$domain=mcappx.com
+@@||r.linksprf.com/*/redirect?
 @@||r.linksprf.com/v$domain=pepper.pl
 @@||r.trojmiasto.pl/adxmlrpc/json.php
 @@||r10s.jp/com/img/home/t.gif?$domain=24.rakuten.co.jp
