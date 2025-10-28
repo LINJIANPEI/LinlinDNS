@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-28 15:11:57（北京时间）
+! Version: 2025-10-28 16:15:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64909
+! Total count: 64919
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10888,7 +10888,6 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intuitcdn.net/libs/*/track-star.min.js$script,domain=turbotax.intuit.com
@@ -23949,7 +23948,10 @@ caoporn.com##.jw-icon-replay-contain > div[style^="display: block; position: abs
 caoporn.com##div[style="height:160px; max-width:100%; width:945px; padding-top:10px; margin:0px auto;"]
 capage.in##.single_post table[style="height: 100%; width: 100%; border-collapse: collapse;"]
 capcut.com##.lv_cookie_banner-wrapper
+capetownetc.com###buzzzoo
+capetownetc.com###sidebar-secondary
 capetownetc.com###stb-overlay
+capetownetc.com##.entry-content > blockquote:has(a[href^="https://daddysdeals.co.za/"])
 capetownetc.com##.stb-center-container
 capetownmagazine.com###top-leader-wrapper
 capgroup.com###sb-container
@@ -24258,6 +24260,7 @@ celebjihad.com##.crp_related td[align="center"] > a[href^="https://www.celebjiha
 celebjihad.com##a[href="https://www.celebjihad.com/widget/out/cjcams.php"]
 celebjihad.com##a[href^="https://go.admjmp.com/"]
 celebjihad.com##iframe[src^="https://go.bshrdr.com/"]
+celebmafia.com##.wp-caption > div[class]:has(> .adsbyvli)
 celebritygalls.com##.articles-container > article.card[style="border:5px solid black;"]
 celebritymovieblog.com,interracial-girls.com###custom_html-2
 celebritynakeds.com##.show-over-1000.async-reklam-placeholder
@@ -29500,6 +29503,7 @@ emarketer.com##.skyContainer
 emathhelp.net$$script[tag-content="if (window.TextDecoder)return(new window.TextDecoder(""utf-8"")).decode("][max-length="30000"]
 embed.dugout.com##div[data-testid="keep-watching"]
 embed.listcorp.com##a[href^="https://j.moomoo.com/"]
+embedplayer1.xyz,brbeast.com,jeniusplay.com##.pppx
 embedrise.com,mangoporn.net,mangoporn.co,xxxmoviestream.xyz,watchpornfree.info,streamporn.pw###overlays
 embedsports.me##.bg-dark.position-absolute
 embedy.me###video_iframe+div
@@ -46767,8 +46771,10 @@ nxing.cn##.main:nth-child(-n+6)
 nxm.ro##.footer_notif
 nxnba.com##.bootom-fixed
 nxtbookmedia.com###gdpr-pop
+ny.iss.one,nyaa.digital,nyaa.ink##.servers-cost-money1
 nyaa.land##.panel-body > div.row > div.col-md-5 ~ div[style="padding:5px"] > b
 nyaa.land##a[href^="https://privateiptvaccess.com"]
+nyaa.land##body > div[style]:not([class]):has(> a[href="https://www.privateiptvaccess.to"])
 nyan.ax##.gdpr
 nybooks.com##.ad-spacing
 nybooks.com##.toast-cta
@@ -61541,6 +61547,10 @@ weatherpro.com##.large-leaderboard
 weatherpro.com##.list-city-ad
 weatherpro.com##.medium-rectangle-wrapper-2
 weatherzone.com.au##.publift-ad-wrapper
+weatherzone.com.au##div[class*=" "][height="270px"]
+weatherzone.com.au##div[class*=" "][height="74px"]
+weatherzone.com.au##main > div[class*=" "]:has(> div[class*="img_"])
+weatherzone.com.au##section[class*=" "]:has(> div[class*="img_"])
 web-axioma.ru##.confform
 web-capture.net,mirror.co.uk,cryptoslate.com##.partner
 web-dev-qa-db-fra.com##.adn-ar
