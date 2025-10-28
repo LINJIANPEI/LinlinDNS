@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-28 07:10:18（北京时间）
+! Version: 2025-10-28 08:47:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64907
+! Total count: 64911
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4240,6 +4240,7 @@
 @@/player_ads.html$domain=85po.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
 @@/playlist.m3u8$stealth=referrer|ip
 @@/playlist/*caxi.m3u8$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|streameast.app|1stream.eu|buffstreams.app
+@@/playlists/*/play*.jpeg$xmlhttprequest,stealth=referrer
 @@/pop.js|$domain=pornve.com
 @@/prebid-js-$domain=mytvsuper.com|tvb.com|tvbs.com.tw
 @@/prebid.$script,domain=mingpao.com
@@ -14556,6 +14557,7 @@
 @@||r.*.awstrack.me^
 @@||r.*.tk/*/xox_*/jpeg$stealth=referrer
 @@||r.bat.bing.com/?ld=test$domain=mcappx.com
+@@||r.linksprf.com/*/redirect?
 @@||r.linksprf.com/v$domain=pepper.pl
 @@||r.trojmiasto.pl/adxmlrpc/json.php
 @@||r10s.jp/com/img/home/t.gif?$domain=24.rakuten.co.jp
@@ -22103,6 +22105,7 @@ bhol.co.il##div[id^="interstitial-caption-"]
 bi-girl.net,itbusiness.com.ua,wikirise.com,mejoresmodsminecraft.site,freebulksmsonline.com,freemagazines.top,ubuntudde.com,mettablog.com,secondlifetranslations.com,charbelnemnom.com,lowkeytech.com,pinayvids.com##[style*="cursor:"][style*="position: fixed;"][style*="z-index:"]
 bia2.xyz###adbd
 bialettikave.hu###popup_hatter, #popop_cont
+bialystokonline.pl##.alien-container
 bialystokonline.pl##.firma.premium
 biancodipuro.ch##.ngcookiewarning
 bianity.net##.bn-lg-sidebar
@@ -49197,6 +49200,7 @@ pollunit.com##.owl-carousel:has(.carousel-ad)
 polomarket.pl##body > div:not([id]):not([class])
 polsatbox.pl##.modal-overlay
 polsatsport.pl##.fl-right > a[href^="http://redefineadpl.hit.gemius.pl/hitredir/"][href*="url=https://ad.doubleclick.net/ddm/trackclk/"]
+polski-tenis.pl,bizpolis.pl,wyniki.pl,telepolis.pl##.banner
 polskicaravaning.pl###myModalpol
 polskieradio.pl##.rodo, .footer ~ .termsOfUse, .rodo-modal
 polskieradio.pl##a[class^="banner-item"]
