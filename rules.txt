@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-29 07:10:40（北京时间）
+! Version: 2025-10-29 08:52:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64923
+! Total count: 64932
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7585,6 +7585,7 @@
 @@||codare.fun^$generichide
 @@||code.adsales.snidigital.com/conf/ads-config.js^$domain=foodnetwork.com
 @@||code.jquery.com/*.min.js$domain=audioz.download
+@@||code.jquery.com^$domain=clickndownload.*|clicknupload.*
 @@||code.sms.mob.com^
 @@||codec.kyiv.ua^$generichide
 @@||codehelppro.com^$generichide
@@ -8153,6 +8154,7 @@
 @@||ditiezu.com^*.php$subdocument
 @@||divany.hu^$generichide
 @@||dixonsretail.*.omtrdc.net/b/ss/dixonsrtcurrysprod/*/REDIR/*currys.co.uk*api.dcg-search.co*curry
+@@||diyanet.gov.tr^$stealth=dpi
 @@||diysideas.com^$generichide
 @@||dizhi99.com^$generichide
 @@||dizipal*.com^$generichide
@@ -16938,6 +16940,7 @@
 @@||u.163.com^
 @@||u.oppomobile.com^
 @@||u1.img.mobile.sina.cn^
+@@||uab.gov.tr^$stealth=dpi
 @@||uaprom.net/image/blank.gif?$image
 @@||ubisoft.com.first-party-js.datadome.co^$script,domain=connect.ubisoft.com
 @@||uc-titans-cn-01.heytapimage.com^
@@ -22463,7 +22466,10 @@ bitdownloader.com,qdownloader.net##.bannera
 bitetheass.com,nitroflare-porn.com##center > noindex
 bitfeed.co##.widget-ads
 bitfineon.com###root ~ div > [class*="StyledLayer"]
+bithub.pl##.entry-content > div.code-block:has(div[data-adid])
 bithub.pl##.oa360_sf_d_container
+bithub.pl##.partner
+bithub.pl##.wpb_wrapper > div.wpb_raw_code:has(> div.wpb_wrapper > div#main_ads_pc)
 bithub.pl##div[class^="clickout-native_"]
 bithub.pl##div[data-adid] > a[target="_blank"] > img
 bitkub.com##.home__ads
@@ -40175,6 +40181,7 @@ krajskelisty.cz###wpBannerPlace
 krajskelisty.cz##.advert
 krajskelisty.cz##div[id^="ra-r2b2-code"]
 kraken.com##.kraken-cookie-warning, .kraken-cookie-warning.show
+krakenfiles.com##.native-banner
 krakow.pl##body > #ci[style*="fixed"], body > #kuki, body > #mainCookie
 kramerguitars.com###cookieModal
 krankenkassen-direkt.de###cbanner
@@ -46426,6 +46433,7 @@ nnm-club-me.appspot.com,nnm-club.lib,nnm-club.me,nnm-club.ws,nnmclub.to,nontorcl
 nnn.ng###hfgad1
 nnn.ng###hfgad2
 nnn.ng##body ins.adsbygoogle
+no-limits.biz##.p-body-sidebar > p:has(> a[href^="https://www.plugrush.com/"])
 nobistex.com###sw_cookies
 noblessetranslations.com,4allprograms.me##body > script[src] + div[id][class*=" "]:not([id*="_"])
 nobugin.com##.td-a-rec
@@ -46881,6 +46889,7 @@ obrazkowo.pl##app-list .col-md-10 > .ng-star-inserted > .ng-star-inserted:has(> 
 obrazkowo.pl##body .publiftAd
 observatornews.ro##.outstream-text
 observer.com###top-banner-container
+obserwatorgospodarczy.pl###footer-widgets-container
 obserwatorgospodarczy.pl###tie-wrapper > .stream-item-above-header > a[target="_blank"]
 obserwatorgospodarczy.pl###tie-wrapper > div[style="text-align: center;"] > a:not([href*="obserwatorgospodarczy.pl"]) > img
 obserwatorlogistyczny.pl###tie-wrapper > .stream-item-above-header > a[target="_blank"]
