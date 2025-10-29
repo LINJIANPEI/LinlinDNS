@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-29 23:13:03（北京时间）
+! Version: 2025-10-30 00:14:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64936
+! Total count: 64939
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4841,6 +4841,7 @@
 @@||about.gitlab.cn^
 @@||about.smartnews.com/ja/wp-content/assets/img/advertisers/ad_$~third-party
 @@||abstream.to/embed-$stealth=referrer
+@@||abstream.to^$stealth=useragent
 @@||abt.s3.yandex.net/expjs/latest/exp.js$script,domain=some.porn
 @@||abtest.mistat.xiaomi.com^
 @@||abtest3-misc-lf.zijieapi.com^
@@ -16100,6 +16101,7 @@
 @@||stream4free.live^$generichide
 @@||stream4free.tv^$generichide
 @@||streambox*.xyz/cdn/down/$stealth=referrer,domain=ddizi.im
+@@||streambucket.xyz^$stealth=useragent
 @@||streamingcommunity.$generichide
 @@||streamingcommunity.*/*.js
 @@||streamlive.to^$generichide
@@ -24125,6 +24127,7 @@ caser.es###gdpr-modal > div
 casetify.com##.cookie-option
 caseys.ie###caseys-cookie-modal, .modal-backdrop
 cashbackdeals.it##aside[class^="SideBanners_"]
+cashless.pl##body > div.container:has(> a[href^="https://www.cashless.pl/pliki/"])
 casino.dk###MsgAreaBottom
 casinocosmopol.se###casino-picker-modal
 casinodeparis.fr##.ui-widget, .ui-widget-overlay
