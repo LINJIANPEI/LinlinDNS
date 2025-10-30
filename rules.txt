@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-30 20:21:05（北京时间）
+! Version: 2025-10-30 21:25:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64947
+! Total count: 64953
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4239,7 +4239,9 @@
 @@/owa/service.svc$document
 @@/pic/ad/*$domain=ybjk.com
 @@/player/*$stealth=referrer,domain=ibomma.*
+@@/player/stats.php$domain=85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com
 @@/player/stats.php$domain=85po.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com
+@@/player_ads.html$domain=85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
 @@/player_ads.html$domain=85po.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
 @@/playlist.m3u8$stealth=referrer|ip
 @@/playlist/*caxi.m3u8$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|streameast.app|1stream.eu|buffstreams.app
@@ -8793,6 +8795,7 @@
 @@||faq.viewcard.co.jp^$stealth=dpi
 @@||fast-down.com^$generichide
 @@||fast.fonts.net/jsapi/core/mt.js$script,domain=abeautifuldominion.com|bkmedical.com|eclecticbars.co.uk|gables.com|itsolutions-inc.com|kinsfarmmarket.com|senate.gov
+@@||fastag.kotak.com^$stealth=dpi
 @@||fastcoin.ga^$generichide
 @@||fastconn-api.iot.360.cn^
 @@||fastmail.com^$generichide
@@ -46428,6 +46431,7 @@ nkreport.jp,nknews.jp###wp-footer > #page-top ~ div[id][class]
 nlc.gov.cn###lovexin12xx
 nld.com.vn###BorderMenutop > .bordertopmenuv4
 nlite.it###system-message, #system-messages, #system-message-container
+nltimes.nl##.serve
 nltimes.nl##div[class^="r89-"]
 nmac.to##.adslot_buttom:has(> .adslot_buttom_inner > a[target="_blank"] img)
 nmac.to##.it-ad:not(:has(form.form-search))
@@ -52828,6 +52832,8 @@ seasaltcornwall.co.uk##.global-promotion
 seasonpros.com###cookies
 seasons-dlove.net,gdrivemovies.xyz##body > a[class] + div[id][class*=" "]
 seat.dk##.notify-bar
+seatemperatu.re##.pub-billboard
+seatemperatu.re,coindoo.com,1980-games.com,coleka.com,flash-mp3-player.net,gameslol.net,theportugalnews.com,tolonews.com##.pub
 seatguru.com###comparePrices
 seattlepi.com##.hnpad-Flex1
 seattlepi.com##.hnpad-Inline
