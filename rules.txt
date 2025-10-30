@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-30 23:12:43（北京时间）
+! Version: 2025-10-31 00:14:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 64953
+! Total count: 64957
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2440,7 +2440,6 @@
 194.63.143.61$network
 194.63.143.96$network
 198.23.198.110$network
-1980-games.com,coleka.com,flash-mp3-player.net,gameslol.net,theportugalnews.com,tolonews.com##.pub
 1980-games.com,coleka.com,gameslol.net,theportugalnews.com,tolonews.com##.pub
 199it.com,softwarebrother.com##.adsbygoogle
 199it.com,softwarebrother.com,wholehk.com##.adsbygoogle
@@ -4240,9 +4239,7 @@
 @@/pic/ad/*$domain=ybjk.com
 @@/player/*$stealth=referrer,domain=ibomma.*
 @@/player/stats.php$domain=85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com
-@@/player/stats.php$domain=85po.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com
 @@/player_ads.html$domain=85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
-@@/player_ads.html$domain=85po.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camwhores.*|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to
 @@/playlist.m3u8$stealth=referrer|ip
 @@/playlist/*caxi.m3u8$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|streameast.app|1stream.eu|buffstreams.app
 @@/playlists/*/play*.jpeg$xmlhttprequest,stealth=referrer
@@ -5279,6 +5276,7 @@
 @@||ads.x.com^
 @@||ads.x.com^$popup
 @@||ads.youtube.com^|$domain=technorj.com
+@@||ads.zw.pl/www/delivery/asyncjs.php
 @@||ads2.banaraswap.in^$xmlhttprequest,domain=banaraswap.in
 @@||ads2.contentabc.com/ads?spot_id=$domain=8muses.com,xmlhttprequest
 @@||ads2.opensubtitles.org/*www/delivery/afr.php?
@@ -13303,6 +13301,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hqq.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=htmlsave.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org|hentaicovid.org|gofile.download|cosplay-xxx.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org|hentaicovid.org|gofile.download|cosplay-xxx.com|s-porn.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=iembra2or.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ifate.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=igniel.com
@@ -25605,7 +25604,6 @@ coindesk.com##div[data-module-name="high-impact"]
 coindesk.com,planetfootball.com,se7ensins.com,theboobsblog.com##div[style="height: 250px;"]
 coindix.com###xbanner
 coindoo.com##.banner-tb-wrapper
-coindoo.com##.pub
 coindoo.com##.we-recommend
 coinedition.com###ce-custom-ads
 coinedition.com###ce-custom-ads-footer-sticky
@@ -47584,6 +47582,8 @@ orgasmatrix.com###cookies
 orgosolo.nu.it###CookieDiv
 orgyxxxhub.com###invideo_2
 orgyxxxhub.com###objad
+oricon.co.jp$$script:contains(if(await eval()
+oricon.co.jp$$script[src="html-load.com/loader.min.js"]
 orientalmart.co.uk##.cookies
 origin.com##origin-global-sitestripe
 originalindianporn.com,6japaneseporn.com##.center-place > .bns-place-ob > .bn-place
@@ -59545,6 +59545,8 @@ txxxporn.tube,txxx.me##.jwplayer div.nopop
 txzqw.me##.tac[style="margin-bottom:5px;"]
 ty2016.net##div[class^=bread_]
 tychy.pl##.configMessages
+tydzien.net.pl##.wp-block-kadence-column > div.kt-inside-inner-col figure
+tydzien.net.pl##figure a[target="_blank"] > img
 tyenews.com##div[id^="custom_html-"]
 tyenews.com##div[id^="media_image-"]
 tyenews.com##div[id^="metaslider_widget-"]
@@ -64917,6 +64919,8 @@ zurich.de##.mod-notification-teaser
 zutobi.com##div[class*="ModalCookies"]
 zvono.eu###footer > table
 zvv.ch##.mod_content_infobanner
+zw.pl##.box-ra
+zw.pl##.make-me-sticky
 zwickautourist.de###bauch-binder
 zww.me##.sad
 zww.me##.sp-top-img
