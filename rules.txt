@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-10-31 15:11:51（北京时间）
+! Version: 2025-10-31 16:15:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65662
+! Total count: 65672
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11411,6 +11411,7 @@
 @@||js.tv.itc.cn^
 @@||js.wpadmngr.com/static/adManager.js$domain=poophd.video-src.com
 @@||jsc.adskeeper.co.uk/*/hhkungfu.tv.*.js$domain=hhkungfu.tv
+@@||jsc.adskeeper.com/site/*.js$domain=ranoz.gg
 @@||jscdn.greeter.me/dropgalaxy.onlinehead.js$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|thecubexguide.com|jytechs.in
 @@||jsdelivr.net/combine/npm/$domain=ulifestyle.com.hk
 @@||jsdelivr.net/combine/npm/jquery@3,npm/social-share.js
@@ -20761,6 +20762,7 @@ apkmb.com##.widget-area > aside[id^="text-"]
 apkmb.com##.widget_media_image img[width="300"][height="250"]
 apkmirror.com###ezmobfooter
 apkmirror.com##.advertisement-text
+apkmirror.com##.ains
 apkmirror.com##.ains-apkm_outbrain_ad
 apkmirror.com##.amazon-ad
 apkmirror.com##.ezo_ad
@@ -34554,6 +34556,8 @@ gogaytube.tv,gaymaletube.name,xgaytube.tv,gaysuperman.com##.b-advertisement
 gogetaroomie.com###right-space
 gogetaroomie.com###top-space
 gogetaroomie.com##.left-space
+gogetaroomie.com,snafu-comics.com###right-space
+gogetaroomie.com,snafu-comics.com###top-space
 gogift.com##.iziToast-wrapper
 gogo.mn##.gg_ban_div
 gogoanime2.org##.adsverting
@@ -36585,6 +36589,7 @@ holiday-weather.com##.resp-leaderboard
 holiday-weather.com,omniglot.com,w3schools.com,zerochan.net###skyscraper
 holidayfactory.co.za###polgpr
 holidu.de###cookie-selector
+holistic.news###page > .container:has(> ins.adsbygoogle)
 hollandbikeshop.com##.cookies-sec
 hollandse-hoogte.nl###ctr-cookies
 hollisterco.com##.flash-message[data-flash-message-group-id*="cookie"]
@@ -42090,11 +42095,13 @@ livehindustan.com##.ads
 livehindustan.com##.prlads
 livejasmin.com##.container_banner
 livejournal.com##.allbanners
+livejournal.com##.js--ad-tip-container
 livejournal.com##.mdspost-aside__item--banner
 livejournal.com##.pagewide-wrapper
 livejournal.com##.xhtml_banner
 livejournal.com##[class*="categories"] + div[class]:has(> [class*="-commercial"])
 livejournal.com##[style$="width: 300px;"]
+livejournal.com##div[class*="-close"]:has(a[href*="tired=ads"])
 livelaw.in###news_on_exit
 livelaw.in###sidebar-wrapper div[class*="trending_news_row"]:has(> div[id^="trending_"] > .ad_unit_wrapper)
 livelaw.in##body .ad_unit_wrapper_main
@@ -54900,6 +54907,7 @@ smzy.com##.down-jisu
 smzy.com##.u-gs-btn2
 sna3talaflam.com##.adsbygoogle
 snacknation.com###sidebar > .widget a[target="_blank"] > img
+snafu-comics.com###bottom-space
 snapedit.app###modal
 snapnsfw.com##.adw
 snaptik.app###modal-vignette
@@ -55863,6 +55871,7 @@ spotify.com###main > .Root > section, .mh-message-bar
 spotifydown.com###__next > div.semi-transparent:has(> div > ins.adsbygoogle)
 spotifydown.com##.semi-transparent
 spotlight.pl##.statement-container
+spottedlublin.pl###rotate-group-2
 spottedskarzysko.pl##p[align="center"] > a[target="_blank"][rel="noopener noreferrer"] > img
 spottedskarzysko.pl##p[style="text-align: center;"] > a[rel="noopener noreferrer"] > img
 spoutible.com##.cookie-alert-modal, .modal-backdrop
@@ -65186,6 +65195,7 @@ zerohedge.com##.native
 zerohedge.com##.placement-header-container
 zerohedge.com##.rectangle-large
 zerohedge.com##[class^="PromoButton"]
+zerohedge.com##a[class^="endorsement"]
 zerohedge.com##aside[id^="sidebar"][class^="placement"]
 zerohedge.com##div[class*="AxosPromoCalc_axosWidget"]
 zerohedge.com##div[class^="Advert_"]
