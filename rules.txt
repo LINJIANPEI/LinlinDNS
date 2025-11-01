@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-01 20:18:30（北京时间）
+! Version: 2025-11-01 21:17:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65681
+! Total count: 65687
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -35,7 +35,6 @@
 *$denyallow=ucloud140.xyz,domain=jiuse.io,image
 *$denyallow=xpxs.net|jiasucdn.com,domain=xpxs.net,xmlhttprequest,image,script
 *$doc,removeparam=/^(sp|ut|fro?)m(_|\b)/
-*$document,csp=script-src-attr 'none',domain=cruciverba.it|motscroises.fr|palabr.as|word-grabber.com|wort-suchen.de|lamire.jp|picrew.me|badmouth1.com|jin115.com|gloria.hr|etnews.com|sportsseoul.com|hoyme.jp|heraldm.com|tbsradio.jp
 *$document,csp=script-src-attr 'none',domain=cruciverba.it|motscroises.fr|palabr.as|word-grabber.com|wort-suchen.de|lamire.jp|picrew.me|badmouth1.com|jin115.com|gloria.hr|etnews.com|sportsseoul.com|hoyme.jp|heraldm.com|tbsradio.jp|nextchessmove.com
 *$image,redirect-rule=1x1.gif,domain=youku.com
 *$image,redirect-rule=32x32-transparent.png,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|thecubexguide.com|jytechs.in
@@ -8205,6 +8204,7 @@
 @@||desu.shikimori.one^$stealth=dpi
 @@||detail.meizu.com^
 @@||detail.zol.com.cn^
+@@||detectportal.firefox.com^$document
 @@||deteql.net/recommend/provision?$xmlhttprequest,domain=t-fashion.jp
 @@||detik.com/urchin.js
 @@||detutorial.com^$generichide
@@ -8613,6 +8613,7 @@
 @@||ebank.bsstarozreby.pl^$stealth=dpi
 @@||ebanking.meezanbank.com/AmbitRetailFrontEnd/js/fingerprint2.min.js$~third-party
 @@||ebates.com^$generichide
+@@||ebay.*/*promote$xmlhttprequest,elemhide,jsinject,extension
 @@||ebay.*/bfl/placebid/$xmlhttprequest,elemhide,jsinject,extension
 @@||ebay.*/makeOffer/$document,subdocument
 @@||ebay.*/sio/buyer/reviewSellersOffer/$xmlhttprequest,elemhide,jsinject,extension
@@ -13679,6 +13680,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gameissue05.blogspot.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gametop.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=garoetpos.com|ketubanjiwa.com|ayatoon.com|dbsysupgrade.com|jorgemoncada.com|hollywoodsmagazine.com|anicosplay.net|ewybory.eu|flipreview.com|hiphopa.net|pngtosvg.com|loksado.com|ecoursefree.com|daemon-hentai.com|yigeplus.xyz|techycoder.com|arasindakifark.net|kitguru.net|gsmxt.com|technicalatg.xyz|freetutorialsdownload.online|toolss.net|adonisfansub.com|talkjarvis.com|satcesc.com|livenewsof.com|pinayvids.com|hardcoregames.ca|pasend.cam|unityassetcollection.com|crypto-fun-faucet.de|samuraiscan.com|cgtips.org|dailyvideoreports.net|codesnail.com|ma-x.org|sitarchive.com|codingshiksha.com|graphicux.com|w3layouts.com|musike.net|windowsmatters.com|avoiderrors.com|gatcha.org|4horlover.com|topnewsshow.com|3dzip.org|ovagames.com|lewdsenpai.com|mitsmits.com|openculture.com|udemycoursesfree.me|apfelpatient.de|agorablog.it|r3ndy.com|mylivewallpapers.com|e-sanatatea.ro|latestjav.com|sakpot.com|wallpaperwaifu.com|news.claimfey.com|mangacrab.com|baddiehub.com|asuralightnovel.com|javboys.com|joyplot.com|pastlinkvn.com|rpclip.com|doibihar.org|31mag.nl|poapan.xyz|guiadaengenharia.com|magesypro.com|magesy.blog|magesy.eu|magesy.eu|leviatanscans.com|fastssh.com|igay69.com|kodlamamerkezi.com|novelasligera.com|descargaspcpro.net|bbsnews.co.id|4allprograms.me|gaypornhot.com|javgay.com|boyfuck.me|javboys.tv|smarttips.in|lascimmiapensa.com|powerup-gaming.com|infortechno.com|watchfacebook.com|domhouse.it|aquiyahorajuegos.net|informatykit.it|gourmetsupremacy.com|meganei.net|ivfauthority.com|kuyhaa-me.com|dwgshare.com|hypando.com.br|witcherhour.com|filekuy.com|authentisch-italienisch-kochen.de|kuyhaa.me|hentaigasm.com|kuyhaa-me.site|nxbrew.net|carteldemanhwas.com|donghuaworld.com|historyofroyalwomen.com|gamekazi.com|kinotehnik.net|topmanhuas.org
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=garoetpos.com|ketubanjiwa.com|ayatoon.com|dbsysupgrade.com|jorgemoncada.com|hollywoodsmagazine.com|anicosplay.net|ewybory.eu|flipreview.com|hiphopa.net|pngtosvg.com|loksado.com|ecoursefree.com|daemon-hentai.com|yigeplus.xyz|techycoder.com|arasindakifark.net|kitguru.net|gsmxt.com|technicalatg.xyz|freetutorialsdownload.online|toolss.net|adonisfansub.com|talkjarvis.com|satcesc.com|livenewsof.com|pinayvids.com|hardcoregames.ca|pasend.cam|unityassetcollection.com|crypto-fun-faucet.de|samuraiscan.com|cgtips.org|dailyvideoreports.net|codesnail.com|ma-x.org|sitarchive.com|codingshiksha.com|graphicux.com|w3layouts.com|musike.net|windowsmatters.com|avoiderrors.com|gatcha.org|4horlover.com|topnewsshow.com|3dzip.org|ovagames.com|lewdsenpai.com|mitsmits.com|openculture.com|udemycoursesfree.me|apfelpatient.de|agorablog.it|r3ndy.com|mylivewallpapers.com|e-sanatatea.ro|latestjav.com|sakpot.com|wallpaperwaifu.com|news.claimfey.com|mangacrab.com|baddiehub.com|asuralightnovel.com|javboys.com|joyplot.com|pastlinkvn.com|rpclip.com|doibihar.org|31mag.nl|poapan.xyz|guiadaengenharia.com|magesypro.com|magesy.blog|magesy.eu|magesy.eu|leviatanscans.com|fastssh.com|igay69.com|kodlamamerkezi.com|novelasligera.com|descargaspcpro.net|bbsnews.co.id|4allprograms.me|gaypornhot.com|javgay.com|boyfuck.me|javboys.tv|smarttips.in|lascimmiapensa.com|powerup-gaming.com|infortechno.com|watchfacebook.com|domhouse.it|aquiyahorajuegos.net|informatykit.it|gourmetsupremacy.com|meganei.net|ivfauthority.com|kuyhaa-me.com|dwgshare.com|hypando.com.br|witcherhour.com|filekuy.com|authentisch-italienisch-kochen.de|kuyhaa.me|hentaigasm.com|kuyhaa-me.site|nxbrew.net|carteldemanhwas.com|donghuaworld.com|historyofroyalwomen.com|gamekazi.com|kinotehnik.net|topmanhuas.org|nirvanamanga.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gaypornhdfree.com|dvdgayonline.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gearingcommander.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=getautoclicker.com
@@ -14306,6 +14308,7 @@
 @@||passport.yandex.ru^$stealth=3p-cookie
 @@||passport.youdao.com^
 @@||passport.yuewen.com^
+@@||passwordsleakcheck-pa.googleapis.com$stealth=dpi
 @@||pastehub.net/assets/ads/advertisement.js$domain=searchresults.cc
 @@||pastemod.com^$generichide
 @@||pastlinkvn.com^$generichide
@@ -27312,6 +27315,7 @@ cssmoban.com##.page-banner
 cssociety.org##.icd-overlay
 cssqt.com###mainbox > a
 cssreference.io###alo
+csst.at##a[href^="https://trk.clash.gg/"]
 csstats.gg###faceit-banner
 csu.de##.mod-layer
 csub.edu###consent-box
@@ -59679,6 +59683,8 @@ trucoswindows.com##.modalCookies
 trueachievements.com###sidebar > .side-unit
 trueachievements.com###topad-wrap
 trueachievements.com##.ad-wrap
+trueachievements.com##.dyn-lb
+trueachievements.com##.pw_player_w
 trueachievements.com##.vr-auction
 trueachievements.com,truesteamachievements.com,truetrophies.com###mpu-2
 trueachievements.com,truesteamachievements.com,truetrophies.com###mpu-3
