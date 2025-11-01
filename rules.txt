@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-01 07:10:58（北京时间）
+! Version: 2025-11-01 08:53:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65679
+! Total count: 65681
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8313,6 +8313,7 @@
 @@||dlh.net/ajax/keyassign.php?$elemhide
 @@||dlh.net/public/js/advertisement.js
 @@||dlh.net^$script,subdocument,domain=dlh.net
+@@||dlhd.dad^$genericblock
 @@||dlkoo.cc/down/*/*.htm$popup
 @@||dlkoo.cc/down/Copydown1
 @@||dlkoo.cc/down/Copyright.js
@@ -60388,6 +60389,7 @@ udn.com###simplemodal-overlay
 udn.com###udn_scupio_responsive_wrapper
 udn.com##.ad_mask
 udn.com##.bg-banner--link
+udn.com##.ec-section
 udn.com##.inline-ads
 udn.com##.mag_topic > a[href][target="_blank"] > img[src^="https://p.udn.com.tw/upf/"][src*="_banners/Special/"]
 udn.com##.mag_topic > a[href^="https://goo.gl/"][target="_blank"] > img[src*="_banners/BD/"]
