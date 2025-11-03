@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-03 15:12:41（北京时间）
+! Version: 2025-11-03 16:16:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65702
+! Total count: 65704
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8116,6 +8116,7 @@
 @@||datacrate18.xyz/file2/$stealth=referrer
 @@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|espn.com|goindigo.in|hungryroot.com|usa.experian.com
 @@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|hungryroot.com|usa.experian.com
+@@||datadome.garena.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=auth.garena.com
 @@||datadome.monster.com.first-party-js.datadome.co^$script,domain=monster.com
 @@||dataprajna.net^
 @@||datashare.spravazeleznic.cz/szdc-apps/theme-szdc/js/cms_ads.js
@@ -29672,6 +29673,7 @@ eastmoney.com##div[style^="position: fixed; z-index:"]
 eastmoney.com##iframe[src*=".eastmoney.com/banner/"]
 eastmoney.com##iframe[src^="//fund.eastmoney.com/trade/hqb_hq.html"]
 eastmoney.com##iframe[src^="//same.eastmoney.com/"]
+eastmoney.com##p > a[href*="acttg.eastmoney.com"]
 easy2boot.xyz##.wp-block-image:has(> a[href="https://kon-boot.com"])
 easy2boot.xyz##.wp-block-image:has(> a[href^="https://www.amazon.com/iodd/"])
 easyai.tech##.sidebar-inner > .widget_media_image:nth-child(n+2)
