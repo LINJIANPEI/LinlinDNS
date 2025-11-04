@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-04 20:22:46（北京时间）
+! Version: 2025-11-04 21:28:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65719
+! Total count: 65722
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10919,6 +10919,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=10play.com.au|10.com.au
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=247sports.com|4029tv.com|bet.com|bloomberg.co.jp|bloomberg.com|cbc.ca|cbssports.com|cc.com|clickorlando.com|digi24.ro|gbnews.com|history.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mynbc5.com|paramountplus.com|s.yimg.jp|sbs.com.au|tv.rakuten.co.jp|vk.sportsbull.jp|wapt.com|watchcharge.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|worldsurfleague.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=247sports.com|4029tv.com|bet.com|bloomberg.co.jp|bloomberg.com|cbc.ca|cbssports.com|cc.com|clickorlando.com|digi24.ro|gbnews.com|history.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mynbc5.com|paramountplus.com|s.yimg.jp|sbs.com.au|tv.rakuten.co.jp|vk.sportsbull.jp|wapt.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|worldsurfleague.com|wpbf.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=aetv.com|mylifetime.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=bloomberg.com,stealth=referrer
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=btvplus.bg
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=cbs.com|paramountplus.com|history.com
@@ -19479,6 +19480,7 @@ aerotime.aero,nightdreambabe.com##.banner_place
 aeroweb.cz##.topboard
 aetherhub.com###SponsoredStream
 aetherhub.com##div[id^="zone"][class^="mx-auto"]
+aetv.com,mylifetime.com,history.com##div[class^="Component-adBreak-"]
 afaqs.com###mast_container
 afar.com##.Page-header-hat
 afar.com##.preloaded_lightbox[style*="overflow"]
@@ -22859,6 +22861,7 @@ bicyclette-verte.fr##div[class*="cookies"]
 biddit.be##app-cookies-notification-v2
 bielawa.pl###wiadomosccookie
 bielskiedrogi.pl##.blok-r
+bielskiedrogi.pl##div[data-ads-id]
 bielsko.info,bielsko.tv##.blok-r-wrapper
 bien-dans-mon-train.com##.cookiecall
 bien.hu##.lapozos_728x90_cikk_elott
@@ -27800,7 +27803,6 @@ dama.lu##.tool-box
 dambros.it###dambros-data
 damensein.com##.welcome-modal
 damianharriscycles.co.uk###info-message
-damoang.net##.da-adsense-container
 damon624.pixnet.net##.article-content-inner > p:has(> span > a[href] > ins.adsbygoogle)
 damon624.pixnet.net##aside[data-advertisement="true"]
 damota.me##.nes-container:has(.adsbygoogle)
@@ -34574,6 +34576,7 @@ godbolt.org###ces
 godisageek.com###custom_html-4
 godisageek.com###text-11
 godlikeproductions.com##.rightpanel_ipad > div:has(> center > [data-type="_mgwidget"])
+godownloader.com##.thanks
 goetel.de##.cookieControl
 gofile.io###adsGoogle
 gofile.io##div[id^="adsGoogle"]
