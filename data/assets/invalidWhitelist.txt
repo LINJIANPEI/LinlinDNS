@@ -70,6 +70,7 @@
 ! Apple addendum
 ! CN - Perfect World: https://help.steamchina.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
 ! Copyright (c) Digac.cc
+! Copyright (c) 周木木
 ! DNS ad blocking whitelist for AdGuard Home
 ! Description: Is it my Whitelist [use at your own risk no support or help will be done]
 ! Description: Whitelist to resolve false positives introduced by filters.txt
@@ -77,6 +78,7 @@
 ! Epic Games
 ! Expires: 1 days
 ! Expires: 12 Hours
+! Expires: 20991231
 ! Global: https: //help.steampowered.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
 ! Google
 ! Google addendum
@@ -97,23 +99,28 @@
 ! Title: GOODBYEADS
 ! Title: LWJ's white list
 ! Title: MMotti AdguardHome - whitelist.txt
+! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14066
+! Total count: 14068
 ! Total lines: 137
+! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-11-04 20:53:33（北京时间）
+! Version: 2025-11-05 09:55:14（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
 ! ads.raidrive.com^
+! https://gitee.com/zjqz/ad-guard-home-dns
 ! https://github.com/etotakeo/AdGuardDNSPassList
 ! https://github.com/unknownFalleN/xiaomi-dns-blocklist
 ! https://learn.microsoft.com/zh-cn/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide
 ! https://support.apple.com/zh-cn/HT210060
 ! https://support.google.com/chrome/a/answer/6334001?hl=zh-Hans
 ! https://www.epicgames.com/help/zh-CN/c5719357686683/c5719341353627/epic-games-fortnite-a5720352654107#whitelist
+! url=https://gitee.com/zjqz/ad-guard-home-dns/raw/master/white-list
 ! url=https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List
 ! version=2021031702
+! version=20250612092442
 ! ⠄⠄⠃⢰⣿⣿⣿⣿⣿⣿⡿⣿⣿⠴⠋⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⡟⢀⣾⠄⠄
 ! ⠄⠄⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⢁⣴⣿⣿⣿⣿⠗⠄⠄⣿⣿⠄⠄
 ! ⠄⠄⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣾⣿⣿⡿⠟⠄⠄
@@ -153,11 +160,46 @@
 ! 谷歌
 ! 送礼使用规则
 !*********************************************************
+!--------2345-------
+!--------360--------
 !--------Adult (Gay) used--------
 !--------BT/PT--------
 !--------Commonly used--------
+!--------The List End--------
 !--------WeChat public account platform--------
 !--------customize--------
+!--------vivo-------
+!--------个推--------
+!--------乐播投屏-------
+!--------京东--------
+!--------其他-------
+!--------哔哩哔哩-------
+!--------字节跳动--------
+!--------小米--------
+!--------工具网站-------
+!--------微软-包含Windows 诊断数据域名-------
+!--------快手-------
+!--------手机遥控器-------
+!--------新浪--------
+!--------新网-------
+!--------本地--------
+!--------深信服--------
+!--------电视相关-------
+!--------百度--------
+!--------移动--------
+!--------统计-------
+!--------网易-------
+!--------腾讯-------
+!--------苹果-------
+!--------谷歌--------
+!--------豆瓣--------
+!--------迅游手游-------
+!--------迅雷-------
+!--------金山--------
+!--------阿里--------
+!--------飞智--------
+!--------魅族--------
+!----UMS 统一移动基础服务平台----
 !Bootcdn
 !B站弹幕
 !JD试用商品详情
@@ -1513,6 +1555,7 @@
 @@.jpg#$domain=huhupan.com
 @@.jpg#$domain=ktmx.pro
 @@.jpg#$domain=marketmovers.it
+@@.js?fcd=true$domain=snopes.com
 @@.m3u8$domain=rapid-cloud.co,xmlhttprequest,stealth=referrer
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$stealth=referrer,domain=edgedeliverynetwork.com
@@ -11503,6 +11546,7 @@
 @@||doubleclickbygoogle.com/favicon.ico
 @@||douyucdn.cn^*-share-master/
 @@||dove-cameron.org^$generichide
+@@||dovkembed.pw/livetv/$stealth=referrer
 @@||down.cc/down/js/ad.js
 @@||down.mdiaload.com^$generichide
 @@||downfile.site/fuckadblock.js
@@ -12754,6 +12798,7 @@
 @@||google-analytics.com/analytics.js$domain=shop.kyivstar.ua
 @@||google-analytics.com/analytics.js$domain=shorterall.com
 @@||google-analytics.com/analytics.js$domain=skechers.com.tr
+@@||google-analytics.com/analytics.js$domain=snopes.com
 @@||google-analytics.com/analytics.js$domain=sochiautodrom.ru
 @@||google-analytics.com/analytics.js$domain=society6.com
 @@||google-analytics.com/analytics.js$domain=square-enix-games.com
@@ -13113,6 +13158,7 @@
 @@||googletagmanager.com/gtag/js?id=$domain=moegirl.org.cn
 @@||googletagmanager.com/gtag/js?id=$domain=rotana.net
 @@||googletagmanager.com/gtag/js?id=$domain=senda.pl
+@@||googletagmanager.com/gtag/js?id=$domain=snopes.com
 @@||googletagmanager.com/gtag/js?id=$domain=thenewsfetcher.com
 @@||googletagmanager.com/gtag/js?id=$domain=view.epageview.com
 @@||googletagmanager.com/gtag/js?id=$xmlhttprequest,domain=darkhub-v4.maxt.church
@@ -16523,7 +16569,7 @@
 @@||p.jwpcdn.com/player/*.js$domain=akwam.*
 @@||p.jwpcdn.com/player/plugins/vast/v*/vast.js$domain=player.cartoonth12.com
 @@||p.sky.com^$domain=wowtv.de,stealth=referrer
-@@||p.typekit.net/p.css$stylesheet,domain=athleticpropulsionlabs.com|browserstack.com|bungie.net|business.untappd.com|petsafe.com|robertsspaceindustries.com
+@@||p.typekit.net/p.css$stylesheet,domain=athleticpropulsionlabs.com|browserstack.com|bungie.net|business.untappd.com|getty.edu|petsafe.com|robertsspaceindustries.com
 @@||p11.techlab-cdn.com^$domain=wizzair.com
 @@||p30download.ir^$stealth=dpi
 @@||pagead2.googleadservices.com^$domain=sportshub.to
@@ -17320,7 +17366,6 @@
 @@||parcel.app/webtrack.php?$~third-party
 @@||parenting.pl^$generichide
 @@||parhaye.com^$generichide
-@@||parliament.nz/*/stormcaster.js$script,~third-party
 @@||parsely.com/keys/$script,domain=wmmr.com|wrif.com
 @@||partner-api.jobbio.com/channels/data$xmlhttprequest,third-party,domain=jobs.dailymail.com
 @@||partner.googleadservices.com/gpt/pubads_$domain=mlb.com
@@ -20453,7 +20498,6 @@
 @@||userupload.in^$generichide
 @@||usgamer.net/static/scripts/AdsLoad.js
 @@||usgamer.net/static/scripts/SidebarAds.js
-@@||usine-digitale.fr/*/stormcaster.js$script,~third-party
 @@||usplastic.com/js/hawk.js
 @@||ut.pubmatic.com/geo?pubid=$domain=zeenews.india.com
 @@||utorrentgamesps2.blogspot.com^$generichide
