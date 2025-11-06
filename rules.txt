@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-06 07:11:23（北京时间）
+! Version: 2025-11-06 08:51:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65738
+! Total count: 65745
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9672,6 +9672,7 @@
 @@||go.xlirdr.com/api/models/vast$xmlhttprequest
 @@||go4kora.com^$generichide
 @@||goalpro-demo.blogspot.com^$generichide
+@@||goalsport.info^$generichide
 @@||gobits.io^$generichide
 @@||gocomics.com/assets/ad-dependencies-$script,~third-party
 @@||godlikeproductions.com/adblock/js/checks/fingerprint.js$domain=godlikeproductions.com
@@ -15514,6 +15515,7 @@
 @@||sdk.jinrishici.com^
 @@||sdk.live.360.cn^
 @@||sdk.mihoyo.com^
+@@||sdk.mrf.io/statics/marfeel-sdk.js$script,domain=computerhoy.20minutos.es|mundodeportivo.com
 @@||sdk.mrf.io/statics/marfeel-sdk.js$script,domain=mundodeportivo.com
 @@||sdk.open.talk.gepush.com^
 @@||sdk.ptqy.gitv.tv^
@@ -34558,6 +34560,7 @@ goal.pl###header-banner
 goal.pl##.banner
 goalnepal.com##.inner-local-ad
 goalnepal.com##.sticky-footer-ad
+goalsport.info##.card:has(.ad-slot)
 goart.fotor.com###fotorAdWapper
 goart.fotor.com##.goart_ad_btn
 goat.com.au##.container__block--sidebar.col-desktop-5
@@ -40770,6 +40773,8 @@ kohls.com###PMP_monetization_HL
 kohls.com###kmnsponsoredbrand-sponsored_top-anchor
 kohls.com###open-drawer
 kohls.com##.products_grid.sponsored-product
+kohls.com##astro-island[component-export="KmnMarqueeBannerWrapper"]:has(img[alt="Sponsored Banner"])
+kohls.com##div[data-testid^="wallet-wrapper-"]:has(div[class="mt-3 text-xs"])
 kohls.com##li.products_grid:has(p.piq-sponsored)
 koi-company.de##.cmnstr
 koimoi.com###inline_ad
@@ -42444,6 +42449,7 @@ lowendtalk.com##img[width="258"][height="250"]
 lowendtalk.com##img[width="258"][height="70"]
 lowes.com###lws_hp_recommendations_belowimage_1
 lowes.com##.lws_pdp_recommendations_southdeep
+lowes.com##div[data-testid="playwright-gam-carousel-banner"]
 lowfuelmotorsport.com###sksl
 lowfuelmotorsport.com###sksr
 lowfuelmotorsport.com##.ads-stats
@@ -49542,6 +49548,7 @@ pixabay.com##.affil_images[data-ad-impression-id]
 pixabay.com##.carbon-ad
 pixabay.com##.external-media
 pixabay.com##.getty-banner
+pixabay.com##.gettyImagesContainer--7sZnR
 pixabay.com##.message_box
 pixabay.com##.present-g-item
 pixabay.com##.show-gtty-item
