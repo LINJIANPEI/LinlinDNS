@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-06 15:12:01（北京时间）
+! Version: 2025-11-06 16:15:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65746
+! Total count: 65757
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1284,6 +1284,7 @@
 /lmaz-ads-bannesr/*$script
 /log_js_error$ping
 /mads.php$subdocument
+/mai-publisher-ads.js$script
 /mail-stat.airdroid.com/*$image
 /mail-tracking/*$image
 /mail.thermomix.com/i/*$image
@@ -4324,6 +4325,7 @@
 @@/wp-content/themes/*/ads/*/sailthru.js$domain=healthy4pepole.com
 @@/wp-content/themes/ikisifirbirdokuz/match-center.php?id=$stealth=referrer
 @@/wp-content/themes/publisher/*/ads/static/adv/sailthru.js$domain=world2our.com|healthy4pepole.com|bluetechno.net
+@@/wp-content/themes/radio-hub/*.js$domain=tingfm.com
 @@/wp-content/themes/radio-hub/static/js/*.js$domain=tingfm.com
 @@/wp-content/uploads/*$image,stealth=referrer,domain=mangastic.cc
 @@/wp-content/uploads/*$image,stealth=referrer,domain=realmscans.*
@@ -9648,7 +9650,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -9960,7 +9961,9 @@
 @@||gooogle.how^$generichide
 @@||gorillanation.com/js/triggertag.js$domain=playstationlifestyle.net
 @@||gosuslugi.ru^$stealth=dpi
+@@||goto.target.com^
 @@||goto.target.com^|
+@@||goto.walmart.com^
 @@||goto.walmart.com^|
 @@||gotvach.bg^$generichide
 @@||gousfbulls.com/common/templates/dfp/dfp-component-template.html
@@ -11132,7 +11135,6 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
-@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11984,6 +11986,7 @@
 @@||login.sendpulse.com^
 @@||login.sendpulse.com^|
 @@||login.sina.com.cn^
+@@||login.swissid.ch^$stealth=dpi
 @@||login.taobao.com^
 @@||login.uid.me^$domain=ucoz.ru,stealth=3p-cookie
 @@||login.vk.com/?act=openapi$domain=220vk.com,stealth=referrer
@@ -17252,6 +17255,7 @@
 @@||towtooma.net/*/master.m3u8$stealth=referrer
 @@||toy-people.com^$generichide
 @@||toyota.com/recall/static/js/custom/facebookPixel.js$~third-party
+@@||tp-link.com^$stealth=referrer
 @@||tpc.googlesyndication.com/archive/$image,subdocument,xmlhttprequest,domain=adstransparency.google.com
 @@||tpc.googlesyndication.com/archive/sadbundle/$image,domain=tpc.googlesyndication.com
 @@||tpc.googlesyndication.com/pagead/imgad?id=$domain=nbc.com
@@ -22305,6 +22309,7 @@ baomidou.com##.sidebar-content > astro-island
 baomoi.com##.is-ads
 baon.hu,zaol.hu,nool.hu,veol.hu,vaol.hu,feol.hu,duol.hu,szoljon.hu,teol.hu,heol.hu,sonline.hu###eads-super-banner
 baozimh.one,yazhouse8.com##.banners
+baozimh.org##a[href*="g-mh.com"]
 baozimh.org,bzmh.org,g-mh.org,godamh.com,manhuafree.com,sportsplanetmag.com##.adshow
 baptistnews.com,chimpreports.com,collive.com,defence-industry.eu,douglasnow.com,eltecolote.org,ilanganews.co.za,islandecho.co.uk,kbla1580.com,locklab.com,mallorcasunshineradio.com,newsindiatimes.com,runwaygirlnetwork.com,southsideweekly.com,spaceref.com,talkradioeurope.com,theshoesnobblog.com##.a-single
 baracuta.com##.firstvisit
@@ -29877,6 +29882,9 @@ editpad.org##div[style="min-height: 300px;min-width: 300px"]
 editpad.org##div[style="min-width: 300px;min-height: 300px"]
 editpad.org##label[style="font-size: 12px;text-transform: uppercase;"]
 edizioni-gabriele.com##.ig_bottom
+edm.com##.mai-ad-unit-container
+edm.com##.wp-block-group.has-alt-background-color:has(> .wp-block-group__inner-container > .mai-ad-unit-container)
+edm.com##.wp-block-group.has-alt-background-color:has(> .wp-block-group__inner-container > .mai-ad-video)
 edmontonjournal.com##.widget--local-business
 edmtunes.com##div[id^="sticky-footer-div-gpt-ad-"]
 edmtunes.com,fixyourandroid.com,thewincentral.com##.td-g-rec
@@ -50460,6 +50468,9 @@ pornogratisdiario.com,xcafe.com##.bnr
 pornohammer.com##.video_header > div[id^="wa_"]
 pornohans.net##aside:has(.adsbyexoclick)
 pornokeep.com,xxxtubedot.com,enjoyfuck.com,fuckgonzo.com###invideo_2
+pornolovers.net,grabon.in##.promo-banner
+pornolovers.net,hdporner.tv,transvids.tv,vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
+pornolovers.net,vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 pornomovies.com###fist-visit
 pornone.com##.overheaderbanner
 pornone.com##.popbop > div.float-right
