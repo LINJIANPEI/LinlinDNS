@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-06 20:21:26（北京时间）
+! Version: 2025-11-06 21:26:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65757
+! Total count: 65773
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1021,6 +1021,7 @@
 /banners/adv/*$~xmlhttprequest
 /banners/affil/*$image
 /banners/affiliate/*$image
+/beacon?data=$image
 /beaconimages.netflix.net/*$image
 /beardeddragon/armadillo.js$script
 /beardeddragon/drake.js$script
@@ -4326,7 +4327,6 @@
 @@/wp-content/themes/ikisifirbirdokuz/match-center.php?id=$stealth=referrer
 @@/wp-content/themes/publisher/*/ads/static/adv/sailthru.js$domain=world2our.com|healthy4pepole.com|bluetechno.net
 @@/wp-content/themes/radio-hub/*.js$domain=tingfm.com
-@@/wp-content/themes/radio-hub/static/js/*.js$domain=tingfm.com
 @@/wp-content/uploads/*$image,stealth=referrer,domain=mangastic.cc
 @@/wp-content/uploads/*$image,stealth=referrer,domain=realmscans.*
 @@/wp-content/uploads/WP-manga/*$image,stealth=referrer,domain=mangasehri.net
@@ -7337,6 +7337,7 @@
 @@||cdntvn.pl/adscript.js$domain=player.pl
 @@||cdntvn.pl/adscript.js?_=$domain=tvnturbo.pl
 @@||cdnv*.byteblaze.me^$stealth=referrer
+@@||cdnvideo*.shop^$stealth=referrer
 @@||cdnvideo.ru^$stealth
 @@||cdnyauction.buyee.jp^$stealth=referrer
 @@||cdpn.io/*/v*/store?token=$stealth=referrer,domain=codepen.io
@@ -16637,6 +16638,7 @@
 @@||stream.nbcsports.com/assets/page/general/ads.js
 @@||stream.u-p.pw/hls/$stealth=referrer
 @@||stream.voidboost.$stealth=ip
+@@||stream1.store^$stealth=referrer
 @@||stream2watch.org/js/advertisement.js
 @@||stream2watch.ws/js/app.js
 @@||stream4free.live^$generichide
@@ -21223,6 +21225,7 @@ asmag.com.cn###adRightFix
 asmag.com.cn##.adAsMainLeft
 asmhentai.com##.atop
 asmonaco.com##.asm-rgpd-bar
+asmrfreeplayer.fun,mov18plus.cloud,jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,abysscdn.com,player-cdn.com,nazarickol.com##body > #player ~ div[style^="position: fixed;"][style*="z-index:"]
 asna.ru##div[class*="modalCookies"]
 aso.fr##.confidentialite
 asp300.com,asp300.net##.tit01 > a
@@ -21480,6 +21483,8 @@ autocar.co.uk##.block-autocar-ads-lazyloaded-mpu2
 autocar.co.uk##.block-autocar-ads-mpu-flexible1
 autocar.co.uk##.block-autocar-ads-mpu-flexible2
 autocar.co.uk##.block-autocar-ads-mpu1
+autocarindia.com##.mx-auto.h-\[100px\].w-\[320px\]
+autocarindia.com##.mx-auto.h-\[250px\].w-\[300px\]
 autocarindia.com##div[class^="ad-mod-section"]
 autocarpro.in##.skinad
 autocarpro.in##body div[class^="ad-section-"]
@@ -26163,6 +26168,7 @@ cnr.cn,jxcn.cn##.min-news-box
 cnscore.com##.bdbanner
 cnstock.com##.newslist[style="padding: 10px 0px;"]
 cntour2.com##.txtPicAd
+cntraveller.com,wired.co.uk,wired.com##.ad-height-hold
 cntronics.com##.ads970-90
 cntronics.com##.cnt-ads90
 cntv.cn##div[class^="tchmk_"]
@@ -28499,6 +28505,10 @@ digileht.epl.delfi.ee##.pagebreak-banner
 digimanie.cz##.media-envelope > div.box:has(>ins.adsbygoogle)
 digimanie.cz##div[id] center:has(> div[style^="height:"] > div[class^="heureka-affiliate-"])
 digimanie.cz##div[id] div.box:has(> div[style^="height:"] > div[class^="heureka-affiliate-"])
+digimanie.cz,svethardware.cz##.sda-branding
+digimanie.cz,svethardware.cz##.sda-desktop
+digimanie.cz,svethardware.cz##.sda-space
+digimanie.cz,svethardware.cz##.sda-wrapper
 digiminster.com##.alert-info, .alert-warning, .alert-box
 digimobil.es###infocookies2, .modal-backdrop, .modal-cookies-warning, .modal-overlay, .modal-cookies-info
 digimobil.it###sticky-popup
@@ -34945,7 +34955,6 @@ grab.com###gr-cookie-notice-banner
 grab.tc##a[href^="https://youhodler.g2afse.com/click?pid="]
 grabcad.com##[ng-if="model.asense"]
 grabon.in##.go-cstm-bnr
-grabon.in##.promo-banner
 graco.com###alertbox
 gradesfixer.com###warning_popup
 gradientdescent.de##.adds-component
@@ -35867,7 +35876,6 @@ hdporn92.com##div[id^="div_theAd_slider_"]
 hdporn92.com,javflix.net,koreanstreamer.xyz,ofansleaks.com##.happy-header
 hdporncomics.com###sidebar-right > #custom_html-9
 hdporncomics.com###sidebar-right > #text-3
-hdporner.tv,transvids.tv##.footer-margin
 hdpornfree.xxx##.container:has(> iframe[src^="//hdpornfree.xxx/sup/"])
 hdpornvideo.xxx##.lika
 hdr-photographer.com###rn_container
@@ -40612,6 +40620,7 @@ kishoralo.com##div[class*="middle-ad"]
 kishoralo.com##div[class^="blank-m__adslot"]
 kissanime.com.ru###leftside > div[class="full"]
 kissanime.com.ru##.close_ad_button
+kissasian.com.lv##.tab-container > div.tab-content:has(> div[class^="ads_"])
 kisscartoon.info###bar-player > div.countdown
 kisscartoon.info##.offads
 kisscartoon.io##.closeVideoAd
@@ -42549,7 +42558,6 @@ lucidsamples.com###blocksplash
 luciferdonghua.in##.announ
 luciferdonghua.in##div[style="position:absolute;z-index:200;width:100%;height:100%;background:rgba(0,0,0,0.7);"]
 luciferdonghua.in##div[style="width: 100%;text-align: center;display: scroll;position:fixed;bottom: 0;margin: 0 auto;z-index: 103;"]
-luckymodapk.com##.popup-container
 luckyvaper.com##a[href*="&utm_medium=banner"] > img
 ludashi.com##.div_mask
 ludashi.com##.div_text
@@ -44316,6 +44324,7 @@ miles-mobility.com##div[data-testid="cookie-consent"]
 milf300.com##.nopadding > div[style="width: 300px; height: 250px;"]
 milf300.com##.nopadding > div[style="width: 300px;height: 250px;"]
 milf300.com##main > .text-center[style="height: 100px;"]
+milfcaps.com,leakslove.com##.header-ad-all
 milffox.com###advertising
 milffox.com###native
 milffox.com###player_container + div.p-ig
@@ -49461,6 +49470,7 @@ pimpandhost.com##a[href="/site/cams"]
 pimpandhost.com##a[href^="https://www.myfreecams.com/"][href*="&track="]
 pimpandhost.com##div[class*="aaablock"] > div.iframe-container
 pimpandhost.com,pornone.com##.iframe-container
+pimpbunny.com##.pb-befor-similiar-carousel
 pimpbunny.com##.pb-header > div.pb-header-top-left-menu
 pimpbunny.com##.pb-header > div.pb-header-top-right-menu > a[href][rel="noopener"][target="_blank"]
 pimpbunny.com##div[class^="pb-menu-"] > a[rel="sponsored noopener"][target="_blank"]
@@ -50386,6 +50396,7 @@ pornhub.com,pornhub.org,pornhub.net##.realsex
 pornhub.com,pornhub.org,pornhub.net##.sectionWrapper > .videos[id] > li[class^="sniper"]:not(.videoblock):not(.videobox):not([id^="playlist_"])
 pornhub.com,pornhub.org,pornhub.net##.video-wrapper > div#player~div[class$=" hd clear"]
 pornhub.com,pornhub.org,pornhub.net##a[href^="https://weedmaps.com"]
+pornhub.com,pornhub.org,pornhub.net##header .reportUrl:has(> a#headerUpgradePremiumBtn[target="_blank"])
 pornhub.com,pornhub.org,pornhub.net##iframe[style*="height: 60px;"]
 pornhub.com,pornhub.org,pornhub.net##iframe[width="315"]
 pornhub.com,pornhub.org,pornhub.net##iframe[width="950"]
@@ -50448,6 +50459,9 @@ pornmd.com###hiding_div
 pornmd.com##.suggestions-box
 pornmega.com##.list-videos > center > a[href*="&utm_campaign="]
 pornmeka.com##.spot_wrapper
+pornmium.com,etherealgames.com,androidphone.fr,esports.net,movilforum.com,apkmb.com,snat.co.uk,coursesxpert.com,thefappeningblog.com,nimtools.com,javhoho.com###text-2
+pornmium.com,familystrokesvid.com,erotic-hentai.com,erogarga.com,javhdporn.net,eyerollorgasm.com###tracking-url
+pornmium.com,mlsbd.shop,esports.net,10hd.xyz,vivahentai4u.net,dmerharyana.org,learncomputerscienceonline.com,animationxpress.com,coursesxpert.com,javhoho.com,thefappeningblog.com,aagmaal.com,playsexgames.xxx###text-3
 porno-usa.com##img[alt="chaturbate"]
 porno247.net###spot-player
 porno247.net##.top-spot
@@ -50490,12 +50504,16 @@ pornotube.xxx,xxxx.se,vidsvidsvids.com,freefuckvidz.com,hardcoreinhd.com,hdporns
 pornova.org##.head-t
 pornoxo.com###invideo_wrapper
 pornoxo.com##.js-toggle-content-wrapper:has(> .adblock)
+pornoxo.com##.navmenu > li:has(> a[href^="https://tsyndicate.com/"])
+pornoxo.com##.navmenu > li:has(> a[href^="https://www.pornoxo.com/link/out/"])
 pornoxo.com##.new-videoplayer-overlay
 pornoxo.com##.site-center-wrapper > div[style]:not([class]):has(> a.blinker)
+pornoxo.com##.wgt-container
 pornoxo.com##a[href^="https://www.pornoxo.com/link/out/"]
 pornoxo.com##div[class*="advi"]
 pornoxo.com##li.media-item.no-popup
 pornoxo.com##li:has(> .ads-stripchat-link)
+pornoxo.com,japan-whores.com,camwhoria.com,camwhores.ru.com,xxx-sex.fun##.fh-line
 pornpapa.com##.js-mob-popup
 pornpaw.com##div[style="height:250px;display:block;"]
 pornpics.app##main > ul.pics:first-child > li
@@ -61544,8 +61562,6 @@ vipleague.pw,vipbox.im##div.text-center > button[data-open="_blank"]
 vipleague.st##.ratio > div.text-success
 vipleague.tv###warningdiv + div[id][style]
 vipleague.tv##iframe[name="player_iframe"] + #overlay
-vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
-vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
 viprow.me##.embed-responsive > .position-absolute
 viprow.net##button.btn[data-open="_blank"]
 viprow.net##button[data-lnguri*="banner"]

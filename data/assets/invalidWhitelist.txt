@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14075
+! Total count: 14079
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-11-06 09:55:03（北京时间）
+! Version: 2025-11-06 20:50:50（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -638,6 +638,7 @@
 #@@||v*-novelapp.fqnovelvod.com^
 #AD推荐的游戏介绍加载
 #API调用
+#APP 评论区图片
 #APP下载页面
 #APP下载页面布局
 #APP扫码后登陆页面加载
@@ -684,6 +685,7 @@
 #OPPO开放平台
 #OPPO账号相关
 #OxygenOS系统游戏空间
+#PC版抖音封面
 #PC端哔哩UWP进入视频时调用的官方接口
 #PC网页端右上角天气图片
 #PC网页端搜索首页LOGO
@@ -1906,7 +1908,7 @@
 @@/wp-content/themes/*/ads/*/sailthru.js$domain=healthy4pepole.com
 @@/wp-content/themes/ikisifirbirdokuz/match-center.php?id=$stealth=referrer
 @@/wp-content/themes/publisher/*/ads/static/adv/sailthru.js$domain=world2our.com|healthy4pepole.com|bluetechno.net
-@@/wp-content/themes/radio-hub/static/js/*.js$domain=tingfm.com
+@@/wp-content/themes/radio-hub/*.js$domain=tingfm.com
 @@/wp-content/uploads/*$image,stealth=referrer,domain=mangastic.cc
 @@/wp-content/uploads/*$image,stealth=referrer,domain=realmscans.*
 @@/wp-content/uploads/WP-manga/*$image,stealth=referrer,domain=mangasehri.net
@@ -10569,6 +10571,7 @@
 @@||cdntvn.pl/adscript.js$domain=player.pl
 @@||cdntvn.pl/adscript.js?_=$domain=tvnturbo.pl
 @@||cdnv*.byteblaze.me^$stealth=referrer
+@@||cdnvideo*.shop^$stealth=referrer
 @@||cdnvideo.ru^$stealth
 @@||cdnyauction.buyee.jp^$stealth=referrer
 @@||cdpn.io/*/v*/store?token=$stealth=referrer,domain=codepen.io
@@ -15361,6 +15364,7 @@
 @@||login.mobywatel.gov.pl^$stealth
 @@||login.nvgs.nvidia.com^$stealth
 @@||login.nvidia.com^$stealth=3p-auth
+@@||login.swissid.ch^$stealth=dpi
 @@||login.uid.me^$domain=ucoz.ru,stealth=3p-cookie
 @@||login.vk.com/?act=openapi$domain=220vk.com,stealth=referrer
 @@||login.wmtransfer.com^$stealth=3p-cookie
@@ -19555,6 +19559,7 @@
 @@||stream.nbcsports.com/assets/page/general/ads.js
 @@||stream.u-p.pw/hls/$stealth=referrer
 @@||stream.voidboost.$stealth=ip
+@@||stream1.store^$stealth=referrer
 @@||stream2watch.org/js/advertisement.js
 @@||stream2watch.ws/js/app.js
 @@||stream4free.live^$generichide
@@ -20121,6 +20126,7 @@
 @@||towtooma.net/*/master.m3u8$stealth=referrer
 @@||toy-people.com^$generichide
 @@||toyota.com/recall/static/js/custom/facebookPixel.js$~third-party
+@@||tp-link.com^$stealth=referrer
 @@||tpc.googlesyndication.com/archive/$image,subdocument,xmlhttprequest,domain=adstransparency.google.com
 @@||tpc.googlesyndication.com/archive/sadbundle/$image,domain=tpc.googlesyndication.com
 @@||tpc.googlesyndication.com/pagead/imgad?id=$domain=nbc.com
