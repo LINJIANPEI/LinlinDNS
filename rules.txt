@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-06 23:12:57（北京时间）
+! Version: 2025-11-07 00:14:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65773
+! Total count: 65769
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -767,7 +767,9 @@
 /^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
 /^https:\/\/[a-z0-9]+\.[a-z0-9]+\.[a-z]{2,3}:\d{1,6}\/[a-z]{1,3}\/\d+\?is_not=/$all
 /^https:\/\/[a-z0-9]+\.[a-z0-9]+\.[a-z]{2,3}:\d{1,6}\/bug\?i=\d+$/
+/^https:\/\/[a-z]{3,4}\.[a-z]{10,13}\.com\/loader\.min\.js$/$script,third-party,match-case,header=etag:/^W\/"[0-9a-f]{32}-\d{13}"$/
 /^https:\/\/[a-z]{6,13}\.(cloud|xyz)\/[A-Za-z0-9_-]{48}[A-Z]{3}$/$document
+/^https:\/\/d[0-9a-z]{12,13}\.cloudfront\.net\/loader\.min\.js$/$script,third-party,match-case,header=etag:/^W\/"[0-9a-f]{32}"$/
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$script,third-party,match-case,header=link:/adsco\.re\/>;rel=preconnect/
 /^https?:\/\/(.+?\.)?videogamesblogger\.com\/wp-content\/uploads\/.*[a-zA-Z0-9]{8,}\.*/$badfilter
 /^https?:\/\/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/.*(\?|&)__cpo=aHR0c/$replace=/__Cpn.prototype.showAds = true;/__Cpn.prototype.showAds = false;/,document,domain=/^\d{1\,3}\.\d{1\,3}\.\d{1\,3}\.\d{1\,3}\$/
@@ -23223,6 +23225,7 @@ bithub.pl##.entry-content > div.code-block:has(div[data-adid])
 bithub.pl##.oa360_sf_d_container
 bithub.pl##.partner
 bithub.pl##.wpb_wrapper > div.wpb_raw_code:has(> div.wpb_wrapper > div#main_ads_pc)
+bithub.pl##body > .code-block:has(> #sticky-banner)
 bithub.pl##div[class^="clickout-native_"]
 bithub.pl##div[data-adid] > a[target="_blank"] > img
 bitkub.com##.home__ads
@@ -30761,7 +30764,6 @@ etest8.com###gads1
 etest8.com##.subtop2right
 etherealgames.com###widgets-wrap-after-content
 etherealgames.com###widgets-wrap-before-content
-etherealgames.com,androidphone.fr,esports.net,movilforum.com,apkmb.com,snat.co.uk,coursesxpert.com,thefappeningblog.com,nimtools.com,javhoho.com###text-2
 etherealgames.com,phoenixnap.com,apkdlmod.com,freecoursesites.net,courseforfree.net,javhoho.com,playsexgames.xxx###text-6
 ethereumprice.org##.partner-highlight
 ethereumprice.org##.zxc-msg
@@ -31261,7 +31263,6 @@ familyporn.tv##.media_spot_holder
 familyporn.tv##.row > div.col-last:has(> div.player-adverts)
 familyporn.tv##.textlink
 familyporn.tv,mywebcamsluts.com,transhero.com##.side_spot
-familystrokesvid.com,erotic-hentai.com,erogarga.com,javhdporn.net,eyerollorgasm.com###tracking-url
 familystylefood.com##.email-highlight
 familytreenow.com###ftn_detail_left_side_organic
 familytreenow.com##.ftn_detail_mid_one
@@ -38543,6 +38544,7 @@ investing.com##div[class*="AdBillboard_"]
 investing.com##div[class*="adBlock"]
 investing.com##div[class*="ad_"]
 investing.com##div[class*="overlay_overlay"]
+investing.com##div[class^="article_"] > div > div.mt-3:has(> u > a[id^="article-ad-disclosure-"])
 investing.com##div[class^="outbrain_outbrain-wrapper_"]
 investing.com##div[data-test="ad-slot-visible"]
 investingnews.com##div[id^="inn_sidebar_"]
@@ -39346,7 +39348,6 @@ japan-whores.com##.vp-info
 japan-whores.com##aside[style="padding: 5px 13px 5px 5px;"]
 japan-whores.com##body > center:has(> div.spot)
 japan-whores.com##nav > div.item.header_link
-japan-whores.com,camwhoria.com,camwhores.ru.com,xxx-sex.fun##.fh-line
 japan-whores.com,redfans.org,ryuugames.com,biqle.org,shemaleporn.xxx##a[href^="https://theporndude.com/"]
 japanese-sex-porn.com##.bierlien > .lieviev:first-child + .lieviev > .bovie > .goagil > .title
 japanese-sex-porn.com##.lieviev > .ohuayo
@@ -41532,7 +41533,6 @@ leakgallery.com##a[href^="https://undress.app"]
 leakgallery.com##app-header-ads
 leaklinks.com##a[href="http://missingtoofff.com/"]
 leaklinks.com,yourbittorrent2.com##iframe[src^="//a.adtng.com/"]
-leakslove.com##.header-ad-all
 learn-cpp.org##[href^="http://www.spoj.com/"]
 learn-cpp.org##[href^="https://codingforkids.io"]
 learn-french-free-with-stories.weebly.com###header-top
@@ -44555,7 +44555,6 @@ mlbstreams.me##iframe ~ div[class="h-100 position-absolute w-100 bg-light bg-opa
 mlexmarketinsight.com##.banner-message-cpopup
 mlsbd.shop##.notice-board
 mlsbd.shop##.srzads
-mlsbd.shop,esports.net,10hd.xyz,vivahentai4u.net,dmerharyana.org,learncomputerscienceonline.com,animationxpress.com,coursesxpert.com,javhoho.com,thefappeningblog.com,aagmaal.com,playsexgames.xxx###text-3
 mlssoccer.com##.mls-o-adv-container
 mm-cg.com###ArticlesEx_box
 mm-cg.com###ioshowAD
@@ -45134,7 +45133,6 @@ mousecity.com##div[style="margin: 15px 0;"] > div[style^="float: left; width: 72
 mousqueton.eu##cookie
 mouthshut.com###ads_customheader_dvRightGads
 mov18plus.cloud##div[style*="height:100%;width:100%"] > a[target="_blank"]
-mov18plus.cloud,jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,abysscdn.com,player-cdn.com,nazarickol.com##body > #player ~ div[style^="position: fixed;"][style*="z-index:"]
 moveforwardpt.com###stickyMessage
 mover.uz###oframeplayer > [class][style^="display: block"]
 movie-censorship.com##a[href*="/out.php?"]
@@ -56754,8 +56752,6 @@ sveip.no##.kake_wrap
 svensktnaringsliv.se###warning
 svetandroida.cz##.bg-center[class*="img/ads.png"]
 svetandroida.cz##.sveta-target[data-sveta-trackid]:has(> .sveta-adlabel)
-svethardware.cz##.skyscraper
-svethardware.cz##div[data-rab*="svethardware.cz/article.jsp"]
 svetmobilne.cz###main > article ~ .art-bottom
 svetmobilne.cz###main > article ~ .art-producer
 svetmobilne.cz##.content > center > div[style="height:270px;"]:only-child
@@ -58356,6 +58352,7 @@ thepostmillennial.com##.revcontent-slot
 thepostmillennial.com##.surfsharkcontent
 thepostmillennial.com,iflscience.com##div[class^="AdChoiceContainer"]
 thepresetsroom.com##.elementor-loop-container > div[data-elementor-type="loop-item"]:has(.adsbygoogle)
+thepresident.gr##.in_read_dfp
 theprodkeys.com###adb
 theproducenews.com##div[id*="-gamwadvertisement-"]
 theproducenews.com,kaoruhana.com,marinetraffic.live,governmentjobvacancies.com,biharkhabar.co,resizepixel.com,tradingeconomics.com,netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com,link.postearn.io##.ad-container:not(#style_important)
@@ -63063,7 +63060,6 @@ wionews.com##.ads-box-d90-m300
 wionews.com##body .posrelativebox
 wionews.com##div[class^="ads_adsBlock_"]
 wionews.com,hiphopza.com,gplinks.co,icutlink.com##p[style="text-align: center;"] > a[target="_blank"] > img
-wired.co.uk,wired.com##.ad-height-hold
 wired.com###veil
 wired.com##.MobileProductCardOuter-kMqsSf
 wired.com##.ad-component--box
