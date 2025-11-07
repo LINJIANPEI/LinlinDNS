@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-07 20:20:54（北京时间）
+! Version: 2025-11-07 21:22:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65784
+! Total count: 65792
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4561,6 +4561,7 @@
 @@||*ad*.ksyungslb.com^
 @@||*hubst.guru/uploads/$stealth=referrer
 @@||*m.chenzhongtech.com^
+@@||*mh.online/*.webp$stealth=referrer
 @@||*optout$domain=smartadserver.com
 @@||*optout$domain=youronlinechoices.com
 @@||*status$domain=youronlinechoices.com
@@ -32316,6 +32317,12 @@ fontenayenscenes.fr###cnil, .cnil, #CNIL
 fontesk.com##.postlist > .postlist-col:has(> aside > .textwidget > .feed-ads)
 fontfreak.com###sticky-popup
 fontke.com##.index-adver
+fontspace.com##.ad-lsky
+fontspace.com##.ad-rsky
+fontspace.com##.font-container:has(> .text-center[height] > div[style^="min-height:"] > #fontspace_leaderboard_atf)
+fontspace.com##.font-container:has(> .text-center[height] > div[style^="min-height:"] > div[id^="fontspace_incontent_"])
+fontspace.com##.text-center[height]:has(> div[style^="min-height:"] > #fontspace_leaderboard_atf)
+fontspace.com##.text-center[height]:has(> div[style^="min-height:"] > div[id^="fontspace_incontent_"])
 fontsquirrel.com##.pgAdWrapper
 fontyukle.net##.reklam_alani
 foobar2000.org##.db_link
@@ -51320,7 +51327,6 @@ pushsquare.com###content > .article-billboard:has(> div[data-dfp-id])
 pushsquare.com###page > .inset:not(.content-wrapper):has(> .insert > div[data-dfp-id])
 pushsquare.com###page-sidebar > .insert:has(> div[data-dfp-id])
 pushsquare.com##.dgp-consent
-pushsquare.com##.insert
 pushsquare.com##body .insert
 pushsquare.com##div[id^="rcjsload"]
 pushsquare.com##span:has-text(or Subscribe)
@@ -53768,6 +53774,7 @@ sen360.sn##.alert-dismissible
 send-anywhere.com###gpt-container
 send.cm##.df-example
 send.cz##.cookie-ok
+send2video.com###banners
 sendasmile.de##.consentmodal
 sendvid.com###ftr
 sendvid.com###video-js-video > a[href="javascript:void(0)"][style*="z-index: 99999"]
@@ -56271,6 +56278,7 @@ stereogum.com##.footer-ad-holder
 stereogum.com##.leaderboard_top-placeholder
 stereogum.com##.sm-widget-ad
 stereogum.com##.zergnet-holder
+sterham.net$$script:contains(isDocReady())
 steroid.com##.header_right
 steroid.com##[href*="anabolics.com"]
 sterrenoptv.nl##body > div[class^="app"]
