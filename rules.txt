@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-07 15:11:59（北京时间）
+! Version: 2025-11-07 16:16:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65780
+! Total count: 65784
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9654,6 +9654,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -9965,9 +9966,7 @@
 @@||gooogle.how^$generichide
 @@||gorillanation.com/js/triggertag.js$domain=playstationlifestyle.net
 @@||gosuslugi.ru^$stealth=dpi
-@@||goto.target.com^
 @@||goto.target.com^|
-@@||goto.walmart.com^
 @@||goto.walmart.com^|
 @@||gotvach.bg^$generichide
 @@||gousfbulls.com/common/templates/dfp/dfp-component-template.html
@@ -11140,6 +11139,7 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
+@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -16087,7 +16087,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -33501,6 +33500,7 @@ gamemonetize.co##div[id^="imaContainer"]
 gamemonetize.video###displayAds
 gamemonetize.video###promo
 gamenguide.com##.mleft > div > div.product-box1
+gamepadla.com###sliderBlock:has(> .relative > .sliderBlock > .ads)
 gamepedia.com##body div#content > div#atflb
 gamepedia.com##body div#content > div#btflb
 gamepedia.com##body div#siderail > div#atfmrec
@@ -48077,7 +48077,10 @@ online.pubhtml5.com##.ph5---banner---container
 online.sberbank.ru##footer > div > div + div
 online24.pt##.clm
 online2pdf.com###privacy_msg
+online2pdf.com##.ad_box_outercontainer
+online2pdf.com##.header > table.logo_box > tbody > tr > td:not([class]):has(> div > .ad_box_outercontainer)
 online2pdf.com##div[class*="adbox_"]
+online2pdf.com##table.main_table > tbody > tr > td[id]:has(> div > .ad_box_outercontainer)
 onlinebarcodereader.com##.fadein-wrap
 onlineconverter.com##div[class^="d"] > div[class^="d"]:has(> ins.adsbygoogle)
 onlinecourse24.com##.tl-topromote
@@ -51318,6 +51321,7 @@ pushsquare.com###page > .inset:not(.content-wrapper):has(> .insert > div[data-df
 pushsquare.com###page-sidebar > .insert:has(> div[data-dfp-id])
 pushsquare.com##.dgp-consent
 pushsquare.com##.insert
+pushsquare.com##body .insert
 pushsquare.com##div[id^="rcjsload"]
 pushsquare.com##span:has-text(or Subscribe)
 pushsquare.com,nintendolife.com##.google-mc
