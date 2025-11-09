@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-09 12:13:38（北京时间）
+! Version: 2025-11-09 13:11:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65832
+! Total count: 65835
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8169,6 +8169,7 @@
 @@||dcms.1688.com^
 @@||dcode.fr/static/ad/index_ad_service.js
 @@||dcode.fr^$generichide
+@@||dd.auspost.com.au/tags.js$script,~third-party
 @@||dd.blackhawknetwork.com.first-party-js.datadome.co^$domain=redeem.rewardlink.com
 @@||dd.myapp.com^
 @@||dd.wizzair.com.first-party-js.datadome.co^$domain=wizzair.com
@@ -23385,9 +23386,11 @@ bleedingcool.com,heatmap.news,jamaicaobserver.com###bottom_leaderboard
 bleedingcool.com,jamaicaobserver.com,pastemagazine.com###top_leaderboard
 bleepingcomputer.com###after_dl
 bleepingcomputer.com###bc-home-news-main-wrap > li:has(> div > a[href^="https://www.bleepingcomputer.com/offer/deals/"])
+bleepingcomputer.com###bc-home-news-main-wrap > li:has(> div > a[rel="sponsored nofollow"])
 bleepingcomputer.com###ips_Posts > .post_block:has(div.apb)
 bleepingcomputer.com###pinned
 bleepingcomputer.com##.articleBody > div[style^="width:"]:not([class]):has(> a[target="_blank"])
+bleepingcomputer.com##.bc_guide
 bleepingcomputer.com##.bc_right_sidebar > .bc_guide:has(> ul > li > a.spon_res)
 bleepingcomputer.com##.bc_right_sidebar > div[align="center"] > a[target="_blank"] > img
 bleepingcomputer.com##.cz-post-comment-wrapp + .cz-related-article-wrapp:has(> .adsbygoogle)
