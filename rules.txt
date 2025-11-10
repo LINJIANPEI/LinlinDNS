@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-10 23:13:09（北京时间）
+! Version: 2025-11-11 00:14:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65935
+! Total count: 65936
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9688,6 +9688,7 @@
 @@||go.kr^$stealth=dpi
 @@||go.onelink.me/*?pid=
 @@||go.redirectingat.com/*&url=$domain=forums.redflagdeals.com
+@@||go.redirectingat.com^
 @@||go.redirectingat.com^$document
 @@||go.redirectingat.com^|
 @@||go.scorptec.com.au^
@@ -13555,7 +13556,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl_*.js$domain=sznlink.xyz
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl_with_ama_fy2021.js$domain=b2bhint.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1025kiss.com|1027kord.com|1037theloon.com|103gbfrocks.com|103kkcn.com|1057crushfm.com|1057thehawk.com|1057thexrocks.com|1061evansville.com|1063cowboycountry.com|1063thebuzz.com|1075zoofm.com|1079ishot.com|929nin.com|929thebull.com|943thepoint.com|943thex.com|963theblaze.com|96xrocks.com|973rivercountry.com|973thedawg.com|975kgkl.com|979kickfm.com|97rockonline.com|983thesnake.com|98country.com|999ktdy.com|999thepoint.com|banana1015.com|bigfrog104.com|blakefm.com|bozemanskissfm.com|catcountry1073.com|classicrock1051.com|club937.com|gator995.com|highway989.com|k945.com|k96fm.com|k99.com|katsfm.com|kbat.com|kctr.com|keanradio.com|keyj.com|keyw.com|kezj.com|kffm.com|kfmx.com|kfox95.com|kicks105.com|kisscasper.com|kisselpaso.com|kissfm969.com|kixs.com|kkcb.com|kkyr.com|klaq.com|klaw.com|klubtejano.com|kmhk.com|knue.com|kqbr.com|kqvt.com|kxkx.com|kygl.com|kyssfm.com|lonestar1023.com|mix108.com|mix925abilene.com|mix931fm.com|mix949.com|my1035.com|mychannel957.com|mycountry955.com|mykisscountry937.com|power1029noco.com|power959.com|powerpeoria.com|q103albany.com|q1077.com|river967.com|rock967online.com|sojo1049.com|us103.com|wbkr.com|wbnq.com|wgna.com|wgrd.com|wkdq.com|wyrk.com|xlcountry.com|y95country.com|z94.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=123multihub.one
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=123multihub.one|whentostream.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1cloudfile.com|koramaup.com|bowfile.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1shortlink.com
@@ -14004,6 +14004,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tsubasa.im
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tunein.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tutcourse.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tvappapk.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tw-calc.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=twcc.fr
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ufacw.com
@@ -17486,6 +17487,7 @@
 @@||tv99.tv^$generichide
 @@||tva1.sinaimg.cn^
 @@||tvapp.hpplay.cn^
+@@||tvappapk.com^$generichide
 @@||tvarticles.org^$generichide
 @@||tvax1.sinaimg.cn^
 @@||tvax2.sinaimg.cn^
@@ -20371,6 +20373,7 @@ anandtech.com###taboola-mid-article
 anandtech.com##.jw-reset
 anandtech.com,sciencefocus.com##.jwplayer
 ananvod.com##.rbPicAll
+anchoreth.com,katfile.cloud,spider-solitaire-game.com##div[id^="banner"]
 ancient-origins.net###ao-article-outbrain
 ancient-origins.net###ao-sidebar-outbrain
 ancient-origins.net###block-block-49
@@ -29871,7 +29874,6 @@ ebony8.com##span[id*="Native-Ad"]
 ebony8.com,lesbian8.com,maturetubehere.com###player_add
 ebony8.com,maturetubehere.com##.pignr
 ebony8.com,sortporn.com,freeporn8.com,amateur8.com,maturetubehere.com##.item.pignr
-ebony8.com,sortporn.com,freeporn8.com,maturetubehere.com##.is-av
 ebook3000.biz##.swal2-fade
 ebookbb.com##body > a[rel="nofollow"][onclick]
 ebookfriendly.com###ecmr
@@ -31235,7 +31237,6 @@ f2movies.to,cineb.rs,himovies.sx##.block_area > div[class][style="width: 100%; p
 f2movies.to,moviesjoy.to##.news-iframe
 f95zone.to###topNotice
 f95zone.to##.node:has(> .node-body > .node-main > .node-title > a[href^="/link-forums/"][href*="-slut."])
-f95zone.to##.node:not(.node--forum):has( a[data-xf-init])
 f95zone.to##.offCanvasMenu-linkHolder > .offCanvasMenu-link[target="_blank"]
 f95zone.to##.p-nav-list .p-navEl-link[target="_blank"]
 f95zone.to##.samAlignCenter
@@ -32981,7 +32982,6 @@ freepikpsd.com##.sf-sidebar-wrapper
 freeporn.info##.alfa_promo_parent
 freeporn.info##h4[style="text-align: right;margin-bottom: 0.25rem;"]
 freeporn247.org##.text-adv
-freeporn8.com##.toble
 freeporn8.com,amateur8.com,sortporn.com,bigtitslust.com##.calibro
 freepornhq.xxx##.aside-itempage-col
 freepornhq.xxx##.item-tr-col > center
@@ -33935,6 +33935,12 @@ gazeta.pl##.o-section__adform
 gazeta.pl##.offers__wrapper > .sliderr--offers
 gazeta.pl##.serviceLogo__additionalElements:has(> .serviceLogo__partner)
 gazeta.pl##section ~ .newspapers
+gazetaolsztynska.pl##.adv
+gazetaolsztynska.pl##.grid__ad
+gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,magazynnaszczycie.pl,palukimogilno.pl,zycie.pl##.grid__ad
+gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.adv
+gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
+gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,kulisy.net##.custom-html-box:has(> .box__container:only-child > div:only-child > p:only-child)
 gazetapraca.pl###overlayJS
 gazetaprawna.pl##.contentStreamFactory
 gazetaprawna.pl##.infor-ad
@@ -36037,7 +36043,6 @@ hdzog.tube##.content > div:not([class]) > div.content-block ~ div[class]:not(.co
 hdzog.tube##.pagination + div[class]:last-of-type
 hdzog.tube##.video-page__left > div.video-page__player + div[class]
 hdzog.tube##.video-page__row > div:not([class*="video"])
-hdzog.tube,hdzog.com##.suggestions
 hdzone.org##a[style*="fixed"]
 he-games.com###he_banner_ad
 he-games.com###he_bottom_ad
@@ -39635,7 +39640,6 @@ javrank.com##.home-featured-ad
 javraveclub.com,javrave.club##.leader_banner
 javrom.com##.div-relative
 javrookies.com,javzh.com,sakurajav.com,sakuravrjav.com###isLatest
-javseen.com,neowin.net##.footer-banner
 javsex.vip##.prefix-player-promo-col
 javshujin.com,pussycatxx.com,taradinhos.com##.under-player-ad
 javsister.com###footer-widgets
@@ -43223,7 +43227,9 @@ magesy.pro##.fuckGitHUB_blackoverlay
 magesy.pro##.fuckGitHUB_content
 magesy.pro,magesy.blog###adb
 magesypro.com##.adsbygoogle
+magesypro.com,magesy.blog,magesy.eu###adBlockModal
 magesypro.com,magesy.blog,magesy.eu###adb
+magesypro.com,magesy.blog,magesy.eu###adblock-overlay
 magesypro.com,magesy.blog,magesy.eu##div[id][class^="popup"][class$="wrap"][style]
 maggi.com.my##.agreebox, .transparent
 magic.gg###primary-area main ~ div, #primary-area article ~ div
@@ -44456,7 +44462,6 @@ milffox.com###side_content:has(> div.con > div[class$="_banner"])
 milffox.com###side_content:has(div.bpalka_banner)
 milffox.com###thumbs:has(> div.con > ul > li > a[href^="https://faphouse.com/"])
 milffox.com###thumbs:has(> div.con > ul > script#fapcash-videos)
-milffox.com##.inp__wrapper
 milffox.com##.signup
 milffox.com##div[class^="bpalka"]
 milffox.com,definebabe.com##.fp-ui > div[style^="position: absolute; inset: 0px; overflow: hidden;"]:not([class])
@@ -44845,7 +44850,6 @@ mod18.com##.epcl-banner
 mod18.com##img[width="728px"][height="90px"]
 mod1s.com##.stuAd
 modaco.com##li[data-blocktitle="Custom Blocks"] a > img
-modapk48.com,felizmodapk.com,4horlover.com,willcycle.com,pinoyalbums.com,samuraiscan.org,magiskmanager.com,infortechno.com,powerup-gaming.com,lascimmiapensa.com,wanderertl130.id,davescomputertips.com,movies4u.network,sociologicamente.it,textfonts.net,ketubanjiwa.com,ubitennis.com,gaypornhdfree.com,gourmetscans.net,openculture.com##div[id$="-blanket"]
 modapkvn.com,apkmodvn.com###adBlock
 modcombo.com##.txt-ads
 modd.io##.ads-card-block
@@ -50618,7 +50622,6 @@ pornohammer.com##.video_header > div[id^="wa_"]
 pornohans.net##aside:has(.adsbyexoclick)
 pornokeep.com,xxxtubedot.com,enjoyfuck.com,fuckgonzo.com###invideo_2
 pornolovers.net,grabon.in##.promo-banner
-pornolovers.net,hdporner.tv,transvids.tv,vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
 pornolovers.net,vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 pornomovies.com###fist-visit
 pornone.com##.overheaderbanner
@@ -50780,7 +50783,6 @@ porsche.com##.pocs-legal-disclaimer
 porsche.pl###cookies-modal
 porschebank.at##.statisticsOptBox
 portable.easylife.tw##div.googleplus,div#ddr
-portable4pc.com##div[class^="mdpDeblocker-"]
 portableapps.com##.ez-sidebar-wall
 portableapps.com##.field-item > ins.adsbygoogle + script + h2
 portableapps.com##.field-item > ins.adsbygoogle + script + h2 + p
@@ -60044,7 +60046,6 @@ tube8.com##div[class] > input:first-child[type="hidden"][value="false"]+div
 tube8.com$$script[tag-content="loadPopUnder"][min-length="100000"][max-length="200000"]
 tube8.com,tube8.es,tube8.fr##.adsbytrafficjunky
 tube8.com,tube8.es,tube8.fr##.col-3-lg.col-4-md.col-4
-tube8.com,youporn.com##div:has(> ins.adsbytrafficjunky)
 tube8.es,tube8.fr##video[autoplay]
 tube8.net,tube8.es,tube8.com,tube8.fr###pb_template
 tube8.net,tube8.es,tube8.com,tube8.fr###result_container_fake
