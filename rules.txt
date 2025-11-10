@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-10 15:13:04（北京时间）
+! Version: 2025-11-10 16:17:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65905
+! Total count: 65911
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5484,6 +5484,7 @@
 @@||airplaydirect.com/openx/www/images/$image
 @@||airportinfo.live/images/ads.gif
 @@||aisandbox-pa.googleapis.com/v1:checkAppAvailability$stealth=referrer
+@@||aisandbox-pa.googleapis.com^$stealth=3p-auth
 @@||aisite.wejianzhan.com^
 @@||aisubtitle.hdslb.com^
 @@||aixifan.com/acfun-H5/public/script/sensorsdata.
@@ -9670,6 +9671,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -16105,7 +16107,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -37322,6 +37323,7 @@ hypershort.com##main > center.linkcontain > button
 hypersunday.com###menu-who
 hypestat.com##.b-error
 hypestat.com##.sem_banner
+hypestat.com,techbloogs.com,tutwuri.id,lokerwfh.net,dz4up.com##div[style="text-align: center;"] > a[target="_blank"] > img
 hyphenation24.com,gematsu.com,videogameschronicle.com,kongregate.com,wikihow.com,gamermatters.com##.adcontainer
 hypnose-raum.com##.blueline-content-popup
 hypnotube.com##.top-ban-row
@@ -40449,6 +40451,7 @@ katestube.com,sleazyneasy.com,vikiporn.com##.after_adv
 katestube.com,sleazyneasy.com,vikiporn.com,wankoz.com##.advertising
 katfile.cloud,katfile.com##div[style="position: fixed; inset: 0px; display: flex; z-index: 99999; flex-direction: column; justify-content: center; align-items: center;"]
 katfile.cloud,katfile.com,jav.guru,analyticsinsight.net,rlsbb.ru,slutsounds.com,theboobsblog.com##p > a[target="_blank"] > img
+katfile.cloud,spider-solitaire-game.com##div[id^="banner"]
 kathimerini.com.cy##.ban_300x250
 kathimerini.com.cy##.ban_hor_d
 kathimerini.com.cy##.catfish_ad
@@ -53413,6 +53416,8 @@ sarapbabe.com##a.has-text-danger
 saratogian.com##.dfm-featured-bottom-flex-container
 sarayanews.com##[class^="adsSpacer"]
 sarayanews.com##div[class^="bestaAds_"]
+sarna.net###p-banner-top-b
+sarna.net,theproducenews.com,kaoruhana.com,marinetraffic.live,governmentjobvacancies.com,biharkhabar.co,resizepixel.com,tradingeconomics.com,netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com,link.postearn.io##.ad-container:not(#style_important)
 sas.sk##.cookiesTextOutter
 sasadown.cn###float_mask
 sashares.co.za###elementor-popup-modal-89385
@@ -57160,6 +57165,7 @@ tangent.co.uk##div[class*="CookieMsg"]
 tango.me###root > div + div:last-child
 tangrenjie.tv##div[class$="_acmsd"] > a[target="_blank"] > img
 tanie-leczenie.pl###notice_bar
+tanjug.rs##.banner
 tanoshiijapanese.com###cnbody #cnfooter:has(> #affiliate)
 tantra-massage-prague.cz##.window_foot
 tanuki.pl###sidebar > div#buttons
