@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-11 23:12:27（北京时间）
+! Version: 2025-11-12 00:14:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 65960
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -18344,6 +18344,7 @@
 @@||wstream.to/embed/$stealth=referrer
 @@||wtradv.market.xiaomi.com^
 @@||wubisheng.net^*.js
+@@||wujek-gadzet.pl^$generichide
 @@||wuolah.com^$generichide
 @@||wuxia.163.com^
 @@||wuxiaworld.com/images/pw/pw_header
@@ -33944,10 +33945,6 @@ gazeta.pl##.serviceLogo__additionalElements:has(> .serviceLogo__partner)
 gazeta.pl##section ~ .newspapers
 gazetaolsztynska.pl##.adv
 gazetaolsztynska.pl##.grid__ad
-gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,magazynnaszczycie.pl,palukimogilno.pl,zycie.pl##.grid__ad
-gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.adv
-gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
-gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,kulisy.net##.custom-html-box:has(> .box__container:only-child > div:only-child > p:only-child)
 gazetapraca.pl###overlayJS
 gazetaprawna.pl##.contentStreamFactory
 gazetaprawna.pl##.infor-ad
@@ -48878,7 +48875,10 @@ paradisehill.cc##.bb-0
 paradisehill.cc##.shapka
 parafarma.be###popup, .popup
 paragon-drivers.com##.b-psg-cookie
+parallaximag.gr###dnews-widget-output
+parallaximag.gr###main-content > div.column:has(> div.nx-banner-wrapper)
 parallaximag.gr##.nx-desktop-ad
+parallaximag.gr##.widget_nx_ads_widget
 parallaximag.gr##div[class*="nx-ad-"]
 parallels.com##.notification.orange
 paramedyk24.pl###notice_bar
@@ -50559,7 +50559,6 @@ pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com##[st
 pornhub.com,redtube.com,tube8.com,tube8.es,tube8.fr,youjizz.com,youporn.com##[style*="blob:"]:not(video)
 pornhub.com,spankbang.com##a[href^="http://ads.trafficjunky.net/"]
 pornhub.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com##img[src*="blob:" i]:not(video)
-pornhub.com,tube8.com,youporn.com##div:has(> ins.adsbytrafficjunky)
 pornicom.com###data > #related_videos_col + #related_videos_col
 pornicom.com###tube_ad_wrap
 pornicom.com##.advertisings
@@ -54965,6 +54964,7 @@ slke.dk###lbmodal-overlay, #lbmodal
 sloanreview.mit.edu##.no-mobile--ad
 slobodnadalmacija.hr##.container--break
 slobodnadalmacija.hr##.item__ad-center
+slotslaunch.com##.casino-link
 slovaknet.sk###leftbar
 slovaknet.sk###right-top
 slovaknet.sk##iframe#ad365
@@ -57007,6 +57007,7 @@ swzz.xyz##div[class^="italianews"]
 sxclub.net##.topAdv
 sxqjdy.com##.gg2
 sxrom.com##.tmk
+sxypix.com##.grid > div.gall_el:has(> div > div[data-cl-spot])
 sxyprn.com##.cbd
 sxyprn.com##.tbd
 sxyprn.com##[href*="/re/"]
@@ -60791,7 +60792,6 @@ umatechnology.org###right-sidebar
 umatechnology.org###rk-exit-modal-bg
 umatechnology.org##.compliance-note
 umatechnology.org##div[class^="rk-"]
-umatechnology.org,3dvf.com,aimhaven.com,comicsuniverse.it,macmagazine.com.br,ubunlog.com,thesportsgrail.com,downtownbellevue.com,androidsis.com,voiceofmotown.com,thethaiger.com,unseki.co.jp,wikibio.us,nexus-games.net,freecoursesite.com,formu1a.uno,toolsai.net,rightrasta.com,kaystls.site,gamertweak.com,mrinformatico.it,pianetacellulare.it,inwepo.co,updoc.site,oliveoiltimes.com,cgmagonline.com,happymag.tv,cpophome.com##.code-block
 umm.nordpoolgroup.com###modal-overlay
 ummid.com##body > .gridContainer > #Header
 umod.org##ins[data-revive-id]
