@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-11 07:10:50（北京时间）
+! Version: 2025-11-11 08:52:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65939
+! Total count: 65946
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -20590,6 +20590,8 @@ animerigel.com##.adflexbox
 animeschedule.net##.custom-consent
 animeshqip.org##.app-section > .row > .col:has(> .list-movie > a[target="_blank"] .ads-embed)
 animeshqip.org##body .ads-sticky:not(#style_important)
+animesuperhero.com##.p-body-sidebar > div.block:has(> div.block-container > div.block-body > div.monumetric-ads)
+animesuperhero.com##.p-body-sidebar > div.block:has(> div.block-container > div.block-body > ins.adsbygoogle)
 animet.net###fbox-background
 animet.net###inx-content
 animet.net###inx-overlay
@@ -34047,6 +34049,7 @@ gearspace.com###site-notice-container > .noticeBit > center > a
 gearspace.com##.bnb--inline
 gearspace.com##.bnb-container
 gearspace.com##.thread__sidebar-ad-container
+gearupbooster.com##.pop-hyperev
 gebag.de###cookie
 gebi1.com###fwin_dialog
 gebi1.com###fwin_dialog_cover
@@ -49592,6 +49595,8 @@ pilipali.cc##.tips-widget-weixin
 pilipili.site##.block-sales
 pilkareczna.com##.sticky > .hidden:has(> .rounded-lg:only-child > .ad-container)
 pilkareczna.com##body > .w-full:has(> .w-full:only-child > .adsbygoogle)
+pilkareczna.com##div[style="min-height: 280px; min-width: 300px;"]
+pilkareczna.com##main > section > div.container > div.w-full:has(> div > div > div > ins.adsbygoogle[data-ad-slot])
 pilkarskiswiat.com###secondary > #custom_html-37
 pilkarskiswiat.com##center > a[href*="/go/"][target="_blank"] > img
 pilkarskiswiat.com##iframe[data-src="https://typuje.pl/rectangle"]
@@ -57618,6 +57623,8 @@ techyv.com##.wpb_raw_code
 techzim.co.zw##.special-container
 tecmint.com###tecmint_incontent
 tecmint.com###tecmint_leaderboard_article_top
+tecnoandroid.it##.aawp
+tecnoandroid.it##.code-block
 tecnoandroid.net##div[itemprop="articleBody"] > div[style*="height:"].code-block
 tecnocasa.it##.cookie-status
 tecnolatte.it###page_hider
