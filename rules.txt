@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-12 23:13:06（北京时间）
+! Version: 2025-11-13 00:15:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 65992
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -9752,7 +9752,6 @@
 @@||google-analytics.com/analytics.js$stealth=referrer,domain=tv-media.at
 @@||google-analytics.com/analytics.js^$domain=accountkiller.com
 @@||google-analytics.com/collect$domain=freepic-downloader.com|freepikdownloader.com
-@@||google-analytics.com/collect?*ad-test$image,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com
 @@||google-analytics.com/collect?*ad-test$image,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr
 @@||google-analytics.com/collect|$xmlhttprequest,domain=course-downloader.com
 @@||google-analytics.com/ga.js$domain=meritonsuites.com.au|realpage.com
@@ -14196,7 +14195,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zeroupload.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zippyshare.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zsexf.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,script,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,script,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?$domain=production-api.androidacy.com,stealth=referrer
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?adblocktest$domain=haafedk2.com
@@ -15805,7 +15803,6 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=line.me
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=bizjournals.com
-@@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=link.rota.cc
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=weshare.is
@@ -33563,6 +33560,7 @@ gameask.com##div[class^="ad"] > p
 gamebanana.com##.BannerModule
 gamebase.com.tw##span[id^="aid_"]
 gamebit.me,sms24.me,sms24.info##div[name="ado"]
+gameblog.in,irootapk.net,xtremestream.xyz,osmanonline.me,viciante.com.br##body > style + div[id][class*=" "] + div[class*=" "]
 gamebyte.com,irishnews.com##div[id^="mpu"]
 gamecaster.com##nav ~ [class*="growl"]
 gamecatandmouse.netlify.app,textcleaner.net##.adp
@@ -38463,6 +38461,7 @@ inkbotdesign.com,kuramanime.boo##img[decoding="async"]
 inkefalonia.gr##.uk-panel:has(> p > a[href][target="_blank"])
 inkefalonia.gr##.uk-panel:has(div[id^="div-gpt-ad-"])
 inkefalonia.gr,paratiritis-news,grarallaximag.gr###dnews-widget-output
+inkefalonia.gr,paratiritis-news.gr,parallaximag.gr###dnews-widget-output
 inkoma.com###eatcoockies
 inlandvalleynews.com##.widget_goodlayers-1-1-banner-widget
 inmywordz.com,ants.tw##.acca-block
@@ -40054,7 +40053,6 @@ joemonster.org###main_billboard
 joemonster.org###main_glowna > video[id^="vjs-rcp"]:empty
 joemonster.org##.sky-wrapper
 joemonster.org##.stored-adverts-container
-joemonster.org##.videoAdLightContainer
 joemonster.org##div[id*="Rect"]
 johanneswerk.de###cc
 johncodeos.com##.johnc-widget
@@ -44342,6 +44340,7 @@ metro.co.uk##.trs-item > a[rel="sponsored"] + div.excerpt
 metro.cz###main > table
 metro.cz###r-leaderboardrub
 metro.tv,discoverychannel.pl,tlcpolska.pl,tvnstyle.pl,tvn7.pl,tvnturbo.pl,tvnfabula.pl,hgtv.pl,foodnetwork.pl,travelchanneltv.pl,ttv.pl,tvn24.pl,tvn.pl##.ado-placeholder
+metro.tv,tvn.pl,tvn24.pl##.ad-ph
 metro.tv,uwaga.tvn.pl##.ad-ph
 metrobankonline.co.uk##.metro-cookiebar__block
 metrofixings.co.uk##.cookies
@@ -48907,6 +48906,7 @@ paradisehill.cc##.shapka
 parafarma.be###popup, .popup
 paragon-drivers.com##.b-psg-cookie
 parallaximag.gr###main-content > div.column:has(> div.nx-banner-wrapper)
+parallaximag.gr##.glomex-ad
 parallaximag.gr##.nx-desktop-ad
 parallaximag.gr##.widget_nx_ads_widget
 parallaximag.gr##div[class*="nx-ad-"]
@@ -49739,7 +49739,6 @@ pistonheads.com###leaderBoard
 pit.pl##.padded > div[id^="sas_"]
 pitax.pl###cookie
 pitch.com##.platform--cookies--container
-pitiurl.com,chikonori.com,freedom3d.org,roms4ever.com##.wp-site-blocks + div[id][class*=" "]
 pitpass.com###indexad300x250l
 pitpass.com###indexsmallads
 pitpass.com##.adcontainer300x250l
@@ -50335,7 +50334,6 @@ porn2all.com##a[href][target="_blank"]:not([href*="porn2all.com"])
 porn300.com##.a2c7txdxh
 porn300.com##.anf905n48
 porn300.com##.links-out
-porn300.com##.nf905n48
 porn300.com##.wrapper > ul[class$="video-units"]
 porn300.com##.wrapper__related-sites
 porn300.com##[class^="aan_"]
@@ -63488,6 +63486,7 @@ worksheetcrafter.com###cookiesFormContainer
 workspace.google.com##main > div:last-child:not(only-child)
 workstyle.pl##.config-messages
 workupload.com##.row > .text-center.col-md-6
+world-iptv.club###zdn-adblock-overlay
 world-of-nintendo.com##a[href="http://www.midsummer.pw"]
 world-of-nintendo.com##font[face] > center:has(> h1 > a[href^="http://www.mb38.com/"])
 world-weather.info##.ww-cont-top-ban
@@ -63734,6 +63733,7 @@ ww2-weapons.com###sgpb-popup-dialog-main-div-wrapper
 ww2-weapons.com##.sgpb-popup-overlay
 ww2-weapons.com##[class*="warhist-"]
 ww2-weapons.com##[id*="media"]
+wwd.com##.wwd-subscribe-now-banner-ad-container
 wwdmag.com##.intercom-snippet > [class*="gdpr"]
 wwe.com##.l-hybrid-col-frame_rail-wrap
 wweek.com##.pb-f-phanzu-phanzu-ad-code
