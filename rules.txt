@@ -2,17 +2,19 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-14 07:10:31（北京时间）
+! Version: 2025-11-14 08:51:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66011
+! Total count: 66019
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
+&appver=*&modver=$document,popup
 &bemobdata=c%$all
 &campid=*&did=$all
 &cbiframe=$popup
 &ga_blocked=$image
 &js_build=iclick-$all
+&modver=*&appver=$document,popup
 &p_rid=*&userId=$xmlhttprequest
 &pagegroup=*&url=$script
 &pbsubid=*&noads=$all
@@ -15827,6 +15829,7 @@
 @@||seg-cdn.pumpkin.care/analytics.js/$~third-party
 @@||seg-cdn.pumpkin.care/next-integrations/integrations/mixpanel/$domain=get.pumpkin.care
 @@||seguridad.compensar.com/lib/js/fingerprint2.js$~third-party
+@@||seir-sanduk.com/*.js$~third-party
 @@||seireshd.com^$generichide
 @@||seirsanduk.com/ad-server.js
 @@||seirsanduk.online^$generichide
@@ -20457,6 +20460,7 @@ androidauthority.com,soundguys.com##[data-ad-type]
 androidcentral.com###mbn_common_footer
 androidcentral.com##.article-footer--taboola
 androidcentral.com##.hawk-multi-model-review-container
+androidcentral.com##.hawk-root
 androidcentral.com##a[href^="http://pubads.g.doubleclick.net/"]
 androidcentral.com##a[href^="https://ad.doubleclick.net"]
 androidcentral.com##div[id$="-store-ad"]
@@ -44573,6 +44577,8 @@ minecraftlist.org##.stickywrapper
 minecraftpocket-servers.com###topadspot
 minecraftservers.org##.second-banner
 minecraftskins.com##.antiblock-wrapper
+minecraftuuid.com##.ml-auto > a[href^="https://serverflex.io/"]
+minecraftuuid.com##section > section.bg-primary:has(> div.container > a[href^="https://serverflex.io/"])
 minecraftzw.com##.e3lan-top
 minepay.top##.sponsors-container
 ming-fahrschull.de##.notification[data-cookie*="cookies_demo"]
@@ -49888,6 +49894,7 @@ planetagracza.pl##.ad__in
 planetagracza.pl##.discounts--partner
 planetagracza.pl##.discounts-block
 planeteanimal.com##.consent, #consent
+planetf1.com##.grid > article:has(> div.flex > div.unis-rec-ai-mpu-eoa)
 planetf1.com,teamtalk.com##.ps-block-a
 planetfootball.com##.grid > article:has(> div > div.unis-rec-ai-mpu-eoa)
 planetfootball.com##aside > div[class]:has(> div[class^="browsi"])
@@ -54267,6 +54274,7 @@ shangyexinzhi.com,hg6384.com-www.6u7u.com##.advert
 shaoxing.com.cn##.top2
 shape.com###header-banner-container
 sharafdg.com##.cookies
+sharclub.in,hosting.ffindia.in,uploadhub.dad,v.thetch.in,india.kitg.co.in,quizrent.com,reportmarathi.in,newsguides.in,gujaratcareerhub.in,rajssoid.online,importantclass.com,thevouz.in,smartfityoga.com,mangareleasedate.com###AdbModel
 share-now.com##.banner-placeholder
 share.acgnx.se##IMG[src*='share.acgnx.se']
 share.dmhy.org##div[align="center"][id] > a > img
