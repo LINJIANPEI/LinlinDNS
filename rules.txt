@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-14 20:21:00（北京时间）
+! Version: 2025-11-14 21:23:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66018
+! Total count: 66038
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8779,6 +8779,7 @@
 @@||embed.binkies3d.com^$stealth=referrer,domain=gsmarena.com
 @@||embed.ex.co^$xmlhttprequest,domain=espncricinfo.com
 @@||embed.kijk.nl^$generichide
+@@||embed.nana2play.com^$subdocument,stealth=referrer
 @@||embed.new.video^$stealth=referrer|ip
 @@||embed.redditmedia.com/widgets/platform.js$domain=gamerant.com
 @@||embed.sendtonews.com/player*.php$domain=earth.com
@@ -12105,6 +12106,7 @@
 @@||m.360buyimg.com^
 @@||m.360video.so.com^
 @@||m.anjuke.com^
+@@||m.anon.tools/storage/js/adasync.js$~third-party
 @@||m.azonline.de/var/storage/images/*_image_300_250.jpg$~third-party
 @@||m.bilibili.com^
 @@||m.client.10010.com^
@@ -14114,6 +14116,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=dessi.io
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=dudestream.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=duelmeta.com|linetv.tw|liout.com|moneysave.info|raenonx.cc|zxmee.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=edumailfree.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=egotter.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=egybist.site|egy-best.site|egybist.online
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=esportstales.com
@@ -37854,6 +37857,7 @@ igrit.pl##.imgs[data-py]
 igrit.pl##.mobile_top_banner
 igrit.pl##.section-inside-py
 igrit.pl##.sticky-top a[target="_blank"][data-id] > img
+iguru.gr###header-widget-area
 igvault.com##.header-perm
 igxe.cn##.lion-flexd
 iheart.com##.component-legal-notice
@@ -41155,6 +41159,10 @@ krebsonsecurity.com###sidebar > a[href^="https://www.akamai.com/"]
 krebsonsecurity.com###sidebar > div[style="margin-left:0px;"]
 krebsonsecurity.com##.a-statement
 krediidiraportid.ee##.kred-cookiemessage
+krem.com##.article__section_type_ad
+krem.com##.grid__cell > div.grid__module:has(> div.grid__module-sizer_name_taboola)
+krem.com##.grid__main > div.grid__cell_columns_1:has(> div.grid__module > div.grid__module-sizer_name_ad)
+krem.com,khou.com##.grid__section_theme_below-article
 kremer-pigmente.com###cclayer
 kreoart.com.pl###popupContact
 kreuzwerker.de##.cookies
@@ -41282,6 +41290,10 @@ kupredudominulosti.cz###ktCookieStatement
 kupzidle.cz##body > .shadow
 kurazone.net##.anuads
 kurfuerstenschaenke-dresden.de###POPUPS_ROOT
+kuriergmin.pl,nowagazeta.pl,tygodniksiedlecki.com,dziennikelblaski.pl,gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,magazynnaszczycie.pl,palukimogilno.pl,zycie.pl##.grid__ad
+kuriergmin.pl,nowagazeta.pl,tygodniksiedlecki.com,dziennikelblaski.pl,gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.adv
+kuriergmin.pl,nowagazeta.pl,tygodniksiedlecki.com,dziennikelblaski.pl,gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,checkpress.pl,kulisy.net,palukimogilno.pl,zycie.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"])
+kuriergmin.pl,nowagazeta.pl,tygodniksiedlecki.com,dziennikelblaski.pl,gazetaolsztynska.pl,24wroclaw.pl,24jgora.pl,myslenice-itv.pl,kulisy.net##.custom-html-box:has(> .box__container:only-child > div:only-child > p:only-child)
 kurobatch.com##body > #page > script + div[id][class*=" "]
 kurocore.com##.ad-b1
 kurse.eatsmarter.de##button[class*="consentFloatBtn"]
@@ -43270,6 +43282,7 @@ magazineluiza.com.br##main > section ~ div[width="100%"]
 magazinizmir.com##footer a[class^="BoomadsButtonLink"]
 magazynpracy.pl##body > div:not([id]):not([class])
 magazzinirossi.eu###informativaBreve
+magcourse.site,supjav.ru,umatechnology.org,3dvf.com,aimhaven.com,comicsuniverse.it,macmagazine.com.br,ubunlog.com,thesportsgrail.com,downtownbellevue.com,androidsis.com,voiceofmotown.com,thethaiger.com,unseki.co.jp,wikibio.us,nexus-games.net,freecoursesite.com,formu1a.uno,toolsai.net,rightrasta.com,kaystls.site,gamertweak.com,mrinformatico.it,pianetacellulare.it,inwepo.co,updoc.site,oliveoiltimes.com,cgmagonline.com,happymag.tv,cpophome.com##.code-block
 magdalena24.pl###cookie
 magentatv.pl##nav > [class*="InfoBar"]
 magesy.pro##.fuckGitHUB_blackoverlay
@@ -47607,8 +47620,10 @@ now.gg##div[id^="div-ad-"]
 now.gg##div[id^="skyScraper-"]
 now14.co.il##.fit-banner-size
 nowaelektro.pl##body > div:not([id]):not([class])
+nowagazeta.pl##.custom-html-box:has(> .box__container:only-child > div:only-child > h6:first-child + p)
 nowcoder.com###jsSideTopicList
 nowcoder.com##.mini-banner
+noweinfo.pl##.td-header-template-wrap .td-pb-row .wpb_wrapper > .td_block_title
 nowezyciepabianic.pl###nzp_ad_above_header
 nowezyciepabianic.pl##.pum
 nowezyciepabianic.pl##.widget-area > section.widget_block:not([id="block-44"])
@@ -53267,6 +53282,8 @@ ryzerobotics.com##footer > div[class*="pop-up"]
 rzeszow-news.pl##div[id^="rzesz-"]
 rzeszow.pl###__next > .fixed
 rzeszow.pl##.news-slot-center
+rzeszow.pl,esopot.pl,lowiczanin.info,gwarek.com.pl,tyna.info.pl,tusochaczew.pl,myglogow.pl,plonskwsieci.pl,spotradomsko.pl,portalsremski.pl,ekstrasierpc.pl,ki24.info,uniejow.net.pl,e-krajna.pl,gwio.pl,faktypilskie.pl,swiecie24.pl,grudziadz365.pl,mielec.pl,iszczecinek.pl,gniewkowo.eu,mojakruszwica.pl,expresskaszubski.pl,gorlice24.pl,gostyn24.pl,wpu24.pl,ddwloclawek.pl,ddtorun.pl##.baner
+rzeszow.pl,esopot.pl,lowiczanin.info,gwarek.com.pl,tyna.info.pl,tusochaczew.pl,myglogow.pl,plonskwsieci.pl,spotradomsko.pl,portalsremski.pl,ekstrasierpc.pl,ki24.info,uniejow.net.pl,e-krajna.pl,gwio.pl,faktypilskie.pl,swiecie24.pl,grudziadz365.pl,mielec.pl,iszczecinek.pl,gniewkowo.eu,mojakruszwica.pl,expresskaszubski.pl,gorlice24.pl,gostyn24.pl,wpu24.pl,ddwloclawek.pl,ddtorun.pl##.banner
 s.yimg.com##.cta-wrapper
 s0ft4pc.com##.popup02778wrap
 s0ft4pc.com,tutcourse.com###text-html-widget-2
@@ -54874,6 +54891,8 @@ skylinewebcams.com###hostedby
 skylinewebcams.com###prefs
 skylinewebcams.com###skylinewebcams-ads2
 skylinewebcams.com##.cam-vert
+skylinewebcams.com##.list > div.col-md-4:has(> .cam-vert)
+skylinewebcams.com##.row > div[class]:has(> div.cam-light > ins.adsbygoogle)
 skylinewebcams.com##.text-center.cam-light
 skymetweather.com##div[id^="side-banneradd"]
 skyofgames.com##p > a[target="_blank"] > img.aligncenter
@@ -63700,6 +63719,7 @@ wsj.com##.w27771
 wsj.com##[aria-label="Sponsored Offers"]
 wsj.com##div[class*="-adWrapper-"]
 wsj.com##div[class*="WSJTheme--adWrapper"]
+wsj.com##div[class^="css-"]:has(> div[id^="wrapper-AD"])
 wsj.com##div[class^="style--column"] div[style="height:100%"] div[style^="top:"][style*="position:"][style*="sticky"]
 wsj.com##div[data-testid="ad-container"]
 wsj.com##div[type="wtrn_cxense"] > div[class*="-ArticlesContainer"] > div[class^="css-"]:has(> div[data-testid="ad-container"]:only-child)
