@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-15 07:10:23（北京时间）
+! Version: 2025-11-15 08:49:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66034
+! Total count: 66036
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6096,6 +6096,7 @@
 @@||app.huabao.360.cn^
 @@||app.hubspot.com/api/ads/$~third-party
 @@||app.humanornot.ai^$stealth=referrer
+@@||app.hype.it/assets/packages/mixpanel_flutter/assets/mixpanel.js$~third-party
 @@||app.impact.com^$jsinject,elemhide,extension
 @@||app.khz.se/api/*&ad_type=preroll-channel$domain=ilikeradio.se
 @@||app.market.xiaomi.com^
@@ -20669,6 +20670,7 @@ anon-v.com##.content > div[style="padding:5px 5px 8px 5px;"] > a[href][style]
 anon-v.com##.video-holder > div[style="padding:5px;margin:5px;text-align:center;"] > a[href][style]
 anon-v.com##div[style="max-width: 640px; text-align: center; margin: 0 auto;"]
 anoneko.com,dmhy.org,ye1213.com##div[id$="_ad"] > a:first-child > img
+anonfile.co,arahdrive.com,fastupload.io,video.hizliresim.com##.vr-adv-unit
 anonse.com###polityka
 anonym.to##a[href^="https://www.spyoff.com"]
 anonymousemail.me##.center > a[target="_blank"] > img
