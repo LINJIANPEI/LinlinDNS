@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-18 16:15:15（北京时间）
+! Version: 2025-11-18 17:13:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66105
+! Total count: 66112
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23523,6 +23523,7 @@ bleepingcomputer.com##[href="https://try.flare.io/bleeping-computer/"]
 bleepingcomputer.com##[href^="https://www.bleepingcomputer.com/go/"]
 bleepingcomputer.com##a.center-link-image[target="_blank"][rel="sponsored noopener"]
 bleepingcomputer.com##a[href="https://try.flare.io/bleeping-computer/"] > img
+bleepingcomputer.com##ul#bc-home-news-main-wrap > li:has(> .bc_latest_news_text > h4 > a[rel="nofollow"]:not([href*="bleepingcomputer.com"]))
 bleepingcomputer.com##ul#bc-home-news-main-wrap > li:has(> div > ul > li > a[rel="noopener sponsored"])
 bleepingcomputer.com##ul#bc-home-news-main-wrap > li:has-text(Sponsored)
 blende-und-zeit.sirutor-und-compur.de###hinweise
@@ -37342,6 +37343,7 @@ hurriyetdailynews.com##.news-detail-adv
 hurriyetdailynews.com##div[class*="advertorial"]
 hutool.cn##.hutool-top-ad
 hutporner.com,javzh.com,thesource.com,javcrave.com,indiansexbazar.com,gossipfunda.com,claimfey.com,courseforfree.net,dailyresearchplot.com,techspite.com,aceofhacking.com,freesoft.id###custom_html-5
+huutokaupat.com##div[data-test="entry-list-container"] > article:not([data-test]):has(a[data-external="true"][variant="primary"])
 huxiu.com##li:nth-of-type(1) > .header-top-list__link > .flip-wrap > .flip-up
 huya.com###J_adBnM
 huya.com###J_adBnM > img:last-child
@@ -39918,6 +39920,7 @@ jianshu.com###web-nav-app-download-btn
 jianshu.com###web-note-ad-1
 jianshu.com##._13lIbp
 jianshu.com##._27yofX
+jianshu.com##.app-float-btn
 jianshu.com##.app-open
 jianshu.com##.aside > div[aria-label="3rd-ad"] + div:last-child
 jianshu.com##.border.item
@@ -39931,6 +39934,7 @@ jianshu.com##.note-graceful-button
 jianshu.com##.note__flow__download
 jianshu.com##.self-flow-ad
 jianshu.com##.top
+jianshu.com##[aria-label='lwa-ad-one']
 jianshu.com##a[href*="/apps?utm_medium=desktop&utm_source=navbar-apps"]
 jianshu.com##a[id^="web-note-ad"]
 jianshu.com##div._1pUUKr:nth-of-type(3)
@@ -46410,6 +46414,7 @@ nanoreview.net##div[class^="nad"]
 nanoreview.net##div[class^="wisinad_only_"]
 nanoreview.net##div[id^="float-sb-"]
 nanoreview.net##main > #float-sb
+nanovids.com##.fp-player > div[style^="inset:"]:not([class]):empty
 nanrenwo.net##div[id^="content"]
 nanu-nana.de###overlay
 naozhong.net.cn###pnl-ne0n
@@ -48517,6 +48522,8 @@ open3dmodel.com##div[style^="min-height:"]:not([class],[id]):has(> .adsbygoogle)
 openallurls.com##.articles-col > div[style^="margin-bottom:"][style*="min-height:"]:has(> .adsbygoogle)
 openallurls.com##.articles-col > form ~ br
 openallurls.com##.nav-content-wrap > .row > .col-sm-6:has(> div[style^="width:"][style*="min-height:"] > .adsbygoogle)
+openalternative.co##a.ease-out[href^="https://trycomp.ai?"]
+openalternative.co##body > div.min-h-dvh > div.relative:has(> a[href^="https://trycomp.ai"])
 openbase.com###__next [class*="GdprCookieFooter"]
 openbookpublishers.com##.menu-header
 opencart.com##.promotion-banner
