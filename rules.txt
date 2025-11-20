@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-20 23:11:20（北京时间）
+! Version: 2025-11-21 00:13:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66178
+! Total count: 66183
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -33899,7 +33899,6 @@ gamicsoft.com##A[onclick*="'Advertisement"]
 gamicsoft.com##A[onclick*="'Advertisement"] + .absolute
 gamigo.net###stayhome
 gaming-age.com,freecoursesite.uk###ai_widget-7
-gaming-age.com,infotelematico.com,bestjoblive.com,geekermag.com###ai_widget-3
 gaming.co.ua,pingvin.pro##body > div[id][class][style*="z-index"][style*="9999"],body > div[id][class][style*="z-index"][style*="9999"] + div[class][style*="z-index"][style*="9999"]
 gaming.tools##div[class^="layout-side-"]:has(.rma)
 gamingbible.com##.css-1z9hhh
@@ -34442,11 +34441,9 @@ gg-animes.com##div[id^="ads"]
 gg-animes.com##img[width="750"][height="150"]
 gg-led.com##.regg
 gg.deals###top-banner-image
-gg.deals##.banner-full-link
 gg.deals##.banner-side-link
 gg.deals##.gg-banner-full-link
 gg.deals##.gg-full-content-widget
-gg.deals##.gg-side-full-plane-link
 gg.deals##.site-banner-content-widget
 gg.deals##.site-banner-top-widget
 gg.deals##.with-banner
@@ -36441,6 +36438,8 @@ hentaidude.xxx##.ai_widget
 hentaienglish.com##.sidebar-content-inner > div[id^="custom_html-"]
 hentaiff.com###overplay
 hentaiff.com##div[id^="teaser"]
+hentaiforce.net##a.hf-btn-special
+hentaiforce.net##div[id^="middle-ban-"]
 hentaiforce.net,hentaivox.com,3hentai.net##div[id$="-ban-agsy"]
 hentaifox.com###slider
 hentaifox.com##.axmiddle
@@ -51632,6 +51631,7 @@ purbelinews.com##div[class$="-ads"]
 pure.app###__next main ~ div
 purecalculators.com##.hero-thing-d
 purecalculators.com##div[id^="thing-pure_"]
+puredrinkwater.online,anoopcnair.com,answersq.com,wuxiaworld.com##aside[id^="ai_widget-"]
 puregym.com##.notification
 purehelp.no###consent_popup, .modal-backdrop
 pureinfotech.com###KonaBody > div[style^="margin: 8px auto; text-align: center;"]
@@ -60165,6 +60165,9 @@ trueachievements.com,truesteamachievements.com,truetrophies.com##.nn_player
 truecaller.com###__nuxt > div > .bottom-0, #__nuxt > .bottom-0
 truecaller.com##.ProfileAd
 truecar.com##.card:has([href*="marketplace&sponsored"])
+truecar.com##.flex:has(> div[data-test="adBanner"])
+truecar.com##ul > li[class^="order-"][class*="empty:hidden"]
+truecar.com##ul > li[style^="order"][class*="empty:hidden"]
 truefire.com##.alert
 truefittandhill.co.uk##.consent, #consent
 trueid.net##div[data-testid="adsComponent-div"]
@@ -60372,7 +60375,6 @@ tupaki.com##.pwa_Ad
 tupaki.com##.roadblocker-container
 tupaki.com##body div[id^="detail_wrap_ad_"]:not(#style_important)
 tupaki.com##div[id^="ad_"]:not(#style_important)
-tupaki.com##div[id^="detail_wrap_ad_"]
 tuplus.com.co##.cookies
 tupowstalapolska.pl###menusDiv
 turbo.az,tap.az##.bg-bnr-container
@@ -65446,6 +65448,9 @@ yts.mx##[href^="https://stARtgAMinG.net/"]
 yts.mx##div[class$="-bordered"]
 yts.rs##.vpn-container
 yts.unblocked.tube##div[id][onclick*="window.open"][onclick*="vpn"]
+yts.unblocked.tube,yts.do###movie-content > .row[id] > .col-lg-12 > div[class]:has(> a[rel])
+yts.unblocked.tube,yts.do##.hidden-xs > a[target="_blank"] > img
+yts.unblocked.tube,yts.do##div[style*="width: 100%;"][style*="height:"][style*="margin: 0px;"]
 yts.unblocked.tube,yts.do,yts.mx###movie-content > .row[id] > .col-lg-12 > div[class]:has(> a[rel])
 yts.unblocked.tube,yts.do,yts.mx##.hidden-xs > a[target="_blank"] > img
 yts.unblocked.tube,yts.do,yts.mx##div[style*="width: 100%;"][style*="height:"][style*="margin: 0px;"]
