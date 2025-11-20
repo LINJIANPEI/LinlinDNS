@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14134
+! Total count: 14139
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-11-20 09:53:13（北京时间）
+! Version: 2025-11-20 20:50:40（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1160,6 +1160,7 @@
 #新浪微博
 #新浪新闻图片^
 #新浪新闻网页误杀
+#新浪股票页面行情
 #新浪通行证注册页面
 #新浪通行证登录页面
 #新版本APP登录时验证账号安全
@@ -1600,6 +1601,7 @@
 @@.vaughnsoft.net/abvs.php?a=
 @@.vmall.com/oauth
 @@.xyz/premiumtv/*.php$subdocument,xmlhttprequest,stealth=referrer
+@@/*.m3u8$domain=pages.dev|inatspor.xyz|t24giris2.cfd,stealth=referrer
 @@/*.m3u8$domain=vidload.site,stealth=referrer
 @@/*/*-*/*.png$stealth=referrer,xmlhttprequest,domain=dbx.molystream.org
 @@/*/*-*/*.png$stealth=referrer,xmlhttprequest,domain=dizibox.tv
@@ -9613,9 +9615,9 @@
 @@||bdstatic.com/static/common/widget/ui/admanager/
 @@||bdstatic.com/static/common/widget/ui/admanager/$script,domain=image.baidu.com
 @@||bdstatic.com/static/exp-pc/article/widget/cms-banner-ads/cms-banner-ads_*.css
-@@||bdstatic.com^$domain=17k.com
 @@||bdstatic.com^$domain=doupocangqiong1.com
 @@||bdstatic.com^$domain=dq.tieba.com
+@@||bdstatic.com^$domain=feiguaks.com|17k.com
 @@||bea4.v.fwmrm.net/ad/u$domain=nbcsports.com
 @@||bea4.v.fwmrm.net^$domain=mylifetime.com
 @@||beacon.cdn.qq.com/sdk/*/beacon_web.min.js$domain=guanjia.qq.com
@@ -12886,7 +12888,7 @@
 @@||google-analytics.com/analytics.js^$domain=jackbox.tv
 @@||google-analytics.com/analytics.js^$domain=pioneer-car.eu
 @@||google-analytics.com/collect$domain=freepic-downloader.com|freepikdownloader.com
-@@||google-analytics.com/collect?*ad-test$image,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr
+@@||google-analytics.com/collect?*ad-test$image,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr|chat.irc.in.th|rozgarnews.com
 @@||google-analytics.com/collect|$xmlhttprequest,domain=course-downloader.com
 @@||google-analytics.com/cx/api.js$domain=stern.de
 @@||google-analytics.com/debug/$domain=10bye.com
@@ -13843,6 +13845,7 @@
 @@||hdliveextra-a.akamaihd.net/*/showads*.js
 @@||hdliveextra-a.akamaihd.net/HD/scripts/*/config/ads.js
 @@||hdmomplayer.com/embed/$domain=dizimom.*,stealth=referrer
+@@||hdmovieplay.xyz/embed/$stealth=referrer
 @@||hdporncomics.com^$generichide
 @@||hdrez.com^$generichide
 @@||hdsky.net/ad/down.png
@@ -14670,6 +14673,7 @@
 @@||in.gr^$generichide
 @@||in.treasuredata.com/js/*?api_key$script,domain=retty.me
 @@||in.treasuredata.com/js/v*/event/fluentd_website/anchor_clicks_$domain=docs.fluentd.org
+@@||inatspor.xyz/channel.html$stealth=referrer
 @@||inazuma.co/campaign/js/heatmap.js$domain=monopoly.mcdonalds.co.uk
 @@||inbox.lv/advert/?actionID=imp_login
 @@||incolumitas.com/data/*.js$domain=zertalious.xyz|digworm.io
@@ -17116,7 +17120,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tsubasa.im
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tunein.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tutcourse.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tvappapk.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tvappapk.com|thesaltysoldier.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tw-calc.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=twcc.fr
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ufacw.com
@@ -17296,7 +17300,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zeroupload.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zippyshare.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=zsexf.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,script,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,script,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr|chat.irc.in.th|rozgarnews.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?$domain=production-api.androidacy.com,stealth=referrer
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?adblocktest$domain=haafedk2.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^$domain=linkneverdie.net
@@ -17396,6 +17400,7 @@
 @@||pagead2.googlesyndication.com^$domain=battlecats-db.com
 @@||pagead2.googlesyndication.com^$domain=fplstatistics.com
 @@||pagead2.googlesyndication.com^$domain=ytlarge.com
+@@||pages.dev^$stealth=referrer
 @@||pakkotoisto.com/js/siropu/am/ads.min.js$domain=pakkotoisto.com
 @@||palcurr.com^$generichide
 @@||pallok.com^$generichide
@@ -18784,7 +18789,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=line.me
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=tf1info.fr
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=bizjournals.com
-@@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr|chat.irc.in.th|rozgarnews.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=link.rota.cc
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=weshare.is
 @@||securepubads.g.doubleclick.net^$domain=hoyts.com.au
@@ -20015,6 +20020,7 @@
 @@||thepoorcoder.com^$generichide
 @@||theregister.co.uk/*_adtech_
 @@||therichest.com^$generichide
+@@||thesaltysoldier.com^$generichide
 @@||thesaurus.com/assets/ads.js
 @@||theseotools.net^$generichide
 @@||thesouthern.com^$generichide
