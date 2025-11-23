@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-23 16:14:15（北京时间）
+! Version: 2025-11-23 17:11:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66213
+! Total count: 66211
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7507,7 +7507,6 @@
 @@||ci.xiaohongshu.com^
 @@||cibntv.net/youku/*.mp4?$domain=v.youku.com
 @@||cimanow.cc/wp-content/themes/*/openads.js$script,~third-party
-@@||cindyholbrook.lpages.co^
 @@||cindyholbrook.lpages.co^|
 @@||cinema.pia.co.jp/img/ad/$image,~third-party
 @@||cinemaxxl.de^$stealth=donottrack
@@ -7604,10 +7603,8 @@
 @@||click.simba.taobao.com^
 @@||click.simba.taobao.com^|
 @@||click.snapshat.com^
-@@||click.trafficguard.ai^
 @@||click.trafficguard.ai^|
 @@||click.uol.com.br^$domain=uol.com.br
-@@||click.virt.exacttarget.com^
 @@||click.virt.exacttarget.com^|
 @@||click.virt.s*.exacttarget.com^|
 @@||click.zoom.us^
@@ -7657,7 +7654,6 @@
 @@||cloud.google.com^$generichide
 @@||cloud.google.com^$~third-party
 @@||cloud.mail.ru^$image,~third-party
-@@||cloud.notification-naviextras.com^
 @@||cloud.notification-naviextras.com^|
 @@||cloud.typography.com/*/css/fonts.css$stealth=referrer
 @@||cloud.video.taobao.com^
@@ -9088,7 +9084,6 @@
 @@||feed-image.baidu.com^
 @@||feed.4strokemedia.com^$domain=video.corriere.it
 @@||feed.4strokemedia.com^$domain=video.gazzetta.it
-@@||feed.adrelayer.com^
 @@||feed.adrelayer.com^|
 @@||feedback-pa.clients*.google.com/*/google.internal.feedback.$stealth=referrer
 @@||feedback-pa.clients6.google.com^$stealth=referrer
@@ -32604,6 +32599,9 @@ foodnetwork.co.uk##section.wrapper:has(> .container:only-child > .modules:only-c
 foodnetwork.co.uk##section.wrapper[class*="px]"]:has(> div:only-child div[id*="tf-"]:only-child)
 foodnetwork.co.uk##section[class*="module--ad-module-"]
 foodnetwork.com###leaderboard-wrap
+foodnetwork.com##.recipe-bigbox
+foodnetwork.com##[data-slot-type="ad_aside"]
+foodnetwork.com##[data-slot-type="ad_aside_top"]
 foodora.fi##.top-banner-container
 foodora.no##.top-banner-container
 foodora.se##.top-banner-container
