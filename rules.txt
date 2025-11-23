@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-23 10:54:29（北京时间）
+! Version: 2025-11-23 11:53:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66201
+! Total count: 66210
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -21772,11 +21772,17 @@ avcanada.ca###wrap > #page-header > table[cellspacing]
 avcanada.ca##.postbody > div[id^="post"] > center:not([class]):not([id]):not([style])
 avcao.cc##.ps-body > div[class^="adv-top"]
 avcao.cc##div#aa
+avclub.com##.htlad-above_logo
+avclub.com##.htlad-bottom_rectangle
+avclub.com##.htlad-middle_rectangle
 avclub.com##.htlad-top_leaderboard
+avclub.com##.htlad-top_rectangle
 avclub.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kinja.com,kotaku.com,lifehacker.com,qz.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com##.js_ad-dynamic
+avclub.com,infosecurity-magazine.com,jezebel.com,nationaljeweler.com,pastemagazine.com##.dfp
 avclub.com,infosecurity-magazine.com,jezebel.com,nationaljeweler.com,pastemagazine.com,splinter.com,theonion.com##.dfp
 avclub.com,jalopnik.com,kotaku.com,theonion.com,theroot.com##[class] > div:has(> [is="bulbs-dfp"])
 avclub.com,jezebel.com##.vertical-ad-spacer
+avclub.com,jezebel.com,pastemagazine.com##.htlad-sidebar_rectangle
 avclub.com,jezebel.com,pastemagazine.com,splinter.com##.htlad-sidebar_rectangle
 avclub.com,splinter.com##.htlad-above_logo
 avclub.com,splinter.com##.htlad-bottom_rectangle
@@ -58552,6 +58558,7 @@ theinertia.com##[data-spotim-module="tag-tester"]
 theinformation.com###gdpr-modal-container
 theinquirer.net##.ad-slot-full
 theinquirer.net##[id^="google_ads_iframe_"]
+theinventory.com##.ay-ad-slot
 theinvergordonarchive.org###CQ
 thejakartapost.com##.expandable-bottom-sticky
 thejakartapost.com##.the-brief
@@ -58796,6 +58803,8 @@ theroar.com.au##[style="min-height:260px;max-height:260px;overflow:hidden;"]
 theroar.com.au##div[style="margin: 0px auto; text-align: center; height: 280px; max-height: 280px; overflow: hidden;"]
 theroar.com.au##div[style="min-height:260px;max-height:260px;overflow:hidden;"]
 theroar.com.au##div[style^="min-height:"][style*="max-height:"]
+theroot.com##.therootads-epi-mobile_inpost-top
+theroot.com##.top_ad_standard_desktop
 therugbychannel.it###SITE_ROOT ~ .siteAspectsContainer
 thesaltysoldier.com,smsonline.cloud##ins.adsbygoogle
 thesaurus.com##.ftsp
