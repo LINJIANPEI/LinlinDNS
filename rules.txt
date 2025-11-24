@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-24 22:12:29（北京时间）
+! Version: 2025-11-24 23:13:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66233
+! Total count: 66235
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23725,6 +23725,7 @@ bloombergadria.com##.banner
 bloomberglinea.com##.arcad-feature-custom
 bloomingdales.com##.carousel-container:has(.header-sponsored-label)
 bloomingdales.com##.sortable-grid-monetization-items
+bloomingdales.com##li.featured-item:has(.bottom-overlay-label)
 bloomreach.com##.exp-cookies-obal
 bloomsbury.com##.stickyFooter
 blot.fr###tracker-warning
@@ -41111,6 +41112,7 @@ kogama.com###main-content div[class]:has(> div[id^="kogama"]:first-child + div[c
 koh-i-noor.cz###EuConsentV2, .modal-backdrop
 kohls.com###PDP_monetization_HL
 kohls.com###PMP_monetization_HL
+kohls.com###kmncarousel-add_buy_carousel-anchor:has(.KMNProductSlider__sponsored)
 kohls.com###kmnsponsoredbrand-sponsored_top-anchor
 kohls.com###open-drawer
 kohls.com##.products_grid.sponsored-product
