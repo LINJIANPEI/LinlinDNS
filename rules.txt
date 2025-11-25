@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-25 20:23:06（北京时间）
+! Version: 2025-11-25 21:28:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66238
+! Total count: 66242
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22938,6 +22938,7 @@ bestloanoffer.net,techconnection.in###overlay
 bestloanoffer.net,techconnection.in###popup
 bestmalevideos.com##.sidebar > div[id^="ad"]
 bestmovie.it,treccani.it##.gmp
+bestmvno.com##.advertextsize
 bestofdate.com###ww-blackout
 bestoftelegram.com##a[href^="/ads/banner_ads?"]
 bestopview.com###pubtextnone
@@ -36248,6 +36249,8 @@ healthbenefitstimes.com###ad-image-below
 healthbenefitstimes.com###google-adv-top
 healthcare.siemens.dk##.alert, #alert
 healthgrades.com##.leaderboard1AdWrapper
+healthgrades.com##div[class]:has(> div[data-qa-target="leaderboard-ad"])
+healthgrades.com##div[class]:has(> div[data-visible] > div[data-qa-target="leaderboard-ad"])
 healthifyme.com###popup-wrapper
 healthing.ca##.sticky-ad-spacer-desktop
 healthleadersmedia.com##.adv-con
@@ -57696,6 +57699,8 @@ techfinancials.co.za##.gofollow > img
 techfinancials.co.za##.post-content > p > a[href*="/?utm_source="] > img
 techfocus.cz###leader_place
 techfocus.cz##.text > div[style="width:520px; margin-left:-30px; margin-bottom:20px;"]
+techfortravel.co.uk$$script:contains(;if(await eval(o),!window[btoa()
+techfortravel.co.uk$$script[onerror][onload]
 techgeek365.com###leader-wrapper
 techgeekbuzz.com###block-7
 techgeekbuzz.com###custom_html-21
@@ -63920,7 +63925,6 @@ wsj.com##.w27771
 wsj.com##[aria-label="Sponsored Offers"]
 wsj.com##div[class*="-adWrapper-"]
 wsj.com##div[class*="WSJTheme--adWrapper"]
-wsj.com##div[class^="css-"]:has(> div[id^="wrapper-AD"])
 wsj.com##div[class^="style--column"] div[style="height:100%"] div[style^="top:"][style*="position:"][style*="sticky"]
 wsj.com##div[data-testid="ad-container"]
 wsj.com##div[type="wtrn_cxense"] > div[class*="-ArticlesContainer"] > div[class^="css-"]:has(> div[data-testid="ad-container"]:only-child)
