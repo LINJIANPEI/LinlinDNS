@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-26 07:11:35（北京时间）
+! Version: 2025-11-26 08:52:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66263
+! Total count: 66266
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -20281,6 +20281,8 @@ alwafd.news##center > a[href="#"]
 alypw.com##.adbkk
 alypw.com##.ceadd
 alyt.com###ALYT_privacyCookie
+alza.sk###boxes > div.box[data-analytics*="/adCommodityClick"]
+alza.sk##.brandingEars
 alza.sk##.gtm-promo-binded
 am.lk##.bannergroup
 am5.com##.ad-box-pc-3
@@ -22909,6 +22911,7 @@ bestbuy.ca##.x-productListItem:has([data-automation="sponsoredProductLabel"])
 bestbuy.ca##[class^="sponsoredProdBoxGridArea"]
 bestbuy.ca##div.x-productListItem:has([class^="sponsoredProduct"])
 bestbuy.ca##div[data-automation^="criteo-sponsored-products-carousel-"]
+bestbuy.ca##section[data-automation="dynamic-content-ad-slot"]
 bestbuy.ca,bestbuy.com##[id^="atwb-ninja-carousel"]
 bestbuy.com###sponsored-carousel-na
 bestbuy.com##.atwa-ninja-carousel:has(div[data-testid="sponsored-sbb"])
