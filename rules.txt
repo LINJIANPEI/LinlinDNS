@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-27 15:13:44（北京时间）
+! Version: 2025-11-27 16:17:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 66279
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -3204,6 +3204,7 @@
 4hu.tv##.wrap > div.mod > div.row > dl:has(> dt > a[target="_blank"]:not([href^="/html/"]) > img)
 4khd.com##.centbtd
 4khd.com##.popup-iframe
+4khd.com,uuss.uk##iframe.popup-iframe
 4kporn.xxx###bannerbelow
 4kporn.xxx###top
 4kporn.xxx##.myadswarning
@@ -4807,6 +4808,7 @@
 @@||70.86.24.120:8060/*/
 @@||720static.com/resource/$stealth=referrer
 @@||75.125.41.29:8080/*/
+@@||79423.analytics.edgekey.net^
 @@||79423.analytics.edgekey.net^|
 @@||795pao.com:88/999pc/ckplayer.js
 @@||7k7k.com/channel$subdocument
@@ -6217,6 +6219,7 @@
 @@||art-reklama.razitko.cz^$domain=art-reklama.razitko.cz
 @@||article.zlink.toutiao.com^
 @@||articlesnew.com^$generichide
+@@||artifactory.appodeal.com^
 @@||artifactory.appodeal.com^|
 @@||artnet.com^$generichide
 @@||artstation.com/*/assets/images/images/*-adv.jpg
@@ -9609,7 +9612,6 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -9727,6 +9729,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -10210,7 +10213,6 @@
 @@||havenclick.com/www/delivery/asyncjs.php
 @@||havoc-os.com^$generichide
 @@||hayrirsds24.cfd/channel.html?id=$stealth=referrer
-@@||hb.afl.rakuten.co.jp^
 @@||hb.afl.rakuten.co.jp^|
 @@||hb.improvedigital.com/pbw/gameDistributionV*.min.js$domain=html5.gamedistribution.com
 @@||hb.improvedigital.com/pbw/prebid/prebid-idhb-v*.min.js$domain=html5.gamedistribution.com
@@ -10267,7 +10269,6 @@
 @@||hdzog.com/assets/jwplayer-*/jw-icons.woff
 @@||hdzog.com^
 @@||healbot.dpm15.net^$generichide
-@@||health.halodoc.com^
 @@||health.halodoc.com^|
 @@||health.yandex.ru^$stealth=webrtc
 @@||healthgateway.gov.bc.ca/snowplow.js$~third-party
@@ -10308,7 +10309,6 @@
 @@||hh010.com^$generichide
 @@||hhkungfu.tv^$generichide
 @@||hideandseek.world/js/prebid-ads.js
-@@||hidive.com^
 @@||hidive.com^|
 @@||highcharts.com.cn/highcharts/modules/heatmap.js
 @@||highresolutionmusic.com^$generichide
@@ -11219,7 +11219,6 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
-@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11268,7 +11267,6 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -16187,7 +16185,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -17330,6 +17327,7 @@
 @@||topwebsitelists.com^$generichide
 @@||topzone.lt^$generichide
 @@||toramemoblog.com^$generichide
+@@||torimochi.line-apps.com^
 @@||torimochi.line-apps.com^|
 @@||torproject.org^
 @@||torrage.info/torrent.php$popup,third-party
@@ -18485,6 +18483,7 @@
 @@||www.dianping.com^
 @@||www.dobreprogramy.pl^$generichide,badfilter
 @@||www.docker.com^
+@@||www.dogpile.com^
 @@||www.dogpile.com^|
 @@||www.door2windows.com^$stealth=referrer
 @@||www.doudou.fun^
@@ -29894,6 +29893,7 @@ e2mv.com##.left_advert
 e3zy.com##.jiacu
 e3zy.com##img[style="height: 80px; width: 100%;"]
 eachporn.com##body.no-touch > .top[style]
+eadt.co.uk,edp24.co.uk,dorsetecho.co.uk##.mar-leaderboard--top
 eagle.mn##a[href="https://sodon-callcenter.mn/"]
 eagle1065.com##.featureRotator
 eaglemoss.com##privacy-settings.pos-fixed, main-overlay
