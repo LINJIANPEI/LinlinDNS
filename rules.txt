@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-28 23:11:42（北京时间）
+! Version: 2025-11-29 00:14:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66311
+! Total count: 66304
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6907,7 +6907,6 @@
 @@||cafe24.com^$stealth=dpi
 @@||caffenero-webassets-production.s3.eu-west-2.amazonaws.com/images/$stealth=referrer
 @@||cainiao-app-logs.cn-zhangjiakou.log.aliyuncs.com^
-@@||calciomercato.com/prebid.js
 @@||calciomercato.com/promodisplay
 @@||calciomercato.com^$generichide
 @@||calendar.google.com^$generichide
@@ -10727,7 +10726,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=baltimoresun.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=barrons.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=bbcamerica.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=berlingske.dk
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=berlingske.dk|bt.dk
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=bestgames.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=bighero.io
@@ -23708,7 +23706,6 @@ blogfree.net##body > .jnote
 blogger.com##div[data-noticekey*="EuCookieNotice"]
 bloggif.com###home > div[style*="width:370px;"][style*="height:280px;"]
 bloggif.com##.sky
-bloggif.com,lolalytics.com,migraine.com,technobuffalo.com,bloomberg.com,moviefone.com,gamerconfig.eu###leaderboard
 bloginkz.com##a[href^="//taghaugh.com/"]
 blograffo.net###secondary a[href^="https://amzn.to/"] > img
 blogs-r.com##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
@@ -24743,9 +24740,7 @@ calcalistech.com##.Ctech_general_banner
 calcbasic.com##.sidebar:has(> .ad)
 calciomercato.com###ca_banner
 calciomercato.com###gdpr-law
-calciomercato.com##.adv--300x250:not(#generic-video-player)
 calciomercato.com##.fco-ad
-calciomercato.com$$script[tag-content="AntiAdblock"][min-length="2000"][max-length="5000"]
 calciomercato.com$$script[tag-content="new FuckAdBlock"][max-length="30000"]
 calcolareonline.eu##div[style="font-size:10px;margin-top:1px"]
 calcolosconto.it##.panel-footer
@@ -64713,9 +64708,7 @@ xpics.me##.future
 xpicse.com##li[style^="width: 320px; height: 250px; text-align: center;"]
 xplay.gg##a[href*="?utm_promo="][href*="_banner"][target="_blank"]
 xplay.gg##a[href^="https://playstake."][href*="/landing"]
-xplay.gg##a[href^="https://playstake.io/landing"]
 xplay.gg##div[class^="sc-"]:has(> a[href^="https://playstake."][href*="/landing"]:only-child)
-xplay.gg##div[class^="sc-"]:has(> a[href^="https://playstake.io/landing"]:only-child)
 xporn.tv##.standalonead
 xpornium.net##body > div[style^="position:"][onclick*="inject"]
 xpornium.net,mdy48tn97.com##div[style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2147483646;"]
