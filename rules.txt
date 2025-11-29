@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-29 07:11:03（北京时间）
+! Version: 2025-11-29 08:50:08（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66306
+! Total count: 66309
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12977,6 +12977,7 @@
 @@||myun.tenpay.com^
 @@||myuploadedpremium.de^$generichide
 @@||myvi.ru/player/$stealth
+@@||myvidplay.com^$generichide
 @@||myvidster.com/processor.php
 @@||myvidster.com^$generichide
 @@||myviptuto.com^$generichide
@@ -18394,6 +18395,7 @@
 @@||work.weixin.qq.com^
 @@||workers.dev/*%3D%3D.$xmlhttprequest,stealth=referrer
 @@||workers.dev/*.jpeg$stealth=referrer
+@@||workers.dev/*.jpg$xmlhttprequest,stealth=referrer
 @@||workers.dev/*.m3u8$stealth=referrer
 @@||world.qpic.cn^
 @@||world4.eu/wp-content/plugins/ad-inserter-pro/images/ads.png
@@ -46844,6 +46846,7 @@ neoseeker.com##.social_share_body > div.alt:has(> script)
 neoseeker.com##div[style*="background: rgb(239, 239, 239);"][style*="min-height: 355px;"]
 neoseeker.com##div[style^="text-align:center;background:"][style*="min-height:"]:has(> .text-secondary > small)
 neoseeker.com##tr.messagerow.alt[style="background-color: #E0E3EB;"]
+neoseeker.com$$script[src="/loader.min.js"]
 neowin.net###desktop_after_3rd_article
 neowin.net###ipsLayout_contentWrapper > .ipsResponsive_hidePhone > div[style="width:100%; height:100px;"]
 neowin.net##.header-banner-ads
