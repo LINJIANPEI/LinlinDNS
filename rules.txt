@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-30 20:19:43（北京时间）
+! Version: 2025-11-30 21:20:08（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 66321
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -10503,7 +10503,6 @@
 @@||hypercomments.com/api/login?$stealth=3p-cookie
 @@||hypercomments.com/auth/$stealth=3p-cookie
 @@||hyperdebrid.net^$generichide
-@@||hzcdn.io/bff/static/vendor/sourcepoint-lib/index.*.js$script,domain=marktplaats.nl
 @@||i*.gmx.com/image
 @@||i*.imagetwist.com^$image,domain=imagetwist.com
 @@||i-funbox.com/images/
@@ -35102,6 +35101,7 @@ google.com##.fbar
 google.com##.g.kno-result.rQUFld.mnr-c.g-blk
 google.com,google.ru##body > table[width="100%"][style^="border: 1px solid #"]
 google.com.hk##div#tadsdiv.top1:nth-child(2),div.m_ad,div.ad_ba
+googleads.g.doubleclick.net###abgc
 googleads.g.doubleclick.net###mys-wrapper
 googleitfor.me,a2zcrack.com##center > a[href][target="blank"] > img
 googlesightseeing.com##.comm-square
