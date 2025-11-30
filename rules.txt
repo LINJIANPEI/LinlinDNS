@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-11-30 22:10:16（北京时间）
+! Version: 2025-11-30 23:10:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66321
+! Total count: 66322
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -46850,6 +46850,7 @@ neoseeker.com###ads_page_top
 neoseeker.com###section-pagetop
 neoseeker.com##.prms_inc
 neoseeker.com##.social_share_body > div.alt:has(> script)
+neoseeker.com##[style$="min-height:355px;clear:both"]
 neoseeker.com##div[style*="background: rgb(239, 239, 239);"][style*="min-height: 355px;"]
 neoseeker.com##div[style^="text-align:center;background:"][style*="min-height:"]:has(> .text-secondary > small)
 neoseeker.com##tr.messagerow.alt[style="background-color: #E0E3EB;"]
