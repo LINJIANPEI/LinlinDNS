@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-01 06:11:16（北京时间）
+! Version: 2025-12-01 07:11:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66327
+! Total count: 66331
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14619,6 +14619,7 @@
 @@||pladform.ru/player$subdocument
 @@||planet-streaming1.com^$generichide
 @@||planetazdorovo.ru/pics/transparent_pixel.png$image,~third-party
+@@||plans.humana.com/assets/analytics-events-$script,~third-party
 @@||plantswith.com^$generichide
 @@||plantyn.com/optiext/optiextension.dll$~third-party
 @@||platform-eu.cloud.coveo.com^$stealth=3p-auth,domain=fiskars.com
@@ -15667,6 +15668,8 @@
 @@||secure.ccavenue.com/transaction/$stealth
 @@||secure.chase.com/web/auth/$stealth=referrer
 @@||secure.logmein.com/scripts/Tracking/$script,domain=logme.in|logmein.com
+@@||secure.moneygram.com/embed/*/webAnalytics/pageMapping.json?$~third-party,xmlhttprequest
+@@||secure.moneygram.com/embed/*/webAnalytics/pageMappingOverrides.json?$~third-party,xmlhttprequest
 @@||secure.quantserve.com/quant.js$domain=listeamed.net|gaystream.click
 @@||secure.quantserve.com/quant.js$xmlhttprequest,domain=bigbuttshub2.top|bigbuttshubvideos.com
 @@||secure.quantserve.com/|$xmlhttprequest,domain=facciabuco.com
@@ -27619,6 +27622,7 @@ cssmoban.com##.page-banner
 cssociety.org##.icd-overlay
 cssqt.com###mainbox > a
 cssreference.io###alo
+csst.at##.max-h-48
 csst.at##a[href^="https://trk.clash.gg/"]
 csstats.gg###faceit-banner
 csu.de##.mod-layer
