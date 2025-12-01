@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-01 15:16:05（北京时间）
+! Version: 2025-12-01 16:18:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66330
+! Total count: 66333
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10084,9 +10084,11 @@
 @@||grinx.designboom.com/www/delivery/ajs.php?zoneid=$script
 @@||groupbycloud.com/gb-tracker-client-3.min.js
 @@||groupprohead.gtimg.cn^
+@@||grp07.ias.rakuten.co.jp^
 @@||grp07.ias.rakuten.co.jp^|
 @@||grpc.biliapi.net^
 @@||gs.statcounter.com/chart.php$script,third-party
+@@||gs.statcounter.com^
 @@||gs.statcounter.com^|
 @@||gsm1x.xyz^$generichide
 @@||gsp0.baidu.com^
@@ -12929,7 +12931,6 @@
 @@||my.onvista.de^$stealth=dpi
 @@||my.prom.ua/*/iframe$stealth=referrer
 @@||my.prom.ua/remote/$stealth=referrer
-@@||my.tealiumiq.com^
 @@||my.tealiumiq.com^|
 @@||my.westfieldinsurance.com^$document
 @@||myabandonware.com/wp-content/plugins/wp-banners/js/wp-banners.js
@@ -16204,7 +16205,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -27203,6 +27203,7 @@ coursewikia.com##.custom-infeed-wrap-article
 coursewikia.com##.gt-section-ad
 cover-4-less.com##.elementor-popup-modal
 coveragemap.com##.placement-wrapper
+coveragemap.com##.promo-card
 coverapi.store##.home_lefts
 covertimes.com###privacyPolicy
 coveteur.com###native_1
@@ -38195,6 +38196,7 @@ image.baidu.com##div[id^="relecom"]
 image.baidu.com,nongjitong.com##.recommend
 image.baidu.com,xizi.com##.recommend
 image.pi7.org###sidebarxad
+image.pi7.org##.artiad
 image.so.com###js_textlink
 image.so.com###starlist
 image.so.com##.cmitem
@@ -60536,6 +60538,7 @@ turbobyte.net,turbobit.net##div[style^="text-align:center;"] > a[target="_blanck
 turbocso.hu###auroraOverlay
 turbozentrum.de###consentmanager
 tureng.com###tureng-cambly-ad-placeholder
+tureng.com##.debug-ad
 tureng.com##.termresults-ad-tr
 tureng.com##div[data-nokta-zone]
 turismo.gal##.bandaAceptacion
