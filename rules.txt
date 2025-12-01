@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-01 20:22:39（北京时间）
+! Version: 2025-12-01 21:30:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66335
+! Total count: 66347
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10639,6 +10639,7 @@
 @@||iframe.dacast.com/vod/$stealth=referrer
 @@||iframe.simplex-affiliates.com^$stealth=referrer
 @@||iframe.statics.space/magma/rc/libs/contribAds/*/videojs.ads.min.js$domain=vmf.edge-apps.net
+@@||ifsaembed.site^$stealth=referrer
 @@||igen.fr/sites/www.igen.fr/files/advagg_js/
 @@||ign.com^$generichide
 @@||ignitetv.rogers.com/js/api/fingerprint.js$script,~third-party
@@ -11581,6 +11582,7 @@
 @@||kabel-tv-plus.blogspot.com^$generichide
 @@||kabumap.com/servlets/kabumap/html/common/img/ad/$~third-party
 @@||kad.arbitr.ru^$stealth=push
+@@||kadolop.cfd/*.mp4$stealth=referrer
 @@||kafan.cn^$stealth=dpi
 @@||kaitao.cn/public/wenda/ad/css/ds-un-detail.css
 @@||kameleoon.eu/engine.js$domain=welt.de
@@ -38381,6 +38383,7 @@ in-porn.com,sextu.com,mrgay.tube,xmilf.com,blackporn.tube,bdsmx.tube,inporn.com#
 in-porn.com,sextu.com,mrgay.tube,xmilf.com,blackporn.tube,inporn.com##.video-page__content > div.right
 in-trend.biz##body > [id][style^="z-index"]
 in.gr##.das-mmiddle
+in.gr##.parent__div:has(> div[id^="300x250_"])
 in.gr##.shopflix-wrapper
 in.puma.com##puma-cookie-banner
 inagrm.com##.cookies
@@ -39343,6 +39346,8 @@ ispazio.net##.a-wrap
 ispazio.net##.adverts-widget
 ispazio.net##.entry-content > .entr-footer
 ispazio.net##.entry-content > div[style="float:left;height:300px;"]
+ispazio.net##.theiaStickySidebar > .elementor-element:has(.adsbygoogle)
+ispazio.net##div[id^="adsense-container-"]
 ispreview.co.uk###footer-slot-3
 ispreview.co.uk###mobile-takeover-slot-8
 ispreview.co.uk###nright_nav > div > div[style]:has(> div.ntop_box > div > div[align="center"] > div.vm-placement)
@@ -40743,6 +40748,9 @@ kathmandupost.com##.pt-0
 kathmandupost.com##.sticky--bottom
 katorishintoryu.it###SITE_ROOT ~ div[data-reactid*="siteAspectsContainer"]
 katowice-airport.com##body > div:not([id]):not([class])
+katowice24.info##.adv
+katowice24.info##.grid__ad
+katowice24.info##.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"] > a[href^="https://www.sdsm.pl/"])
 katsbotanicals.com##.conv_type_bar
 katu.com##div[class^="DisplayAdvert"]
 katu.com##div[class^="StoryPage_storyTopAdContainer"]
@@ -54282,6 +54290,8 @@ senzuri.tube##.video-tube-friends
 senzuri.tube##.video-tube-friends-wrapper
 senzuri.tube##div[class^="content"] > div > div.container + div[class]
 senzuri.tube,vjav.com##.content > .overlay-hidden + div > .video-tube-friends + div[class]
+seoghoer.dk##div[class]:has(> div.text-\[\#323232\] + div[data-type=ad])
+seoghoer.dk##main > div.bg-grey-200:has(> div[class] > div[data-type=ad])
 seomagnifier.com##.xd_top_box
 seopolarity.com,toolss.net,webnots.com##.sidebar_adds
 seostudio.tools##div[class^="sidebar_"] > a[target="_blank"] > img
@@ -56908,6 +56918,7 @@ streamcr7.com##.container > a[href].btn-outline-primary
 streamcraft.com##.privacy-wraper
 streameast.app###stream-info > .flex > div[target="_blank"]
 streameast.to##.google-auto-placed
+streamed.pk##.py-0 > .border.p-4:has(> button + a[target="_blank"])
 streamed.pk,streamed.st,streami.su##div[role="alert"]
 streamgoals.com##.vjs-overlay > a[target="_blank"]
 streamhls.to##div[id^="clickCatcher"]
@@ -62724,6 +62735,7 @@ washingtonpost.com##div[class*="pb-f-ad-leaderboard"]
 washingtonpost.com##div[class="pb-lg-mod"][data-qa="right-rail-item"]
 washingtonpost.com##div[data-qa="right-rail-item"]:has(> div[data-qa="right-rail-ad"])
 washingtonpost.com##main > aside.grid-item > div[style="height: 1250px;"]
+washingtonpost.com##wp-ad-wrapper
 washingtontimes.com##.bigtext > hr
 washingtontimes.com##.connatixcontainer
 washingtontimes.com##.piano-end-article-reco
