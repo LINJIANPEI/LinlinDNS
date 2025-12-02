@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-02 15:15:15（北京时间）
+! Version: 2025-12-02 16:17:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66384
+! Total count: 66386
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12943,6 +12943,7 @@
 @@||my.onvista.de^$stealth=dpi
 @@||my.prom.ua/*/iframe$stealth=referrer
 @@||my.prom.ua/remote/$stealth=referrer
+@@||my.tealiumiq.com^
 @@||my.tealiumiq.com^|
 @@||my.westfieldinsurance.com^$document
 @@||myabandonware.com/wp-content/plugins/wp-banners/js/wp-banners.js
@@ -27467,6 +27468,7 @@ crunchyroll.com##.contents > p[style="text-align: center;"] > a[href][target="_b
 crx4.com,galacg.me,moneyweekly.com.tw###carousel-example-generic
 crx4chrome.com##div:is(.blogposts-wrapper, [style^="margin:"]) > .topic[style^="min-height:"]
 crx4chrome.com##div[style*="min-height:280px;"]
+crxs.me##.push-top
 cryps.info###cook
 cryptlife.com##div[style^="float:none;"] > font[color="#D3D3D3"] > center
 crypto-fun-faucet.de###captcha-adspace > p > a[target="_blank"][rel="noopener"]
