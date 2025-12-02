@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-02 23:13:46（北京时间）
+! Version: 2025-12-03 00:15:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66383
+! Total count: 66376
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14724,6 +14724,7 @@
 @@||player.ynet.co.il/*/flowplayer.ads.*.ynet.js$domain=ynet.co.il
 @@||playercdn.net/*.mp4
 @@||playercdn.net/*.mp4$domain=anyanime.com
+@@||playerp2p.com^$stealth=referrer
 @@||players.fichub.com/plugins/adobe/$domain=24kitchen.pt
 @@||playlists.rocks^$generichide
 @@||playmyopinion.com/assets/developer/js/prebid-ads.js
@@ -18513,6 +18514,8 @@
 @@||www.crossoverchina.com^
 @@||www.data.mistat.*xiaomi.com^
 @@||www.data.sec*.miui.com^
+@@||www.datadoghq-browser-agent.com^
+@@||www.datadoghq-browser-agent.com^|
 @@||www.deepseek.com^
 @@||www.dell.com^
 @@||www.dianping.com^
@@ -23211,7 +23214,6 @@ bilibili.com##.bili-video-card__wrap > a[href^="http"]:not([href*=".bilibili.com
 bilibili.com##.btn-ad
 bilibili.com##.btn-ctnr
 bilibili.com##.clearfix.h5-download-bar
-bilibili.com##.container > .bili-feed-card:has(> div.bili-video-card  div.bili-video-card__info--no-interest + h3 > a[target="_blank"]:not([href^="https://www.bilibili.com/"]))
 bilibili.com##.container > .bili-feed-card:has(> div.bili-video-card div.bili-video-card__info--no-interest + h3 > a[target="_blank"]:not([href^="https://www.bilibili.com/"]))
 bilibili.com##.container > div.bili-video-card.is-rcmd:not(:has(> *))
 bilibili.com##.desktop-download-tip
@@ -31466,7 +31468,6 @@ faapy.com##a[href="https://faapy.com/cs/mylf/"]
 faayoo.com###footer_fd
 faayoo.com##.qr_code
 fabasoft.com##.tracking-alert
-fabconvert.com,knews.com.tw,1905.com,news.ltn.com.tw,commonhealth.com.tw,health.tvbs.com.tw,idreamx.com,xchina.co,manhuafen.com,world68.com##.ad
 fabled.com##.alert, #alert
 facciabuco.com##.bannerpost
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###megamall_rhc_ssfy_pagelet
@@ -48155,6 +48156,7 @@ obrazkowo.pl##app-list .col-md-10 > .ng-star-inserted > .ng-star-inserted:has(> 
 obrazkowo.pl##body .publiftAd
 observatornews.ro##.outstream-text
 observer.com###top-banner-container
+observerbd.com##.col-lg-4 > div[style^="padding"]:has(> ins.adsbygoogle)
 obserwatorgospodarczy.pl###footer-widgets-container
 obserwatorgospodarczy.pl###tie-wrapper > .stream-item-above-header > a[target="_blank"]
 obserwatorgospodarczy.pl###tie-wrapper > div[style="text-align: center;"] > a:not([href*="obserwatorgospodarczy.pl"]) > img
@@ -64391,15 +64393,6 @@ xcar.com.cn###eMeng
 xcar.com.cn###show_car
 xcar.com.cn##div[class^="adset"]
 xchina.co##.block-overlay
-xchina.co##.content-box > .list > .item:not(.photo-image):has(> a[clickmode="cpt"])
-xchina.co##.content-box > .list > .item:not(.photo-image):has(> div > ins[data-zoneid])
-xchina.co##.outer-banner
-xchina.co##.photos > div.item:has(> div > a[target="_blank"])
-xchina.co##.photos > div.item:has(> div[class^="exoclick_"])
-xchina.co##.push-top
-xchina.co##div:has(> div:only-child > .media img[src*="/ad/"])
-xchina.co##div[class^="item photo zone"]
-xchina.co##div[style*="width: 300px;"][style*="height: 455px;"]
 xclient.info###pop_business
 xcmh.cc##div[style="margin:0 auto 12px; adding:0;width:980px;height:250px;overflow:hidden;"]
 xconvert.com##.m-container
