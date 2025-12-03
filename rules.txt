@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-03 20:22:50（北京时间）
+! Version: 2025-12-03 21:30:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66346
+! Total count: 66354
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10742,6 +10742,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=cwseed.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=dailystar.co.uk
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=danet.vn
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=denik.cz
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=digitalspy.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=dingit.tv
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=discoveryplus.in
@@ -14645,6 +14646,7 @@
 @@||play.vidyard.com^$stealth=referrer|webrtc
 @@||play1.heytapimage.com^
 @@||playback.api.streaks.jp/*/projects/tver-*/medias/$domain=tver.jp,stealth=ip
+@@||playcloud1.asia^$stealth=referrer
 @@||playcode.io^$generichide
 @@||playep.pro/log_event$~third-party,xmlhttprequest
 @@||player*.cinestream.bid^$stealth=referrer
@@ -28476,9 +28478,11 @@ demonslayermanga.com##.text-center > center > a[href] > img[border="0"]
 demonslayermanga.com,readjujutsukaisen.com,readneverland.com##.js-a-container
 demotywatory.pl##article > .demotivator > video[id="vjs-rcp1"]:empty
 denic.de##.notification
+denik.cz##.leaderboard-top
 denik.cz##.reklama-box-leaderboard
 denik.cz##body .ad:not(#style_important)
 denik.cz##div[class^="reklama-box"]
+denik.cz,koktejl.cz##.content-box-wrap:has(> .content-box-wrap__inner--placeholder:only-child)
 denikreferendum.cz##.PopupBackground, .GDPRPopup
 denizbank.com###fixedFooterBar
 denley.pl###dialog_cover, .dialog_wrapper_cookie
@@ -59798,6 +59802,9 @@ toolfk.com##.top > div[style="font-size: 12px;text-align: center;margin-top:6px;
 toolfk.com##a[class^="tip-alert"]
 toolfk.com##a[href*=".xiuxiandou.com/"]
 toolfk.com##wavy + div[style]
+toolify.ai##.banner-top-sponsored-by
+toolify.ai##.tools > div.flex:has(> div.ap-tag)
+toolify.ai##.top-sponsored
 tools.2345.com##._hb-box + .mod
 tools.bugscaner.com###div_qrcode_container
 tools.seobook.com###blog
@@ -64728,6 +64735,7 @@ xoilac23.net##.sk_balloon
 xoilac23.net##body .footer-banner:not(#style_important)
 xometry.com###lo-privacy-banner
 xopenload.video###video_ads
+xorgasmo.com##newads
 xoxo-mobile.at###cc-modal-1, .modal-backdrop
 xozilla.com##.JuicyAds-holder
 xozilla.com##.banner-top
