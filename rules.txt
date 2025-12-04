@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-04 20:23:20（北京时间）
+! Version: 2025-12-04 21:30:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66364
+! Total count: 66372
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12754,6 +12754,7 @@
 @@||moea.gov.tw/EgisWeb/Scripts/google-analytics.js
 @@||moegirl.org.cn^$generichide
 @@||moeni.net^$stealth=webrtc
+@@||mofl.pro^$stealth=referrer
 @@||moggy-image-1251316161.file.myqcloud.com^
 @@||mohanlalmovieshub.blogspot.com^$generichide
 @@||mojedatovaschranka.cz^$stealth=dpi
@@ -17963,6 +17964,7 @@
 @@||vid.springserve.com/vast/*einthusan.tv
 @@||vidabytes.com^$generichide
 @@||vidbom.com^$domain=anyanime.com
+@@||vidbox.site/streaming/$stealth=referrer
 @@||vidcache.net:*/*/*.mp4$stealth=referrer
 @@||vidcdn.co/iframe/$stealth=referrer
 @@||vide0.net^$generichide
@@ -27301,6 +27303,7 @@ cravesandflames.com,codesnse.com##form a[rel="nofollow"] > img
 crazyblog.in,studyuo.com##div[id*="_"][style^="min-width"]
 crazygames.com##.css-1h6nq0a
 crazygames.com##.sideCol > .sidePanel.sky
+crazygames.com##div[class^="GameInfo_rightColumn"]
 crazygames.com##div[style^="height: 90px;"]
 crazygames.com,shellshock.io,minijuegos.com##.chw-progress-bar-wrap
 crazyhairs.de###cookies
@@ -41144,6 +41147,7 @@ knime.com##.cookie-modal
 knoema.com###gdpr
 knowledgecottonapparel.com##.cc_container
 knowmore.cc##.ins
+knowtechie.com###mvp-side-wrap a[rel*="sponsored"]
 knowunity.de##.Toastify ~ div
 knowyourmeme.com##.header-unit-wrapper
 knowyourmeme.com##.incontent-leaderboard-unit-wrapper
@@ -46060,6 +46064,7 @@ muzhuangnet.com##.widget_sentence
 muzijie.com##div[style="height: 280px;"]
 muzyka.interia.pl##.adStandardTopContainerWraper
 muzyka.interia.pl##body .inpl-gallery-ad-horizontal:not(#style_important)
+muzzleloadingforum.com##div[data-widget-key="unlistme"]
 mv-voice.com##.ad-break
 mvagusta.com##div[class^="bannerContainer"]
 mvcat.com###ad-jd
@@ -47158,6 +47163,7 @@ news.qq.com##+js(set, SSPAd.prototype.loadAd, noopFunc)
 news.qq.com##.download-banner-wrap
 news.qq.com##.download-content
 news.qq.com##.godown.qqcom_fb-item
+news.qq.com##.slider-list.swiper-horizontal.swiper-initialized.swiper
 news.qq.com##.time > a[style="position: absolute;top: -8px;left: 296px;"]
 news.qq.com##div[id="download-btn-wrapid"]
 news.sina.com.cn##.news_weixin_ercode
@@ -52009,6 +52015,7 @@ qq.com###barrageBase
 qq.com###bottom-sponsor
 qq.com###comic_ad
 qq.com###coo_qqBrowser
+qq.com###download-btn-wrapid
 qq.com###emailLogin > .hd-slider
 qq.com###focus_jordon
 qq.com###fr_ad
@@ -55829,6 +55836,7 @@ sogou.com,soso.com###PZL
 sogou.com,soso.com###PZR
 sogou.com,soso.com##.sponsored
 sohu.com###apkBanner
+sohu.com###bottomBanner
 sohu.com###bottomBanner[data-spm='b-mb'][data-spm-stop='init']
 sohu.com###hotpicnew
 sohu.com###middleBanner[data-spm='a-mb'][data-spm-stop='init']
