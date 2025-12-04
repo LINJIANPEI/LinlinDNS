@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-04 15:14:41（北京时间）
+! Version: 2025-12-04 16:17:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66362
+! Total count: 66364
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4980,6 +4980,7 @@
 @@||acortalink.me/s.php?$stealth=referrer
 @@||acs-m.daraz.com.bd^
 @@||acs-m.daraz.com.bd^|
+@@||acs-m.daraz.pk^
 @@||acs-m.daraz.pk^|
 @@||acs.m.taobao.com
 @@||acs.m.taobao.com^
@@ -63766,6 +63767,7 @@ wnacg.com##script + div > a > img
 wnacg.com,wnacg.org##a[href^="http"]:not([href*="wnacg."]) img
 wnacg.com,wnacg.org##img[width="399"][height*="6"]
 wnacg.com,wnacg.org##script + div > a > img
+wnacg05.cc###control_block
 wncv.com##.simple-image
 wnd.com##.leader-board-top
 wnflb2023.com##.GzList
