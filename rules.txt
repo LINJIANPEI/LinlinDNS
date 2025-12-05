@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-05 23:13:00（北京时间）
+! Version: 2025-12-06 00:14:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66387
+! Total count: 66390
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11833,6 +11833,7 @@
 @@||lesinrocks.com^$generichide
 @@||lesports.com/pc/??*/click_statistics/
 @@||lessornot.ws^$stealth=ip
+@@||lestore.lenovo.com^$stealth=referrer
 @@||letmegpt.com/js/gpt.js$~third-party
 @@||letocard.fr/wp-content/uploads/$image,~third-party
 @@||letras2.com^$generichide
@@ -27455,6 +27456,7 @@ crunchyroll.com##.contents > p[style="text-align: center;"] > a[href][target="_b
 crx4.com,galacg.me,moneyweekly.com.tw###carousel-example-generic
 crx4chrome.com##div:is(.blogposts-wrapper, [style^="margin:"]) > .topic[style^="min-height:"]
 crx4chrome.com##div[style*="min-height:280px;"]
+crxs.me##.content-box:has(> div[class^="static-container-"] > a[href][target="_blank"])
 crxs.me##.push-top
 cryps.info###cook
 cryptlife.com##div[style^="float:none;"] > font[color="#D3D3D3"] > center
@@ -30636,6 +30638,7 @@ ems.press##section[aria-labelledby*="analytics-consent"]
 emsc.eu###splashscreen
 emtecko.cz###__loadCookie
 emturbovid.com##.div_pop
+emturbovid.com,tuborstb.co###pop
 emturbovid.com,tuborstb.co,85videos.com###pop
 emulatorgames.net##.mx-auto.text-center:has(> div.site-label)
 emulatorgames.net##.site-label
@@ -33839,6 +33842,7 @@ gamepur.com##.region-sidebar-second-top > .block:not(#block-quicktabs-content_co
 gamepur.com##.wp-block-dotesports-affiliate-button
 gamepur.com##body .proper-ad-unit:not(#style_important)
 gamer.com.tw###BH-bigbanner
+gamer.com.tw###billboardAd
 gamer.com.tw###flyRightBox
 gamer.com.tw###flySalve
 gamer.com.tw##.a-mercy-d:not([href*=".gamer."])
@@ -35732,8 +35736,6 @@ h1.versicherungsjournal.de$domain=versicherungsjournal.de
 h2porn.com##.cube-thumbs-holder
 h2porn.com##.side-spot
 h5.m.taobao.com##[style*="top: 0rem"]
-haafedk2.com##body > p > a[target="_blank"]
-haafedk2.com##div[id^="sticky-ad-"]
 haafedkgsm.com,haafedk2.com##body > p > a[target="_blank"]
 haafedkgsm.com,haafedk2.com##div[id^="sticky-ad-"]
 haalo.pl###cooks
@@ -55561,6 +55563,7 @@ snopes.com##.banner_ad_between_sections
 snopes.com##.card-body > p+div.creative
 snopes.com##.outer-ad-unit-wrapper
 snopes.com##.sidebar_ad
+snopes.com$$script:contains(adblock_notice)
 snow-forecast.com###dansbadgecollection
 snow-forecast.com,weather-forecast.com##.bn-placeholder
 snowbrains.com##.fuse-slot-dynamic
