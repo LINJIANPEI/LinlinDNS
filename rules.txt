@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-06 08:50:23（北京时间）
+! Version: 2025-12-06 10:25:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66397
+! Total count: 66399
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3566,6 +3566,7 @@
 6fzd.com,fzd3.com###comiis_app_block_84
 6fzd.com,fzd3.com###tuiguang
 6japaneseporn.com##.player-place > .player-place-wide-bn-ob
+6park.com##.main_news_list > a[href^="http"]:not([href*="6park.com"])
 6park.com##a[href*=".php?key="]
 6park.com##a[href*="/link.php?key="]
 6park.com##a[href*="bpropolis."]
@@ -3578,6 +3579,7 @@
 6park.com##table[width][align="center"] > tbody > tr > td[bgcolor="#FFFFEE"]:has(> div.adv-6park)
 6park.com##table[width][align="center"] > tbody > tr > td[bgcolor="#FFFFEE"]:has(> div[id*="ScriptRoot"])
 6park.com##table[width][align="center"] > tbody > tr > td[bgcolor="#FFFFEE"]:has(> table[width="100%"] > tbody > tr > td > div.adv-6park)
+6park.com##td[style="line-height:30px;text-align:center;color:red;background-color:white;"]
 6park.com,club.6parkbbs.com##.adv-6park
 6parknews.com##.ad-view
 6parknews.com##.other_list_ad
@@ -3687,7 +3689,6 @@
 85po.com,babepump.com,fapnfuck.com,fuqster.com,povxl.com,sexpester.com,w1mp.com,w4nkr.com,xmateur.com##.link-offer
 85tube.com##.block-album > .table > .opt
 85tube.com##.block-video > .table
-85videos.com##.haha-body
 85wp.com###a3_diy2
 85wp.com##.top-ad-img
 8684.cn,8684.com##div[id*="adid"]
@@ -30645,7 +30646,6 @@ emsc.eu###splashscreen
 emtecko.cz###__loadCookie
 emturbovid.com##.div_pop
 emturbovid.com,tuborstb.co###pop
-emturbovid.com,tuborstb.co,85videos.com###pop
 emulatorgames.net##.mx-auto.text-center:has(> div.site-label)
 emulatorgames.net##.site-label
 emulatorgames.net##.site-unit-lg
@@ -61391,7 +61391,9 @@ upgradeguy.com##a[href="https://upgradeguy.link/IP-Vanish-DEAL"] > img
 upgradeguy.com##footer > div.ribbon-wrap:has(a[href="https://upgradeguy.link/IP-Vanish-DEAL"])
 upi.com##.ad_slot_inread
 upi.com##.col-md-12 > table
+upi.com##.playwire-ad-unit
 upi.com##.text-center.mt-5
+upi.com##[style="height: 102px; min-width: 982px; margin: 0 auto;"]
 upi.com##article > div.text-center:has(> div.ad_tag)
 upi.com##body > div.container:has(> div.row > div.text-center > table td.ad_tag)
 upjoke.com##div[style="margin-bottom:0.5rem; min-height:250px;"]
