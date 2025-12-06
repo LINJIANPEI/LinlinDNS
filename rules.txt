@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-06 11:38:06（北京时间）
+! Version: 2025-12-06 12:13:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66399
+! Total count: 66402
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25033,6 +25033,7 @@ cargoboard.com##body > .fixed-bottom.bg-gray
 cargurus.co.uk##.leaderboardWrapper
 cargurus.com###leaderboardWrapper
 cargurus.com##.Gi1Z6i
+cargurus.com##._tileFrame_1bakq_8:has(p[data-testid="sponsored-text"])
 cargurus.com##.breadcrumbsAdsWrapper
 cargurus.com##.ranxnv:has(.leaderboard_inline)
 cargurus.com##[class^="_tileFrame_"]:has([data-cg-ft$="-sponsored"])
@@ -27101,6 +27102,7 @@ coosavalleynews.com##div[id^="coosa-"]
 copenhagenstudios.com###cookie-layer
 copilot.microsoft.com##.b_ad
 copilot.microsoft.com##div[data-ads-rg]
+copilot.microsoft.com##div[data-testid="ads-card"]
 copmadrid.org###div_cookies_nueva
 copperconcept.org##.coco-cookiebar
 copro.pw###text-31
@@ -61173,6 +61175,7 @@ ullstein.de##div[role="alertdialog"][aria-label*="Cookies"]
 uloz.to###bandzoneHint
 ulsterbank.ie##.cookie
 ulta.com##.CriteoProductRail
+ulta.com##.ProductCard:has(.ProductCard__sponsoredText > p.Text-ds)
 ulta.com##.ProductListingResults__productCard:has(.ProductCard__sponsoredText > p.Text-ds)
 ultimaker.com##.consent-bar, .um-consent-bar
 ultimate-catch.eu,bedrat.xyz,fx-22.com###page ~ div[id][class*=" "]
