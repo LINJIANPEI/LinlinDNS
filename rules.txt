@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-09 07:11:34（北京时间）
+! Version: 2025-12-09 08:53:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66414
+! Total count: 66418
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7505,6 +7505,7 @@
 @@||chpadblock.com^|$xmlhttprequest,domain=keyrblx.com
 @@||chrome-infra-packages.appspot.com^
 @@||chrome.google.com/webstore/detail/$stealth=3p-cookie
+@@||chsi-zyghds.oss-cn-beijing.aliyuncs.com^$stealth=referrer,domain=zgs.chsi.com.cn
 @@||chtoen.com/js/adsbygoogle.js
 @@||chuangkit.com^$generichide
 @@||chuomilk.co.jp^$stealth=dpi
@@ -28064,6 +28065,8 @@ dailysocial.id##.news__detail-ads-subs
 dailysocial.id,tiktok.com##.banner-ads
 dailystar.co.uk##.commercial-box-style
 dailystar.co.uk##[data-testid="commercial-above-header-box-1"] {remove:true;}
+dailystar.co.uk##[data-testid="commercial-label-gpt"]
+dailystar.co.uk##[data-tmdatatrack-type="commercial"]
 dailystar.co.uk##amp-iframe[height="40"]
 dailystar.co.uk,abcnews.go.com,manchestereveningnews.co.uk,euronews.com,wgrz.com,newatlas.com,plymouthherald.co.uk,chroniclelive.co.uk,hulldailymail.co.uk,thesportbible.com,foreignpolicy.com##.taboola
 dailytelegraph.com.au##.widget_newscorpau_ads
@@ -64490,6 +64493,7 @@ xgan.cn##body > center > a[target="_blank"][rel="nofollow"]
 xgaytube.com##a[href^="https://stats.hprofits.com"]
 xgaytube.tv##.b-header > .b-row > .b-main-nav > ul > li > a[href^="https://hd100546b.com/"]
 xgcartoon.com,dailygh.com###video-top-ad
+xgeshu.com,boqushu.com##div[style="display:block;width:100%;height:100px;overflow:hidden;"]
 xgore.net,mehndihairachnewaali.com##.e3lan
 xgp.pl###hdrbnr
 xgp.pl###screeningBg
