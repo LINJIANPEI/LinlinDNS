@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14188
+! Total count: 14192
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-12-09 20:54:49（北京时间）
+! Version: 2025-12-10 10:01:06（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -11294,6 +11294,7 @@
 @@||data.alicloudccp.com^$stealth,domain=aliyundrive.com
 @@||data.mistat.xiaomi.com^$app=com.tencent.mm
 @@||data.reactandshare.com/api/plugin/$stealth=referrer,domain=maanmittauslaitos.fi
+@@||data.service.paypal.com^|
 @@||data.simpleupload.net/download/$stealth=referrer
 @@||datacloudmail.ru^$domain=cloud.mail.ru,stealth=3p-cookie|referrer
 @@||datacomp.sk^$stealth=dpi
@@ -11982,6 +11983,7 @@
 @@||expedia.com/minify/siteAnalytics-$script
 @@||expedia.com/static/default/default/scripts/TealeafSDK.js
 @@||expedia.com/static/default/default/scripts/siteAnalytics.js
+@@||experience.ninetailed.co/v2/organizations/*/environments/main/profiles/$xmlhttprequest,domain=dkb.de
 @@||experienceleague.adobe.com^$~third-party
 @@||explainxkcd.com/wiki/images/$image,~third-party
 @@||explosivemenu.com^$generichide
@@ -13640,6 +13642,7 @@
 @@||googletagmanager.com/gtm.js^$domain=raiplay.it
 @@||googletagmanager.com/gtm.js^$domain=raywhitepakenham.com.au
 @@||googletagmanager.com/gtm.js^$domain=tn.com.ar
+@@||googletagmanager.com/ns.html$subdocument,domain=dkb.de
 @@||googletagmanager.com/ns.html?id=GTM-$domain=porntoday.ws|netuplayer.top|netu.ac|hqq.to|hqq.ac|speedporn.net|meucdn.vip|yandexcdn.com|waaw1.tv|waaw.tv|hqq.tv|younetu.*
 @@||googletagmanager.com^$domain=addons.opera.com
 @@||googletagmanager.com^$domain=mobilmania.cz
@@ -21394,6 +21397,7 @@
 @@||yoemigro.com^$generichide
 @@||yogajournal.com^$stealth=dpi
 @@||yoima.hatenadiary.com^$generichide
+@@||yoima2.hatenablog.com^$generichide
 @@||yolla-d.openx.net/|$script,domain=cdn.htmlgames.com
 @@||yonaplay.org/embed.php$stealth=referrer
 @@||yoox.com/images/$stealth=useragent
