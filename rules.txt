@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-10 15:16:10（北京时间）
+! Version: 2025-12-10 16:17:10（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66441
+! Total count: 66454
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9746,6 +9746,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -9760,6 +9761,7 @@
 @@||go.kr^$stealth=dpi
 @@||go.onelink.me/*?pid=
 @@||go.redirectingat.com/*&url=$domain=forums.redflagdeals.com
+@@||go.redirectingat.com^
 @@||go.redirectingat.com^$document
 @@||go.redirectingat.com^|
 @@||go.scorptec.com.au^
@@ -10090,6 +10092,7 @@
 @@||grimoireoss-pa.clients6.google.com^$domain=source.chromium.org,stealth=referrer
 @@||grimoireoss-pa.clients6.google.com^$stealth=referrer,domain=cs.opensource.google
 @@||grinx.designboom.com/www/delivery/ajs.php?zoneid=$script
+@@||grodnoplustv.by^$stealth=dpi
 @@||groupbycloud.com/gb-tracker-client-3.min.js
 @@||groupprohead.gtimg.cn^
 @@||grp07.ias.rakuten.co.jp^
@@ -11288,6 +11291,7 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
+@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -22425,6 +22429,7 @@ baku.ws##.side-bnr
 bakupost.az##.news-viewer-item-content > iframe
 balarm.it##.separatore-sidebar:empty
 balarm.it##.text-container > div[style^="margin: 40px 0 !important; width: 630px !important; height:170px !important; background: #"]
+balatrogame.fandom.com##.page__right-rail:has(> .right-rail-wrapper > #rail-boxad-wrapper)
 balcamp.pl##.config-messages
 baldursgate3.game##.ciastko
 balkangreenenergynews.com##.banner-l
@@ -24780,7 +24785,11 @@ calcolosconto.it##.panel-footer
 calcolostipendio.it##.bold_text
 calcudoku.org###right_td
 calculat.io##.calc67-container
+calculateaspectratio.com##.flyer
+calculateaspectratio.com##.rio
+calculateaspectratio.com##.spoon
 calculateaspectratio.com##.waldo
+calculateaspectratio.com##aside > p:has(a[href*=".projectorscreen.com/"])
 calculator-online.net##.adds
 calculator-online.net##div[class="center"][style^="min-height: 90px"]
 calculator.net##div[style^="padding-top:10px"][style*="min-height:280px"]
@@ -43911,6 +43920,7 @@ mansurfer.com##.footerbanner
 mansurfer.com##.headerbanner
 mansurfer.com##a[href*="/out/"]
 manta.com##.adsbygoogle
+manualmachine.com##.banner_top
 manualslib.com##.abp_adv_s-title
 manualslib.com##.policy, #policy, .cpolicy
 manualslib.es,manualslib.de,manualslib.com##.manualban
@@ -47884,6 +47894,7 @@ novapdf.com###novapdf_accept_cookies
 novatech.com.pl###cooki
 novekedes.hu##.gate-banner-poser
 novelcool.com##.mangaread-ad-box
+novelcrow.com##.code-block-3
 novelfire.net##.nf-ads
 novelgames.com##.gamelistGame.commonEt
 novelgames.com##div[id^="forums"][id*="Et"]
@@ -55805,6 +55816,7 @@ softpedia.com##div[class^="grid"]:has(> hr:first-child + .ad:last-child)
 softpedia.com##div[class^="grid"][style="display: none !important;"] + .grid_48:has(> hr:only-child)
 softpedia.com##div[class^="mgtop"][style^="width: 100%; height: 90px;"]
 softpedia.com##div[role="main"] > div[class][id]:has(> div:only-child > div.ad)
+softsea.com##.softseaads
 softserialkey.com##center > input[type="button"][onclick^="window.open"]
 software-on.com##._ning_cont > ._ning_inner
 software.informer.com###bnr_block
@@ -59843,6 +59855,7 @@ tomshardware.com###rightcol_top + .space-b30
 tomshardware.com###rightcol_top_anchor
 tomshw.it##.adv
 tomshw.it##.customads
+tomshw.it##.customads__container_v2
 tomshw.it##div[wire\:id] > .relative:has(> .banner-vendor-link)
 tomshw.it##div[wire\:snapshot*="offer"]
 tomtom.com###themeFooter, div[data-component-name="Footer"] ~ .fixed
