@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-11 07:10:22（北京时间）
+! Version: 2025-12-11 08:55:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66469
+! Total count: 66481
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3981,6 +3981,8 @@
 @@-ds.metric.gstatic.com^|
 @@-social-bar.$domain=mobi.yahoo.com
 @@-template-ads/*$domain=rapidgrab.pl
+@@.*.*/player.html?mdata=*&ilang=$stealth=referrer
+@@.3xstm.*.json?_ver=*&_ctump=$stealth=referrer,xmlhttprequest
 @@.adcenter.$domain=indiansgetfucked.com
 @@.adserver.$domain=litv.tv
 @@.amazon.*/sample/$stealth=referrer
@@ -4864,6 +4866,7 @@
 @@||9anime.vip/user/
 @@||9bis.net/advert.js
 @@||9cache.com^$stealth=referrer,domain=9gag.com
+@@||9filmyzilla.lol^$generichide
 @@||9ketsuki.info^$generichide
 @@||9now.com.au^$generichide
 @@||9sblog.com^$generichide
@@ -14154,6 +14157,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zdopravy.cz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zefoy.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zeriun.cc
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zhongguose.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zobacz.ws
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=bdstream.site
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=citroen-club.cz|renault-club.cz
@@ -14164,6 +14168,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=10play.com.au|10.com.au
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=3dtuning.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=4fuk.me
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=9filmyzilla.lol
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=aii.sh|tii.la|oko.sh|tpi.li|oii.la
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=alfred.camera
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=amritadrino.com|bhojpuritop.in
@@ -26560,6 +26565,7 @@ codernav.com##.io-widget-ad-lunbotu
 coderutil.com##.head-recommend-adv
 coderutil.com##.search-module + a
 coderwall.com##._300x250
+codeshack.io,teenvogue.com,playboard.co,emojiall.com,computerhope.com,amkstation.com##.ad
 codeshare.io###codeshare > .sp-tile
 codesignal.com##.elementor-popup-modal
 codesnail.com##.inside-right-sidebar > #custom_html-2
@@ -42942,6 +42948,7 @@ lowendbox.com##img[width="300"][height="250"]
 lowendbox.com##img[width="300"][height="70"]
 lowendspirit.com##div[class$="banners-holder"]
 lowendtalk.com###Foot > a[href] > img
+lowendtalk.com###Panel a[href^="https:"][target="_blank"][title][alt][rel="noopener"]
 lowendtalk.com##.Row > #Panel > div:not([class]):not([id]) > a[href] > img
 lowendtalk.com##.Row > #Panel >a[href="http://bsa.ly/moo"]
 lowendtalk.com##div[style="text-align: center"] > a[href="http://bsa.ly/moo"]
@@ -58581,6 +58588,7 @@ thedefensepost.com##.thede-before-content_2
 thedefiant.io##div[class="relative mx-auto px-4 lg:w-[970px]"]
 thedefiant.io##p[class="text-text-disabled text-center text-[10px]"]
 thedenverchannel.com##.container--ad
+thedesk.net,dairybusinessmea.com,readhunters.xyz###modal-extended-adblocker
 thedigitalfix.com##.ot-widget-banner
 thediplomat.com##.td-ad-container--labeled
 thediplomat.com##[class*="td-ad"]
@@ -59949,6 +59957,8 @@ top3.financefirefly.com##div[id^="penci_"]:has(center > div[id^="div-gpt-ad"])
 topagrar.pl##.ad-container-0
 topagrar.pl##.article__ad
 topboard.org##div[style] > div[style="width:910px; margin:10px auto;"]
+topchineseanime.xyz##body[class*=" "] #footer ~ div[class*=" "][id]:not([id*=" "])
+topchineseanime.xyz,financasdeouro.info,receitascaseiras.xyz,dicasreceita.com,tudoesportes.online,2wheelslife.com,finance240.com##div[data-placement-id="revbid-square"]
 topclassactions.com##.CampaignType--floating
 topcpu.net##[id^="topcpu_net_in_page_repeat_responsive"][style="min-height: 300px;"]
 topcpu.net##div[id^="topcpu_net_in_page_repeat"]
@@ -60780,6 +60790,8 @@ tv24.co.uk##li[id^="infeed"]
 tv247us.live###root > .flex-col > .fixed.bottom-5.right-5:has(> .flex > .flex-grow > a[href^="https://go.nordvpn.net/"])
 tv3.lt##img[height="200px"][width="980px"]
 tv3play.skaties.lv###ad_banner_skin
+tv4play.se##.visit-advertiser-link
+tv4play.se##section[aria-label="Videokontroller"] #skin-container + div:has(> div:only-child > div[aria-hidden] + button:last-child)
 tv5.ca##.top-alertes
 tv5news.in###roadblocker-wrapper
 tv7.com###gsoi-cmp
