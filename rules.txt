@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-11 15:18:01（北京时间）
+! Version: 2025-12-11 16:18:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66475
+! Total count: 66472
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4063,6 +4063,7 @@
 @@/520cc/myxedetectadsx.js$domain=520cc.cc|520cc.me
 @@/:\/\/.*[.]wp[.]pl\/[a-z0-9_]+[.][a-z]+[/:&?]?/
 @@/?url=$subdocument,stealth=referrer,domain=agedm.vip
+@@/?utm_data=*&_=$xmlhttprequest,domain=sterham.net|casthill.net
 @@/OutbrainWidgetConnector.js$domain=foxnews.com
 @@/RealMedia/ads^$domain=aeroplan.com
 @@/Status/ping$stealth=referrer,domain=status.bigant.com
@@ -8064,7 +8065,6 @@
 @@||crystalmark.info/wp-content/uploads/*-300x250.$image,~third-party
 @@||crystalmark.info/wp-content/uploads/*_300x250.
 @@||crystalmark.info/wp-content/uploads/sites/$image,~third-party
-@@||cs.silverpop.com^
 @@||cs.silverpop.com^|
 @@||csbew.com/FrameWork/AFP/
 @@||csc-captcha-dre.security.dbankcloud.cn^$stealth=referrer
@@ -8157,7 +8157,6 @@
 @@||daemonanime.net^$generichide
 @@||dafideff.com^$generichide
 @@||dagensbyggeri.dk/assets/templates/dagensbyggeri/gfx/ads.png
-@@||daikoku.ebis.ne.jp^
 @@||daikoku.ebis.ne.jp^|
 @@||dailycaller.com/*/google-ads-
 @@||dailygeekshow.com/wp-content/themes/soofresh2/js/advertisement.js^
@@ -10098,11 +10097,9 @@
 @@||grodnoplustv.by^$stealth=dpi
 @@||groupbycloud.com/gb-tracker-client-3.min.js
 @@||groupprohead.gtimg.cn^
-@@||grp07.ias.rakuten.co.jp^
 @@||grp07.ias.rakuten.co.jp^|
 @@||grpc.biliapi.net^
 @@||gs.statcounter.com/chart.php$script,third-party
-@@||gs.statcounter.com^
 @@||gs.statcounter.com^|
 @@||gsm1x.xyz^$generichide
 @@||gsp0.baidu.com^
@@ -13280,9 +13277,7 @@
 @@||oba.uimserv.net/opt$domain=youronlinechoices.com
 @@||obagg.com/js/sailthru.js$domain=obagg.com
 @@||obengplus.com^$generichide
-@@||obituaries.therecord.com^
 @@||obituaries.therecord.com^|
-@@||obituaries.thestar.com^
 @@||obituaries.thestar.com^|
 @@||objectivequiz.com^$generichide
 @@||ocdn.eu/ucs/static/*/onesignal.js$script,domain=pulsonline.rs
@@ -13564,6 +13559,7 @@
 @@||p3-sign.bdxiguaimg.com^
 @@||p3-sign.douyinpic.com^
 @@||p3-sign.toutiaoimg.com^
+@@||p3-tt.byteimg.com/obj/$domain=agedm.io
 @@||p3-tt.byteimg.com^
 @@||p3-webcast-sign.douyinpic.com^
 @@||p3-webcast.douyinpic.com^
@@ -18566,7 +18562,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -21597,6 +21592,7 @@ audiogon.com###main-content div.content-marketing-panes > div[class]:first-child
 audiogon.com###main-content div.content-marketing-panes:not(:last-child)
 audiokarma.org##.discussionListItem > center
 audiokarma.org##.message > center b
+audiomack.com##.BottomAd
 audiondemand.com##.axs-md-cookie, aod-cookie-consent
 audiophileon.com###sidebar-one-blocks .amazon-block
 audiophileon.com###sidebar-one-blocks .amazon-block + .sqs-block.button-block
@@ -28544,6 +28540,7 @@ denikreferendum.cz##.PopupBackground, .GDPRPopup
 denizbank.com###fixedFooterBar
 denley.pl###dialog_cover, .dialog_wrapper_cookie
 dennikn.sk##.t_promo
+dennisreep.nl##body > div[style]:not([class]):has(> .instant-banner)
 deno.land##.bg-black > .max-w-screen-xl
 denofgeek.com##.ad-dog
 denofgeek.com##.block-taboola
