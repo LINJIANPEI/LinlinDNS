@@ -101,11 +101,11 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14196
+! Total count: 14199
 ! Total lines: 137
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-12-11 10:02:46（北京时间）
+! Version: 2025-12-11 20:56:47（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1618,6 +1618,7 @@
 @@//store.donanimhaber.com/ad/*$domain=forum.donanimhaber.com
 @@/:\/\/.*[.]wp[.]pl\/[a-z0-9_]+[.][a-z]+[/:&?]?/
 @@/?url=$subdocument,stealth=referrer,domain=agedm.vip
+@@/?utm_data=*&_=$xmlhttprequest,domain=sterham.net|casthill.net
 @@/OutbrainWidgetConnector.js$domain=foxnews.com
 @@/RealMedia/ads^$domain=aeroplan.com
 @@/Status/ping$stealth=referrer,domain=status.bigant.com
@@ -10596,6 +10597,7 @@
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls^
 @@||cdnqq.net/ad/api/popunder.js$script
 @@||cdns.*.gigya.com/gs/webSdk/Api.aspx$stealth=referrer
+@@||cdns.*.gigya.com/js/Api.htm?$stealth=referrer
 @@||cdns.*.gigya.com/js/Api.htm?$stealth=referrer,domain=tf1info.fr
 @@||cdnssl.mediafire.com/js/
 @@||cdnstatic.secure.spiegel.de/SP/*/grafik^
@@ -16664,6 +16666,7 @@
 @@||p.sky.com^$domain=wowtv.de,stealth=referrer
 @@||p.typekit.net/p.css$stylesheet,domain=athleticpropulsionlabs.com|browserstack.com|bungie.net|business.untappd.com|getty.edu|petsafe.com|robertsspaceindustries.com
 @@||p11.techlab-cdn.com^$domain=wizzair.com
+@@||p3-tt.byteimg.com/obj/$domain=agedm.io
 @@||p30download.ir^$stealth=dpi
 @@||pagead2.googleadservices.com^$domain=sportshub.to
 @@||pagead2.googleadservices.com^|$domain=topsporter.net
