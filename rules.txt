@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-18 07:11:50（北京时间）
+! Version: 2025-12-18 08:51:14（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66554
+! Total count: 66558
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -29486,6 +29486,8 @@ down.fast-down.com##.download-option-btn ~ .download-option-btn
 down.fast-down.com##.download-option-btn:has(> button > a[href^="https://down.fast-down.com/download"][href*=".html"])
 down.fast-down.com##a.create[href*="download"][href*=".html"]
 down.fast-down.com##div[data-ad]
+down.mdiaload.com##.btn-dow[href*=".html"]
+down.mdiaload.com##.captcha-wrapper + .download-option-btn
 downbank.cn##.speed-downlist
 downbank.cn,greenxf.com###speed-download
 downfile.site##img[alt^="Banner"]
@@ -41462,6 +41464,7 @@ krajskelisty.cz##.advert
 krajskelisty.cz##div[id^="ra-r2b2-code"]
 kraken.com##.kraken-cookie-warning, .kraken-cookie-warning.show
 krakenfiles.com##.native-banner
+krakenfiles.com##.nativebanner
 krakow.pl##body > #ci[style*="fixed"], body > #kuki, body > #mainCookie
 kramerguitars.com###cookieModal
 krankenkassen-direkt.de###cbanner
@@ -59240,6 +59243,7 @@ theultralinx.com##.m-ad-card--grid-item
 theultralinx.com##aside[phx-content-rail-ad-block]
 theurbanlist.com##.LeaderboardAd
 theverge.com##.connatix-feature-desktop
+theverge.com##.duet--article--boosted-post-wrapper
 theverge.com##.m-ad__btf_leaderboard_variable
 theverge.com##div[class]:has(> div[data-concert])
 theverge.com##div[class^="adblock-allowlist-messaging"]
