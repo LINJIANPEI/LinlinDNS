@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-21 07:11:19（北京时间）
+! Version: 2025-12-21 08:58:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66640
+! Total count: 66646
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -531,6 +531,7 @@
 .gif^$image,domain=dooporn24.com
 .gruene.de/lists/ut.php$image
 .hongi7ie8owiie*.site^$script,third-party
+.html-load.com/player/$script,subdocument,xmlhttprequest
 .icu/*?zoneid=*&visitor_id=$all
 .info^$domain=hdyayinmac1.com|sleeptimer.org
 .informz.net/z/$image
@@ -4019,6 +4020,7 @@
 @@.google-analytics.com%2Fanalytics.js$domain=free.com.tw
 @@.google-analytics.com%2Fanalytics.js$domain=free.com.tw|kobe.ga
 @@.html$xmlhttprequest,subdocument,stealth=referrer,domain=edgedeliverynetwork.com
+@@.html-load.com/player/*/70/$script,subdocument,xmlhttprequest
 @@.instantservice.com$document
 @@.jpg#$domain=huhupan.com
 @@.jpg#$domain=ktmx.pro
@@ -4316,6 +4318,7 @@
 @@/pop.js|$domain=pornve.com
 @@/prebid-js-$domain=mytvsuper.com|tvb.com|tvbs.com.tw
 @@/prebid.$script,domain=mingpao.com
+@@/prebid.min.js$~third-party,domain=advertape.net|tapepops.com|watchadsontape.com|advertisertape.com|tapeadvertisement.com|adblockplustape.xyz|tapelovesads.org|gettapeads.com|tapeadsenjoyer.com|noblocktape.com|antiadtape.com|tapewithadblock.org|streamadblocker.*|strtape.cloud|adblockeronstape.me|streamadblockplus.com|shavetape.*|adblockstrtape.link|adblockstrtech.link|adblockstreamtape.*|stape.fun|strcloud.link|streamtape.*|streamtape.com
 @@/premium*/*.php$subdocument,stealth=referrer,domain=stronstream.shop|sportzlive.shop
 @@/premium*/tracks-*.html$xmlhttprequest,stealth=referrer
 @@/progress.php?callback=$script,domain=ytmp3.cc
@@ -17823,6 +17826,7 @@
 @@||upos-sz-*.bilivideo.com^
 @@||upos-sz-mirrorhw.bilivideo.com^$stealth=referrer
 @@||uppit.com^$generichide
+@@||ups2up.fun^$generichide
 @@||upstream.to/ads/pop.js
 @@||upstream.to/advertisement/ads.js
 @@||upstream.to/embed-*.html$domain=javtiful.com
@@ -57777,6 +57781,8 @@ tamming.io,taming.io###preroll
 tamming.io,taming.io###waiting
 tampabayparenting.com##.header-html-inner
 tampafp.com##._ning_outer
+tampafp.com##.sticky-inside-pad
+tampafp.com##.tampa-widget
 tampermonkey.net##.ad-changelog-block
 tampermonkey.net##.advent_head
 tampermonkey.net##.adventing
