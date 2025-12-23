@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-23 20:22:53（北京时间）
+! Version: 2025-12-23 21:30:36（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65844
+! Total count: 65852
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -21340,6 +21340,10 @@ assuronline.com##.bottom_cookie
 astleyclarke.com###ac-cookie-notice
 astridlindgrensvarld.se##.bottom__footer__text-container ~ div
 astro-seek.com##.cc_container
+astro-seek.com##.stredni-menu > div[style$="width: 100%;"]
+astro-seek.com##div[style*="clear: both; text-align: center; margin:"]
+astro-seek.com##div[style^="padding: 0px 0px 0px 0px; width: 100%; width: 1000px; height:"]
+astro-seek.com##div[style^="width: 100%; clear: both; text-align: center;"]
 astro.com###cmss
 astro.com##.astroadv
 astro.com##.botbanner, #priv.dsmessage
@@ -28935,6 +28939,9 @@ docs.cfw.lbyczf.com###推广 + div.list
 docs.picotorrent.org##.ethical-sidebar
 docsity.com##.dsy-advertising
 docsmall.com##.modal-connection.show
+docsquiffy.com##.penci-banner-box
+docsquiffy.com,freetutorials-us.com###text-13
+docsquiffy.com,pcgamestorrents.org,freetutorials-us.com,coursewikia.com,monetizemore.com###text-12
 doctor-telephone.fr###privacy-policy
 doctor.ndtv.com##.adv_bg
 doctor.ndtv.com##.mrec-ads
@@ -31963,6 +31970,7 @@ financialpost.com,lfpress.com##.js-widget-flyercity
 financialpost.com,lfpress.com##body .vf-promo:not(#style_important)
 finans.dk##.baPosition
 finansavisen.no###finansavisen-gdpr-disclaimer
+finanzas.yahoo.com,finance.yahoo.com##.sdaContainer
 finanze.it###bannerInfo
 finanzia.no##.theme-privacy-container
 finanzpartner.de###cc-button
