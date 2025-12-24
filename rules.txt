@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-24 23:12:45（北京时间）
+! Version: 2025-12-25 00:14:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65853
+! Total count: 65857
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11890,6 +11890,7 @@
 @@||link.adtidy.org/forward.html
 @@||link.morningbrew.com^
 @@||link.morningbrew.com^|
+@@||link.nzz.ch^
 @@||link.nzz.ch^|
 @@||link.sylikes.com^
 @@||link.sylikes.com^|
@@ -21577,6 +21578,7 @@ autocarindia.com##.mx-auto.h-\[250px\].w-\[300px\]
 autocarindia.com##div[class^="ad-mod-section"]
 autocarpro.in##.skinad
 autocarpro.in##body div[class^="ad-section-"]
+autocentrum.pl##.saplConfigurator
 autocentrum.pl##body > div[class]:empty
 autodoc.co.uk###traffic_banner_wrapper_interstitial
 autodoc.de##.gdpr-panel
@@ -24251,7 +24253,6 @@ btnull.org,gyg.la,gyg.si,gying.in,gying.net,gying.org,gying.si###ly
 btring.com##div[style="margin: 10px 0px;"]
 btring.com##img[style="width: 25%"]
 btsow.motorcycles##a[href^="https://tellme.pw/go/jav"]
-btsow.pics##a[href^="https://tellme.pw/go/jav"]
 bttop.net###top_bottom + div[style="float:left;width:100%;"]
 btv.at##body > .cc
 btvnovinite.bg##.mj-pf-widget
@@ -51461,7 +51462,7 @@ qciss.net##.d1
 qciss.net##div[style^="border-style:solid;"][style*="border-width:2px;"][style*="width: 80%;"]
 qdaily.com##.app
 qdaily.com##.clearfix.com-header-brief
-qdm66.com##.close-box.tips,#gongao
+qdm8.com##.close-box.tips,#gongao
 qdmm.com###page-ops
 qdmm.com,qidian.com##.qdRead_client
 qdmm.com,qidian.com##.qdRead_redscan
@@ -60972,7 +60973,10 @@ usatoday.com###acm-ad-tag-lawrence_dfp_desktop_arkadium_after_share
 usatoday.com##+js(set, gnt.x.adm, '')
 usatoday.com##.affiliate-widget-wrapper
 usatoday.com##a[href^="/pages/interactives/sponsor-story/"]
+usaudiomart.com##.adverttable > tbody > tr.ad ~ tr:not([class])
+usaudiomart.com##.cfbox > div[style="float:right;padding:6px;background:white;"]
 usaudiomart.com##.featad
+usaudiomart.com##.precontent[style*="height:"][style*="90px;"]
 usave.co.uk##.toast
 uschinapress.com##.baner_pictur
 uschinapress.com##img[width="290"]
