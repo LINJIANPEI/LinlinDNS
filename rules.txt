@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-25 20:22:11（北京时间）
+! Version: 2025-12-25 21:26:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 65869
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -6656,7 +6656,6 @@
 @@||blog.gouline.net/ads-b-feeders-on-raspberry-pi-
 @@||blog.krcesdev.com^$generichide
 @@||blog.kvb-koeln.de^$stealth=dpi
-@@||blog.livedoor.jp^$generichide
 @@||blog.logrocket.com^|
 @@||blog.malwarebytes.com/*/20*/|$~script,~xmlhttprequest
 @@||blog.naverblogwidget.com/ExternalWidgetRender.$stealth=referrer
@@ -16704,6 +16703,7 @@
 @@||storep.91haoka.cn^
 @@||stores.office.com/authredir
 @@||stores.office.com/myaccount/advancedinstalls.aspx
+@@||storm.vodvidl.site/proxy/$stealth=referrer
 @@||stpd.cloud/saas/$domain=azrhymes.com
 @@||stpd.cloud/saas/$script,domain=dragontea.ink
 @@||stpd.cloud/saas/5274$domain=dgb.lol
@@ -54326,6 +54326,7 @@ shrtfly.com##.adsbygoogle
 shrtz.me##div[style*="padding-top:10px;"][style*="width:300px;"]
 shsu.blackboard.com##.lb-overlay, .lb-wrapper-absolute
 shtfplan.com##.overlay-container
+shua.leyz.top,virscan.org##div[class^="ad_"]
 shubz.in##.rh_listoffers
 shueisha.co.jp###app > div > div[class*="styles"] > div[class*="yellow"], #app > div > div[class*="styles"] > div[class*="yellow"] ~ *
 shuhaige.net##div[style="float:left;width:300px;height:300px;margin:10px;border:1px dashed blue;"]
@@ -61690,7 +61691,6 @@ virginmedia.com##.notifications-manager
 virginmediastore.com##.notification-bar
 virginmoneygiving.com###blank-container
 virginradio.co.uk##div[class^="css-"]:has(> .ad-outline)
-virscan.org##div[class^="ad_"]
 virtuagirlgirls.com###DynamicBackgroundWrapper
 virtual-railroads.de##.gdpr_hook
 virtualdrumming.com,wegotthiscovered.com###sticky-bottom

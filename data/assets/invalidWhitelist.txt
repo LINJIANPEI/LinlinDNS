@@ -101,12 +101,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14227
+! Total count: 14229
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2025-12-25 10:03:18（北京时间）
+! Version: 2025-12-25 20:52:23（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -9797,7 +9797,6 @@
 @@||blog.gouline.net/ads-b-feeders-on-raspberry-pi-
 @@||blog.krcesdev.com^$generichide
 @@||blog.kvb-koeln.de^$stealth=dpi
-@@||blog.livedoor.jp^$generichide
 @@||blog.malwarebytes.com/*/20*/|$~script,~xmlhttprequest
 @@||blog.naverblogwidget.com/ExternalWidgetRender.$stealth=referrer
 @@||blog.torproject.org^$stealth=dpi
@@ -17785,6 +17784,7 @@
 @@||plex.tv/api/v2/geoip$xmlhttprequest
 @@||plex.tv/wp-content/themes/plex/assets/js/conditional/lib/fastclick.min.js
 @@||plground.live^$stealth=referrer
+@@||plibcdn.com/media/$stealth=ip
 @@||plplayer.online/log_event$~third-party,xmlhttprequest
 @@||plugin.intuitcdn.net/vep-collab-smlk-ui/assets/vendor/glance/cobrowse/
 @@||plugincrack.com^$generichide
@@ -17851,6 +17851,7 @@
 @@||pornhub.phncdn.com^$image,domain=pornhub.com|pornhub.org|pornhub.net|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com
 @@||pornhublive.com/bio.php?$popup,domain=pornhub.com|pornhub.org|pornhub.net
 @@||pornimg.xyz^$stealth=referrer,domain=popjav.tv
+@@||pornlib.com/player_config_json/$stealth=ip
 @@||pornofaps.com^$generichide
 @@||pornohype.cc/*/|$media,stealth=referrer
 @@||porntrex.com/*/?mode=async&action=js_stats&rand=$image,domain=porntrex.com
@@ -19700,6 +19701,7 @@
 @@||store.tildaapi.one/api/$stealth=referrer
 @@||stores.office.com/authredir
 @@||stores.office.com/myaccount/advancedinstalls.aspx
+@@||storm.vodvidl.site/proxy/$stealth=referrer
 @@||stpd.cloud/saas/$domain=azrhymes.com
 @@||stpd.cloud/saas/$script,domain=dragontea.ink
 @@||stpd.cloud/saas/5274$domain=dgb.lol
