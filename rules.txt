@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-25 15:15:24（北京时间）
+! Version: 2025-12-25 16:17:16（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65861
+! Total count: 65869
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8019,7 +8019,6 @@
 @@||crystalmark.info/wp-content/uploads/*-300x250.$image,~third-party
 @@||crystalmark.info/wp-content/uploads/*_300x250.
 @@||crystalmark.info/wp-content/uploads/sites/$image,~third-party
-@@||cs.silverpop.com^
 @@||cs.silverpop.com^|
 @@||csbew.com/FrameWork/AFP/
 @@||csc-captcha-dre.security.dbankcloud.cn^$stealth=referrer
@@ -9576,6 +9575,7 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
+@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -11185,6 +11185,7 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
+@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11233,6 +11234,7 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
+@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -14676,6 +14678,7 @@
 @@||plex.tv/api/v2/geoip$xmlhttprequest
 @@||plex.tv/wp-content/themes/plex/assets/js/conditional/lib/fastclick.min.js
 @@||plground.live^$stealth=referrer
+@@||plibcdn.com/media/$stealth=ip
 @@||plplayer.online/log_event$~third-party,xmlhttprequest
 @@||plugin.intuitcdn.net/vep-collab-smlk-ui/assets/vendor/glance/cobrowse/
 @@||plugincrack.com^$generichide
@@ -14746,6 +14749,7 @@
 @@||pornhub.phncdn.com^$image,domain=pornhub.com|pornhub.org|pornhub.net|redtube.com|redtube.net|tube8.com|tube8.es|tube8.fr|youporn.com|youporngay.com
 @@||pornhublive.com/bio.php?$popup,domain=pornhub.com|pornhub.org|pornhub.net
 @@||pornimg.xyz^$stealth=referrer,domain=popjav.tv
+@@||pornlib.com/player_config_json/$stealth=ip
 @@||pornofaps.com^$generichide
 @@||pornohype.cc/*/|$media,stealth=referrer
 @@||porntop.com^
@@ -18560,6 +18564,7 @@
 @@||www.so.com^
 @@||www.spaceship.com^
 @@||www.statcounter.com/images/$image,third-party
+@@||www.statcounter.com^
 @@||www.statcounter.com^|
 @@||www.sygjx.com^
 @@||www.taobao.com^
@@ -37691,6 +37696,9 @@ igg-games.co,igg-games.com,pcgamestorrents.com,pcgamestorrents.org##[width="300"
 igg-games.co,igg-games.com,pcgamestorrents.com,pcgamestorrents.org##a[href^="/"][href*="?"]
 igg-games.com##slot + div[class]
 igg-games.com,etherealgames.com,androidmakale.com,vivahentai4u.net,thetruedefender.com,nimtools.com,javhoho.com,thefappeningblog.com###text-4
+igi-global.com##.banner-carousel-item
+igi-global.com##.margin-bottom-15.inline-block-100
+igi-global.com##.width-100
 igizmo.it##body > a[href^="https://igizmo.it/linkto/"][target="_blank"] > img
 ign.com###blogrollInterruptDeals
 ign.com###king
