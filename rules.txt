@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-29 15:18:51（北京时间）
+! Version: 2025-12-29 16:19:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65975
+! Total count: 65978
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6549,6 +6549,7 @@
 @@||beltelecom.by^$stealth=dpi
 @@||benheim.co.kr^$stealth=dpi
 @@||benkhouya.com/ads.js$domain=anonymousemail.me
+@@||bereza.by^$stealth=dpi
 @@||berryboot.alexgoldcheidt.com^$generichide
 @@||best-anime.eu^$generichide
 @@||best-shopme.com^$generichide
@@ -18550,7 +18551,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -21919,6 +21919,7 @@ axutongxue.com##a[href^="https://axu.simhaoka.com/phone/index?id=B956B2050EAA740
 axutongxue.com,axutongxue.net###jjjagl
 axutongxue.com,axutongxue.net##[style^="height:58px;"]
 axutongxue.net##body > article[style]
+axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net###bottomSearch ~ div:not([id]) > .mySwiper
 axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##body > [id]:has(> ul[class] > li > img.icon + a[href])
 axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##div[style*="z-index: 9999999"][style*="position: absolute"]
 axway.com##div[id*="cookiePolicyWarning"]
@@ -32390,6 +32391,7 @@ fmovie.cc##a[rel="nofollow norefferer noopener"][style^="position: fixed; z-inde
 fmoviesto.cc###overlay-container
 fmscan.org###cookieDiv
 fmstream.org###cookieDiv
+fnc.ebc.net.tw##.dfp_ad
 fnjiasu.com##.layui-layer
 fnjiasu.com##.sidebar_download
 fnjiasu.com##.swiper-container
@@ -61655,6 +61657,7 @@ vidmoly.to###voc_block
 vidmoly.to##body > div[style*="opacity:"][style*="position: fixed; width:"][style*="z-index:"]:not([class], [id])
 vidnest.io##a[href="https://candai.online/"]
 vidnest.io$$script:contains(maxOpens)
+vidnest.io$$script:contains(maxPopsPerCycle)
 vidoza.net###juic
 vidoza.net###videotop > iframe
 vidoza.net##.download-green
