@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-30 08:55:16（北京时间）
+! Version: 2025-12-30 10:51:16（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 65999
+! Total count: 66002
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4205,6 +4205,7 @@
 @@/hitCount_$xmlhttprequest,domain=on.cc
 @@/hls*/*.m3u8$stealth=referrer,domain=techclips.net|b4ucast.com
 @@/hls.key$stealth=referrer
+@@/hls/*$stealth=referrer,domain=closeload.top
 @@/hls/*.m3u8$stealth=referrer
 @@/hls/*.ts$stealth=referrer,domain=techclips.net
 @@/home/ads/*$domain=esunbank.com.tw
@@ -7344,6 +7345,7 @@
 @@||cdnfinder.xyz^
 @@||cdnformanga.net/wp-*/$stealth=referrer
 @@||cdnimages*.sbs/hls/$stealth=referrer
+@@||cdnimages*.shop/hls/$stealth=referrer
 @@||cdniptvpotok.com^$stealth=referrer
 @@||cdnjs.cloudflare.com/ajax/libs/$domain=f2movies.to
 @@||cdnjs.cloudflare.com/ajax/libs/$domain=xmoviesforyou.com
@@ -13736,7 +13738,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=deblocker.merkulov.design
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=decrypt.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dgb.lol
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=digiclown.com|sattanewss.com|djflpduniya.com|gadix.in|raftarsamachar.in|cinedesi.in|health.blueridgegeorgia.us|openhouseperthinsurance.com|spatsify.com|marathivacancy.com|cyberlynews.com|bongguider.com|inklix.com|india.studentshelp.in|india.bgmiproconfig.com|web.quizrent.com|india.ctfest.org|hindi.sarkarijobinformation.com|health.wikizinsider.online|india.sharpexamz.in|autorisuchna.in|india.bgmiproconfig.com|techarmor.xyz|india.gujaratcareerhub.in|gadialert.in|v.thetch.in|india.reportmarathi.in|india.newsguides.in|health.gujaratcareerhub.in|uploadhub.dad|india.livegaminghub.com|bhumibihar.co.in|web.wblaxmibhandar.com|health.bgmiproconfig.com|india.hindivigyan.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=digiclown.com|sattanewss.com|djflpduniya.com|gadix.in|raftarsamachar.in|cinedesi.in|health.blueridgegeorgia.us|openhouseperthinsurance.com|spatsify.com|marathivacancy.com|cyberlynews.com|bongguider.com|inklix.com|india.studentshelp.in|india.bgmiproconfig.com|web.quizrent.com|india.ctfest.org|hindi.sarkarijobinformation.com|health.wikizinsider.online|india.sharpexamz.in|autorisuchna.in|india.bgmiproconfig.com|techarmor.xyz|india.gujaratcareerhub.in|gadialert.in|v.thetch.in|india.reportmarathi.in|india.newsguides.in|health.gujaratcareerhub.in|uploadhub.dad|india.livegaminghub.com|bhumibihar.co.in|web.wblaxmibhandar.com|health.bgmiproconfig.com|india.hindivigyan.in|india.hindivigyan.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=digitalinformationworld.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=diglink.blogspot.com
@@ -13937,6 +13938,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=oneslidephotography.com|apasih.my.id|financekami.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=oromoyo.ai
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ovabee.com|yourimageshare.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ovabee.com|yourimageshare.com|magicpsd.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=oxygenu.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=paidinsurance.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=paketmu.com
@@ -14770,6 +14772,7 @@
 @@||pool-newskoolmedia.adhese.com/tag/config.js$domain=formule1.nl
 @@||pool.admedo.com/yoc^$domain=youronlinechoices.com
 @@||pool.v6.bt.n0808.com^
+@@||popads.net/favicon-16x16.png$domain=ask4porn.cc|hornyhill.com
 @@||popads.net/favicon-16x16.png$domain=hornyhill.se
 @@||popads.net/pop.js$domain=videobin.co,important
 @@||popads.net/pop.js$script,important,domain=shinden.pl
@@ -45655,6 +45658,7 @@ muenzenwert.de###callout
 mui.com##.Ad-root
 mui.com##.css-19m7kbw
 mui.com##span[data-ga-event-category="ad"]
+muinz.top##.module
 muji.eu###cokbar
 mujionline.eu###cokbar
 mujnuz.cz##div[id*="cookie-modal"]
@@ -48994,6 +48998,7 @@ patience-is-a-virtue.org###copy > p
 patient.info##.ad.widget
 patient.info##a.sponsored-wrap
 patient.info##body > div[style="height:90px"]
+patient.nimblerx.com###flt-pv-1 > div
 patio.so##[href="https://www.flexpowertools.com/"]
 patisserie-cabosse.fr##.cabosseadsbottom
 patook.com###cookies_subtext
@@ -53129,7 +53134,6 @@ ruhrbarone.de###cookie
 ruian.com##.ad_opera
 ruian.com##div[class^="gg_"]
 rule34.paheal.net##section[id$="main"] > .blockbody:has(> div[align="center"] > ins)
-rule34.us##*:has(> [target="_blank"][rel="nofollow"])
 rule34.us##.container center:has(> div[style^="display:"] > div[data-cl-spot])
 rule34.us##:has(> [target="_blank"][rel="nofollow"])
 rule34.us##center:has(> div[style*="overflow"] > [data-cl-spot])
@@ -56758,7 +56762,6 @@ sukidesuost.info###custom_html-23
 sulocale.sulopachinews.com,utaitebu.com,josemo.com,mitsmits.com,bi-girl.net,bright-b.com,news-geinou100.com##body > #container + div[id][class*=" "]
 sumanasa.com##.adcontent
 sumcumo.com##.cookies
-sumirekeiba.com###container + div[id][class*=" "]
 summarizer.org###after-text-load-controls:has(> div[class^="ads_"])
 summarizingtool.net##div[style^="height:100px;"]
 summarizingtool.net##div[style^="height:300px"]
