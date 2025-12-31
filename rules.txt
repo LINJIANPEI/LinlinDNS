@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2025-12-31 20:22:19（北京时间）
+! Version: 2025-12-31 21:27:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66027
+! Total count: 66031
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13921,6 +13921,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mta-resource.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=musicforchoir.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=myfilmyzilla.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mytemp-mail.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=myuploadedpremium.de
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=myviptuto.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=nabzclan.vip
@@ -18438,6 +18439,7 @@
 @@||wpnrtnmrewunrtok.xyz/*preview/*/preview.jpg$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz/main/$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz^$domain=camwhores.ru.com|camvideos.org
+@@||wps-cn-ep.wpscdn.cn/wps/download/$stealth=referrer
 @@||wpvip.duba.net^
 @@||wq.360buyimg.com^
 @@||wq.jd.com^
@@ -40422,6 +40424,8 @@ kaopu001.com###pokemon
 kaopu001.com##.coupleBannerAdv
 kaotic.com###overflowIdVideo
 kaotic.com##.block-toplist
+kaotic.com##.sidebar > .tab-wrapper:has(> .blowYourMind > #red > div[style^="text-align:"]:not([class], [id]))
+kaotic.com##div[id^="aad-footer-"]
 kaoyan.com##.floatQrcode
 kaoyan1v1.com###showAD
 kapital.no###finansavisen-gdpr-disclaimer
