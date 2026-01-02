@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-02 20:22:03（北京时间）
+! Version: 2026-01-02 21:27:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66046
+! Total count: 66057
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23562,6 +23562,7 @@ bleedingcool.com##.sidebar_spacer
 bleedingcool.com,heatmap.news,jamaicaobserver.com###bottom_leaderboard
 bleedingcool.com,jamaicaobserver.com,pastemagazine.com###top_leaderboard
 bleepingcomputer.com###after_dl
+bleepingcomputer.com###bc-home-news-main-wrap > li:has(> div > a[href^="https://www.bleepingcomputer.com/go/"])
 bleepingcomputer.com###bc-home-news-main-wrap > li:has(> div > a[href^="https://www.bleepingcomputer.com/offer/deals/"])
 bleepingcomputer.com###ips_Posts > .post_block:has(div.apb)
 bleepingcomputer.com##.articleBody > div:has(a[href^="https://www.wiz.io/"])
@@ -24830,6 +24831,7 @@ camwhores.tv##.topad
 camwhores.tv##a[target="_blank"][href*="utm_campaign"]
 camwhores.tv##body > div[style^="position: fixed; height: 50px; width: 50px;"]
 camwhores.tv##iframe[src^="https://go.smljmp.com/"]
+camwhores.tv,camwhores.video###camsoda-embed
 camwhores.video###camsoda-embed
 camwhores.video##.content > a[target="_blank"]
 camwhores.video,camwhores.tv##.container > .content ~ .headline
@@ -26094,6 +26096,7 @@ cloud.tencent.com##.cdc-commercial-swiper
 cloud.tencent.com##.mod-commercial
 cloudeng.it##.commons-alert-box, .commons-alert-overlay
 cloudflareinsights.com$third-party
+cloudhostingz.com##.search-popup + div[id][class*=" "]
 cloudstorageoptions.com##.adslot_left
 cloudwards.net##.max-medium
 cloudwards.net,guitaradvise.com###cbox
@@ -26959,6 +26962,7 @@ coolors.co###generator_inner > div[id][style^="position:absolute"][style*="top"]
 coolors.co###header_nav + a
 coolors.co##.banner.is-visible
 coolors.co##.carbon-cad
+coolors.co##.coolors-new-ad
 coolors.co##.native-carbon + div[id]
 coolors.co##[style*="position:absolute;top:20px;"]
 coolors.co##a[class="floating-cad"][target="_blank"]
@@ -32037,7 +32041,9 @@ filologika.gr##.sidebar > div.widget_container:has(> div.textwidget > p > a[href
 filologikosxoleio.gr###block-4
 filologikosxoleio.gr###wrapper div[id^="custom_html-"]:has(div.textwidget:empty)
 filsh.net##div[id^="sovendus-container-"]
+filterblade.xyz###footerAdContainer
 filterblade.xyz###leftSideAd
+filterblade.xyz###leftSideContainer
 filtercams.com###bannerFC
 filthybritishporn.com##.bnnr
 fimfiction.net##.sponsor-reminder
@@ -50961,6 +50967,7 @@ power.baidu.com,zhidao.baidu.com##.wgt-clew[data-type="goods"]
 power.baidu.com,zhidao.baidu.com##style[id*="s-m"] + div[id^="m"]
 power987.co.za##.power-leader-board-center
 powercolor.com##.Privacy
+powercompare.co.nz##first-visit-overlay-element
 powercord.dev###react-root > footer ~ div
 poweroutage.us##.cta-inline
 powerpyx.com##.code-block-14
@@ -56626,7 +56633,11 @@ streamcraft.com##.privacy-wraper
 streameast.app###stream-info > .flex > div[target="_blank"]
 streameast.to##.google-auto-placed
 streamed.pk##.py-0 > .border.p-4:has(> button + a[target="_blank"])
+streamed.pk##a[href^="https://duel.com/"] img
+streamed.pk##a[href^="https://duel.com/"]:has(> img[src]) + button.ring-offset-background
 streamed.pk,streamed.st,streami.su##div[role="alert"]
+streamfree.to##.left-sidebar-spinner
+streamfree.to##.sponsor-column-player
 streamgoals.com##.vjs-overlay > a[target="_blank"]
 streamhls.to##div[id^="clickCatcher"]
 streamingcommunity.*$$script:contains(/blockAdBlock|_cqjduonc|\/blockadblock\.min\.js/)
