@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-03 07:11:58（北京时间）
+! Version: 2026-01-03 08:53:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66066
+! Total count: 66070
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -532,6 +532,7 @@
 .gif^$image,domain=dooporn24.com
 .gruene.de/lists/ut.php$image
 .hongi7ie8owiie*.site^$script,third-party
+.html-load.com/papi/$script,subdocument,xmlhttprequest
 .html-load.com/player/$script,subdocument,xmlhttprequest
 .icu/*?zoneid=*&visitor_id=$all
 .info^$domain=hdyayinmac1.com|sleeptimer.org
@@ -3982,6 +3983,7 @@
 @@.google-analytics.com%2Fanalytics.js$domain=free.com.tw
 @@.google-analytics.com%2Fanalytics.js$domain=free.com.tw|kobe.ga
 @@.html$xmlhttprequest,subdocument,stealth=referrer,domain=edgedeliverynetwork.com
+@@.html-load.com/papi/*/70/$script,subdocument,xmlhttprequest
 @@.html-load.com/player/*/70/$script,subdocument,xmlhttprequest
 @@.instantservice.com$document
 @@.jpg#$domain=huhupan.com
@@ -15916,6 +15918,7 @@
 @@||securitykiss.com$document
 @@||securitytrails.com/app/api/$domain=securitytrails.com
 @@||securitytrails.com/domain/$domain=securitytrails.com
+@@||sedge.nfl.com^
 @@||sedge.nfl.com^|
 @@||seeitworks.com/advertisement.js
 @@||seelen.io/jquery.ad.js$domain=seelen.io
@@ -25864,6 +25867,7 @@ cinemark.cl###modal-cookies-template
 cinemotion-kino.de###cookie-layer
 cineplex.com##.MuiGrid-grid-md-4 > div:has(> div#pageContentAd)
 cineplex.com##div[class*="_adContainer"]
+cineplex.com##div[class^="index_adsContainer__"]
 cinereporters.com###btm-widget > div[id^="div-clmb-ctn-"]
 cinereporters.com##.colombiatracked[data-slot] > iframe
 cinespot.net###gsContent + b
