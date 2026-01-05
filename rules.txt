@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-05 23:14:45（北京时间）
+! Version: 2026-01-06 00:16:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66085
+! Total count: 66088
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13789,6 +13789,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=eshentai.tv
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ethereumfaucet.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=eviltranslator.xyz
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ewrc-results.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ewrc.cz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=examsnet.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=exuce.com
@@ -13812,7 +13813,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=forum.release-apk.com,stealth,important
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=fox.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebinchecker.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|tatangga.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|paste1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|akw.cam|indokontraktor.com|shahee4u.cam|batch-kun.com|shahid4u.*|neosatsu.com|shahidd4u.net|shahiid4u.net|shahid-4u.*|shaid4u.day|shahhid4u.cam|shhahid4u.*|sshahid4u.*|sshahid4u.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|tatangga.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|paste1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|akw.cam|indokontraktor.com|shahee4u.cam|batch-kun.com|shahid4u.*|neosatsu.com|shahidd4u.net|shahiid4u.net|shahid-4u.*|shaid4u.day|shahhid4u.cam|shhahid4u.*|sshahid4u.*|sshahid4u.day|sd4u.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freecoursesonline.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freeiptvgen.com
@@ -31189,6 +31189,8 @@ eworldship.com###d2
 eworldship.com##a[href*="ad_click&"]
 eworldship.com##div[style="padding: 0px;position: fixed;left: 7px; top: 150px;"]
 eworldship.com##img[height="70"]
+ewrc-results.com##.container > .grid > .flex:has(> .adsbygoogle)
+ewrc-results.com##.grid > a[target="_blank"] > img
 ewrc-results.com$$script:contains(document.addEventListener('click')
 exactaudiocopy.de##div[align="center"] > h6
 exam58.com##div[style="float: none;  width: 305px; height: 254px; text-align: center"]
@@ -43334,6 +43336,9 @@ magyarnemzet.hu##.et_pb_advertising
 mahacot.com##.google-adsense-ads
 maharashtratimes.com##.pwa-deals
 mahindra.com##.privacy-warning
+mahitimanch.in##.TopSticky
+mahitimanch.in##.stickyAdBottomWrapper
+mahitimanch.in##.stickyAdTopWrapper
 mahua.com##.hidden_ab
 maiche.com##a.some-img
 maid.my.id##.iniiklan
@@ -48376,7 +48381,6 @@ ontvtonight.com##.scrollContent > .spacerRow:has(> .dynamicStuffHere:only-child 
 onvasortir.com###pub_rectangle
 onvz.nl##.popup_overlay
 onworks.net###adonworksbot
-onworks.net##.adbn-wrap
 onworks.net##.image-container:has(> a[href][target="_blank"])
 onzetaal.nl##.consent
 onzeveilingonline.nl##.cookie
@@ -61003,7 +61007,6 @@ unity.cn##div[class*="cookies-permission"]
 unityassetpack.com$$script:contains(noteAlert)
 unityassets4free.com##img[src^="https://unityassets4free.com/wp-content/uploads/"][src$="/best-url-shortner-for-unityassets4free.jpg"]
 unitymedia.de##body > div:not([id]):not([class])
-unitystr.com,azrotv.com,uptoplay.net##.adbn-wrap
 universidadeuropea.com###modal_footer[class*="cookies"]
 univisa.com.cn###popup
 unixmen.com##.banners_home
