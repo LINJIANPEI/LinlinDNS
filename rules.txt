@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-09 15:18:41（北京时间）
+! Version: 2026-01-09 16:18:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66141
+! Total count: 66144
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7522,7 +7522,6 @@
 @@||ci.xiaohongshu.com^
 @@||cibntv.net/youku/*.mp4?$domain=v.youku.com
 @@||cimanow.cc/wp-content/themes/*/openads.js$script,~third-party
-@@||cindyholbrook.lpages.co^
 @@||cindyholbrook.lpages.co^|
 @@||cinema.pia.co.jp/img/ad/$image,~third-party
 @@||cinemaxxl.de^$stealth=donottrack
@@ -8062,7 +8061,6 @@
 @@||crystalmark.info/wp-content/uploads/*-300x250.$image,~third-party
 @@||crystalmark.info/wp-content/uploads/*_300x250.
 @@||crystalmark.info/wp-content/uploads/sites/$image,~third-party
-@@||cs.silverpop.com^
 @@||cs.silverpop.com^|
 @@||csbew.com/FrameWork/AFP/
 @@||csc-captcha-dre.security.dbankcloud.cn^$stealth=referrer
@@ -11244,6 +11242,7 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
+@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11374,7 +11373,6 @@
 @@||itopmusic.com/wp-content/plugins/ad-ace//includes/adblock-detector/advertisement.js
 @@||itopmusic.com^$generichide
 @@||itopmusic.org^$generichide
-@@||itoya.ec-optimizer.com^
 @@||itoya.ec-optimizer.com^|
 @@||itsguider.com^$generichide
 @@||itv.com/itv/hserver/*/site=itv/$xmlhttprequest
@@ -17965,7 +17963,9 @@
 @@||vaughnsoft.net/play/$stealth=referrer,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
+@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
+@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -18544,7 +18544,6 @@
 @@||www.crossoverchina.com^
 @@||www.data.mistat.*xiaomi.com^
 @@||www.data.sec*.miui.com^
-@@||www.datadoghq-browser-agent.com^
 @@||www.datadoghq-browser-agent.com^|
 @@||www.deepseek.com^
 @@||www.dell.com^
@@ -18677,6 +18676,7 @@
 @@||www.so.com^
 @@||www.spaceship.com^
 @@||www.statcounter.com/images/$image,third-party
+@@||www.statcounter.com^
 @@||www.statcounter.com^|
 @@||www.sygjx.com^
 @@||www.taobao.com^
@@ -29876,6 +29876,7 @@ earlygame.com##.ad-slot-widget
 earn4files.com##center > div[style="width:336px; height:280px; background-color:#ffffff; text-align:center"]
 earnbitmoon.club,multiclaim.net,claimbits.net,coinadster.com###wcfloatDiv4
 earnhub.net##center ins
+earningtime.in,vbnmx.online,metavise.in,viralxns.com,obitspublishers.com,nayisahara.com,infinityskull.com,drinkspartner.com,atleticalive.it,amritadrino.com##.mh-container + div[id][class*=" "]
 earone.it##div[style^="width:968px;min-height:300px;background:url"]
 earth.com##.AdZone_adZone__2w4TC
 earth.com##.fit-picture
@@ -31916,6 +31917,7 @@ figyelo.hu##.consent, #consent
 fijiairways.com##.dumbBoxWrap.terms-of-use
 fijilive.com##div[style][onclick$="redirect()"]
 fijisun.com.fj##.widget-3
+fijivillage.com##[href="https://psh.com.fj/cardiac/"]
 fijlkam.it###privacy-wrapper
 fiksaa.fi##.site-notification
 filarybiznesu.pl##span > div[style*="min-height:"][style*="overflow: hidden;"]:has(> div[id*="_slot_"])
@@ -60679,6 +60681,7 @@ twojliquid.pl###message, .message
 twoplayergames.org##.game-page-ad
 twpkinfo.com###div_close_cf
 twword.com##.gadBlock
+twxgct.com,xgcartoon.com,dailygh.com###video-top-ad
 txahz.com###archy_ad2
 txone-networks.com###cookies_msak
 txtbook.com.cn##.ledu-advWrap
