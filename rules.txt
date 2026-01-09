@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-09 23:13:45（北京时间）
+! Version: 2026-01-10 00:15:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66149
+! Total count: 66144
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -532,8 +532,6 @@
 .gif^$image,domain=dooporn24.com
 .gruene.de/lists/ut.php$image
 .hongi7ie8owiie*.site^$script,third-party
-.html-load.com/papi/$image,stylesheet,script,subdocument,xmlhttprequest
-.html-load.com/player/$script,stylesheet,subdocument,xmlhttprequest
 .icu/*?zoneid=*&visitor_id=$all
 .info^$domain=hdyayinmac1.com|sleeptimer.org
 .informz.net/z/$image
@@ -3985,8 +3983,6 @@
 @@.google-analytics.com%2Fanalytics.js$domain=free.com.tw
 @@.google-analytics.com%2Fanalytics.js$domain=free.com.tw|kobe.ga
 @@.html$xmlhttprequest,subdocument,stealth=referrer,domain=edgedeliverynetwork.com
-@@.html-load.com/papi/*/70/$image,script,subdocument,xmlhttprequest
-@@.html-load.com/player/*/70/$script,subdocument,xmlhttprequest
 @@.instantservice.com$document
 @@.jpg#$domain=huhupan.com
 @@.jpg#$domain=ktmx.pro
@@ -19074,6 +19070,7 @@
 @@||zinro.net/m/log.php
 @@||ziperto.com^$generichide
 @@||zipraw.com^$generichide
+@@||zirvedesin120.cfd/yayinzirve.m3u8$stealth=referrer
 @@||zive.cz/Client.Scripts/advertisment.js
 @@||ziyuan.guwendao.net^
 @@||zjjcxy.cn^*/ad.css?$stylesheet
@@ -60113,8 +60110,6 @@ trucknetuk.com###sidebarright
 trucoswindows.com##.modalCookies
 trueachievements.com###sidebar > .side-unit
 trueachievements.com###topad-wrap
-trueachievements.com##.dyn-lb
-trueachievements.com##.pw_player_w
 trueachievements.com##.vr-auction
 trueachievements.com,truesteamachievements.com,truetrophies.com###mpu-2
 trueachievements.com,truesteamachievements.com,truetrophies.com###mpu-3
