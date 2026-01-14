@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-14 23:16:46（北京时间）
+! Version: 2026-01-15 00:17:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66227
+! Total count: 66230
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12977,6 +12977,7 @@
 @@||mycastapp.*.amazonaws.com/assets/ads.js$domain=mycast.io
 @@||mycdn.me^$stealth=referrer
 @@||mycleverpush.com/iframe?$domain=bsdex.de
+@@||mycliplister.com^$xmlhttprequest,stealth=referrer,domain=otto.de
 @@||myfilmyzilla.com^$generichide
 @@||myfirstname.rocks^$generichide
 @@||mygardening411.com^$generichide
@@ -28967,7 +28968,6 @@ diyifanwen.com##.Hzh2
 diyprojectslab.com,italiadascoprire.net##body > .search-modal-wrap + div[id][class*=" "]
 dizajnkonyha.hu,smartinhome.pl,lgcnews.com##body > div[data-elementor-type="footer"] ~ div[id][class*=" "]
 dizhanw.com,jiangjunzy.com##div[style="background: #fff;padding:5px;"]
-djbassking.club,uaeboy.ae,csyildizi.com,mealold.com,pasflav.online,nidbdcheck.com,9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,phineypet.com,beautifulfashionnailart.com,americanstylo.com###delulu-overlay
 djbassking.club,uaeboy.ae,csyildizi.com,mealold.com,pasflav.online,nidbdcheck.com,9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,phineypet.com,beautifulfashionnailart.com,americanstylo.com###desktop-ad-container
 djbassking.club,uaeboy.ae,csyildizi.com,mealold.com,pasflav.online,nidbdcheck.com,9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,phineypet.com,beautifulfashionnailart.com,americanstylo.com##.card center > .container:has(> .ad)
 djchuang.com###amazon3
@@ -36229,6 +36229,8 @@ healthbenefitstimes.com###ad-image-below
 healthbenefitstimes.com###google-adv-top
 healthcare.siemens.dk##.alert, #alert
 healthgrades.com##.leaderboard1AdWrapper
+healthgrades.com##body > div:has(> div[role="marquee"] > div[data-qa-target="leaderboard-ad"])
+healthgrades.com##div:not([data-card-id]):has(> div[data-visible="rendered"] > div[data-qa-target$="-ad"])
 healthgrades.com##div[class]:has(> div[data-qa-target="leaderboard-ad"])
 healthgrades.com##div[class]:has(> div[data-visible] > div[data-qa-target="leaderboard-ad"])
 healthifyme.com###popup-wrapper
@@ -54597,6 +54599,7 @@ shoubozhan.com##style + div[id]
 shouji56.com###gg_top_banner
 shouji56.com##.adv01 + a
 shouldianswer.co.uk##.consent, #consent
+showcamrips.com##a[id^="immoiad"]
 showcasecinemas.co.uk##s72-cookie-consent
 showsport-tv.com##a[onclick$="closeMyAd()"]
 showsport-tv.com##b[id$="ctimer"]
