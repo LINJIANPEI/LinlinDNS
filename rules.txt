@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-14 17:20:22（北京时间）
+! Version: 2026-01-14 18:15:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66218
+! Total count: 66221
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -53694,6 +53694,7 @@ saucemagazine.com##.advert-elem
 saucemagazine.com##.advert-elem-1
 saurclient.fr###cookies, .sds-m-cookiebanner
 sausageandciderfestival.co.uk###CC_Bar, #CC_Shade
+sauto.cz##body ul:has(.c-item) > :not(.c-item)
 sauto.cz##div[class^="c-ssp-"]
 save-editor.com##.set_wrapper
 save.ca##.ad-box
@@ -56943,6 +56944,8 @@ suizhoushi.com##.sznew_ad_top
 suizhoushi.com##div[id^="sznew_ad"]
 sukebei.nyaa.si##.servers-cost-money1
 sukidesuost.info###custom_html-23
+sulasok.cz###floatingBanner
+sulasok.cz##body > div[style^="position: fixed; top:"][style*="z-index:"]
 sulocale.sulopachinews.com,utaitebu.com,josemo.com,mitsmits.com,bi-girl.net,bright-b.com,news-geinou100.com##body > #container + div[id][class*=" "]
 sumanasa.com##.adcontent
 sumcumo.com##.cookies
