@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-16 18:13:57（北京时间）
+! Version: 2026-01-16 19:12:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66267
+! Total count: 66269
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -35455,8 +35455,10 @@ gsmarena.com###subHeader3
 gsmarena.com###subHeader3:has([href="deals.php3"])
 gsmarena.com###subHeader:has(> #topAdv)
 gsmarena.com###topAdv
+gsmarena.com##.deals
 gsmarena.com##.justify-center:has(.ad-c-label)
 gsmarena.com##.module-arenaev
+gsmarena.com##[id][style="display: block;"]
 gsmarena.com##div[style="margin-left: -10px; margin-top: 30px; height: 145px;"]
 gsmarena.com##iframe[id^="dm-hm-ifrm-"]
 gsmchoice.com###left-con > div[style="min-height: 250px;"]
