@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-19 23:17:14（北京时间）
+! Version: 2026-01-20 00:16:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66348
+! Total count: 66356
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5799,6 +5799,7 @@
 @@||animeunity.tv^$generichide
 @@||animeuniverse.*^$generichide
 @@||animeuploader.com^$generichide
+@@||animevost.org^$stealth=webrtc
 @@||animex.club^$generichide
 @@||animexin.vip^$generichide
 @@||animmex.net^$generichide
@@ -24424,6 +24425,7 @@ browardpalmbeach.com,dallasobserver.com,miaminewtimes.com,phoenixnewtimes.com,we
 browsehappy.pl##a[href^="https://brave.com/"][target="_blank"] > img
 browser-update.org##.adt
 browserleaks.com###vpn_text
+browserscan.net##div > a[target="_blank"]:has( > span + img)
 brp.com###consent-dialog
 brtn.cn,btime.com##.business-box
 brtn.cn,btime.com##.business-item
@@ -30642,6 +30644,7 @@ emporis.com###partner
 emporium.si###grayOut
 empressleak.biz###wnb-bar
 empressleak.biz###wpfront-notification-bar
+empros.gr##.easy-adverts-out-ads-holder
 emptycharacter.com##.video-js
 ems.press##section[aria-labelledby*="analytics-consent"]
 emsc.eu###splashscreen
@@ -42223,6 +42226,7 @@ lic.me##.miniplayer
 licenseglobal.com###__next > .fixed.bottom-0
 lickd.co###root > div > div:last-child
 licytacje.komornik.pl###sign_up, body > div[style*="margin-top: 100"]
+liddread.com,gkbooks.in,sayphotobooth.com,headlinerpost.com,dinheirocursosdownload.com,santhoshrcf.com,tnstudycorner.in,trucosonline.com,seriu.jp,notesformsc.org,viewmyknowledge.com,starxinvestor.com,postazap.com,lovendal.ro,rabo.no,edivaldobrito.com.br,nsfwr34.com,kits4beats.com##body > .site-footer + div[id][class*=" "]
 lider.hr###notice
 liderform.com.tr##div[style*="width: 801px;"][style*="height: 419px;"]
 lidovky.cz###content > .col-a > #selfart-box > #selfart:has(> .r-body)
@@ -45499,6 +45503,8 @@ moulik.cz##.Articles-banner > div:only-child
 moulik.cz##.col-xl-fixed-right:has(> div[class]:only-child > .aab-lite:first-child + div[id*="-square-"]:last-child)
 moulik.cz##.text-center:has(> div[id*="-leader-"])
 moulik.cz##div[class*="-square-multiple"]
+moum.top##.MuiContainer-root > .MuiBox-root > .app-grid > .MuiBox-root > .MuiBox-root > .MuiBox-root:has(> span.MuiSkeleton-root:first-child + span.MuiSkeleton-root + span.MuiSkeleton-root:last-child)
+moum.top,reaper.mx,vtbe.to,jpmtl.com##iframe[src^="//acceptable.a-ads.com/"]
 mount10.ch##.ck-bn
 mountain.es###messagebar
 mountstuarthospital.co.uk##.popupbox
@@ -46419,7 +46425,9 @@ n1info.hr##.ad-loading-placeholder
 n1info.hr##.banner-promotion
 n1info.hr##div[data-selector="ad-script-placeholder"]
 n1info.rs##.banner-promotion
+n1info.si##.ad-loading-placeholder
 n1info.si##.banner-promotion
+n1info.si##.linker-widget-col:has(> a[title="Sponzorirano"])
 n4g.com,techspy.com##.top-ads-container-outer
 n8fanclub.com##body > center[id]
 n8fanclub.com##body > i[id]
