@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-21 15:20:43（北京时间）
+! Version: 2026-01-21 16:19:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66391
+! Total count: 66393
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4434,6 +4434,7 @@
 @@doubleclick.net/ads/preferences/
 @@down.360safe.com^
 @@embed/$stealth=webrtc,domain=vipbox.lc
+@@favicon.ico$domain=indexsubtitle.cc
 @@get=*&short=*&refer=google$domain=advertisingcamps.com,stealth=referrer
 @@google$domain=focus.de,script
 @@googlesyndication.com$domain=bilinovel.com
@@ -4940,7 +4941,6 @@
 @@||abv-p.com/Images/adv.png
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth=referrer
 @@||ac.dun.163yun.com^
-@@||ac.ebis.ne.jp^
 @@||ac.ebis.ne.jp^|
 @@||ac.kr^$stealth=dpi
 @@||ac.namu.la^$domain=arca.live,media,image,stealth=referrer
@@ -8089,7 +8089,6 @@
 @@||crystalmark.info/wp-content/uploads/*-300x250.$image,~third-party
 @@||crystalmark.info/wp-content/uploads/*_300x250.
 @@||crystalmark.info/wp-content/uploads/sites/$image,~third-party
-@@||cs.silverpop.com^
 @@||cs.silverpop.com^|
 @@||csbew.com/FrameWork/AFP/
 @@||csc-captcha-dre.security.dbankcloud.cn^$stealth=referrer
@@ -9777,7 +9776,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -11277,7 +11275,6 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
-@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11327,6 +11324,7 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
+@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -12293,7 +12291,6 @@
 @@||m801.music.126.net^
 @@||ma*-normal-lf.zijieapi.com^
 @@||ma-x.org^$generichide
-@@||ma135-r.analytics.edgekey.net^
 @@||ma135-r.analytics.edgekey.net^|
 @@||mabanque.fortuneo.fr/js/front/fingerprint2.js$script,domain=mabanque.fortuneo.fr
 @@||mac.bmcx.com^
@@ -30820,6 +30817,7 @@ eperusteet.opintopolku.fi###cookie-modal-backdrop
 epexspot.com###ub
 ephotozine.com###epz-google-explore
 ephotozine.com##.LB-MPU
+epic.hellosports.live##.popSc
 epicbundle.com##.adExtraContentSuperBanner
 epicbundle.com##.background-click
 epicbundle.com##.sidebar > .networkBox + .mediumTagArea
@@ -53214,6 +53212,8 @@ rodadas.net##.faldonCookies
 rode.com###gdpr
 rodopchani.bg###abck
 rogerebert.com##.page-content--ad-block
+rogerebert.com##.roger-review-inline-1-2
+rogerebert.com##.roger-review-inline-2-2
 rogerfederer.com###data_protection
 rogosport.si###biscuits
 rohan.co.uk###ccpop
@@ -58114,6 +58114,7 @@ teliacompany.com##.tc-modal
 telink-semi.com##.b--cookie-window
 telkom.co.za###PrivacyNotice
 tellows-au.com,tellows-tr.com,tellows.at,tellows.be,tellows.ch,tellows.co,tellows.co.nz,tellows.co.uk,tellows.co.za,tellows.com,tellows.com.br,tellows.cz,tellows.de,tellows.es,tellows.fr,tellows.hu,tellows.in,tellows.it,tellows.jp,tellows.mx,tellows.nl,tellows.pl,tellows.pt,tellows.se,tellows.tw###singlecomments > li.comment:not([id])
+tellows.net##.ad
 tellshell.shell.com###toast, .toast
 tellymix.co.uk###sidebar > div[style]
 tellymix.co.uk##.a-text
@@ -60010,6 +60011,7 @@ totalcmd.net##td > center > a[target="_blank"] > img
 totaljs.com##.ui-cookie2
 totallymoney.com###gatsby-focus-wrapper > div > footer ~ div
 totallywicked-eliquid.co.uk##.cookie
+totalprosports.com##.pw-leaderboard
 totalprosports.com##.tps-top-leaderboard
 totalprosports.com##[data-stn-player="n2psbctm"]
 totalsportek.pro##a[target="_blank"] > img[alt]
