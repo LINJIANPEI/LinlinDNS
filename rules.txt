@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-21 23:21:04（北京时间）
+! Version: 2026-01-22 00:24:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66404
+! Total count: 66406
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7285,7 +7285,6 @@
 @@||cdn.pubfuture-ad.com/v2/unit/pt.js^$domain=techedubyte.com
 @@||cdn.radiostreamlive.com/v*/js/adblock/advert-1bb.js
 @@||cdn.rawgit.com/*/lazyload.js$domain=javmost.com
-@@||cdn.rawgit.com/dmauro/keypress/master/keypress.js$script,domain=dmauro.github.io
 @@||cdn.rawgit.com/sitexw/FuckAdBlock/*/fuckadblock.js$domain=eskago.pl
 @@||cdn.reactandshare.com/plugin/rns.js$stealth=referrer,domain=maanmittauslaitos.fi
 @@||cdn.reignn.com/Products/Reignn/DataPixels/AdBlockerCheck/ads.js
@@ -45021,6 +45020,7 @@ mmorpg.org.pl##div[id*="_half_"]:empty
 mmorpg.org.pl##div[id*="_half_"]:empty + a[href="/premium"]
 mmorpgitalia.it###topskin_clicktag
 mmorpgitalia.it##.noticeContainer
+mmsi01.com##div[style^="position:fixed;inset:0px;"]
 mmtv.pl###policyInfo
 mn4u.net##[style^="width:336px!important;"]
 mnb.hu##.cb01-cookie-bar
@@ -61405,6 +61405,8 @@ uploadhive.com##center > a[onclick]
 uploadnow.io##div[class^="file_browser_alt_ad_wrap__"]
 uploadrar.com###commonId > a > img
 uploadrar.com###news_last
+uploadrar.com##.card.border-warning
+uploadrar.com##.my-4 > form[method="POST"] > center
 uploadrar.com##a[href*="?"][target="_blank"]
 uploadrar.com##a[role="button"][href^="http://"]
 uploadvr.com###sticky-rail-container > :not(:first-child)::before
