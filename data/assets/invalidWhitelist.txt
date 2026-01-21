@@ -101,12 +101,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14302
+! Total count: 14306
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-01-21 10:10:19（北京时间）
+! Version: 2026-01-21 21:01:01（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1776,6 +1776,7 @@
 @@clicks.$domain=cimbclicks.com.my,~third-party
 @@doubleclick.net/ads/preferences/
 @@embed/$stealth=webrtc,domain=vipbox.lc
+@@favicon.ico$domain=indexsubtitle.cc
 @@get=*&short=*&refer=google$domain=advertisingcamps.com,stealth=referrer
 @@goo.gl
 @@google$domain=focus.de,script
@@ -9245,6 +9246,7 @@
 @@||cdn.ocmhood.com/sdk/hood.js$xmlhttprequest,domain=idlixvip.asia
 @@||cdn.ometria.com/tags/*.js$domain=holtrenfrew.com
 @@||cdn.onenote.net/livetile/?Language=en-US^$important
+@@||cdn.optimizely.com/datafiles/$domain=metro.at|metro.bg|metro-cc.hr|metro.fr|metro.it|metro-kz.com|metro.md|metro.pk|metro.ro|metro.rs|metro.sk|makro.es|metro-tr.com|metro.ua|makro.pt|metro.de
 @@||cdn.optimizely.com/datafiles/*.json$domain=alaskaair.com
 @@||cdn.optimizely.com/datafiles/*.json$domain=hm.com
 @@||cdn.optimizely.com/datafiles/*.json$domain=pizzahut.*
@@ -9293,7 +9295,6 @@
 @@||cdn.questionpro.com^$domain=questionpro.*
 @@||cdn.radiostreamlive.com/v*/js/adblock/advert-1bb.js
 @@||cdn.rawgit.com/*/lazyload.js$domain=javmost.com
-@@||cdn.rawgit.com/dmauro/keypress/master/keypress.js$script,domain=dmauro.github.io
 @@||cdn.rawgit.com/sitexw/FuckAdBlock/*/fuckadblock.js$domain=eskago.pl
 @@||cdn.reactandshare.com/plugin/rns.js$stealth=referrer,domain=maanmittauslaitos.fi
 @@||cdn.reignn.com/Products/Reignn/DataPixels/AdBlockerCheck/ads.js
@@ -17385,6 +17386,7 @@
 @@||samplette.io^$stealth=push
 @@||sams.11freunde.de/ee/*/interact?$xmlhttprequest,domain=11freunde.de
 @@||sams.spiegel.de/ee/irl1/v1/interact?$domain=spiegel.de
+@@||samsclub.com/px/*/captcha/captcha.js$domain=samsclub.com
 @@||samsunhaber.com/images/banner/*logo$~third-party
 @@||samuraiscan.com^$generichide
 @@||sandbox.cryptpad.info^$elemhide,jsinject,content,extension
@@ -18381,6 +18383,7 @@
 @@||static.adsafeprotected.com/vans-adapter-google-ima.js$domain=tyla.com
 @@||static.adsafeprotected.com/vans-adapter-google-ima.js$domain=wsj.com
 @@||static.adtrue24.com/images/*$domain=fap18.net
+@@||static.airbridge.io/sdk/latest/$domain=airbridge.io
 @@||static.amazon.jobs/assets/analytics-$script,domain=amazon.jobs
 @@||static.anyporn.com/bravoplayer/custom/anyporncom/scripts/bpcc.js
 @@||static.anyporn.com/bravoplayer/fluidplayer.js
@@ -19891,6 +19894,7 @@
 @@||wandhi.com^$generichide
 @@||wappass.baidu.com/static/touch/js/lib/fingerprint.js$domain=tieba.baidu.com
 @@||ware.shop.jd.com^$genericblock,generichide
+@@||warforum.xyz/ads.js?$script,~third-party
 @@||wargag.ru/public/js/counter.js?
 @@||wargaming.net^$stealth=3p-cookie
 @@||warpwire.com/AD/

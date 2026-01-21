@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-21 20:25:57（北京时间）
+! Version: 2026-01-21 21:38:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66400
+! Total count: 66404
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -18295,6 +18295,7 @@
 @@||wap.zol.com.cn^
 @@||wappass.baidu.com^
 @@||ware.shop.jd.com^$genericblock,generichide
+@@||warforum.xyz/ads.js?$script,~third-party
 @@||wargag.ru/public/js/counter.js?
 @@||wargaming.net^$stealth=3p-cookie
 @@||warpwire.com/AD/
@@ -24847,6 +24848,7 @@ calendardate.com##footer ~ [style*="fixed"]
 calendarpedia.com##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 calendly.com###gdpr-region ~ [data-component="sticker"]
 calendrier-lunaire.net###ezcc
+calgaryherald.com##.placeholder-inner
 calgarysun.com###content > .l-content > .l-top-content
 caliber.az###adv
 caliber.az##div[style="height:302px;"]
@@ -49511,6 +49513,7 @@ pdf2go.com##.advertising-wrapper
 pdfbooksworld.com##div[style^="height:280px"]
 pdfconvertonline.com##.section-banner
 pdfdrive.com,onebitco.com##ins[style="display:inline-block;width:728px;height:90px;"]
+pdfdrive.to##.content > div.overlay:has(> div.banner)
 pdfescape.com###pdfe_cmp
 pdfforge.org##.adsenseadsense
 pdfprof.com##div[style="padding:4px;height:500px !important;"]
@@ -50493,6 +50496,7 @@ pollunit.com##.owl-carousel:has(.carousel-ad)
 polomarket.pl##body > div:not([id]):not([class])
 polsatbox.pl##.modal-overlay
 polsatsport.pl##.fl-right > a[href^="http://redefineadpl.hit.gemius.pl/hitredir/"][href*="url=https://ad.doubleclick.net/ddm/trackclk/"]
+polskawliczbach.pl##.probableXXX
 polski-tenis.pl,bizpolis.pl,wyniki.pl,telepolis.pl##.banner
 polskicaravaning.pl###myModalpol
 polskieradio.pl##.rodo, .footer ~ .termsOfUse, .rodo-modal
