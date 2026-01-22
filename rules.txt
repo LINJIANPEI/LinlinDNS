@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-22 23:20:12（北京时间）
+! Version: 2026-01-23 00:21:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66429
+! Total count: 66432
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -34312,7 +34312,6 @@ geekrar.com##.adsbygoogle
 geekrar.com,techspite.com,professionaltutorial.com##.navigation-banner
 geeksforgeeks.org###rightBarSaleBanner:not(#style_important)
 geeksforgeeks.org###secondary div[style="min-height:600px"]
-geeksforgeeks.org##._ap_apex_ad
 geeksforgeeks.org##.textBasedMannualAds_2
 geeksforgeeks.org##.three90RightBarBanner
 geeksforgeeks.org##div[id^="AP_"]
@@ -61232,6 +61231,10 @@ umatechnology.org###right-sidebar
 umatechnology.org###rk-exit-modal-bg
 umatechnology.org##.compliance-note
 umatechnology.org##div[class^="rk-"]
+umatechnology.org,geekchamp.com##[class^="dyn-"]
+umatechnology.org,geekchamp.com##div[class^="yorker-"]
+umatechnology.org,geekchamp.com##div[id$="-alert-wrapper"]
+umatechnology.org,geekchamp.com##div[id^="dyn-"]
 umm.nordpoolgroup.com###modal-overlay
 ummid.com##body > .gridContainer > #Header
 umod.org##ins[data-revive-id]
