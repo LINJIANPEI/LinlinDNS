@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-23 19:13:36（北京时间）
+! Version: 2026-01-23 20:25:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66456
+! Total count: 66458
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12025,6 +12025,7 @@
 @@||linkvertise.com/assets/ads.js
 @@||linkvertise.com^$generichide
 @@||linkvertise.download^$generichide
+@@||linovelib.com^$generichide
 @@||linux.do^
 @@||linuxize.com/detroitchicago/dayton.js
 @@||linuxize.com/porpoiseant/banger.js
@@ -16454,6 +16455,7 @@
 @@||squidssh.com^$generichide
 @@||sravni-labs.ru^$stealth=dpi
 @@||src.fedoraproject.org/static/issues_stats.js?$~third-party
+@@||src.litix.io/*/bitmovin-mux.js$domain=shoof.alkass.net
 @@||src.litix.io/shakaplayer/*/shakaplayer-mux.js
 @@||src.litix.io/videojs/*/videojs-mux.js
 @@||srv.*/*/*.png$stealth=referrer,domain=vctplay.site
