@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-25 07:11:52（北京时间）
+! Version: 2026-01-25 09:02:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66476
+! Total count: 66484
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1585,6 +1585,7 @@
 /tds/ae?*&clickid=$document
 /tghr.js$script
 /theologicalpresentation.com/*$script
+/tlinks.nordaccount.com/q/*$image
 /tmbi-a9-header-$script
 /tncms/ads/*$script
 /tnt.ads.$script
@@ -29826,7 +29827,9 @@ dungeondice.it###yn-gdpr
 duniaku.idntimes.com##amp-script[script="parallax-script"]
 dunlop.eu##.cmp-responsivegrid--behavior-cookie
 dunnung.com##.rkads
+duo.op.gg###duo-ad-box-head
 duo.op.gg###duo-container div.flex > div.mt-2:has(> ins.adsbygoogle)
+duo.op.gg##.admanager--box
 duo.op.gg##div[id^="duo-ad-"]
 duodada.com##.row > div[class] > div.page-header ~ div[style^="width:100%;"]
 duodada.com##[style*="position: fixed; left: 0px;"]
@@ -31082,6 +31085,7 @@ esports.op.gg##.content > .hidden:has(> .text-center:only-child > .adsbygoogle:o
 esports.op.gg##.content > .mt-6 > div[class^="lg"]:has(> .text-center:only-child > .adsbygoogle:only-child)
 esports.op.gg##.flex-row > .hidden > .flex.items-center:has(> div[id^="div-gpt-"]:only-child)
 esports.op.gg##.lg\:bg-gray-800.lg\:rounded.lg\:p-2
+esports.op.gg##.min-h-\[600px\]
 esports.op.gg##.sticky > div[class^="lg"]:has(> div[class^="min-h-"]:only-child > .adsbygoogle:only-child)
 esportsdriven.com##.ga-partner
 esportsdriven.com##div[class^="GGBet"]
@@ -32607,6 +32611,8 @@ flyingjizz.com###adv_inplayer
 flyingjizz.com##.sidebar-banner
 flyingmag.com##.arcAdsContainer
 flyingmag.com##.article_ad_text
+flyingmag.com##.flyin-before-content
+flyingmag.com##.flyin-target
 flyingtiger.com##.save-cookies
 flyordie.com###asf
 flyordie.com###dasb
@@ -49415,7 +49421,9 @@ pcccp.cn##DIV[id^="xydl"]
 pcdown.net##.bzxz
 pcdown.net##.sort_list > .clearfix:first-child
 pcformat.pl###iframePopupContainer
+pcgamebenchmark.com##.evolve-cta.card
 pcgamebenchmark.com##.nova_wrapper
+pcgamebenchmark.com##body > div[class^="img_"]
 pcgamebenchmark.com,pcgamesn.com,pockettactics.com,thedigitalfix.com,wargamer.com###nn_astro_wrapper
 pcgamebenchmark.com,soccerway.com,streetcheck.co.uk##.placement
 pcgamer.com###coupons
