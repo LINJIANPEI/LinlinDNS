@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-26 05:11:10（北京时间）
+! Version: 2026-01-26 06:12:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66485
+! Total count: 66487
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -17902,6 +17902,7 @@
 @@||usefuldiy.com^$generichide
 @@||useinsider.com/ins.js$domain=pizzahut.jp
 @@||user-portal.*.edenred.io^$stealth=3p-auth
+@@||user.edenredplus.com/assets/packages/mixpanel_flutter/assets/mixpanel.js$script,~third-party
 @@||user.pnetlab.com/store/advs/check
 @@||user.userguiding.com/sdk/identify$xmlhttprequest,domain=xaris.ai
 @@||user.weiyun.com/newcgi/outlink.fcg$document
@@ -48106,6 +48107,7 @@ nytimes.com##.e1xxpj0j1.css-4vtjtj
 nytimes.com##.g-paid
 nytimes.com##.pz-ad-box
 nytimes.com##[class]:has(> [id="ad-top"])
+nytimes.com##[data-ad-element="outer_ad_container"]
 nytimes.com##[data-testid="StandardAd"]
 nytimes.com##div:has(> div[data-testid="StandardAd"]:only-child)
 nytimes.com##div[data-ad-element]
