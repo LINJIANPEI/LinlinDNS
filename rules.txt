@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-26 20:26:05（北京时间）
+! Version: 2026-01-26 21:38:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66498
+! Total count: 66504
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3682,6 +3682,8 @@
 7news.az,ann.az##.sidebarbanner
 7plus.com.au###app > [class*="cookieContainer"]
 7sim.net##html > body ~ div
+7tv081.com##.set_height_250
+7tv081.com,bitchesgirls.com##.a-d-block
 7x7n.com##.down_load_1
 7x7n.com##.down_load_2
 80.lv###__next > div:last-child:not(:only-child)
@@ -10980,6 +10982,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=rtl.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=rtlnieuws.nl
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sbs.com.au
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=screenrant.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=shares.enetres.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=shotstv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=skai.gr
@@ -23715,6 +23718,7 @@ bleepingcomputer.com##.articleBody > div[data-key] > div[style^="width:"]:not([c
 bleepingcomputer.com##.articleBody > div[style^="width:"]:not([class]):has(> a[target="_blank"])
 bleepingcomputer.com##.bc_guide
 bleepingcomputer.com##.bc_right_sidebar > .bc_guide:has(> ul > li > a.spon_res)
+bleepingcomputer.com##.bc_right_sidebar > a[target="_blank"] > img
 bleepingcomputer.com##.bc_right_sidebar > div:has(> .cz-line-heading:first-child + ul:last-child > li > .spon_res:only-child)
 bleepingcomputer.com##.bc_right_sidebar div[align="center"] > a[target="_blank"] > img
 bleepingcomputer.com##.cz-post-comment-wrapp + .cz-related-article-wrapp:has(> .adsbygoogle)
@@ -64455,6 +64459,8 @@ wysokomazowiecki24.pl##img[src*="/images/"][src*="baner"]
 wzorniki.eu###cookie
 wzstats.gg##.landscape-ad-container
 wzstats.gg##app-desktop-takeover-ad
+wzzy.cc###notice-overlay
+wzzy.cc##.xgplayer-error
 x-hd.video##.video-brs
 x-mol.com###floatWindow
 x-mol.com###rightAllJournal
