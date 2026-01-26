@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-26 15:20:58（北京时间）
+! Version: 2026-01-26 16:19:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66490
+! Total count: 66496
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4719,6 +4719,7 @@
 @@||217.16.188.246^$generichide
 @@||2345.com/images/activity/20171111/open/j/close.png
 @@||2345jsllq.dftoutiao.co
+@@||24playerhd.com^$subdocument,stealth=referrer,domain=series-days.com
 @@||24u.jp^$generichide
 @@||2chmatome2.jp/images/sp/320x250.png$~third-party
 @@||2kspecialist.net^$generichide
@@ -10466,6 +10467,7 @@
 @@||hopto.org^$generichide
 @@||horriblesubs.info/static/hs.js
 @@||host.bsky.network^$stealth=3p-auth
+@@||hosting.kr^$stealth=ip
 @@||hosting24.com^
 @@||hosts-file.net/ad_servers.txt
 @@||hosts-file.net^
@@ -28015,6 +28017,7 @@ daijiworld.com##[href="http://www.expertclasses.org/"]
 daijiworld.com##[href="https://sjec.ac.in/"]
 daijiworld.com##a[onclick^="recordOutboundLink("][target="_blank"] > img
 dailiantong.com##.appDwn
+dailijichang.com,qv2ray.org##.elementor-sticky--active[data-settings*="bottom"]
 daily-choices.com##[id^="sticky_"]
 daily-stop.com##.category-banners
 daily-sun.com##body .ad-970x90
@@ -54387,6 +54390,9 @@ serialyzadara.cz##.sidebar aside.widget:has(a[href^="https://tracking.affiliatep
 serialyzadara.cz##a[href^="https://tracking.affiliateport.eu/"]
 seriea.pl##[id^="viewCookies"]
 series-888.com##div[id^="srb_widget_ads"]
+series-days.com##.adcen
+series-days.com##.adhl
+series-days.com##.adl
 series-dd.co###ads_fox_bottom
 series-dd.co##div[id="ads728x90top"][onclick="clickStats()"]
 series108.com##.fake-player
