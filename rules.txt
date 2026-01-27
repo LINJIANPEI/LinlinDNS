@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-27 15:20:22（北京时间）
+! Version: 2026-01-27 16:19:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66523
+! Total count: 66521
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6920,7 +6920,6 @@
 @@||c.lytics.io/api/tag/$script,domain=time.com
 @@||c.mipcdn.com^$domain=77dushu.com|biqugesc.com|prpcoin.com|zhetian.org
 @@||c.mipcdn.com^$domain=prpcoin.com
-@@||c.office.com^
 @@||c.office.com^|
 @@||c.paypal.com/da/r/fb.js$script
 @@||c.pc.qq.com^
@@ -7015,7 +7014,6 @@
 @@||cat.telia.no/gtm.js$script,domain=telia.no
 @@||catchapp.net/ad/img/$~third-party
 @@||catchmyjobs.com^$generichide
-@@||catchup.thisisdax.com^
 @@||catchup.thisisdax.com^|
 @@||cazzette.com^$generichide
 @@||cb.baidu.com/crossdomain.xml$domain=v.baidu.com
@@ -7127,7 +7125,6 @@
 @@||cdn.apple-mapkit.com/*?apiVersion=$stealth=3p-auth
 @@||cdn.apple-mapkit.com/ma/bootstrap?$stealth=3p-auth,domain=icloud.com
 @@||cdn.ark.qq.com^
-@@||cdn.atmedia.hu^
 @@||cdn.atmedia.hu^|
 @@||cdn.bannersnack.com/banners/$image,subdocument,domain=audiogon.com
 @@||cdn.bannersnack.com/banners/$~third-party,image,subdocument
@@ -7182,7 +7179,6 @@
 @@||cdn.digiteka.com/player/PrebidLibrary.js$domain=ultimedia.com
 @@||cdn.dotstream.buzz^$stealth=referrer,domain=megaplay.*
 @@||cdn.doublemax.net/js/rwd_cap.js$domain=ibf.tw
-@@||cdn.duurzaam.greenchoice.nl^
 @@||cdn.duurzaam.greenchoice.nl^|
 @@||cdn.engine.addroplet.com/Scripts/infinity.js.aspx^$domain=mirrored.to
 @@||cdn.evgnet.com/beacon/homedepotofcainc/engage/scripts/evergage.min.js$script,domain=homedepot.ca
@@ -9791,7 +9787,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -11343,7 +11338,6 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -18040,9 +18034,7 @@
 @@||vaughnsoft.net/play/$stealth=referrer,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
-@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
-@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -22585,6 +22577,7 @@ bancomparador.com###cuki
 bancopopular.es###cookies
 bandcamp.com##.tos-update
 bandi.pl###cookie
+bandle.app##body > div[style^="background:"][style*="position: fixed; display: flex;"][style*="z-index:"]
 bandsintown.com###main > div > div[class*="index"]:first-child
 bandwidthplace.com##.da-wrapper
 bangalorenewstoday.com##.sidebar-widget-area > div[id^="text-"]
@@ -41066,6 +41059,7 @@ kinopoisk.ru###brandingFlash
 kinopoisk.ru##.direct-kp-customize
 kinoprofi.net##.warning-adblock
 kinoteka.pl##body > div:not([id]):not([class])
+kio.ac##body > div[id][class] > [id][class][style^="position: absolute; width: 0px;"] ~ [id][class]
 kio.ac##main > div:not([class], [id]) > .w-full > .min-h-4 > div[style^="height:"][style*="width:"][style$="overflow: hidden;"]:has(> script:only-child)
 kioskbt.ru##.info-massage
 kiplinger.com##.dianomi_gallery_wrapper
@@ -41289,6 +41283,7 @@ komchadluek.net###accept-cookie-footer
 komchadluek.net###section-thaileague
 komchadluek.net##.default-sticky-1
 komikcast.site###bannerhomefooter
+komikcast05.com###bannerhomefooter
 komikhentai.eu.org##div[style^="position:fixed;"][style*="cursor:pointer"]
 komikhentaiterbaru.xtgem.com##.footer2 > center > a[href*=".php"] > img
 komikhentaiterbaru.xtgem.com##body > center > a[href] > img
@@ -50828,6 +50823,9 @@ porndroids.com##.resumecard__banner
 porndroids.com##.video-container > div.wrapper > div.js-player ~ meta[itemprop] + ul[class]
 porndroids.com##body > aside > div.wrapper > section.wrapper__related-sites ~ aside[class]
 pornegy.com##div[style^="height:"][style$="px;"]
+porner.tv##.DefaultText
+porner.tv##.VideosList > .video-skeleton
+porner.tv##body > .container.oHidden
 porner.tv,pornmonde.com##.sources
 pornerbros.com##a[href="http://pornerbros.idealgasm.com/"]
 pornerbros.com##a[href^="https://as.sexad.net"]
