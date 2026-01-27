@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-27 07:13:20（北京时间）
+! Version: 2026-01-27 08:59:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66505
+! Total count: 66515
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7193,6 +7193,7 @@
 @@||cdn.ex.co/transformations/production/$domain=sport24.gr
 @@||cdn.ex.co/transformations/production/$domain=sportday.gr
 @@||cdn.ex.co^$domain=mm-watch.com|theautopian.com
+@@||cdn.ex.co^$domain=standard.co.uk
 @@||cdn.exmarketplace.com/bidder/video_scripts/video_updated_*.js$domain=tvserial.it
 @@||cdn.exp.qq.com/img/
 @@||cdn.facil-iti.app/tags/faciliti-tag.min.js$script,domain=apec.fr|kyoto.travel
@@ -14773,6 +14774,7 @@
 @@||player.ex.co/player/$domain=usatoday.com
 @@||player.ex.co/player/$script,domain=mm-watch.com|theautopian.com|usatoday.com|ydr.com
 @@||player.ex.co^$domain=reviewjournal.com
+@@||player.ex.co^$domain=standard.co.uk
 @@||player.foxdcg.com/*/js/playback.js?*^ad$xmlhttprequest,domain=fox.com
 @@||player.glomex.com^$subdocument,stealth=referrer
 @@||player.hoge.cn/advertisement.swf
@@ -42565,6 +42567,7 @@ listendata.com###myModal
 listennotes.com###ln_homepage_banner
 listennotes.com###ln_side_banner
 listennotes.com##.ln-home-feed-ad
+listenonlineradio.com##.top-banner-img
 listenonrepeat.com###mobile_ad_main
 listesdemots.com###cd
 listesdemots.net###cd
@@ -44288,6 +44291,8 @@ med66.com##.banner
 med66.com##.coach_pic
 medarbejdernet.dk###modalLayer
 medatixx.de###cky-notification
+medeberiya.net##.block-widget
+medeberiya.net,kailaba.com,servicemassar.ma,lelmak.com,sayphotobooth.com,odiadance.com,bellezashot.com,magesypro.com,pasatiemposparaimprimir.com,assignmentdon.com,berlin-teltow.de,bestofarea.com,coderblog.in,dailytips247.com,davewigstone.com,deutschpersischtv.com,domainregistrationtips.info,friedrichshainblog.de,funztv.com,healthcheckup.com,hindinest.com,infokita17.com,negative.tboys.ro,onestringlab.com,poco.rcccn.in,prensaesports.com,start-to-run.be,stimotion.pl,symboleslowianskie.pl,thegnomishgazette.com,transgirlslive.com,utilidades.ecuadjsradiocorp.com,kakashiyt.com,eldawly.xyz,elbadr.xyz,abda3.xyz,wisw.online,stelux.online,gooltok.com,cgcosplay.org,loiz.store,myprivatejobs.com,bestloanoffer.net,techconnection.in,towerofgod.me,happyy.online,chevalmag.com,jolk.online,infinityskull.com,audiotools.blog,fattelodasolo.it,koume-in-huistenbosch.net,dent-de-lion.net,mens1069.com,english-dubbed.com,businessnews-nigeria.com,day4news.com,net4you.xyz,gameblog.jp,ster-blog.xyz,yazilidayim.net,pandanote.info,forexrw7.com,hyogo.ie-t.net,chatgbt.one,shrinklinker.com,felicetommasino.com,chatgptfree.ai,keroseed.net,ewybory.eu,nghetruyenma.net,azrom.net,mitaku.net,siirtolayhaber.com,japannihon.com,kllproject.lv,telephone-soudan.com###page + div[id][class]
 medeqstars.ru###use-cookies
 meder-frankfurt.de###ch
 media.esc-plus.com###leader-wrap
@@ -47091,6 +47096,7 @@ newegg.com###promoTop
 newegg.com##.item-sponsored-box
 newegg.com##.negspa-brands
 newegg.com##.product-headline.is-new
+newegg.com##.product-sponsored
 newegg.com##.row-side-banners
 newegg.com##.sponsored-brands
 newegg.com##div.swiper-slide[data-sponsored-catalyst]
@@ -52370,6 +52376,9 @@ radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.p
 radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.pt,radio.se##.my-\[5px\].mx-auto.w-full.hidden.md\:flex.md\:min-h-\[90px\].lg\:min-h-\[250px\].items-center.justify-center
 radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.pt,radio.se##div[class*="md\:min-h-\[90px\] lg\:min-h-\[250px\]"]:has(div[id^="RAD_D_"])
 radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.pt,radio.se##div[class] > div[class]:has(> div[class] > div[id^="RAD_D_"])
+radio.de,radio.at,radio.net###sticky-reklame-header
+radio.de,radio.at,radio.net##.relative[data-testid="page-holder"] > section.content-visibility-auto:not([id]):not([data-testid]):has(.ad-container)
+radio.de,radio.at,radio.net##body > .items-center:has(> .super-reklame-header-holder)
 radio.net###section-ad
 radio.net##.lg\:h-\[270px\]
 radio.net##.topASp
@@ -60647,6 +60656,7 @@ tunebat.com##.ad-container-box
 tunebat.com##div[id^="nm-sticky-container"]
 tunefind.com##div[class^="AdSlot_"]
 tunegenie.com##.adcontainer
+tunein.com##div[class^="bottom-banner-module__container"]
 tunelf.com##.jw-special-entrance
 tunetank.com##div[class*="cookie_info"]
 tuniu.com##.web_envelope_mod, .tuniu-assist-hide, .show
