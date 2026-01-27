@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-27 23:21:41（北京时间）
+! Version: 2026-01-28 00:18:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66530
+! Total count: 66531
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8127,6 +8127,7 @@
 @@||customer-*.cloudflarestream.com/*/iframe$stealth=referrer
 @@||customeragent-v3.seb.se/Amelia$stealth=donottrack
 @@||customgames.ru/forum/js/*/ads.min.js
+@@||custommapposter.com^$generichide
 @@||cutcaptcha.com^
 @@||cutcaptcha.com^|
 @@||cv-h.phncdn.com^
@@ -23176,7 +23177,6 @@ bgdnes.bg###cookie-b
 bgee.org###bgee_privacy_banner
 bgextras.co.uk##body > div[class*="opts"]
 bgfermer.bg###cookie-b
-bgmi64bitapk.com,unirajuniversity.com,tapmobiles.com,sharclub.in,hosting.ffindia.in,uploadhub.dad,v.thetch.in,india.kitg.co.in,quizrent.com,reportmarathi.in,newsguides.in,gujaratcareerhub.in,rajssoid.online,importantclass.com,thevouz.in,smartfityoga.com,mangareleasedate.com###AdbModel
 bgr.com##.bg-black
 bgr.com##.bgr-ad-leaderboard
 bgr.com##.bgr-memorial-day-widget
@@ -24709,6 +24709,7 @@ businessnamegenerator.com##.snp-overlay
 businessnamegenerator.com##a[data-action="Adverts"]
 businessnamegenerator.com##div[class*="domainify"]
 businessnamegenerator.com##div[class^="leader-"]
+businessnovinite.bg###zora-banner
 businessnow.mt,igamingcapital.mt,maltaceos.mt,whoswho.mt##.footer__second
 businessoffashion.com,chalkbeat.org##.b-ads-block
 businessplus.ie##.bp_billboard_single
@@ -40593,7 +40594,6 @@ justjared.com,justjaredjr.com##.top_rail_shell
 justnerd.it##.adsbygoogle
 justpicsplease.com##.ba
 justporn.com##.avd-video-item
-justporn.com,cremz.com,pusvid.com,kissjav.com,hentai4k.com,viralxxxporn.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.asside-link
 justporn.com,pusvid.com,kissjav.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.link-offer
 justporno.tv##.frame-box
 justspices.de##.cookie_overlay::before
@@ -53934,6 +53934,8 @@ saucemagazine.com##.advert-elem
 saucemagazine.com##.advert-elem-1
 saurclient.fr###cookies, .sds-m-cookiebanner
 sausageandciderfestival.co.uk###CC_Bar, #CC_Shade
+sauto.cz###page > div[class] > div:not([class]):has(> div > div:empty:first-child + div:empty + div:empty + div:empty:last-child)
+sauto.cz##.p-uw-item-list__list-wrapper > div > ul > li[class*="c-item"] + li:not([class^="c-item"])
 sauto.cz##body ul:has(.c-item) > :not(.c-item)
 sauto.cz##div[class^="c-ssp-"]
 save-editor.com##.set_wrapper
@@ -59301,7 +59303,6 @@ thomhartmann.com##img[height="200"]
 thonky.com###thonky-sidebar-ad
 thonky.com##.advertisement-notice
 thoracic.org###cookie-law
-thosa.info,blogenginee.com,unityassets4free.com##body > #scroll-top + div[id][class*=" "]
 thothub.vip##a[href*="dowtyler.com"]
 thoughtcatalog.com##div[x-enc][style*="width: 300px; height: 250px;"]
 thoughtcatalog.com##div[x-enc][style*="width: 336px; height: 280px;"]
