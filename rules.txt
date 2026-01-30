@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-30 15:34:02（北京时间）
+! Version: 2026-01-30 16:26:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66552
+! Total count: 66547
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6918,7 +6918,6 @@
 @@||c.lytics.io/api/tag/$script,domain=time.com
 @@||c.mipcdn.com^$domain=77dushu.com|biqugesc.com|prpcoin.com|zhetian.org
 @@||c.mipcdn.com^$domain=prpcoin.com
-@@||c.office.com^
 @@||c.office.com^|
 @@||c.paypal.com/da/r/fb.js$script
 @@||c.pc.qq.com^
@@ -8099,7 +8098,6 @@
 @@||crystalmark.info/wp-content/uploads/*-300x250.$image,~third-party
 @@||crystalmark.info/wp-content/uploads/*_300x250.
 @@||crystalmark.info/wp-content/uploads/sites/$image,~third-party
-@@||cs.silverpop.com^
 @@||cs.silverpop.com^|
 @@||csbew.com/FrameWork/AFP/
 @@||csc-captcha-dre.security.dbankcloud.cn^$stealth=referrer
@@ -8192,7 +8190,6 @@
 @@||daemonanime.net^$generichide
 @@||dafideff.com^$generichide
 @@||dagensbyggeri.dk/assets/templates/dagensbyggeri/gfx/ads.png
-@@||daikoku.ebis.ne.jp^
 @@||daikoku.ebis.ne.jp^|
 @@||dailycaller.com/*/google-ads-
 @@||dailygeekshow.com/wp-content/themes/soofresh2/js/advertisement.js^
@@ -8728,7 +8725,6 @@
 @@||e-podroznik.pl/public/$stealth=referrer|3p-cookie
 @@||e-stat.go.jp/modules/custom/retrieve/src/js/stat.js?$script,~third-party
 @@||e.cn.miaozhen.com/r/k=*=http
-@@||e.customeriomail.com^
 @@||e.customeriomail.com^|
 @@||e.issuu.com^$stealth=referrer
 @@||e.mail.ru^$stealth=webrtc
@@ -9668,7 +9664,6 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -9786,6 +9781,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -11337,7 +11333,6 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -11419,7 +11414,6 @@
 @@||itopmusic.com/wp-content/plugins/ad-ace//includes/adblock-detector/advertisement.js
 @@||itopmusic.com^$generichide
 @@||itopmusic.org^$generichide
-@@||itoya.ec-optimizer.com^
 @@||itoya.ec-optimizer.com^|
 @@||itsguider.com^$generichide
 @@||itv.com/itv/hserver/*/site=itv/$xmlhttprequest
@@ -16293,6 +16287,7 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
+@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -16468,6 +16463,7 @@
 @@||ss.phncdn.com^
 @@||ss.phncdn.com^$script,domain=redtube.com|redtube.net
 @@||ss0.bdstatic.com
+@@||ssai.aniview.com^
 @@||ssai.aniview.com^|
 @@||ssante.com^$generichide
 @@||sshconect.com.br^$generichide
@@ -18019,9 +18015,7 @@
 @@||vaughnsoft.net/play/$stealth=referrer,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
-@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
-@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -38112,6 +38106,7 @@ ign.com###knight
 ign.com##.adunit-wrapper
 ign.com##.background-image.content-block
 ign.com##.bobble
+ign.com##.commerceblock-container
 ign.com##.slideshow .sidebar > .special::after
 ign.com##.userList-leaderboard-adunit
 ign.com##.wiki-bobble
