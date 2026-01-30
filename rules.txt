@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-30 20:30:51（北京时间）
+! Version: 2026-01-30 21:47:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66551
+! Total count: 66559
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3683,6 +3683,7 @@
 7news.az##iframe#disableIframeBanner
 7news.az,ann.az##.sidebarbanner
 7plus.com.au###app > [class*="cookieContainer"]
+7sim.net##div[class^="ads"]
 7sim.net##html > body ~ div
 7tv081.com##.set_height_250
 7tv081.com,bitchesgirls.com##.a-d-block
@@ -14058,6 +14059,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rockradio.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rollingstone.it
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rte.ie
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sa7eralkutub.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=safelink.miuipedia.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=safelinkmoba.blogspot.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sammobile.com
@@ -34814,6 +34816,7 @@ gizguide.com,techcracked.com,novelasesp.blogspot.com###HTML7
 gizmodo.com##.aspect-video
 gizmodo.com##.min-h-\[1000px\]
 gizmodo.com##.related-posts > li[class="py-4 border-b"]
+gizmodo.com##div.mx-auto[data-mrf-recirculation="home-featured"] > div.self-start
 gizmodo.com,kotaku.com##.lg\:min-h-\[300px\]
 gizmodo.com,kotaku.com##.od-wrapper
 gizmodo.com,kotaku.com##.widget_keleops-ad
@@ -44998,6 +45001,7 @@ mistressdestiny.com##table[width="775"]
 mistrzowie.org###skyRightWrapper
 mistrzowie.org##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 mistrzowie.org,joemonster.org##.video-js[data-attr-player="mcnPlayer2"]
+mitaku.net###block-28
 mitaku.net###secondary > .widget_media_image > .wp-block-image > a:not([href*="mitaku.net"]) > img
 mitbbs.ca,mitbbs.com##.index_add
 mitbbs.ca,mitbbs.com##.newskuang2
@@ -49992,6 +49996,7 @@ pictoa.com##nav li[style="position: relative;"]
 picturequotes.com##.ad3thumb
 picturequotes.com##.respage
 picwish.com###cookies-win
+pidevex.com##.shortcut-ai-bnr
 piensasolutions.com##.drop[name="cookies"]
 pierosangiorgio.kyani.com##body > div:not([id]):not([class])
 pierotofy.it##body > div:not([id]):not([class])
@@ -57295,6 +57300,8 @@ supercloudsms.com###adb-mask
 supercloudsms.com##.container > img
 supercloudsms.com##a[href^="/redirect?"]
 supercloudsms.com##a[style="display: block;"]
+supercloudsms.com##body > div.container:has(> a > img[src][title][style="width: 100%; cursor: pointer;"])
+supercloudsms.com##div[class^="col-"] > div.card:has(> div.card-body > div[align="center"] > ins.adsbygoogle)
 superconstellation.org##.uk-position-fixed
 superdeluxeedition.com##.widget-bg-image__deal-alert
 superelectronic2000.ro###lbMain, #lbOverlay
@@ -65854,6 +65861,7 @@ yun.cn##div[class*="ad-block"]
 yunakhaber.com###safirPage + div[id][class*=" "]
 yunduanxin.xyz###adb-mask
 yunexpress.com##.Cookie-wrapper
+yunjiema.net##.container > .row.table-hover:has(> .col-md-8 > .adsbygoogle)
 yunlaige.com###PAGE_baidu_4
 yunlaige.com###PAGE_baidu_5
 yunpanziyuan.xyz##.card-site-info + .card
