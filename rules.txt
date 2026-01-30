@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-01-30 23:24:11（北京时间）
+! Version: 2026-01-31 00:26:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66559
+! Total count: 66563
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11697,6 +11697,7 @@
 @@||kfcorder.com.tw/web/Script/Analytics.js
 @@||kfcorder.com.tw^*/Advert
 @@||kh.google.com/rt/earth/$stealth=referrer|searchqueries,xmlhttprequest
+@@||kh.google.com/rt/earth/PlanetoidMetadata^$stealth=searchqueries|referrer
 @@||khohieu.com^$generichide
 @@||kickass.com.se^$generichide
 @@||kickcharm.com^$generichide
@@ -42471,6 +42472,7 @@ lingolia.com##div[id^="traffective-ad-"]
 lingvanex.com##div[id^="adsbygoogle"]
 link.paid4link.com##.card
 link.paid4link.com##form .banner + div.box
+link.snipcash.com$$script:contains(urlPC)
 link.technics-goods.info,mysafe.stisda.ac.id##.text-center > h3
 link.vipurl.in,bhram.hydtech.in##.adb
 link99.bid,sampledrive.org###adblock-overlay
@@ -53652,6 +53654,8 @@ rvtrader.com##.publift-ad-footer
 rvtrader.com##.vdp-top-banner
 rw2010.pl##.head-page-information
 rwjf.org##.masthead__message
+rxbabu.com##.flotiads
+rxbabu.com,linkza.one,bgmi64bitapk.com,unirajuniversity.com,tapmobiles.com,sharclub.in,hosting.ffindia.in,uploadhub.dad,v.thetch.in,india.kitg.co.in,quizrent.com,reportmarathi.in,newsguides.in,gujaratcareerhub.in,rajssoid.online,importantclass.com,thevouz.in,smartfityoga.com,mangareleasedate.com###AdbModel
 rxresource.org###lowerdrugsAd
 ryanair.com##rooms-cookies-policy, .trboModuleContainer, .ryr-cookie-popup
 rybnik.com.pl##.ppl-cnt
