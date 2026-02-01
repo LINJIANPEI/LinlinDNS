@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-01 07:13:05（北京时间）
+! Version: 2026-02-01 09:16:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66579
+! Total count: 66580
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22722,7 +22722,6 @@ basecamelectronics.com###agreement-alert
 based-politics.com###tdi_107
 based-politics.com##.tdi_30
 basenotes.net##.advertblock
-basescan.org##div.row:has(> .mb-md-0.text-dt > [data-bs-content="Sponsored banner advertisement."])
 bashmaistora.bg##.cookies-cont
 basic-tutorials.de##body > div:not([id]):not([class])
 basilica.ro##.alert, #alert
@@ -24513,7 +24512,9 @@ bsc.news,web3wire.news##.banner-one
 bscscan.com###ContentPlaceHolder1_lblTextAd
 bscscan.com##.bg-dark > div.container > div.row > div.col-12.col-lg-5
 bscscan.com##.row > div.col-auto:has(> div.d-none > a[href^="https://goto.bscscan.com/"])
+bscscan.com##.search-panel-ads
 bscscan.com##ul.ui-autocomplete > li > a[target="_blank"][title="Links to an External Advertiser site"]
+bscscan.com,etherscan.io,basescan.org##div.row:has(> .mb-md-0.text-dt > [data-bs-content="Sponsored banner advertisement."])
 bsd.net##div[data-which-id="eprivacy-banner"]
 bsdforen.de##.notices
 bsi-software.com##.we-love-cookies
