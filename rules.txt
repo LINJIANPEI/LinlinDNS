@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-01 17:21:00（北京时间）
+! Version: 2026-02-01 18:15:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66571
+! Total count: 66572
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -28383,6 +28383,7 @@ dazn.com,dailymotion.com##div[class^="AdBanner"]
 db.com##.dbe-content_cookie.alert
 dba.dk##body > div:not([id]):not([class])
 dbader.org##div[style="display:block;position:relative;"]
+dbdiagram.io##.cursor-pointer:has([href*="&utm_medium=ads"])
 dbdiagram.io,soccerway.com##.banner-content
 dbk.de###cc
 dbknews.com##.sidekick-wrap
