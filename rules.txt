@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-02 23:29:55（北京时间）
+! Version: 2026-02-03 00:25:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66600
+! Total count: 66601
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5954,6 +5954,7 @@
 @@||api.cloud.huawei.com^
 @@||api.cognitive.microsofttranslator.com/translate?
 @@||api.comm.miui.com^
+@@||api.commercecloud.salesforce.com^$stealth,domain=steelseries.com
 @@||api.coolapk.com^
 @@||api.coolapk1s.com^
 @@||api.crashguard.me^
@@ -7937,6 +7938,7 @@
 @@||content-*.googleapis.com^$stealth=referrer
 @@||content-*.uplynk.com/preplay$stealth=referrer
 @@||content-autofill.googleapis.com^
+@@||content-cdn.production-public.tubi.io/api/$stealth=3p-auth
 @@||content.adunity.com/aulib.js$script,domain=b1tv.ro
 @@||content.canadiantire.ca/fp/tags.js$domain=customerauth.triangle.com
 @@||content.googleapis.com$document
@@ -11335,6 +11337,7 @@
 @@||integralyatirim.com.tr^$stealth=dpi
 @@||integrate2cloudapps.com/wp-content/uploads/*/*-480x120$image
 @@||integration.plarium.com^$stealth=java
+@@||intelcorporationproductione*.org.coveo.com/rest/search/$stealth=3p-auth
 @@||intelyvale.com.mx/ads/images/$domain=valesdegasolina.mx
 @@||intercelestial.com^$generichide
 @@||intercom-clicks.com^
@@ -45642,7 +45645,6 @@ motortrend.com##.min-h-\[100px\]
 motortrend.com##.min-h-\[120px\]
 motortrend.com##[data-ad="true"]
 motortrend.com,mumsnet.com,stocktwits.com##.min-w-\[300px\]
-motortrend.com,officialcharts.com,republicworld.com,w3docs.com##.min-h-\[90px\]
 motortrend.com,officialcharts.com,republicworld.com,w3docs.com,yaledailynews.com##.min-h-\[90px\]
 motorvision.tv##.notice
 motoscout24.ch##main ~ .global-banner
@@ -56832,7 +56834,6 @@ startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##di
 startribune.com###highImpactAd
 startribune.com##[class*="htlad-"]
 startribune.com##div[data-testid*="breaker-ad"]
-startribune.com##div[data-testid="breaker-ad"]
 startribune.com##div[data-testid="rail-ad"]
 startribune.com##div[data-testid="sponsored-list-ad"]
 startup.ch##.smallbanner
