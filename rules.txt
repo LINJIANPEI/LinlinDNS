@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-05 15:43:02（北京时间）
+! Version: 2026-02-05 16:31:08（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66610
+! Total count: 66618
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11287,7 +11287,6 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
-@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11421,6 +11420,7 @@
 @@||itopmusic.com/wp-content/plugins/ad-ace//includes/adblock-detector/advertisement.js
 @@||itopmusic.com^$generichide
 @@||itopmusic.org^$generichide
+@@||itoya.ec-optimizer.com^
 @@||itoya.ec-optimizer.com^|
 @@||itsguider.com^$generichide
 @@||itv.com/itv/hserver/*/site=itv/$xmlhttprequest
@@ -17574,6 +17574,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -18602,6 +18603,7 @@
 @@||www.dianping.com^
 @@||www.dobreprogramy.pl^$generichide,badfilter
 @@||www.docker.com^
+@@||www.dogpile.com^
 @@||www.dogpile.com^|
 @@||www.door2windows.com^$stealth=referrer
 @@||www.doudou.fun^
@@ -18645,6 +18647,7 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
+@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -24578,6 +24581,7 @@ bug.hr##.cookie
 bug.hr##.main-content > div[class^="block  "] > div[class=""] > div.block__content:has(span.heading-section__logo > img[alt*=" preporu"])
 bugmenot.com###color-names
 builds.gg##.consent, #consent
+buildsometech.com,4thsight.xyz,zonegfx.com,hutporner.com,jav1080.com,sakurajav.com,laweekly.com,historicseries.com,indiansexbazar.com,sonixgvn.net,eftm.com,floxblog.com,aceofhacking.com,watchtheoffice.cc,newtechworld.net,collegelearners.com,tecmint.com,firesticktricks.com###custom_html-4
 buildsometech.com,4thsight.xyz,zonegfx.com,hutporner.com,jav1080.com,sakurajav.com,laweekly.com,historicseries.com,indiansexbazar.com,sonixgvn.net,eftm.com,pennbookcenter.com,floxblog.com,aceofhacking.com,watchtheoffice.cc,newtechworld.net,collegelearners.com,tecmint.com,firesticktricks.com###custom_html-4
 buildsometech.com,fulllengthaudiobook.com,audiobooklabs.com,bestjoblive.com,profitableventure.com###ai_widget-2
 builtbybit.com##.resourceSidebar-belowContent > div > .block:has(.block-container a[href="https://tebex.io/"])
@@ -37588,6 +37592,7 @@ hurriyetdailynews.com##.advertorial-square-type-1
 hurriyetdailynews.com##.news-detail-adv
 hurriyetdailynews.com##div[class*="advertorial"]
 hutool.cn##.hutool-top-ad
+hutporner.com,javzh.com,thesource.com,javcrave.com,indiansexbazar.com,gossipfunda.com,claimfey.com,courseforfree.net,dailyresearchplot.com,techspite.com,aceofhacking.com###custom_html-5
 hutporner.com,javzh.com,thesource.com,javcrave.com,indiansexbazar.com,gossipfunda.com,claimfey.com,courseforfree.net,dailyresearchplot.com,techspite.com,aceofhacking.com,freesoft.id###custom_html-5
 huutokaupat.com##div[data-test="entry-list-container"] > article:not([data-test]):has(a[data-external="true"][variant="primary"])
 huxiu.com##li:nth-of-type(1) > .header-top-list__link > .flip-wrap > .flip-up
@@ -46915,6 +46920,7 @@ ndtv.com##.mod-ad
 ndtv.com##.mx-spon
 ndtv.com##.nd-ad
 ndtv.com##.newins_widget > div[id][data-wdgt][class^="__pcwgt"]
+ndtv.com##.section:has(> div[data-ndsp-widget="sponsors"])
 ndtv.com##[class^="ads_"]
 ndtv.com##div:has(> [id^="adslot"])
 ndtv.com##div[class^="add_"]
@@ -53260,6 +53266,7 @@ rimowa.com##.b-modal, .b-modal ~ div[class*="privacy"]
 ring.com###teconsent
 ringtv.com##.widget_ad_dropper_widget
 ringwitdatwixtor.com,metropolisjapan.com,hentai-sharing.net,hentaiomg.com,jav1080.com,javrookies.com,sakuravrjav.com,pridesource.com,4sysops.com,idevicecentral.com,forums.flyer.co.uk,3xplanet.com,schooldrillers.com,aceofhacking.com,linuxpip.org,kodi-tutorials.uk,yofreesamples.com,thispointer.com,freesoft.id,stevessmarthomeguide.com,hwnews.in,collegelearners.com,watchmalcolminthemiddle.com###custom_html-3
+ringwitdatwixtor.com,metropolisjapan.com,hentai-sharing.net,hentaiomg.com,jav1080.com,javrookies.com,sakuravrjav.com,pridesource.com,4sysops.com,idevicecentral.com,forums.flyer.co.uk,3xplanet.com,schooldrillers.com,aceofhacking.com,linuxpip.org,kodi-tutorials.uk,yofreesamples.com,thispointer.com,stevessmarthomeguide.com,hwnews.in,collegelearners.com,watchmalcolminthemiddle.com###custom_html-3
 rio2016.coni.it###privacy-wrapper
 riomare.it##.ccp-banner
 riot.im##.mx_MatrixToolbar
@@ -53442,6 +53449,7 @@ romsgames.net,msn.com##.adlabel
 romsmania.games###click-widget-banner
 romsmania.games##.aawp
 romspack.com,faindx.com,hentaiomg.com,laweekly.com,pridesource.com,alludemycourses.com,ipacrack.com,idevicecentral.com,hentaidude.tv,mymanagementguide.com,schooldrillers.com,aceofhacking.com,msftnext.com,thispointer.com,scienceabc.com,freesoft.id,winhelponline.com,indieshortsmag.com,kodi-tutorials.uk,ahegao.online,camwhores.co,wabetainfo.com,studydhaba.com,justlightnovels.com###custom_html-2
+romspack.com,faindx.com,hentaiomg.com,laweekly.com,pridesource.com,alludemycourses.com,ipacrack.com,idevicecentral.com,hentaidude.tv,mymanagementguide.com,schooldrillers.com,aceofhacking.com,msftnext.com,thispointer.com,scienceabc.com,winhelponline.com,indieshortsmag.com,kodi-tutorials.uk,ahegao.online,camwhores.co,wabetainfo.com,studydhaba.com,justlightnovels.com###custom_html-2
 romspedia.com,gdforum.freeforums.net###ad1
 romzhijia.net##.ggposition
 romzj.com##.sectionThree
