@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-05 23:32:56（北京时间）
+! Version: 2026-02-06 00:34:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66647
+! Total count: 66648
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4068,6 +4068,7 @@
 @@//aka-cdn-ns.adtechus.com/images/$domain=cinemablend.com
 @@/520cc/myxedetectadsx.js$domain=520cc.cc|520cc.me
 @@/:\/\/.*[.]wp[.]pl\/[a-z0-9_]+[.][a-z]+[/:&?]?/
+@@/?scode=*&stream=$stealth=referrer
 @@/?url=$subdocument,stealth=referrer,domain=agedm.vip
 @@/?utm_data=*&_=$xmlhttprequest,domain=sterham.net|casthill.net
 @@/OutbrainWidgetConnector.js$domain=foxnews.com
@@ -14426,6 +14427,7 @@
 @@||pagead2.googlesyndication.com/pagead/managed/js/*/show_ads_impl_$script,domain=panel.waifly.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ff14angler.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads*.js$domain=forum.release-apk.com,important,stealth
+@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl$domain=pvpoke-re.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl$script,domain=pvpoke-re.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_$script,domain=rjno1.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=codingnepalweb.com
@@ -33518,7 +33520,6 @@ fucker.com##.spot_box
 fuckhardporn.com##.bot_bns
 fuckhardporn.com##.player_ads
 fuckhardporn.com##.player_bn
-fucking-tube.com##.video-block-happy
 fuckler.com###player-overlay
 fuckler.com##.video-content+div.video-sidebar > div.list-spots
 fuckpassvr.com##.blog-cookie
@@ -52911,7 +52912,6 @@ reddingo.ch##.policy, #policy, .cpolicy
 reddingo.com##.policy, #policy, .cpolicy
 reddit-soccerstreams.com##a[href^="https://www.offshorehosting.pro/"]
 reddit.com###SHORTCUT_FOCUSABLE_DIV > div> div > section > [style*="Toaster"], shreddit-async-loader[bundlename*="cookie_banner"]
-reddit.com###subreddit-right-rail__partial > aside > div.py-md > div.text-neutral-content-weak:has(> a[target="_blank"] > img)
 reddit.com##[data-faceplate-tracking-context*="\"promoted\":true"]
 reddit.com##div[data-before-content="advertisement"]
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion###ad_main_top
@@ -57177,6 +57177,7 @@ stremio-addons.net,pornoreino.com,okporn.xxx,productreview.com.au,videohelp.com,
 stresninosice.cz##.remarketing_allow
 streszczenia.pl,mecz-live.pl,match-en-direct-gratuit.fr,partido-en-directo.com,ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##div[id^="slot_"]
 strikeout.co,vipbox.sx,vipleague.co,vipleague.is##div[style="display: block;"]
+strikeout.im,buffsports.io##.h-100.w-100.bg-opacity-25
 strikeout.me##.embed-responsive > div[id][style="display: block;"] > div.text-success
 strikeout.nu##.text-center > button[data-open="_blank"]
 strikeout.nu##script + iframe[class][style^="display: block; max-width:"][style*="overflow:"]:not([src])
