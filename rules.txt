@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-05 20:35:50（北京时间）
+! Version: 2026-02-05 21:59:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66619
+! Total count: 66647
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5029,6 +5029,7 @@
 @@||active.jd.com^
 @@||activity.browser.intl.miui.com^
 @@||activity.hdslb.com^
+@@||activity.huaweicloud.com^
 @@||activity.tuiapple.com^
 @@||activity.youku.com^
 @@||acts.qidian.com^
@@ -6360,6 +6361,7 @@
 @@||auth.*.commercetools.com^$stealth=3p-auth,domain=qt.io
 @@||auth.avs.io^$stealth=referrer
 @@||auth.gfx.ms^$document
+@@||auth.huaweicloud.com^
 @@||auth.mail.ru^$stealth=useragent
 @@||auth.opera.com^$stealth=useragent
 @@||auth.schale.network^$stealth=referrer|3p-auth
@@ -7267,6 +7269,7 @@
 @@||cdn.mp4upload.com/pl/plyr*.js
 @@||cdn.muratordom.smcloud.net/t/advert.js
 @@||cdn.mxpnl.com/libs/$script,domain=get.pumpkin.care
+@@||cdn.myhuaweicloud.com^
 @@||cdn.needrom.com/advert*.js
 @@||cdn.nlark.com^$image,stealth=referrer,domain=yuque.com
 @@||cdn.ocmhood.com/sdk/hood.js$xmlhttprequest,domain=idlixvip.asia
@@ -7750,7 +7753,6 @@
 @@||cloudssh.us,kissmanga.in^$generichide
 @@||cloudvideo.tv/embed-$domain=139.99.120.222
 @@||cloudvideo.tv/embed-$stealth=referrer
-@@||clover-manga.com^$generichide
 @@||club.tgfcer.com^$generichide
 @@||cm-10-*.getui.com^
 @@||cm-beacon.nakanohito.jp^
@@ -7857,7 +7859,6 @@
 @@||collector.leaddyno.com/shopify.js$script,domain=s4l.us
 @@||collusion.com/static/newrelic.js$script,~third-party
 @@||colorspire.com^$generichide
-@@||comandotorrent.tv^$generichide
 @@||comate-ide.cdn.bcebos.com^
 @@||comate.baidu.com^
 @@||comcast.net^$stealth
@@ -7923,8 +7924,10 @@
 @@||consent.cookiefirst.com/sites$stealth=referrer
 @@||consentmanager.net/delivery/$domain=winfuture.de,stealth=referrer
 @@||conservationmag.org^$generichide
+@@||console-intl.huaweicloud.com^
 @@||console.cloud.google.com^$generichide
 @@||console.cloud.tencent.com^
+@@||console.huaweicloud.com^
 @@||console.statsig.com/_next/$~third-party
 @@||consumerapp-1251779293.image.myqcloud.com^
 @@||contacts.google.com^$generichide
@@ -8745,7 +8748,6 @@
 @@||easternbank.com/sites/easternbank/files/google_tag/eastern_bank/google_tag.script.js$script,~third-party
 @@||eastus.api.speech.microsoft.com^
 @@||easy-firmware.com/templates/default/html/*/assets/js/fingerprint2.min.js$script,~third-party
-@@||easyexploits.com^$generichide
 @@||easylife.tw/js/adblockDetector.js
 @@||easylife.tw^$generichide
 @@||ebank.bsstarozreby.pl^$elemhide,jsinject,extension
@@ -9384,7 +9386,6 @@
 @@||freeride.se/img/admarket/$~third-party
 @@||freeserial-keys.blogspot.com^$generichide
 @@||freeshib.biz^$generichide
-@@||freesoft.id^$generichide
 @@||freesoftpdfdownload.blogspot.com^$generichide
 @@||freetimelearning.com^$generichide
 @@||freetutorials.us^$generichide
@@ -12437,6 +12438,7 @@
 @@||marketingautomation.services^$script,domain=leeuwerik.nl
 @@||marketmovers.it^$generichide
 @@||marketools.plus500.com/Widgets/RegistrationWidget/*$domain=investing.com
+@@||marketplace.huaweicloud.com^
 @@||marketplace.ofeminin.pl/static/$domain=lamoda.pl
 @@||marketplace.xbox.com^$document
 @@||mars.jd.com^
@@ -12628,7 +12630,6 @@
 @@||messenger.com^$extension
 @@||messitv.net^$generichide
 @@||metabomb.net^$generichide
-@@||metalnaveia66.com^$generichide
 @@||metamani.blog15.fc2.com^$generichide
 @@||meteomedia.com^$generichide
 @@||metok.sys.miui.com^
@@ -12732,6 +12733,7 @@
 @@||mip.xiachufang.com^
 @@||mipcache.bdstatic.com^
 @@||mirrors.163.com^
+@@||mirrors.huaweicloud.com^
 @@||miscellaneous-c.blogspot.com^$generichide
 @@||missav.ai^
 @@||missav.live^
@@ -12758,6 +12760,8 @@
 @@||mjakmama24.pl^$generichide
 @@||mjhobbymassan.se/r/annonser/$image,~third-party
 @@||mjrpay.jd.com^
+@@||mkp-intl-res.hc-cdn.com^
+@@||mkp-res.hc-cdn.com^
 @@||mlbstatic.com/mlb.com/adobe-analytics/$script,domain=mlb.com
 @@||mlbstatic.com/mlb.com/video/config/mlb-vpp-aws^
 @@||mlol-file.qpic.cn^
@@ -13337,6 +13341,36 @@
 @@||obituaries.thestar.com^
 @@||obituaries.thestar.com^|
 @@||objectivequiz.com^$generichide
+@@||obs.af-north-1.myhuaweicloud.com^
+@@||obs.af-south-1.myhuaweicloud.com^
+@@||obs.ap-southeast-1.myhuaweicloud.com^
+@@||obs.ap-southeast-2.myhuaweicloud.com^
+@@||obs.ap-southeast-3.myhuaweicloud.com^
+@@||obs.ap-southeast-4.myhuaweicloud.com^
+@@||obs.ap-southeast-5.myhuaweicloud.com^
+@@||obs.cn-east-2.myhuaweicloud.com^
+@@||obs.cn-east-3.myhuaweicloud.com^
+@@||obs.cn-east-4.myhuaweicloud.com^
+@@||obs.cn-east-5.myhuaweicloud.com^
+@@||obs.cn-north-1.myhuaweicloud.com^
+@@||obs.cn-north-11.myhuaweicloud.com^
+@@||obs.cn-north-12.myhuaweicloud.com^
+@@||obs.cn-north-2.myhuaweicloud.com^
+@@||obs.cn-north-4.myhuaweicloud.com^
+@@||obs.cn-north-9.myhuaweicloud.com^
+@@||obs.cn-south-1.myhuaweicloud.com^
+@@||obs.cn-south-2.myhuaweicloud.com^
+@@||obs.cn-south-4.myhuaweicloud.com^
+@@||obs.cn-southwest-2.myhuaweicloud.com^
+@@||obs.cn-southwest-3.myhuaweicloud.com^
+@@||obs.la-north-2.myhuaweicloud.com^
+@@||obs.la-south-2.myhuaweicloud.com^
+@@||obs.me-east-1.myhuaweicloud.com^
+@@||obs.na-mexico-1.myhuaweicloud.com^
+@@||obs.ru-northwest-2.myhuaweicloud.com^
+@@||obs.sa-brazil-1.myhuaweicloud.com^
+@@||obs.sa-peru-1.myhuaweicloud.com^
+@@||obs.tr-west-1.myhuaweicloud.com^
 @@||ocdn.eu/ucs/static/*/onesignal.js$script,domain=pulsonline.rs
 @@||ocdn.eu/ucs/static/*Piano/*/build/amd/floatingAd.js$domain=newsweek.pl
 @@||ocr-free.com^$generichide
@@ -14579,7 +14613,6 @@
 @@||peimg.fr/js/ads.js$script,domain=pubeco.fr
 @@||penducado.com/styles/ads.css
 @@||pengantartidurkuh.blogspot.com^$generichide
-@@||pennbookcenter.com^$generichide
 @@||penta.a.one.impact-ad.jp^$script,domain=www3.nissan.co.jp
 @@||peperonity.net^$generichide
 @@||pepperjamnetwork.com/banners/$image,domain=extrarebates.com
@@ -14901,6 +14934,7 @@
 @@||portal.azure.com^$stealth=referrer
 @@||portal.cityspark.com/PortalScripts/DailyCamera$domain=dailycamera.com
 @@||portal.cityspark.com/v1/event$domain=dailycamera.com
+@@||portal.hc-cdn.com^
 @@||portal.ik.weiyunjian.com^
 @@||portal.mail.ru^$stealth=useragent
 @@||portal.newdaycards.com^$extension
@@ -15414,11 +15448,14 @@
 @@||request-global.czilladx.com/serve/popunder.php
 @@||request-global.czilladx.com/serve/popunder.php$domain=faucetcrypto.net
 @@||res-r.qingjiaota.com^
+@@||res-static.hc-cdn.cn^
+@@||res-video.hc-cdn.com^
 @@||res-x.com^*/Resonance.aspx?
 @@||res.126.net^
 @@||res.ads.nicovideo.jp^
 @@||res.ads.nicovideo.jp^|
 @@||res.cloudinary.com^
+@@||res.hc-cdn.com^
 @@||res.imtt.qq.com^
 @@||res.mall.10010.cn^
 @@||res.mi.baidu.com^
@@ -15744,6 +15781,7 @@
 @@||search.powergap.de/indexes/$stealth=3p-auth
 @@||search.sogoucdn.com^
 @@||search.spotxchange.com/vmap/*&content_page_url=www.bsfuji.tv$xmlhttprequest,domain=imasdk.googleapis.com
+@@||searchrec.marketplace-intl.huaweicloud.com^
 @@||searchtap.net^$stealth=3p-auth,domain=designerframesoutlet.com
 @@||seattletimes.com/wp-content/plugins/st-privacy-detection/js/src/ads/ad-test.js
 @@||sec-cdn.static.xiaomi.net^
@@ -16117,7 +16155,6 @@
 @@||shasso.com/MyStoreOrders/$document
 @@||sheee.co.il^$generichide
 @@||shenfenzheng.bmcx.com^
-@@||shiba.limited^$generichide
 @@||shibukei.com^$generichide
 @@||shijue.me/advertise/getList?
 @@||shikimori.*/comments/*/edit$extension
@@ -16928,6 +16965,7 @@
 @@||support-widget.nakanohito.jp^|
 @@||support.google.com/google-ads/
 @@||support.google.com^$domain=support.google.com
+@@||support.huaweicloud.com^
 @@||support.logi.com/*/articles/$stealth=useragent
 @@||support.weixin.qq.com^
 @@||supportcanon.com^$generichide
@@ -17439,7 +17477,6 @@
 @@||torimochi.line-apps.com^|
 @@||torproject.org^
 @@||torrage.info/torrent.php$popup,third-party
-@@||torrentsmegafilmes.com^$generichide
 @@||torrentz.adclixx.net/mgid/ad.js
 @@||torrentz.adnetasia.com/mgid/ad.js
 @@||torrentz.adtrackers.net/mgid/ad.js
@@ -17805,7 +17842,6 @@
 @@||union.jd.com^
 @@||union.video.qq.com/fcgi-bin/$script,domain=qq.com
 @@||union2.50bang.org^$third-party
-@@||unionmanga.xyz^$generichide
 @@||uniqlo.com^$jsinject,content
 @@||unisdk.update.netease.com^
 @@||unity3diy.blogspot.com^$generichide
@@ -18166,7 +18202,6 @@
 @@||vipi.tv/ads.js
 @@||vipstatic.com/img/share/blank.png
 @@||viptools.es/assets/ads.js
-@@||viralfeed.xyz^$generichide
 @@||viralogic.xyz^$generichide
 @@||virginplus.ca^$stealth=dpi
 @@||virpe.cc/includes/js/adver.js
@@ -18640,6 +18675,7 @@
 @@||www.hentai.name^
 @@||www.hisense.com^
 @@||www.hoyoverse.com^
+@@||www.huaweicloud.com^
 @@||www.ijinshan.com^
 @@||www.infoq.com/scripts/ads.js
 @@||www.internetdownloadmanager.com^
@@ -19095,7 +19131,6 @@
 @@||zazhipu.com^
 @@||zbjimg.com/??$domain=tianpeng.com
 @@||zconfig.alibabausercontent.com^
-@@||zcteam.id^$generichide
 @@||zdbb.net/edaa^$domain=youronlinechoices.com
 @@||zdmedia.ziffdavis.com/video/$domain=pcmag.com
 @@||zdopravy.cz^$generichide
@@ -24582,7 +24617,6 @@ bug.hr##.main-content > div[class^="block  "] > div[class=""] > div.block__conte
 bugmenot.com###color-names
 builds.gg##.consent, #consent
 buildsometech.com,4thsight.xyz,zonegfx.com,hutporner.com,jav1080.com,sakurajav.com,laweekly.com,historicseries.com,indiansexbazar.com,sonixgvn.net,eftm.com,floxblog.com,aceofhacking.com,watchtheoffice.cc,newtechworld.net,collegelearners.com,tecmint.com,firesticktricks.com###custom_html-4
-buildsometech.com,4thsight.xyz,zonegfx.com,hutporner.com,jav1080.com,sakurajav.com,laweekly.com,historicseries.com,indiansexbazar.com,sonixgvn.net,eftm.com,pennbookcenter.com,floxblog.com,aceofhacking.com,watchtheoffice.cc,newtechworld.net,collegelearners.com,tecmint.com,firesticktricks.com###custom_html-4
 buildsometech.com,fulllengthaudiobook.com,audiobooklabs.com,bestjoblive.com,profitableventure.com###ai_widget-2
 builtbybit.com##.resourceSidebar-belowContent > div > .block:has(.block-container a[href="https://tebex.io/"])
 builtbybit.com##[style="margin-top: 20px; display: flex; justify-content: center;"]
@@ -33328,8 +33362,6 @@ freesexpornhd.com##div[class^="page-conteiner"] > div[class^="content-title-"]
 freesexyindians.com##.grid-sidebar-extra
 freeshib.biz##.alert ~ div.row > div[class^="col-"] > div.row > div[class^="col-"]:has(> div.ads)
 freeshoppingdeal.com##.td-ss-main-sidebar > aside:not(.widget_search)
-freesoft.id##center > button[onclick^="window.open("][rel]
-freesoft.id,zcteam.id###btn-keren
 freesoftpdfdownload.blogspot.com##a[href^="http://wap4dollar.com/ad/"]
 freesound.org##.toast
 freespoke.com##.WebSearch > .wrapper > .ant-row > .ant-col > .ant-row > .component-col:has(> .ContextualMessaging > .header > .block > a[href="/no-ads"])
@@ -37593,7 +37625,6 @@ hurriyetdailynews.com##.news-detail-adv
 hurriyetdailynews.com##div[class*="advertorial"]
 hutool.cn##.hutool-top-ad
 hutporner.com,javzh.com,thesource.com,javcrave.com,indiansexbazar.com,gossipfunda.com,claimfey.com,courseforfree.net,dailyresearchplot.com,techspite.com,aceofhacking.com###custom_html-5
-hutporner.com,javzh.com,thesource.com,javcrave.com,indiansexbazar.com,gossipfunda.com,claimfey.com,courseforfree.net,dailyresearchplot.com,techspite.com,aceofhacking.com,freesoft.id###custom_html-5
 huutokaupat.com##div[data-test="entry-list-container"] > article:not([data-test]):has(a[data-external="true"][variant="primary"])
 huxiu.com##li:nth-of-type(1) > .header-top-list__link > .flip-wrap > .flip-up
 huya.com###J_adBnM
@@ -53266,7 +53297,6 @@ rikstv.no###cookie-consent
 rimowa.com##.b-modal, .b-modal ~ div[class*="privacy"]
 ring.com###teconsent
 ringtv.com##.widget_ad_dropper_widget
-ringwitdatwixtor.com,metropolisjapan.com,hentai-sharing.net,hentaiomg.com,jav1080.com,javrookies.com,sakuravrjav.com,pridesource.com,4sysops.com,idevicecentral.com,forums.flyer.co.uk,3xplanet.com,schooldrillers.com,aceofhacking.com,linuxpip.org,kodi-tutorials.uk,yofreesamples.com,thispointer.com,freesoft.id,stevessmarthomeguide.com,hwnews.in,collegelearners.com,watchmalcolminthemiddle.com###custom_html-3
 ringwitdatwixtor.com,metropolisjapan.com,hentai-sharing.net,hentaiomg.com,jav1080.com,javrookies.com,sakuravrjav.com,pridesource.com,4sysops.com,idevicecentral.com,forums.flyer.co.uk,3xplanet.com,schooldrillers.com,aceofhacking.com,linuxpip.org,kodi-tutorials.uk,yofreesamples.com,thispointer.com,stevessmarthomeguide.com,hwnews.in,collegelearners.com,watchmalcolminthemiddle.com###custom_html-3
 rio2016.coni.it###privacy-wrapper
 riomare.it##.ccp-banner
@@ -53449,7 +53479,6 @@ romsgames.net##button[onclick^="window.open('/nord-vpn-offer/');"]
 romsgames.net,msn.com##.adlabel
 romsmania.games###click-widget-banner
 romsmania.games##.aawp
-romspack.com,faindx.com,hentaiomg.com,laweekly.com,pridesource.com,alludemycourses.com,ipacrack.com,idevicecentral.com,hentaidude.tv,mymanagementguide.com,schooldrillers.com,aceofhacking.com,msftnext.com,thispointer.com,scienceabc.com,freesoft.id,winhelponline.com,indieshortsmag.com,kodi-tutorials.uk,ahegao.online,camwhores.co,wabetainfo.com,studydhaba.com,justlightnovels.com###custom_html-2
 romspack.com,faindx.com,hentaiomg.com,laweekly.com,pridesource.com,alludemycourses.com,ipacrack.com,idevicecentral.com,hentaidude.tv,mymanagementguide.com,schooldrillers.com,aceofhacking.com,msftnext.com,thispointer.com,scienceabc.com,winhelponline.com,indieshortsmag.com,kodi-tutorials.uk,ahegao.online,camwhores.co,wabetainfo.com,studydhaba.com,justlightnovels.com###custom_html-2
 romspedia.com,gdforum.freeforums.net###ad1
 romzhijia.net##.ggposition
@@ -62399,7 +62428,6 @@ viptube.com##.stem[style="background: #1d1d1d;"]
 viptube.com##div[style="padding: 2px 11px; margin-top: 1px;"]
 viptube.icu##.promotion
 viralagenda.com###viral-footer
-viralfeed.xyz##.admania-widgettit
 viralsciencecreativity.com###POPUPS_ROOT
 viralsciencecreativity.com##div[id^="pagePinnedMiddle"]
 virgilio.it###localadvstuff
@@ -63074,6 +63102,8 @@ watchmygf.me##.publicity
 watchmynewgf.com##body > section.bb
 watchonline.pro##a[href^="http://watchonline.pro/watch-now/"] > img[width="500"]
 watchporn.to##.container > center > .top > a > img
+watchporn4k.com###video-overlay
+watchporn4k.com,fucking-tube.com##.video-block-happy
 watchpornfree.info##aside > #execphp-2
 watchsomuch.to###VPN
 watchsomuch.to##.getVIPAds
@@ -66057,8 +66087,6 @@ zcool.com.cn##.advlongDefault
 zcool.com.cn##.details-advertisement
 zcool.com.cn##.main-wrapper-advlong-top
 zcool.com.cn,php.cn,v2ex.com,233tw.com##.wwads-cn
-zcteam.id##button[onclick^="window.open("]
-zcteam.id##div[class][style="clear:both;float:left;width:100%;margin:0 0 20px 0;"]
 zddream.com##div[style^="width:100%;height:100%;border:2px"]
 zdfans.com##.btn11 + .btn11
 zdfans.com##ul[id^="gaosuxiazai"]
