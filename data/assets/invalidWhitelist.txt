@@ -101,12 +101,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14280
+! Total count: 14282
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-02-05 21:13:50（北京时间）
+! Version: 2026-02-06 10:34:39（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1400,6 +1400,7 @@
 @@//aka-cdn-ns.adtechus.com/images/$domain=cinemablend.com
 @@//store.donanimhaber.com/ad/*$domain=forum.donanimhaber.com
 @@/:\/\/.*[.]wp[.]pl\/[a-z0-9_]+[.][a-z]+[/:&?]?/
+@@/?scode=*&stream=$stealth=referrer
 @@/?url=$subdocument,stealth=referrer,domain=agedm.vip
 @@/?utm_data=*&_=$xmlhttprequest,domain=sterham.net|casthill.net
 @@/OutbrainWidgetConnector.js$domain=foxnews.com
@@ -8984,7 +8985,6 @@
 @@||cdn-surfline.com/quiver/*/scripts/$domain=surfline.com
 @@||cdn.*.exponea.com/production*/consent?$subdocument,domain=proffsmagasinet.se|staypro.*
 @@||cdn.7tv.app^$stealth=dpi
-@@||cdn.ablyft.com/s/$domain=giesswein.com
 @@||cdn.ad.plus/player/adplayer.js$third-party,xmlhttprequest,domain=idyllic.app
 @@||cdn.ad4game.com/ad4game_html5_sdk.js$domain=anime47.com
 @@||cdn.adapex.io/hb/aaw.worthpoint.js$domain=worthpoint.com
@@ -11282,7 +11282,7 @@
 @@||g.doubleclick.net/gampad/live/ads?*tver.$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/gpt/pubads_impl_$domain=accuweather.com|blastingnews.com|bloomberg.com|chelseafc.com|chromatographyonline.com|cornwalllive.com|digitaltrends.com|downdetector.com|edy.rakuten.co.jp|epaper.timesgroup.com|formularywatch.com|game.anymanager.io|games.coolgames.com|managedhealthcareexecutive.com|medicaleconomics.com|nationalreview.com|nationalworld.com|nbcsports.com|nycgo.com|physicianspractice.com|scotsman.com|telsu.fi|voici.fr|weather.com
 @@||g.doubleclick.net/pagead/ads$subdocument,domain=sudokugame.org
-@@||g.doubleclick.net/pagead/ads?$subdocument,xmlhttprequest,domain=pvpoke-re.com
+@@||g.doubleclick.net/pagead/ads?$domain=pvpoke-re.com
 @@||g.doubleclick.net/pagead/ads?*&description_url=https%3A%2F%2Fgames.wkb.jp$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/pagead/ads?gdpr=$subdocument,domain=decrypt.day
 @@||g.doubleclick.net/pagead/images/gmob/close-circle-30x30.png$image,domain=safeframe.googlesyndication.com
@@ -13992,6 +13992,7 @@
 @@||kf.cn/ad/css/*.*.
 @@||kf.cn/ad/css/*.css
 @@||kf.cn/ad/css/images/
+@@||kfc.com^$stealth=ip
 @@||kfcclub.com.tw/checkout$stealth=webrtc
 @@||kfcclub.com.tw/web/*/ad
 @@||kfcorder.com.tw/web/Script/Analytics.js
@@ -14163,6 +14164,7 @@
 @@||legionscans.com^$generichide
 @@||leisurefire.github.io$elemhide,jsinject
 @@||lemall.com/adspace/
+@@||lematin.ch^$generichide
 @@||lenovo.com/_ui/desktop/common/js/AdobeAnalyticsEvent.js$script,~third-party
 @@||lenovo.com/fea/js/adobeAnalytics/$script,~third-party,xmlhttprequest
 @@||lensprice.co.kr^$stealth=dpi
@@ -16298,7 +16300,7 @@
 @@||pagead2.googlesyndication.com/pagead/managed/js/*/show_ads_impl_$script,domain=panel.waifly.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ff14angler.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads*.js$domain=forum.release-apk.com,important,stealth
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl$script,domain=pvpoke-re.com
+@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl$domain=pvpoke-re.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_$script,domain=rjno1.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=codingnepalweb.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=copyseeker.net
@@ -16816,6 +16818,7 @@
 @@||prod.adspsp.com/adb.*.min.js$domain=healthline.com
 @@||prod.adspsp.com/adb.2418030m.min.js$domain=medicalnewstoday.com
 @@||prod.fennec.atp.fox/js/fennec.js$domain=freemcserver.net
+@@||prod.kfc-digital.io/api/$stealth=ip
 @@||prod.pandateacher.com/web-fos/app/$xmlhttprequest,elemhide,jsinject,extension
 @@||prod.sfm.geforcenow.nvidiagrid.net^$stealth=3p-auth
 @@||prod.sixthcontinent.com/webapi/getaccesstoken$stealth=ip
@@ -19850,7 +19853,6 @@
 @@||wakudan.seesaa.net^$generichide
 @@||walla.co.il^$csp
 @@||walla.co.il^$generichide
-@@||walletkeyslocker.me/?scode=*&stream=$stealth=referrer
 @@||walletkeyslocker.me/?stream$stealth=referrer
 @@||wallpaper*.site/*.jpg$xmlhttprequest,stealth=referrer
 @@||wallpaper-house.com^$generichide
