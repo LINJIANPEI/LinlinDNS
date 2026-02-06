@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-06 07:15:52（北京时间）
+! Version: 2026-02-06 09:04:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66652
+! Total count: 66658
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3695,7 +3695,9 @@
 80.lv##[class*="ImgPrmo"]
 80.lv##[id^="Image_bner_"]
 80.lv##a[id^="Image_Banner_Mid"]
+80.lv##div[class*="BrPrMainShell"]
 80.lv##div[class*="BrndngGibPrm_"]
+80.lv##div[class^="_"]:has( > a[id^="Image_benr_"])
 808sbo.com,livesports088.com,808fubo.com,score808.tv,score808pro.com##.banner
 808sbo.com,livesports088.com,808fubo.com,score808.tv,score808pro.com##div[class^="gg-tb-"]
 808sbo.com,livesports088.com,808fubo.com,score808.tv,score808pro.com##img[id^="tag-"]
@@ -11700,6 +11702,7 @@
 @@||kf.cn/ad/css/*.*.
 @@||kf.cn/ad/css/*.css
 @@||kf.cn/ad/css/images/
+@@||kfc.com^$stealth=ip
 @@||kfcclub.com.tw/checkout$stealth=webrtc
 @@||kfcclub.com.tw/web/*/ad
 @@||kfcorder.com.tw/web/Script/Analytics.js
@@ -11891,6 +11894,7 @@
 @@||leihuo.163.com^
 @@||leisurefire.github.io$elemhide,jsinject
 @@||lemall.com/adspace/
+@@||lematin.ch^$generichide
 @@||lenovo.com/_ui/desktop/common/js/AdobeAnalyticsEvent.js$script,~third-party
 @@||lenovo.com/fea/js/adobeAnalytics/$script,~third-party,xmlhttprequest
 @@||lens.zhihu.com^
@@ -15008,6 +15012,7 @@
 @@||prod.fennec.atp.fox/js/fennec.js$domain=freemcserver.net
 @@||prod.impartner.live^
 @@||prod.impartner.live^|
+@@||prod.kfc-digital.io/api/$stealth=ip
 @@||prod.pandateacher.com/web-fos/app/$xmlhttprequest,elemhide,jsinject,extension
 @@||prod.sfm.geforcenow.nvidiagrid.net^$stealth=3p-auth
 @@||prod.sixthcontinent.com/webapi/getaccesstoken$stealth=ip
@@ -60011,6 +60016,7 @@ tomsguide.com##div[data-offer="deal_of_the_week"]
 tomshardware.com###rightcol_top
 tomshardware.com###rightcol_top + .space-b30
 tomshardware.com###rightcol_top_anchor
+tomshardware.com##.listingResult:has(> div.sponsored-post)
 tomshw.it##.adv
 tomshw.it##.customads
 tomshw.it##.customads__container_v2
