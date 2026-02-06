@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-06 16:29:48（北京时间）
+! Version: 2026-02-06 17:33:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66656
+! Total count: 66658
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8291,6 +8291,7 @@
 @@||dd.auspost.com.au/tags.js$script,~third-party
 @@||dd.blackhawknetwork.com.first-party-js.datadome.co^$domain=redeem.rewardlink.com
 @@||dd.myapp.com^
+@@||dd.qa.moneygram.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=moneygram.com
 @@||dd.wizzair.com.first-party-js.datadome.co^$domain=wizzair.com
 @@||ddmix.net^$generichide
 @@||ddys.pro^
@@ -18463,6 +18464,7 @@
 @@||widget.kassa.rambler.ru/CrossDomainInteraction/$stealth=referrer
 @@||widget.mibbit.com^
 @@||widget.myrentacar.me^$script,subdocument
+@@||widget.playoncenter.com/webservice/geo$xmlhttprequest,domain=hipertextual.com
 @@||widget.rave.office.net^
 @@||widget.sndcdn.com^
 @@||widget.trustpilot.com/bootstrap/$script,domain=amartfurniture.com.au|exodus.co.uk|imyfone.com
