@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-07 15:25:25（北京时间）
+! Version: 2026-02-07 16:19:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66667
+! Total count: 66669
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -11345,7 +11345,6 @@
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -12023,7 +12022,6 @@
 @@||link1s.*^$stealth=referrer
 @@||link1s.com/wp-banners.js
 @@||link1s.com^$generichide
-@@||linka.page^
 @@||linka.page^|
 @@||linkbucks.com/tmpl/$image,stylesheet
 @@||linkconnector.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
@@ -15012,6 +15010,7 @@
 @@||prod-chat-kimi-tos.moonshot.cn^
 @@||prod.adspsp.com/adb.2418030m.min.js$domain=medicalnewstoday.com
 @@||prod.fennec.atp.fox/js/fennec.js$domain=freemcserver.net
+@@||prod.impartner.live^
 @@||prod.impartner.live^|
 @@||prod.kfc-digital.io/api/$stealth=ip
 @@||prod.pandateacher.com/web-fos/app/$xmlhttprequest,elemhide,jsinject,extension
@@ -18691,6 +18690,7 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
+@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -18772,6 +18772,7 @@
 @@||www.so.com^
 @@||www.spaceship.com^
 @@||www.statcounter.com/images/$image,third-party
+@@||www.statcounter.com^
 @@||www.statcounter.com^|
 @@||www.sygjx.com^
 @@||www.taobao.com^
@@ -22581,6 +22582,7 @@ baku.ws##.banners-right
 baku.ws##.main-container > div.main-right:has(> div.right-bnr:only-child)
 baku.ws##.row > div.d-lg-block:has(> div.cat-left-bnr)
 baku.ws##.side-bnr
+bakues.az##a[href="https://bakues.az"] > img[src^="https://20nws.upturnlab.com/"]
 bakupost.az##.news-viewer-item-content > iframe
 balarm.it##.separatore-sidebar:empty
 balarm.it##.text-container > div[style^="margin: 40px 0 !important; width: 630px !important; height:170px !important; background: #"]
