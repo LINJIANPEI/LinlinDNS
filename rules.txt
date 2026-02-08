@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-08 16:21:03（北京时间）
+! Version: 2026-02-08 17:21:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66680
+! Total count: 66683
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -45756,6 +45756,7 @@ movie4u.live##a[href][target="_blank"].options
 movie76.com###btm_banner
 movie76.com##img[alt="ads"]
 movie76.com,wardhanime.net##div[id^="teaser"]
+moviebite.cc##.transition-all.overflow-hidden.w-full:has-text(Advertisement)
 moviechat.org##.adc
 moviechat.org##a[href^="https://breathecup.com/?utm_source="][target="_blank"]
 moviecrow.com,unboxholics.com,krebsonsecurity.com,scotsman.com,maketecheasier.com###top-banner
@@ -48117,6 +48118,8 @@ ntpcb.com##img[width="1195"]
 ntr-games.com##.gridlove-posts > div[class^="col-"]:has(> div.category-ad)
 ntunhs.net###sidebar2
 ntvkenya.co.ke##.ad_flex
+ntvstream.cx##.ad-close-btn
+ntvstream.cx##.ad-popup-overlay
 ntvtelugu.com##.bottom-sticky-ad
 nu-bay.com##.gal-banner
 nu-bay.com##div[class^="sp_block_300-"]
