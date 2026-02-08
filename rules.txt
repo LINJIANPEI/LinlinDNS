@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-08 07:19:05（北京时间）
+! Version: 2026-02-08 09:26:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66673
+! Total count: 66679
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12399,6 +12399,7 @@
 @@||manhua.weibo.com/adv/
 @@||manhuagui.com^$stealth=referrer
 @@||manhuapica.com^
+@@||manhuarmtl.com^$generichide
 @@||manifest.auditude.com/auditude/*.m3u8?$domain=rickandmorty.com
 @@||manifest.auditude.com/auditude/variant/$domain=adultswim.com
 @@||manifest.googlevideo.com^
@@ -14194,6 +14195,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tricksplit.io
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=truongblogger.top
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=try2link.com|forexrw7.com|fx-22.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tstrs.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tsubasa.im
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tt1069.com|akashio.com|1991421.cn|kantie.org|kejilion.pro|bilinovel.com|mcappx.com|yeeach.com|blog.6ziz.com|docsmall.com|uiadmin.net|4horlover.com|23qb.net|4spaces.org|aboluowang.com|assbbs.com|chaojizhibo.net|chtoen.com|daxiaamu.com|demo.ama.pub|dizhishengcheng.com|doitwell.tw|ekamus.info|eu4cn.com|ff14angler.com|freedidi.com|fsbot.xyz|haoweichi.com|it365.abctool.info|linovelib.com|logi.im|mens1069.com|monnsutogatya.com|mpyit.com|myqqjd.com|numberempire.com|ozabc.com|pansearch.me|patch.ali213.net|pc3mag.com|reh.tw|shenfendaquan.com|sistersbedroom.com|sto520.com|vaptcha.com|wandhi.com|wenxuecity.com|wuyong.fun|xbeibeix.com|xiebruce.top|xugaoxiang.com|xxxxx520.com|yodu.org|yummy.best|zaixianjisuan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tunein.com
@@ -16009,6 +16011,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=theglobeandmail.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=thehealthsite.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tractorsupply.com
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tstrs.me
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=vogue.ru
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=wunderground.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
@@ -33768,8 +33771,10 @@ g.pl##div[class^="ban00"][class*="wrap"]
 g.pl##div[id^="banC"]
 g2.com##.product-head__leads
 g2.com##div[data-track-in-viewport-options*="Advertisements"] + div[data-funnel-fingerprinting-path-value]
+g2a.com###popupLink
 g2a.com##div[data-test-id="cookie-modal"], .agreements-container
 g2a.com##div[data-testid="placement"]
+g2a.com##li[data-locator="ppa-offers-list__item"]:has(> div > div > div[class^="ZTH_StyledContainer"] > div[class^="ZTH_StyledProfileInfoDetails-sc"] > div[class^="OffersList_StyledProfileNameAndSponsored-sc-"])
 g2esports.com##.js-side-banner
 g2g.com##.q-page ~ div > .fixed-bottom
 g4media.ro##div[class^="code-block code-block-"][style]
@@ -43981,6 +43986,7 @@ manhuagui.com##div[class]:has(> .adsbyexoclick)
 manhuagui.com##div[style^="width: 300px; height: 250px;"]
 manhuapica.com##a[href^="/ad/"]
 manhuaren.com###lb-win
+manhuarmtl.com##.custom-ads-wrapper
 manhuascan.com##.itemupdate2
 manhuasy.com,teenmanhua.com##.body-wrap > div.c-sidebar
 manhuatop.org##.c-sidebar
