@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-09 16:38:06（北京时间）
+! Version: 2026-02-09 17:51:34（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66741
+! Total count: 66746
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -45678,8 +45678,10 @@ motherless.com##div[style^="width:915px;height:250px;"]
 motherless.com##table[style*="max-width:"]
 motherless.com$$script[tag-content="_ml_ads_ns"][min-length="4000"][max-length="5000"]
 mothership.sg###block-imu1
+mothership.sg###block-imu2
 mothership.sg###block-outstream1
 mothership.sg###block-outstream2
+mothership.sg###block-outstream3
 mothership.sg##.ad--imu
 mothership.sg##.ad--lb
 mothership.sg##.ad--side
@@ -48909,6 +48911,7 @@ op.gg##main > span[style^="display: flex; justify-content: center; align-items: 
 op.gg##section:has(> div.min-h-\[250px\]):not(:has(> *:not(div.min-h-\[250px\])))
 op.gg##section[class*="md:"]:has(> .items-center > div[data-id$="leaderboard"])
 op.gg##tr.ad
+op.gg,stomp.sg##.min-h-\[50px\]
 op.gg,thenewdaily.com.au##.min-h-\[100px\]
 opchapters.com##.blox.kln
 opchapters.com##span[onclick^="closeAd"]
@@ -57133,6 +57136,8 @@ stokesentinel.co.uk##.shop-window[data-impr-tracking="true"]
 stokke.com##.sk-cookie-message
 stokokkino.gr###popupform1
 stomp.com.sg###block-boxes-q0010-widget
+stomp.sg##.lg\:py-xl.pt-md
+stomp.sg##.min-h-\[120px\]
 stoneip.info###text-57
 stooq.com##table[width="98%"][height="250"][align="center"]
 stooq.pl##div[onclick*="window.open('http://stooq.pl/ads/"]
