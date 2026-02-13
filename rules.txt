@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-13 17:33:36（北京时间）
+! Version: 2026-02-13 18:30:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66792
+! Total count: 66795
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25251,6 +25251,7 @@ cars.bg##a[href^="http://www.ads.bg/"]
 cars.com###branded-canvas-click-wrapper:has(> #native-ad-html)
 cars.com###primary-hero
 cars.com##.vehicle-card.inventory-ad
+cars.com##[aria-label="Listings"] li:has(card-gallery[card-link*="?attribution_type"])
 cars.com##[id$="-sponsored"]
 carsale24.com###cookies
 carsales.com.au##.csn-refine-ads
@@ -49977,6 +49978,7 @@ pexels.com##.js-sponsored-photos
 pexels.com##.partner-box
 pexels.com##a[href*=".istockphoto.com"]
 pexels.com##div[class="RowItem_gridItem__OfhML RowItem_fullWidth__cIdtN RowItem_expand__TR5R6"]
+pexels.com##div[class^="FullWidth_container_"]:has(a[rel="sponsored noopener"])
 pexels.com##div[class^="RowGrid_grid__"] > div[class^="RowItem_gridItem__"]:has(> div[class^="AIGCAd_"])
 pexels.com##div[data-testid="item"]:has(> a[class^="CanvaAd"])
 pexels.com##header > a[href^="https://www.canva.com/"]
@@ -50323,6 +50325,7 @@ pixabay.com##.present-g-item
 pixabay.com##.show-gtty-item
 pixabay.com##.show-gtty-item > div[style="font-size:14px;color:#a5a8ab;margin:5px 9px"]
 pixabay.com##div[class*="sponsoredWithResults"]
+pixabay.com##div[class="cell--UMz-x"]:has(button[aria-label="About this advertiser"])
 pixabay.com##div[class^="adPlacement"]
 pixai.art##.content-start > .row-start-1:has(> a[href="https://go.getmogu.chat"])
 pixel-offers.com##.v-cookie-policy
