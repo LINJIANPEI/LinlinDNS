@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-17 15:43:09（北京时间）
+! Version: 2026-02-17 16:33:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66851
+! Total count: 66853
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4842,6 +4842,7 @@
 @@||70.86.24.120:8060/*/
 @@||720static.com/resource/$stealth=referrer
 @@||75.125.41.29:8080/*/
+@@||79423.analytics.edgekey.net^
 @@||79423.analytics.edgekey.net^|
 @@||795pao.com:88/999pc/ckplayer.js
 @@||7k7k.com/channel$subdocument
@@ -8124,7 +8125,6 @@
 @@||crystalmark.info/wp-content/uploads/*-300x250.$image,~third-party
 @@||crystalmark.info/wp-content/uploads/*_300x250.
 @@||crystalmark.info/wp-content/uploads/sites/$image,~third-party
-@@||cs.silverpop.com^
 @@||cs.silverpop.com^|
 @@||csbew.com/FrameWork/AFP/
 @@||csc-captcha-dre.security.dbankcloud.cn^$stealth=referrer
@@ -8882,8 +8882,10 @@
 @@||em.hk/wp-content/uploads/*_300_250.
 @@||em.phncdn.com^
 @@||email.*.skyeng.ru^|
+@@||email.awscloud.com^
 @@||email.awscloud.com^|
 @@||email.corp.skyeng.ru^|
+@@||email.elitedangerous.com^
 @@||email.elitedangerous.com^|
 @@||email.it/js/prebid-ads.js
 @@||email.procook.co.uk^|
@@ -10154,7 +10156,6 @@
 @@||grodnoplustv.by^$stealth=dpi
 @@||groupbycloud.com/gb-tracker-client-3.min.js
 @@||groupprohead.gtimg.cn^
-@@||grp07.ias.rakuten.co.jp^
 @@||grp07.ias.rakuten.co.jp^|
 @@||grpc.biliapi.net^
 @@||gs.statcounter.com/chart.php$script,third-party
@@ -18095,7 +18096,9 @@
 @@||vaughnsoft.net/play/$stealth=referrer,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
+@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
+@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -18672,7 +18675,6 @@
 @@||www.crossoverchina.com^
 @@||www.data.mistat.*xiaomi.com^
 @@||www.data.sec*.miui.com^
-@@||www.datadoghq-browser-agent.com^
 @@||www.datadoghq-browser-agent.com^|
 @@||www.deepseek.com^
 @@||www.dell.com^
@@ -18724,7 +18726,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -59403,6 +59404,7 @@ thestockmarketwatch.com##.pageDivider
 thestockmarketwatch.com##div[style="margin-bottom:12px;text-align:center;min-height:120px"]
 thestoryshack.com##.billboard-flash
 thestoryshack.com##.variable-flash
+thestraight.com.au##.iam-ad
 thestranger.com##.fish-butter
 thestrayferret.co.uk##div[class^="BlockOfAdverts"]
 thestreamable.com###promo-signup-bottom-sheet
