@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-21 14:29:32（北京时间）
+! Version: 2026-02-21 15:25:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66926
+! Total count: 66931
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23200,6 +23200,7 @@ bestbuy.ca##[class^="sponsoredProdBoxGridArea"]
 bestbuy.ca##div.x-productListItem:has([class^="sponsoredProduct"])
 bestbuy.ca##div[data-automation^="criteo-sponsored-products-carousel-"]
 bestbuy.ca##section[data-automation="dynamic-content-ad-slot"]
+bestbuy.ca##section[data-automation="dynamic-content-featured-sku-list-home_fsl_sponsored"]
 bestbuy.ca,bestbuy.com##[id^="atwb-ninja-carousel"]
 bestbuy.com###sponsored-carousel-na
 bestbuy.com##.atwa-ninja-carousel:has(div[data-testid="sponsored-sbb"])
@@ -43774,6 +43775,7 @@ macworld.com###articleLeaderboardWrapper
 macworld.com##.promo_wrap
 macys.com###sponsored-items-container
 macys.com##.media-component-siteMonetization
+macys.com##.plp-page-row:has(.monetization-brand-label)
 macys.com##.siteMonetization
 macys.com##.sortable-grid-sponsored-items
 macys.com##.sortablegrid-product.featured-item
@@ -54655,6 +54657,9 @@ sellmylivestock.com###app > .fixed
 sellpy.com##div[name="footerExpander"] + div ~ div:not([style])
 sellpy.de##div[name="footerExpander"] + div ~ div:not([style])
 sellpy.se##div[name="footerExpander"] + div ~ div:not([style])
+semafor.com##._adHeaderMargin_psyvh_111
+semafor.com##._adMargin_psyvh_211
+semafor.com##._homeMiddleAd_x95p9_29
 semafor.com##div[class^="styles_ad"]
 semanticscholar.org##.copyright-banner
 semawur.com##.col-md-12 > div[style="text-align:center"] > span[style^="background-color:#fff;color:"]
