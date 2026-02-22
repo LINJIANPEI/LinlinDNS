@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-22 09:09:14（北京时间）
+! Version: 2026-02-22 12:07:14（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 66935
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -13045,7 +13045,6 @@
 @@||mx-sh.net/advertisements.js
 @@||mx-sh.net^$generichide
 @@||mx.technolutions.net^
-@@||mxcontent.net^$media,stealth=referrer,domain=m1xdrop.com
 @@||mxcontent.net^$media,stealth=referrer,domain=m1xdrop.com|m1xdrop.bz
 @@||mxomo.com^$image,stealth=referrer,domain=kxo.moe
 @@||mxpnl.com/libs/mixpanel-*.min.js$domain=change.org|frigidaire.com
@@ -55634,6 +55633,7 @@ slantastoffe.de##.overlay
 slashdot.org###announcement
 slashdot.org###cloud
 slashdot.org###main-nav-badge-link
+slashdot.org###mdb-sticky
 slashdot.org###slashdot_deals
 slashdot.org##.ad-blocked-newsletter
 slashdot.org##.adwrap
