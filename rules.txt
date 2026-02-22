@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-22 15:30:05（北京时间）
+! Version: 2026-02-22 16:20:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66936
+! Total count: 66928
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9708,7 +9708,6 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -11333,6 +11332,7 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
+@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11388,7 +11388,6 @@
 @@||interface3.music.163.com.163jiasu.com^
 @@||interface3.music.163.com^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -15359,7 +15358,6 @@
 @@||radio.securenetsystems.net/cwa/scripts/ads/prebid.js
 @@||radio24.ilsole24ore.com/plugins/cordova-plugin-nielsen/www/nielsen.js$script,~third-party
 @@||radiocut.fm^$generichide
-@@||radiofrance.targetspot.com^
 @@||radiofrance.targetspot.com^|
 @@||radioplus.pl^$generichide
 @@||radiosun.fi/wp-content/uploads/*300x250$image,~third-party
@@ -15392,7 +15390,6 @@
 @@||rbs.ta36.com^$generichide
 @@||rcm-na.amazon-adsystem.com^$domain=sixsave.com
 @@||rcsobjects.it/rcs_data-tracking/v*/distro/openx/gazzetta/openx_async.js$domain=gazzetta.it
-@@||rd.bizrate.com^
 @@||rd.bizrate.com^|
 @@||rd.ias.global.rakuten.com/adv/$domain=24.rakuten.co.jp
 @@||rddywd.com/adcode.png$domain=joblo.com
@@ -16963,7 +16960,6 @@
 @@||stpd.cloud/saas/$script,domain=dragontea.ink
 @@||stpd.cloud/saas/5274$domain=dgb.lol
 @@||stpd.cloud^$domain=freemcserver.net
-@@||str.hit.gemius.pl^
 @@||str.hit.gemius.pl^|
 @@||strangermeetup.com/content/Scripts/ads.js
 @@||stre4mplay.one^$stealth=useragent
@@ -17038,7 +17034,6 @@
 @@||superyachtfan.com^$generichide
 @@||support-beacon.nakanohito.jp^
 @@||support-beacon.nakanohito.jp^|
-@@||support-widget.nakanohito.jp^
 @@||support-widget.nakanohito.jp^|
 @@||support.google.com/google-ads/
 @@||support.google.com^$domain=support.google.com
@@ -17054,7 +17049,6 @@
 @@||survey.devographics.com^$stealth=useragent
 @@||survey.feelgood.cn^
 @@||survey.g.doubleclick.net^$script,domain=sporcle.com
-@@||surveymyopinion.researchnow.com^
 @@||surveymyopinion.researchnow.com^|
 @@||suumo.jp/sp/js/beacon.js$script,~third-party
 @@||suwonlib.go.kr^$stealth=dpi
@@ -17686,6 +17680,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -18127,9 +18122,7 @@
 @@||vaughnsoft.net/play/$stealth=referrer,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
-@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
-@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -18707,7 +18700,6 @@
 @@||www.crossoverchina.com^
 @@||www.data.mistat.*xiaomi.com^
 @@||www.data.sec*.miui.com^
-@@||www.datadoghq-browser-agent.com^
 @@||www.datadoghq-browser-agent.com^|
 @@||www.deepseek.com^
 @@||www.dell.com^
