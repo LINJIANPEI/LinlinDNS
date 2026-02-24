@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-24 15:43:31（北京时间）
+! Version: 2026-02-24 16:34:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66952
+! Total count: 66955
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -16413,7 +16413,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -18846,7 +18845,6 @@
 @@||www.so.com^
 @@||www.spaceship.com^
 @@||www.statcounter.com/images/$image,third-party
-@@||www.statcounter.com^
 @@||www.statcounter.com^|
 @@||www.sygjx.com^
 @@||www.taobao.com^
@@ -35338,6 +35336,7 @@ goodrx.com##button[data-qa="media-solution-button"]
 goodrx.com##div[class^="adContainer"]
 goodrx.com##div[class^="adWrapper-"]
 goodrx.com##div[data-qa$="-ad"]
+goodrx.com##div[data-qa="qa-waterfall-unit-ad_unit"]
 goodrx.com##div[id*="-ad-"]
 goodstream.one##body > footer + script + div[class][oncontextmenu]
 goodtoknow.co.uk,nme.com,trustedreviews.com##.header-advert-wrapper
@@ -39210,6 +39209,7 @@ investing.com##div[class*="overlay_overlay"]
 investing.com##div[class^="article_"] > div > div.mt-3:has(> u > a[id^="article-ad-disclosure-"])
 investing.com##div[class^="outbrain_outbrain-wrapper_"]
 investing.com##div[data-test="ad-slot-visible"]
+investinglive.com##div[data-ref="banner"]
 investingnews.com##div[id^="inn_sidebar_"]
 investintech.com###geoPolicy
 investmap.pl###app > div[class^="sc-"] > div[class^="sc-"][height="300px"]
@@ -57151,6 +57151,7 @@ starwank.com,faptor.com##.zpot-horizontal-img
 starwindsoftware.com###privacyPopup
 stasonline.ro###form_cookie
 stat-nba.com###ad_video
+statesman.com##article > div:has(> div:first-child + div[data-block-type="ad"]:last-child)
 staticice.com.au##a[href^="http://prf.hn/click/"]
 staticice.com.au##table[width="100%"] > tbody > tr > td[height="15"][valign="top"]:only-child
 staticice.com.au##table[width="500"][align="center"] > tbody > tr > td[height="21"]:only-child
@@ -59547,6 +59548,7 @@ thethaiger.com###custom_html-12
 thethaiger.com##.billboard-container-fw
 thethaiger.com##.mvp-container-lp > .sandbox-count
 thethaiger.com##.mvp-widget-tab-wrap .sandbox-count > .boxin > .boxer
+thetimes-tribune.com##.article-footer:has(> #div-gpt-ad-bottom_leaderboard)
 thetimes.co.uk##.channel-header-ad
 thetimes.co.uk##article > div[class^="tc-view"]:has(> div > div#ad-header)
 thetimes.co.uk##div[class^="responsive__InlineAdWrapper"]
@@ -61482,6 +61484,7 @@ tygodniksiedlecki.com##.rodo-bg
 tygodniksiedlecki.com##.td-header-desktop-wrap .td-stretch-content:has(a[onclick*="'advert_name':"])
 tygodniksiedlecki.com##.wpb_wrapper > .vc_row_inner:has(a[onclick*="'advert_name':"])
 tygodniksiedlecki.com##a[onclick*="'advert_name':"]
+tyla.com##div[class^="floating-video-player_container"]
 tylko.com##.ty-settings
 tymit.co.uk##.main_cookie_view
 tympanus.net##.ct-sidebar > .ct-sticky
