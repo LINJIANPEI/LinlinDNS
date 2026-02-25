@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-25 23:50:43（北京时间）
+! Version: 2026-02-26 00:58:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66979
+! Total count: 66985
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -16018,6 +16018,7 @@
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_108.js^$domain=pocketnow.com
 @@||securepubads.g.doubleclick.net/pagead/$xmlhttprequest,domain=techcyan.com
 @@||securepubads.g.doubleclick.net/pagead/js/adsbygoogle.js$domain=veev.to|doods.to
+@@||securepubads.g.doubleclick.net/pagead/managed/$script,domain=metacritic.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/$domain=fifetoday.co.uk
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=abccar.com.tw
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=britannica.com
@@ -16096,6 +16097,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=wunderground.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=line.me
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=metacritic.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=talksport.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=bizjournals.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=cybermania.ws|spyro.blogu.co.uk|jobalertswithgbrar.com|radiofreehubcity.com|edoga.biz.hr|chat.irc.in.th|rozgarnews.com
@@ -21300,7 +21302,6 @@ apotheka.ee##.banners
 apotheka.ee##.layout-products__list > div[class="layout-products__container"][data-testid^="product-card-"] ~ div:not([data-testid^="product-card-"])
 apowersoft.cn##.activity-poster
 app.appvalley.vip##.notification-item
-app.carta.com##.StyledTile-sc-1doyn4i.clcUHf
 app.myreadit.com###options > .ng-star-inserted
 app.ninekon.com,yogaporn.net,3dporndude.com##.spot
 app.studysmarter.de##.job-offer-wrapper
@@ -39049,6 +39050,9 @@ insidemarketing.it##.bannerG
 insidemarketing.it##.homeBannerMax
 insidemydream.com##.afxshop
 insidenova.com###jobCardDiv
+insidenu.com##.duet--article--block-placement
+insidenu.com##.duet--ledes--standard-lede-bottom > div[class^="_"]:has(> div.stn-video-player)
+insidenu.com##div[class^="_"]:has(> div[data-concert]:only-child)
 insider-gaming.com##.aspect-1660-250
 insider-gaming.com##.aspect-400-600
 insider.az##.advertise-block
@@ -50947,6 +50951,7 @@ polygon.com###content > article ~ div[class*=" "]:not([class*="layout"]):has(> d
 polygon.com##.c-related-list__video
 polygon.com##.sin38m2.sin38m4.sin38m7
 polygon.com##div[data-concert]
+polygon.com,insidenu.com,mmamania.com##div[data-concert]
 polygonscan.com##.col-12 .showcase-banner-text
 polygonscan.com##.col-12 .showcase-banner-text + img
 polygonscan.com##.col-md-9 + div.col-auto.mx-auto
@@ -59588,6 +59593,7 @@ thetoc.gr##.opap-section
 thetoyinsider.com##.apb-adblock
 thetoyinsider.com##.header-drop-zone
 thetoyshop.com###entCNDiv
+thetrainline.com##div[data-test="native-ads-skeleton"]
 thetranet.fr##.TelerikModalOverlay, #RadWindowWrapper_ctl00_CPH1_RdWRgpd
 thetranny.com##ul.primary > li:has(> a[href*="tsyndicate.com"])
 thetrek.co##.post__in-content-ad
