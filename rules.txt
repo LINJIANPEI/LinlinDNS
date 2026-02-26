@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-26 09:06:31（北京时间）
+! Version: 2026-02-26 12:07:14（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 66989
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -1550,6 +1550,7 @@
 /slider_ad.js$script
 /sliderad.js$script
 /smartpop/*$popup
+/snowplow-collector-prod.$xmlhttprequest
 /snowplow/*$script
 /snowplow_$script
 /snssdk.*/
@@ -29248,6 +29249,7 @@ disqus.com###siderail-sticky-ads-module
 disqus.com##.ad__adh-wrapper
 disqus.com##.col-promoted
 disqus.com##[data-role="ad-content"]
+disruptionbanking.com##.swp_floating_horizontal_wrapper
 dissapore.com##.article__adv--outbrain
 dissentmagazine.org##.bc_random_banner
 dissept.com##.elementor-popup-modal
@@ -45364,7 +45366,6 @@ mmacore.tv##.grecs
 mmacore.tv##.prodlst
 mmacore.tv##.resp_ban
 mmafighting.com##.c-promo-breaker
-mmamania.com##div[data-concert]
 mmamania.com##main#content > div[class] > div[class^="_"]:has(> div[data-concert])
 mmarocks.pl##.p-body-pageContent > a[target="_blank"] > img
 mmbang.com##.footer_adver-warp
@@ -50954,7 +50955,6 @@ polygon.com###chorus_notifiations
 polygon.com###content > article ~ div[class*=" "]:not([class*="layout"]):has(> div[data-concert^="outbrain_"]:only-child)
 polygon.com##.c-related-list__video
 polygon.com##.sin38m2.sin38m4.sin38m7
-polygon.com##div[data-concert]
 polygon.com,insidenu.com,mmamania.com##div[data-concert]
 polygonscan.com##.col-12 .showcase-banner-text
 polygonscan.com##.col-12 .showcase-banner-text + img
