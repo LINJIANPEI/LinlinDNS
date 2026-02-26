@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-26 07:20:34（北京时间）
+! Version: 2026-02-26 09:06:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66986
+! Total count: 66989
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15562,6 +15562,7 @@
 @@||revdownload.com/*.php$generichide
 @@||revive.adsession.com/www/delivery/ck.php$domain=spankwire.com
 @@||rexdlfile.com/index.php?id=$stealth=referrer
+@@||rg-tiles.b-cdn.net^$stealth=referrer
 @@||rhymes-with.com^$generichide
 @@||ric-ul.ru^$stealth=dpi
 @@||ricasaude.com^$generichide
@@ -34431,6 +34432,7 @@ gays-cruising.com##.m-row.h_100
 gays-cruising.com##.m-row.h_250
 gays-cruising.com##.m-row.h_335
 gays-cruising.com##.w-100.h_250
+gays-cruising.com##body > div[style="display: block; visibility: visible; height: 100px;"]
 gaystream.click,gaystream.pw,pornsos.com##.a-box
 gaystream.pro##body > div[class]:empty
 gaystream.pw###maskoverlay
@@ -43793,6 +43795,7 @@ macrosat.pl###footer ~ .top
 macrotrends.net###leaderboardTag
 macrotrends.net###subLeaderboardTag
 macrotrends.net##.adx_top_ad
+macrotrends.net##div.ad_block_dianomi
 macrotrends.net$$script[tag-content="removeCookie"][min-length="8000"][max-length="20000"]
 macrumors.com##.ad
 macrumors.com##.sidebarblock
