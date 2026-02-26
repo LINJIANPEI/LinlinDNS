@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-02-26 15:44:15（北京时间）
+! Version: 2026-02-26 16:34:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 66991
+! Total count: 66992
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9831,6 +9831,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -9845,6 +9846,7 @@
 @@||go.kr^$stealth=dpi
 @@||go.onelink.me/*?pid=
 @@||go.redirectingat.com/*&url=$domain=forums.redflagdeals.com
+@@||go.redirectingat.com^
 @@||go.redirectingat.com^$document
 @@||go.redirectingat.com^|
 @@||go.scorptec.com.au^
@@ -11338,7 +11340,6 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
-@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11634,7 +11635,6 @@
 @@||js.iplsc.com/inpl.abd/latest/ads.js?$domain=pomponik.pl|interia.pl|js.iplsc.com
 @@||js.jansatta.com/ads_js.js
 @@||js.juicyads.com^$script,domain=badassdownloader.com
-@@||js.monitor.azure.com^
 @@||js.monitor.azure.com^|
 @@||js.revsci.net/gateway/gw.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|montrealgazette.com|saveur.com
 @@||js.sentry-cdn.com^$script,domain=app.homebinder.com|bolt.new|book.dmm.com|etsy.com|interacty.me|jobs.ch|pizzahut.com.au
@@ -18776,7 +18776,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -32758,6 +32757,7 @@ flickr.com##.moola-default-banner-view
 flickr.com##.moola-search-div
 flickr.com##.moola-search-div.main
 flickr.com##div[class^="main view"]:has(a[href$="&ref=sponsored"])
+flicks.com.au##.sport-ad
 flicksmore.com##.image_auto
 flicksmore.com##.video_banner
 flickystream.net##.group > .hide-scrollbar > .flex-none:has(> a[target="_blank"] > img[alt*="(ADS)"])
@@ -33893,6 +33893,7 @@ fxsforexsrbijaforum.com##.module_ahlaejaba
 fxsolver.com###tframe
 fxstreet.com###fxs-sposorBroker-topBanner
 fxstreet.com##.fxs_leaderboard
+fxstreet.com##.justify-center.flex:has(> div[id^="div-gpt-ad"])
 fxykx.com##a[href*="zyttx.com/"]
 fydeos.com##.cookie-modal
 fydisk.com###vbox
