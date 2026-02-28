@@ -104,12 +104,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14307
+! Total count: 14310
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-02-27 21:10:24（北京时间）
+! Version: 2026-02-28 10:23:10（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -8338,6 +8338,7 @@
 @@||audible.com^$stealth=3p-cookie
 @@||audience.io/api/$domain=campaign.aptivada.com
 @@||audiko.net/api/$stealth=referrer
+@@||audio-*.scdn.co/audio/$redirect=noopmp4-1s,app=com.apple.Safari
 @@||audiomodern.com^$stealth=ip
 @@||audiostream.com^$elemhide
 @@||audiotag.info/images/banner
@@ -12551,6 +12552,7 @@
 @@||googletagmanager.com/gtm.js$script,domain=musinsa.com
 @@||googletagmanager.com/gtm.js$script,domain=okwave.jp
 @@||googletagmanager.com/gtm.js$script,domain=radiko.jp
+@@||googletagmanager.com/gtm.js$script,domain=streetstyle24.pl
 @@||googletagmanager.com/gtm.js$script,domain=viviennewestwood-tokyo.com
 @@||googletagmanager.com/gtm.js$script,domain=www.nap-camp.com
 @@||googletagmanager.com/gtm.js$xmlhttprequest,domain=app.neilpatel.com
@@ -13146,6 +13148,7 @@
 @@||ikea.cn^*/img/ads/
 @@||ikea.com^*/analyticsEvent.$script,~third-party
 @@||iknow-pic.cdn.bcebos.com^$stealth=referrer
+@@||iko-yo.net/system/ad_images/$~third-party
 @@||illink.net^$generichide
 @@||ilovecreatives.com/ads?
 @@||ilpuntotecnico.com/forum/RealPopup/blockadblock.js
@@ -14747,7 +14750,6 @@
 @@||megacloud.*/embed-$stealth=referrer
 @@||megadrive-emulator.com^$generichide
 @@||megafon.ru/static/?files=*/tealeaf.js
-@@||megane.com.pl^$generichide,badfilter
 @@||megaplay.*/stream/$subdocument,stealth=referrer
 @@||megatube.xxx/atrm/s/s/js/m/pr-before.js
 @@||megatv.com^$generichide
@@ -15425,6 +15427,7 @@
 @@||ofertasahora.com^$generichide
 @@||offgamers.com/checkout/buyNow/$document,xmlhttprequest
 @@||officeapps.live.com/*.aspx$stealth
+@@||officeapps.live.com^$domain=cloud.microsoft
 @@||officeworks.com.au^*/site-tracker.js
 @@||oglaszamy24.pl/*js-css/reklamy/bannery/*/adv.js
 @@||ogrenciyegelir.com^$generichide
