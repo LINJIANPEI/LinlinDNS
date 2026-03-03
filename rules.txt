@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-03 23:38:28（北京时间）
+! Version: 2026-03-04 00:34:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67087
+! Total count: 67098
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -25169,12 +25169,17 @@ campusonline.com##.ui-pnotify
 camseek.tv##.navigation > ul.primary > li > a:not([href^="http://camseek.tv/"])
 camslib.com##a[href^="https://k.adddm.in/"]
 camsmut.com##.cntt > div:not(.row)
+camsmut.com##.cnttt > div[class]:has(a[href^="/g/live-chat"])
 camsmut.com##.info + div[class] > div.row:has(> div[class] > a[href][target="_blank"])
 camsmut.com##.info2 + div[class] > script + div.row
 camsmut.com##.navigation a[target="_blank"]
+camsmut.com##.navigation2 a[target="_blank"]
 camsmut.com##.rightpanel div.cnt > a[href][target="_blank"]
 camsmut.com##.rightpanel div.cnt > div[class]:not(.row,.clear)
+camsmut.com##a[class*="noselect no-drag"][href^="/g/chat"]
+camsmut.com##a[href="/g/live-chat"]
 camsmut.com##a[href^="/go/"]
+camsmut.com##row:has(a[href*="?free-sex-live-cam-chat"])
 camsoda.com##div[class*="adHolder"]
 camsoda.com##div[class^="AdsRight-"]
 camstreams.tv###div-cr-inter-0
@@ -35342,6 +35347,7 @@ gohome.com.hk##div[id^="div-gpt-ad"][style]
 goin.app###__next > [style]
 gokarting.com.pl##.uk-position-fixed
 gokom.eu###gokom-cookies
+goku-tv.pics##mv-info > a[target="_blank"]
 gold-24.net,bedavahesap.org##.back-top + div[id][class*=" "]
 goldbet.it###drop-cookie, .cookieOC
 goldderby.com##.adma
@@ -45103,6 +45109,9 @@ mianbao99.com##.downApp
 mianhuatang520.com###addiv2
 miaopai.com##.footer_banner
 miaopai.com,renren.com##.swiper-container
+miasto.in##.elementor-widget-container > div[style="text-align: center;"]:has(> a[target="_blank"])
+miasto.in##.entry-content > .also-box-wrapper:has(> .also-box-block > a[target="_blank"])
+miasto.in##.sidebar-widget-area > .widget_media_image:has(a > img)
 miastodzieci.pl##.centrujbanernapodstronach
 miastodzieci.pl##.md_ad
 miastodzieci.pl##.text-center > a[href^="https://bit.ly/"] > img
@@ -56303,6 +56312,7 @@ softpanorama.org##table[height="620"]
 softpedia.com###_wlts
 softpedia.com###_wlts_lead
 softpedia.com###sjmp > div.grid_48:has(> div.mgtop_20 > div[id] > iframe[id^="google_ads_iframe"])
+softpedia.com###sjmp > div.grid_48:has(> div[class^="mgtop_"] > div[id] > iframe[id^="google_ads_iframe"])
 softpedia.com###swipebox-action
 softpedia.com##.adwblue
 softpedia.com##.bigatf
@@ -58756,6 +58766,7 @@ tematem.pl##div[data-widget_type="sidebar.default"] .widget_block:has(> .wp-bloc
 temi.pl##.gtmi
 temp-mail.io##.fixed.bottom-0
 temp-mail.io##.fixed.bottom-0.\[\@media\(max-width\:1350px\)\]\:hidden
+temp-mail.io##main.mb-general > div[class]:has(> ins.adsbygoogle)
 temp-mail.org##.headerSeoLink
 temp-mail.org##.side-plugin-banner
 temp-mail.org##.topStickyBanner
