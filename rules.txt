@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-04 15:31:58（北京时间）
+! Version: 2026-03-04 16:27:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67108
+! Total count: 67112
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5031,9 +5031,7 @@
 @@||acilissaati.com^$generichide
 @@||acornsquare.jp^$stealth=dpi
 @@||acortalink.me/s.php?$stealth=referrer
-@@||acs-m.daraz.com.bd^
 @@||acs-m.daraz.com.bd^|
-@@||acs-m.daraz.pk^
 @@||acs-m.daraz.pk^|
 @@||acs.m.taobao.com
 @@||acs.m.taobao.com^
@@ -5046,7 +5044,6 @@
 @@||act.hoyoverse.com^
 @@||act.vip.iqiyi.com^
 @@||act.zhuanzhuan.com^
-@@||action.metaffiliation.com^
 @@||action.metaffiliation.com^|
 @@||actiris.be/urchin.js
 @@||active.jd.com^
@@ -9730,6 +9727,7 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
+@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -15476,7 +15474,6 @@
 @@||recetasmaria.com^$stealth=referrer
 @@||recmd.html5.qq.com^
 @@||recommender.scarabresearch.com/merchants/*.html?
-@@||recommender.scarabresearch.com^
 @@||recommender.scarabresearch.com^|
 @@||record-video-online.com^$generichide
 @@||redactor.creatium.io^$document
@@ -15496,19 +15493,15 @@
 @@||redguide.top^*/ad.css?$stylesheet
 @@||redheadsound.video/player^$stealth=referrer
 @@||redian.news^$generichide
-@@||redir.ownpage.fr^
 @@||redir.ownpage.fr^|
 @@||redir.tradedoubler.com^|
-@@||redirect.appmetrica.yandex.com^
 @@||redirect.appmetrica.yandex.com^|
 @@||redirect.disqus.com^
 @@||redirector.gvt1.com/videoplayback/id/*/source/gfp_video_ads/$media,domain=poki-gdn.com|repuls.io
 @@||redirector.gvt1.com^
 @@||redone.cdnserver1.online^$stealth=referrer
 @@||redventures.io/lib/dist/prod/bidbarrel-$script,domain=cnet.com|zdnet.com
-@@||ref.rbauction.com^
 @@||ref.rbauction.com^|
-@@||refer.discover.com^
 @@||refer.discover.com^|
 @@||refi-reklama.razitko.cz^$domain=refi-reklama.razitko.cz
 @@||refifa.com^$generichide
@@ -15531,7 +15524,6 @@
 @@||release.liuyun.io^
 @@||relevant-digital.com^$script,domain=20min.ch
 @@||relmz.io^$generichide
-@@||remembering.ca^
 @@||remembering.ca^|
 @@||ren.tv/video/embed/$stealth=referrer
 @@||rencah.com^$generichide
@@ -16452,6 +16444,7 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
+@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -18176,7 +18169,9 @@
 @@||vaughnsoft.net/play/$stealth=referrer,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
+@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
+@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -18760,6 +18755,7 @@
 @@||www.dianping.com^
 @@||www.dobreprogramy.pl^$generichide,badfilter
 @@||www.docker.com^
+@@||www.dogpile.com^
 @@||www.dogpile.com^|
 @@||www.door2windows.com^$stealth=referrer
 @@||www.doudou.fun^
@@ -18804,7 +18800,6 @@
 @@||www.iqiyi.com^
 @@||www.javbangers.com^
 @@||www.jd.com^
-@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
@@ -18886,6 +18881,7 @@
 @@||www.so.com^
 @@||www.spaceship.com^
 @@||www.statcounter.com/images/$image,third-party
+@@||www.statcounter.com^
 @@||www.statcounter.com^|
 @@||www.sygjx.com^
 @@||www.taobao.com^
@@ -26942,16 +26938,21 @@ coinedition.com###ce-custom-ads-footer-sticky
 coinedition.com##.tdi_59
 coinedition.com##.tdi_95
 coinedition.com##.tdm-inline-image-wrap
+coingape.com###desktop-titlebutton
 coingape.com###spinbtn
 coingape.com##.adsoverlay
+coingape.com##.buttonadsRty
 coingape.com##.coing-after-3rd-paragraph
 coingape.com##.coing-before-last-2-paragraph
 coingape.com##.desktopds
 coingape.com##.dragads
+coingape.com##.dropBoxs
 coingape.com##.image-ads
 coingape.com##.midadsafter
 coingape.com##.partner-container
+coingape.com##.pbox
 coingape.com##.sidebar-btn-container
+coingape.com##a[href^="https://coingape.com/visit/ext/"]
 coingape.com,dailyboulder.com,townflex.com##.quads-location
 coingate.com##.MuiSnackbar-root
 coingecko.com###top-announcement-header
@@ -29941,7 +29942,9 @@ dropgalaxy.com$$script[tag-content="#modalpop"]
 dropmefiles.com.ua,dropmefiles.net##.intro
 dropmms.com##p[id^="a-ads"]
 dropmms.com,overclockers.ge,maxcheaters.com##div[data-role="sidebarAd"]
+dropstab.com###__next > div:not([id]):not([class]) > div:not([id]):not([class]):has(> div.z-app-main button[aria-label="Close"])
 dropstab.com##.tableCustom > tbody[role="rowgroup"]:has(a[rel="sponsored"])
+dropstab.com##.tableRowAd
 dropstab.com,stremio-addons.net,pornoreino.com,okporn.xxx,productreview.com.au,videohelp.com,techinferno.com,boyfriendtv.com##a[rel="sponsored"]
 drtuber.com###video_list_banner
 drtuber.com##.aside_panel_video > .heading.fh
@@ -61790,6 +61793,7 @@ uimaker.com##.newbaidu
 uimaker.com##.siteads
 uindex.org##[style*="border: 2px solid #ff4081; background: #fff0f6; padding: 14px;"]
 uindex.org##body > div[style="text-align: center; color: #cc5500; font-weight: bold;"]
+uindex.org##body > div[style^="text-align:"]:not([id]):not([class])
 uinterview.com###above-content
 uinterview.com###below-content
 uiporn.com###UIP-Nat
