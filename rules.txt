@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-04 20:32:11（北京时间）
+! Version: 2026-03-04 21:49:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67115
+! Total count: 67127
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1290,6 +1290,7 @@
 /jump/next.php?$popup
 /keypress.js$script
 /klicks.nebenan.de/q/*$image
+/l/DMP_picture_captcha?$document,popup
 /lazyad-loader.js$script
 /lazyad-loader.min.js$script
 /left_ads.js$script
@@ -5860,6 +5861,7 @@
 @@||anwb.webpower.eu^
 @@||anwb.webpower.eu^|
 @@||any-video-converter.com/promotion/*-christmas-sale/img/bottom-banner-ad.png
+@@||anyclip-watch-configuration-*.anyclip.com/*/config.json$domain=zerotackle.com
 @@||anydesk.my.site.com/ESWLiveChatDeployment$stealth=referrer
 @@||anyhentai.com/*.mp4$stealth=referrer
 @@||anyhentai.com/*.mp4?st=$stealth=referrer
@@ -6303,6 +6305,7 @@
 @@||assets-www.xbox.com^
 @@||assets.adobedtm.com/extensions/*/AppMeasurement.min.js$domain=bestbuy.ca|identity.healthsafe-id.com|nbc.com|subwy.com|tatamotors.com|usanetwork.com
 @@||assets.adobedtm.com^$domain=wired.com
+@@||assets.anyclip.com/anyclip-widget/$domain=zerotackle.com
 @@||assets.anyclip.com^$domain=content.dictionary.com
 @@||assets.beinsports.com/*/scripts/ads.js$~third-party
 @@||assets.bilsyndication.com/plugins/safeframe/src/js/sf_host.min.js$domain=atozmath.com
@@ -7088,6 +7091,7 @@
 @@||cdn*.*.pw/*p_*.jpg$stealth=referrer,domain=vidload.lol
 @@||cdn*.anicdn.net/appsd*.mp4$stealth=referrer
 @@||cdn*.anyclip.com^$domain=content.dictionary.com
+@@||cdn*.anyclip.com^$domain=zerotackle.com
 @@||cdn*.downdetector.com/*/javascript*/adscript.js
 @@||cdn*.downdetector.com/*/javascript*/adscript_vars.js
 @@||cdn*.downloadapkgames.com/?session=$stealth=referrer
@@ -7926,6 +7930,7 @@
 @@||concertads-configs.vox-cdn.com/sbn/verge/config.json$domain=theverge.com
 @@||condorsoft.co^$generichide
 @@||conf.hpplay.cn^
+@@||config.anyclip.com/anyclip-widget/config/$domain=zerotackle.com
 @@||config.aps.amazon-adsystem.com/configs/$domain=kitco.com
 @@||config.aps.amazon-adsystem.com^$script,domain=newsweek.com
 @@||config.cmpassport.com^
@@ -10327,7 +10332,6 @@
 @@||haoma.163.com^
 @@||haoweichi.com/Public/js/ads.js
 @@||hapi.hi.163.com^
-@@||happy2hub.me^$generichide
 @@||happymh.com^$image,domain=hihimanga.com,stealth=referrer
 @@||happypancake.se/static/prebid.*.js$domain=happypancake.se|happypancake.fi
 @@||happyride.se/img/admarket/
@@ -13178,7 +13182,6 @@
 @@||natlawreview.com^$generichide
 @@||natro.com^$stealth=dpi
 @@||naturalbd.com^$generichide
-@@||naturalhealthy.xyz^$generichide
 @@||natureetdecouvertes.com^*/pixel.png$~third-party
 @@||nav.browser.miui.com^
 @@||nav.porsche.com^
@@ -14875,6 +14878,8 @@
 @@||player.adcdn.tv^$stealth=webrtc
 @@||player.aniview.com/script/$script,domain=odysee.com|pogo.com
 @@||player.aniview.com/script/*/AVmanager.js$domain=adnkronos.com
+@@||player.anyclip.com/anyclip-widget/$domain=zerotackle.com
+@@||player.anyclip.com/lreprx/js/v1/src/lreprx.js$domain=zerotackle.com
 @@||player.aplhb.adipolo.com/prebidlink/$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
 @@||player.arsenal.com/adverts/video
 @@||player.avplayer.com/script/*/avcplayer.js$domain=sportbible.com
@@ -15834,6 +15839,7 @@
 @@||sberbank.ru^$stealth=ip
 @@||sbfast.com^
 @@||sbfull.com^
+@@||sbm.org.tr^$stealth=dpi
 @@||sbs.demdex.net^
 @@||sbs.demdex.net^|
 @@||sc.omtrdc.net^$domain=cibc.com
@@ -17692,6 +17698,7 @@
 @@||traffichaus.com/scripts/*ad*.js$domain=hdzog.com
 @@||traffichaus.com/scripts/banner-ad.js
 @@||trafficmanager.anyclip.com^$domain=content.dictionary.com
+@@||trafficmanager.anyclip.com^$domain=zerotackle.com
 @@||trailrunnermag.com^$stealth=dpi
 @@||train.17u.cn^
 @@||tranimeizle.*^$generichide
@@ -26550,7 +26557,6 @@ cn-healthcare.com##.fh_advent_wrap
 cn.bing.com##.b_bza_pole
 cn.bing.com##.bnp_rich_div_visible.bottom
 cn.bing.com##.bnp_rich_div_visible.top
-cn.bing.com,cn.bing.net##.b_bza_pole
 cn.msn.com##div.topAd.cf,div.left_Bg,div.right_Bg,div.bottomAd.cf
 cn.torrentkitty.app###note
 cna.com.tw##.ad_336_2
@@ -46635,6 +46641,7 @@ mydaddy.cc###ovrl_ad
 myday.com.tw##.myday_ad_950
 myday.com.tw##.myday_ad_left
 myday.com.tw##.myday_ad_right
+mydesi.click,watchporn4k.com,fucking-tube.com##.video-block-happy
 mydigit.cn##.radi
 mydigit.cn##.txtMes
 mydigit.cn##.view-hover[channelid="aitao"]
@@ -50645,6 +50652,8 @@ pizzabaker.co.uk##.politics_box
 pizzabakeren.no##.politics_box
 pizzacasa.hu###cookie
 pizzahut.pl###__next > div > div + div:last-child
+pizzint.watch##.inset-x-0.fixed
+pizzint.watch##a[href^="https://polymarket.com/"]:has(> img[alt="Polymarket"])
 pjmedia.com###policy-warning-container
 pjtime.com###Couplet_l_big
 pjtime.com###Couplet_l_small
@@ -54195,6 +54204,7 @@ safetydetectives.com##.main-popup
 safetydetectives.com##.visit-btn-shortcode
 safeway.com##.google-adManager
 saffronwaldenreporter.co.uk,glasgowtimes.co.uk##div[data-uses-js="dfp-top-ad-fixed"]
+sagar-tv.com###aab-overlay
 sage.hr###landing-consent
 sagepub.com##header [role="alert"]
 saggiamente.com##body > div#skin
@@ -58795,6 +58805,7 @@ tempmail.ninja##.ads-container
 tempmail.plus##.main-mob-top-horizont
 tempmail.plus##div[class^="admain"]
 tempmailaddress.com##.navbar-fixed-bottom
+tempmaili.com##.sticky-adlobage
 tempo.co##.banner970x250
 tempo.co##.fix-bottom
 tempo.co##.top-banner
@@ -66641,6 +66652,7 @@ zerohedge.com##div[class*="AxosPromoCalc_axosWidget"]
 zerohedge.com##div[class^="Advert_"]
 zerohedge.com##div[class^="Banner_banner__"]
 zerolives.com##.munder-fn5udnsn
+zerotackle.com##.code-block:not([class*="-anyclip-"]):not(:has(a[href*="/nrl-season-guide"]))
 zeroturnaround.com##.hud
 zeroupload.com###superadblocker
 zeroupload.com##.download-page a[rel="noopener"] > img
