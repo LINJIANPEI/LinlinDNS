@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-04 23:30:08（北京时间）
+! Version: 2026-03-05 00:31:12（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67127
+! Total count: 67128
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1256,6 +1256,7 @@
 /images2/Ads/*$image
 /img/aff/*$image
 /impressions?$~xmlhttprequest
+/in/p/?spot_id=$document,popup
 /inbox.*/imp?$image
 /include/ad/*$script
 /includes/ads/*$script
@@ -44193,6 +44194,7 @@ mangacanblog.com###adrtop
 mangacanblog.com###btm_banner
 mangacanblog.com##.ad
 mangaclassics.mboards.com##body > div[id][class]
+mangadex.org###itemwizard
 mangadex.org##.md-content .justify-center > a[target="_blank"] > img
 mangadex.org##a[href^="https://www.runoperagx.com/"]
 mangadex.org##iframe[src*="/embed/external/ads.html"]
@@ -63562,7 +63564,6 @@ watchmynewgf.com##body > section.bb
 watchonline.pro##a[href^="http://watchonline.pro/watch-now/"] > img[width="500"]
 watchporn.to##.container > center > .top > a > img
 watchporn4k.com###video-overlay
-watchporn4k.com,fucking-tube.com##.video-block-happy
 watchpornfree.info##aside > #execphp-2
 watchsomuch.to###VPN
 watchsomuch.to##.getVIPAds
