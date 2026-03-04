@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-04 07:17:01（北京时间）
+! Version: 2026-03-04 09:05:48（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67100
+! Total count: 67108
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12244,6 +12244,7 @@
 @@||login.sina.com.cn^
 @@||login.swissid.ch^$stealth=dpi
 @@||login.taobao.com^
+@@||login.tomorrowland.com^$stealth=referrer,domain=my.tomorrowland.com
 @@||login.uid.me^$domain=ucoz.ru,stealth=3p-cookie
 @@||login.vk.com/?act=openapi$domain=220vk.com,stealth=referrer
 @@||login.wmtransfer.com^$stealth=3p-cookie
@@ -21340,6 +21341,8 @@ app.studysmarter.de##.job-offer-wrapper
 app.studysmarter.de##.show-ad
 app.studysmarter.de##app-feed-ads
 appaddict.org###left-stack > a > img[alt]
+appagg.com##.hbody > .si_list > li.si_li:has(ins.adsbygoogle)
+appagg.com##main.global div[style^="width:100%;float:left;position:relative"]:has(> .under_head_title > ins.adsbygoogle)
 apparata.nl###ab_main_nav_container + div[class^="app_"] > div[class^="popup_"]
 appatic.com,gamescensor.com###HTML2
 appchina.com###yyh-bottom
@@ -33118,8 +33121,10 @@ forbot.pl##div[style*="margin: 0 auto; text-align: center; position: relative;"]
 forced-tube.net,hqasianporn.org##.coverup
 ford-esklep.pl###box_alert
 ford-maiwald.de###popupDiv, #overlayDiv
+ford-trucks.com##.forum_sponsor_info
 ford-trucks.com##.navbar_notice
 ford-trucks.com##.text-center:has([style])
+ford-trucks.com##[style*="min-height: 275px"]
 ford.hr##.cookie-modal
 ford.lt##.cookie-modal
 fordownloader.com###freezePopup
@@ -40100,6 +40105,7 @@ jame-world.com##.small.text-muted > small
 jamesgalway.com##.sqs-announcement-bar
 jamiebalfour.scot###cookies
 jamieoliver.com##.top-avocado
+janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
 jandan.net###random-ads
 jandan.net###sidebar > div#box
 jandan.net###sidebar > ul:nth-child(2)
@@ -40908,6 +40914,7 @@ justanswer.com##.Banner__container
 justdial.com###gptAds2
 justdial.com###gptAdsDiv
 justetf.com###brokerAd
+justetf.com##.borker-ad
 justetf.com##.m-sep-l:has(#partnerNewsBox)
 justetf.com##.wAd
 justetf.com##div[id^="shadow-teaser-"]:has(div[class="disclaimer mb-1"])
@@ -56315,6 +56322,7 @@ softpedia.com###_wlts
 softpedia.com###_wlts_lead
 softpedia.com###sjmp > div.grid_48:has(> div.mgtop_20 > div[id] > iframe[id^="google_ads_iframe"])
 softpedia.com###sjmp > div.grid_48:has(> div[class^="mgtop_"] > div[id] > iframe[id^="google_ads_iframe"])
+softpedia.com###sjmp > div.grid_48:has(> div[class^="mgtop_"] > div[id^="Softpedia_software_ros"])
 softpedia.com###swipebox-action
 softpedia.com##.adwblue
 softpedia.com##.bigatf
