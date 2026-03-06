@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-06 07:44:38（北京时间）
+! Version: 2026-03-06 09:12:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67153
+! Total count: 67160
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -23761,6 +23761,10 @@ bitcoinmagazine.com,thestreet.com##.m-in-content-ad-row
 bitcointalk.org##.signature:has(a[href]:not([href*="bitcointalk.org"]))
 bitcointreasuries.net##.max-w-full:has(> a[data-ad-uuid])
 bitcointreasuries.net##a[data-ad-uuid]
+bitcoinworld.co.in###media_image-18
+bitcoinworld.co.in##.below-menu-banner
+bitcoinworld.co.in##.nai-fab-container
+bitcoinworld.co.in,boardgamegeek.com##.post-inline-ad
 bitcq.com##div[class="img-responsive center-block"] > a > img
 bitdefender.com##body[style="opacity: 0;"]:style(opacity: 1 !important;)
 bitdefender.ru##.mtsnb-top
@@ -42232,6 +42236,9 @@ latimes.com,sandiegouniontribune.com##.trb_ar_cont
 latinluchas.com##.zak-overlay-wrapper + div[id][class*=" "]
 latinohentai.com##aside.widget_media_image > a:not([href*="latinohentai.com"], [href*="twitter.com"], [href*="discord.gg"]) > img
 latitude.to##div[class^="publi-"]
+latlong.net##div[style="height:120px;max-height:120px;margin:5px 0;"]
+latlong.net##div[style="height:300px;margin:4px 0;"]
+latlong.net##div[style^="min-height:250px"]
 latv.com##.reduced-ad-space
 latv.com##.top-adverties
 latviesi.com##.container > div > div[class^="sc-"] > a[href="https://ekiosks.lv/"][target="_blank"]
