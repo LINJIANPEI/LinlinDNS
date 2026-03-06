@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-06 20:30:57（北京时间）
+! Version: 2026-03-06 21:46:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67147
+! Total count: 67167
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2076,6 +2076,11 @@
 123greetings.com###pre_roll
 123link.pw##.box-main > div:not([class]):not([id]):not([style])
 123movie.cc,fmovie.cc##.bannerR2x
+123movienow.cc###downloadBanner
+123movienow.cc##.ad-image-container
+123movienow.cc##div[class$="-video-Ads"]
+123movienow.cc##div[class*="-custome-ads-"]
+123movienow.cc##div[class*="-download-box"]
 123movies.co###banner_code_ds > .gomo-gtx-br
 123movies.co##.widgetsads.sidebaradsmainly
 123movies.co##a[href^="/putonline/"][target="_blank"] > img
@@ -3978,6 +3983,7 @@
 @@$stealth=useragent,app=top.rootu.lampa
 @@$subdocument,third-party,stealth=referrer,domain=sport.starsites.fun
 @@$subdocument,xmlhttprequest,stealth=referrer,domain=pichive.online
+@@$subdocument,xmlhttprequest,stealth=referrer|flash,domain=pichive.online
 @@$websocket,domain=xvideos.com
 @@&ad_type=$domain=ultimate-guitar.com
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
@@ -14281,6 +14287,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ufacw.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=uiadmin.net|4horlover.com|23qb.net|4spaces.org|aboluowang.com|assbbs.com|bilinovel.com|chaojizhibo.net|chtoen.com|daxiaamu.com|demo.ama.pub|dizhishengcheng.com|doitwell.tw|ekamus.info|eu4cn.com|ff14angler.com|freedidi.com|fsbot.xyz|haoweichi.com|it365.abctool.info|linovelib.com|logi.im|mens1069.com|monnsutogatya.com|mpyit.com|myqqjd.com|numberempire.com|ozabc.com|pansearch.me|patch.ali213.net|pc3mag.com|reh.tw|shenfendaquan.com|sistersbedroom.com|sto520.com|vaptcha.com|wandhi.com|wenxuecity.com|wuyong.fun|xbeibeix.com|xiebruce.top|xugaoxiang.com|xxxxx520.com|yodu.org|yummy.best|zaixianjisuan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ujszo.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ukussa.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ultimateclassicrock.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=unityassetpack.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=unityassets4free.com
@@ -14768,6 +14775,7 @@
 @@||picasso-static.xiaohongshu.com^
 @@||piccool.com/2home/phpAdsNew/
 @@||pichive.online^$subdocument,xmlhttprequest,stealth=referrer
+@@||pichive.online^$subdocument,xmlhttprequest,stealth=referrer|flash
 @@||picholes.online/*/*.jpg$xmlhttprequest,stealth=referrer
 @@||picjs.xyz^$stealth=referrer,domain=vikacg.com
 @@||picmix.com/js/fuckadblock.js
@@ -29559,6 +29567,7 @@ dollargeneral.com##.dgsponsoredcarousel
 dollargeneral.com##.image__desktop-container:has([data-track-image*="|P&G|Gain|"])
 dolldivine.com$$script[tag-content="adrecover.com"]
 dom-buchhandlung.de##.ui-widget-overlay
+dom.wp.pl##article > div[class] > div > div[class]:has(> div[class]:only-child > div[class]:only-child > span:first-child + span:last-child)
 domaceserije.net##[id^="MyAdsId"]
 domain.com###alertBar
 domaingang.com##.domai-target
@@ -32860,6 +32869,7 @@ flightradar24.com###bottomRightPanel
 flightradar24.com###pb-slot-fr24-airport
 flightradar24.com###primisAdContainer
 flightradar24.com###responsiveBottomPanel
+flightradar24.com##.w-full > div.my-4.flex-col:has(> div#pb-slot-fr24-airport)
 flightradar24.com##aside > div:has(> div.flex > div > div#pb-slot-fr24-map)
 flightradar24.com##aside > div:has(> script[src^="https://live.primis.tech/"])
 flightradar24.com##div.items-center.justify-center:has(> div#pb-slot-fr24-airplane:empty)
@@ -45462,6 +45472,7 @@ mm-cg.com##.TW_UTtoy
 mm-cg.com##.UT_thread
 mm-cg.com##.ut1_img_content_js
 mm-kancelaria.com##.head-page-information
+mm.lv##.banner-sidebar
 mm9841.cc##.video-container
 mma-core.com###crec
 mma-core.com###rsky
@@ -50463,6 +50474,7 @@ pilot-frixion.uk###cookie
 pilot.wp.pl##.wp-player > .adpause > .plchldr
 pilot.wp.pl##aside section[class*=" "]:has(> style + div[class] > img[src="https://std.wpcdn.pl/images/adv/placeholder_wp.svg"])
 pilot.wp.pl##div[class*=" "]:has(> div:first-child + img[src*="://v.wpimg.pl/"][alt])
+pilot.wp.pl##div[style*="min-height:"] > div[class*=" "] > section[class*=" "] > div[class*=" "]:has(> img[src="https://std.wpcdn.pl/images/adv/placeholder_wp.svg"])
 pilot.wp.pl##div[style^="position:"] > a[target="_blank"] > div[style*="background-image: url"]
 pilot.wp.pl##footer > div[class] > section:has(div[id^="div-gpt-ad-"])
 pilot.wp.pl,kobieta.wp.pl,money.pl,tech.wp.pl,gry.wp.pl##div[class^="_"]> a[href][target="_blank"]:only-child > div[style^="position:"][style*="background-image: url"]
@@ -58280,6 +58292,8 @@ tarifaexpert.hu##.lablec_suti_szabaly
 tarifhaus.de###data-protection-regulation
 tarifi.kiev.ua##body > div.plus
 tarladalal.com###ftr_adspace
+tarnow.net.pl##.apv-container
+tarnow.net.pl##div[class*="sec_"][class$="_adv"] > *
 tarnowska.tv##.d-inline-block[data-ciid]
 tarnowska.tv##.tipad_tag
 tarnowskiegory.info,piekary.info##.campaign-label
@@ -61269,9 +61283,11 @@ tuoi69.site##div[class^="adspopup"]
 tuolawa.pl##.d-inline-block[data-ciid]
 tuolawa.pl##.widget-advert_placement
 tupaki.com##.live-ads
+tupaki.com##.paira-h4 > p:has(> br)
 tupaki.com##.pwa_Ad
 tupaki.com##.roadblocker-container
 tupaki.com##body div[id^="detail_wrap_ad_"]:not(#style_important)
+tupaki.com##div[class^="inside-post-ad-"]
 tupaki.com##div[id^="ad_"]:not(#style_important)
 tuplus.com.co##.cookies
 tupowstalapolska.pl###menusDiv
@@ -61309,6 +61325,7 @@ turtlewax.com##.cozy-crd__modal-bar
 turystyka.wp.pl##article div[class][data-reactid] > div[class]:has(> span > div[class] > a.w_contentLink)
 turystyka.wp.pl##article div[class][data-reactid] > div[class]:has(> span:first-child:empty + span:last-child:empty)
 turystyka.wp.pl,finanse.wp.pl,film.wp.pl,kobieta.wp.pl,komorkomania.pl,tech.wp.pl,gadzetomania.pl,polygamia.pl,dobreprogramy.pl##div[class*=" "]:has(> img[src*="://v.wpimg.pl/"] + div[class] > style:first-child + div:last-child)
+turystyka.wp.pl,opinie.wp.pl,gry.wp.pl,moto.wp.pl,gwiazdy.wp.pl,tech.wp.pl,kobieta.wp.pl,wiadomosci.wp.pl##div[class*="-"] > div[class*="-"][class*=" "]:has(> img[src="https://i.wpimg.pl/O/56x45/i.wp.pl/a/i/stg/pkf/bg.png"])
 tus-almena.de##.alertbanner
 tusclasesparticulares.com###pp
 tusfiles.net##a[href^="http://applicationgrabb.net/"]
@@ -61399,6 +61416,8 @@ tv.sohu.com###miaozhenad
 tv.sohu.com###referr_bd_box
 tv.sohu.com##.actv-banner.js-app-topbanner,.banner_yunying,.js-oper-pos,IMG.vrs-banner-act-img
 tv.sohu.com##.x-dl-shake.x-download-panel, #playerBar > div.area ~a
+tv.wp.pl##div[class*=" "][height]:has(> img[src^="https://v.wpimg.pl/"][src$="="]:not([alt]))
+tv.wp.pl##div[class*="grid-headers-boundary"] div[class*=" "]:has(> div[class*=" "][height] > div:only-child)
 tv2.no##.tv2-ad
 tv24.co.uk##.panorama
 tv24.co.uk##li > .sky-player
@@ -61863,6 +61882,7 @@ ukrayina.pl,plotek.pl,domiporta.pl,haps.pl,edziecko.pl,czterykaty.pl,tuba.pl,spo
 ukrayina.pl,plotek.pl,domiporta.pl,haps.pl,edziecko.pl,czterykaty.pl,tuba.pl,sport.pl,tokfm.pl,moto.pl,gazeta.pl##div[id^="banC"]
 ukrinform.de,ukrinform.es,ukrinform.fr,ukrinform.jp,ukrinform.net,ukrinform.pl,ukrinform.ua##[style^="min-height: 280px;"]
 uktaxcalculators.co.uk##body > div:not([id]):not([class])
+ukussa.net$$script:contains(bait)
 ukutabs.com###howtoreadbutton
 ukutabs.com##.wpb_raw_html
 ulabox.com##.flash-message-bar
