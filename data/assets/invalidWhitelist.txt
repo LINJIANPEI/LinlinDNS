@@ -104,12 +104,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14329
+! Total count: 14330
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-03-10 10:31:07（北京时间）
+! Version: 2026-03-10 21:13:29（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1350,6 +1350,7 @@
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
 @@$generichide,domain=stfly.cc
+@@$image,stealth=referrer,domain=comix.to
 @@$stealth=useragent,app=top.rootu.lampa
 @@$subdocument,third-party,stealth=referrer,domain=sport.starsites.fun
 @@$subdocument,xmlhttprequest,stealth=referrer|flash,domain=pichive.online
@@ -9334,6 +9335,7 @@
 @@||cdn.optimizely.com/public/$script,domain=nytimes.com
 @@||cdn.optimizely.com/public/*.json/tag.js$domain=mobile.de
 @@||cdn.orangeclickmedia.com/tech/libs/ocm_iab_compliance.js$domain=protothema.gr
+@@||cdn.perfops.net/rom3/rom3.min.js$domain=catbox.moe
 @@||cdn.perfops.net/rom3/rom3.min.js$domain=cdnperf.com
 @@||cdn.performax.cz/ads|$domain=idnes.cz|novinky.cz
 @@||cdn.permutive.app/*-web.js$domain=theglobeandmail.com
@@ -11236,7 +11238,6 @@
 @@||freecourseweb.com^$generichide
 @@||freedidi.com^$generichide
 @@||freedom3d.art^$generichide
-@@||freedownloadae.com^$generichide
 @@||freegeoip.net/json/|$domain=mudwars.io
 @@||freegeoip.net/json/|$domain=userstyles.org
 @@||freehostedscripts.net/online/$script,~third-party
@@ -18741,7 +18742,7 @@
 @@||suntory.co.jp/beer/kinmugi/css2020/ad.css?
 @@||suntory.co.jp/beer/kinmugi/img/ad/$image,~third-party
 @@||super-ethanol.com^$generichide
-@@||supercloudsms.com^*/ad
+@@||supercloudsms.com^*/a_d
 @@||superpsx.com^$generichide
 @@||supersoluce.com^$generichide
 @@||superwall.us/js/adsbygoogle.js
