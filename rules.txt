@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-10 15:33:55（北京时间）
+! Version: 2026-03-10 16:29:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67210
+! Total count: 67213
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5231,7 +5231,6 @@
 @@||adm.fwmrm.net^*/videoadrenderer.$object,domain=cnbc.com|go.com|nbc.com|nbcnews.com
 @@||admedia.com/images/cross_channel_arrows.png$domain=weather2day.co.il
 @@||admin.corrata.com/console/dcconsolews/event-log?$~third-party
-@@||admin.dable.io^
 @@||admin.dable.io^|
 @@||admin.mailchimp.com^
 @@||admin.mailchimp.com^$extension
@@ -11512,6 +11511,7 @@
 @@||itopmusic.com/wp-content/plugins/ad-ace//includes/adblock-detector/advertisement.js
 @@||itopmusic.com^$generichide
 @@||itopmusic.org^$generichide
+@@||itoya.ec-optimizer.com^
 @@||itoya.ec-optimizer.com^|
 @@||itsguider.com^$generichide
 @@||itv.com/itv/hserver/*/site=itv/$xmlhttprequest
@@ -13481,7 +13481,6 @@
 @@||ofertasahora.com^$generichide
 @@||offgamers.com/checkout/buyNow/$document,xmlhttprequest
 @@||officeapps.live.com/*.aspx$stealth
-@@||official.paymaya.com^
 @@||official.paymaya.com^|
 @@||oglaszamy24.pl/*js-css/reklamy/bannery/*/adv.js
 @@||ogrenciyegelir.com^$generichide
@@ -15137,7 +15136,6 @@
 @@||promo.allo.ua^$domain=allo.ua
 @@||promo.awempire.com/live_feeds/script_basic_livefeed.php?$domain=sexcamdb.com
 @@||promo.com/embed/$subdocument,third-party
-@@||promo.gramedia.com^
 @@||promo.gramedia.com^|
 @@||promo.zendesk.com^$xmlhttprequest,domain=promo.com
 @@||promods.net/*.js$~third-party
@@ -17746,6 +17744,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -31523,6 +31522,8 @@ etxt.biz##.mod-cabinet__sidebar-info
 etymonline.com##.adContainer--6CVz1
 etymonline.com##.fixed:has(> div[id^="div-gpt-ad-"])
 etymonline.com##div[class*="bg-secondary"]:has(> div[class] > div.relative > div[id^="div-gpt-ad-"])
+etymonline.com##main .space-y-2:has(> .relative > .w-full > .justify-center > .adsbygoogle)
+etymonline.com##main .space-y-2:has(> .relative > .w-full > .justify-center > .flex > div[id^="afscontainer"])
 eu.press-citizen.com##.page-background-placeholder
 eu.press-citizen.com##.secondary:has(> div.content-well > div.module-slot > partner-poster)
 euautodily.cz,euautoteile.de,euautoteile.at,euautoteile.ch,euautopezzi.it,euautopieces.fr,euautoczesci.pl,euantallaktika.gr,euautorecambios.es,euautopecas.pt,euautoonderdelen.be,euautodele.dk,eualkatresz.hu,euvaraosat.fi,euspares.co.uk,euavtodeli.si,euroautodiely.sk,euavtochasti.bg,euautodalys.lt,euautopiese.ro,euautoonderdelen.nl,euautodeler.co.no,euautodalas.lv,euautoosad.ee,eurobildelar.se##.traffic_banner_wrapper
@@ -33461,6 +33462,8 @@ fr.hujiang.com###regModule
 fr.hujiang.com###uzt-mask
 fraenkische-rezepte.de##div[aria-labelledby*="cmpbox"]
 fragasyv.se###siteflash
+fragrantica.com###all-reviews .grid-x > .destinationreview ~ div:not(.fragrance-review-box)
+fragrantica.com##main div.relative[itemtype="http://schema.org/Product"] > div[class]:not(.grid):not([id]):has(a[href^="/goto.php?"])
 fragrantica.com,fragrantica.ru##.text-center.cell > div[style^="clear: both; width: 100%; text-align: left; padding:"]
 fragrantica.com,fragrantica.ru##.text-center.cell > div[style^="clear: both; width: 100%; text-align: left; padding:"] + div > sup
 fragrantica.com,fragrantica.ru##.text-center.cell > div[style^="clear:both;width:100%;text-align:left;padding:"]
