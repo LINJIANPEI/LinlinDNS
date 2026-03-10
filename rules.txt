@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-10 17:33:58（北京时间）
+! Version: 2026-03-10 18:29:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67213
+! Total count: 67217
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -17089,6 +17089,7 @@
 @@||suntory.co.jp/beer/kinmugi/img/ad/$image,~third-party
 @@||super-ethanol.com^$generichide
 @@||supercloudsms.com/js/ad
+@@||supercloudsms.com^*/a_d
 @@||supercloudsms.com^*/ad
 @@||superpsx.com^$generichide
 @@||supersoluce.com^$generichide
@@ -30882,6 +30883,7 @@ element-plus.gitee.io##.sidebar > .page-content
 element-plus.gitee.io##.toc-content > .m-t-16px
 element-plus.gitee.io##aside > .page-content
 element-plus.org##aside > div[class^="doc-content-"]
+element-plus.org##aside > div[class^="vp-"]
 element-plus.org##div[class*="-sidebar-"]
 element14.com##.e14-cookie-directive
 elements-show.pl###popup_container
@@ -40784,6 +40786,7 @@ journeybytes.com,thebeaverton.com,thisisanfield.com,unfinishedman.com,vice.com,w
 journeyjunket.com##.content-container-after-post
 jovempan.com.br##.custom-container-lgpd
 joxfm.com##a[href^="https://www.milb.com/"]
+joyacg.top##a[href^="http"] > .img-fluid
 jpeg-optimizer.com##.ads_A1_warp
 jpeg-optimizer.com##.ads_A2_warp
 jpfans.com,jpseek.com##table[cellspacing="1"][cellpadding="6"]
@@ -57862,6 +57865,7 @@ supercars.com##.footer-promo
 supercell.com##.bs-site-alert
 supercheats.com##.cboth_sm
 supercloudsms.com###adb-mask
+supercloudsms.com##.container > a > img
 supercloudsms.com##.container > img
 supercloudsms.com##a[href^="/redirect?"]
 supercloudsms.com##a[style="display: block;"]
