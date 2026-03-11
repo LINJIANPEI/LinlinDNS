@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-11 23:37:49（北京时间）
+! Version: 2026-03-12 00:39:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67255
+! Total count: 67259
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4324,6 +4324,7 @@
 @@/js/prebid/others.$script,domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
 @@/js/prebid/others/*$script,domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
 @@/js/wp-banners.js$domain=articlerewritertool.com|spinbot.com|free-article-spinner.com
+@@/key=*referer*videos*.mp4$stealth=referrer,domain=01tube.com|inporn.com|porn-latina.com|lesbigo.com|xjav.tube|vr-porn.tube
 @@/libs/advertisement.js$domain=getfree.co.in|bagi.co.in|aztecafaucet.space|multifaucet.org|dogestar.website|claimbits.io|i-bits.io|gobits.io|faucet.shorterall.com|simplyfaucet.xyz|tv3.lv
 @@/libs/advertisement1.js$domain=faucet.shorterall.com
 @@/live/*.m3u8$xmlhttprequest,stealth=referrer,domain=weakspell.to|weakspell.org|streamocean.online|weakspell.to
@@ -12399,6 +12400,7 @@
 @@||m1tm.insideevs.com/gtm.js$~third-party
 @@||m2.da.mgtv.com^
 @@||m2.img.10010.com^
+@@||m3pd.com/key=$media,stealth=referrer
 @@||m5.amap.com^
 @@||m7.music.126.net^
 @@||m7.pzds.com^
@@ -16718,6 +16720,7 @@
 @@||stackpathcdn.com/wp-content/plugins/*/adblock-detector/advertisement.js$domain=phoneswiki.com
 @@||stackpathcdn.com^$stealth=referrer,domain=tympanus.net
 @@||stacksnippets.net^$jsinject,elemhide,extension
+@@||stacksocial.com^$stealth=java
 @@||stacksocial.com^$stealth=referrer
 @@||stadionowioprawcy.net^$generichide
 @@||stadt-bremerhaven.de^$generichide
@@ -23430,9 +23433,6 @@ bianity.net##.bn-lg.bn-p-b
 biathlonresults.com##popup-container
 bib-cclachatrestesevere.net###info_message
 bibgame.com##.topicContent > font[color="red"]:last-child
-bibien.tv##.r34-banner
-bibien.tv##.r34-in-content
-bibien.tv##.r34-overlay
 biblehub.com##div[align="center"]:has(> div[id^="div-gpt-ad"])
 bibleserver.com###CybotCookiebotDialog
 biblestudytools.com##featuredtopicslistviewcomponent
@@ -42587,6 +42587,9 @@ lesbian8.com##.list-videos > div[class] > span#lotal
 lesbian8.com,sortporn.com,bigtitslust.com##.mitaru
 lesbianbliss.com,mywebcamsluts.com,transhero.com##.media_spot
 lesbianexpert.com##.kck
+lesbigo.com,porn-latina.com,inporn.com,gettranny.com,xmilf.com,vxxx.com###fhvids
+lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
+lesbigo.com,porn-latina.com,shemalez.com,voyeurhit.com,tubepornclassic.com##div[class^="underplayer"]
 lesbosland.com##.row.no-gutters > div:has(> #special-block)
 lesbosland.com##a[href^="https://s.zlinkb.com/"]
 lesbosland.com##div[id*="-boxes-"]
@@ -43279,7 +43282,6 @@ loldk.com##a[href$=".html?from=video_right"]
 loldk.com##a[href^="http://www.esportsclub.cn/home/"]
 loliv.com##.noti_full
 lolja.com.br###lgpd-popup
-lolpol2.com##.order-1:has(> .video-block-happy)
 lolshipin.com##.box2
 lolskill.net##div[class^="container text-center aaa aaa"]
 londonreal.tv###notify-consent
@@ -44301,6 +44303,9 @@ mangaku.blog##.nctr
 mangalong.com##.post_content > div.align-items-center
 mangamelon.com##.layout > .flex > .v-card > div[style="height:280px;"]:not([class]):not([id])
 mangamiso.net##.container > div.v-sheet--outlined
+manganato.gg##.ads-contain-v2
+manganato.gg,mangakakalot.gg##.ads-contain
+manganato.gg,mangakakalot.gg##.banner-ads
 mangaowl.com,037hdd.com##div[id^="ads_"]
 mangapark.net##.ad-page-3x
 mangapark.net##div[claass="ad-970x250"]
@@ -44706,7 +44711,6 @@ md.hkgolden.com##.hkg-ad
 md4u.ru###pagecontent > div[style*="background-color"]
 md5hashing.net##.alert-promo
 md5hashing.net##.pp-footer
-mdhstream.cc,fucking-tube.com##.happy-section
 mdpi.com###adBannerContent
 me##body > #ads[style^="position: absolute; z-index:"]
 me##body[bgcolor="#000000"] > div[id="adbtm"][style^="position: fixed;"]
@@ -45509,6 +45513,7 @@ mixnews.lv##img[src="/images/baltkom_player_tez.jpg"]
 mixonline.com##.site-ad
 mixrootmod.com###adBlockModal
 mixtools.pl##.cookies
+mj859.com,avx21.com,qmtrd.com##div[id]:has(> div.streamer-container2)
 mjakmalopolska.pl##.widget-advert_centralplacement
 mjakmalopolska.pl##div.text-center:has(> div.d-inline-block-not-important > small)
 mjam.net###__Mjam__CookieBanner
@@ -51343,7 +51348,6 @@ porndig.com##.js_footer_partner_container_wrapper
 porndig.com##.vjs-toolbar
 porndig.com##iframe[src^="https://plx.porndig.com/"]
 pornditt.com##.block-video div.table:has(iframe.na)
-pornditt.com##.footer-margin
 pornditt.com##.primary > li:has(> a[href][target="_blank"])
 pornditt.com,hentaigem.com,pornify.tv,dafreeporn.com,pornolovers.net,hdporner.tv,transvids.tv,vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
 porndoe.com##.-ad-top-wrap
@@ -51543,7 +51547,6 @@ pornid.name,pornid.xxx##.cs-under-player-link
 pornid.name,pornid.xxx##.spots-bottom
 pornid.xxx##.sidebar-holder
 pornid.xxx##.spots-bottom
-pornify.tv,dafreeporn.com,pornolovers.net,hdporner.tv,transvids.tv,vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
 porninblack.com###sidebar > .wp-block-image a[target="_blank"] > img
 pornissimo.org##.fp-ui-inline + div[style]
 pornj.com,see.xxx,pornl.com##.vda-item
@@ -58221,7 +58224,6 @@ taboola.com###tbp-consent
 taboolanews.com##div[class*=" trc_elastic_sponsored-"]
 tabooporn.tv##.content > div.related-videos:has(> div.box script#fapcash-videos)
 tabooporn.tv##.textlink a[target="blank"]
-tabooporn.tv,eroinside.com,pornolovers.net,vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 tacklewarehouse.com###data_protection
 tacklifetools.com##.cookie
 tacobot.tf##.cdk-overlay-container
@@ -59950,7 +59952,6 @@ thonky.com###thonky-sidebar-ad
 thonky.com##.advertisement-notice
 thoracic.org###cookie-law
 thothub.vip##a[href*="dowtyler.com"]
-thothub.vip,3dporndude.com,xcadr.tv,fapnow.xxx,bobs-tube.com##.fp-brand
 thothub.vip,yesporn.vip,asianporn.li,justporn.com,cremz.com,pusvid.com,kissjav.com,hentai4k.com,viralxxxporn.com,3dporndude.com,hentaismile.com,camhub.cc,coralxxx.com,analry.com,hard3r.com,bigbigtits.com,public-porno.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,hugewangs.com,w1mp.com,analpornxl.com,sexpester.com,w4nkr.com##.asside-link
 thoughtcatalog.com##div[x-enc][style*="width: 300px; height: 250px;"]
 thoughtcatalog.com##div[x-enc][style*="width: 336px; height: 280px;"]
@@ -62090,6 +62091,8 @@ unimib.it###bico-bscn-cnt, #cookies
 union.hu##.cookie
 unionpedia.org##div[style^="margin-top: 15px; min-width: 300px"]
 uniprot.org###privacy-panel
+uniquestream.net###us-adblock-wall
+uniquestream.net##body > div[class^="fixed inset-0 z-"].backdrop-blur-sm:has(> .shadow-2xl > .mx-auto > svg)
 uniroma1.it##.cookie-background
 unisa.edu.au##.__gdpr-container
 unischolarz.com##.et_pb_sticky_module > a[target="_blank"] img
@@ -63105,7 +63108,6 @@ vjav.com##.video-page__content > div.left + div:has(> div > div[id^="ntv_"])
 vjav.com##.video-videos-slider:has(.item-adlabel)
 vjav.com##[style="width: 728px; height: 90px;"]
 vjav.com##div[class^="content"] > .container + div[class]
-vjav.com,fuxxx.com,hdzog.tube,hdzog.com,hotmovs.com,privatehomeclips.com##.partners-wrap
 vjav.com,vjav.tube##.left + div:has(> div[class] > [id^="ntv"])
 vjav.com,vjav.tube##.undp
 vjav.me##.right > div.content
@@ -64039,6 +64041,7 @@ wellcard.cc###cookie
 wellmall.cz##.euc
 wellness4live.com##.adb
 weloma.art###poly
+weloma.art,nicomanga.com##.ad-row-mobile
 weltdergoetter.de###notice
 wen.baidu.com##.related-asp-new
 wen.baidu.com##.wap-youx-change-asp
@@ -65121,6 +65124,7 @@ www.wp.pl##.wp-placeholder
 www.wp.pl##a[href^="https://direct.money.pl/landing-page/callcenter/"]
 www.wp.pl##aside > div[data-st-area="Pogoda"] + div[class^="sc-"]:has(a[href^="https://koszykrd.wp.pl?product_url="])
 www.wp.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div:last-child:empty)
+www.wp.pl##div[class*=" "]:not(.wp-image-placeholder):has(> img[src^="https://v.wpimg.pl/"]:first-child + div:last-child:empty:not(.wp-badge-wrapper))
 www.wpdaxue.com##:not(.post-thumbnail) > a[target="_blank"] > img
 www.xda-developers.com##.adzone-above-latest
 www.xhfz2.com##A[href^='https://www.xhfz2.com/ad.php']
