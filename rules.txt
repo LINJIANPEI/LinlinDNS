@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-12 15:39:55（北京时间）
+! Version: 2026-03-12 16:31:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67248
+! Total count: 67247
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4929,6 +4929,7 @@
 @@||a-invdn-com.akamaized.net/Broker_Button_New^$domain=investing.com
 @@||a.9game.cn^
 @@||a.ads.cn.miaozhen.com^$domain=youku.com
+@@||a.adwolf.ru^
 @@||a.adwolf.ru^|
 @@||a.alimama.cn/tkapi$domain=ieeee.com
 @@||a.allegroimg.com^$domain=allegro.pl
@@ -8557,7 +8558,6 @@
 @@||dm.toutiao.com^
 @@||dm.video.qq.com^
 @@||dm1.phncdn.com^
-@@||dmcdn.net^$domain=anyanime.com
 @@||dmhy.b168.net^$generichide
 @@||dmhy.org/common/generate-captcha?
 @@||dmm.co.jp^
@@ -9805,9 +9805,7 @@
 @@||gitee.com/HServer/
 @@||gitee.com^
 @@||github.com/*/*$~third-party
-@@||github.com/*adblock
 @@||github.com/AdguardTeam/
-@@||github.com/AdguardTeam/*/antiadblock.txt
 @@||github.com/Yhonay/antipopads/
 @@||github.com/gorhill/uBlock/*/src/web_accessible_resources/fingerprint2.js$~third-party
 @@||github.com/login$stealth=3p-cookie
@@ -11439,6 +11437,7 @@
 @@||interface3.music.163.com.163jiasu.com^
 @@||interface3.music.163.com^
 @@||interfans.org^$generichide
+@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -11679,6 +11678,7 @@
 @@||js.iplsc.com/inpl.abd/latest/ads.js?$domain=pomponik.pl|interia.pl|js.iplsc.com
 @@||js.jansatta.com/ads_js.js
 @@||js.juicyads.com^$script,domain=badassdownloader.com
+@@||js.monitor.azure.com^
 @@||js.monitor.azure.com^|
 @@||js.revsci.net/gateway/gw.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|montrealgazette.com|saveur.com
 @@||js.sentry-cdn.com^$script,domain=app.homebinder.com|bolt.new|book.dmm.com|etsy.com|interacty.me|jobs.ch|pizzahut.com.au
@@ -12240,6 +12240,7 @@
 @@||logic-immo.com/lib/xiti/xiti.js$script,~third-party
 @@||logicool.co.jp^$content
 @@||login-api.e-pages.dk^$stealth=referrer
+@@||login-ext.identity.oraclecloud.com^$stealth=3p-auth
 @@||login-sh.aki-game.com^
 @@||login.abc.net.au/gs/webSdk/Api.aspx?$stealth=referrer
 @@||login.abc.net.au^$stealth=referrer
@@ -12999,7 +13000,6 @@
 @@||mp3fy.com^$generichide
 @@||mp4upload.com/ads.js
 @@||mp4upload.com/embed-*.html$popup
-@@||mp4upload.com^$domain=anyanime.com
 @@||mp4upload.com^$generichide
 @@||mparticle.com/js/v2/*/mparticle.js$script,domain=bk.com|bravotv.com|cnbc.com|gymshark.com|motortrendondemand.com|nbcsports.com
 @@||mparticle.com^*/login$domain=discoveryplus.*
@@ -13700,7 +13700,6 @@
 @@||p.jwpcdn.com/*/jwplayer.j$domain=milfzr.com
 @@||p.jwpcdn.com/*/jwpsrv.js$domain=milfzr.com
 @@||p.jwpcdn.com/*/skins/$third-party
-@@||p.jwpcdn.com/player/$domain=anyanime.com
 @@||p.jwpcdn.com/player/*.js$domain=akwam.*
 @@||p.jwpcdn.com/player/plugins/vast/v*/vast.js$domain=player.cartoonth12.com
 @@||p.qlogo.cn^
@@ -14941,7 +14940,6 @@
 @@||player.watch.aetnd.com^$generichide
 @@||player.ynet.co.il/*/flowplayer.ads.*.ynet.js$domain=ynet.co.il
 @@||playercdn.net/*.mp4
-@@||playercdn.net/*.mp4$domain=anyanime.com
 @@||playerp2p.com^$stealth=referrer
 @@||players.fichub.com/plugins/adobe/$domain=24kitchen.pt
 @@||playerx.info^$subdocument,stealth=referrer,domain=jetfilmizle.net
@@ -17752,6 +17750,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -18193,9 +18192,7 @@
 @@||vaughnsoft.net/play/$stealth=referrer,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
-@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
-@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -18248,7 +18245,6 @@
 @@||vid.springserve.com/vast/*einthusan.com
 @@||vid.springserve.com/vast/*einthusan.tv
 @@||vidabytes.com^$generichide
-@@||vidbom.com^$domain=anyanime.com
 @@||vidbox.site/streaming/$stealth=referrer
 @@||vidcache.net:*/*/*.mp4$stealth=referrer
 @@||vidcdn.co/iframe/$stealth=referrer
@@ -18771,7 +18767,6 @@
 @@||www.crossoverchina.com^
 @@||www.data.mistat.*xiaomi.com^
 @@||www.data.sec*.miui.com^
-@@||www.datadoghq-browser-agent.com^
 @@||www.datadoghq-browser-agent.com^|
 @@||www.deepseek.com^
 @@||www.dell.com^
@@ -31086,6 +31081,7 @@ engadget.com###ldrBoardAd
 engadget.com##.Mih\(90px\)
 engadget.com##.caas-da
 engadget.com##.da-container
+engadget.com##.items-start.flex > div.ml-0 > .flex-wrap > li.box-border:has(> div[data-test="streamad"])
 engadget.com##.post-article-ad
 engadget.com##.related-content-lazyload
 engadget.com##.wafer-benji
@@ -36633,6 +36629,7 @@ hd21.com,winporn.com###spot_video_underplayer_livecams
 hdaud.io##img[alt="turbo"]
 hdbest.net###sidebar > #custom_html-17
 hdblog.it###banner4_300600
+hdblog.it###main_container > div[style^="width:"]:not([id]):not([class])
 hdblog.it##.compras_items > .item_prod
 hdblog.it##.pubtech-adv-container
 hdblog.it,hdmotori.it##.box_highlight_footer[style*="margin-top"]
@@ -40584,6 +40581,7 @@ jiemian.com##.app-open
 jiemian.com##.header-container > div > section[style="width: 100%;"]
 jiemian.com##.nav-next-ad-views
 jigidi.com##.au-base
+jigsawplanet.com###cb984b30f2-4
 jigsawplanet.com###tsi-9c55f80e-3
 jigsawplanet.com##.ts-ad-wrap
 jigsawplanet.com##.ts-msg
@@ -46857,6 +46855,7 @@ mylink.vc###pub10 > center
 mylink.vc###pub11 > center
 mylink.vc###pub9 > center
 mylink.vc##iframe[src^="/nordcode.php?id="]
+mylinks.ws,nuvexus.com,tw-calc.net##.top-banner
 mylivewallpapers.com##.posts > div[class="posts post"]
 mylocation.org##.info a[href^="https://go.expressvpn.com/c/"]
 mylomza.pl##div[style="min-height: 362px;"]
