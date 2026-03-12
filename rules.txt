@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-12 07:16:24（北京时间）
+! Version: 2026-03-12 09:01:08（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67259
+! Total count: 67269
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4131,7 +4131,9 @@
 @@/^https?:\/\/[0-9a-z]+\.cloudfront\.net\/\?[a-z]+=[0-9]+$/$domain=workink.click,xmlhttprequest
 @@/_js/pubfig.min.js$~third-party,domain=svethardware.cz|relaxuj.cz|svetmobilne.cz|digimanie.cz
 @@/ad-close.png$domain=ch.com
+@@/ad-inserter*/*/*.js$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|wristreview.com|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@/ad-inserter*/*/*.js$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|wristreview.com|pasend.cam|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
+@@/ad-inserter*/images/ads.png$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|wristreview.com|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@/ad-inserter*/images/ads.png$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|wristreview.com|pasend.cam|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@/ad-provider.js$xmlhttprequest,domain=veev.to|doods.to
 @@/ad.js$domain=starkroboticsfrc.com|cryptednews.space|seoliv.com|blackwoodacademy.org|crypto-radio.eu|tiktokcounter.net
@@ -7429,6 +7431,7 @@
 @@||cdn.wwads.cn/js/makemoney.js$domain=nodejs.cn
 @@||cdn.yamibuy.net^$stealth=referrer
 @@||cdn.ynuf.aliapp.org^
+@@||cdn.zinmanga1.com^$image,stealth=referrer,domain=shonenmangaz.com
 @@||cdn1-smallimg.phncdn.com^
 @@||cdn1.comicknew.pictures^$image,stealth=referrer
 @@||cdn1d-static-shared.phncdn.com^
@@ -8011,6 +8014,7 @@
 @@||contentcenter-vali-drcn.dbankcdn.com^
 @@||contentx.me^$stealth=referrer
 @@||contextual.media.net/dmedianet.js$domain=apkmaza.net
+@@||contextual.media.net/dmedianet.js$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|wristreview.com|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@||contextual.media.net/dmedianet.js$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|wristreview.com|pasend.cam|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@||contextual.media.net/dmedianet.js$domain=biopills.net
 @@||contextual.media.net/dmedianet.js$domain=elektrikmen.com
@@ -9908,6 +9912,7 @@
 @@||goodtoknow.co.uk^$generichide
 @@||google-analytics.com/analytics.js$domain=atozmath.com
 @@||google-analytics.com/analytics.js$domain=beinsports.com|brooklinen.com|carnesvizzera.ch|cmoa.jp|ecmweb.com|enmotive.com|healthrangerstore.com|hobbyhall.fi|infoconso-multimedia.fr|jackbox.tv|k2radio.com|koel.com|kowb1290.com|ligtv.com.tr|meritonsuites.com.au|nabortu.ru|news.gamme.com.tw|novatv.bg|papajohns.com|poiskstroek.ru|rzd.ru|saturn.at|schweizerfleisch.ch|skaties.lv|stressless.com|teddyfood.com|tracking.narvar.com|tradera.com|tribuna.com|truwin.com|tuasaude.com|unicef.de|viandesuisse.ch|vox.de|westernunion.com|worldsbiggestpacman.com|xxl.se
+@@||google-analytics.com/analytics.js$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|javnow.net|freebulksmsonline.com|victor-mochere.com
 @@||google-analytics.com/analytics.js$domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|pasend.cam|javnow.net|freebulksmsonline.com|victor-mochere.com
 @@||google-analytics.com/analytics.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|montrealgazette.com|saveur.com
 @@||google-analytics.com/analytics.js$domain=burgerking.hu
@@ -10708,6 +10713,7 @@
 @@||ib.adnxs.com/ut/v3$domain=aftonbladet.se
 @@||ib.adnxs.com/ut/v3$xmlhttprequest,domain=exeygo.com
 @@||ib.adnxs.com^$image,domain=apkmaza.net
+@@||ib.adnxs.com^$image,domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@||ib.adnxs.com^$image,domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|pasend.cam|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@||ib.adnxs.com^$image,domain=elektrikmen.com
 @@||ib.adnxs.com^$image,domain=exbulletin.com
@@ -14017,6 +14023,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gameissue05.blogspot.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gametop.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=garoetpos.com|ketubanjiwa.com|ayatoon.com|dbsysupgrade.com|jorgemoncada.com|hollywoodsmagazine.com|anicosplay.net|ewybory.eu|flipreview.com|hiphopa.net|pngtosvg.com|loksado.com|ecoursefree.com|daemon-hentai.com|yigeplus.xyz|techycoder.com|arasindakifark.net|kitguru.net|gsmxt.com|technicalatg.xyz|freetutorialsdownload.online|toolss.net|adonisfansub.com|talkjarvis.com|satcesc.com|livenewsof.com|pinayvids.com|hardcoregames.ca|pasend.cam|unityassetcollection.com|crypto-fun-faucet.de|samuraiscan.com|cgtips.org|dailyvideoreports.net|codesnail.com|ma-x.org|sitarchive.com|codingshiksha.com|graphicux.com|w3layouts.com|musike.net|windowsmatters.com|avoiderrors.com|gatcha.org|4horlover.com|topnewsshow.com|3dzip.org|ovagames.com|lewdsenpai.com|mitsmits.com|openculture.com|udemycoursesfree.me|apfelpatient.de|agorablog.it|r3ndy.com|mylivewallpapers.com|e-sanatatea.ro|latestjav.com|sakpot.com|wallpaperwaifu.com|news.claimfey.com|mangacrab.com|baddiehub.com|asuralightnovel.com|javboys.com|joyplot.com|pastlinkvn.com|rpclip.com|doibihar.org|31mag.nl|poapan.xyz|guiadaengenharia.com|magesypro.com|magesy.blog|magesy.eu|magesy.eu|leviatanscans.com|fastssh.com|igay69.com|kodlamamerkezi.com|novelasligera.com|descargaspcpro.net|bbsnews.co.id|4allprograms.me|gaypornhot.com|javgay.com|boyfuck.me|javboys.tv|smarttips.in|lascimmiapensa.com|powerup-gaming.com|infortechno.com|watchfacebook.com|domhouse.it|aquiyahorajuegos.net|informatykit.it|gourmetsupremacy.com|meganei.net|ivfauthority.com|kuyhaa-me.com|dwgshare.com|hypando.com.br|witcherhour.com|filekuy.com|authentisch-italienisch-kochen.de|kuyhaa.me|hentaigasm.com|kuyhaa-me.site|nxbrew.net|carteldemanhwas.com|donghuaworld.com|historyofroyalwomen.com|gamekazi.com|kinotehnik.net|topmanhuas.org|nirvanamanga.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=garoetpos.com|ketubanjiwa.com|ayatoon.com|dbsysupgrade.com|jorgemoncada.com|hollywoodsmagazine.com|anicosplay.net|ewybory.eu|flipreview.com|hiphopa.net|pngtosvg.com|loksado.com|ecoursefree.com|daemon-hentai.com|yigeplus.xyz|techycoder.com|arasindakifark.net|kitguru.net|gsmxt.com|technicalatg.xyz|freetutorialsdownload.online|toolss.net|adonisfansub.com|talkjarvis.com|satcesc.com|livenewsof.com|pinayvids.com|hardcoregames.ca|unityassetcollection.com|crypto-fun-faucet.de|samuraiscan.com|cgtips.org|dailyvideoreports.net|codesnail.com|ma-x.org|sitarchive.com|codingshiksha.com|graphicux.com|w3layouts.com|musike.net|windowsmatters.com|avoiderrors.com|gatcha.org|4horlover.com|topnewsshow.com|3dzip.org|ovagames.com|lewdsenpai.com|mitsmits.com|openculture.com|udemycoursesfree.me|apfelpatient.de|agorablog.it|r3ndy.com|mylivewallpapers.com|e-sanatatea.ro|latestjav.com|sakpot.com|wallpaperwaifu.com|news.claimfey.com|mangacrab.com|baddiehub.com|asuralightnovel.com|javboys.com|joyplot.com|pastlinkvn.com|rpclip.com|doibihar.org|31mag.nl|poapan.xyz|guiadaengenharia.com|magesypro.com|magesy.blog|magesy.eu|magesy.eu|leviatanscans.com|fastssh.com|igay69.com|kodlamamerkezi.com|novelasligera.com|descargaspcpro.net|bbsnews.co.id|4allprograms.me|gaypornhot.com|javgay.com|boyfuck.me|javboys.tv|smarttips.in|lascimmiapensa.com|powerup-gaming.com|infortechno.com|watchfacebook.com|domhouse.it|aquiyahorajuegos.net|informatykit.it|gourmetsupremacy.com|meganei.net|ivfauthority.com|kuyhaa-me.com|dwgshare.com|hypando.com.br|witcherhour.com|filekuy.com|authentisch-italienisch-kochen.de|kuyhaa.me|hentaigasm.com|kuyhaa-me.site|nxbrew.net|carteldemanhwas.com|donghuaworld.com|historyofroyalwomen.com|gamekazi.com|kinotehnik.net|topmanhuas.org|nirvanamanga.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gaypornhdfree.com|dvdgayonline.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=gearingcommander.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=getautoclicker.com
@@ -15642,6 +15649,7 @@
 @@||router.asus.com^$document
 @@||router.ctc.lan^
 @@||router.infolinks.com/dyn/apn-usync$image,domain=apkmaza.net
+@@||router.infolinks.com/dyn/apn-usync$image,domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@||router.infolinks.com/dyn/apn-usync$image,domain=bi-girl.net|itbusiness.com.ua|wikirise.com|mejoresmodsminecraft.site|freewebcart.com|pasend.cam|javnow.net|gcertificationcourse.com|pinayvids.com|secondlifetranslations.com|mettablog.com|freebulksmsonline.com|victor-mochere.com
 @@||router.infolinks.com/dyn/apn-usync$image,domain=elektrikmen.com
 @@||router.infolinks.com/dyn/apn-usync$image,domain=exbulletin.com
@@ -17001,6 +17009,7 @@
 @@||storage.googleapis.com/vkcdnservice.appspot.com/script$domain=yandexcdn.com
 @@||storage.jd.com^
 @@||storage.live.com^
+@@||storage.waitst.com^$image,stealth=referrer,domain=mangabats.com
 @@||storage.waitst.com^$stealth=referrer,image,domain=mangakakalot.gg
 @@||storage.wikawika.xyz^
 @@||storage.yandex.net/rdisk/$stealth=referrer
@@ -44303,9 +44312,6 @@ mangaku.blog##.nctr
 mangalong.com##.post_content > div.align-items-center
 mangamelon.com##.layout > .flex > .v-card > div[style="height:280px;"]:not([class]):not([id])
 mangamiso.net##.container > div.v-sheet--outlined
-manganato.gg##.ads-contain-v2
-manganato.gg,mangakakalot.gg##.ads-contain
-manganato.gg,mangakakalot.gg##.banner-ads
 mangaowl.com,037hdd.com##div[id^="ads_"]
 mangapark.net##.ad-page-3x
 mangapark.net##div[claass="ad-970x250"]
@@ -47417,6 +47423,9 @@ neko-miku.com##.ads-825-100
 nekoray.org##main > div[data-elementor-type="single-page"] > div.elementor-element:has(> div.e-con-inner > div.elementor-element > a[href^="https://c.nekoray.org/goto/topbanner/"])
 nelipyora.fi##.gw-cookie-consent
 nelomanga.net##.fly-ads-chapter-page
+nelomanga.net,mangabats.com,mangakakalove.com,manganato.gg,mangakakalot.gg##.ads-contain
+nelomanga.net,mangakakalove.com,mangabats.com,manganato.gg##.ads-contain-v2
+nelomanga.net,mangakakalove.com,mangabats.com,manganato.gg,mangakakalot.gg##.banner-ads
 nemocnicepribram.cz###cookies_lista_2022
 nemzetisport.hu##.ado-holder
 nemzetisport.hu##section.banner
@@ -49786,6 +49795,7 @@ parabola.cz##.zpravicky_sdeleni
 parabola.cz##a[href^="/odkazovnik/b"]
 parabola.cz##h3[class$="idr"]
 parade.com##.connatix_wrapper
+parade.com##.styles_headerAdSlot__f4Z0n
 parade.com##div[id^="ad-in_content"]
 parade.com,bringmethenews.com,thespun.com,thestreet.com,si.com##.m-outbrain
 paradisehill.cc###bb1
