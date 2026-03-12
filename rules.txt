@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-12 20:34:09（北京时间）
+! Version: 2026-03-12 21:56:14（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67248
+! Total count: 67244
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8162,7 +8162,6 @@
 @@||cruisecenter.com.tw/data/ad/
 @@||cruisingearth.com/community/js/BJumh/top-ads.js
 @@||crunchyroll.adclixx.net/vast?fg=
-@@||crunchyroll.adnetasia.com/vast?fg=
 @@||crunchyroll.adtrackers.net/vast?fg=
 @@||crunchyroll.bannertrack.net/vast?fg=
 @@||crunchyrollsvc.com^$stealth=3p-auth
@@ -8977,6 +8976,7 @@
 @@||emoji.uc.cn^
 @@||emojipedia.org/ab_fl.js
 @@||emome.net/files/advertising/
+@@||empty-truth-cf2c.erikkalinina1994.workers.dev/play/$subdocument,stealth=referrer
 @@||emturbovid.com/t/$stealth=referrer
 @@||emturbovid.com/t/*?poster=$stealth=referrer
 @@||emurom.net^$generichide
@@ -13670,7 +13670,6 @@
 @@||ow.pubmatic.com/pbs/openrtb2/auction$domain=zeenews.india.com
 @@||owlzo.com/gpt_ads-public.js$domain=owlzo.com
 @@||ox-d.adclixx.net/auid=
-@@||ox-d.adnetasia.com/auid=
 @@||ox-d.adtrackers.net/auid=
 @@||ox-d.bannertrack.net/auid=
 @@||oxanime.com^$generichide
@@ -14345,7 +14344,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=xtv.cz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=xxlmag.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=y2mate.is
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=yalujailbreak.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=yiv.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=yodu.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=youneed.win
@@ -16200,7 +16198,6 @@
 @@||serasaexperian.com.br/dist/scripts/fingerprint2.js$~third-party
 @@||series-streaminghd.com^$generichide
 @@||serve.adclixx.net/promoload
-@@||serve.adnetasia.com/promoload
 @@||serve.adtrackers.net/promoload
 @@||serve.bannertrack.net/promoload
 @@||serve.popads.net^$script,domain=shinden.pl
@@ -17616,7 +17613,6 @@
 @@||torproject.org^
 @@||torrage.info/torrent.php$popup,third-party
 @@||torrentz.adclixx.net/mgid/ad.js
-@@||torrentz.adnetasia.com/mgid/ad.js
 @@||torrentz.adtrackers.net/mgid/ad.js
 @@||torrentz.bannertrack.net/mgid/ad.js
 @@||tortuga.wtf^$stealth=referrer
@@ -19085,13 +19081,11 @@
 @@||yacine-tv.com^$generichide
 @@||yads.c.yimg.jp/js/yads-async.js$domain=kobe-np.co.jp|yahoo.co.jp
 @@||yahoo.adclixx.net/serv
-@@||yahoo.adnetasia.com/serv
 @@||yahoo.adtrackers.net/serv
 @@||yahoo.bannertrack.net/serv
 @@||yahoo.com/lib/metro/g/myy/advertisement_*.js$domain=boston.com|calgaryherald.com|calgarysun.com|celebuzz.com|montrealgazette.com|saveur.com
 @@||yalla-kora.tv^$generichide
 @@||yalla-shoot-tv.io^$generichide
-@@||yalujailbreak.net^$generichide
 @@||yams.akamaized.net^$stealth=referrer
 @@||yande.re^
 @@||yandex.com/search/?$generichide
@@ -19110,7 +19104,6 @@
 @@||yanxuan-item.nosdn.127.net^
 @@||yanxuan.nosdn.127.net^
 @@||yasni.adclixx.net/design/relaunch/gfx/elitepartner_
-@@||yasni.adnetasia.com/design/relaunch/gfx/elitepartner_
 @@||yasni.adtrackers.net/design/relaunch/gfx/elitepartner_
 @@||yasni.bannertrack.net/design/relaunch/gfx/elitepartner_
 @@||yasno.live^$stealth=webrtc
@@ -19321,7 +19314,6 @@
 @@||zonegfx.com^$generichide
 @@||zoominfo.com/c/amplitude-js$script,~third-party
 @@||zoover.adclixx.net/shared/bannerpages/darttagsbanner.aspx
-@@||zoover.adnetasia.com/shared/bannerpages/darttagsbanner.aspx
 @@||zoover.adtrackers.net/shared/bannerpages/darttagsbanner.aspx
 @@||zoover.bannertrack.net/shared/bannerpages/darttagsbanner.aspx
 @@||zorroplay.xyz/*.php$stealth=referrer
@@ -40225,6 +40217,7 @@ jastrzabpost.pl###sticky-anchor
 jastrzabpost.pl##.adc
 jastrzabpost.pl##.jastrzabpost-widget
 jastrzabpost.pl##div[id^="jastrzabpost-"]
+jastrzabpost.pl,money.pl,o2.pl,wp.pl##article aside > .flex-none > div[class*=" "]:has(> div[class*=" "]:first-child + script:last-child)
 jastrzebieonline.pl###rodo_popup
 jastrzebieonline.pl##div[class^="ad_"]
 jateknet.hu###profiling-accept
@@ -44659,6 +44652,7 @@ mbc.net###DGPR
 mbd.baidu.com###content_wrapper + div + .default-container
 mbd.baidu.com##.related-news > section:first-child + div
 mbd.baidu.com##div[class^="_"][style="visibility: visible;"]
+mbjremix.com###gads
 mbl.is###cookie-consent
 mbl.is##.augl
 mc.163.com###NIE-topBar-news
@@ -48582,7 +48576,6 @@ nutritioninsight.com,packaginginsights.com###horizontalblk
 nutritioninsight.com,packaginginsights.com##.squarblk
 nuuvem.com##.consent-warning
 nuvexus.com##.middle-banner
-nuvexus.com##.top-banner
 nuvid.com##.download_adv_text_photo
 nuvid.com##.rel_right
 nuvid.com##a[class$="_premium_bar"]
@@ -56724,6 +56717,7 @@ soup.io##span[id*="_sidebar_ad_"]
 sourceforge.net###banner-sterling
 sourceforge.net###floating-content-wrapper
 sourceforge.net###nels
+sourceforge.net###vibe-coding-bar
 sourceforge.net##.can-truncate
 sourceforge.net##.main-nav-link
 sourceforge.net##.projects > .trunc-eligible
@@ -59960,6 +59954,7 @@ thunderstore.io##.main_content_middle div.card:has(> .card-body > a.dathost-link
 thunderstore.io##.navbar-nav > li:has(> a.dathost-link)
 thurrott.com###announcement-bar-container
 thuvienhd.com##a[href^="https://bit.ly/"]
+thuvienphapluat.vn##div[class^="viewAds-"]
 thw-handball.de##body > footer ~ div:not([class]) > div[style*="fixed"], body > .js-slide-in.is-active
 thwiki.cc###a-carousel
 thzk.cc###fwin_content_imc_attachad > .f_c > div > div:first-child
@@ -61605,7 +61600,6 @@ tw-calc.net##.left-menu > .container.vertical_large
 tw-calc.net##.main-container .content td > .container.rectangle
 tw-calc.net##.main-content > .container.horizontal_small
 tw-calc.net##.right > .container.vertical
-tw-calc.net##.top-banner
 tw.beanfun.com###flybeanfun
 tw.bid.yahoo.com###livePromote
 tw.live##.fsk-window-film
@@ -61712,6 +61706,7 @@ twitteringmachines.com##div[style^="margin: 8px "] > div > div > p > a
 twitteringmachines.com##div[style^="margin: 8px "] > p > a
 twkan.com###mobile-ad
 twkan.com##.txtcenter
+twmanga.com###baoziAdPopup
 twojesoczewki.com##.popup_bg
 twojliquid.pl###message, .message
 twoplayergames.org##.game-page-ad
@@ -65164,6 +65159,7 @@ wydawca.com.pl###kuki
 wyevalegardencentres.co.uk###privacyStatement
 wyh.tv##.adverall
 wykop.pl###wpladtop
+wykop.pl##.lidl-polska
 wykop.pl##.lisek-app
 wykop.pl##a[href^="https://www.wykop.pl/adverts"]
 wykop.pl##body .pub-slot-wrapper
