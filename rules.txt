@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-12 23:46:21（北京时间）
+! Version: 2026-03-13 00:48:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67244
+! Total count: 67250
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22212,6 +22212,8 @@ avple.tv##.MuiSkeleton-root
 avple.tv##.jss13
 avple.tv##.jss20
 avporner.com##a[href="https://4k69.com"]
+avporner.com##ul.right-part > li:has(> a[target="_blank"])
+avporner.com,4k69.com##div[id^="hwgrid_"]
 avsubthai.me###page > center
 avsubthai.me##.ad
 avsuggest.com,qiaobutang.com##.overlay
@@ -23342,6 +23344,8 @@ betarena.cz##a[rel$="sponsored"]
 betarena.cz##div.bestBetBox
 betaseries.com##.blockPartner
 betches.com##.mod-ad-htl
+betches.com##div[class*="bottomAd"]
+betches.com##div[id^="advert"]
 betsafe.ee###MsgAreaBottom
 betsson.com##snack-bar-container
 betterbe.co##div[data-trackable-ad]
@@ -48993,6 +48997,7 @@ omnitalk.com##td[bgcolor="#ffffc8"]
 omnitalk.com##tr[bgcolor="ffffc8"]
 omnitel.lt##.oop-notification
 omnium.cat##.omnium_cookies_popup_wrapper
+omoi.com##azuki-google-ad
 omonoia24.com##a[href*="window.open(window.clickTag)"]
 omonoia24.com##div[id^="omono-"]
 omsystembolaget.se##.consent-handler
@@ -50326,6 +50331,7 @@ phillyvoice.com##.article-sponsor-sticky
 phillyvoice.com##.native-sponsor
 phillyvoice.com##.this-weekend-container
 philstar.com###sponsored_posts
+phim-18.tv##.v3sb-box
 phim1080z.com##.turn-off-banner
 phim33.com##a[href^="https://c.bong99.com/"]
 phimhotjav.com##.social
