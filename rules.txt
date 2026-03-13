@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-14 00:27:42（北京时间）
+! Version: 2026-03-14 01:27:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67283
+! Total count: 67295
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1188,6 +1188,7 @@
 /exonb/*$script
 /exonob/*$script
 /exowb/froload.js$script
+/exowb/frontload.js$script
 /exports/tour_20/*$subdocument
 /external/ad.$script
 /external/ads/*$image
@@ -1232,6 +1233,7 @@
 /go.news.fly.io/e/o/*$image
 /google_adsense-$script
 /google_analytics_gtag.js$script
+/gosquared.js$script
 /gp/r.html?$image
 /gpt-prebid.js$script
 /gpt.js$script
@@ -1371,6 +1373,7 @@
 /oiopub-direct/js.php$script
 /oncc-ad.js$script
 /oncc-adbanner.js$script
+/op/op1.js?v=$script
 /open.html?$image
 /open/?ot=$image
 /open?token=$image
@@ -20577,6 +20580,8 @@ alternativeto.net##div[class*="min-w-ad-"]
 alternativeto.net##div[class^="PageIntroWrapper_foodWrapper"]:has(> div[class*="min-w-ad-"])
 alternativeto.net##div[data-testid="adsense-wrapper"]
 alternativeto.net##div[data-testid="put-food-on-the-table"]
+alternativeto.net##div[style="min-height: 280px;"]
+alternativeto.net##div[style="min-height:280px"]
 alternativeto.net##div[style^="min-height: 114px; background-color:"]
 alternativeto.net##div[style^="min-height:114px;background-color:"]
 alternativeto.net##li.sponsored
@@ -26347,9 +26352,12 @@ citybuzz.pl##.cbz-widget
 citybuzz.pl##div[class^="cbz-content"]
 citychicdecor.com##.shopthepost-widget
 cityexpress.com##.ctn-cookies
+citymagazine.si##._iprom_inStream
 citymagazine.si##.add-space
 citymagazine.si##.block-wrap-native > .tipi-row-inner-style:has(> .tipi-row-inner-box > .zeen-da-wrap > .block-html-content > ._iprom_inStream > .iAdserver)
 citymagazine.si##div[class^="banner-square-"]
+citymagazine.si,colombiareports.com,filmschoolrejects.com,hongkongfp.com,phoneia.com,weatherboy.com###custom_html-6
+citymagazine.si,webbikeworld.com##.block-da
 citynews.ca###Bigbox_300x250
 citynews.ca###master-leaderboard
 citynews.ca##.ad-load
@@ -49302,8 +49310,12 @@ open3dmodel.com##div[style^="min-height:"]:not([class],[id]):has(> .adsbygoogle)
 openallurls.com##.articles-col > div[style^="margin-bottom:"][style*="min-height:"]:has(> .adsbygoogle)
 openallurls.com##.articles-col > form ~ br
 openallurls.com##.nav-content-wrap > .row > .col-sm-6:has(> div[style^="width:"][style*="min-height:"] > .adsbygoogle)
+openalternative.co##.duration-100.rounded-lg:has(a[href="/advertise"])
+openalternative.co##.relative.rounded-lg:has(a[href="/advertise"])
 openalternative.co##a.ease-out[href^="https://trycomp.ai?"]
 openalternative.co##body > div.min-h-dvh > div.relative:has(> a[href^="https://trycomp.ai"])
+openalternative.co##div[class="relative flex max-md:order-3"]:has(a[href="/advertise"])
+openalternative.co##div[class="relative flex"]:has(a[href="/advertise"])
 openbase.com###__next [class*="GdprCookieFooter"]
 openbookpublishers.com##.menu-header
 opencart.com##.promotion-banner
