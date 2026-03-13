@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-13 23:33:39（北京时间）
+! Version: 2026-03-14 00:27:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67278
+! Total count: 67283
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -12581,6 +12581,7 @@
 @@||maxmind.com/geoip/$xmlhttprequest,domain=ibanez.com
 @@||maxmind.com^*/geoip.js$domain=aljazeera.com|ballerstatus.com|bikemap.net|carltonjordan.com|cashu.com|dr.dk|everydaysource.com|fab.com|girlgames4u.com|ip-address.cc|qatarairways.com|sat-direction.com|sotctours.com|stoli.com|vibe.com
 @@||maxmind.com^*/geoip2.js$domain=bandai-hobby.net|boostedboards.com|donorschoose.org|driftinnovation.com|fallout4.com|ibanez.com|instamed.com|metronews.ca|mtv.com.lb|runningheroes.com|tama.com|teslamotors.com
+@@||maxstream.org^$subdocument,stealth=referrer,domain=javgods.com
 @@||maxstream.video^$generichide
 @@||mb-mods.net^
 @@||mb.yidianzixun.com^
@@ -25884,11 +25885,8 @@ cheatsheet.com##.top-ad
 cheatslips.com##div.pb-2[style^="min-height:"]
 check-host.net##.ra-elative
 check-host.net##div[class*="-l-8"]
-check-host.net##div[class*="rder-l-8"]
 check-host.net##div[class]:has(> [class^="alxa"])
-check-host.net##div[class]:has(> [class^="alxam"])
 check-host.net##div[id^="amspeayvrkfb"]
-check-host.net##div[id^="amspeayvrkfv"]
 check-host.net##div[id^="antpeayvraea"]
 check.toys###COO
 checkdomain.de###notifications-container
@@ -30630,6 +30628,7 @@ edukacjakrytyczna.pl##a[href^="/przekierowanie/"] > img[alt="banner"]
 edukaroo.com,shortix.co,forex.soft3arbi.com,fxmag.com###popup
 edumail.icu##a[title="ShockVPN"]
 edumail.icu$$script:contains(enable_ad_block_detector)
+edumail.su##.ads-five
 edumailfree.com##.adz-five
 edumailfree.com##.adz-one
 edumap.az##.single-post a[href^="https://bit.ly/"]
@@ -40262,6 +40261,8 @@ jav.guru##.inside-right-sidebar > aside.widget_custom_html
 jav.land,picyield.com###clck_ntv
 jav.sb###promo-box
 jav.watch##.banner_top_right
+jav.wine,osmanonline.co.uk,pridesource.com,fuxdeluxe.com,nationalchronicle.in,techspite.com,aceofhacking.com,writeforreaders.com,softcobra.com,naijatechguide.com,freehtml5.co,copyblogger.com###custom_html-6
+jav.wine,ringwitdatwixtor.com,metropolisjapan.com,hentai-sharing.net,hentaiomg.com,jav1080.com,javrookies.com,sakuravrjav.com,pridesource.com,4sysops.com,idevicecentral.com,forums.flyer.co.uk,3xplanet.com,schooldrillers.com,aceofhacking.com,linuxpip.org,kodi-tutorials.uk,yofreesamples.com,thispointer.com,stevessmarthomeguide.com,hwnews.in,collegelearners.com,watchmalcolminthemiddle.com###custom_html-3
 jav19.com###zleft > div.panel
 jav22.net###divExoLayerWrapper
 jav22.net##.rich-content > center > a[rel="noopener"] > img
@@ -51973,6 +51974,9 @@ pravda.ru##.yaRtbBlock
 pravda.sk##.perex-adblock-warning
 prawdaobiektywna.pl###mcpc
 prawdziwyonline.pl###pp-consent
+prawo.pl##.adserver-wrapper
+prawo.pl##.widget-banners
+prawo.pl,polski-tenis.pl,bizpolis.pl,wyniki.pl,telepolis.pl##.banner
 prawobrzeze.info##body > div:not([id]):not([class])
 praxisplan.at###consent-modal
 precincttv.com##.mosaic-banner
@@ -52205,6 +52209,7 @@ projectorcentral.com##.addDiv2
 projectorcentral.com##.addDiv3
 projectorcentral.com##.spec-b-strip
 projects.newforma.com##.banner, #banner
+projectsuki.com,businessinsider.com##a[href*="utm_campaign="] > img
 prokerala.com##.adm-unit
 promet.si###REALISCCBAR
 promipool.com$$script[tag-content="Flags.autoRecov"][min-length="20000"][max-length="300000"]
