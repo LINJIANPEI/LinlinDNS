@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-13 20:33:48（北京时间）
+! Version: 2026-03-13 21:53:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67268
+! Total count: 67278
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6911,6 +6911,7 @@
 @@||by-promokod.by^$stealth=useragent
 @@||byfly.dualstack.speedtestcustom.com^$stealth=referrer
 @@||bysejikuar.com^$subdocument,stealth=referrer,domain=sezonlukdizi8.com
+@@||byselapuix.com^$subdocument,stealth=referrer
 @@||bytecdntp.com^$script,domain=51eshu.com
 @@||bytecdntp.com^$script,domain=hushuge.com|51eshu.com
 @@||bytedance.com/ttwid/union/register/
@@ -17813,6 +17814,7 @@
 @@||tunovelaligera.com^$generichide
 @@||turbo.az^$stealth=referrer
 @@||turboplayers.xyz/t/$stealth=referrer
+@@||turbovid.vip^$subdocument,stealth=referrer
 @@||turbovidhls.com/t/$stealth=referrer
 @@||turing.captcha.gtimg.com^
 @@||turiver.com^$generichide
@@ -18286,6 +18288,7 @@
 @@||videoadept.com^$generichide
 @@||videobuster.de/js/video-js/nuevo.min.js$domain=videobuster.de
 @@||videocore.tv/playlist.smil$document
+@@||videohidefree.online/embed/$stealth=referrer
 @@||videoplayer.persgroep.be/v*/player/ad_smartads_.js
 @@||videoplaza.tv/creatives/assets*.mp4^$domain=expressen.se
 @@||videoplaza.tv/crossdomain.xml
@@ -25880,8 +25883,11 @@ cheatsheet.com##.sidebar
 cheatsheet.com##.top-ad
 cheatslips.com##div.pb-2[style^="min-height:"]
 check-host.net##.ra-elative
+check-host.net##div[class*="-l-8"]
 check-host.net##div[class*="rder-l-8"]
+check-host.net##div[class]:has(> [class^="alxa"])
 check-host.net##div[class]:has(> [class^="alxam"])
+check-host.net##div[id^="amspeayvrkfb"]
 check-host.net##div[id^="amspeayvrkfv"]
 check-host.net##div[id^="antpeayvraea"]
 check.toys###COO
@@ -31047,6 +31053,7 @@ emulatorgames.onl###cg > #button
 emulatorjs.com##.frame-2
 emumax.com##.tbanner
 emurom.net###annonce
+en.javfun.me###invideo_wrapper
 en.namu.wiki,ja.namu.wiki##div[id][class]:empty
 en.numista.com###fiche_buy_links
 en.softonic.com##section[data-meta="search-results-list"] li.is-mobile-hide
@@ -44934,8 +44941,6 @@ meijuniao.com##.player-ad1
 meijutt.tv##.a960_index
 meijuxingqiu.com##.fixed-bottom-bar
 meiker.io##ad-div
-meilblog.com##.adblock_subtitle
-meilblog.com,doumura.com##.adblock_title
 meilleurpronostic.fr##.ne4u07a96r5c3
 mein-apothekenmanager.de###cn-wrapper
 mein-saunashop.de##.v-overlay, .v-dialog__content
@@ -45266,6 +45271,7 @@ miercn.com##.color-box
 miercn.com##.hongbao
 miercn.com##.show-img-box
 mieszko.pl###privacy, .privacy
+mifirm.net##div:is([class*="my-"], [class*="mb-"]) > a[target="_blank"] > img
 migliori-siti-di-incontri.it##.disclaimer
 migraine.com###secondary > .desktop-only
 migranturus.com##.migra-adlabel
@@ -51691,6 +51697,11 @@ pornstars.tube##.spot > .top
 pornstars.tube##a.btn-dvd[rel="sponsored"]
 pornstars.tube,pornmega.com##body .bottom-adv
 pornstream.org##.player > div.right
+porntb.com##.album-sponsor
+porntb.com##.block-network-banner
+porntb.com##.my-gallery > figure > a:has(> ins[data-zoneid])
+porntb.com##.pswp__fullscreen-ad
+porntb.com##div:is([class$="-vda"], .movable-top):has(> .tick > ins[data-zoneid])
 pornteentube.tv##.player-bns-block
 porntop.com###offerbtn
 porntop.com##.content > div.headline:has(> h2 > span.badge-ad)
@@ -60336,7 +60347,6 @@ tinytranslation.xyz##.ads-hr
 tinyurl.com##.alert-dismissible
 tio.ch##div[class="randomBox cornice"]
 tio.ch##div[data-link="@loadAd"]
-tioeroge.com,pngcut.com##body > #page ~ div[id][class*=" "]
 tipcars.com###homepage_reklamni_pruh
 tipcars.com###kosilka_reklama_td
 tipcars.com###loading
