@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-15 07:18:23（北京时间）
+! Version: 2026-03-15 09:17:10（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67295
+! Total count: 67305
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13108,6 +13108,7 @@
 @@||my-bucket-s3-*-amazonaws.*.*/*.mp4$stealth=referrer,domain=ibomma.*
 @@||my.163.com^
 @@||my.asos.com/identity^$stealth=referrer
+@@||my.beeline.ru/resources/js/webtrends.js?$script,~third-party
 @@||my.cainiao.com^
 @@||my.foxnews.com^$stealth=referrer
 @@||my.goabode.com/assets/js/fp2.min.js$script,~third-party
@@ -21976,6 +21977,7 @@ aura.ge##a[href="https://trinx.ge/"]
 ausschreibungen-deutschland.de###am_pop-up
 ausschreibungen-oesterreich.at###am_pop-up
 aussieaudiomart.com##.section-vu
+austinchronicle.com,carmag.co.za,fleetnews.co.uk,shawlocal.com,the-scientist.com,thegazette.com,vodacomsoccer.com###top-leaderboard
 austinchronicle.com,carmag.co.za,fleetnews.co.uk,shawlocal.com,thegazette.com,vodacomsoccer.com###top-leaderboard
 australianfrequentflyer.com.au##.messageList > li[id^="post-"] + .funzone
 australianfrequentflyer.com.au##.section.funbox > .funboxWrapper > [id^="funbox_zone_"].funzone_below_content
@@ -27738,9 +27740,11 @@ cricbuzz.com##.cb-ad-unit
 cricbuzz.com##.cbz-leaderboard-banner
 cricbuzz.com##body div.bg-cbLightGrayish:has(> div[id*="leaderboard"])
 cricket.com.au##.w-sponsors
+cricket365.com,football365.com,golf365.com,loverugbyleague.com,planetf1.com,planetfootball.com,planetrugby.com,teamtalk.com,tennis365.com##.ps-block-a
 cricketcountry.com##.ad90mob300
 cricketcountry.com##.add-box
 cricketireland.ie##.sponsor-strip
+cricketnetwork.co.uk,f1network.net,pop.inquirer.net,rugbynetwork.net,the-scientist.com,thefootballnetwork.net###billboard
 cricketnetwork.co.uk,f1network.net,pop.inquirer.net,rugbynetwork.net,thefootballnetwork.net###billboard
 cricketnmore.com##.cmtopad
 cricketnmore.com##.desktop-ad-wrapper
@@ -28343,6 +28347,7 @@ dailycaller.com###dailycaller_incontent_4
 dailycaller.com##.dailycaller_adhesion
 dailycaller.com##div[id^="dailycaller_incontent_"]
 dailycaller.com,fanatix.com,gamertweak.com,gematsu.com,politicalcompass.org,videogamemods.com,videogameschronicle.com,worldhistory.org##.adcontainer
+dailycaller.com,tuasaude.com##.ar82zL-ad-container
 dailycamera.com,bocopreps.com,buffzone.com,bocopreps.com,greeleytribune.com,broomfieldenterprise.com,coloradohometownweekly.com##.dfm-sidebar-top-flex-container > a[target="_blank"]
 dailycoffeenews.com##.banner-box
 dailycoffeenews.com##.sidebar-box
@@ -59130,7 +59135,12 @@ the-express.com##body [id^="div-gpt-ad"]:not(#style_important)
 the-independent.com###taboola-mid-article-thumbnails-ii
 the-match-factory.com###infoBar
 the-scientist.com###Torpedo
+the-scientist.com###boombox-top
+the-scientist.com###content-74192-boombox-top
+the-scientist.com###leaderboard-below-magazine-widget
+the-scientist.com###leaderboard-top
 the-scientist.com###preHeader
+the-scientist.com###torpedo
 the-star.co.ke###teasers
 the-sun.com##.dpa-grid
 the-sun.com##[data-component="zergnet"]
