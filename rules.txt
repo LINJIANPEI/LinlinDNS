@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-16 20:44:33（北京时间）
+! Version: 2026-03-16 22:14:21（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67391
+! Total count: 67397
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2068,6 +2068,8 @@
 12377.cn###notice
 123av.com##.w300
 123av.com,123av.ws,1av.to##[style^="width:300px;"]
+123av.fun##a[href="https://missav.run"]
+123av.fun##a[href^="https://qz.run/"]
 123cha.com##.n_ads_box
 123cha.com##.n_ads_box + .box > .tbl > tbody > tr:last-child > td[bgcolor="#eeeeee"][width="350"]:last-child
 123cha.com##div[style^="float:left;margin:8px 0;width:790px;border:1px dashed #ccc;"]
@@ -2449,17 +2451,6 @@
 18comic.org,18comic.vip##div[style^="position: fixed; top:"]
 18comic.org,18comic.vip##img[style*="300px"]
 18comic.org,18comic.vip##style + div[style="cursor: pointer; position: relative;"]
-18comic.org,18comic.vip,18comic.ink###guide-modal
-18comic.org,18comic.vip,18comic.ink##.div_sticky2
-18comic.org,18comic.vip,18comic.ink##.modal-backdrop
-18comic.org,18comic.vip,18comic.ink##.row[style="display: flex;flex-wrap: wrap;"]
-18comic.org,18comic.vip,18comic.ink##a[herf*="//"]:not([href*="18c"]) > img
-18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > [style*="back"]
-18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > div[style]
-18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > img
-18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > img + [style]
-18comic.org,18comic.vip,18comic.ink##div[data-group][data-width="300"]
-18comic.org,18comic.vip,18comic.ink##style + div[style="cursor: pointer; position: relative;"]
 18comic.org,18comic.vip,52movieba.com,5dm.tv,acglala.net,ainuody.com,awaker.cn,bimiacg.com,cangku.in,ccav1.com,cdsoso.me,cgown.com,cn163.net,cosersuki.org,dzbhdm.com,epinv.com,eroacg.com,galacg.me,gmgard.com,halitv.com,haochi123.com,hexieshe.cn,hexieshe.com,hexieshe.xyz,hggard.com,hmghmg.com,hmog.me,htcui.com,huan.moe,idanmu.at,jitapu.com,kisssub.org,languang.co,liuli.pw,meijutt.tv,mikuclub.org,mtrend.cn,mydrivers.com,nxing.cn,oyksoft.com,rijutv.com,souxue8.com,speedtest.cn,toutiao.com,tucao.one,vpansou.com,xxshe.info,xxshe.xyz,youku.com##a[href*=".taobao.com"]
 18comic.org,18comic.vip,jmcomic1.city,jmcomic1.win,jmcomic1.group##.bot-per-context
 18comic.org,18comic.vip,jmcomic1.city,jmcomic1.win,jmcomic1.group##[data-group^='album_related'],[data-group^='all_bottom']
@@ -11594,6 +11585,7 @@
 @@||japan.techinsight.jp^$generichide
 @@||jav-asia.top^$generichide
 @@||jav-nonix.cc^$generichide
+@@||jav.sb^$stealth=flash
 @@||jav777.cc/advertise/
 @@||jav777.xyz/advertise/
 @@||jav777.xyz^$generichide
@@ -21947,6 +21939,7 @@ attheraces.com##.gutter-right
 attheraces.com##.race-nav-plus-ad__ad
 atticadps.gr###cookies
 attitude.co.uk##.at-advert
+attractionsmagazine.com##a[href^="https://mousefantravel.com/"]
 atube.xxx##.sp-i
 atv.az##[style*="margin-top: 10px"] > object[height="102"]
 atvrider.com,baggersmag.com,boatingmag.com,cruisingworld.com,cycleworld.com,dirtrider.com,fieldandstream.com,floridatravellife.com,flyingmag.com,islands.com,marlinmag.com,motorcyclecruiser.com,motorcyclistonline.com,outdoorlife.com,popphoto.com,popsci.com,saltwatersportsman.com,scubadiving.com,sportdiver.com,sportfishingmag.com,utvdriver.com,yachtingmagazine.com##.st-block.ads.separator
@@ -45575,9 +45568,13 @@ mirrormedia.mg##div[class^="gpt-placeholder"]
 mirrormedia.mg##div[class^="related-article-list__AdvertisementWrapper"]
 miruro.tv##.a-ads
 mishaptube.com##.table
+missav.run##.banner-box
+missav.run##.grid > div.video-card:not([id])
+missav.run##a[href="https://whos.tv"]
 missav.to###poster
 missav.to,tojav.net###preroll
 missav78.top##.streamer-container2
+missav81.top,mj859.com,avx21.com,qmtrd.com##div[id]:has(> div.streamer-container2)
 missingremote.com###top-bar
 missyuan.com##.spaceborder
 misterfly.com###i-cook
@@ -50980,6 +50977,8 @@ player.pl##.modal-rodo
 player.polskieradio.pl##.app > .antena ~ div[style^="position: absolute; width: 100vw; height: 100vh;"]
 player.polskieradio.pl##div[class$="__advertisement"]
 player.twitch.tv##.video-player__container div[class^="Layout-"]:has(> span[data-a-target="video-ad-label"])
+playhop.com##.aab-adv
+playhop.com##.google-sticky-adv-banner
 playhub.com##span[class^="ad-title-"]
 playinfinity.it##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd-alert-dismissible
 playjolt.com,gamessumo.com,myfreegames.net##div[style^="min-width: 728px; height: 90px; margin: 0 auto;"]
@@ -52974,6 +52973,7 @@ quora.com##.NewGridQuestionPage .linked_content
 quora.com##.dom_annotate_ad_image_ad
 quora.com##.dom_annotate_ad_promoted_answer
 quora.com##.dom_annotate_ad_text_ad
+quora.com##.q-sticky[style*="box-sizing: border-box; position: sticky;"]:has(.qu-flexDirection--column[style*="min-height:"] > .dom_annotate_google_ad)
 quora.com##.spacing_log_question_page_ad
 quora.com##div.Bundle:not([class*=" "])[data-clog-metadata]
 quora.com##div[data-clog-metadata*="promoted_content"]
@@ -53621,6 +53621,7 @@ refresher.cz##.gdpr-panel
 refresher.sk##.gdpr-panel
 refurbished.sk##.cookies
 regen.network###gatsby-focus-wrapper > div:not([class]) + div
+regexlearn.com##.w-full.mb-3:has(a[href="/learn/regex-for-seo"])
 regielive.ro###cc-mesaj-box-wrapper
 regio15.nl##body > div[class*="app"] > div[class*="popup"]
 regioactive.de###dialogconsent, .reveal-modal-bg
@@ -54650,6 +54651,7 @@ sauto.cz###page > div[class] > div:not([class]):has(> div > div:empty:first-chil
 sauto.cz##.p-uw-item-list__list-wrapper > div > ul > li[class*="c-item"] + li:not([class^="c-item"])
 sauto.cz##div[class^="c-ssp-"]
 save-editor.com##.set_wrapper
+save-editor.com##.set_wrapper_absolute_right
 save.ca##.ad-box
 save.ca##.leaderboardMainWrapper
 savefiles.com##div[id^="clickCatcher"]
@@ -64514,6 +64516,8 @@ wildcumshots.com##.enhanced-text-widget
 wildskirts.com###content > div[onclick^="window.open"]
 wildskirts.com###content ~ div[style^="position: fixed; top: 50%;"][style*="opacity"]
 wildskirts.com###strame
+wildtangent.com##aside.md\:flex > .mx-auto:has(div[id$="side-skyscraper"])
+wildtangent.com##div[class^="container mx-auto"] > div > .justify-center.flex:has(> div[id$="top-banner"])
 wilfmovies.com##img[width="678"][height="182"]
 wilfmovies.com,cdromance.org,gossipfunda.com,coingape.com,sonyalpharumors.com,investmentwatchblog.com,onlinecourses24x7.com,darkcapture.app###custom_html-15
 wilko.com##.cookies
@@ -64537,9 +64541,11 @@ win7w.com###xldz
 win7xzb.com##.four_box
 win7xzb.com##.ware_gs
 winaero.com###custom_html-11
+winaero.com###indbl
 winaero.com###jkhskdfsdf-iycc-4
 winaero.com##.gad-gads
 winaero.com##.site-content > div > p[style="margin: 22px"]
+winaero.com##.windiv
 winaero.com##.windiv:has(> a.winrec)
 winaero.com$$script[wildcard="*.innerHTML*.parentNode.insertBefore*"][max-length="2000"]
 winandmac.com,nicekkk.com###custom_html-3
