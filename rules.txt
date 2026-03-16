@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-16 16:02:05（北京时间）
+! Version: 2026-03-16 17:53:53（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67384
+! Total count: 67391
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9916,6 +9916,7 @@
 @@||go.scorptec.com.au^
 @@||go.scorptec.com.au^|
 @@||go.tnshort.net^$stealth=referrer
+@@||go.trvdp.com/init/$domain=olhardigital.com.br
 @@||go.xliirdr.com/?*targetDomain=fikfapcams.com$domain=fikfap.com
 @@||go.xlirdr.com/api/models/vast$xmlhttprequest
 @@||go4kora.com^$generichide
@@ -15785,6 +15786,7 @@
 @@||s.ssl.qhres2.com^
 @@||s.stormedia.info/*.mp4$stealth
 @@||s.tgfcer.com^$generichide
+@@||s.trvdp.com/scripts/*/ins.js$domain=olhardigital.com.br
 @@||s.tvn.pl/tools/_ads/advert.js$domain=tvnturbo.pl
 @@||s.vi-serve.com/source.js$domain=9gag.com
 @@||s.w.org/wp-content/$stylesheet,domain=wordpress.org
@@ -33478,7 +33480,6 @@ forums.socialmediagirls.com,titsintops.com##.samCodeUnit
 forums.somethingawful.com###notregistered
 forums.somethingawful.com##.oma_pal
 forums.sonarr.tv##.banner[style]:not(.ember-view)
-forums.sufficientvelocity.com,isp.netscape.com,m.economictimes.com,someecards.com,trailspace.com,wabetainfo.com##.adContainer
 forums.sufficientvelocity.com,m.economictimes.com,someecards.com,trailspace.com,wabetainfo.com##.adContainer
 forums.techguy.org##.messageList > li.message[id^="post-"]+li.message:not([id^="post-"])
 forums.techguy.org##div[style="text-align:center;"] > div[style="font-size:80%;"]
@@ -34113,6 +34114,7 @@ fx678.com##div[class^="fx_fa_"]
 fx678.com##div[class^="hc_ad_"]
 fx678.com##div[id^="dl_"]
 fx678.com##div[id^="hta_"]
+fxempire.com###__next > div[height]:not([id]):has(> section[style^="height:"] > #trade-with-broker)
 fxempire.com###header-ads-block
 fxempire.com##.dKBfBG
 fxempire.com##[height="398"]
@@ -40509,6 +40511,7 @@ javx24.com##.banner
 javx24.com##.bannerx
 javx24.com##.float-banner
 javxspot.com##a[href^="https://uploadgig.com/premium"]
+javxxx.me###menu-main > li.nav-item:has(> a[rel^="sponsored"])
 javxxx.me##.video-img:has(> #next-to-video-1)
 javynow.com##.banner-player
 javynow.com##.videos-ad__ad
@@ -57532,6 +57535,8 @@ starwank.com,faptor.com##.zpot-horizontal-img
 starwindsoftware.com###privacyPopup
 stasonline.ro###form_cookie
 stat-nba.com###ad_video
+statecollege.com##div[class^="ad_code_"]
+statecollege.com##div[class^="adapex"]
 statesman.com##article > div:has(> div:first-child + div[data-block-type="ad"]:last-child)
 staticice.com.au##a[href^="http://prf.hn/click/"]
 staticice.com.au##table[width="100%"] > tbody > tr > td[height="15"][valign="top"]:only-child
@@ -58973,6 +58978,7 @@ telekom.mk###cookiesModal
 telekom.sk##.con-ban-wrapper
 telekomunikace.cz##.Flagrow-Ads-under-header
 telemarket24.ru##.disklay-box
+telepolis.pl##.article__body .sales
 telepolis.pl##.banner--no-placeholder
 telepolis.pl##.onnetwork
 telepolis.pl##a[href^="https://www.citibank.pl/"][target="_blank"] > img
@@ -63040,6 +63046,7 @@ view.inews.qq.com##div[class^="slider-top-bar_sliderWrapper"]
 viewsonic.com##.alert-dismissible
 viewsoniceurope.com##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd-alert-dismissible
 viewweather.com###wwm_ads
+viexx.com##.info-banner
 vifa-recht.de###tracking-info
 vigilantcitizen.com##.vigil-leaderboard-article
 vigilantcitizen.com##.vigil-leaderboard-home
