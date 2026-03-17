@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-18 00:55:09（北京时间）
+! Version: 2026-03-18 01:54:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67402
+! Total count: 67405
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1189,6 +1189,7 @@
 /exonb/*$script
 /exonob/*$script
 /exowb/froload.js$script
+/exowb/fronload.js$script
 /exowb/frontload.js$script
 /exports/tour_20/*$subdocument
 /external/ad.$script
@@ -52256,8 +52257,10 @@ prodesigntools.com##.inside-right-sidebar a[href="http://www.GetCreativeCloud.co
 prodir.com##.cookie
 producthunt.com###content > div:has(> div:only-child > img + div > div > a[href^="/sponsor"])
 producthunt.com##.styles_item__hNPI1
+producthunt.com##div[class="my-2 flex cursor-pointer flex-row items-center gap-4 rounded-lg bg-gray-50 p-3"]:has(a[href="/sponsor"])
 producthunt.com##div[class^="styles_ad"]
 producthunt.com##div[data-test^="ad-slot"]
+producthunt.com##div[data-test^="ad-slot-"]
 producthunt.com##main > div[data-sentry-component="Ad"]
 productkeyfree.org##center > input[type="button"][onclick^="window.open("]
 productreview.com.au###content > div[style="min-height:100vh"] + div[class]
