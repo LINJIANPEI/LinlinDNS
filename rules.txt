@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-17 23:54:25（北京时间）
+! Version: 2026-03-18 00:55:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67396
+! Total count: 67402
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4314,6 +4314,7 @@
 @@/js/*/*.js?_v=$~third-party,domain=cracking.org
 @@/js/ads.$domain=shrinklink.co
 @@/js/ads.js|$script,~third-party,domain=~internethaber.com|~knaqu.tv
+@@/js/ads.js|$script,~third-party,domain=~internethaber.com|~knaqu.tv|~5ch.io
 @@/js/advert.js$~third-party
 @@/js/advertisement.$domain=blogs.sapib.ca
 @@/js/adview_*.adsbygoogle.js$~third-party,domain=letv8.cc|zhibo1.cc
@@ -32514,6 +32515,7 @@ file-upload.net##.mod_picture > div[style="font-size:11px;color:#a3a3a3;float:ri
 file-upload.net##.mod_picture > iframe[width="336"][height="280"]
 file-upload.org##body + iframe:not([src])
 file.fm,files.fm##div[id^="any_media_banner"]
+file.supjavhd.to###poster
 filecleaner.com##.cs
 filecr.com##.download-wrap > div.sidebar
 filecr.com##.filec-widget
@@ -39839,6 +39841,7 @@ iqiyi.com##li[id^="100000"]
 iqiyi.com##section[class^="ChannelHomeBanner"]
 iqmxs.cc,kidsplayground.net,hutuxs.com,lakyworld.com,biquge543.com,biquge12345.com,biquge.ac,biquge321.com,20me.net,dingdian365.com,fwdadr.net,haijiaobooksw.top,bqug8.com,biqudd.com,biquge345.com,dingdian888.com,nicmar.net,xianguke.net,ykxs.cc,zhuoshuge.com,zuizhong.net##+js(acis, document.write, style)
 iqoption.com##div[data-test-id="notification-position-container-block"]
+iqsaved.com##.main__block > div.page__inner:has(> div.context > div.context__caption)
 iqshw.com##.iqshwad-comm
 iranianuk.com##div[data-actirise-slot]:not(#style_important)
 irctc.co.in##body > a[href^="https://amzn.to/"][target="_blank"]
@@ -46074,6 +46077,8 @@ moreysa.com###sdgdpr_modal_wrapper
 morfars.dk##body > span[style*="transform"]
 morfose.flexxis.nl##footer
 morhipo.com###legal-alert
+morizon.pl##.banner-placeholder
+morizon.pl,prawo.pl,polski-tenis.pl,bizpolis.pl,wyniki.pl,telepolis.pl##.banner
 morningagclips.com##.mac-ad-group
 morningagclips.com##ul.logo-nav
 morningpost.com.cn###\33 60hot
@@ -55356,6 +55361,7 @@ sfexaminer.com###block-2924520
 sfgate.com##.fdc > div.package:has(> div.s > div[data-block-type="ad"])
 sfgate.com##main > div.f:has(> div.zone > div.package div[data-block-type="ad"])
 sfinks.org.pl##body > div:not([id]):not([class])
+sflix.film,netnaija.film##div[class^="fixed inset-0 z-[22] w-full h-full bg-black/60 flex items-center justify-center px-4 md:px-0"]
 sfr.re##body > .cc
 sfyimby.com##.textwidget:has-text(ADVERTISEMENT)
 sg-weber.at##.flash-info
