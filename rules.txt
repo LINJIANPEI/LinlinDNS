@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-18 09:13:08（北京时间）
+! Version: 2026-03-18 12:13:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67408
+! Total count: 67410
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4314,7 +4314,6 @@
 @@/js/*.js?ads*1&AdType=1&$~third-party,script,domain=streamwish.to|streamxxx.online|mwish.pro|embedwish.com|awish.pro|wishfast.top|sfastwish.com|vidhidevip.com|rubystm.com
 @@/js/*/*.js?_v=$~third-party,domain=cracking.org
 @@/js/ads.$domain=shrinklink.co
-@@/js/ads.js|$script,~third-party,domain=~internethaber.com|~knaqu.tv
 @@/js/ads.js|$script,~third-party,domain=~internethaber.com|~knaqu.tv|~5ch.io
 @@/js/advert.js$~third-party
 @@/js/advertisement.$domain=blogs.sapib.ca
@@ -28809,6 +28808,8 @@ deccanherald.com##.ad-background
 deccanherald.com##.article-adver
 deccanherald.com##.hizmZ
 deccanherald.com##.oPxJA
+deccanherald.com##div:has(> div > .ad-background)
+deccanherald.com##div[style^="min-height"]:has(> div > div[id*="-ad-separator"])
 deccoria.pl##body .dc-billboard:not(#style_important)
 deces-en-france.fr##.s-app-cookies
 deceuninck.cz##.popup.block.next-top
@@ -29084,6 +29085,7 @@ deutschland-gegen-corona.org###___gatsby > div > main > div[style*="fixed"]
 deutschland-spielt.de###gamigoCookie
 dev.miuiflash.com##div[class^="stickyads"]
 dev.miuiflash.com##div[id^="div-gpt-ad"]
+dev.to##.crayons-card:has(.sponsorship-dropdown)
 dev.to##.js-billboard
 dev.to##.js-billboard-container
 dev.to##.js-display-ad-container
@@ -31344,7 +31346,6 @@ eporner.com##[style="margin: 20px auto; height: 275px; width: 900px;"]
 eporner.video##.center-adv
 eporner.video,porntrex.video##.container > .header ~ .top[style]
 eporner.video,porntrex.video##.item[style="height:255px;overflow:hidden;"]
-eporner2.top,chuanghongjituan.com##.streamer-container2
 eportugal.gov.pt###section-cookies
 epoznan.pl##a[href^="adsysClick?id="]
 epoznan.pl##div[style^="clear: both; display: block; margin: 0 auto 10px auto;"]
@@ -52087,7 +52088,6 @@ prawdaobiektywna.pl###mcpc
 prawdziwyonline.pl###pp-consent
 prawo.pl##.adserver-wrapper
 prawo.pl##.widget-banners
-prawo.pl,polski-tenis.pl,bizpolis.pl,wyniki.pl,telepolis.pl##.banner
 prawobrzeze.info##body > div:not([id]):not([class])
 praxisplan.at###consent-modal
 precincttv.com##.mosaic-banner
@@ -53021,6 +53021,8 @@ qz.com##.spotlight-slot
 qz.com##div[class*=":block"]:has(> .ay-ad-slot)
 qz.com##div[class*="my-"]:has(> .ay-ad-slot)
 qz.com##div[class="hidden md:block"]
+qz.com##div[class^="sc-"]:has(> div[class="ad-unit"])
+qz.com##div[class^="sc-"]:has(> div[is="bulbs-dfp"])
 qz828.com##.topadv
 qzone.qq.com###QM_Container_100005
 qzone.qq.com###appCanvasRecentAppActivity > .activity-area
