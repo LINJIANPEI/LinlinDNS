@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-19 05:26:01（北京时间）
+! Version: 2026-03-19 06:23:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67418
+! Total count: 67419
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5267,6 +5267,7 @@
 @@||adobe.io^$domain=adobe.com,stealth=3p-auth
 @@||adobeactivators.blogspot.com^$generichide
 @@||adobedc.demdex.net/ee/v1/identity/$xmlhttprequest,domain=cibc.com
+@@||adobedc.demdex.net/ee/v1/identity/$xmlhttprequest,domain=cibc.com|westjet.com
 @@||adobedtm.com/extensions/$domain=antena3.com|apple.com|atresmedia.com|atresplayer.com|automobiles.honda.com|bravotv.com|cadenaser.com|crave.ca|foodnetwork.com|lasexta.com|telus.com|verizon.com|xfinity.com
 @@||adobedtm.com/launch-$script,xmlhttprequest
 @@||adobedtm.com^$script,domain=sonystyle.com.cn
