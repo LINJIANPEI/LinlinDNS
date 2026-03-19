@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-19 20:37:32（北京时间）
+! Version: 2026-03-19 22:02:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67422
+! Total count: 67416
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5846,7 +5846,6 @@
 @@||animeland.us/pa.js
 @@||animerep.com^
 @@||animerikosuper.blogspot.com^$generichide
-@@||animesanka.club^$generichide
 @@||animeshouse.net/mp4doo/$stealth=referrer
 @@||animesrbija.com^$generichide
 @@||animetake.tv^$elemhide
@@ -14877,7 +14876,6 @@
 @@||places.nbnco.net.au/places/$stealth=referrer
 @@||pladform.ru/dive/$xmlhttprequest
 @@||pladform.ru/player$subdocument
-@@||planet-streaming1.com^$generichide
 @@||planetazdorovo.ru/pics/transparent_pixel.png$image,~third-party
 @@||plans.humana.com/assets/analytics-events-$script,~third-party
 @@||plantswith.com^$generichide
@@ -17489,7 +17487,6 @@
 @@||thepiratebay.org/static/main.js$script,~third-party
 @@||thepiratebay.org^$subdocument
 @@||thepiratebay.org^$~script,domain=thepiratebay.org
-@@||thepoorcoder.com^$generichide
 @@||theporndude.com^
 @@||theregister.co.uk/*_adtech_
 @@||therichest.com^$generichide
@@ -18056,7 +18053,6 @@
 @@||upload.jianshu.io^
 @@||upload.twitter.com^
 @@||upload.wikimedia.org/wikipedia/$image,media
-@@||upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Doramad_Advertisement.jpg
 @@||upload.x.com^
 @@||uploadbox.io/js/advertisement.js
 @@||uploadboy.com/ads.js
@@ -28337,6 +28333,7 @@ dachix.com,deviantclip.com##.media-right
 dachix.com,deviantclip.com##.overlay-media
 dacter.pl###topbar
 daemmen-und-sanieren.de##.cookie-consent-modal
+daemon-hentai.com,teamkong.rf.gd,ad4msan.com,ossels.ai,world-iptv.club###zdn-adblock-overlay
 daemonanime.net,daemon-hentai.com##body > a#scroll-up + div[id][class*=" "]
 daf.co.uk##.modal-backdrop
 daf.nl##.modal-backdrop
@@ -36288,7 +36285,6 @@ haaretz.com##div[data-test="bottomStrip"]
 haaretz.com##div[data-test="topStrip"]
 haberettim.com,thosa.info,blogenginee.com,unityassets4free.com##body > #scroll-top + div[id][class*=" "]
 habermarmara.com.tr,murekkephaber.com,akdenizbulten.com,mansetizmir.com,denizliekspres.com.tr,izmirhabermerkezi.com,saatbasihaber.com,mahalligundem.com##img[alt="Reklam"]
-habermarmara.com.tr,murekkephaber.com,akdenizbulten.com,thecruiselife.com.tr,mansetizmir.com,denizliekspres.com.tr,izmirhabermerkezi.com,saatbasihaber.com,mahalligundem.com##img[alt="Reklam"]
 habitat76.fr##.header-cnil
 hackdoor.io##.snackbar
 hackedonlinegames.com##.GameTitle > div[style="height: 110px;"]
@@ -45179,6 +45175,7 @@ metacritic.com##.ad_unit
 metacritic.com##.c-adMpu
 metacritic.com##.c-adsGallerySlot
 metacritic.com##.c-expressvpn
+metacritic.com##.fandom-ad-placeholder
 metademolab.com###root > div[style*="fixed"]
 metager.org##.result:has(a[href^="https://metager.org"][href*="/partner/r?"])
 metager.org##.result:has(a[href^="https://r.search.yahoo.com/"])
@@ -49143,7 +49140,6 @@ omoi.com##azuki-google-ad
 omonoia24.com##a[href*="window.open(window.clickTag)"]
 omonoia24.com##div[id^="omono-"]
 omsystembolaget.se##.consent-handler
-on-movie.net##body > div[class^="skin-block_"][style^="background-image: url(data:image/jpeg;base64"]
 on.cc###acceptDisclaimer
 on.cc##.appinstall
 on3.com##.adhesionAd
@@ -50356,7 +50352,9 @@ perchance.org##[style^="position: fixed;"]
 perchance.org##div[style*="height: 90px; overflow: hidden; text-align: center;"]
 perekrestok.ru##.cookie-content
 perezhilton.com###feature-spot
+perezhilton.com##.lazy-ad-parent
 perezhilton.com##.single-spot.shown
+perezhilton.com##div[class$="-ad-container"]
 perezhilton.com##div[style="min-height:310px;"]
 perfectdailygrind.com##.gengpdg
 perfectdailygrind.com##.gengpdg-col
@@ -59786,8 +59784,6 @@ thepointsguy.com##[aria-label="Advertisement"]
 thepointsguy.com##div[class*="Article_featuredCard"]
 thepointsguy.com##div[data-testid="tpg-inline"]
 thepointsguy.com##main > div[class^="jsx-"]:has(> div.nudgeModal > div.content > span > a[href^="https://oc.brcclx.com/"])
-thepoorcoder.com##.adtester-container
-thepoorcoder.com##.side-ad
 thepopinsider.com##.header-drop-zone
 thepopverse.com##.autoad
 thepopverse.com##div[class^="google-ad_"]
@@ -64563,9 +64559,7 @@ win7gadgets.com##.gads_big
 win7w.com###xldz
 win7xzb.com##.four_box
 win7xzb.com##.ware_gs
-winaero.com###custom_html-11
 winaero.com###inbl
-winaero.com###indbl
 winaero.com###jkhskdfsdf-iycc-4
 winaero.com##.gad-gads
 winaero.com##.site-content > div > p[style="margin: 22px"]
