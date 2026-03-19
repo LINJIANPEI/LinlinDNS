@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-19 15:40:31（北京时间）
+! Version: 2026-03-19 16:31:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67424
+! Total count: 67422
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4851,7 +4851,6 @@
 @@||5278.cc/static/image/common/ad_close.gif
 @@||5278.cool^$generichide
 @@||52zy.com/gg/
-@@||5471782.fls.doubleclick.net^
 @@||5471782.fls.doubleclick.net^|
 @@||5692.com.ua/assets/*/ads-complain.js
 @@||58.com/adJump?adType=
@@ -8225,7 +8224,6 @@
 @@||customeragent-v3.seb.se/Amelia$stealth=donottrack
 @@||customgames.ru/forum/js/*/ads.min.js
 @@||custommapposter.com^$generichide
-@@||cutcaptcha.com^
 @@||cutcaptcha.com^|
 @@||cuttlinks.com^$generichide
 @@||cv-h.phncdn.com^
@@ -10206,9 +10204,7 @@
 @@||gooogle.how^$generichide
 @@||gorillanation.com/js/triggertag.js$domain=playstationlifestyle.net
 @@||gosuslugi.ru^$stealth=dpi
-@@||goto.target.com^
 @@||goto.target.com^|
-@@||goto.walmart.com^
 @@||goto.walmart.com^|
 @@||gotvach.bg^$generichide
 @@||gousfbulls.com/common/templates/dfp/dfp-component-template.html
@@ -11409,7 +11405,6 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
-@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -20182,6 +20177,7 @@ ainuody.com##.full-width
 ainuody.com##a[href="http://www.zhuzhuquan.com.cn"]
 ainuody.com##a[title*="红包"]
 ainzscans01.com##body > div[id][style^="width:100%;height:100%;background:rgba"]
+ainzscans01.com##div[data-ads-placement-slot]
 ainzscans01.com,ainzscans.net##body > div[style^="width:100%;height:100%;background:"]
 aioinissaydowa.eu###cookies
 aipai.com###videosRightDown
@@ -36291,6 +36287,7 @@ haaretz.com##div + div:has(> div[data-adunit])
 haaretz.com##div[data-test="bottomStrip"]
 haaretz.com##div[data-test="topStrip"]
 haberettim.com,thosa.info,blogenginee.com,unityassets4free.com##body > #scroll-top + div[id][class*=" "]
+habermarmara.com.tr,murekkephaber.com,akdenizbulten.com,mansetizmir.com,denizliekspres.com.tr,izmirhabermerkezi.com,saatbasihaber.com,mahalligundem.com##img[alt="Reklam"]
 habermarmara.com.tr,murekkephaber.com,akdenizbulten.com,thecruiselife.com.tr,mansetizmir.com,denizliekspres.com.tr,izmirhabermerkezi.com,saatbasihaber.com,mahalligundem.com##img[alt="Reklam"]
 habitat76.fr##.header-cnil
 hackdoor.io##.snackbar
@@ -44302,6 +44299,7 @@ mako.co.il##div[id^="top-strip-"]
 makorrishon.co.il##.mkr_adunit
 makyaje.com###adintop_interstitial
 makyaje.com###nodata
+malavida.com###installer-popup
 malavida.com,mixfreegames.com,gamescrush.com,ubestgames.com###ad-sticky
 malaymail.com##.malaymail-section-title[data-widget-id="5115"]
 malaysiakini.com###gpt-layout-top-container
