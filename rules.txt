@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-21 04:21:00（北京时间）
+! Version: 2026-03-21 05:21:14（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67424
+! Total count: 67426
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -57493,6 +57493,7 @@ standardmedia.co.ke##.my-2
 standardy.pl##div[class^="banner-"]:not(.banner-swiper-cls)
 stanley.ru##.test-mode__wrap
 staples.com##.SearchRootUX2__bannerAndSkuContainer
+staples.com##.flexible-banner-configurator__flexibleBannerWrapper:has(a[aria-label*="Sponsored by"])
 staples.com##div[class^="sku-configurator__banner"]:has([aria-label="Sponsored Products"])
 star-history.com###app > div.relative > div.relative.justify-end + div.fixed.right-0
 star-history.com##.fixed.right-0
@@ -64840,6 +64841,7 @@ woolworth.de###CybotCookiebotDialog
 woolworth.pl###CybotCookiebotDialog
 woolworths.com.au##.product-grid-v2--tile:has(.sponsored-text)
 woolworths.com.au##.search-banner-top-mbox
+woolworths.com.au##div[class^="aem-video-ad-unit_component_video-container_"]
 woolworths.com.au##shared-mbox:has(> div[data-mbox^="acs.w-s.web."])
 woopread.com##.dcads
 woorkup.com##.kinsta
