@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-23 12:17:17（北京时间）
+! Version: 2026-03-23 14:04:35（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67674
+! Total count: 67681
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1323,6 +1323,7 @@
 /links1.strava.com/*$image
 /lmaz-ads-bannesr/*$script
 /log_js_error$ping
+/lti-analytics-$script
 /mads.php$subdocument
 /mai-publisher-ads.js$script
 /mail-stat.airdroid.com/*$image
@@ -7602,6 +7603,7 @@
 @@||cgtips.org^$generichide
 @@||chaintv.xyz/homestatic/js/adjs.js
 @@||challenges.cloudflare.com/turnstile/$script
+@@||challenges.cloudflare.com^$generichide
 @@||challenges.cloudflare.com^$stealth
 @@||chamsko.pl/js/advertisement.js
 @@||chan.sankakucomplex.com^$generichide
@@ -7720,6 +7722,7 @@
 @@||classic.comunio.de/clubImg.phtml/$image,~third-party
 @@||classliving.lpages.co^
 @@||classliving.lpages.co^|
+@@||claude.ai^$generichide
 @@||clcouncil.org/wp-content/plugins/counter-block/assets/js/counter.js?$script,~third-party
 @@||cle0desktop.blogspot.com^$generichide
 @@||clerk.io/clerk.js$script,domain=trony.it
@@ -15345,6 +15348,7 @@
 @@||proton.me/static/*/google-ads-blog.webp
 @@||proton.me^$generichide
 @@||protopage.com^$generichide
+@@||proxmox.local^$generichide
 @@||proxy-tf-all-ws.bilivideo.com^
 @@||proxy.ads.canalplus-bo.net/web/undefined/v1/adserver/info/?asset=*&channel=$xmlhttprequest,domain=www.mycanal.fr
 @@||prscripts.com/pub.js$domain=pornve.com
@@ -22090,7 +22094,9 @@ athlinks.com###footer-container ~ div
 athlonsports.com##.is-fallback-player
 athlonsports.com##.m-fixedbottom-ad--container
 athlonsports.com##section[id^="phxoutbrain-"]
+athlonsports.com,autoblog.com,bikemag.com,dengarden.com,mensfitness.com,mensjournal.com,parade.com,paradehomeandgarden.com,paradepets.com,pethelpful.com,powder.com,surfer.com,thespun.com,thestreet.com,travelhost.com##.styles_headerAdSlot__f4Z0n
 athlonsports.com,bringmethenews.com,si.com##.is-exco-player
+athlonsports.com,dengarden.com,mensfitness.com,mensjournal.com,parade.com,paradehomeandgarden.com,paradepets.com,pethelpful.com,surfer.com,thespun.com,travelhost.com,www.autoblog.com,www.thestreet.com##.exco-player-wrapper
 athomedaily.com,atworkdaily.com##.ad-backing
 atlant.by##.confirm-panel
 atlantablackstar.com,finurah.com,theshadowleague.com##.raptive-ddm-header
@@ -28469,6 +28475,8 @@ cyberscoop.com##iframe[src^="/advertising/?page-id="]
 cyberscore.live##.modal-form-wrapper
 cyberscore.live##.partner-rb
 cyberscore.live##.partner-rb-full-page
+cyberscore.live##.relative.flex.h-\[130px\].w-full.items-center.justify-center.overflow-hidden.rounded-\[4px\].bg-gradient-to-r.from-\[\#142428\].to-\[\#2D150E\].p-\[15px_260px\].nb\:p-\[15px_170px\].tb\:p-\[15px_80px\].mb\:h-auto.mb\:min-h-\[138px\].mb\:from-\[\#2D150E\].mb\:to-\[\#381A11\].mb\:p-\[15px_135px_15px_15px\]
+cyberscore.live##.relative.grid.h-\[168px\].grid-cols-\[1fr_300px_1fr\].gap-\[5px\].overflow-hidden.rounded-\[4px\].border.border-solid.border-color3.nb\:h-\[150px\].nb\:grid-cols-\[1fr_270px_1fr\].tb\:h-\[136px\].tb\:grid-cols-\[1fr_220px_1fr\].mb\:flex.mb\:h-auto.mb\:flex-col.mb\:items-center.mb\:justify-center.mb\:gap-\[5px\].mb\:p-\[10px_15px_20px_15px\]
 cyberscore.live##.wrapper-partner-rb
 cybersecurityconnect.com.au##.topmrec__default-banner
 cybersecuritynews.com##.has-text-align-center[style^="background:linear-gradient("][style*=",rgb(238,238,238)"]
@@ -39427,6 +39435,7 @@ informer.rs##.related-news
 informer.rs##.sticky-lead-bnr
 informiert.at##.CookieLayout
 inforum.com###origami
+inforum.com##.GoogleDfpAd-advertisement
 inforum.com##.origami
 infosecurity-magazine.com##.dfp
 infosecurity24.pl##.page-builder > section.block:has(> .ad-banner)
@@ -45328,8 +45337,6 @@ mensfitness.com##.rr-zergnet-wrapper
 menshaircuts.com##div[class*="cut-off-ad"]
 menshealth.com##[id^="dfp-ad-300x250_advertisement"]
 mensjournal.com###main > .module-partners
-mensjournal.com,parade.com,pethelpful.com##.styles_headerAdSlot__f4Z0n
-mensjournal.com,pethelpful.com##.exco-player-wrapper
 mensxp.com###rhsLatestCont > div[class]:not(.ListingBlock)
 mensxp.com###right_panel > style[type="text/css"] + div[class]:not([id]):not([style])
 mensxp.com###section_WhatsHot > div:not([id])
