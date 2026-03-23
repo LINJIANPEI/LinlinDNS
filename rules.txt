@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-23 15:55:45（北京时间）
+! Version: 2026-03-23 16:43:28（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67681
+! Total count: 67687
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7741,6 +7741,7 @@
 @@||click.alternate.de^
 @@||click.appcast.io^
 @@||click.appcast.io^|
+@@||click.avs.io^
 @@||click.avs.io^|
 @@||click.chp.kohls.com^
 @@||click.cptrack.de^
@@ -7782,11 +7783,14 @@
 @@||click.simba.taobao.com^
 @@||click.simba.taobao.com^|
 @@||click.snapshat.com^
+@@||click.trafficguard.ai^
 @@||click.trafficguard.ai^|
 @@||click.uol.com.br^$domain=uol.com.br
+@@||click.virt.exacttarget.com^
 @@||click.virt.exacttarget.com^|
 @@||click.virt.s*.exacttarget.com^|
 @@||click.zoom.us^
+@@||clickattr.wayup.com^
 @@||clickattr.wayup.com^|
 @@||clickcease.com^
 @@||clickdimensions.com^
@@ -9966,7 +9970,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -32582,6 +32585,7 @@ fcbarca.com##.bets-container
 fcbarca.com##.bukmacher-ranking-box
 fcbarca.com##.latest-news__big > div[style*="min-height:320px;"]
 fcbarca.com##.top-bukmacher-box
+fcbayern.com##div[data-upscore-zone^="content(SPONSORBANNER)"]
 fcinter.pl##.kompendium > a[href="https://www.iparts.pl"]
 fcinter.pl##a[href^="https://online.efortuna.pl/page?key="] > img
 fcinternews.it###masthead
@@ -44480,6 +44484,7 @@ majhinaukri.in##.code-block-labels
 majhinaukri.in##center > div[style="margin: 25px 0; clear: both;"]
 majkl3d.cz##.CA
 majkl3d.sk##.CA
+majorgeeks.com###op1-ad
 majorgeeks.com##.alford > tbody > tr
 majorgeeks.com##.content > .author
 majorgeeks.com##.content > b > font[color="#00000f"]
@@ -55948,6 +55953,7 @@ sii.org.pl###sidebar .sidemain > .mustsee:has(> .adshold)
 siivous.fi,zipextractor.app###cm
 sikktech.com##.entry-content .code-block[style]
 siku11.com##.alert-danger
+silesia.info.pl,mojbytom.pl,mojchorzow.pl,mojegliwice.pl,mojekatowice.pl,laziska.com.pl,mojmikolow.pl,m-ce.pl,orzesze.com.pl,piekaryslaskie.com.pl,pyskowice.com.pl,rudaslaska.com.pl,rybnicki.com,siemianowice.net.pl,sosnowiecki.pl,swiony.pl,wodzislaw.com.pl,zabrze.com.pl,zory.com.pl##div[class*="-revive-ads-"]
 silesia24.pl##.horizontal__ad
 silesia24.pl##.vertical__ad
 silesion.pl###block-15
