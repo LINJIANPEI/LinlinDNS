@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-24 20:44:22（北京时间）
+! Version: 2026-03-24 22:13:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67720
+! Total count: 67772
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3290,7 +3290,6 @@
 4sysops.com##.article-content > div[id^="div-test-"][style="margin-bottom:21px; -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; "]
 4sysops.com##.article-content > div[style="text-align:center;"]
 4sysops.com##div[id] > div[style^="min-height: 50px; width: 100%;"]
-4sysops.com,activistpost.com,aftvnews.com,arcadepunks.com,autotalk.co.nz,corrosionhour.com,corvetteblogger.com,dcrainmaker.com,discover.is,elhayat-life.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,inews.co.uk,macsources.com,manhuatop.org,mediachomp.com,metalsucks.net,mmoculture.com,monstersandcritics.com,motoringfile.com,nasaspaceflight.com,newsbtc.com,openloading.com,patriotfetch.com,planetofreviews.com,precinctreporter.com,prepperwebsite.com,rugbylad.ie,sashares.co.za,scienceandliteracy.org,seganerds.com,sixteen-nine.net,snipercentral.com,spokesman-recorder.com,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,torrentmac.net,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com##.widget_custom_html
 4sysops.com,activistpost.com,aftvnews.com,arcadepunks.com,autotalk.co.nz,corrosionhour.com,corvetteblogger.com,dcrainmaker.com,discover.is,elhayat-life.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,inews.co.uk,macsources.com,manhuatop.org,mediachomp.com,metalsucks.net,mmoculture.com,monstersandcritics.com,motoringfile.com,nasaspaceflight.com,newsbtc.com,openloading.com,patriotfetch.com,planetofreviews.com,precinctreporter.com,prepperwebsite.com,rugbylad.ie,sashares.co.za,scienceandliteracy.org,seganerds.com,sixteen-nine.net,snipercentral.com,spokesman-recorder.com,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,torrentmac.net,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com,windowslatest.com##.widget_custom_html
 4sysops.com,activistpost.com,aftvnews.com,arcadepunks.com,corrosionhour.com,corvetteblogger.com,dcrainmaker.com,discover.is,elhayat-life.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,macsources.com,manhuatop.org,mediachomp.com,metalsucks.net,mmoculture.com,monstersandcritics.com,motoringfile.com,nasaspaceflight.com,newsbtc.com,openloading.com,patriotfetch.com,planetofreviews.com,precinctreporter.com,prepperwebsite.com,rugbylad.ie,sashares.co.za,scienceabc.com,scienceandliteracy.org,sixteen-nine.net,snipercentral.com,spokesman-recorder.com,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,torrentmac.net,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com##.widget_custom_html
 4teachers.org###banner-wrapper
@@ -5035,6 +5034,8 @@
 @@||account.mcid.mynavi.jp^$stealth=referrer
 @@||account.microsoft.com/?refd=$stealth=3p-cookie
 @@||account.microsoft.com/auth/$stealth=3p-cookie
+@@||account.oneplus.com^
+@@||account.oneplus.net^
 @@||account.oppo.com^
 @@||account.realme.com^
 @@||account.vivo.com^
@@ -5046,6 +5047,7 @@
 @@||accountapi.dianping.com^
 @@||accounts.ea.com^$stealth
 @@||accounts.ea.com^$stealth=3p-cookie
+@@||accounts.google.com^
 @@||accounts.google.com^$generichide
 @@||accounts.google.com^$popup
 @@||accounts.home.id/authui/client/assets/vendors/new-relic.min.js$~third-party
@@ -5825,6 +5827,8 @@
 @@||android-apps.pp.cn^
 @@||android-artworks.25pp.com^
 @@||android.bugly.qq.com^
+@@||android.clients.google.com^
+@@||android.googleapis.com^
 @@||android4ar.com/wp-content/themes/style/assets/js/advertisement.js
 @@||androidaba.com^$generichide
 @@||androidadult.com^$generichide
@@ -6247,6 +6251,8 @@
 @@||app.medyanetads.com/ad.js$domain=mackolik.com
 @@||app.netatmo.net/api/$stealth=3p-auth
 @@||app.netatmo.net/syncapi/$stealth=3p-auth
+@@||app.oneplus.com^
+@@||app.oneplus.net^
 @@||app.plex.tv^$extension
 @@||app.powerbi.com^
 @@||app.roll20.net^$stealth=webrtc
@@ -6558,6 +6564,8 @@
 @@||backerkit.com/backer/survey$stealth=referrer
 @@||backpacker.com^$stealth=dpi
 @@||backup.huawei.com^
+@@||backup.oneplus.com^
+@@||backup.oneplus.net^
 @@||bad.news^
 @@||bag.itunes.apple.com^
 @@||bagehd.com/iplookup.
@@ -7845,6 +7853,7 @@
 @@||cloud.notification-naviextras.com^
 @@||cloud.notification-naviextras.com^|
 @@||cloud.oneplus.com^
+@@||cloud.oneplus.net^
 @@||cloud.oppo.com^
 @@||cloud.realme.com^
 @@||cloud.typography.com/*/css/fonts.css$stealth=referrer
@@ -8011,6 +8020,7 @@
 @@||community.brave.app/t/$xmlhttprequest
 @@||community.fastly.steamstatic.com^
 @@||community.image.video.qpic.cn^
+@@||community.oneplus.com^
 @@||components.unrealengine.com^
 @@||compriso.speedtestcustom.com/api/js/servers$stealth=ip
 @@||compriso.speedtestcustom.com^$third-party,stealth=ip
@@ -8753,6 +8763,7 @@
 @@||doubleclick.net/ssai/*/streams$xmlhttprequest,domain=snippet.univtec.com
 @@||doubleclick.net/|$xmlhttprequest,domain=comidoc.net
 @@||doubleclick.net/|$xmlhttprequest,domain=tvnz.co.nz
+@@||doubleclick.net^
 @@||doubleclick.net^$xmlhttprequest,domain=yyets.click
 @@||doubleclickbygoogle.com/favicon.ico
 @@||douyincdn.com^
@@ -8783,6 +8794,8 @@
 @@||download.jetbrains.com^
 @@||download.megaup.net/*.js$~third-party
 @@||download.mokeedev.com^$genericblock,generichide
+@@||download.oneplus.com^
+@@||download.oneplus.net^
 @@||download.oppo.com^
 @@||download.pinduoduo.com^
 @@||download.pixelexperience.org^$generichide
@@ -9431,6 +9444,8 @@
 @@||finn.no/*/ad.html
 @@||fino.svc.litv.tv^
 @@||firebase.google.com/docs/analytics/$~third-party
+@@||firebase.googleapis.com^
+@@||firebaseio.com^
 @@||firebaseremoteconfig.googleapis.com^$stealth=3p-cache,domain=app.smclinic.ru
 @@||firefaucet.win^$generichide
 @@||firefox.com.cn/media/img/mozcn/spread/468-60-
@@ -9507,10 +9522,13 @@
 @@||forumcoin.win^$generichide
 @@||forums.dovetailgames.com/threads/advert-
 @@||forums.macg.co/js/audentio/funbox/advertisement.js
+@@||forums.oneplus.com^
 @@||forums.opera.com/api/topic/$~third-party,xmlhttprequest
 @@||forums.rusmedserv.com/ad_show.js
 @@||forums.wyzecam.com/t/affiliate-program/
 @@||forzearmate.eu^$generichide
+@@||fota.oneplus.com^
+@@||fota.oneplus.net^
 @@||fotbolltransfers.com^$generichide
 @@||fotka.pl/js/advertisement.js
 @@||fotkaew.ru^$generichide
@@ -9756,6 +9774,8 @@
 @@||games.gamesplaza.com^$generichide
 @@||games.iwin.com^$generichide
 @@||games.mobileapi.hupu.com^
+@@||games.oneplus.com^
+@@||games.oneplus.net^
 @@||games.pch.com^$generichide
 @@||games.tiscali.cz^$subdocument,domain=games.tiscali.cz
 @@||gamesglue.com/game_core/check^
@@ -10059,6 +10079,7 @@
 @@||google-analytics.com/plugins/ua/linkid.js$domain=ecmweb.com
 @@||google-analytics.com/plugins/ua/linkid.js$domain=support.amd.com
 @@||google-analytics.com/urchin.js$domain=record.xl.pt
+@@||google-analytics.com^
 @@||google.*/_/chrome/newtab$document
 @@||google.*/aclk$~third-party
 @@||google.*/images/icons/product/adsense-
@@ -10238,6 +10259,7 @@
 @@||googletagmanager.com/gtm.js$xmlhttprequest,domain=app.neilpatel.com
 @@||googletagmanager.com/gtm.js^$domain=comedycentral.tv
 @@||googletagmanager.com/ns.html?id=GTM-$domain=porntoday.ws|netuplayer.top|netu.ac|hqq.to|hqq.ac|speedporn.net|meucdn.vip|yandexcdn.com|waaw1.tv|waaw.tv|hqq.tv|younetu.*
+@@||googletagmanager.com^
 @@||googletagmanager.com^$domain=mobilmania.cz
 @@||googletagservices.com/dcm/dcmads.js$domain=italiamac.it
 @@||googletagservices.com/tag/js/gpt.js
@@ -10317,7 +10339,6 @@
 @@||graphql.contentful.com^$stealth=3p-auth
 @@||graphql.datocms.com^$stealth=3p-auth,domain=sensorkit.arduino.cc
 @@||gratis.com/Banners/
-@@||gratismas.org^$generichide
 @@||grattable.com/blogads.css
 @@||greekmythology.com/*/eros.html
 @@||greensboro.com^$generichide
@@ -10551,6 +10572,7 @@
 @@||hellporno.net/_a_ht/s/s/js/ssu.v2.js
 @@||hellporno.net/_a_ht/s/s/su.php?
 @@||help.ea.com^$stealth
+@@||help.oneplus.com^
 @@||help.twitter.com^
 @@||help.x.com^
 @@||hengame.club^$generichide
@@ -12683,6 +12705,8 @@
 @@||market.heytap.com^
 @@||market.m.taobao.com^
 @@||market.mi-img.com^
+@@||market.oneplus.com^
+@@||market.oneplus.net^
 @@||market.waimai.meituan.com^
 @@||market.xiaomi.com^
 @@||marketing.dropbox.com/?referrer=$stealth=searchqueries
@@ -13507,6 +13531,8 @@
 @@||notepad.pw^$generichide
 @@||notes.icloud.com^
 @@||notification.vivo.com^
+@@||notify.oneplus.com^
+@@||notify.oneplus.net^
 @@||notify.youku.com^
 @@||notion.so^$generichide
 @@||notion.so^$generichide,badfilter
@@ -13601,6 +13627,7 @@
 @@||oauth-login-drcn.platform.dbankcloud.com^
 @@||oauth.secure.pixiv.net^
 @@||oauth.vk.com/authorize?
+@@||oauth2.googleapis.com^
 @@||oba.uimserv.net/opt$domain=youronlinechoices.com
 @@||obagg.com/js/sailthru.js$domain=obagg.com
 @@||obengplus.com^$generichide
@@ -13721,6 +13748,15 @@
 @@||onenote.com^*/aria-web-telemetry
 @@||oneotv.com^$generichide
 @@||onepiece-streaming.co^$generichide
+@@||oneplus.azureedge.net^
+@@||oneplus.blob.core.windows.net^
+@@||oneplus.cdn.cloudflare.net^
+@@||oneplus.force.com^
+@@||oneplus.helpshift.com^
+@@||oneplus.secure.force.com^
+@@||onepluscommunity.net^
+@@||oneplusid.oneplus.com^
+@@||oneplusid.oneplus.net^
 @@||onesignal.com/api/v1/sync/$domain=oshibuta.com
 @@||onet.pl^$generichide
 @@||onet.pl^$generichide,badfilter
@@ -13815,6 +13851,7 @@
 @@||ot.gr^$generichide
 @@||ota.coloros.com^
 @@||ota.oneplus.com^
+@@||ota.oneplus.net^
 @@||ota.oppo.com^
 @@||ota.realme.com^
 @@||ota.tv.xiaomi.com^
@@ -13848,6 +13885,12 @@
 @@||ox-d.bannertrack.net/auid=
 @@||oxanime.com^$generichide
 @@||oxygenmag.com^$stealth=dpi
+@@||oxygenos.oneplus.com^
+@@||oxygenos.oneplus.net^
+@@||oxygenos.ota.oneplus.com^
+@@||oxygenos.ota.oneplus.net^
+@@||oxygenos.update.oneplus.com^
+@@||oxygenos.update.oneplus.net^
 @@||oyunceviri.net^$generichide
 @@||oz3gamer.blog.fc2.com^$generichide
 @@||ozabc.com^$generichide
@@ -14230,6 +14273,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hqq.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=htmlsave.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org|hentaicovid.org|gofile.download|cosplay-xxx.com|s-porn.com|shentai-anime.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org|hentaicovid.org|gofile.download|cosplay-xxx.com|s-porn.com|shentai-anime.com|chinese-pics.vip|hentai-manga.org|cosplaytele.vip
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=iembra2or.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ifate.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=igniel.com
@@ -14367,7 +14411,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pricez.co.il
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=production-api.androidacy.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=prostomob.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=puressh.net|iptvbin.com|htnovo.net|frendz4m.org|bestnhl.com|safbits.com|codenova-center.web.app|rivanimation.com|elbierzodigital.com|uploadrar.com|vknsorgula.net|safelink.asia
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=puressh.net|iptvbin.com|htnovo.net|frendz4m.org|safbits.com|codenova-center.web.app|rivanimation.com|elbierzodigital.com|uploadrar.com|vknsorgula.net|safelink.asia
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pvpoke-re.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=q84sale.com
@@ -14507,6 +14550,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=veev.to|doods.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=videopoker.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=vidlii.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=vidsonic.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=viduyy.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=viki.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=visalist.io
@@ -15476,6 +15520,8 @@
 @@||push.chsi.com.cn^
 @@||push.heytap.com^
 @@||push.m.youku.com^
+@@||push.oneplus.com^
+@@||push.oneplus.net^
 @@||push.oppo.com^
 @@||push.oray.com^
 @@||push.realme.com^
@@ -16440,6 +16486,7 @@
 @@||service.apport.net/apport-spa-common/src/tracking/tracking.js$~third-party
 @@||service.hotstar.com/vs/getad.php?*adspot=
 @@||service.mkey.163.com^
+@@||service.oneplus.com^
 @@||service.videoplaza.tv/proxy/pulse-sdk-html5/*/latest.min.js$domain=rtl.be
 @@||service.vivo.com^
 @@||services.bilsyndication.com/adv1/?$domain=shinsori.com
@@ -17048,6 +17095,7 @@
 @@||static.cloudflareinsights.com/beacon.min.js$xmlhttprequest,domain=werfgt.fun
 @@||static.cloudflareinsights.com/beacon.min.js^$domain=sportshub.to
 @@||static.cloudflareinsights.com^$domain=app.axenthost.com
+@@||static.cloudflareinsights.com^$important
 @@||static.criteo.net/images/pixel.gif$domain=diariodenavarra.es
 @@||static.criteo.net/js/ld/publishertag.js$domain=shinden.pl
 @@||static.criteo.net/js/ld/publishertag.prebid.js$domain=streetdir.com|roaddir.com
@@ -17243,6 +17291,8 @@
 @@||store.is.autonavi.com^
 @@||store.meizu.com^
 @@||store.mktpl.minecraft-services.net/api/$stealth
+@@||store.oneplus.com^
+@@||store.oneplus.net^
 @@||store.oppo.com^
 @@||store.oppomobile.com^
 @@||store.playstation.com/html/webIframeRedirect.html?requestId$stealth=referrer
@@ -17349,6 +17399,7 @@
 @@||support.google.com^$domain=support.google.com
 @@||support.huaweicloud.com^
 @@||support.logi.com/*/articles/$stealth=useragent
+@@||support.oneplus.com^
 @@||support.vivo.com^
 @@||support.weixin.qq.com^
 @@||supportcanon.com^$generichide
@@ -17388,6 +17439,8 @@
 @@||sync.everhelper.me^$stealth
 @@||sync.heytap.com^
 @@||sync.maxthon.com$document
+@@||sync.oneplus.com^
+@@||sync.oneplus.net^
 @@||sync.opera.com/api/sync/$stealth=useragent
 @@||sync.oppo.com^
 @@||synchrobox.adswizz.com/register2.php$script,domain=player.amperwave.net|tunein.com
@@ -17679,6 +17732,8 @@
 @@||themarker.com/logger/p.gif?$image,xmlhttprequest
 @@||theme.heytap.com^
 @@||theme.heytapimage.com^
+@@||theme.oneplus.com^
+@@||theme.oneplus.net^
 @@||theme.oppo.com^
 @@||theme.realme.com^
 @@||themelock.com/advertisement.js
@@ -18250,6 +18305,8 @@
 @@||update.360safe.com^
 @@||update.coloros.com^
 @@||update.hicloud.com^
+@@||update.oneplus.com^
+@@||update.oneplus.net^
 @@||update.oppo.com^
 @@||update.realme.com^
 @@||update.tv.xiaomi.com^
@@ -18721,6 +18778,8 @@
 @@||wallpaper-house.com^$generichide
 @@||wallpaper.cdn.pandora.xiaomi.com^
 @@||wallpaper.heytap.com^
+@@||wallpaper.oneplus.com^
+@@||wallpaper.oneplus.net^
 @@||wallpaper.realme.com^
 @@||wallpaperenginefree.com^$generichide
 @@||wallpaperm.cmcm.com^
@@ -20871,7 +20930,6 @@ alternativeto.net##section > div[style]:has(> div[data-testid="adsense-wrapper"]
 alternativeto.net##section#alternative-list > ol > li:has(> .bannerLink)
 alternativeto.net##section#alternative-list > ol > li:has(a.no-link-color[rel="sponsored nofollow noopener"])
 alternativeto.net##section#alternative-list > ol > li:has(div[data-testid="adsense-wrapper"])
-alternativetoapp.com##div[style$="text-align:center;"] > p[style="font-size:12px"]
 alternet.org###leaderboard-placeholder
 alternet.org##.sidebar_sticky_container
 alternet.org##[id^="story_page_incontent_"]
@@ -21832,7 +21890,6 @@ arenda.az,globalinfo.az,sfera.az,metbuat.az##.ainsyndication
 aresnov.org###floatcenter
 argeles-sur-mer.com##.cookies-global
 argent.xyz###gatsby-focus-wrapper > div:not([id]):last-of-type
-argos.co.uk##.ds-c-grid-item:has(a[href*="?clickPR="])
 argos.co.uk##.ds-c-grid-item:has(div[class*="ProductCardstyles__SponsoredBadge-"])
 argos.co.uk##[class^="styles__LazyHydrateCard"]:has([class*="ProductCardstyles__FlyoutBadge"])
 argos.co.uk##[class^="styles__LazyHydrateCard-sc"]:has([class*="SponsoredBadge"])
@@ -23676,7 +23733,6 @@ bezprawnik.pl##article .pointer-events-none + .container > .relative:empty
 bezprawnik.pl##article div[class*="relative mx-auto flex items-center"]:has(> .relative > div[id^="Bepzrawnik_"])
 bezprawnik.pl##article div[class*="relative mx-auto flex items-center"]:has(> .relative:only-child:empty)
 bezprawnik.pl##div[data-no-partner-ads] .font-moderat:has(> .flex > .items-center > .items-center > .items-center > a[href*="://ad.doubleclick.net/"])
-bezprawnik.pl##div[data-no-partner-ads] > div.relative
 bezprzeplacania.pl##div[style="text-align: center; margin: 0; padding: 0;"] > a[target="_blank"] > img
 bezprzeplacania.pl##img[width="160"][height="600"]
 bezux.com##.cookies
@@ -34089,8 +34145,6 @@ friendsfit.cz##.cookies
 friendsoftheearth.uk###foe_cookienotice_wrapper
 frigelar.com.br###modalPrivacyPolicy
 fritchy.com,imagebam.com##div[id^="ad-header"]
-fritzbox-forum.com##div[style*="max-height: 90px; min-width: 728px;"]
-fritzbox-forum.com##main > div > div[style*="min-height:"][class]:has(> .banniere)
 friv-2017.com###content-game > div[style="margin-top:130px;"] > p
 friv-2017.com##div[class="home_game_image_featured"][id="header-game1-left"]
 friv-games.com##.privacy-popup
@@ -36144,7 +36198,6 @@ graphicux.com##.item-list.inpost_add_recent
 graphs.ro###cookietop
 graphy.com##.Toastify ~ div
 gratisfaction.co.uk###grey-bar
-gratismas.org##div[id*="ScriptRoot"]
 gratka.pl###empty-placeholder
 gratka.pl##.banner:empty
 gratka.pl##.desktop-main-page-placeholder
@@ -46836,6 +46889,7 @@ mthai.com##div[id^="dfp-"]
 mtlblog.com###article-text > div.awrapper
 mtom-mag.com###alert_trk
 mtpro.xyz##.entry-content > div > .wp-block-button
+mtpro.xyz##a[href="#"][onclick*="this.href="][target="_blank"]
 mtpro.xyz##a[href^="https://px6.me/"]
 mtpro.xyz##a[href^="tg://resolve?domain=durevpnbot"]
 mtrend.cn###morecontent > .morecontent_next[style]
@@ -61090,8 +61144,6 @@ topclassactions.com##.CampaignType--floating
 topcpu.net##[id^="topcpu_net_in_page_repeat_responsive"][style="min-height: 300px;"]
 topcpu.net##div[id^="topcpu_net_in_page_repeat"]
 topcraft.ru##.ad-info
-topeuropix.site###MyAdsId300x250
-topeuropix.site,123europix.pro###closex
 topfarmacia.it##.gdprModal
 topfiveforex.com###wcfloatDiv
 topfiveforex.com##[href^="https://affiliate.iqoption.com/"]
