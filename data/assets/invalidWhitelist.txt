@@ -116,12 +116,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14312
+! Total count: 14315
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-03-23 21:19:46（北京时间）
+! Version: 2026-03-24 10:36:16（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1758,7 +1758,7 @@
 @@/pop.js|$domain=pornve.com
 @@/prebid-js-$domain=mytvsuper.com|tvb.com|tvbs.com.tw
 @@/prebid.$script,domain=mingpao.com
-@@/prebid.min.js$~third-party,domain=advertape.net|tapepops.com|watchadsontape.com|advertisertape.com|tapeadvertisement.com|adblockplustape.xyz|tapelovesads.org|gettapeads.com|tapeadsenjoyer.com|noblocktape.com|antiadtape.com|tapewithadblock.org|streamadblocker.*|strtape.cloud|adblockeronstape.me|streamadblockplus.com|shavetape.*|adblockstrtape.link|adblockstrtech.link|adblockstreamtape.*|stape.fun|strcloud.link|streamtape.*|streamtape.com
+@@/prebid.min.js$~third-party,domain=tpead.net|advertape.net|tapepops.com|watchadsontape.com|advertisertape.com|tapeadvertisement.com|adblockplustape.xyz|tapelovesads.org|gettapeads.com|tapeadsenjoyer.com|noblocktape.com|antiadtape.com|tapewithadblock.org|streamadblocker.*|strtape.cloud|adblockeronstape.me|streamadblockplus.com|shavetape.*|adblockstrtape.link|adblockstrtech.link|adblockstreamtape.*|stape.fun|strcloud.link|streamtape.*|streamtape.com
 @@/premium*/*.php$subdocument,stealth=referrer,domain=stronstream.shop|sportzlive.shop
 @@/premium*/tracks-*.html$xmlhttprequest,stealth=referrer
 @@/progress.php?callback=$script,domain=ytmp3.cc
@@ -1933,7 +1933,7 @@
 @@url.cn
 @@verify.sec.xiaomi.com
 @@weather.gov/xml/$document
-@@ws://localhost^$stealth,domain=play.sooplive.co.kr
+@@ws://localhost^$stealth,domain=play.sooplive.com
 @@yandex.*/user-id?$stealth=referrer|searchqueries
 @@|*-*-*-*.brokendnssec.net^$important
 @@|*-*.totallyacdn.com^$important
@@ -7560,6 +7560,7 @@
 @@||adsales.snidigital.com/*/ads-config.min.js$script
 @@||adsatt.espn.starwave.com^$domain=livenewschat.eu,~script
 @@||adsco.re/p$domain=shorterall.com
+@@||adsco.re/p$script,domain=fc-lc.xyz
 @@||adsco.re^$domain=shinden.pl
 @@||adsdk.microsoft.com/ast/ast.js$script,domain=prisjakt.no
 @@||adsense.woso.cn^$~third-party
@@ -8901,6 +8902,7 @@
 @@||c-web.cedyna.co.jp/customer/img/spacer.gif?$~third-party
 @@||c.2ace.ru*/VOD/$stealth=referrer
 @@||c.ad6media.fr/l.js$domain=scan-manga.com
+@@||c.adsco.re$script,domain=fc-lc.xyz
 @@||c.adsco.re/|$domain=adshnk.com
 @@||c.adsco.re/|$script,domain=hotfrog.*
 @@||c.adsco.re^$domain=shorterall.com
@@ -17666,6 +17668,7 @@
 @@||seadragons.io/ads.js
 @@||sealserver.trustwave.com/seal.js$domain=zoom.us
 @@||seamanmemories.com^$generichide
+@@||search-myfonts-api.monotype.com^$stealth=referrer
 @@||search.brave.com/search$xmlhttprequest
 @@||search.powergap.de/indexes/$stealth=3p-auth
 @@||search.spotxchange.com/vmap/*&content_page_url=www.bsfuji.tv$xmlhttprequest,domain=imasdk.googleapis.com
