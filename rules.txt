@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-26 12:24:19（北京时间）
+! Version: 2026-03-26 14:06:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67786
+! Total count: 67789
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3952,6 +3952,8 @@
 9y01.xyz##.in-friends
 ://*.beeg.com/*.php?_=$script
 ://*.streamplay.to/*&zoneid=$popup
+://0.*.*.com/papi/$script,xmlhttprequest
+://0.*.*.com/player/$script,xmlhttprequest
 ://a869.$~image
 ://adn.*/zone/$popup
 ://adn.*/zone/$subdocument
@@ -44745,6 +44747,7 @@ mangamiso.net##.container > div.v-sheet--outlined
 mangaowl.com,037hdd.com##div[id^="ads_"]
 mangapark.net##.ad-page-3x
 mangapark.net##div[claass="ad-970x250"]
+mangapill.com##.mx-auto.m-3.z-0
 mangapill.com##div.items-center:has(> div.mx-auto > div.border > div.relative > div[id^="bg-ssp-"])
 mangaplus.shueisha.tv##[style$="height: 260px; position: relative; width: 680px;"]
 mangaplus.shueisha.tv,shueisharaw.tv###ads_mobile
