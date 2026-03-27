@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-28 06:21:16（北京时间）
+! Version: 2026-03-28 07:22:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67869
+! Total count: 67873
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -24435,6 +24435,7 @@ blog.csdn.net##div.passport-login-container:last-child
 blog.csdn.net##div[style="min-height:250px;"]
 blog.csdn.net##dl[id^="yd_a_d_feed_"]
 blog.hubspot.com###hs_cos_wrapper_blog_post_sticky_cta
+blog.hubspot.com##.blog-cta-with-form
 blog.icook.tw##span[class^="style_adUnit"]
 blog.ipleaders.in##.shwPops
 blog.ipleaders.in##figure[style="width: 300px"]
@@ -65002,11 +65003,14 @@ win7w.com###xldz
 win7xzb.com##.four_box
 win7xzb.com##.ware_gs
 winaero.com###inbll
+winaero.com###inbll:not(.thank-you-adguard)
 winaero.com###jkhskdfsdf-iycc-4
 winaero.com###jkhskdfsdf-iycc-5
+winaero.com###jkhskdfsdf-iycc-5:not(.thank-you-adguard)
 winaero.com##.gad-gads
 winaero.com##.site-content > div > p[style="margin: 22px"]
 winaero.com##.windia
+winaero.com##.windia:not(.thank-you-adguard)
 winaero.com##.windiv:has(> a.winrec)
 winaero.com$$script[wildcard="*.innerHTML*.parentNode.insertBefore*"][max-length="2000"]
 winandmac.com,nicekkk.com###custom_html-3
