@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-27 20:38:22（北京时间）
+! Version: 2026-03-27 22:04:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67827
+! Total count: 67849
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3950,8 +3950,6 @@
 9y01.xyz##.in-friends
 ://*.beeg.com/*.php?_=$script
 ://*.streamplay.to/*&zoneid=$popup
-://0.*.*.com/papi/$script,xmlhttprequest
-://0.*.*.com/player/$script,xmlhttprequest
 ://a869.$~image
 ://adn.*/zone/$popup
 ://adn.*/zone/$subdocument
@@ -4332,6 +4330,7 @@
 @@/js/prebid/others.$script,domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
 @@/js/prebid/others/*$script,domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
 @@/js/wp-banners.js$domain=articlerewritertool.com|spinbot.com|free-article-spinner.com
+@@/key=*referer*.mp4$stealth=referrer,domain=01tube.com|inporn.com|porn-latina.com|lesbigo.com|xjav.tube|vr-porn.tube|porntop.com|fuxxx.com
 @@/key=*referer*videos*.mp4$stealth=referrer,domain=01tube.com|inporn.com|porn-latina.com|lesbigo.com|xjav.tube|vr-porn.tube
 @@/libs/advertisement.js$domain=getfree.co.in|bagi.co.in|aztecafaucet.space|multifaucet.org|dogestar.website|claimbits.io|i-bits.io|gobits.io|faucet.shorterall.com|simplyfaucet.xyz|tv3.lv
 @@/libs/advertisement1.js$domain=faucet.shorterall.com
@@ -7513,6 +7512,7 @@
 @@||cdn.wwads.cn/js/makemoney.js$domain=nodejs.cn
 @@||cdn.yamibuy.net^$stealth=referrer
 @@||cdn.ynuf.aliapp.org^
+@@||cdn.yyb.gtimg.com^$important
 @@||cdn.zinmanga1.com^$image,stealth=referrer,domain=shonenmangaz.com
 @@||cdn1-smallimg.phncdn.com^
 @@||cdn1.comicknew.pictures^$image,stealth=referrer
@@ -7929,6 +7929,7 @@
 @@||cmp.telerama.fr/js/telerama.min.js$~third-party
 @@||cms-assets.unrealengine.com^
 @@||cms-bucket.ws.126.net^
+@@||cms.myapp.com^$important
 @@||cmshow.qq.com^
 @@||cmts.iqiyi.com^
 @@||cn-*.bilivideo.cn^
@@ -9630,6 +9631,7 @@
 @@||ftp.bmp.ovh^
 @@||ftuapps.dev^$generichide
 @@||ftuapps.io^$generichide
+@@||fu-cdn.com/key=$stealth=referrer
 @@||fuckadblock.sitexw.fr/beta/fuckadblock.js$domain=fuckadblock.sitexw.fr
 @@||fuckadblock.sitexw.fr^$generichide
 @@||fullmatchsports.cc^$generichide
@@ -9750,6 +9752,7 @@
 @@||game.res.meizu.com^
 @@||game.weixin.qq.com^
 @@||game.xiaomi.com^
+@@||game.xiaomi.com^$important
 @@||game24h.vn/js/ads_v*.js?v=$domain=game24h.vn
 @@||game5s.com^$generichide
 @@||game735.com^$generichide
@@ -12315,6 +12318,7 @@
 @@||live*.static.yximgs.com^
 @@||live-buyback-order-api.live-api.recommerce.cloud/product?$stealth=3p-auth
 @@||live-trace.bilibili.com^
+@@||live-video.net^$stealth=3p-auth
 @@||live.douyin.com^
 @@||live.kuaishou.com^
 @@||live.lequipe.fr/thirdparty/prebid.js$~third-party
@@ -18641,7 +18645,6 @@
 @@||videostar.pl^$generichide
 @@||videosvc.ezoic.com/play?videoID=$domain=humix.com
 @@||videotekaime.com/uni/popunder.js
-@@||videotekaime.net/uni/popunder.js|
 @@||videotxxx.com^
 @@||vider.info^$stealth
 @@||vidhidepro.com^$stealth=referrer
@@ -18744,6 +18747,8 @@
 @@||voipsipclient.blogspot.nl^$generichide
 @@||volcengine-cache-weboffice.wpscdn.cn^
 @@||volcengine-kdocs-cache.wpscdn.cn^
+@@||volces.com/*^upload$stealth=3p-auth
+@@||volces.com/*^upload$stealth=3p-cache
 @@||volvo-club.cz^$generichide
 @@||vox-xov-cdn-*.$xmlhttprequest,stealth=referrer,domain=nepu.to
 @@||voxfm.pl^$generichide
@@ -21067,6 +21072,7 @@ amgelescape.com##.sidebar > div[class="widget HTML"][id^="HTML"]
 amgelescape.com##div[class^="owneditads"]
 amgreatness.com##.bg-gray-200.mx-auto
 amica.it##.adv-inner
+amigosporn.com##.pm-banner
 aminoapps.com##.overflow-scroll-sidebar > div
 amishamerica.com##a[rel="nofollow"] > img
 amiunique.org##.v-snack
@@ -28606,6 +28612,7 @@ cykf.net,xpressarticles.com##.elementor-location-footer + div[id][class*=" "]
 cylance.com##.cylance-mod-cookiebanner
 cyol.com,hc360.com##div[class^="AD"]
 cyol.net##.AD960_90
+cypnow.co.uk##.row-padding:has(+ div[id^="div-gpt-ad"])
 cyprus-mail.com##div[class^="_amHorizontal"]
 cyprus-mail.com##div[class^="_amHorizontal_"]
 cyprus-mail.com##div[class^="_stickyCnt"]
@@ -34033,6 +34040,9 @@ freeomovie.to##.footer-top
 freeomovie.to##.xtact
 freeones.com##.banner-placeholder
 freeones.com##.js-track-event
+freeonestube.com##.row > div.video-block-wrapper ~ div.order-0
+freeonestube.com##.tracking-url
+freeonestube.com,bravotube.net,bravoteens.com,pornoaffe.com,hd-pornos.net##.vjs-overlay
 freeonlineapps.net##.sp
 freeonlineapps.net##div[data-ad-client]
 freeonlinegames.com###cwarn-box
@@ -41823,6 +41833,7 @@ kepmegoszto.com###cw
 keporn.vip,fuxxx.com##.video-info + section
 keporn.vip,fuxxx.com##.video-ntv-wrapper
 keporn.vip,fuxxx.com##.video__related + section[style]
+keporn.vip,fuxxx.com,pornl.com##.video-ntv-wrapper
 keqingmains.com##[href^="https://lootbar.gg/"]
 keqingmains.com##[href^="https://noveltranslator.com"]
 keralatelecom.info##div.ai-viewports[data-insertion]
@@ -42899,6 +42910,10 @@ leakgallery.com##a[href^="https://undress.app"]
 leakgallery.com##app-header-ads
 leaklinks.com##a[href="http://missingtoofff.com/"]
 leaklinks.com,yourbittorrent2.com##iframe[src^="//a.adtng.com/"]
+leakslove.com##.footer-ad-all
+leakslove.com##.header-ad-all
+leakslove.com##a[href="/live-sex-chat/"]
+leakslove.com##a[href^="https://candyai.gg/"]
 learn-cpp.org##[href^="http://www.spoj.com/"]
 learn-cpp.org##[href^="https://codingforkids.io"]
 learn-french-free-with-stories.weebly.com###header-top
@@ -51863,6 +51878,8 @@ porncore.net##div[style="margin:10px auto;height:200px;width:800px;"]
 porncoven.com,xxxboard.net###ad_global_below_navbar
 porndd.com##.winter-topbar
 porndictator.com,pornomovies.com,gaysearch.com,feetporno.com,freehardcore.com,deviants.com##.twocolumns > div.aside
+porndig.com###co_sponsor
+porndig.com##.dt_porndig
 porndig.com##.js_footer_partner_container_wrapper
 porndig.com##.vjs-toolbar
 porndig.com##iframe[src^="https://plx.porndig.com/"]
@@ -52077,6 +52094,7 @@ pornjam.com##.right-player-43
 pornl.com###tags-scroll > h3.tag__item:has(> a[target="_blank"][href])
 pornl.com##.underplayer > section
 pornl.com##.video-ntv-wrapper
+pornl.com,xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,shemalez.com,voyeurhit.com,tubepornclassic.com##div[class^="underplayer"]
 pornleaks.in,comohoy.com##div[id^="anti-adblock-"]
 pornleaks.in,flightradar24.com##.noads
 pornlib.com###lcams2
@@ -66237,6 +66255,9 @@ xs.cz##.cookie
 xscode.com##xsc-cookies-consent
 xsexvideos.pro,mature-tube.sexy,pornpipi.com###myads
 xsharings.com###menu-main-menu > .menu-item > a[href*=".php?"][target="_blank"][rel]
+xshemale.tube,keporn.vip,fuxxx.com,pornl.com##.video-ntv-wrapper
+xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
+xshemale.tube,ourgay.com,ooxxx.com###tags-scroll > .tag__item:has(> a[target="_blank"][href])
 xshemale.tv##.player-holder + div.aside
 xslca.cc##.footer ~ div[class$="fanye"][onclick$="fanye()"]
 xslca.cc##div:not([id]):not([class]) > div[style="width: 412px;"]
@@ -66941,6 +66962,7 @@ youngsexhd.net$$script[tag-content="api_host"][max-length="3500"]
 youngsexhd.net,eteenporn.com,teenfuckhd.com##.banner-on-player
 youngsextube.me##.player-ad
 youngsseafood.co.uk##.alert, #alert
+youperv.com##li.catmen2:has(> a[href^="https://theporndude.com/"])
 youporn.com##.footer-element-container
 youporn.com##.playWrapper > div[class][id] div[class] > img[src^="data:image"]
 youporn.com##aside:has(a.ad-remove)
