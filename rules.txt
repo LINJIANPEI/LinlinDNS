@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-27 07:21:19（北京时间）
+! Version: 2026-03-27 09:16:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67812
+! Total count: 67819
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5968,6 +5968,7 @@
 @@||api-edge.cognitive.microsofttranslator.com/translate?
 @@||api-edge.cognitive.microsofttranslator.com^
 @@||api-game.meizu.com^
+@@||api-gtm.grubhub.com^$stealth=3p-auth,domain=seamless.com
 @@||api-gw.spot.im/v*/feed/spot/sp_*/$domain=bizpacreview.com
 @@||api-js.datadome.co/js/$domain=sso.garena.com
 @@||api-js.datadome.co/js/|$stealth=referrer,domain=auth.garena.com
@@ -18098,6 +18099,7 @@
 @@||tubeland.site^$generichide
 @@||tubeninja.net/ads.js^
 @@||tubeoffline.com/js/hot.min.js
+@@||tubexplayer.com^$subdocument,stealth=referrer,domain=pornobae.com
 @@||tubidy.net/ads.js
 @@||tubitv.com^$generichide
 @@||tuborstb.co^$stealth=3p-auth
@@ -22082,6 +22084,7 @@ asiaone.com##.ao-article-video-wrapper
 asiaone.com##.dfp-tag-wrapper
 asiaone.com##.trending-ad-wrapper
 asiaone.com##section[id*="-qoo10-box-"]
+asiaxbit.com##.happy-under-player-mobile
 asiaxbit.com,celebritymovieblog.com,interracial-girls.com###custom_html-2
 asiaxbit.com,fullxcinema.cc,pornxbit.com,pornoamatorialeitaliano.it,sexkbj.com,mundoxgay.com,pornxday.com,animehentaihub.com,twinkybf.com,gaytail.com##.happy-sidebar
 asilmedia.org###banner
@@ -32907,6 +32910,7 @@ filespayout.com##.box-content > a[target="_blank"]
 filespayout.com,game3rb.com##center > a[rel]
 filespayouts.com###normal-box
 filespayouts.com##center > a[onclick^="window.open"][rel]
+filespayouts.com##center > a[target="_blank"]:not([href*="filespayouts.com"])
 filext.com###b1c
 filext.com###b2c
 filext.com###b4c
@@ -33964,6 +33968,7 @@ freechequewriter.com##div[style^="border-top: 0px solid #DDDDDD; border-bottom: 
 freecinema.live##a.dwnbuttonroller[target="_blank"]
 freecomiconline.me,mangahentai.me,manytoon.com,readfreecomics.com##.c-top-sidebar
 freecomics.xxx##.sc1item
+freeconvert.com##.ad-sticky-wrapper:not(#style_important)
 freeconvert.com##.adcontainer2
 freeconvert.com##.ads-in-page
 freecoursesite.com###media_image-7
@@ -51968,6 +51973,7 @@ pornhd.com##.zone-area
 pornhd.com##phd-floating-ad
 pornhd.com##ul.thumbs + div.listing-zone.mobile-zone
 pornhd.com,gotporn.com##.top-banner-container
+pornhd4k.net,javhd4k.me,pornhd8k.me,en.javfun.me###invideo_wrapper
 pornhdin.com##.remove-ad-block
 pornhdin.com##.video-player-overlay
 pornhdin.com,pornhd.com##.vp-under-video-spot
@@ -61560,6 +61566,7 @@ tri247.com##.show-ad
 triangletribune.com##.fba_links
 triathlete.com,open.spotify.com##div[aria-label="Advertisement"]
 triblive.com###storyContent > div[data-type="float"][data-stn-player]
+triblive.com##.mantine-Center-root:has(.ads-holder)
 tribuna.com##.CommonLayout-module__oYAJUw__common-layout__right-column
 tribuna.com##.Main-module__h0zGRO__main-layout__content-wrapper > div[style="min-height: auto;"]
 tribuna.com##div[class$="__main-layout__empty-block"]
