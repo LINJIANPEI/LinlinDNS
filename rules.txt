@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-27 09:16:03（北京时间）
+! Version: 2026-03-27 12:25:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67819
+! Total count: 67825
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7043,6 +7043,7 @@
 @@||c.lytics.io/api/tag/$script,domain=time.com
 @@||c.mipcdn.com^$domain=77dushu.com|biqugesc.com|prpcoin.com|zhetian.org
 @@||c.mipcdn.com^$domain=prpcoin.com
+@@||c.office.com^
 @@||c.office.com^|
 @@||c.paypal.com/da/r/fb.js$script
 @@||c.pc.qq.com^
@@ -7140,6 +7141,7 @@
 @@||cat.telia.no/gtm.js$script,domain=telia.no
 @@||catchapp.net/ad/img/$~third-party
 @@||catchmyjobs.com^$generichide
+@@||catchup.thisisdax.com^
 @@||catchup.thisisdax.com^|
 @@||cazzette.com^$generichide
 @@||cb.baidu.com/crossdomain.xml$domain=v.baidu.com
@@ -7253,6 +7255,7 @@
 @@||cdn.apple-mapkit.com/*?apiVersion=$stealth=3p-auth
 @@||cdn.apple-mapkit.com/ma/bootstrap?$stealth=3p-auth,domain=icloud.com
 @@||cdn.ark.qq.com^
+@@||cdn.atmedia.hu^
 @@||cdn.atmedia.hu^|
 @@||cdn.bannersnack.com/banners/$image,subdocument,domain=audiogon.com
 @@||cdn.bannersnack.com/banners/$~third-party,image,subdocument
@@ -7308,6 +7311,7 @@
 @@||cdn.digiteka.com/player/PrebidLibrary.js$domain=ultimedia.com
 @@||cdn.dotstream.buzz^$stealth=referrer,domain=megaplay.*
 @@||cdn.doublemax.net/js/rwd_cap.js$domain=ibf.tw
+@@||cdn.duurzaam.greenchoice.nl^
 @@||cdn.duurzaam.greenchoice.nl^|
 @@||cdn.engine.addroplet.com/Scripts/infinity.js.aspx^$domain=mirrored.to
 @@||cdn.evgnet.com/beacon/homedepotofcainc/engage/scripts/evergage.min.js$script,domain=homedepot.ca
@@ -7432,6 +7436,7 @@
 @@||cdn.reignn.com/Products/Reignn/DataPixels/AdBlockerCheck/ads.js
 @@||cdn.reverso.net/*/static/js/advertising.js^
 @@||cdn.rhombusads.com/js/rh.min.js$domain=spin.com
+@@||cdn.rozetka.com.ua^
 @@||cdn.rozetka.com.ua^|
 @@||cdn.run-syndicate.com/sdk/v1/n.js$domain=mangarock.com
 @@||cdn.runative-syndicate.com/sdk/*/n.js$domain=onemanhua.com
@@ -9994,7 +9999,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -11865,6 +11869,7 @@
 @@||jstatic.3.cn^$domain=m.jd.com
 @@||jswenhui.com^*/ad/
 @@||juduo.cc^$generichide
+@@||juejin.cn^$important
 @@||juicyads.com/adshow.php?adzone=746140$domain=getrelax.cc|sexylove.club
 @@||juicyads.com/jads.js$domain=getrelax.cc|sexylove.club
 @@||juicyads.com/js/jads.js$domain=getrelax.cc|sexylove.club
@@ -19178,6 +19183,7 @@
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
 @@||www.jsdelivr.com^
+@@||www.juejin.cn^
 @@||www.kanjiantu.com^
 @@||www.kdocs.cn^
 @@||www.ke.com^
@@ -30402,7 +30408,6 @@ dropmms.com,overclockers.ge,maxcheaters.com##div[data-role="sidebarAd"]
 dropstab.com###__next > div:not([id]):not([class]) > div:not([id]):not([class]):has(> div.z-app-main button[aria-label="Close"])
 dropstab.com##.tableCustom > tbody[role="rowgroup"]:has(a[rel="sponsored"])
 dropstab.com##.tableRowAd
-dropstab.com,stremio-addons.net,pornoreino.com,okporn.xxx,productreview.com.au,videohelp.com,techinferno.com,boyfriendtv.com##a[rel="sponsored"]
 drtuber.com###video_list_banner
 drtuber.com##.aside_panel_video > .heading.fh
 drtuber.com##.footer > .item_box > .container > .holder
@@ -31451,7 +31456,6 @@ emulatorgames.onl###cg > #button
 emulatorjs.com##.frame-2
 emumax.com##.tbanner
 emurom.net###annonce
-en.javfun.me###invideo_wrapper
 en.namu.wiki,ja.namu.wiki##div[id][class]:empty
 en.numista.com###fiche_buy_links
 en.softonic.com##section[data-meta="search-results-list"] li.is-mobile-hide
@@ -48756,6 +48760,7 @@ nodejs.cn###biz_nav
 nodejs.cn###pagead
 nodejs.cn###pagead0
 nodejs.cn##.mymn-banner
+nodejs.cn##a[href*="crmeb.net"]
 nodejs.libhunt.com##.saashub-ad
 nodejs.org##.\!block[href^="https://www.herodevs.com/support/node-nes?"]
 nodeloc.com###wghtml
@@ -49298,6 +49303,7 @@ officedepot.com##.od-col:has(.od-product-card-region-colors-sponsored)
 officedepot.com##.od-search-criteo-banner-ads__siderail
 officedepot.com##.od-search-criteo-banner-ads__upper-leaderboard
 officedepot.com##.od-search-piq-banner-ads__lower-leaderboard
+official.coomer.com.co##[id^="monetization-ad"]
 officialcharts.com##.bg-design-hoverGreige
 officialcharts.com##.chart-ad
 officialcharts.com##div[type="content_ignite_advert"]

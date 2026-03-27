@@ -116,12 +116,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14325
+! Total count: 14328
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-03-26 21:40:23（北京时间）
+! Version: 2026-03-27 10:50:55（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -8019,6 +8019,7 @@
 @@||api-analytics.magstimconnect.net^$~third-party
 @@||api-b2b.backenster.com/b1/api/$stealth=3p-auth
 @@||api-edge.cognitive.microsofttranslator.com/translate?
+@@||api-gtm.grubhub.com^$stealth=3p-auth,domain=seamless.com
 @@||api-gw.spot.im/v*/feed/spot/sp_*/$domain=bizpacreview.com
 @@||api-js.datadome.co/js/$domain=account.samsung.com
 @@||api-js.datadome.co/js/$domain=sso.garena.com
@@ -19504,6 +19505,7 @@
 @@||tubeland.site^$generichide
 @@||tubeninja.net/ads.js^
 @@||tubeoffline.com/js/hot.min.js
+@@||tubexplayer.com^$subdocument,stealth=referrer,domain=pornobae.com
 @@||tubidy.net/ads.js
 @@||tubitv.com^$generichide
 @@||tuborstb.co^$stealth=3p-auth
@@ -20423,6 +20425,7 @@
 @@||xvideos.com/*/?_=$document
 @@||xvideos.com/video-get-comments/
 @@||xweb.instagram.com/ads/preferences/
+@@||xxvideoss.net/e/$subdocument,stealth=useragent
 @@||xxxdao.com^$generichide
 @@||xxxxx520.com^$generichide
 @@||xxxy.jnu.edu.cn/_upload/tpl/08/ad/2221/template2221/$script
