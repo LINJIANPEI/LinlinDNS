@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-28 07:22:59（北京时间）
+! Version: 2026-03-28 09:10:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67873
+! Total count: 67881
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4862,6 +4862,8 @@
 @@||58b.tv^$generichide
 @@||58cdn.com.cn/tuiguang/center/
 @@||58huanbao.com/skin/defaultcs2660/images/ad
+@@||58img.top/muliframe/muliframe$stealth=referrer,domain=mypornerleak.com
+@@||58img.top^$image,stealth=referrer,domain=hornysimp.com.lv|mypornerleak.com
 @@||590103.idv.tw/advertisement.js
 @@||5bisheng.com/pagead2.
 @@||5dm.link^$subdocument,stealth=referrer
@@ -31234,6 +31236,7 @@ electan.com###notification
 electraplus.si##.ndp-panel
 electrek.co##.post-body > div[class^="th"]
 electrek.co##.post-content > div[class^="th"]
+electrek.co##[href^="https://www.energysage.com/landing/"]
 electrek.co##body > div[class^="th"]
 electric-house.ru##.blok_forum > div[style]
 electrical-engineering-portal.com##.page-ad-topline
@@ -32536,9 +32539,13 @@ fapeza.com##.navbar-item-sky
 fapfolder.club##.hbanner
 faphouse.com##a[href^="https://flirtify.com/"]
 fapnado.com##.content > div[style="text-align:center; width:100%;"]
+fapnado.com##.fluid_html_on_pause_container
 fapnado.com##[class^="xpot"]
 fapnado.com##a[href="https://theporndude.com/"]
+fapnado.com##a[href^="https://go.gsrv.dev/"]
 fapnado.com##a[href^="https://tsyndicate.com/"]
+fapnado.com##a[href^="https://www.tckcandy.com/"]
+fapnado.com##div[style="height: 400px; width: 1240px; margin: 0 auto; text-align: center;"]
 fapnado.com##iframe[width="95%"][height="400"]
 fapnado.com,fapnado.xxx##.zpot-horizontal
 fapnado.com,fapnado.xxx##.zpot-vertical
@@ -40368,6 +40375,7 @@ itchygame.com##div[class^="candySide"]
 itchygame.com##div[class^="ntkSide"]
 itdmusics.com##.content > * > div[style="width:300px;height:250px"]
 itdmusics.com##.itdmu-widget
+itdmusicy.com,janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
 itdog.cn##+js(aopr,alert)
 itdog.cn##.card[style="padding: 6px 10px 5px 5px;"]
 itdog.cn##.col-12 > .card.mb-3[style="padding: 5px;"]
