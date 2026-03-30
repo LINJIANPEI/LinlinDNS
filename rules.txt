@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-30 07:23:05（北京时间）
+! Version: 2026-03-30 09:20:21（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67873
+! Total count: 67878
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4409,6 +4409,7 @@
 @@/v/*.gif$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
 @@/v/*.html$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
 @@/video.m3u8$stealth=referrer,domain=missav.live
+@@/video.m3u8$stealth=referrer,domain=missav.ws
 @@/video/*$media,stealth=referrer,domain=douyin.com
 @@/video/*/index.m3u8?*&frame_commit=*&mw_pid=*&signature=$stealth=useragent
 @@/videos/*$domain=pornhub.com|pornhub.org|pornhub.net
@@ -9546,6 +9547,7 @@
 @@||fotor.com.cn/static/web/share/js/
 @@||foundation.youdao.com^
 @@||fourhoi.com^
+@@||fourhoi.com^$image,stealth=referrer,domain=missav.ws
 @@||fourier-videoclip-eu.allawnos.com^
 @@||fourier-videoclip-in.allawnos.com^
 @@||fox-url.com^$generichide
@@ -16838,6 +16840,7 @@
 @@||sorcerers.net^$generichide
 @@||soufunimg.com/??*/fshare.
 @@||soufunimg.com/count/uvbforpc.js
+@@||soundcore.com/metrics/gtd?id=$script,~third-party
 @@||soup.io/ads.js
 @@||soup.v.qq.com^
 @@||sourcegraph.com^$generichide
@@ -22198,6 +22201,7 @@ athlonsports.com##.is-fallback-player
 athlonsports.com##.m-fixedbottom-ad--container
 athlonsports.com##section[id^="phxoutbrain-"]
 athlonsports.com,autoblog.com,bikemag.com,bringmethenews.com,dengarden.com,mensfitness.com,mensjournal.com,parade.com,paradehomeandgarden.com,paradepets.com,pethelpful.com,powder.com,surfer.com,thespun.com,thestreet.com,travelhost.com##.styles_headerAdSlot__f4Z0n
+athlonsports.com,autoblog.com,bringmethenews.com,dengarden.com,mensfitness.com,mensjournal.com,parade.com,paradehomeandgarden.com,paradepets.com,pethelpful.com,surfer.com,thespun.com,thestreet.com,travelhost.com##.exco-player-wrapper
 athlonsports.com,autoblog.com,bringmethenews.com,dengarden.com,mensfitness.com,mensjournal.com,parade.com,paradehomeandgarden.com,paradepets.com,pethelpful.com,surfer.com,thespun.com,travelhost.com,www.autoblog.com,www.thestreet.com##.exco-player-wrapper
 athlonsports.com,bringmethenews.com,si.com##.is-exco-player
 athomedaily.com,atworkdaily.com##.ad-backing
@@ -62504,6 +62508,7 @@ uhu.de##.message.fixed
 uhuseries.com##a[target="_blank"][rel*="sponsored"]:not([href^="https://nav.cx/"]) > img
 uiadmin.net##.jump-linker
 uii.io,short.pe,clik.pw##div[style="z-index:99999;position:fixed;bottom:10px;left:50%;transform: translateX(-50%)"]
+uiil.ink##div[style="height:50px; text-align:center;"]
 uimaker.com###listbaidu
 uimaker.com##.listads
 uimaker.com##.newbaidu
