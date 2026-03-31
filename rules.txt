@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-31 23:58:55（北京时间）
+! Version: 2026-04-01 00:54:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67917
+! Total count: 67916
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5472,6 +5472,7 @@
 @@||ads.viralize.tv^|$domain=automoto.it|moto.it
 @@||ads.vk.com^
 @@||ads.vk.com^$popup
+@@||ads.vk.ru^$popup
 @@||ads.x.com^
 @@||ads.x.com^$popup
 @@||ads.yandex.com^$~third-party
@@ -11328,7 +11329,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$xmlhttprequest,domain=nfl.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$xmlhttprequest,domain=packers.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=24ur.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=blackbird.zoomin.tv
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=f5haber.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=zattoo.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=10play.com.au|10.com.au
@@ -25800,6 +25800,8 @@ carlin.es##.ovcookie
 carlovalentini.it###footer-widget-area
 carlsjr.com##.notice-window
 carmag.co.za###sidebar-primary
+carmag.co.za##div[id^="ap-popup"]
+carmag.co.za,4thsight.xyz,techgeekbuzz.com,stockingfetishvideo.com###custom_html-17
 carnevale.venezia.it###privacySlider
 carnewschina.com##.tdi_162
 carnovo.com##.fixed-alert
@@ -28439,7 +28441,6 @@ ctinsider.com##.md\:block.y100
 ctrip.com###fl_wrap_default
 ctrip.com##.set-phone.set-list > .nav-myctrip.person-text
 ctrlq.org##.kuber
-ctrlq.org,labnol.org##.kuber
 ctrlv.sk,ctrlv.cz,ctrlv.link##body > div[id][style="display: flex;"]
 ctshop.rs##body > div:not([id]):not([class])
 ctv.ca##.dfp_block
@@ -28845,7 +28846,6 @@ dailystar.co.uk##[data-testid="commercial-above-header-box-1"] {remove:true;}
 dailystar.co.uk##[data-testid="commercial-label-gpt"]
 dailystar.co.uk##amp-iframe[height="40"]
 dailystar.co.uk,abcnews.go.com,manchestereveningnews.co.uk,euronews.com,wgrz.com,newatlas.com,plymouthherald.co.uk,chroniclelive.co.uk,hulldailymail.co.uk,foreignpolicy.com##.taboola
-dailystar.co.uk,abcnews.go.com,manchestereveningnews.co.uk,euronews.com,wgrz.com,newatlas.com,plymouthherald.co.uk,chroniclelive.co.uk,hulldailymail.co.uk,thesportbible.com,foreignpolicy.com##.taboola
 dailystar.co.uk,mirror.co.uk##[data-tmdatatrack-type="commercial"]
 dailystar.co.uk,mirror.co.uk,themirror.com##[data-tmdatatrack-type="commercial"]
 dailytelegraph.com.au##.widget_newscorpau_ads
@@ -42579,7 +42579,6 @@ labelleadresse.com##._cd
 labgame.io###box_728x90
 labgame.io$$script:contains(DName)
 labgame.io,fc-lc.xyz###iframe_id
-labnol.org##.adsbygoogle > img
 laboiteauxparoles.com##.dialogue-fixe.nuisance
 labor-staber.de###lwcook
 labor-stephansplatz.de###bho_infobar
@@ -43439,6 +43438,7 @@ linkedin.com##[data-sponsored-tracking-url]
 linkedin.com##article[data-is-sponsored]
 linkedin.com##iframe[componentkey$="_ad"]
 linkedin.com##iframe[componentkey="MynetworkDesktopNav_mynetwork_desktop_nav_ad"]
+linkedin.com##iframe[height="250"][width="300"]
 linkedin.com##iframe[title="Advertisement"]
 linkedin.com##iframe[title="advertisement"]
 linkedin.com##li[data-is-sponsored="true"]
@@ -60370,7 +60370,6 @@ thespike.gg##ins[id][data-key]
 thespoken.cc##.topban
 thespoken.cc##[style="margin-bottom: 25px;"]
 thesport.live##body > div[onclick^="window.open"]
-thesportbible.com##.article-sidebar__advert
 thesportsrush.com###article-content-div > div:not([class]):not([style])
 thesportstak.com##div[style^="min-height:"][style*="400px"]
 thesportstak.com##div[style^="overflow:"][style*="height:"]
