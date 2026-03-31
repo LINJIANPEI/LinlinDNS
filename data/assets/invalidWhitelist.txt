@@ -116,12 +116,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14335
+! Total count: 14342
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-03-30 21:46:04（北京时间）
+! Version: 2026-03-31 10:50:29（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1888,6 +1888,7 @@
 @@://www.sinya.com.tw^$stealth=ip
 @@://www3.doubleclick.net^|$xmlhttprequest
 @@://xhamster.$script,~third-party
+@@://yandex.com/adv/$~third-party
 @@=mywebloadt1&$domain=myweb.hinet.net
 @@?_adcheck=$xmlhttprequest,domain=manhuarmmtl.com
 @@?adType=$domain=taotaosou.com
@@ -7568,6 +7569,7 @@
 @@||ads.viralize.tv^|$domain=automoto.it|moto.it
 @@||ads.vk.com^$popup
 @@||ads.x.com^$popup
+@@||ads.yandex.com^$~third-party
 @@||ads.youtube.com^|$domain=technorj.com
 @@||ads.zw.pl/www/delivery/asyncjs.php
 @@||ads2.banaraswap.in^$xmlhttprequest,domain=banaraswap.in
@@ -7643,6 +7645,8 @@
 @@||adv.welaika.com^$popup
 @@||adv.wp.pl/RM/Box/c/b/money_rail_and_frames/money-rail-1.0.2.js
 @@||adv.wp.pl/bar.gif
+@@||adv.yandex.com^$~third-party
+@@||adv.yandex.ru^$~third-party
 @@||adv.yomiuri.co.jp^$domain=adv.yomiuri.co.jp
 @@||advert.vg.no/1v*.js?v=$domain=e24.no
 @@||advert.vg.no/1v*.js?v=$~third-party
@@ -8860,7 +8864,7 @@
 @@||browser-intake-datadoghq.com^$xmlhttprequest,domain=grubhub.com|mightyape.co.nz
 @@||browser.covatic.io/sdk/v1/bauer.js$script,domain=hellorayo.co.uk
 @@||browser.events.data.microsoft.com/onecollector/$script,xmlhttprequest,domain=microsoft.com
-@@||browser.sentry-cdn.com^$domain=acustica-audio.com|alphaxiv.org|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|members.bifa.film|menshealth.com|ocado.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
+@@||browser.sentry-cdn.com^$domain=acustica-audio.com|alphaxiv.org|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|members.bifa.film|menshealth.com|ocado.com|pocketguard.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
 @@||browser.yandex.*/sync/$stealth=useragent
 @@||browserbench.org^$generichide
 @@||browserscope.org/user/beacon/*?callback=$script,domain=jsperf.com
@@ -16548,6 +16552,7 @@
 @@||panel.flops.ru/js/member/evercookie_init.js
 @@||panel.play.hosting/js/jquery.openxtag.js
 @@||pantagraph.com^$generichide
+@@||papagan.shop^$xmlhttprequest,stealth=referrer,domain=setplay.shop
 @@||papagiovannipaoloii.altervista.org^$generichide
 @@||papalah.com^$generichide
 @@||paperzonevn.com^$generichide
@@ -18036,6 +18041,7 @@
 @@||serving-sys.com^$domain=mylifetime.com
 @@||seselah.com^$generichide
 @@||session.proxy.startpage.com/csp_check$document
+@@||setplay.shop/player/$subdocument,stealth=referrer,domain=hdfilmcehennemi.now
 @@||sexcamdb.com/advert.js
 @@||sexgalaxy.net/wp-content/plugins^
 @@||sexgalaxy.net/wp-content/themes^
@@ -19599,6 +19605,7 @@
 @@||tweakdoor.com^$generichide
 @@||tweakers.net/aanbod/admanager/
 @@||tweaktown.com^$generichide,badfilter
+@@||twincdn.com/videos/$media,stealth=referrer,domain=pornmike.com
 @@||twitch.tv^$generichide
 @@||twitch.tv^$websocket,permissions
 @@||twitchadvertising.tv/wp-content/uploads/2014/06/header_logo_advertising.png
