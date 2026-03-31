@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-03-31 07:26:51（北京时间）
+! Version: 2026-03-31 09:17:52（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67914
+! Total count: 67922
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4465,6 +4465,7 @@
 @@://www.sinya.com.tw^$stealth=ip
 @@://www3.doubleclick.net^|$xmlhttprequest
 @@://xhamster.$script,~third-party
+@@://yandex.com/adv/$~third-party
 @@=mywebloadt1&$domain=myweb.hinet.net
 @@?_adcheck=$xmlhttprequest,domain=manhuarmmtl.com
 @@?adType=$domain=taotaosou.com
@@ -25537,6 +25538,8 @@ calendrier-lunaire.net###ezcc
 calgaryherald.com##.placeholder-inner
 calgarysun.com###content > .l-content > .l-top-content
 caliber.az###adv
+caliber.az##.left_banner
+caliber.az##.top_banner
 caliber.az##div[style="height:302px;"]
 calimove.com###overlay
 callofwar.com##img[referrerpolicy]
@@ -39903,6 +39906,10 @@ inwepo.co##.adsbygoogle
 inwepo.co##div[id^="oa-"]
 inwestinfo.pl###up ~ [style*="fixed"]
 inwork.cz##.fixed-cookie
+inxxx.com##.fh-wrapper:has(> .fh-item > a[href^="/fh-out/"] > div.fh-ad-label)
+inxxx.com##div.headline:has(a[href="/to/show-more-cams/"])
+inxxx.com##div.inxxx-desktop-spot
+inxxx.com,bemyhole.com##.cams-button
 inxxx.com,theyarehuge.com##.desktopspot
 inyourarea.co.uk##.style_advertisementMark_1Jki4
 inyourarea.co.uk##.style_cardWrapper_ycKf8
@@ -59296,6 +59303,7 @@ techraptor.net,unite-db.com###nn_lb2
 techreen.com##.svc_next_content
 techreen.com##.tr-block-header-ad
 techreen.com##.tr-block-label
+techregister.co.uk,pornmium.com,etherealgames.com,androidphone.fr,esports.net,movilforum.com,apkmb.com,snat.co.uk,coursesxpert.com,thefappeningblog.com,nimtools.com,javhoho.com###text-2
 techrepublic.com###leader-bottom
 techrepublic.com###leader-plus-top
 techrepublic.com###mantle_skin > div > .ad-active + div[style="width:100%"]
