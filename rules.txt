@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-01 20:53:23（北京时间）
+! Version: 2026-04-01 22:25:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67920
+! Total count: 67937
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3494,6 +3494,7 @@
 55188.com,g138.com##.gg_head_l
 55188.com,g138.com##.gg_head_m
 55188.com,g138.com##.gg_head_r
+555.porn##.fel-tem
 5555op.com##.img
 5555op.com,router.houzi-blog.top##.img
 555hd2.com##a[href^="https://57063683.com"]
@@ -10667,11 +10668,13 @@
 @@||hlntv.com/*/ad_policy.xml
 @@||hlok.qertewrt.com/offer?prod=
 @@||hls*-cf.xnxx-cdn.com^
+@@||hls*.*.*/hls*/*.PNG$stealth=referrer,xmlhttprequest,domain=kisskh.*
 @@||hls-hw.xvideos-cdn.com^
 @@||hls-live.bdstatic.com/*/stream_$stealth=referrer
 @@||hls.exmarketplace.com/*.m3u8$domain=tvserial.it
 @@||hls.exmarketplace.com/*.ts$domain=tvserial.it
 @@||hls.redefine.pl^$stealth=referrer
+@@||hls0*.*.*.mp4?ip=$stealth=referrer,media,domain=kisskh.co
 @@||hls05.*.*/hls05$stealth=referrer,xmlhttprequest,domain=kisskh.co
 @@||hls3-cf.xvideos-cdn.com^
 @@||hls3-l3.xvideos-cdn.com^
@@ -20598,6 +20601,7 @@ akhbarelyom.com##p > img[style="width: 300px; height: 250px;"]
 aki-h.com,archiproducts.com,benzinga.com,dbdiagram.io,primewire.link,slashdot.org##.banner-wrapper
 akiba-online.com##.p-body-inner > div[align="center"] > a:not([href*="akiba-online.com"]) > img
 akiba-online.com##[href^="https://filejoker.net/invite"]
+akirabox.to,bittorrent.com,whatismybrowser.com,primewire.li##a[href^="https://go.nordvpn.net/aff_c?"]
 akme.hu##.cookie
 akpool.de###consent
 akrapovic.com##.cookies-bubble
@@ -32546,8 +32550,14 @@ fapdick.net##.fstory > div.scont > div.oblozhka + center
 fapdig.com##.right > .content
 fapello.com##.barbie_desktop
 fapello.com##.barbie_mobile
+fapello.com##.feedorig
+fapello.com##.right-side > a[href][target="_blank"]
+fapello.com##.simplebar-content > ul > li:has(> a[href^="https://www.camsoda.com/"])
+fapello.com##.simplebar-content > ul > li:has(> a[href^="https://www.camsoda.com/"]) + li
+fapello.com##a[href^="http://camsoda.ai/"]
 fapello.com##div.items-center > div[class*="uk-hidden"] > a[target="_blank"][href^="https://vo2.qrlsx.com/"]
 fapello.com##iframe[src^="https://www.adxserve.com/"]
+fapello.com,japan-whores.com,redfans.org,ryuugames.com,biqle.org,shemaleporn.xxx##a[href^="https://theporndude.com/"]
 faperme.it##.alert, #alert
 fapeza.com##.azz_div
 fapeza.com##.navbar-item-sky
@@ -38164,6 +38174,8 @@ hotpornphotos.com##.menu-inner > li.menu-item:has(> a:is([href$="/camslink/"],[h
 hotpress.info###sidebar > div.widget_text:nth-last-child(-n+3)
 hotroxuk.com##.dot_cookies
 hotscope.tv###__next > div.MuiBox-root > div[class^="jss"][style="transform: none; transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;"]
+hotscope.tv##a[href^="https://www.ourdreamersai.com/"]
+hotscope.tv##main > div.grid + div.mt-1
 hotspringsofbc.ca,studybullet.com##body > .clr + div[id][class*=" "]
 hotstar.com##div[data-testid="bbtype-video"]
 hotstar.com##div[data-testid^="ad-"]
@@ -52139,6 +52151,7 @@ pornid.name,pornid.xxx##.cs-under-player-link
 pornid.name,pornid.xxx##.spots-bottom
 pornid.xxx##.sidebar-holder
 pornid.xxx##.spots-bottom
+pornid.xxx##iframe[src^="/vager/"]
 porninblack.com###sidebar > .wp-block-image a[target="_blank"] > img
 pornissimo.org##.fp-ui-inline + div[style]
 pornj.com,see.xxx,pornl.com##.vda-item
@@ -62377,6 +62390,7 @@ twxgct.com,xgcartoon.com,dailygh.com###video-top-ad
 txahz.com###archy_ad2
 txone-networks.com###cookies_msak
 txtbook.com.cn##.ledu-advWrap
+txxx.*$$script:contains(AdManager)
 txxx.com##._ccw-wrapper
 txxx.com##.herrmhlmolu
 txxx.com##.hgggchjcxja
@@ -62647,8 +62661,11 @@ ultrahorny.com##a[href="https://hentai.tv/"]
 ultrahorny.com##a[href^="https://static.babesnetwork.com/landing"]
 ultrahorny.com,veporn.com##.ads-on-player
 ultrahqporn.com##.grid-cols-1 > a.group ~ a[href="https://ultrahqporn.com"]
+ultrahqporn.com##.hidden > a.relative:has(> div > img[alt="Advertisement"])
+ultrahqporn.com##body > div.w-full:has(> div.relative a[href="/advertising"])
 ultrahqporn.com##div[class]:has(> a[href="https://pq.hosting/"])
 ultrahqporn.com##div[class]:has(> div > div > div[class^="netloop-ad-banner-"])
+ultrahqporn.com##div[style^="width: 300px; height: 250px;"]
 ultrahqporn.com##footer div.flex:has(> div.border > div > script[src^="https://a.magsrv.com/"])
 ultrasurfing.com,geeksforgeeks.org##._ap_apex_ad
 ulysse.com##nav ~ .fixed, .shadow-cookie
