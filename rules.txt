@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-01 16:09:14（北京时间）
+! Version: 2026-04-01 17:58:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67920
+! Total count: 67915
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4330,7 +4330,6 @@
 @@/js/prebid/others/*$script,domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
 @@/js/wp-banners.js$domain=articlerewritertool.com|spinbot.com|free-article-spinner.com
 @@/key=*/referer=none*.mp4$media,xmlhttprequest,stealth=referrer
-@@/key=*referer*.mp4$stealth=referrer,domain=01tube.com|inporn.com|porn-latina.com|lesbigo.com|xjav.tube|vr-porn.tube|porntop.com|fuxxx.com|fullvideosporn.com
 @@/libs/advertisement.js$domain=getfree.co.in|bagi.co.in|aztecafaucet.space|multifaucet.org|dogestar.website|claimbits.io|i-bits.io|gobits.io|faucet.shorterall.com|simplyfaucet.xyz|tv3.lv
 @@/libs/advertisement1.js$domain=faucet.shorterall.com
 @@/live/*.m3u8$xmlhttprequest,stealth=referrer,domain=weakspell.to|weakspell.org|streamocean.online|weakspell.to
@@ -7743,6 +7742,7 @@
 @@||claimtrx.com^$generichide
 @@||clarins.com.cn^
 @@||clarity.ms/tag/$domain=moeci.com
+@@||clarity.ms/tag/$script,domain=craiovaforum.ro
 @@||clarity.ms/tag/$script,domain=helper-employer.com
 @@||clarity.ms/tag/$script,domain=phileweb.com
 @@||classic-retro-games.com^$generichide
@@ -10012,7 +10012,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -11602,7 +11601,6 @@
 @@||interface3.music.163.com.163jiasu.com^
 @@||interface3.music.163.com^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -18069,7 +18067,6 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
-@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -29169,6 +29166,7 @@ decrypt.co##.aspect-video
 decrypt.co##.my-10.xl\:flex.justify-center
 decrypt.co##.opacity-75
 decrypt.co##[style^="min-width: 728px;"]
+decrypt.co##div.post-content > p.tracking-px:empty
 decrypt.co,metabattle.com##div[style^="min-width: 300px;"]
 decrypt.day##div[class] > center:has(> div.w-full > ins.adsbygoogle)
 decrypterlenergie.org###alert-mention
@@ -43096,7 +43094,6 @@ lesbian8.com##.list-videos > div[class] > span#lotal
 lesbian8.com,sortporn.com,bigtitslust.com##.mitaru
 lesbianbliss.com,mywebcamsluts.com,transhero.com##.media_spot
 lesbianexpert.com##.kck
-lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
 lesbosland.com##.row.no-gutters > div:has(> #special-block)
 lesbosland.com##a[href^="https://s.zlinkb.com/"]
 lesbosland.com##div[id*="-boxes-"]
@@ -52685,7 +52682,6 @@ privatehomeclips.com##.content > div > div.footer-banners
 privatehomeclips.com##.left + div:not([class]):last-child
 privatehomeclips.com##.underplayer > div[class]:not([class*="_"]) > div[class]
 privatehomeclips.com##.underplayer > div[data-nosnippet]
-privatehomeclips.com##.underplayer > section:has(> div > span > a[href^="https://clickadilla.com/"])
 privatehomeclips.com##.video-page__related > div.listing ~ div[class$="videos"]
 privatehomeclips.com,hclips.com##span[style="display:flex !important"] > div:first-child
 privateproperty.co.za###consentManager
@@ -55945,7 +55941,6 @@ shemalez.tube##.video-page__content > div.left + div[class]
 shemalez.tube##.video-slider > div.video-slider-container:has(> div.list > div.item > a[href^="https://vid-gt.com/"])
 shemalez.tube##.video-tube-friends ~ div:not(.wrapper)
 shemalez.tube##iframe[src^="https://go.mnaspm.com/"]
-shemalez.tube,gettranny.com,pornzog.com,pornl.com,vxxx.com,ooxxx.com,inporn.com,vjav.com##.fah-btn
 shenchuang.com###all
 shenchuang.com##.MainR_ad3
 shengxinwang.net###floatDivBoxs
