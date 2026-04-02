@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-02 15:58:53（北京时间）
+! Version: 2026-04-02 16:52:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67938
+! Total count: 67943
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5089,9 +5089,7 @@
 @@||acilissaati.com^$generichide
 @@||acornsquare.jp^$stealth=dpi
 @@||acortalink.me/s.php?$stealth=referrer
-@@||acs-m.daraz.com.bd^
 @@||acs-m.daraz.com.bd^|
-@@||acs-m.daraz.pk^
 @@||acs-m.daraz.pk^|
 @@||acs.m.taobao.com
 @@||acs.m.taobao.com^
@@ -5104,7 +5102,6 @@
 @@||act.hoyoverse.com^
 @@||act.vip.iqiyi.com^
 @@||act.zhuanzhuan.com^
-@@||action.metaffiliation.com^
 @@||action.metaffiliation.com^|
 @@||actiris.be/urchin.js
 @@||active.jd.com^
@@ -6107,6 +6104,7 @@
 @@||api.mapbox.com^$stealth=referrer,domain=planet.com
 @@||api.mapbox.com^$stealth=referrer,domain=tunein.com
 @@||api.mapbox.com^$xmlhttprequest,stealth,domain=weather.com
+@@||api.mapy.*/maptiles/$stealth=referrer
 @@||api.mapy.cz/*/maptiles/$stealth=referrer
 @@||api.mapy.cz^$stealth
 @@||api.meituan.com^
@@ -10014,6 +10012,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -10944,6 +10943,7 @@
 @@||iflow.uc.cn^
 @@||iflow.uczzd.cn^
 @@||iframe.arkoselabs.com^
+@@||iframe.coomeet.me^$stealth=webrtc
 @@||iframe.dacast.com/vod/$stealth=referrer
 @@||iframe.simplex-affiliates.com^$stealth=referrer
 @@||iframe.statics.space/magma/rc/libs/contribAds/*/videojs.ads.min.js$domain=vmf.edge-apps.net
@@ -18071,6 +18071,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -22711,8 +22712,12 @@ azimutyachts.com##.floatFooter
 azimutyachts.cz##.floatFooter
 azlyrics.com##.lboard-wrap
 azlyrics.com##.ringtone
+aznude.com###direct-link-desktop
+aznude.com###exo-native-az-container
 aznude.com##.az-ads-banner
 aznude.com##.az-footer > .color-space:has(> #aznude_native)
+aznude.com##.live-button-wrapper
+aznude.com##.single-video-4x4-ad-container
 aznude.com##div[id^="resized"]:has(> .adsbyexoclick)
 azoai.com,azobuild.com,azocleantech.com,azolifesciences.com,azom.com,azomining.com,azonano.com,azooptics.com,azoquantum.com,azorobotics.com,azosensors.com##.promoted-item
 azoai.com,azobuild.com,azocleantech.com,azolifesciences.com,azom.com,azomining.com,azonano.com,azooptics.com,azoquantum.com,azorobotics.com,azosensors.com,insidehpc.com##.sidebar-sponsored-content
@@ -26255,6 +26260,7 @@ chateauversailles.fr##.bloc-notifications
 chateauxhotels.com###notificationBar
 chatelaine.com##.assmbly-ad-text
 chatgpt.com##.border-token-border-default.mt-2.border-t:has(button[aria-label="Ad options"])
+chatgpt.com##div[class]:has(> div.flex > button[aria-label="Ad options"])
 chatgptdemo.info,chatgptdemo.net###ADS-block-detect
 chatgptdemo.net##.transparent-div
 chathispano.com##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd-alert-dismissible
@@ -29215,7 +29221,6 @@ definebabe.com##.main-container > section.p-ig:has(> div.models-videos)
 definebabe.com##.photos > div.d-flex:has(> a[href^="/go/"])
 definebabe.com##.promo
 definebabe.com##.right-sidebar
-definebabe.com##.sponsored
 definebabe.com##.subheader
 definebabe.com##.videos > div.d-flex
 definebabe.com##pjsdiv[id^="DF_player_control_"]
@@ -32677,7 +32682,6 @@ fastpeoplesearch.com##.ad-widget-container
 fastpeoplesearch.com##.admap
 fastpeoplesearch.com##div[id]:has(> div[class^="ad-widget-"])
 fastpeoplesearch.com##div[style]:has(> div[class^="ad-widget-"])
-fastpeoplesearch.com,videezy.com,infoq.com,english.newstracklive.com,irishtimes.com,libhunt.com,runemate.com,trends.gab.com,gotporn.com##.sponsored
 fastseduction.com###splash
 fastseduction.com,fieggen.com,geekwire.com,landreport.com,semiengineering.com,vuejs.org,whenitdrops.com###sponsors
 fastseduction.com,geekwire.com,landreport.com,semiengineering.com,vuejs.org,whenitdrops.com###sponsors
@@ -55576,6 +55580,7 @@ sen360.sn##.alert-dismissible
 send-anywhere.com###gpt-container
 send.cm##.df-example
 send.cz##.cookie-ok
+send.vis.ee##send-intro .w-full.mb-2.text-orange-60
 send2video.com###banners
 sendasmile.de##.consentmodal
 sendvid.com###ftr
