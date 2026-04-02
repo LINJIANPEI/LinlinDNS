@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-02 23:50:39（北京时间）
+! Version: 2026-04-03 00:44:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 67958
+! Total count: 67949
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2103,12 +2103,6 @@
 123movies.co##a[href^="/putonline/"][target="_blank"] > img
 123movies.info##.host > a[href="#"]
 123movies.info##.host > a[href="#"] ~ a
-123movies.la##.content-kub
-123movies.la##.content-kusss
-123movies.la##.mvi-content > div[class^="mvi"] > a.btn[target="_blank"]
-123movies.la##a[href][target="_blank"][class^="adsbut_"]
-123movies.la##a[href^="http://bit.ly/"]
-123movies.la##script + div > div[style^="position:relative;"]
 123moviesfree.net,0123movie.net##.card-body > .row > .col-lg-3 > .d-grid > button.btn-primary
 123moviesg.com##.banner_center
 123pan.com##.adv-container-pc
@@ -29370,7 +29364,6 @@ deshdoaba.com##.site-branding
 deshgold.com##.rltcp_information_cookie, .rltcp_overlay
 desi-porn.tube##.content > div > div[class]:has(> .wrapper:only-child > div[class]:first-child + div[class]:last-child > div[class]:only-child > .da-container)
 desi-porn.tube##.da-container
-desi-porn.tube,vjav.com,fuxxx.com,hdzog.tube,hdzog.com,hotmovs.com,privatehomeclips.com##.partners-wrap
 desidime.com##.google-ads-section
 desidime.com##div[id^="div-ad"]
 designboom.com##.aside-adv-box
@@ -32379,7 +32372,6 @@ fairtrade.at###cc
 faithpot.com##.inarticle-ad
 fajnegotowanie.pl##.banner-container
 fakazavibes.com,zamusic.org,javhdo.net,movies.meetdownload.com##a[href^="https://bit.ly/"]
-fakazavibes.com,zamusic.org,javhdo.net,movies.meetdownload.com,123movies.la##a[href^="https://bit.ly/"]
 fake-it.ws##.banner-frame
 fakedetail.com,telegraphindia.com,ltnovel.com##.adsbox
 fakemail.net##div.noPadding[style="height:200px !important;"]
@@ -40420,7 +40412,6 @@ itchygame.com##div[class^="candySide"]
 itchygame.com##div[class^="ntkSide"]
 itdmusics.com##.content > * > div[style="width:300px;height:250px"]
 itdmusics.com##.itdmu-widget
-itdmusicy.com,janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
 itdog.cn##+js(aopr,alert)
 itdog.cn##.card[style="padding: 6px 10px 5px 5px;"]
 itdog.cn##.col-12 > .card.mb-3[style="padding: 5px;"]
@@ -50563,6 +50554,7 @@ pcdown.net##.sort_list > .clearfix:first-child
 pcformat.pl###iframePopupContainer
 pcgamebenchmark.com##.evolve-cta
 pcgamebenchmark.com##.nova_wrapper
+pcgamebenchmark.com##.video:has(> div#nn_player)
 pcgamebenchmark.com,pcgamesn.com,pockettactics.com,thedigitalfix.com,wargamer.com###nn_astro_wrapper
 pcgamebenchmark.com,soccerway.com,streetcheck.co.uk##.placement
 pcgamer.com###coupons
@@ -52753,6 +52745,7 @@ producthunt.com###content > div:has(> div:only-child > img + div > div > a[href^
 producthunt.com##.styles_item__hNPI1
 producthunt.com##div[class="my-2 flex cursor-pointer flex-row items-center gap-4 rounded-lg bg-gray-50 p-3"]:has(a[href="/sponsor"])
 producthunt.com##div[class="my-2 flex cursor-pointer flex-row items-center gap-4 rounded-lg bg-gray-50 p-3"]:has(img[src="/i/33b26ee8f2668842e38841253cfde42aa203585e395ff731f21aebffbb38c8e5"])
+producthunt.com##div[class="my-2 flex cursor-pointer flex-row items-center gap-4 rounded-lg bg-gray-50 p-3"]:has(img[src^="/i/"])
 producthunt.com##div[class^="styles_ad"]
 producthunt.com##div[data-test] > section:has(a[href^="/r/ad/"])
 producthunt.com##div[data-test^="ad-slot"]
@@ -66365,8 +66358,6 @@ xs.cz##.cookie
 xscode.com##xsc-cookies-consent
 xsexvideos.pro,mature-tube.sexy,pornpipi.com###myads
 xsharings.com###menu-main-menu > .menu-item > a[href*=".php?"][target="_blank"][rel]
-xshemale.tube,keporn.vip,fuxxx.com,pornl.com##.video-ntv-wrapper
-xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
 xshemale.tv##.player-holder + div.aside
 xslca.cc##.footer ~ div[class$="fanye"][onclick$="fanye()"]
 xslca.cc##div:not([id]):not([class]) > div[style="width: 412px;"]
