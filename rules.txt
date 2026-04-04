@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-04 15:42:16（北京时间）
+! Version: 2026-04-04 16:29:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 67981
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -11551,7 +11551,6 @@
 @@||infowars.com/wp-content/themes/$image
 @@||infowars.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
 @@||infoworld.com/www/js/ads/gpt_includes.js$~third-party
-@@||infra-api.newrelic.com^
 @@||infra-api.newrelic.com^|
 @@||infusionsoft.app/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
 @@||infusionsoft.com/aff.html$subdocument,domain=pages.infusionsoft.net|reginadancecity.ca
@@ -11608,7 +11607,6 @@
 @@||interface3.music.163.com.163jiasu.com^
 @@||interface3.music.163.com^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -11692,7 +11690,6 @@
 @@||itopmusic.com/wp-content/plugins/ad-ace//includes/adblock-detector/advertisement.js
 @@||itopmusic.com^$generichide
 @@||itopmusic.org^$generichide
-@@||itoya.ec-optimizer.com^
 @@||itoya.ec-optimizer.com^|
 @@||its.map.baidu.com^
 @@||itsguider.com^$generichide
@@ -18077,6 +18074,7 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
+@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -48815,6 +48813,7 @@ nkd.com###DIV_1
 nkreport.jp,ncbellu.net,covod.work,lenlino.com,mcspigot.com,nknews.jp##body > div#wp-footer > script + div[id][class*=" "]
 nkreport.jp,nknews.jp###wp-footer > #page-top ~ div[id][class]
 nlc.gov.cn###lovexin12xx
+nlcosplay.com##.banner-wrapper + div[id][class*=" "]
 nld.com.vn###BorderMenutop > .bordertopmenuv4
 nlite.it###system-message, #system-messages, #system-message-container
 nltimes.nl##.serve
@@ -64677,6 +64676,7 @@ wed114.cn###rightdiv
 wed114.cn##.adtwo
 wedoogift.com##wdgg-cookies-preferences-banner
 wedos.cz##.dialog-message
+weebcentral.com##div[class][style]:has(> div.notranslate > iframe[sandbox*="allow-popups"])
 weebly.com##a[href^="https://www.ebay.com"]
 weedmaps.com##div[data-testid="notification"]
 weekday.com##.m-error-banner
