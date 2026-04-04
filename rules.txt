@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-04 20:31:16（北京时间）
+! Version: 2026-04-04 21:45:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68028
+! Total count: 68048
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3287,7 +3287,6 @@
 4sysops.com##.article-content > div[id^="div-test-"][style="margin-bottom:21px; -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; "]
 4sysops.com##.article-content > div[style="text-align:center;"]
 4sysops.com##div[id] > div[style^="min-height: 50px; width: 100%;"]
-4sysops.com,activistpost.com,aftvnews.com,arcadepunks.com,autotalk.co.nz,corrosionhour.com,corvetteblogger.com,dcrainmaker.com,discover.is,elhayat-life.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,inews.co.uk,macsources.com,manhuatop.org,mediachomp.com,metalsucks.net,mmoculture.com,monstersandcritics.com,motoringfile.com,nasaspaceflight.com,newsbtc.com,openloading.com,patriotfetch.com,planetofreviews.com,precinctreporter.com,prepperwebsite.com,rugbylad.ie,sashares.co.za,scienceandliteracy.org,seganerds.com,sixteen-nine.net,snipercentral.com,spokesman-recorder.com,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,torrentmac.net,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com,windowslatest.com##.widget_custom_html
 4sysops.com,activistpost.com,aftvnews.com,arcadepunks.com,autotalk.co.nz,corrosionhour.com,corvetteblogger.com,dcrainmaker.com,discover.is,elhayat-life.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,macsources.com,manhuatop.org,mediachomp.com,metalsucks.net,mmoculture.com,monstersandcritics.com,motoringfile.com,nasaspaceflight.com,newsbtc.com,openloading.com,patriotfetch.com,planetofreviews.com,precinctreporter.com,prepperwebsite.com,rugbylad.ie,sashares.co.za,scienceandliteracy.org,seganerds.com,sixteen-nine.net,snipercentral.com,spokesman-recorder.com,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,torrentmac.net,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com,windowslatest.com##.widget_custom_html
 4sysops.com,activistpost.com,aftvnews.com,arcadepunks.com,corrosionhour.com,corvetteblogger.com,dcrainmaker.com,discover.is,elhayat-life.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,macsources.com,manhuatop.org,mediachomp.com,metalsucks.net,mmoculture.com,monstersandcritics.com,motoringfile.com,nasaspaceflight.com,newsbtc.com,openloading.com,patriotfetch.com,planetofreviews.com,precinctreporter.com,prepperwebsite.com,rugbylad.ie,sashares.co.za,scienceabc.com,scienceandliteracy.org,sixteen-nine.net,snipercentral.com,spokesman-recorder.com,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,torrentmac.net,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com##.widget_custom_html
 4teachers.org###banner-wrapper
@@ -3617,7 +3616,6 @@
 6abc.com,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com##.StickyAdWrapper
 6abc.com,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com##.leaderboard2
 6abc.com,abcnews.com,economictimes.indiatimes.com,goodmorningamerica.com##.taboola
-6abc.com,abcnews.com,goodmorningamerica.com##.taboola
 6abc.com,abcnews.go.com,goodmorningamerica.com##.taboola
 6fzd.com,eyy5.cn,fzd3.com##.area1
 6fzd.com,fzd3.com###comiis_app_block_22
@@ -4648,7 +4646,6 @@
 @@||*.bblmw.cn^
 @@||*.cdninstagram.com^
 @@||*.dlied1.cdntips.net^
-@@||*.doubao-app.cn^
 @@||*.img.mobile.sina.cn^
 @@||*.in-addr.arpa^
 @@||*.ke.com^
@@ -5033,6 +5030,7 @@
 @@||account.adobe.com^$document,domain=services.adobe.com,stealth=useragent
 @@||account.agiso.com^
 @@||account.dianping.com^
+@@||account.doubao.com^
 @@||account.huawei.com^
 @@||account.mail.ru^$stealth=useragent
 @@||account.mcid.mynavi.jp^$stealth=referrer
@@ -6371,6 +6369,7 @@
 @@||arstechnica.com/*/*/*-banner-ad-
 @@||arstechnica.com^$generichide,badfilter
 @@||art-reklama.razitko.cz^$domain=art-reklama.razitko.cz
+@@||art.doubao.com^
 @@||article.zlink.toutiao.com^
 @@||articlesnew.com^$generichide
 @@||artifactory.appodeal.com^
@@ -6391,6 +6390,7 @@
 @@||ask.qcloudimg.com^$stealth=referrer,domain=cloud.tencent.com
 @@||ask4movie.*^$generichide
 @@||aspdotnet-suresh.com^$generichide
+@@||asr-ime.doubao.com^
 @@||assbbs.com^$generichide
 @@||asset*.coupangcdn.com^$stealth=referrer
 @@||asset*.coupangcdn.com^$stealth=referrer,domain=coupang.com
@@ -7218,6 +7218,7 @@
 @@||cdn-chateva.zhhainiao.com^
 @@||cdn-f1.assistant.miui.com^
 @@||cdn-go.cn^
+@@||cdn-ime.doubao.com^
 @@||cdn-lfs.hf.co/repos/$stealth=3p-cache
 @@||cdn-manga.com^$image,stealth=referrer
 @@||cdn-msp*.18comic*.*^
@@ -7866,6 +7867,7 @@
 @@||closeload.com^$generichide
 @@||cloud-*.onionflix.$stealth=referrer
 @@||cloud-*.onionplay.$stealth=referrer
+@@||cloud-ime.doubao.com^
 @@||cloud.189.cn/web/subapp/main.html$jsinject,elemhide,extension
 @@||cloud.189.cn^$xmlhttprequest,elemhide,jsinject,extension
 @@||cloud.google.com^$generichide
@@ -8547,6 +8549,7 @@
 @@||desirecourse.com^$generichide
 @@||desirecourse.net/wp-content/*/themes/jannah/assets/js/advertisement-*.js
 @@||desirecourse.net^$generichide
+@@||desktop.doubao.com^
 @@||desktophut.com/ad1.js
 @@||destinationamerica.com^$generichide
 @@||destyy.com^$generichide
@@ -8588,6 +8591,7 @@
 @@||diariodopeixe.com.br^$generichide
 @@||dicasvalores.com^$stealth=referrer
 @@||dickpritchettrealestate.com^$generichide
+@@||dict-ime.doubao.com^
 @@||dict.rambler.ru/fcgi-bin/$xmlhttprequest,domain=rambler.ru
 @@||dictionary.search.yahoo.com/beacon/sc?&ajaxdd=tabsCard&
 @@||dictionnaire-medical.net^$generichide
@@ -8716,6 +8720,7 @@
 @@||dnvodcdn.me/*/mp4$stealth=referrer,domain=iyf.tv
 @@||do0od.com^$generichide
 @@||do7go.com^$generichide
+@@||doc.doubao.com^
 @@||doc.oplist.org.cn^
 @@||doc.oplist.org^
 @@||doc110.com^*/ad.css?$stylesheet
@@ -8780,7 +8785,6 @@
 @@||dotomi.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@||douban.com/popup/login?
 @@||doubanio.com/view/$stealth=referrer
-@@||doubao-app.cn^
 @@||doubibackup.com^$generichide
 @@||doubleclick.net/clk;$popup,domain=3g.co.uk|4g.co.uk|hotukdeals.com|jobamatic.com|play.google.com|santander.co.uk|techrepublic.com
 @@||doubleclick.net/ddm/$image,domain=aetv.com|fyi.tv|history.com|mylifetime.com
@@ -8816,6 +8820,7 @@
 @@||download.com/ad-
 @@||download.dangbei.com^
 @@||download.deepseek.com^
+@@||download.doubao.com^
 @@||download.heytap.com^
 @@||download.hr/module/detector/adsbygoogle.js
 @@||download.inventivetalent.org/external/adfly/make.php
@@ -8861,6 +8866,7 @@
 @@||drake-scans.com^$generichide
 @@||dramafren.org^$generichide
 @@||dramaz.se/*antiadblock.js
+@@||draw.doubao.com^
 @@||dream-sound.com^$generichide
 @@||dreamcheeky.com^$generichide
 @@||dreamdth.com^$generichide
@@ -9115,6 +9121,7 @@
 @@||embedwish.com^
 @@||emea.api.flow.microsoft.com/providers/Microsoft.ProcessSimple/environments/$domain=make.powerautomate.com,stealth=referrer
 @@||emjcd.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
+@@||emoji-ime.doubao.com^
 @@||emoji.bj.bcebos.com^
 @@||emoji.gg^$generichide
 @@||emoji.qpic.cn^
@@ -9422,6 +9429,7 @@
 @@||file-upload.net/include/adserver.js$domain=file-upload.net
 @@||file-upload.net/include/werbebanner-ad.js
 @@||file.40017.cn^
+@@||file.doubao.com^
 @@||file.fm/f/$stealth=webrtc
 @@||file.market.xiaomi.com^
 @@||file.myqcloud.com/*.mp4?token=$stealth=referrer
@@ -11401,7 +11409,14 @@
 @@||imasdk.googleapis.com^$xmlhttprequest,domain=uservideo.xyz
 @@||imasdk.googleapis.com^|
 @@||imbc.com/operate/common/ad/covid
+@@||ime-api.doubao.com^
+@@||ime-conf.doubao.com^
+@@||ime-hot.doubao.com^
+@@||ime-igw.doubao.com^
+@@||ime-log.doubao.com^
 @@||ime-res-download.xfinfr.com^
+@@||ime-stat.doubao.com^
+@@||ime-syn.doubao.com^
 @@||imeclient.openspeech.cn^
 @@||imeteo.sk/clanok/adx.adform.net/adx/
 @@||imfaclub.com/images/$stealth=referrer,domain=lovehug.net
@@ -12859,6 +12874,7 @@
 @@||media-us.amillionads.com/*.mp3$domain=open.spotify.com
 @@||media.9game.cn^
 @@||media.biertijd.com/galleries/$stealth=referrer,domain=biertijd.xxx
+@@||media.doubao.com^
 @@||media.fastclick.net/iab^$domain=youronlinechoices.com
 @@||media.foundit.*/trex/public/theme_3/dist/js/userTracking.js$script,~third-party
 @@||media.jd.com/static/*/ad
@@ -13835,13 +13851,13 @@
 @@||onvasortir.com^$generichide
 @@||open.account.oppo.com^
 @@||open.bytedanceapi.com^
-@@||open.doubao.com^
 @@||open.douyin.com^
 @@||open.oppomobile.com^
 @@||open.snssdk.com^
 @@||open.spotify.com^$generichide
 @@||openad.oss-cn-shanghai.aliyuncs.com^$domain=yicai.com
 @@||openap-alps.51y5.net^
+@@||openapi.doubao.com^
 @@||openapi.vmall.com^
 @@||opencloud.wostore.cn^
 @@||opendrive.online^$generichide
@@ -14959,7 +14975,6 @@
 @@||pawastreams.info/gamer/*.php$subdocument,stealth=referrer
 @@||pay.bilibili.com^
 @@||pay.citylink.pro/stats/services/$~third-party
-@@||pay.doubao.com^
 @@||pay.ele.me^
 @@||pay.heytap.com^
 @@||pay.huawei.com^
@@ -17110,6 +17125,7 @@
 @@||static-cf.cleverbridge.com/mycontent^$domain=secure.ccleaner.com,stealth=referrer
 @@||static-file.com^$stealth=referrer,domain=eyny.com
 @@||static-hw.xnxx-cdn.com^
+@@||static-ime.doubao.com^
 @@||static-l3.xnxx-cdn.com^
 @@||static-mobilegame-1.biligame.net^
 @@||static-redesign.cnbcfm.com/dist/components-PcmModule-Ads-BoxInline-*.js$domain=cnbc.com
@@ -17332,6 +17348,7 @@
 @@||stfly.$generichide
 @@||stfly.io^$generichide
 @@||stfly.me^$stealth=referrer
+@@||sticker-ime.doubao.com^
 @@||stjscn.s-msn.com/portal/hp/2011/udctrack.
 @@||stltoday.com^$generichide
 @@||stmruby.com/js/ads_adverts.js
@@ -18158,6 +18175,7 @@
 @@||ttmetrics.faz.net/rest/v1/delivery?$domain=faz.net
 @@||ttorial.com^$generichide
 @@||ttrar.com/statics/pos_js/jquery.gotop.js
+@@||tts-ime.doubao.com^
 @@||tts.carbonatixaudio.com^$stealth=referrer
 @@||ttsfree.com/adex.js
 @@||ttsfree.com^$generichide
@@ -18379,6 +18397,7 @@
 @@||upbitcoin.com^$generichide
 @@||update.360safe.com^
 @@||update.coloros.com^
+@@||update.doubao.com^
 @@||update.hicloud.com^
 @@||update.oneplus.com^
 @@||update.oneplus.net^
@@ -31453,6 +31472,7 @@ eloben.hu##.law-accept
 eloboost24.eu##.cookie
 eloking.com##.elo-ad-container
 elopage.com##.Toastify ~ .elo-btn
+eloshapes.com##[id^="ads-"]
 eloshapes.com##div[id^="prmos-"]
 eloutput.com###abn_singlestealer
 elperiodicodeaqui.com###infop
