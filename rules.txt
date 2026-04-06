@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-06 09:20:49（北京时间）
+! Version: 2026-04-06 12:35:38（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68059
+! Total count: 68050
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13980,6 +13980,7 @@
 @@||p.jwpcdn.com/*/skins/$third-party
 @@||p.jwpcdn.com/player/*.js$domain=akwam.*
 @@||p.jwpcdn.com/player/plugins/vast/v*/vast.js$domain=player.cartoonth12.com
+@@||p.liadm.com/click?$document
 @@||p.qlogo.cn^
 @@||p.sky.com^$domain=wowtv.de,stealth=referrer
 @@||p.typekit.net/p.css$stylesheet,domain=athleticpropulsionlabs.com|browserstack.com|bungie.net|business.untappd.com|getty.edu|petsafe.com|robertsspaceindustries.com
@@ -36744,6 +36745,7 @@ haaretz.co.il##.footer-ruler
 haaretz.com##div + div:has(> div[data-adunit])
 haaretz.com##div[data-test="bottomStrip"]
 haaretz.com##div[data-test="topStrip"]
+haberettim.com,thosa.info,blogenginee.com##body > #scroll-top + div[id][class*=" "]
 haberettim.com,thosa.info,blogenginee.com,unityassets4free.com##body > #scroll-top + div[id][class*=" "]
 habermarmara.com.tr,murekkephaber.com,akdenizbulten.com,mansetizmir.com,denizliekspres.com.tr,izmirhabermerkezi.com,saatbasihaber.com,mahalligundem.com##img[alt="Reklam"]
 habitat76.fr##.header-cnil
@@ -41305,17 +41307,6 @@ jm18c-oec.club,18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18
 jm18c-oec.club,18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > img + [style]
 jm18c-oec.club,18comic.org,18comic.vip,18comic.ink##div[data-group][data-width="300"]
 jm18c-oec.club,18comic.org,18comic.vip,18comic.ink##style + div[style="cursor: pointer; position: relative;"]
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink###guide-modal
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##.div_sticky2
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##.modal-backdrop
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##.row[style="display: flex;flex-wrap: wrap;"]
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##a[herf*="//"]:not([href*="18c"]) > img
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > [style*="back"]
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > div[style]
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > img
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##a[href*="//"]:not([href*="18c"]) > img + [style]
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##div[data-group][data-width="300"]
-jm18c-oec.net,18comic.org,18comic.vip,18comic.ink##style + div[style="cursor: pointer; position: relative;"]
 jman.tv###ActionBar
 jmbbs.com###xjj_jmbbs2015_01
 jmbbs.com##.middle_guanggao
@@ -60565,6 +60556,7 @@ theswagsports.com##div[id^="AS_O_TP"][name="Articleshow-Organic-TOP-2"]
 theswagsports.com,cinereporters.com##div[id^="HP_P_"][name="Homepage-Paid-Top-1-Desktop"]
 thetechbasket.com##.thete-manual-placement
 theteche.com###custom_html-8
+thetechedvocate.org,embetronicx.com,quillette.com##.AdWidget_HTMLWidget
 thetechedvocate.org,embetronicx.com,quillette.com,unityassets4free.com##.AdWidget_HTMLWidget
 thetechgame.com##.ad-height-250
 thetechhacker.com##.vc_col-sm-4:nth-child(2) > * > * > section > .vc_cta3-icon-size-md
@@ -62891,7 +62883,6 @@ unitedway.org##.footer-notification
 unitpedia.com##.container > div[class^="mb-"]:has(> div[style] > ins.adsbygoogle)
 unity.cn##div[class*="cookies-permission"]
 unityassetpack.com$$script:contains(noteAlert)
-unityassets4free.com##img[src^="https://unityassets4free.com/wp-content/uploads/"][src$="/best-url-shortner-for-unityassets4free.jpg"]
 unitymedia.de##body > div:not([id]):not([class])
 universidadeuropea.com###modal_footer[class*="cookies"]
 univisa.com.cn###popup
