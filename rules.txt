@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-08 07:29:21（北京时间）
+! Version: 2026-04-08 09:19:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68073
+! Total count: 68078
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5621,6 +5621,7 @@
 @@||aiasahi.jp/ads/$image,domain=japan.zdnet.com
 @@||aider-res.meizu.com^
 @@||aider.meizu.com^
+@@||aigenda.ru^$generichide
 @@||aihuishou.com^
 @@||aii.sh^$generichide
 @@||aikanlive.miguvideo.com^
@@ -33580,6 +33581,8 @@ foes.io###adParent
 fofmyanmar.com##center > a[rel="noopener noreferrer"] > img
 fofmyanmar.com##div[style*="text-align: center;"] > a > img[style="width: 100%; height: auto"]
 foliesbergere.com##.ui-widget, .ui-widget-overlay
+followfollow.com##.structItemContainer-group > div[style*="text-align: center; width: 100%;"]:has(> .advertisement)
+followfollow.com##div[id^="snack-incontent-"]
 followfollow.com,bluemoon-mcfc.co.uk##div[id^="snack_"]
 followfollow.com,downloadcrew.com,eurogamer.net,rockpapershotgun.com##.mpu
 followme.cn##.fm-banner-social
@@ -48569,6 +48572,7 @@ newsnow.co.uk##.c-blockmsg
 newsnow.co.uk##.grid-column__container
 newsnow.co.uk##.hero-wrapper
 newsnow.co.uk##.js-ad-frame
+newsnow.com##.hero-wrapper
 newsnow.com,newsnow.co.uk##.newsfeed__inner > div:has(> div.container__group > div.ad__container)
 newsobserver.com##div[id^="zone-el"][isdynamictemps]
 newson6.com##.gnm-banner-ad
@@ -61320,6 +61324,7 @@ toluna.com##.notification-center
 tom.com###body_right_banner
 tom.com###popupDivgame
 tomanifesto.gr##.ad
+tomato.gg##div[class^="GenericPage__VerticalAdslotContainer"]
 tombr.io###rightDiv > div[style="width:300; height:250; background-color:#222; display:inline-block"]
 tomestone.gg###ad-sidebar-skyscraper-container
 tomford.co.uk##.ui-widget-overlay, .newsletter-signup
