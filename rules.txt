@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-08 09:19:18（北京时间）
+! Version: 2026-04-08 12:28:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68078
+! Total count: 68073
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4242,7 +4242,6 @@
 @@/chunks.m3u8$stealth=referrer
 @@/clickn(download|upload)\.[a-z]{3,5}/$script,xmlhttprequest,domain=clickndownload.*|clicknupload.*
 @@/common/cf/*$domain=66u.com|changhong.com|fei3d.com|oneplusbbs.com|readboy.com
-@@/content/$stealth=referrer,xmlhttprequest,domain=cloudnestra.com
 @@/content/*.html$xmlhttprequest,stealth=referrer,domain=tvids.icu
 @@/content/*page-*.html$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
 @@/content/tour/banner/*$domain=digitalplayground.com
@@ -6931,7 +6930,6 @@
 @@||brave.com/static-assets/$image,~third-party
 @@||bravofly.com^$generichide
 @@||brfiles.com^$generichide
-@@||bric-a-brac-bulwark.site/content$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
 @@||brighteon.com/static/dfp.js
 @@||brighteon.com^$generichide
 @@||briian.com/advert.
@@ -15837,6 +15835,7 @@
 @@||reddit.com^$generichide,badfilter
 @@||reddithelp.com/*/categories/advertising^
 @@||redditinc.com/assets/images/site/*_300x250.$image,~third-party
+@@||redditmedia.com^$important
 @@||redecanais.*^$stealth=referrer
 @@||redecanaistv.*^$stealth=referrer
 @@||redefine.hit.stat24.com/*/ad.xml?id=$domain=poszkole.pl
@@ -19736,7 +19735,6 @@
 @@||zeemoontv-28.blogspot.com^$generichide
 @@||zegtrends.com^$domain=icutlink.com,stealth=referrer
 @@||zekozimo.blogspot.com^$generichide
-@@||zenithianzephyr.space/content/$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
 @@||zenless.hoyoverse.com^
 @@||zeperfs.com^$generichide
 @@||zergnet.com^$script,domain=zergnet.com
@@ -25232,7 +25230,6 @@ bscscan.com##.search-panel-ads
 bscscan.com##ul.ui-autocomplete > li > a[target="_blank"][title="Links to an External Advertiser site"]
 bscscan.com,basescan.org##div.noindex-section[data-nosnippet]
 bscscan.com,basescan.org##img[alt="Ad"]
-bscscan.com,etherscan.io,basescan.org##div.row:has(> .mb-md-0.text-dt > [data-bs-content="Sponsored banner advertisement."])
 bscscan.com,etherscan.io,basescan.org##div.row:has(> .mb-md-0.text-dt > [data-bs-content^="Sponsored"])
 bsd.net##div[data-which-id="eprivacy-banner"]
 bsdforen.de##.notices
@@ -25607,6 +25604,7 @@ calculator-online.net##.adds
 calculator-online.net##div[class="center"][style^="min-height: 90px"]
 calculator.net##div[style^="padding-top:10px"][style*="min-height:280px"]
 calculatored.com##.my-2 > div[style="width: 300px;height: 250px; align-items: center;margin:auto;"]
+calculators.ro##.adv728_90
 calculatorsoup.com##.pages
 calculatorsoup.com,thetvdb.com###Bottom
 calculatorsoup.com,yad.com,babygames.com,puzzlegame.com,cargames.com,puzzlegame.com,yiv.com,4j.com##div[id^="RightAd"]
@@ -25724,7 +25722,6 @@ camsmut.com##row:has(a[href*="?free-sex-live-cam-chat"])
 camsoda.com##div[class*="adHolder"]
 camsoda.com##div[class^="AdsRight-"]
 camstreams.tv###div-cr-inter-0
-camstreams.tv##.top-links
 camstreams.tv##a[href="https://www.sexedchat.com"]
 camstreams.tv##body #sliderBox
 camstreams.tv,eurogirlsescort.com,hdtube.porn,sexu.com##.banners
@@ -37579,7 +37576,6 @@ hentaigasm.com##a[href^="https://www.hentaiheroes.com"]
 hentaigasm.com##div[style*="width: 300px;"][style*="height:"]:has(> ins[data-zoneid])
 hentaigasm.com,channelmyanmar.org##div[id^="custom_html-"]
 hentaigasm.com,myslavegirl.org##div[style^="width: 300px; height: 250px;"]
-hentaigem.com,tabooporn.tv,eroinside.com,pornolovers.net,vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 hentaigifz.com##.single-side > .side-widget:has(> ins[data-zoneid])
 hentaihand.com##.container > .row > div:has(> .comic.box > .image > div[data-spots])
 hentaihand.com##main > div.row.mx-auto
@@ -59535,7 +59531,6 @@ tedium.co##.md-adbox
 tedquality.bg##.notification-wrapper
 teenage.engineering###te-layer
 teenager365.to##.top:has(> iframe[src^="//a.magsrv.com/"])
-teenager365.to,amateur8.com,nudespree.com##.top-links
 teenager365.to,hentaigem.com,tabooporn.tv,eroinside.com,pornolovers.net,vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 teenanal.co##.clickable-overlay
 teencumpot.com##div[id^="right-bn-"]

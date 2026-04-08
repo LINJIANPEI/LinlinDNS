@@ -121,7 +121,7 @@
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-04-07 21:41:42（北京时间）
+! Version: 2026-04-08 10:52:55（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1680,8 +1680,8 @@
 @@/clarity-*.js$domain=clarity-project.info
 @@/clickn(download|upload)\.[a-z]{3,5}/$script,xmlhttprequest,domain=clickndownload.*|clicknupload.*
 @@/common/cf/*$domain=66u.com|changhong.com|fei3d.com|oneplusbbs.com|readboy.com
-@@/content/$stealth=referrer,xmlhttprequest,domain=cloudnestra.com
 @@/content/*.html$xmlhttprequest,stealth=referrer,domain=tvids.icu
+@@/content/*page-*.html$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
 @@/content/tour/banner/*$domain=digitalplayground.com
 @@/cpc_cpm_$domain=ygo-sem.cn
 @@/crossdomain.xml$domain=channel4.com
@@ -7720,6 +7720,7 @@
 @@||ahtapot.shop/cdn/$stealth=referrer
 @@||aiarticlespinner.co^$generichide
 @@||aiasahi.jp/ads/$image,domain=japan.zdnet.com
+@@||aigenda.ru^$generichide
 @@||aii.sh^$generichide
 @@||aile.gov.tr^$stealth=dpi
 @@||aimasummd.blog.fc2.com^$generichide
@@ -8872,7 +8873,6 @@
 @@||brave.com/static-assets/$image,~third-party
 @@||bravofly.com^$generichide
 @@||brfiles.com^$generichide
-@@||bric-a-brac-bulwark.site/content$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
 @@||brightcove.com^$domain=wwe.com
 @@||brighteon.com/static/dfp.js
 @@||brighteon.com^$generichide
@@ -19110,6 +19110,7 @@
 @@||techtobo.com^$generichide
 @@||techtunes.com.bd^$generichide
 @@||teenage.engineering/store/assets/tracking-pixel.*.js$domain=teenage.engineering
+@@||teenager365.to/player/stats.php?event=$image,domain=teenager365.to
 @@||teenvogue.com/js/eventTracker.js
 @@||tehnotone.com^$generichide
 @@||tekfiz.com^$generichide
@@ -20640,7 +20641,6 @@
 @@||zeit.de/piwik/piwik.js$domain=schach.zeit.de
 @@||zeit.de/static/js/webtrekk/webtrekk_$script,domain=schach.zeit.de
 @@||zekozimo.blogspot.com^$generichide
-@@||zenithianzephyr.space/content/$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
 @@||zeperfs.com^$generichide
 @@||zergnet.com^$script,domain=zergnet.com
 @@||zerohedge.com^$generichide
