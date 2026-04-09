@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-10 00:12:10（北京时间）
+! Version: 2026-04-10 01:53:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68205
+! Total count: 68208
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3761,6 +3761,10 @@
 88nightmarket.com##.cookies
 8bo.com##.mad
 8days.sg,channelnewsasia.com##.programtic-ads
+8kporner.com,avporner.com##a[href="https://4k69.com"]
+8kporner.com,avporner.com,4k69.com##center > a[href^="https://AVporner.com"]
+8kporner.com,avporner.com,4k69.com##div[id^="hwgrid_"]
+8kporner.com,avporner.com,4k69.com##ul.right-part > li:has(> a[target="_blank"])
 8muses.xxx##.gallery > a[href=""][title=""]
 8se.me##.push-bottom
 8teenxxx.com###footerad4
@@ -9369,7 +9373,6 @@
 @@||fast-down.com^$generichide
 @@||fast.fonts.net/jsapi/core/mt.js$script,domain=abeautifuldominion.com|bkmedical.com|eclecticbars.co.uk|gables.com|itsolutions-inc.com|kinsfarmmarket.com|senate.gov|toyotagazooracing.com
 @@||fast.vidplus.dev/file*/*?host=$xmlhttprequest,stealth=referrer
-@@||fast.vidplus.dev^$xmlhttprequest,stealth=referrer,domain=player.videasy.net
 @@||fastag.kotak.com^$stealth=dpi
 @@||fastcdn.hoyoverse.com^
 @@||fastcoin.ga^$generichide
@@ -14528,7 +14531,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=production-api.androidacy.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=prostomob.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=puressh.net|iptvbin.com|htnovo.net|frendz4m.org|codenova-center.web.app|rivanimation.com|elbierzodigital.com|uploadrar.com|vknsorgula.net|safelink.asia
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=puressh.net|iptvbin.com|htnovo.net|frendz4m.org|safbits.com|codenova-center.web.app|rivanimation.com|elbierzodigital.com|uploadrar.com|vknsorgula.net|safelink.asia
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pvpoke-re.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=q84sale.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=qrcodemonkey.net,xmlhttprequest
@@ -22941,7 +22943,6 @@ babesource.com##a[href^="http://babesource.com/a/"]
 babesource.tv##.block-by
 babesource.tv##.spots
 babesource.tv##a[href^="https://babesource.tv/a/"]
-babesource.tv,hdporn-movies.com,hypnotube.com,iyottube.com,handjobhub.com,wankflix.com,messytube.com,madnessporn.com,gaytiger.com,italianoxxx.com,shemalestube.com,pornwatchers.com,ashemaletv.com,homemoviestube.com,pornclipsxxx.com,freepornhq.xxx,nudez.com###playerOverlay
 babestare.com##.block
 babestare.com##.horizontal-zone
 babestare.com##.right-column
@@ -25810,7 +25811,6 @@ camstreams.tv###div-cr-inter-0
 camstreams.tv##a[href="https://www.sexedchat.com"]
 camstreams.tv##body #sliderBox
 camstreams.tv,eurogirlsescort.com,hdtube.porn,sexu.com##.banners
-camstreams.tv,teenager365.to,amateur8.com,nudespree.com##.top-links
 camtasia-training.de###lscookr_form
 camvideos.tv##.block-video > .table > div[style="margin:5px;padding:5px;text-align:center;"] > iframe
 camvideos.tv##.thumb-live-model
@@ -28277,6 +28277,7 @@ crash.net##.mpu-block
 crash.net,defence-ua.com##.banner-block
 crash.net,visordown.com##.block-ad-manager
 crazyblog.in,studyuo.com##div[id*="_"][style^="min-width"]
+crazygames.com###game-container + div[class="css-52jk51"]
 crazygames.com##.css-1h6nq0a
 crazygames.com##.sideCol > .sidePanel.sky
 crazygames.com##div[class^="GameInfo_rightColumn"]
@@ -37661,7 +37662,6 @@ hentaifox.com###slider
 hentaifox.com##.axmiddle
 hentaifreak.org###site-header-main > .text-center
 hentaifreak.org##.text-center.col-md-6 > a[target="_blank"]  > img
-hentaigasm.com##.adv
 hentaigasm.com##[src^="https://add2home.files.wordpress.com/"]
 hentaigasm.com##a[href^="https://www.hentaiheroes.com"]
 hentaigasm.com##div[style*="width: 300px;"][style*="height:"]:has(> ins[data-zoneid])
@@ -43776,7 +43776,6 @@ liuli.pw###secondary img:not(.avatar)
 liuli.pw##a[href^="/gg2/"]
 livability.com##.full-width-off-white
 livability.com##.wp-block-jci-ad-area-two
-livacha.com,wordlegame.org,pornhills.com,gsmarena.com,aosmark.com,rat.xxx,camwhores.biz,4tube.com,porngun.net,eteenporn.com,camwhores.tv,pornformance.com##.adv
 livarava.com##div:has(> div:empty:first-child + div[id^="ad-"]:last-child)
 livarava.com##div:has(> div[id^="ad-"]:only-child)
 livarava.com##div[id^="ad-"]
@@ -52521,6 +52520,9 @@ porntb.com##.my-gallery > figure > a:has(> ins[data-zoneid])
 porntb.com##.pswp__fullscreen-ad
 porntb.com##div:is([class$="-vda"], .movable-top):has(> .tick > ins[data-zoneid])
 pornteentube.tv##.player-bns-block
+porntn.com##body > div.fullbar:has(> a.top-bar-porntn-static)
+porntn.com##div[id^="list_videos"] > div.item:has(> a:not([href*="porntn.com"]) > div > iframe)
+porntn.com,shareanynudes.com,camstreams.tv,teenager365.to,amateur8.com,nudespree.com##.top-links
 porntok.io##a[href^="https://go.mavrtracktor.com"]
 porntop.com###offerbtn
 porntop.com##.content > div.headline:has(> h2 > span.badge-ad)
@@ -52532,6 +52534,7 @@ porntop.com,onlyporn.tube,pornhits.com###inv_pause
 porntop.com,onlyporn.tube,pornhits.com##.jwplayer .btn-close
 porntop.com,pornhits.com##.text > a[rel="nofollow"]
 porntopic.com,sexwebvideo.com,camsexvideo.net###kt_player > .fp-player + a[href$="/?play=true"][target="_blank"][style]
+porntourist.com##a.nav__link[target="_blank"]
 porntrex.com###exclusive-link
 porntrex.com###index-link
 porntrex.com##.content > .link-holder-top
@@ -55799,6 +55802,7 @@ semafor.com##._adHeaderMargin_psyvh_111
 semafor.com##._adMargin_psyvh_211
 semafor.com##._homeMiddleAd_x95p9_29
 semafor.com##div[class^="styles_ad"]
+semafor.com##div[data-testid^="ad-"]
 semanticscholar.org##.copyright-banner
 semawur.com##.col-md-12 > div[style="text-align:center"] > span[style^="background-color:#fff;color:"]
 semawur.com##div[style="text-align:center"] > span[style*="font-size: 10px;"]
@@ -59657,7 +59661,6 @@ tedium.co##.md-adbox
 tedquality.bg##.notification-wrapper
 teenage.engineering###te-layer
 teenager365.to##.top:has(> iframe[src^="//a.magsrv.com/"])
-teenager365.to,hentaigem.com,tabooporn.tv,eroinside.com,pornolovers.net,vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 teenanal.co##.clickable-overlay
 teencumpot.com##div[id^="right-bn-"]
 teenextrem.com##.g-link
