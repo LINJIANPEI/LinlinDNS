@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-10 23:41:03（北京时间）
+! Version: 2026-04-11 00:40:10（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68216
+! Total count: 68215
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4416,6 +4416,7 @@
 @@/v/*.gif$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
 @@/v/*.html$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
 @@/video.m3u8$stealth=referrer,domain=missav.live
+@@/video.m3u8$stealth=referrer,domain=missav.live|missav.ws|missav123.com|missav888.com|missav.*
 @@/video.m3u8$stealth=referrer,domain=missav.ws
 @@/video/*$media,stealth=referrer,domain=douyin.com
 @@/video/*/index.m3u8?*&frame_commit=*&mw_pid=*&signature=$stealth=useragent
@@ -9603,6 +9604,7 @@
 @@||fotor.com.cn/static/web/share/js/
 @@||foundation.youdao.com^
 @@||fourhoi.com^
+@@||fourhoi.com^$image,media,stealth=referrer,domain=missav.live|missav.ws|missav123.com|missav888.com|missav.*
 @@||fourhoi.com^$image,stealth=referrer,domain=missav.ws
 @@||fourier-videoclip-eu.allawnos.com^
 @@||fourier-videoclip-in.allawnos.com^
@@ -11080,6 +11082,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=abcya.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=addictinggames.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=aksam.com.tr
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=alphatv.gr
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=amc.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=androidpolice.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=animeflv.ru
@@ -17564,6 +17567,7 @@
 @@||suratkargo.com.tr^$stealth=dpi
 @@||surfguru.com^$generichide
 @@||surirt.com/ad/ads.php?id=$script,domain=surirt.com
+@@||surrit.com/*/video*.jpeg$image,xmlhttprequest,stealth=referrer,domain=missav.live|missav.ws|missav123.com|missav888.com|missav.*
 @@||surrit.com^
 @@||surrit.com^$image,xmlhttprequest,stealth=referrer,domain=missav.live|missav.ws
 @@||survey.devographics.com^$stealth=useragent
@@ -24460,7 +24464,6 @@ blackhatworld.com##body > div[id][style="display: block;"]
 blackmod.net##.p-body-content > div[class="lSSlideOuter noticeScrollContainer"]
 blackmoreops.com##.snp-subscribeform
 blackoise.de##.wppn-wrapper
-blackporn.tube,gettranny.com,in-porn.com,sextu.com,mrgay.tube,blackporn.tube,inporn.com##div[class^="video"][class$="info"] > section
 blackpornstars.net##.btn-affiliate
 blackpornstars.net##.d-flex.justify-content-center.h-250
 blackspur.com###MainTable div[style*="background:#333"]
@@ -29543,6 +29546,8 @@ deshdoaba.com##.site-branding
 deshgold.com##.rltcp_information_cookie, .rltcp_overlay
 desi-porn.tube##.content > div > div[class]:has(> .wrapper:only-child > div[class]:first-child + div[class]:last-child > div[class]:only-child > .da-container)
 desi-porn.tube##.da-container
+desi-porn.tube,desi-porn.xyz##.header__nav > div > a[href][target="_blank"]
+desi-porn.tube,desi-porn.xyz,onlyporn.tube,transtxxx.com##a[class^="tag"][target="_blank"]
 desidime.com##.google-ads-section
 desidime.com##div[id^="div-ad"]
 designboom.com##.aside-adv-box
@@ -32750,7 +32755,6 @@ faphouse.com##a[href^="https://flirtify.com/"]
 fapnado.com##.content > div[style="text-align:center; width:100%;"]
 fapnado.com##.fluid_html_on_pause_container
 fapnado.com##[class^="xpot"]
-fapnado.com##a[href="https://theporndude.com/"]
 fapnado.com##a[href^="https://go.gsrv.dev/"]
 fapnado.com##a[href^="https://tsyndicate.com/"]
 fapnado.com##a[href^="https://www.tckcandy.com/"]
@@ -34550,7 +34554,6 @@ fulltv.tv###wrap > div[class]:has(> div > iframe[src*="fulltv.video/"])
 fullvideosporn.com###s-suggesters
 fullvideosporn.com###underplayer_direct
 fullvideosporn.com##.block-video > div.right:has(div[id^="ntv_"])
-fullvideosporn.com,blackporn.tube,lesbigo.com,porn-latina.com,inporn.com,gettranny.com,xmilf.com,vxxx.com###fhvids
 fullxcinema.cc,pornoamatorialeitaliano.it,animehentaihub.com,bestjavporn.com,hentaiasmr.moe##.happy-header
 fullxxxtube.com###ubr
 fully-fundedscholarships.com##.theiaStickySidebar > div.widget_block[id^="block"]
@@ -40933,6 +40936,7 @@ jav.gallery##[href^="https://jjgirls.com/sex/"]
 jav.guru##.banner-container
 jav.guru##.banner-widget
 jav.guru##.inside-right-sidebar > aside.widget_custom_html
+jav.guru,analyticsinsight.net,rlsbb.ru,slutsounds.com,theboobsblog.com##p > a[target="_blank"] > img
 jav.land,picyield.com###clck_ntv
 jav.sb###promo-box
 jav.watch##.banner_top_right
@@ -41936,6 +41940,7 @@ katestube.com,sleazyneasy.com,vikiporn.com,wankoz.com##.advertising
 katfile.cloud,katfile.com##div[style="position: fixed; inset: 0px; display: flex; z-index: 99999; flex-direction: column; justify-content: center; align-items: center;"]
 katfile.cloud,katfile.com,jav.guru,analyticsinsight.net,rlsbb.ru,slutsounds.com,theboobsblog.com##p > a[target="_blank"] > img
 katfile.online###adb-overlay
+katfile.ws###container > p > a[href]
 kathimerini.com.cy##.ban_300x250
 kathimerini.com.cy##.ban_hor_d
 kathimerini.com.cy##.catfish_ad
@@ -45712,6 +45717,7 @@ memeburn.com,ventureburn.com##.wrapper--grey
 memeburn.com,ventureburn.com##[id^="x_inter_ad"]
 memedroid.com###aside-affix-container > div[style] > a[target="_blank"] > img
 memedroid.com###footer-sticky-ad-widget
+memedroid.com###stakeNavbarAd
 memedroid.com##.empower-ad
 memedroid.com##div[id^="aside-ad-container"]
 memedroid.com##div[id^="freestar-ad-"]
@@ -49956,7 +49962,6 @@ onlyinyourstate.com##.py-8.md\:flex
 onlymyhealth.com##.gutterBanner
 onlymyhealth.com##[class*="_omh_banner_"]
 onlyoffice.com###portal div[class*="snackbar"]
-onlyporn.tube##.block-video > div.right
 onlyporn.tube##.ft
 onlyporn.tube,fullvideosporn.com,blackporn.tube,lesbigo.com,porn-latina.com,inporn.com,gettranny.com,xmilf.com,vxxx.com###fhvids
 onlyporn.tube,pastebin.com,realgfporn.com##.promo-bar
@@ -51255,7 +51260,6 @@ pic4you.ru,pic5you.ru##body > #bb
 picarto.tv##div[class*="CookieCompliance"]
 picazor.com##.bg-rose-500:has(> a[href="/livesex"])
 picazor.com##a[href="/livesex"]
-picazor.com##a[href="https://theporndude.com/"]
 picazor.com##main.h-full > div.mx-auto:has(iframe[src^="//bullionglidingscuttle.com/"])
 picbaron.com,imgbaron.com##a[href="https://forum.picbaron.com"] > img
 picbaron.com,imgbaron.com##a[href^="https://sexymeets.club/"]
@@ -52155,7 +52159,6 @@ pornburst.xxx##div[class$="-iframe mb-20 text-center"]
 pornburst.xxx,serviporno.com##.ntv-disclaimer
 pornchimp.com##.oustream
 pornclassic.tube,tubepornclassic.com##.content > div > div.container + div
-pornclassic.tube,tubepornclassic.com##a[href^="http://www.theclassicporn.com/"]
 pornclassic.tube,tubepornclassic.com,xanimeporn.com,blackmod.net,multiup.eu,orbz.io##div[style="width: 300px; height: 250px;"]
 pornclipsxxx.com##div[align="right"][style="color:#333;text-align:center;"]
 porncomics.com,yande.re##iframe[width="300"][height="250"]
@@ -52298,7 +52301,6 @@ pornhits.com###s-suggesters
 pornhits.com##.jw-channel-btn.nopop
 pornhits.com##.jw-hardlink-btn
 pornhits.com##.nopop > .jw-hardlink-inner
-pornhits.com,onlyporn.tube,xjav.tube,xjav.tube,in-porn.com,inporn.com##.jw-channel-btn.nopop
 pornhoarder.net##.cdl-banner a[rel="nofollow"] > img
 pornhoarder.tv##.video-detail-bspace
 pornhub.com###hd-rightColVideoPage>none
@@ -52382,8 +52384,6 @@ pornj.com,see.xxx,pornl.com##.vda-item
 pornjam.com##.right-player-43
 pornl.com###tags-scroll > h3.tag__item:has(> a[target="_blank"][href])
 pornl.com##.underplayer > section
-pornl.tube,xshemale.tube,keporn.vip,fuxxx.com,pornl.com##.video-ntv-wrapper
-pornl.tube,xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
 pornleaks.in,comohoy.com##div[id^="anti-adblock-"]
 pornleaks.in,flightradar24.com##.noads
 pornlib.com###lcams2
@@ -56071,7 +56071,6 @@ sexwebvideo.net##div.trailer-sponsor
 sexy-youtubers.com##.meetfuck
 sexy-youtubers.com##.td-ss-main-sidebar > aside.widget > div.textwidget > p a:not([href*="sexy-youtubers.com"])
 sexy-youtubers.com##a[href="http://weknowporn.com"]
-sexy-youtubers.com##a[href="https://theporndude.com/"]
 sexy-youtubers.com##a[href^="http://aj1070.online/"]
 sexy-youtubers.com##a[href^="https://secure.chewynet.com/"]
 sexy-youtubers.com##iframe[width="300px"][height="250px"]
