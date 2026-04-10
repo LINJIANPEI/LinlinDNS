@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-10 09:20:28（北京时间）
+! Version: 2026-04-10 12:38:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68214
+! Total count: 68205
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3252,8 +3252,6 @@
 4hu.tv##.couplet-left
 4hu.tv##.kkm-content
 4hu.tv##.wrap > div.mod > div.row > dl:has(> dt > a[target="_blank"]:not([href^="/html/"]) > img)
-4k69.com##a[href^="https://theporndude."]
-4k69.com##center > a[href^="https://AVporner.com/"]
 4khd.com##.centbtd
 4khd.com##.popup-iframe
 4khd.com,uuss.uk##iframe.popup-iframe
@@ -9092,7 +9090,6 @@
 @@||ekamus.info^$generichide
 @@||eksenload.site^$stealth=referrer
 @@||elabs12.com/functions/message_view.html$document
-@@||elahmad.com/ads/fc.php
 @@||elconfidencial.com^*/AnalyticsEvent.js
 @@||elconfidencial.com^*/EventTracker.js
 @@||eldaminger.blogspot.com^$generichide
@@ -11135,7 +11132,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=drphil.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=earth.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=einthusan.ca|einthusan.tv|einthusan.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=elahmad.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=elle.pl
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=embed-zattoo.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=etonline.com
@@ -11913,7 +11909,6 @@
 @@||js.assemblyexchange.com/wana.*.js$domain=worldstar.com|worldstarhiphop.com
 @@||js.datadome.co/tags.js$domain=thefork.it
 @@||js.datadome.co/tags.js$script,domain=monster.ca|rvtrader.com|serasa.com.br|sso.garena.com|thefork.at|thefork.be|thefork.ch|thefork.co.uk|thefork.com|thefork.de|thefork.es|thefork.fr|thefork.it|thefork.nl|thefork.pt|thefork.se|ugg.com
-@@||js.datadome.co/tags.js$script,domain=monster.ca|serasa.com.br|sso.garena.com|thefork.at|thefork.be|thefork.ch|thefork.co.uk|thefork.com|thefork.de|thefork.es|thefork.fr|thefork.it|thefork.nl|thefork.pt|thefork.se|ugg.com
 @@||js.datadome.co/tags.js$script,domain=monster.ca|sso.garena.com|thefork.at|thefork.be|thefork.ch|thefork.co.uk|thefork.com|thefork.de|thefork.es|thefork.fr|thefork.it|thefork.nl|thefork.pt|thefork.se|ugg.com
 @@||js.hyra.io/*.js$~third-party
 @@||js.img.10010.com^
@@ -22779,9 +22774,6 @@ avpgalaxy.net##.ab-bottomsticky
 avple.tv##.MuiSkeleton-root
 avple.tv##.jss13
 avple.tv##.jss20
-avporner.com##a[href="https://4k69.com"]
-avporner.com##ul.right-part > li:has(> a[target="_blank"])
-avporner.com,4k69.com##div[id^="hwgrid_"]
 avsubthai.me###page > center
 avsubthai.me##.ad
 avsuggest.com,qiaobutang.com##.overlay
@@ -22899,7 +22891,6 @@ azorek.pl##.giodoContainer
 azpolitika.info##.top-bnr
 azpolitika.info,az##.adsbyskyline
 azrotv.com###ad_asd
-azrotv.com,elahmad.com###ad_asd
 azscore.com##.b-odds
 azscore.com##.bettingTip__buttonsContainer
 azscore.com##.bkw
@@ -31402,7 +31393,6 @@ ekstraklasa.org##app-article a[target="_blank"][href*="utm_campaign"] > img
 ekstraklasatrolls.pl##.apPluginContainer
 elabrick24.pl##.configMessages
 elaee.com###bcnil
-elahmad.com##div[id^="adsads"]
 elahmad.org##body > div[id^="ads"]
 elahmad.org##body > div[style^="z-index: 99999; position: fixed;"]
 elakolije.rs###kolacic
@@ -31537,6 +31527,7 @@ eleonline.it###content > div[style*="fixed"]
 elevationmap.net###publift_home_billboard
 elevenforum.com##.p-body-sidebar > div[style^="width:"][style*="text-align:center;height:"][style*="margin-bottom:"]
 elevenforum.com##div[style="width:300px;padding-bottom:10px;text-align:center;height:600px;margin-bottom:15px;"]
+elevenforum.com##div[style="width:300px;padding-bottom:10px;text-align:center;height:612px;margin-bottom:15px;"]
 elevenforum.com,html-code-generator.com##.gads
 elevensports.com###__next ~ div[class^="css"]
 eleventickets.com##.cookies-aceite-home-container
@@ -47215,9 +47206,12 @@ mthai.com##div[id^="dfp-"]
 mtlblog.com###article-text > div.awrapper
 mtom-mag.com###alert_trk
 mtpro.xyz##.entry-content > div > .wp-block-button
+mtpro.xyz##a.wp-block-button__link[href^="tg://resolve?domain=durevpnbot"]
 mtpro.xyz##a[class~="wp-block-button__link"][target="_blank"]:not([href*="mtpro"])
 mtpro.xyz##a[href][onclick*="this.href="][target="_blank"]
+mtpro.xyz##a[href^="/vpn"]
 mtpro.xyz##a[href^="/vpn.php"]
+mtpro.xyz##a[href^="https://mod.ovh/"]
 mtpro.xyz##a[href^="https://mod.ovh/proxy"]
 mtrend.cn###morecontent > .morecontent_next[style]
 mtrend.cn###topictabs1
@@ -55667,7 +55661,6 @@ search.yahoo.com##.searchRightMiddleAds
 search.yahoo.com##.searchRightTopAds
 searchcommander.com##.footer-widget
 searchcommander.com##[href^="https://www.searchcommander.com/rec/"]
-searchencrypt.com##.home__banner
 searchencrypt.com##.serp__top-ads
 searchencrypt.com##.web-result.unloaded.sr
 searchenginejournal.com###scheader.media
@@ -56155,7 +56148,6 @@ share.dmhy.org##div[align="center"][id] > a > img
 shareae.com###dle-content > div.block > center > a[target="_blank"] > *
 shareae.com###dle-content > div.block > div[id^="news-id-"] > p[style="word-spacing: 1.1px;"] > object
 shareae.com##a[href^="https://aejuice.com/"]
-shareanynudes.com,camstreams.tv,teenager365.to,amateur8.com,nudespree.com##.top-links
 shareanynudes.com,teenager365.to,hentaigem.com,tabooporn.tv,eroinside.com,pornolovers.net,vipporns.com,shooshtime.com,thothub.org,animefurry.com,hentai420.com,xporn.tv,leak.xxx,jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hentai-moon.com,pornxpert.com,crazyporn.xxx,heavyfetish.com,scatkings.com,grahamcluley.com,4kporn.xxx,hairyerotica.com,gettubetv.com,ufile.io,lesbian8.com,zedporn.com,bigtitslust.com,fpo.xxx,fontyukle.net,porno90.online,pornchimp.com,lolhentai.net,vikiporn.com,its.porn,swiftbysundell.com,uiporn.com,heroero.com,camwhores.tv,heroero.com,magnetfox.com,sexwebvideo.com,pornfapr.com,alphaporno.com##.sponsor
 shareinvestor.com###sic_superBannerAdTop
 sharesmagazine.co.uk###popup-container
@@ -65344,7 +65336,6 @@ win7w.com###xldz
 win7xzb.com##.four_box
 win7xzb.com##.ware_gs
 winaero.com###jkhskdfsdf-iycc-4
-winaero.com###jkhskdfsdf-iycc-5:not(.thank-you-adguard)
 winaero.com##.gad-gads
 winaero.com##.site-content > div > p[style="margin: 22px"]
 winaero.com##.windia:not(.thank-you-adguard)
