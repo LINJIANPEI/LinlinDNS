@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-11 20:33:25（北京时间）
+! Version: 2026-04-11 21:48:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68216
+! Total count: 68223
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7071,6 +7071,7 @@
 @@||c.dun.*.com/api/$stealth=referrer,domain=dig.chouti.com
 @@||c.duomai.com^
 @@||c.evidon.com^
+@@||c.fa.jd.com^$important
 @@||c.fantia.jp^
 @@||c.gdt.qq.com/gdt_click.
 @@||c.gj.qq.com^
@@ -8969,6 +8970,7 @@
 @@||dwnserver.com/download/$stealth=referrer
 @@||dwstatic.com/b=amkit
 @@||dwstatic.com/b=amkit&f=*/adjoin.
+@@||dwz.cn^$important
 @@||dx.10086.cn^
 @@||dxcloud.episerver.net^
 @@||dxx.wwwtop.top^
@@ -28672,6 +28674,9 @@ cumlouder.com##.widget_bnrs
 cumlouder.com##[class^="sm"]
 cumlouder.com##body > div.related-sites + div[class]
 cumlouder.com,flyingjizz.com,gotporn.com,japan-whores.com,porntube.com##.advertisement
+cums.net###video-promo---related
+cums.net##.promo-content-wrapper
+cums.net##a[href^="https://s.happyleafmotion.com/"]
 cuntest.net###banners
 cupfox.app##.banner > div.banner-content.right
 cupfox.app##.t-img-box > a[target="_blank"] > img
@@ -29727,6 +29732,7 @@ dice.com###leaderboard-ad-div
 dice.com##.google-ad-div
 dicebreaker.com,rockpapershotgun.com##.primis_wrapper
 dicionariodesimbolos.com.br##.clm
+dicoall.com##.googleAdMain
 diconium.com##.diconium-site-cookie
 dict.baidu.com##.tran-download-ad
 dict.cc###adrig
@@ -52990,6 +52996,7 @@ producthunt.com##div[class="my-4 flex flex-1 cursor-pointer items-center justify
 producthunt.com##div[class^="styles_ad"]
 producthunt.com##div[data-test] > section:has(a[href^="/r/ad/"])
 producthunt.com##div[data-test] > section:has(img[src="/i/299a62819c7092e196f7fc2c331cc11ef4f93a0f32c3b3069c4fd974cda0cb4c"])
+producthunt.com##div[data-test]:not([data-test^="homepage-section-"]) > section[data-test^="post-item-"]
 producthunt.com##div[data-test^="ad-slot"]
 producthunt.com##div[data-test^="ad-slot-"]
 producthunt.com##main > div[data-sentry-component="Ad"]
