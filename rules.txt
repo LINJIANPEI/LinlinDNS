@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-13 09:26:27（北京时间）
+! Version: 2026-04-13 12:50:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68234
+! Total count: 68236
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -57903,6 +57903,8 @@ sporcle.com##.temp-unit
 sporcle.com##body .ad-hide
 sporcle.com##div[id^="div-gpt-"]
 sporcle.com##div[style^="text-align: center;"] > div[style*="height: 110px; min-width: 300px;"]
+sporked.com###sv-video-container
+sporked.com##h2#video-header:has(+ #sv-video-container)
 sport-express.ru##.ab-notice
 sport.aktuality.sk###page-container > div[style="position:relative;"]:not([class]):not([id]) > div[style^="width:"] > iframe[id^="etarget_"]
 sport.aktuality.sk##.nike-box-promo-banner
