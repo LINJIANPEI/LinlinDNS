@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-14 00:06:15（北京时间）
+! Version: 2026-04-14 01:51:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68330
+! Total count: 68334
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6563,6 +6563,7 @@
 @@||award.xmcdn.com^
 @@||aweme.snssdk.com^
 @@||awempire.com/*/css/*.css$domain=awempire.com
+@@||awempire.com^$generichide
 @@||aweprt.com/embed/fk?_=$domain=oklivetv.com|okteve.com
 @@||awin1.com^
 @@||awin1.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
@@ -7790,6 +7791,7 @@
 @@||classliving.lpages.co^
 @@||classliving.lpages.co^|
 @@||claude.ai^$generichide
+@@||claude.com^$extension='AdGuard Popup Blocker'|'AdGuard Popup Blocker (Beta)'
 @@||clcouncil.org/wp-content/plugins/counter-block/assets/js/counter.js?$script,~third-party
 @@||cle0desktop.blogspot.com^$generichide
 @@||clerk.io/clerk.js$script,domain=trony.it
@@ -14193,7 +14195,6 @@
 @@||pagead2.googlesyndication.com/gampad/ads?*laurelberninteriors.com*&iu=%2F18190176%2C22509719621%2FAdThrive_Video_In-Post_ClicktoPlay_$domain=imasdk.googleapis.com
 @@||pagead2.googlesyndication.com/getconfig/sodar$domain=forum.release-apk.com
 @@||pagead2.googlesyndication.com/getconfig/sodar$domain=freemcserver.net
-@@||pagead2.googlesyndication.com/pagead/$domain=dicoall.com
 @@||pagead2.googlesyndication.com/pagead/$domain=free-scores.com,image
 @@||pagead2.googlesyndication.com/pagead/$domain=nationalpost.com
 @@||pagead2.googlesyndication.com/pagead/$domain=noice.com
@@ -21992,6 +21993,7 @@ app.studysmarter.de##app-feed-ads
 appaddict.org###left-stack > a > img[alt]
 appagg.com##.hbody > .si_list > li.si_li:has(ins.adsbygoogle)
 appagg.com##.si_li:has(> .short_info > .si > ins.adsbygoogle)
+appagg.com##.si_list > li.si_li:has(> div[style*="height:"])
 appagg.com##main.global div[style^="width:100%;float:left;position:relative"]:has(> .under_head_title > ins.adsbygoogle)
 apparata.nl###ab_main_nav_container + div[class^="app_"] > div[class^="popup_"]
 appatic.com,gamescensor.com###HTML2
@@ -29627,7 +29629,6 @@ deshdoaba.com##.site-branding
 deshgold.com##.rltcp_information_cookie, .rltcp_overlay
 desi-porn.tube##.content > div > div[class]:has(> .wrapper:only-child > div[class]:first-child + div[class]:last-child > div[class]:only-child > .da-container)
 desi-porn.tube,desi-porn.xyz##.header__nav > div > a[href][target="_blank"]
-desi-porn.tube,desi-porn.xyz,onlyporn.tube,transtxxx.com##a[class^="tag"][target="_blank"]
 desidime.com##.google-ads-section
 desidime.com##div[id^="div-ad"]
 designboom.com##.aside-adv-box
@@ -30906,7 +30907,6 @@ dvdsreleasedates.com##[style="padding:15px 0 15px 0;width:728px;height:90px;text
 dvdsreleasedates.com##div[style*="width:300px;height:250px;"]
 dvdsreleasedates.com##div[style*="width:728px;height:90px;"]
 dvtk.eu##a[href^="/advertise/href/"]
-dw.com##.cmplazyload
 dwell.com##._33Pu0EaGxY8sv1vuyBCypG
 dwnews.com##.adbox-top
 dxqck.com##.myadswiper
@@ -37478,7 +37478,9 @@ hdzog.com##.video-page__left + div[class]
 hdzog.com##.video-page__player + div[class]
 hdzog.com##.xkggggx
 hdzog.com##div[class^="pl_showtime"]
+hdzog.com,hdzog.tube##.desktop-menu > [href][target="_blank"]
 hdzog.com,hdzog.tube##.nopop
+hdzog.com,hdzog.tube##.pagination + div[class]
 hdzog.com,hdzog.tube##.video-page__content > div:not([class*="video"])
 hdzog.com,hdzog.tube,senzuri.tube##.underplayer-review
 hdzog.com,xcafe.com##a[href*="/cs/"]
@@ -59766,6 +59768,10 @@ teddysun.com##.sidebar > .widget:nth-child(3)
 tedium.co##.adlayout
 tedium.co##.md-adbox
 tedquality.bg##.notification-wrapper
+teen21.com,ourgay.tube,pornuse.com,uanal.com,pornl.tube,xshemale.tube,keporn.vip,fuxxx.com,pornl.com##.video-ntv-wrapper
+teen21.com,ourgay.tube,pornuse.com,uanal.com,pornl.tube,xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
+teen21.com,pornuse.com,uanal.com##div[class^="top-categories"] > a[href][target="_blank"]
+teen21.com,uanal.com,blackporn.tube,gettranny.com,in-porn.com,sextu.com,mrgay.tube,blackporn.tube,inporn.com##div[class^="video"][class$="info"] > section
 teenage.engineering###te-layer
 teenager365.to##.top:has(> iframe[src^="//a.magsrv.com/"])
 teenanal.co##.clickable-overlay
@@ -61988,7 +61994,6 @@ transtxxx.com##.suggestion
 transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
 transtxxx.com##.video-content > div[class] > div:has(> div.pplayer) + div[class]
 transtxxx.com##a[href^="https://candyai.gg/"]
-transtxxx.com##div[class^="nav"] > [href][target="_blank"]
 transtxxx.com##div[class^="nav"] > a[href][target="_blank"]
 transtxxx.com##div[class^="video-conten"] > div + div
 transtxxx.com##div[class^="video-conten"] div[class]:has(> div[class] > div[id][class] > noscript)
@@ -62768,7 +62773,6 @@ twxgct.com,xgcartoon.com,dailygh.com###video-top-ad
 txahz.com###archy_ad2
 txone-networks.com###cookies_msak
 txtbook.com.cn##.ledu-advWrap
-txxx.*$$script:contains(AdManager)
 txxx.com##._ccw-wrapper
 txxx.com##.herrmhlmolu
 txxx.com##.hgggchjcxja
