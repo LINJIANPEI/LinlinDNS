@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-15 09:21:17（北京时间）
+! Version: 2026-04-15 12:37:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68362
+! Total count: 68370
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4270,6 +4270,7 @@
 @@/favicon.ico$third-party,domain=thehouseofportable.com
 @@/file$xmlhttprequest,stealth=referrer,domain=streameeeeee.site|videostr.net
 @@/file2/$xmlhttprequest,stealth=referrer,domain=vidora.stream
+@@/file2/*$xmlhttprequest,stealth=referrer,domain=vidora.stream
 @@/file2/*==/*$xmlhttprequest,stealth=referrer,domain=megacloud.*
 @@/fingerprint.$domain=abchina.com
 @@/fingerprint2.js$domain=fangcloud.com|fx678.com|gxpf.cn|hnair.com|pop-fashion.com
@@ -4297,6 +4298,7 @@
 @@/hls/*.m3u8$stealth=referrer
 @@/hls/*.ts$stealth=referrer,domain=techclips.net
 @@/hls2/$xmlhttprequest,stealth=referrer,domain=vidora.stream
+@@/hls2/*$xmlhttprequest,stealth=referrer,domain=vidora.stream
 @@/home/ads/*$domain=esunbank.com.tw
 @@/https?:\/\/(www\.)?sonixgvn\.net\/.{1,15}\.js$/$script,~third-party,domain=sonixgvn.net
 @@/iframe.php$stealth=referrer,domain=dizilla.*
@@ -7180,7 +7182,6 @@
 @@||carexpert.com.tw/wp-content/plugins/like-box-pro/includes/javascript/front_end_js.js
 @@||cargocollective.com/designs/$document
 @@||carsensor.net/usedcar/modules/clicklog_top_lp_revo.php$xmlhttprequest
-@@||cart.books.com.tw/member/login$stealth=java
 @@||cart.books.com.tw/member/login$stealth=java|flash
 @@||cartoon.porn^$generichide
 @@||cashier.ele.me^
@@ -13539,7 +13540,6 @@
 @@||native.sharethrough.com/assets/sfp.js$domain=looper.com
 @@||natlawreview.com^$generichide
 @@||natro.com^$stealth=dpi
-@@||naturalbd.com^$generichide
 @@||natureetdecouvertes.com^*/pixel.png$~third-party
 @@||nav.browser.miui.com^
 @@||nav.porsche.com^
@@ -15249,6 +15249,7 @@
 @@||pisupisu.pl^$generichide
 @@||pitaya.bytedance.com^
 @@||pitbullofficial.com^$generichide
+@@||pixabay.com/content-partner/$stealth=3p-cache
 @@||pixel.adsafeprotected.com/services/pub$domain=reuters.com
 @@||pixel.adsafeprotected.com^$domain=tio.ch
 @@||pixel.adsafeprotected.com^$xmlhttprequest,domain=gentside.com|ohmymag.com
@@ -20501,6 +20502,7 @@ advocate.com##.bigbox_top_ad-wrap
 advocate.com##.block-heremedia-ads
 advocate.com##.partners__container
 advocate.com,anandtech.com,out.com,sciencefocus.com##.jwplayer
+advocate.com,audacy.com,good.is,out.com,papermag.com,pride.com##.topbarplaceholder
 advocate.com,bestlifeonline.com,good.is,out.com,pride.com##.placeholder-a-block
 advocate.com,good.is,out.com,papermag.com,pride.com##.topbarplaceholder
 advocate.com,out.com##.ad_leaderboard_wrap
@@ -20548,6 +20550,7 @@ aetherhub.com###SponsoredStream
 aetherhub.com##div[id^="zone"][class^="mx-auto"]
 aetv.com,mylifetime.com,history.com##div[class^="Component-adBreak-"]
 afaqs.com###mast_container
+afaqs.com##.nav_ad_height
 afar.com##.Page-header-hat
 afar.com##.preloaded_lightbox[style*="overflow"]
 afasiaarchzine.com##body > .wrapper ~ div[id][style]:not([class]):empty
@@ -21200,6 +21203,7 @@ alternativeto.net##section > div[style]:has(> div[data-testid="adsense-wrapper"]
 alternativeto.net##section#alternative-list > ol > li:has(> .bannerLink)
 alternativeto.net##section#alternative-list > ol > li:has(a.no-link-color[rel="sponsored nofollow noopener"])
 alternativeto.net##section#alternative-list > ol > li:has(div[data-testid="adsense-wrapper"])
+alternet.org###alternet_dt_incontent
 alternet.org###leaderboard-placeholder
 alternet.org##.sidebar_sticky_container
 alternet.org##[id^="story_page_incontent_"]
@@ -25077,6 +25081,7 @@ bossip.com##.ione-ve__player-wrapper
 bossip.com##.player-wrapper-inner
 bostadoliv.se##.uk-notify
 boston.com##.-mps-rdcipxctg
+boston.com##.bdc-outbrain-container
 boston.com##.m-content-advert
 boston.com##.o-site-header__advert
 bostonagentmagazine.com##.prm1_w
@@ -27494,6 +27499,7 @@ cnx-software.com##img[alt="Rockchip RK3568/RK3588 and Intel x86 SBCs"]
 cnx-software.com,cryptoreporter.info###text-27
 cnx-software.com,cryptoreporter.info,net-load.com###text-26
 cnx-software.com,newtimes.co.rw,sammobile.com##.header-top
+cnxgct.com###interstitial_fade
 cnxplayer.com##.footer-ad-728x90
 cnxz.cn###js_focusimg3
 cnxz.cn##.showad
@@ -28693,6 +28699,7 @@ ctbids.com##.home-bottom-ad-container
 ctbids.com##.home-header-ad
 ctbids.com##.home-incontent-ad
 ctbids.com##.home-incontent-ad-2
+ctcdwm.com##pt-redirect-layer
 ctee.com.tw##.qxd
 ctfile.com##.speedydown-info-box
 ctfile.com##a[href*=".henghost.com"]
@@ -58602,6 +58609,7 @@ stooq.pl,stooq.com##td[align="center"] > div[style*="position:"][style*="width:"
 stooq.pl,stooq.com##td[align="center"] > table[width="100%"] > tbody > tr > td > .adsbygoogle + script + table[width="100%"] div[style="position:relative;width:970px;height:250px"]
 stopad.io##.js-gdpr-modal
 stopmandatoryvaccination.com##.xoxo
+stoppress.co.nz##.code-widget
 stoppub.fr##.elementor-popup-modal
 stopstreamtv.net##div[align="center"] > a > img
 storaenso.com##.overlay-wrapper
