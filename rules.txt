@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-15 07:35:07（北京时间）
+! Version: 2026-04-15 09:21:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68341
+! Total count: 68362
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3223,6 +3223,7 @@
 4c.cn##div[id^="mid_ad"]
 4c.cn##div[id^="top_ad"]
 4cc.com.au,baltic-course.com,domusweb.it,futbol24.com,gatewaynews.co.za,gsmarena.com,gulfnews.com,idealista.com,jetphotos.com,karger.com,maritimejobs.com,newagebd.net,prohaircut.com,railcolornews.com,titter.com,zbani.com##.adv
+4cc.com.au,baltic-course.com,domusweb.it,futbol24.com,gatewaynews.co.za,gsmarena.com,idealista.com,jetphotos.com,karger.com,maritimejobs.com,newagebd.net,prohaircut.com,railcolornews.com,titter.com,zbani.com##.adv
 4cc.com.au,baltic-course.com,futbol24.com,gatewaynews.co.za,gsmarena.com,gulfnews.com,idealista.com,jetphotos.com,karger.com,maritimejobs.com,newagebd.net,prohaircut.com,railcolornews.com,titter.com,zbani.com##.adv
 4chan.org###bd > div[style="text-align:center;margin: 10px 0"]
 4chan.org##.danbo-slot
@@ -6003,6 +6004,8 @@
 @@||api-n0vadp-static.hoyoverse.com^
 @@||api-pay.soulapp.cn^
 @@||api-pda.jdl.com^
+@@||api-protected.protoawegw.com/v2/player/performer/$stealth=referrer,domain=ctcdwm.com
+@@||api-protected.protoawegw.com/v2/player/performer/$xmlhttprequest,domain=ctcdwm.com
 @@||api-public.roland.com/geoip$domain=bosstoneexchange.com
 @@||api-public.stoerungsauskunft.de/api$stealth=3p-auth
 @@||api-push.meizu.com^
@@ -7178,6 +7181,7 @@
 @@||cargocollective.com/designs/$document
 @@||carsensor.net/usedcar/modules/clicklog_top_lp_revo.php$xmlhttprequest
 @@||cart.books.com.tw/member/login$stealth=java
+@@||cart.books.com.tw/member/login$stealth=java|flash
 @@||cartoon.porn^$generichide
 @@||cashier.ele.me^
 @@||casos-aislados.com^$generichide
@@ -8362,6 +8366,7 @@
 @@||cstaticdun.126.net^
 @@||cstnet.cn/r/cms/cstnet/zh_CN/ad/index/
 @@||ct.ddc.venmo.com.fpc.datadome.co^$domain=id.venmo.com
+@@||ctcdwm.com/live-stream/$subdocument,domain=camsfinder.com
 @@||ctldl.windowsupdate.com^
 @@||ctrip.com/Customer-Market-Proxy/AdCallProxyV2.$~third-party
 @@||ctrip.com^
@@ -15369,6 +15374,7 @@
 @@||players.fichub.com/plugins/adobe/$domain=24kitchen.pt
 @@||playerx.info^$subdocument,stealth=referrer,domain=jetfilmizle.net
 @@||playlists.rocks^$generichide
+@@||playmogo.com^$subdocument,stealth=flash|java
 @@||playmyopinion.com/assets/developer/js/prebid-ads.js
 @@||playnewserie.xyz^$stealth=referrer
 @@||playshakespeare.com/*/js/prebid-ads.js
@@ -25860,6 +25866,7 @@ camporn.is###overlayMod
 camporn.is###sliderBox
 campusonline.com##.ui-pnotify
 camseek.tv##.navigation > ul.primary > li > a:not([href^="http://camseek.tv/"])
+camsfinder.com##.stream-embed> div.absolute.inset-x-0
 camslib.com##a[href^="https://k.adddm.in/"]
 camsmut.com##.cntt > div:not(.row)
 camsmut.com##.cnttt > div[class]:has(a[href^="/g/live-chat"])
@@ -36807,6 +36814,19 @@ gulf-times.com##.gt-horizontal-ad
 gulf-times.com##.gt-square-desktop-ad
 gulf-times.com##.gt-vertical-ad
 gulf-up.com###adblock_msg
+gulfnews.com###display_article_footer
+gulfnews.com###display_in_article_1
+gulfnews.com###display_in_article_2
+gulfnews.com###display_in_article_3
+gulfnews.com###display_in_article_rest
+gulfnews.com###display_midpage_1
+gulfnews.com###display_midpage_2
+gulfnews.com###display_midpage_3
+gulfnews.com###display_midpage_rest
+gulfnews.com###display_sidebar_right_1
+gulfnews.com###display_sidebar_right_1_home
+gulfnews.com###display_sidebar_right_2
+gulfnews.com###display_sidebar_right_3
 gulfnews.com###nav-bar > div[class]:has(> div > div[id$="-filler-ad"])
 gulfnews.com##div[class]:has(> div[class] > div[class] > div[id] > iframe[id^="google_ads"])
 gulfnews.com##div[id$="-ad"]
@@ -38442,6 +38462,7 @@ hotmovs.com,hotmovs.tube##.jw-reset > .nopop
 hotmovs.com,thegay.com##.fiioed
 hotmovs.tube##.app-banners__wrapper
 hotmovs.tube##.video-page > .block_label > div
+hotmovs.tube,hotmovs.com##.tags > h2 > a[href][target="_blank"]
 hotmovs.tube,upornia.tube##.video-right-top
 hotnewhiphop.com##.bg-ad-bg-color
 hotnewhiphop.com##.bg-ad-text
