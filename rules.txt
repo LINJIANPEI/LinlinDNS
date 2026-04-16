@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-16 21:03:09（北京时间）
+! Version: 2026-04-16 23:17:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68366
+! Total count: 68373
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13863,6 +13863,7 @@
 @@||okfirenze.com/*/app/assets/js/prebid-ads.js
 @@||oklivetv.com/*&*=*&*&_=$xmlhttprequest,~third-party
 @@||oklivetv.com/*=*&$script,other,xmlhttprequest
+@@||okokserver.com/uploads/lesi/*.mp4$domain=huavod.net|huavod.com|huaren.live
 @@||oktatas.hu^$stealth=dpi
 @@||okteve.com/*&*=*&*&_=$xmlhttprequest,~third-party
 @@||olacast.live^$stealth=referrer
@@ -23987,6 +23988,7 @@ betarena.cz##.skyscraper
 betarena.cz##a[rel$="sponsored"]
 betarena.cz##div.bestBetBox
 betaseries.com##.blockPartner
+betaseries.com##div[class^="parent-ad-"]
 betches.com##.mod-ad-htl
 betches.com##div[class*="bottomAd"]
 betches.com##div[id^="advert"]
@@ -38657,6 +38659,7 @@ huanqiu.com##.right-box > article-other-template
 huanqiu.com,tpy888.cn##.ad_all
 huaren.live##.action-ad
 huaren.live##.pause-love
+huaren.live,huavod.com,huavod.net##a[href="/go/baba/1"]
 huaren.tv##.live-client_left
 huaren.tv##.live-client_right
 huaren.tv##a[style*="height:"]
@@ -38666,6 +38669,7 @@ huarenjie.com###RightAd2
 huarenjie.com###cftoutiao
 huarenjie.net##div[style*="top: 50px;"]
 huavod.com##a[href^="https://lesi198.com"]
+huavod.net,huaren.live,huavod.com##div[id^="anti-adblock-"]
 huawei.com##.huawei-convergent-cookie, #cookieTipOut, .hwid-bannerBox-portal, .privacy-dialog.is-show, .browsehappy.ReadPolicy, .huawei-app-cookie, .huawei-bootom-cookie
 huawei.ru###cookie__panel-help
 huaweipolska.pl##.huawei-cookie
@@ -50702,6 +50706,7 @@ paradisehill.cc##.banners3
 paradisehill.cc##.banners4
 paradisehill.cc##.bb-0
 paradisehill.cc##.shapka
+paradoxscans.com,hispajav.com,sub69.online,itdmusicy.com,janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
 parafarma.be###popup, .popup
 paragon-drivers.com##.b-psg-cookie
 parallaximag.gr###main-content > div.column:has(> div.nx-banner-wrapper)
@@ -57824,7 +57829,9 @@ spankbang.com##div[data-testid="verified-creators"]
 spankbang.com,spankbang.party##body .ptgncdn_holder
 spankbang.com,spankbang.party##body .ptgncdn_holder_haeder
 spankbang.com,spankbang.party##iframe[src^="https://deliver.ptgncdn.com/"]
+spankbang.party,spankbang.com##.ad_button
 spankbang.party,spankbang.com##.lv_cm_int_come_on
+spankbang.party,spankbang.com##.vjs-paused-banner-ad-container
 spankingtube.com##.well3
 sparbau-dortmund.de##.sg-scn
 sparebank1.no###opt-in
