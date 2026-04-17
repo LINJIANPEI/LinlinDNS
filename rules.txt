@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-17 23:49:40（北京时间）
+! Version: 2026-04-18 00:42:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68389
+! Total count: 68392
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -31308,6 +31308,7 @@ edm.com##.mai-ad-unit-container
 edm.com##.wp-block-group.has-alt-background-color:has(> .wp-block-group__inner-container > .mai-ad-unit-container)
 edm.com##.wp-block-group.has-alt-background-color:has(> .wp-block-group__inner-container > .mai-ad-video)
 edmontonjournal.com##.widget--local-business
+edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
 edmtunes.com##div[id^="sticky-footer-div-gpt-ad-"]
 edmtunes.com,fixyourandroid.com,thewincentral.com##.td-g-rec
 edmunds.com###adhesion-container
@@ -47347,7 +47348,6 @@ mtlblog.com###article-text > div.awrapper
 mtom-mag.com###alert_trk
 mtpro.xyz##.wp-block-navigation__submenu-container > li:has(> a[href="https://mod.ovh/proxy"])
 mtpro.xyz##figure > div:has(> a[href="https://px6.me/"])
-mtpro.xyz##figure > div:has(> a[href="tg://resolve?domain=durevpnbot"])
 mtrend.cn###morecontent > .morecontent_next[style]
 mtrend.cn###topictabs1
 mtrend.cn###toptabs1 > .kz_line
@@ -64249,6 +64249,9 @@ vobox.ru##.vb-cookies-bar
 vocabolariotreccani.it##footer
 vocm.com###leaderboard-area
 vocm.com##.nccBigBox
+vocus.cc##.SimpleDialogOverlay
+vocus.cc##.editor-content-block > div[style="position: relative; z-index: 1;"]
+vocus.cc##.editor-content-block > div[style]:has(> div#vocus_pc_reading_content_middle)
 vocus.cc##article > div[style^="min-height:"]:empty
 vocus.cc##article > div[style^="min-height:"]:has(> div[class^="sc-"] > div[class^="sc-"] > ins[data-rmax-space-id])
 vod.gazetapolska.pl##.gavias-blockbuilder-content > .gbb-row-wrapper:has(.adsense)
