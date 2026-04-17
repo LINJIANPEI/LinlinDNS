@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-17 14:29:12（北京时间）
+! Version: 2026-04-17 16:21:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68369
+! Total count: 68371
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -17115,6 +17115,7 @@
 @@||srv.clickfuse.com/showads/showad.js$domain=aha-music.com
 @@||srv.omgplay.biz^$stealth=referrer
 @@||srv.sec.miui.com^
+@@||srv024.service.canada.ca/assets/adobe-analytics-route-helpers-$script,~third-party
 @@||srvtrck.com/assets/css/LineIcons.css$domain=vinomo.xyz
 @@||srvtrck.com/assets/css/LineIcons.css$domain=work.ink
 @@||srvtrck.com^$domain=listeamed.net|gaystream.click
@@ -29446,6 +29447,7 @@ dedbit.com##.userpost > tbody > tr > td > center:has(> img[src])
 dedoimedo.com###container > #content ~ #mon
 deepai.org###primis-ads
 deepai.org##.ctx-ad-container
+deepai.org##.ctx-content-container
 deepbrid.com##.content > div.rounded-md.text-theme-10
 deepdotweb.com###sidebar > div#text-5
 deepdotweb.com##img[width="330"][height="104"]
