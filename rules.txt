@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-20 15:10:24（北京时间）
+! Version: 2026-04-20 17:48:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68411
+! Total count: 68419
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9450,6 +9450,7 @@
 @@||feed-image.baidu.com^
 @@||feed.4strokemedia.com^$domain=video.corriere.it
 @@||feed.4strokemedia.com^$domain=video.gazzetta.it
+@@||feed.adrelayer.com^
 @@||feed.adrelayer.com^|
 @@||feed.ximalaya.com^$important
 @@||feedback-pa.clients*.google.com/*/google.internal.feedback.$stealth=referrer
@@ -9981,6 +9982,7 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
+@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -10095,6 +10097,7 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
+@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -10417,9 +10420,7 @@
 @@||gooogle.how^$generichide
 @@||gorillanation.com/js/triggertag.js$domain=playstationlifestyle.net
 @@||gosuslugi.ru^$stealth=dpi
-@@||goto.target.com^
 @@||goto.target.com^|
-@@||goto.walmart.com^
 @@||goto.walmart.com^|
 @@||gotvach.bg^$generichide
 @@||gousfbulls.com/common/templates/dfp/dfp-component-template.html
@@ -12128,6 +12129,7 @@
 @@||klimv*.xyz/images$stealth=referrer
 @@||klix.ba^$generichide
 @@||knet.cn^
+@@||kobieta.wp.pl^$elemhide,badfilter
 @@||kodi-tutorials.uk^$generichide
 @@||kodik.info/*?translations=$domain=animestars.org,stealth=referrer
 @@||kohls.com/ecustservice/js/sitecatalyst.js$script,~third-party
@@ -15082,6 +15084,7 @@
 @@||patchwiki.biligame.com^
 @@||pathe.emsecure.net^|
 @@||patreonusercontent.com/*.gif?token-$image,domain=patreon.com
+@@||paula2.com/WS2/dnfiles/Banners/
 @@||pawastreams.info/gamer/*.php$subdocument,stealth=referrer
 @@||pay.bilibili.com^
 @@||pay.citylink.pro/stats/services/$~third-party
@@ -17156,6 +17159,7 @@
 @@||ssl.p.jwpcdn.com/player/v/*/googima.js$xmlhttprequest,domain=play.nova.bg
 @@||ssl.p.jwpcdn.com/player/v/*/vast.js$xmlhttprequest,domain=idlixvip.asia
 @@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru
+@@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru|vindaz.shop
 @@||ssl.p.jwpcdn.com^
 @@||ssl.p.jwpcdn.com^$domain=bdsmstreak.com
 @@||ssl.pstatic.net/sstatic/sdyn.js$script,domain=search.naver.com
@@ -18286,7 +18290,6 @@
 @@||tripcentral.ca^$stealth=dpi
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
-@@||trk.ecomm.lenovo.com^
 @@||trk.ecomm.lenovo.com^|
 @@||trojmiasto.pl^$elemhide,jsinject,content,extension,~script,~stylesheet
 @@||tron-free.com^$generichide
@@ -18764,9 +18767,7 @@
 @@||vault-08.uwucdn.top/mp4$stealth=referrer,domain=kwik.cx
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
-@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
-@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -21585,6 +21586,7 @@ anhuinews.com##div[style$="height:40px;overflow:hidden"]
 aniagotuje.pl##.ad1
 aniagotuje.pl##.ad2
 anichin.co.id###floatcenter
+anikai.to##body > a[target="_blank"][style^="position:"][style*="z-index:"]
 anikore.jp##html[class^="loading"]:style(visibility: visible !important;)
 anikuro.to##div[style="position: absolute; z-index: 99999"]
 animade.tv##body > div[data-react-class="Cookies"]
@@ -38275,6 +38277,8 @@ holiday-weather.com,omniglot.com,w3schools.com,zerochan.net###skyscraper
 holidayfactory.co.za###polgpr
 holidu.de###cookie-selector
 holistic.news###page > .container:has(> ins.adsbygoogle)
+holitv.org###top-banner
+holitv.org##div[class^="catfish-"]
 hollandbikeshop.com##.cookies-sec
 hollandse-hoogte.nl###ctr-cookies
 hollisterco.com##.flash-message[data-flash-message-group-id*="cookie"]
@@ -58817,6 +58821,7 @@ stun:1755001826:443$important
 stundin.is##.bottom-banner
 stupiddope.com##.text-6
 stw.berlin###disclaimer
+style.yahoo.com##div[data-article-body] > div.commerce
 stylecaster.com###dfp-interstitial-holder
 stylecaster.com##.pmc-product-wrapper
 stylecaster.com##.sc-ad-article-middle-wrapper
@@ -60839,6 +60844,7 @@ thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesst
 thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com##.polarBlock
 thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com##div[data-lpos="more-from-the-star-partners"]
 thestar.com.my##.med-rec
+thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
 thestival.gr###custom_html-28
 thestival.gr###custom_html-29
 thestival.gr###custom_html-30
@@ -61713,8 +61719,10 @@ top.gg##.chakra-stack.css-15xujv4
 top.gg##[class*="__AdContainer-"]
 top.gg##article[data-testid="promoted-product"]
 top.gg##aside > div.chakra-stack > div.flex-col:has(a[href="/subscribe"])
+top.gg##aside.w-full > div.w-full > div.items-center:has(> div.aspect-video > #desktop-aside-video-ad)
 top.gg##div[class*="_AdContainer-"]
 top.gg##div[class^="css-feed"] > div.chakra-stack
+top.gg##section.w-full > div.items-center:has(> #vote-video-ad)
 top100token.com##.swiper_div.right-pad
 top10vpn.com###notification-bar
 top10vpn.com##.boxCTA
