@@ -116,12 +116,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14373
+! Total count: 14375
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-04-20 11:29:40（北京时间）
+! Version: 2026-04-20 21:54:34（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -11255,6 +11255,7 @@
 @@||filecheck.ru^$elemhide
 @@||filecity.co.kr^$stealth=dpi
 @@||filecr.com/wp-content/plugins/holdback/$script,stylesheet
+@@||fileditchfiles.me/js/prebid.js$domain=fileditchfiles.me
 @@||filejoker.net^$image,~third-party
 @@||filelions.*/js/boxad.js
 @@||filemoon.sx/e/$stealth=referrer
@@ -12901,6 +12902,7 @@
 @@||guce.advertising.com/collectIdentifiers
 @@||guce.advertising.com/collectIdentifiers$~third-party
 @@||guce.engadget.com/consent
+@@||guide.imggaming.com/prod|$stealth=3p-auth
 @@||guim.co.uk/flash/video/embedded/player-$object,domain=thedailywh.at
 @@||guinnessworldrecords.jp/ezais/analytics$~third-party
 @@||gumtree.co.za/my/ads.html$~third-party
@@ -14290,6 +14292,7 @@
 @@||klientboost.com/google/
 @@||klimv*.xyz/images$stealth=referrer
 @@||klix.ba^$generichide
+@@||kobieta.wp.pl^$elemhide,badfilter
 @@||kodi-tutorials.uk^$generichide
 @@||kodik.info/*?translations=$domain=animestars.org,stealth=referrer
 @@||kohls.com/ecustservice/js/sitecatalyst.js$script,~third-party
@@ -16681,6 +16684,7 @@
 @@||patchedfiles.com^$generichide
 @@||patreonusercontent.com/*.gif?token-$image,domain=patreon.com
 @@||patrick-wied.at/static/heatmapjs/src/heatmap.js
+@@||paula2.com/WS2/dnfiles/Banners/
 @@||pawastreams.info/gamer/*.php$subdocument,stealth=referrer
 @@||pay.citylink.pro/stats/services/$~third-party
 @@||pay.yandex.ru/web/sdk/$stealth=referrer
@@ -16772,7 +16776,6 @@
 @@||pilet.elron.ee^$extension
 @@||pillsbury.com/Shared/StarterKit/Javascript/UnicaTag.js
 @@||pillsbury.com/Shared/StarterKit/Javascript/ntpagetag.js
-@@||pilot.wp.pl^$generichide,badfilter
 @@||pinduoduo.com/advert/$~third-party
 @@||ping.hellobar.com/?*&_e=click&$image
 @@||pingan.com.cn^*/logger.js?
@@ -18518,7 +18521,7 @@
 @@||ssl.p.jwpcdn.com/player/v/*/*.js$domain=faselhd.cafe
 @@||ssl.p.jwpcdn.com/player/v/*/googima.js$xmlhttprequest,domain=play.nova.bg
 @@||ssl.p.jwpcdn.com/player/v/*/vast.js$xmlhttprequest,domain=idlixvip.asia
-@@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru
+@@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru|vindaz.shop
 @@||ssl.p.jwpcdn.com^$domain=bdsmstreak.com
 @@||ssl.pstatic.net/sstatic/sdyn.js$script,domain=search.naver.com
 @@||ssl.sdcdn.com/cms/ads/*$domain=stardoll.com
@@ -20391,7 +20394,6 @@
 @@||wwads.cn/js/makemoney.js$domain=baomidou.com
 @@||wwe.com/sites/all/modules/wwe/wwe_analytics/s_wwe_code.js
 @@||www-daftarharga.blogspot.com^$generichide
-@@||www.dobreprogramy.pl^$generichide,badfilter
 @@||www.door2windows.com^$stealth=referrer
 @@||www.gamersky.com/gsinc/$subdocument
 @@||www.gdata.pl^$elemhide

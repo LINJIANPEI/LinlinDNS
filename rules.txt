@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-20 21:03:50（北京时间）
+! Version: 2026-04-20 23:09:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68419
+! Total count: 68422
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9505,6 +9505,7 @@
 @@||filecheck.ru^$elemhide
 @@||filecity.co.kr^$stealth=dpi
 @@||filecr.com/wp-content/plugins/holdback/$script,stylesheet
+@@||fileditchfiles.me/js/prebid.js$domain=fileditchfiles.me
 @@||filejoker.net^$image,~third-party
 @@||filelions.*/js/boxad.js
 @@||filemoon.sx/e/$stealth=referrer
@@ -10502,6 +10503,7 @@
 @@||guce.engadget.com/consent
 @@||guid.tpns.tencent.com^
 @@||guide-acs.m.taobao.com^
+@@||guide.imggaming.com/prod|$stealth=3p-auth
 @@||guinnessworldrecords.jp/ezais/analytics$~third-party
 @@||gumtree.co.za/my/ads.html$~third-party
 @@||gumtree.com*/p-post-ad*.html
@@ -15233,7 +15235,6 @@
 @@||pikabu.ru/story/*_reklama_
 @@||pikio.pl^$generichide
 @@||pilet.elron.ee^$extension
-@@||pilot.wp.pl^$generichide,badfilter
 @@||pinduoduo.com/advert/$~third-party
 @@||pingan.com^*/rrweb-record-
 @@||pingfore.qq.com^
@@ -17158,7 +17159,6 @@
 @@||ssl.p.jwpcdn.com/player/v/*/*.js$domain=faselhd.cafe
 @@||ssl.p.jwpcdn.com/player/v/*/googima.js$xmlhttprequest,domain=play.nova.bg
 @@||ssl.p.jwpcdn.com/player/v/*/vast.js$xmlhttprequest,domain=idlixvip.asia
-@@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru
 @@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru|vindaz.shop
 @@||ssl.p.jwpcdn.com^
 @@||ssl.p.jwpcdn.com^$domain=bdsmstreak.com
@@ -19381,7 +19381,6 @@
 @@||www.deepseek.com^
 @@||www.dell.com^
 @@||www.dianping.com^
-@@||www.dobreprogramy.pl^$generichide,badfilter
 @@||www.docker.com^
 @@||www.dogpile.com^
 @@||www.dogpile.com^|
@@ -20740,6 +20739,7 @@ ainuody.com###sidebar > .widget:nth-child(-n+6)
 ainuody.com##.full-width
 ainuody.com##a[href="http://www.zhuzhuquan.com.cn"]
 ainuody.com##a[title*="红包"]
+ainzscans01.com##.ads-placement-shell
 ainzscans01.com##body > div[id][style^="width:100%;height:100%;background:rgba"]
 ainzscans01.com##div[data-ads-placement-slot]
 ainzscans01.com,ainzscans.net##body > div[style^="width:100%;height:100%;background:"]
@@ -31314,7 +31314,6 @@ edm.com##.mai-ad-unit-container
 edm.com##.wp-block-group.has-alt-background-color:has(> .wp-block-group__inner-container > .mai-ad-unit-container)
 edm.com##.wp-block-group.has-alt-background-color:has(> .wp-block-group__inner-container > .mai-ad-video)
 edmontonjournal.com##.widget--local-business
-edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
 edmtunes.com##div[id^="sticky-footer-div-gpt-ad-"]
 edmtunes.com,fixyourandroid.com,thewincentral.com##.td-g-rec
 edmunds.com###adhesion-container
@@ -33170,6 +33169,7 @@ file-converter-online.com,konvertera-online.se,conversor-pdf.com,konwerter-onlin
 file-converter-online.com,konvertera-online.se,conversor-pdf.com,konwerter-online.pl,online-omzetten.nl,online-konverter.com,convertire-documenti.it,pdf-convertisseur.fr,convertir-pdf.com,prevod-souboru.cz###sidebar > div[style="margin-top:10px;min-height:250px"]
 file-intelligence.comodo.com##.left-wrapper
 file-intelligence.comodo.com##.rght-wrapper
+file-me.top###adblock-overlay
 file-up.org##.adsbygoogle
 file-up.org##.page-wrap > .dareaname ~ .text-center
 file-up.org##.row > div[class] > #countdown + div[style="margin: 10px 0;"]
@@ -46808,6 +46808,7 @@ moneypop.com,factable.com##.pohcontainer
 moneysave.info##body > input ~ script + div[id][class*=" "]
 moneytalksnews.com###footer-overlay
 moneyweekly.com.tw##div[id*="_ScupioHomeAD"]
+moneywise.com##.wise-ad
 mongars.fr###metacontainer > div:not([id]):not([class])
 monitoring.krakow.pios.gov.pl##.a-footer
 monitorulsv.ro###advscr
@@ -52262,6 +52263,7 @@ porn3dx.com##iframe[src="https://porn3dx.com/iframe-ads"]
 porn4days.com##.navbar-nav > li > a[href^="http"][target="_blank"]
 porn4days.com##a[href*="landing"][href*="campaign"]
 porn4days.net##body .navbar-nav > li > a[rel="nofollow"]
+porn4days.pw##.col-12 > div.alert:has(> a.theme-link)
 porn4fans.com###spot_player
 porn4fans.com###spot_player_start
 porn4fans.com###swiper1
@@ -61488,6 +61490,7 @@ tivis.101vn.com###topads
 tivis.101vn.com##a[href][target="_blank"][rel="nofollow"] > img
 tivis.101vn.com##div[id][style="height: 100px;width:300px;bottom:12px"]
 tivocommunity.com###messageList .messageContent .messageText > .tivoBoxMessage
+tj.news,thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
 tj.xinhuanet.com##.xhdf_num1_col3
 tjrwrestling.net##[ad-slot]
 tko.pl##article[class^="post-"] > div[id^="tdi_"] > div.tdc_zone > div.tdc-row > div.vc_row > style + div.vc_column > div.wpb_wrapper > div.vc_row_inner:not(:has(div.td_block_wrap))
