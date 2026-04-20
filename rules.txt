@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-20 23:09:06（北京时间）
+! Version: 2026-04-21 00:53:49（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68422
+! Total count: 68428
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1643,6 +1643,7 @@
 /v/image.php?spot=$image
 /v1/log/web-vitals$xmlhttprequest
 /v4/analytics/*$~xmlhttprequest
+/vast.php?idzone=$xmlhttprequest
 /velvet_stack_cmp.js$script
 /vhdpoppingmodels/*$script
 /video_ads.$script
@@ -3144,6 +3145,7 @@
 3movs.com##div#list_videos_related_videos
 3movs.com##div[class="3M-textlink"]
 3movs.com##iframe[src^="/ai/s/s/su.php"]
+3movs.com,3movs.xxx,babepump.com,bravotube.net,camvideos.tv,cluset.com,deviants.com,dixyporn.com,fapnfuck.com,fuqster.com,hello.porn,homo.xxx,javcab.com,katestube.com,pornicom.com,sexpester.com,sleazyneasy.com,thefree3dporn.com,videocelebs.net,vikiporn.com,vjav.com,w1mp.com,w4nkr.com##.spot
 3movs.com,3movs.xxx,babepump.com,bravotube.net,camvideos.tv,cluset.com,deviants.com,dixyporn.com,fapnfuck.com,fuqster.com,hello.porn,javcab.com,katestube.com,pornicom.com,sexpester.com,sleazyneasy.com,thefree3dporn.com,videocelebs.net,vikiporn.com,vjav.com,w1mp.com,w4nkr.com##.spot
 3movs.com,fapality.com##.cs
 3movs.com,ggjav.com,tnaflix.com##iframe[width="300"]
@@ -19709,6 +19711,7 @@
 @@||yalla-shoot-tv.io^$generichide
 @@||yams.akamaized.net^$stealth=referrer
 @@||yande.re^
+@@||yandex.*/maps/$extension='AdGuard Extra'|'AdGuard Extra (Beta)'
 @@||yandex.com/search/?$generichide
 @@||yandex.ru/ads/system/adsdk.js$domain=gisher.org
 @@||yandex.ru/ads/system/context.js$domain=investing.com
@@ -26020,6 +26023,8 @@ capterra.com##.welcome-banner
 captrader.com##.informationContainer
 capwages.com,downforeveryoneorjustme.com,health.clevelandclinic.org,technomusicworld.com##.bottom-0.fixed
 car16.com##.modal-overlay
+carandmotor.gr##.block-system > article ~ div.heading-container
+carandmotor.gr##.front-page-banner
 cararegistrasi.com##a[href="https://bahasteknologi.com/"]
 caraudioshop.nl##.gmt_consent_popup
 carboncredits.com##.tdi_72
@@ -27042,6 +27047,8 @@ civilserviceindia.com##a[href*="/red.php?bu="]
 civilsociety.co.uk##.announcement-banner
 civitai.com##a[aria-label="visit advertiser"]
 civitai.com##div[id][class*="box-content"]:empty
+civitai.red,civitai.com##a[aria-label="visit advertiser"]
+civitai.red,civitai.com##div[id][class*="box-content"]:empty
 cj.sina.cn##.module-footer
 cj.sina.cn##.module-hot.module-extend
 cj.sina.cn##.u-article-video-title4
@@ -48741,6 +48748,7 @@ news18a.com##.ina_ad_left
 news18a.com,tom.com##.ina_ad_class
 news18marathi.com##.ftrad
 news24.com##.featured-category
+news247.gr##.phaistos_placeholder
 news247.gr##body .ad-widget
 news24online.com##.add-section_300x250
 news24online.com##.add-section_728x90
@@ -60846,7 +60854,6 @@ thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesst
 thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com##.polarBlock
 thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com##div[data-lpos="more-from-the-star-partners"]
 thestar.com.my##.med-rec
-thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
 thestival.gr###custom_html-28
 thestival.gr###custom_html-29
 thestival.gr###custom_html-30
@@ -65541,7 +65548,6 @@ win7xzb.com##.ware_gs
 winaero.com###jkhskdfsdf-iycc-4
 winaero.com##.gad-gads
 winaero.com##.site-content > div > p[style="margin: 22px"]
-winaero.com##.windia:not(.thank-you-adguard)
 winaero.com##.windiv:has(> a.winrec)
 winaero.com$$script[wildcard="*.innerHTML*.parentNode.insertBefore*"][max-length="2000"]
 winandmac.com,nicekkk.com###custom_html-3
