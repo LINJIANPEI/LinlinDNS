@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-21 20:58:37（北京时间）
+! Version: 2026-04-21 22:45:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68063
+! Total count: 68071
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14855,6 +14855,7 @@
 @@||patchwiki.biligame.com^
 @@||pathe.emsecure.net^|
 @@||patreonusercontent.com/*.gif?token-$image,domain=patreon.com
+@@||patreonusercontent.com^$image,domain=patreon.com
 @@||paula2.com/WS2/dnfiles/Banners/
 @@||pawastreams.info/gamer/*.php$subdocument,stealth=referrer
 @@||pay.bilibili.com^
@@ -28736,6 +28737,7 @@ dailymail.co.uk,thisismoney.co.uk###sky-left-container
 dailymail.co.uk,thisismoney.co.uk###sky-right-container
 dailymail.co.uk,thisismoney.co.uk##.connatix-wrapper
 dailymail.co.uk,thisismoney.co.uk##.watermark
+dailymail.com##.billboard-container
 dailymemphian.com###offer-wrapper
 dailymotion.com###consent-group
 dailymotion.com##.dmp_VideoView-ad-slot
@@ -35805,8 +35807,11 @@ goart.fotor.com##.goart_ad_btn
 goat.com.au##.container__block--sidebar.col-desktop-5
 goat.com.au##.mrec-half-page-wrap
 gob.es###epd, .alert__msg-Wrapper, .tuss-cookies, #fondotransparencia-gris, #avisoUsoCookies, #phAvisoCookie
+gobankingrates.com##.advert-top01
 gobankingrates.com##.bestbanks-slidein
 gobankingrates.com##.exit-intent
+gobankingrates.com##.native-cards-module[data-pub-placement-id]
+gobankingrates.com##.nav-disclosure.container
 gobankingrates.com##.rate-table-header
 gobankingrates.com##.snippet-in-content
 goblinsguide.com##a > img[src*="-300x250-"]
@@ -48476,6 +48481,7 @@ newsnow.co.uk##.grid-column__container
 newsnow.co.uk##.hero-wrapper
 newsnow.co.uk##.js-ad-frame
 newsnow.com##.hero-wrapper
+newsnow.com,newsnow.co.uk##.container__group:has(> .ad__container:only-child)
 newsnow.com,newsnow.co.uk##.newsfeed__inner > div:has(> div.container__group > div.ad__container)
 newsobserver.com##div[id^="zone-el"][isdynamictemps]
 newson6.com##.gnm-banner-ad
@@ -49407,6 +49413,7 @@ offsite.com.cy##.top-bar-container
 offsite.com.cy##section[id^="block-gamwadvertisement"]
 ofgem.gov.uk###ofgem-cookies
 ofiii.com##.jsx-126687236
+ofiii.com##.nonlinear_ad
 ofiii.com##div.nonlinear_image_container.ad_impression
 ofisitebg.com##.bottom-freezed-bar
 ofreok.online,ka3boly.site,safary.site,shabory.site,marshoush.site,gameflare.cam,mastaba.site,dl4all.online,maftou7.site,playarena.cam,shallal.site,joyarcade.cam,marcmello.site,hawsa.site,hegry.site,muhager.site,mar3a.site,cheapou.site,mal3oub.site,be7alat.site,moshakes.site,gamevault.cam,kalosha.site,ofre15.online,forgee.xyz,monafes.site,regenzi.site,hegra.cam,migration.cam,reviewpalace.net,techplanet.cam,techland.live,gamehub.cam,gameland.click,gamesera.online,gulftech.live,reviewhub.vip###ad
@@ -58960,6 +58967,7 @@ tacticasdechoque.com##.jet-popup
 tactics.tools##.afm-wrap
 tacticscore.io###adsense_home
 tadeevo.com###cookie
+tag24.com##.article-grid > article.article-tile:has(> div.article-tile__inner a[href*="/ads/"])
 tagmp3.net##.tagsadd
 tahua.net###frameJjnBIp
 taian.com##.ggtp
