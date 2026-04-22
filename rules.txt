@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-22 12:38:04（北京时间）
+! Version: 2026-04-22 14:29:36（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68048
+! Total count: 68049
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -62262,6 +62262,7 @@ tvgids24.nl###cbar
 tvgry.pl,gry-online.pl###baner-outer
 tvguide.co.uk##.mx-auto:has(> [id^="ad-content"])
 tvguide.co.uk##body > div[class="mx-auto h-0 max-w-site lg\:h-\[250px\]"]
+tvguide.co.uk##div.mx-auto:has(> .flex.justify-center:empty)
 tvguide.co.uk##main .border-stone-400.flex > .relative > div[class="h-\[252px\] border-b-2 border-stone-400 dark\:border-stone-600"]
 tvguide.co.uk##main .border-stone-400.flex > .scrollbar-none > div[class="h-\[252px\] dark\:bg-stone-700"]
 tvguide.co.uk##main div[class="md\:px-1"] > div[class="mx-auto h-\[250px\] w-\[300px\]"]
