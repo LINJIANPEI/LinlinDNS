@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-24 19:52:14（北京时间）
+! Version: 2026-04-24 20:57:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68072
+! Total count: 68075
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7303,6 +7303,7 @@
 @@||cdn.cxense.com/cx.cce.js$xmlhttprequest,domain=bizjournals.com
 @@||cdn.datatables.net^
 @@||cdn.deepseek.com^
+@@||cdn.deviceinf.com^$domain=etail.market
 @@||cdn.digiteka.com/player/PrebidLibrary.js$domain=ultimedia.com
 @@||cdn.dotstream.buzz^$stealth=referrer,domain=megaplay.*
 @@||cdn.doublemax.net/js/rwd_cap.js$domain=ibf.tw
@@ -43483,6 +43484,7 @@ linuxgizmos.com###ctkiba-blanket
 linuxgizmos.com###eaa_post_between_content
 linuxhandbook.com##.CampaignType--floating
 linuxhandbook.com##.kg-bookmark-card
+linuxhaxor.net##.widget_text:has(a[href^="https://www.linuxhaxor.net/go"])
 linuxidc.com##.linux801
 linuxinsider.com###cboxOverlay
 linuxinsider.com###colorbox
@@ -43615,6 +43617,7 @@ livemint.com##.inlineAds
 livemint.com##.leftblockAd
 livemint.com##.paywall > div[style]
 livemint.com##.pos-rel > div[data-vid] + div[class*="story"].rightBlock
+livemint.com##.renderDeskAi
 livemint.com##.rhsFixHeight
 livemint.com##.rightAdNew
 livemint.com##.rightblockAd
