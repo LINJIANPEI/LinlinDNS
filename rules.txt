@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-25 04:35:45（北京时间）
+! Version: 2026-04-25 05:38:48（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68083
+! Total count: 68085
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10100,6 +10100,7 @@
 @@||google.so/translate_$media,third-party,xmlhttprequest
 @@||googleadapis.l.google.com^|
 @@||googleads.*.doubleclick.net/pagead/ads?client=$domain=pherotruth.com
+@@||googleads.g.doubleclick.net/ads/controlcookies/getcookies$domain=adssettings.google.com
 @@||googleads.g.doubleclick.net/ads/preferences/$domain=googleads.g.doubleclick.net
 @@||googleads.g.doubleclick.net/favicon.ico,domain=music.wandhi.com
 @@||googleads.g.doubleclick.net/pagead/ads$domain=forum.release-apk.com
@@ -10344,6 +10345,7 @@
 @@||gsp0.baidu.com^
 @@||gsp1.apple.com^
 @@||gsp1.baidu.com^
+@@||gstatic.com/_/mss/boq-ads-privacy-consumer-frontend$domain=googleads.g.doubleclick.net
 @@||gstatic.com/admanager/outstream/rewarded_web_video_$script,domain=safeframe.googlesyndication.com
 @@||gstatic.com/ads/external/images/$image,domain=support.google.com
 @@||gstatic.com/ads/external/images/logo_google_ads_*px.png$domain=support.google.com
