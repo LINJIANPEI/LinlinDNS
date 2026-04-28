@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-28 16:05:03（北京时间）
+! Version: 2026-04-28 18:53:33（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68117
+! Total count: 68132
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -542,6 +542,7 @@
 .gif$image,domain=javhd168.com
 .gif$third-party,domain=phim33.com
 .gif$third-party,domain=zxc.dongludi.top|m.7ktw.com|922tp.com|cl.wpio.xyz|yasem5.com|1024pa.com|avbebe.com|cb.wpio.xyz
+.gif^$domain=xn--y3cta3b5d6a.net
 .gif^$image,domain=dooporn24.com
 .gruene.de/lists/ut.php$image
 .hongi7ie8owiie*.site^$script,third-party
@@ -4012,6 +4013,7 @@
 @@&adurl=http://$domain=360bifen.cc|360bifen.com
 @@&http_referer=$domain=chaopx.com
 @@*$app=com.kakao.talk,stealth=dpi
+@@*$app=viva.republica.toss,stealth=dpi
 @@*$generichide,domain=faqwiki.*
 @@*$image,domain=hardwareluxx.de,~third-party
 @@*$redirect-rule,domain=d3ward.github.io
@@ -9865,7 +9867,6 @@
 @@||gestyy.com^$generichide
 @@||get-digital-help.com^$generichide
 @@||get-to.link^$stealth=referrer
-@@||get.neofinancial.com^
 @@||get.neofinancial.com^|
 @@||get.optad360.io/sf/*/plugin.min.js$domain=linkneverdie.net
 @@||get.optad360.io/sf/*/plugin.min.js$script,redirect=noopjs,domain=linkneverdie.net
@@ -9995,8 +9996,10 @@
 @@||go.kr^$stealth=dpi
 @@||go.onelink.me/*?pid=
 @@||go.redirectingat.com/*&url=$domain=forums.redflagdeals.com
+@@||go.redirectingat.com^
 @@||go.redirectingat.com^$document
 @@||go.redirectingat.com^|
+@@||go.scorptec.com.au^
 @@||go.scorptec.com.au^|
 @@||go.trvdp.com/init/$domain=olhardigital.com.br
 @@||go.xliirdr.com/?*targetDomain=fikfapcams.com$domain=fikfap.com
@@ -10298,7 +10301,9 @@
 @@||gooogle.how^$generichide
 @@||gorillanation.com/js/triggertag.js$domain=playstationlifestyle.net
 @@||gosuslugi.ru^$stealth=dpi
+@@||goto.target.com^
 @@||goto.target.com^|
+@@||goto.walmart.com^
 @@||goto.walmart.com^|
 @@||gotvach.bg^$generichide
 @@||gousfbulls.com/common/templates/dfp/dfp-component-template.html
@@ -10337,6 +10342,7 @@
 @@||gs-loc.apple.com^
 @@||gs.apple.com^
 @@||gs.statcounter.com/chart.php$script,third-party
+@@||gs.statcounter.com^
 @@||gs.statcounter.com^|
 @@||gse.it^$stealth=ip
 @@||gsm1x.xyz^$generichide
@@ -11566,6 +11572,7 @@
 @@||interface3.music.163.com.163jiasu.com^
 @@||interface3.music.163.com^
 @@||interfans.org^$generichide
+@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -16127,7 +16134,6 @@
 @@||secure.selfwealth.com.au^$stealth=ip
 @@||securecard.jp/card_input.html$stealth=referrer
 @@||securegames.iwin.com/data/gtm.json$~third-party,xmlhttprequest
-@@||secureimage.securedataimages.com^
 @@||secureimage.securedataimages.com^|
 @@||securemetrics.apple.com^
 @@||securenetsystems.net/*/scripts/ads/prebid.js
@@ -18386,7 +18392,6 @@
 @@||vali-dns.cp31.ott.cibntv.net^
 @@||vali-g1.cp31.ott.cibntv.net^
 @@||vali01.cp31.ott.cibntv.net^
-@@||validate.perfdrive.com^
 @@||validate.perfdrive.com^|
 @@||valipl.cp31.ott.cibntv.net^$xhr,domain=youku.com
 @@||valuable.hatenablog.com^$generichide
@@ -25865,6 +25870,8 @@ cbn.com###cbn_leaderboard_atf
 cbn.com##.partners-block
 cbndata.com##.Toastify
 cboard.cprogramming.com##.postrow > div[style*="300px; height:"]
+cbr.com,thegamer.com##.an-injected
+cbr.com,thegamer.com##.an-injector-zone
 cbs12.com##div[class^="index-module_adAfterContent"]
 cbs12.com##div[id^="js-Taboola-Container"]
 cbsnews.com###component-taboola-local-article
@@ -32506,9 +32513,15 @@ fapnado.com##iframe[width="95%"][height="400"]
 fapnado.com,fapnado.xxx##.zpot-horizontal
 fapnado.com,fapnado.xxx##.zpot-vertical
 fapnado.com,young-sexy.com##.popup
+fapnado.xxx##.fluid_html_on_pause_container
+fapnado.xxx##.fluid_start_container
+fapnado.xxx##.footer-margin
 fapnado.xxx##.pause-ad-pullup
 fapnado.xxx##.video-holder > center:has(+ div[id^="ts_ad_"])
 fapnado.xxx##ul.primary > li:has(> a[class^="nav-"][class*=" gn"][target="_blank"])
+fapnado.xxx,fapnado.com###list_videos_related_videos_items > div[class]:has(a[href^="https://www.tckcandy.com/"])
+fapnado.xxx,fapnado.com##.text_link_holder
+fapnado.xxx,fapnado.com##a[href^="https://t.javhd-trk.com/"]
 fapnfuck.com##a[href^="https://fapnfuck.com/redirect_cs.php?"]
 fapnow.xxx##.content center
 fapnow.xxx##.xpot-horizontal
@@ -60939,6 +60952,7 @@ time.is##.rad
 time.is##div[style="display:flex;justify-content:center;width:100%;margin-top:20px;height:250px"]
 time.is##div[style="margin-top:10px;float:right;background:#c35;padding:10px;"]
 time.news##section[data-id="1281c08c"]
+time.udn.com##.fixed-ad
 timeanddate.com##.tool__skyadvert
 timeanddate.com,ratemyprofessors.com###ad300
 timebreak.eu##.must-hide[style*="ececec"]
@@ -62665,6 +62679,7 @@ udn.com###udn_scupio_responsive_wrapper
 udn.com##.ad_mask
 udn.com##.bg-banner--link
 udn.com##.ec-section
+udn.com##.fixed-ad
 udn.com##.inline-ads
 udn.com##.mag_topic > a[href][target="_blank"] > img[src^="https://p.udn.com.tw/upf/"][src*="_banners/Special/"]
 udn.com##.mag_topic > a[href^="https://goo.gl/"][target="_blank"] > img[src*="_banners/BD/"]
