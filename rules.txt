@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-29 15:58:36（北京时间）
+! Version: 2026-04-29 18:01:12（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68135
+! Total count: 68142
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -18483,6 +18483,7 @@
 @@||video.kts.g.mi.com^
 @@||video.matchtv.ru/iframe/$stealth=referrer
 @@||video.matchtv.ru^$stealth=donottrack
+@@||video.matchtv.ru^$stealth=donottrack|ip
 @@||video.onnetwork.tv/adblock_notify.js
 @@||video.onnetwork.tv/frame*.php$stealth=referrer,domain=radiozet.pl
 @@||video.onnetwork.tv/widget/$domain=natemat.pl
@@ -22249,6 +22250,8 @@ austrianairlines.ag##.ym-wrapper > .cop
 aut.cc###viewlet-disclaimer
 autempoeuropie.pl##.cookies
 autentiek.nl###ciWrapper
+autickar.cz##div[id^="adblockers"]
+autickar.cz##div[id^="addbockers"]
 autism-society.org##.featherlight
 auto-data.net##.ad_incar
 auto-data.net##.adin
@@ -35308,6 +35311,7 @@ gerasanews.com###firstads_close_button
 gerasanews.com##.iads_border
 gerasanews.com##[class^="adsSpacer"]
 gerasanews.com##[class^="bestaAds_"]
+gerbeaud.com$$script:contains(:window,)
 gerlach.org.pl###top0info
 german-pavilion.com###privacy-flyout
 germaniasport.hr###gdpr-wrapper
@@ -41921,6 +41925,7 @@ keywin.org##.pindaolist
 kfc.co.uk##.cookies-view
 kfcvisit.com###toast-container
 khaberni.com##div[class$="-banners"]
+khaddavi.net,hypestat.com,techbloogs.com,tutwuri.id,lokerwfh.net,dz4up.com##div[style="text-align: center;"] > a[target="_blank"] > img
 khaleejtimes.com##.add-wrap
 khaleejtimes.com##.fix-billboard-nf
 khaleejtimes.com##.fix-mpu-nf
@@ -63932,6 +63937,8 @@ vjav.com,vjav.tube##.left + div:has(> div[class] > [id^="ntv"])
 vjav.com,vjav.tube##.undp
 vjav.me##.right > div.content
 vjav.tube,privatehomeclips.com##.jwplayer > div.afs_ads + span[class]
+vjav.tube,vjav.com##.headline:has(+ .video-videos-slider)
+vjav.tube,vjav.com,desi-porn.tube,desi-porn.xyz##.header__nav > * > a[href][target="_blank"]
 vjmedia.com.hk###ad900
 vjmedia.com.hk###author-spotlight + .clear + div
 vjmedia.com.hk###text-33
