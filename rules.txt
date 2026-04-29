@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-04-29 21:20:39（北京时间）
+! Version: 2026-04-29 23:52:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68142
+! Total count: 68137
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10590,6 +10590,7 @@
 @@||hindustantimes.com/res/js/*ads*
 @@||hinet.net/keys/a.key^$domain=ani.gamer.com.tw
 @@||hiperinfo.pl/popup3.js
+@@||hisnet.handong.edu^$stealth=dpi
 @@||hisse.net^$generichide
 @@||histock.tw/JScript/AD/
 @@||history.com^$generichide
@@ -18482,7 +18483,6 @@
 @@||video.javhdporn.net^$stealth=referrer
 @@||video.kts.g.mi.com^
 @@||video.matchtv.ru/iframe/$stealth=referrer
-@@||video.matchtv.ru^$stealth=donottrack
 @@||video.matchtv.ru^$stealth=donottrack|ip
 @@||video.onnetwork.tv/adblock_notify.js
 @@||video.onnetwork.tv/frame*.php$stealth=referrer,domain=radiozet.pl
@@ -29295,7 +29295,6 @@ deserttechairconditioning.com###r-ad-banner
 deshdoaba.com##.site-branding
 deshgold.com##.rltcp_information_cookie, .rltcp_overlay
 desi-porn.tube##.content > div > div[class]:has(> .wrapper:only-child > div[class]:first-child + div[class]:last-child > div[class]:only-child > .da-container)
-desi-porn.tube,desi-porn.xyz##.header__nav > div > a[href][target="_blank"]
 desidime.com##.google-ads-section
 desidime.com##div[id^="div-ad"]
 designboom.com##.aside-adv-box
@@ -32546,6 +32545,8 @@ fapsrc.com##.baninsidevideo
 faptitans.com##.cross-promo-bnr
 faptor.com##.dblock
 faptor.com##.zpot-horizontal-img
+faptor.com,fapnow.xxx,fapnado.xxx##.footer-margin
+faptor.com,fapnow.xxx,fapnado.xxx,fapnado.com###list_videos_related_videos_items > div[class]:has(a[href^="https://www.tckcandy.com/"])
 faq.whatsapp.com##div[id^="mount_"] > div > div > div:last-child:not(:only-of-type)
 farecompare.com##.cookies
 farescd.com##.ads_five
@@ -38151,7 +38152,6 @@ hotleaks.tv,javrank.com##[class^="koukoku"]
 hotmilfzone.com##body > div:not([id]):not([class])
 hotmovs.com###in_va
 hotmovs.com##.app-banners
-hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##a[href^="https://rtr2perf1.com/"]
 hotmovs.com,hotmovs.tube##.header__controls--link
 hotmovs.com,hotmovs.tube##.jw-reset > .nopop
 hotmovs.com,thegay.com##.fiioed
@@ -38556,7 +38556,6 @@ hypershort.com##main > center.linkcontain > button
 hypersunday.com###menu-who
 hypestat.com##.b-error
 hypestat.com##.sem_banner
-hypestat.com,techbloogs.com,tutwuri.id,lokerwfh.net,dz4up.com##div[style="text-align: center;"] > a[target="_blank"] > img
 hyphenation24.com,gematsu.com,videogameschronicle.com,kongregate.com,wikihow.com,gamermatters.com##.adcontainer
 hypnose-raum.com##.blueline-content-popup
 hypnotube.com##.top-ban-row
@@ -40023,6 +40022,7 @@ iphoneincanada.ca###main > article ~ div.widget-area
 iphoneincanada.ca##.cls-video-container-9GFn3u0f
 iphoneincanada.ca##.slbElement
 iphoneitalia.com##.grid-offers-widget
+iphoneitalia.com##.ipit-ac-remove-ads
 iphoneitalia.com##div[id^="addendoContainer_"]
 iphonelife.com##.l-header
 iphonesoft.fr,iphonetweak.fr###msgUser
@@ -51252,11 +51252,13 @@ ping-test.net##.rek970x90
 ping-test.net##div[style^="width: 336px; height: 280px;"]
 ping.chinaz.com##.sth > .col-red
 ping.eu##td > center[style="margin-bottom: 2px;"]
+ping0.cc###adaright
 ping0.cc###adxright
 ping0.cc###websites-wrap:has([rel$="sponsored"])
 ping0.cc##.adeles
 ping0.cc##.aditems
 ping0.cc##.xxeles
+ping0.cc##.xyeles
 pingback.com##.cookies-modal
 pinggu.org##.banner2015
 pinggu.org##.hdbanner
@@ -62554,11 +62556,7 @@ txxx.com##.hgggchjcxja
 txxx.com##.mpululuoopp
 txxx.com##.polumlluluoopp
 txxx.com##.sugggestion
-txxx.com,txxxporn.tube##.bhdfaddmdmhhbb
-txxx.com,txxxporn.tube##.olrraodahdm
-txxx.com,txxxporn.tube##.zzarahzlrda
 txxxporn.tube##.sugggestio
-txxxporn.tube##.video-videos-slider + div[class] + div[class]
 txxxporn.tube,gaytxxx.com##div[class^="video-conten"] > div[class] + div[class]:last-child
 txzqw.me##.tac[style="margin-bottom:5px;"]
 ty2016.net##div[class^=bread_]
@@ -63930,7 +63928,6 @@ vizzed.com##.header > .headerBanner
 vjav.com##.rek__link
 vjav.com##.vda-container
 vjav.com##.video-page__content > div.left + div:has(> div > div[id^="ntv_"])
-vjav.com##.video-videos-slider:has(.item-adlabel)
 vjav.com##[style="width: 728px; height: 90px;"]
 vjav.com##div[class^="content"] > .container + div[class]
 vjav.com,vjav.tube##.left + div:has(> div[class] > [id^="ntv"])
@@ -64094,8 +64091,6 @@ voyeurhit.com##.player-container > div[class^="pl_showtime"]
 voyeurhit.com##.player-container > div[style] > span[class]
 voyeurhit.com##.player_stop
 voyeurhit.com,hdzog.com###under-pl-ad
-voyeurhit.tube##a[href^="https://ctwmsg.com/"]
-voyeurhit.tube##a[href^="https://rtr2perf5.com/"]
 voyeurhit.tube,voyeurhit.com##.header__list > li > a[href][target="_blank"]
 voyeurhit.tube,voyeurhit.com##.video-page > div.video-related + div[class]
 voyeurhit.tube,voyeurhit.com##.video-page__underplayer > div:not([class^="underplayer"])
