@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-01 07:42:09（北京时间）
+! Version: 2026-05-01 09:55:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68152
+! Total count: 68154
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15895,6 +15895,7 @@
 @@||s*.ssl.qhimg.com^
 @@||s*.ssl.qhmsg.com^
 @@||s*.ssl.qhres2.com^
+@@||s*/cdn/down/*.jpg$xmlhttprequest,stealth=referrer
 @@||s-delivery*.mxdcontent.net^$media,stealth=referrer
 @@||s-kip.eu^$generichide
 @@||s-microsoft.com/mscc/statics/$script,domain=microsoft.com
@@ -16839,6 +16840,7 @@
 @@||src.litix.io/videojs/*/videojs-mux.js
 @@||srf.xunfei.cn^
 @@||srv.*/*/*.png$stealth=referrer,domain=vctplay.site
+@@||srv.*/*/*.png$xmlhttprequest,stealth=referrer
 @@||srv.clickfuse.com/showads/adunit.php$domain=aha-music.com
 @@||srv.clickfuse.com/showads/showad.js$domain=aha-music.com
 @@||srv.omgplay.biz^$stealth=referrer
