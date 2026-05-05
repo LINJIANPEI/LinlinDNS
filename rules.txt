@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-05 15:11:47（北京时间）
+! Version: 2026-05-05 17:51:48（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68219
+! Total count: 68228
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3039,6 +3039,7 @@
 3cinfo.net##+js(acis,eval,split)
 3czol.com##[class^="ban_"]
 3czol.com##div[class^="ban_"]
+3d-hentai.co,watchporn4k.com,lolpol2.com##.order-1:has(> .video-block-happy)
 3d-info.pl##.hide-mobile > .row > .col-12 > .auto-unit
 3d-info.pl##div[id^="think-"]
 3d66.com###botfocus-soft
@@ -6004,6 +6005,7 @@
 @@||api.adinplay.com/display/pub/*/display.min.js$domain=tombr.io
 @@||api.adinplay.com/libs/aiptag/$script,domain=bigescapegames.com|brofist.io|cuberealm.io|findcat.io|geotastic.net|lordz.io
 @@||api.adinplay.com/libs/aiptag/*/tag.min.js$domain=crazygames.com|shellshock.io|minijuegos.com
+@@||api.adinplay.com/libs/aiptag/*/tag.min.js$domain=play.gamepix.com
 @@||api.adinplay.com/libs/aiptag/*/tag.min.js$domain=v6p9d9t4.ssl.hwcdn.net|golfroyale.io|zoneroyale.com|creatur.io|wormate.io|octagor.com|lordz2.io|brutalmania.io|findcat.io|evowars.io|shellshock.io|dinoman.io|bombhopper.io|clashblade.com|littlebigsnake.com|evoworld.io
 @@||api.adinplay.com/libs/aiptag/assets/adsbygoogle.js
 @@||api.adinplay.com/libs/aiptag/assets/loader-red.gif$domain=tetrads.io
@@ -9498,6 +9500,7 @@
 @@||forgeofempires.com/game/json
 @@||forms.ministryforms.net/*.aspx^$stealth=referrer,domain=app.clovergive.com
 @@||forms.ministryforms.net/viewForm.aspx$stealth=referrer
+@@||forms.tildaapi.com/payment/promocode/$stealth=referrer
 @@||formula.ifz.ru/cgi-bin/tex2img-new.cgi$stealth=referrer
 @@||forrest.adverticum.net/inapp/user^$domain=embed.indavideo.hu
 @@||forum.51nb.com/images/*/
@@ -11581,7 +11584,6 @@
 @@||interface3.music.163.com.163jiasu.com^
 @@||interface3.music.163.com^
 @@||interfans.org^$generichide
-@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -15051,6 +15053,7 @@
 @@||play.anghami.com^$generichide
 @@||play.bokracdn.run/v2/adsjs/ads.js$script,~third-party
 @@||play.dlsite.com/csr/viewer/lib/newrelic.js
+@@||play.gamepix.com/player/assets/js/prebid.js$domain=play.gamepix.com
 @@||play.geforcenow.com/mall/$stealth=webrtc
 @@||play.googleapis.com^
 @@||play.history.com^$elemhide
@@ -16281,6 +16284,7 @@
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=line.me
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=manchestereveningnews.co.uk
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=olx.ba
+@@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=play.gamepix.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=purepeople.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=scotsman.com
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=theglobeandmail.com
@@ -16332,6 +16336,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=nieuwsblad.be
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=olx.ba
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=play.fancade.com
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=play.gamepix.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=politico.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=portmiamiwebcam.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=purepeople.com
@@ -16678,7 +16683,6 @@
 @@||smsreceiveonline.com^$generichide
 @@||smstome.com^$generichide
 @@||smtcaw.com^$generichide
-@@||smtp.focusgroupresearch.com^
 @@||smtp.focusgroupresearch.com^|
 @@||smushcdn.com^*/1.gif$domain=retrounlim.com
 @@||sn.dplayer*.site/iframe.php$stealth=referrer
@@ -31737,6 +31741,7 @@ eroprn.com##.tubecor
 eroprn.com##.video-aside
 eroprofile.com###divVideoListAd2
 eroprofile.com##div[style="width:300px height:300px;"]
+erorealm.com,base64decode.org,base64encode.org,numgen.org,pdfmrg.com,pdfspl.com,prettifycss.com,prettifyjs.net,pwdgen.org,strlength.com,uglifycss.com,urldecoder.org,urlencoder.org##[class^="banner_"]
 erosxsun.xyz,westmanga.me###teaserbottom
 erothots.co##.bnr
 erothots.co##.work-sites
@@ -54290,6 +54295,7 @@ refresher.sk##.gdpr-panel
 refurbished.sk##.cookies
 regen.network###gatsby-focus-wrapper > div:not([class]) + div
 regexlearn.com##.w-full.mb-3:has(a[href="/learn/regex-for-seo"])
+regfiles.net##.important-container
 regielive.ro###cc-mesaj-box-wrapper
 regio15.nl##body > div[class*="app"] > div[class*="popup"]
 regioactive.de###dialogconsent, .reveal-modal-bg
@@ -57561,11 +57567,13 @@ sourceforge.net###nels
 sourceforge.net###top-placeholder
 sourceforge.net###vibe-coding-bar
 sourceforge.net##.can-truncate
+sourceforge.net##.l-side-column .m-sidebar-widget:has(> .body > .standard > div[data-dest*="bannerid="])
 sourceforge.net##.main-nav-link
 sourceforge.net##.projects > .trunc-eligible
 sourceforge.net##.projects > li.nel[data-cid]
 sourceforge.net##.sterling
 sourceforge.net##a[data-label^="avast"]
+sourceforge.net##div[id^="mongo-stick-"]
 sourceforge.net##section.m-project-search-results > ul.projects > li.nel:not([itemprop])
 sourceforge.net,freepik.com##div[data-id^="div-gpt-ad-"]
 sourcenaturals.com###policy_div
@@ -65331,6 +65339,7 @@ winaero.com###jkhskdfsdf-iycc-4
 winaero.com##.gad-gads
 winaero.com##.site-content > div > p[style="margin: 22px"]
 winaero.com##.windiv:has(> a.winrec)
+winaero.com##a[href="/fix-prf-issues/"]
 winaero.com$$script[wildcard="*.innerHTML*.parentNode.insertBefore*"][max-length="2000"]
 winandmac.com,nicekkk.com###custom_html-3
 winbuzzer.com##.mfp-figure::before
