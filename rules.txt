@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-06 23:21:01（北京时间）
+! Version: 2026-05-07 01:21:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68247
+! Total count: 68256
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2314,6 +2314,7 @@
 1688porn.tv##div[id^="slider-"]
 168chasa.bg###cookie-b
 168gamer.com,168gamer.net##.b_tad
+169bbs.com##.a_f
 16fan.com##.item-newad
 16fan.com,jianshen8.com##.index-banner
 16honeys.com###ad-container
@@ -18710,6 +18711,7 @@
 @@||walmart.com/orchestra/*/graphq$stealth=donottrack
 @@||walmart.com/orchestra/api$stealth=donottrack
 @@||walmart.com/swag/graphql$stealth=donottrack
+@@||walmart.com^$stealth=flash
 @@||wamiz.com/css/ads.css
 @@||wan.baidu.com^
 @@||wan.douyu.com^
@@ -22217,6 +22219,10 @@ audiobookbay.is##[src="/images/d-t.gif"]
 audiobookbay.is##[src="/images/dire.gif"]
 audiobookbay.is##a[href^="/dl-14-days-trial"]
 audiobookbay.is##div[style*="margin-bottom:"].ski
+audiobookbay.lu##.sky
+audiobookbay.lu##a[href^="/dl-14-days-trial"]
+audiobookbay.lu##tr:has(> td:last-child > a:only-child > img[src^="/images/d"]:only-child)
+audiobookbay.lu##tr:has(> td:last-child > span > a[href*="?"])
 audiobyray.com##.cat-carousel
 audiocite.net##div[class*="fondcookies"]
 audiofan.eu###cookie
@@ -25910,8 +25916,6 @@ cbn.com###cbn_leaderboard_atf
 cbn.com##.partners-block
 cbndata.com##.Toastify
 cboard.cprogramming.com##.postrow > div[style*="300px; height:"]
-cbr.com,thegamer.com##.an-injected
-cbr.com,thegamer.com##.an-injector-zone
 cbs12.com##div[class^="index-module_adAfterContent"]
 cbs12.com##div[id^="js-Taboola-Container"]
 cbsnews.com###component-taboola-local-article
@@ -41162,12 +41166,14 @@ jiemian.com##.nav-next-ad-views
 jigidi.com##.au-base
 jigsawplanet.com###cb984b30f2-4
 jigsawplanet.com###pl25 + div[id]
+jigsawplanet.com###ts-toptimes + div[id*="-"]
 jigsawplanet.com###tsi-9c55f80e-3
 jigsawplanet.com##.ts-ad-wrap
 jigsawplanet.com##.ts-msg
 jigsawplanet.com##[id^="tsi-"][style="height:90px;margin:0"]
 jigsawplanet.com##[id^="tsi-"][style="height:90px;margin:var(--block-vertical-spacing) 0"]
 jigsawplanet.com##[style="min-height:90px"]
+jigsawplanet.com##div[id]:has(> [style="height: 100%; display: flex; flex-direction: row; overflow: hidden; gap: 0.2em; margin: 0px auto; justify-content: center;"])
 jigsawplanet.com##div[id^="tsi-"][style^="height:90px;margin:"]
 jigzone.com###dz
 jigzone.com###fH
@@ -43006,7 +43012,6 @@ le.com##.min_pause_img
 le.com##div[data-type="bottomLayerView"]
 leaandperrins.co.uk##body > div:not([id]):not([class])
 leaderdrive.fr##.base-cookies
-leaderpost.com,thestarphoenix.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,ottawasun.com,ottawacitizen.com,calgarysun.com,ontariofarmer.com,tj.news,thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
 leaf.tv##.rightrail-display-ad
 leaf.tv,sciencing.com##.sticky-leaderboard-container
 league-funny.com###popupvideoad
@@ -50901,6 +50906,9 @@ pelando.com.br##main ~ div
 pelit.fi##.notification
 pelop.gr###article_end
 pelop.gr##div[id^="inline"][style^="min-height:"]
+pembrokeobserver.com,saultthisweek.com,nugget.ca,northernnews.ca,leaderpost.com,thestarphoenix.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,ottawasun.com,ottawacitizen.com,calgarysun.com,ontariofarmer.com,tj.news,thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
+pembrokeobserver.com,saultthisweek.com,nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com##.epaper-widget
+pembrokeobserver.com,saultthisweek.com,ontariofarmer.com,norfolkandtillsonburgnews.com,napaneeguide.com,parisstaronline.com,nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com,pinchercreekecho.com,prrecordgazette.com,leducrep.com,thebeaumontnews.ca,fortmcmurraytoday.com,edmontonsun.com,edmontonexaminer.com,devondispatch.ca,dailyheraldtribune.com,calgarysun.com,calgaryherald.com,airdrieecho.com,thecragandcanyon.ca,thebeaumontnews.ca,cochranetimes.com,leaderpost.com,thestarphoenix.com,ottawasun.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,theprovince.com,woodstocksentinelreview.com,edmontonjournal.com##.widget--local-business
 pemersatu.org###pemersatuDiv
 pemp.pl###divCiacho
 pen4pals.com###block-block-245
@@ -51309,7 +51317,6 @@ pimpletv.ru##.adblock-notification
 pimpmymoney.net##.widget_siteorigin-panels-builder
 pimpmymoney.net##.widget_sow-simple-masonry
 pimylifeup.com###sidebar > section.widget_text > .textwidget > a[href^="https://go.pimylifeup.com/"][target="_blank"] > img
-pinchercreekecho.com,prrecordgazette.com,leducrep.com,thebeaumontnews.ca,fortmcmurraytoday.com,edmontonsun.com,edmontonexaminer.com,devondispatch.ca,dailyheraldtribune.com,calgarysun.com,calgaryherald.com,airdrieecho.com,thecragandcanyon.ca,thebeaumontnews.ca,cochranetimes.com,leaderpost.com,thestarphoenix.com,ottawasun.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,theprovince.com,woodstocksentinelreview.com,edmontonjournal.com##.widget--local-business
 pinchofyum.com##.adthrive_header_ad
 pincong.rocks##+js(aopr, AWS.alert)
 pincong.rocks##.a-a
@@ -60189,6 +60196,7 @@ thefederal.com##.pb-3 > .col-xl-3.col-lg-6.col-md-6:has(> [id^="ad_slot"])
 thefederal.com##.top_level_1_before_after_header
 thefederalist.com##.general-callout
 thefetishistas.com##div[id^="thefe-"]
+thefightingcock.co.uk##div:has(> div[id]:only-child:empty)
 thefileslocker.net###hiddenLinkImg
 thefinancialexpress.com.bd###innerAds
 thefinancialexpress.com.bd##.ads-carousel-container
@@ -66077,6 +66085,7 @@ www.wp.pl###app-content > .relative > .flow-root > div[class*=" "]:has(> img[src
 www.wp.pl##.grid > div:not([class]):has(> div[class*=" "]:only-child > div[class*=" "]:first-child + div[class*=" "]:last-child > div:empty:first-child + img[src*="://v.wpimg.pl/"][alt][role="presentation"]:last-child)
 www.wp.pl##.relative > :is(div[class^="sc"], .wp-bg-transparent) > div[class^="sc"]:has(> img[src^="https://v.wpimg.pl/"][alt]:first-child + img[src^="https://v.wpimg.pl/"][alt] + div[class^="sc-"]:last-child)
 www.wp.pl##.relative >.relative > .items-center[style]:has(> img[src^="https://v.wpimg.pl/"][alt]:first-child + img[src^="https://v.wpimg.pl/"][alt] + div[class]:last-child)
+www.wp.pl##.wp-live-main > .wp-inner-content > div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div + script:last-child)
 www.wp.pl##.wp-placeholder
 www.wp.pl##a[href^="https://direct.money.pl/landing-page/callcenter/"]
 www.wp.pl##aside > div[data-st-area="Pogoda"] + div[class^="sc-"]:has(a[href^="https://koszykrd.wp.pl?product_url="])
