@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-06 16:05:22（北京时间）
+! Version: 2026-05-06 18:55:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 68239
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -7412,6 +7412,7 @@
 @@||cdn.pandora.xiaomi.com^
 @@||cdn.perfops.net/rom3/rom3.min.js$domain=cdnperf.com
 @@||cdn.performax.cz/ads|$domain=idnes.cz|novinky.cz
+@@||cdn.petametrics.com/*-nbc.js$script,domain=bringmethenews.com
 @@||cdn.pinduoduo.com^
 @@||cdn.ping0.cc^
 @@||cdn.playwire.com/bolt/js/zeus/embed.js$domain=abcya.com
@@ -51318,12 +51319,10 @@ ping-test.net##.rek970x90
 ping-test.net##div[style^="width: 336px; height: 280px;"]
 ping.chinaz.com##.sth > .col-red
 ping.eu##td > center[style="margin-bottom: 2px;"]
-ping0.cc###adaright
 ping0.cc###adbright
 ping0.cc###websites-wrap:has([rel$="sponsored"])
 ping0.cc##.adeles
 ping0.cc##.aditems
-ping0.cc##.xyeles
 ping0.cc##.xzeles
 ping0.cc##a[rel="noopener nofollow"][target="_blank"]:has(> .closead)
 pingback.com##.cookies-modal
@@ -67060,6 +67059,7 @@ yatu.tv##.dplayer-web-fullscreen-fix #tburl,#loadtop,[id^=myas],#myds1,#daohang
 yatu.tv,yhdm7.com,yhdm95.com,xdm530.com##+js(aopw,document.oncontextmenu)
 yauto.cz###adv_ram
 yavitrina.ru##.cookie
+yay.porn,1porno.net,ip-tracker.org,peggo.tv,fliqlo.com##div[class^="ad-"]
 yaya0506.com##iframe[style="border: 0;"][width="100%"][height="280"][src^="//www.12beststar.com/"]
 yazhouse8.com##.banners
 yazhouse8.com##.mini-over-top
