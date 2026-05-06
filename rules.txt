@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-06 07:39:21（北京时间）
+! Version: 2026-05-06 09:47:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68239
+! Total count: 68242
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -32010,6 +32010,7 @@ euronews.com###js-leaderboard-top
 euronews.com###o-site-hr__leaderboard-wallpaper.u-show-for-xlarge {remove:true;}
 euronews.com###sharethrough-ad
 euronews.com###sharethrough-ad-medium-up
+euronews.com##.b-sponsored-content
 euronews.com##.c-article-content > h2::before
 euronews.com##.c-card-sponsor
 euronews.com##.c-leaderboard
@@ -32020,7 +32021,9 @@ euronews.com##.m-object:has(.m-object__spons-quote)
 euronews.com##.qa-dfpLeaderBoard
 euronews.com##.qa-marketBlock
 euronews.com##.tp-outbrain
+euronews.com##aside > div[class*="o-article-newsy__aside__content-"]:has(> div[class*="u-show-for"])
 euronews.com##aside.o-article__aside > .OUTBRAIN
+euronews.com##div[class*="u-show-for"]
 euronova-italia.it##.cc-customdialog
 europa-vrachtwagens.nl###cookie
 europa.eu###edp-cookies-banner, .customCookie, .cookie-section
