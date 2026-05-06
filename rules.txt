@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-06 20:23:19（北京时间）
+! Version: 2026-05-06 23:21:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68239
+! Total count: 68247
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7135,6 +7135,7 @@
 @@||cargocollective.com/designs/$document
 @@||carsensor.net/usedcar/modules/clicklog_top_lp_revo.php$xmlhttprequest
 @@||cart.books.com.tw/member/login$stealth=java|flash
+@@||cartaocontinente.pt^$stealth=flash
 @@||cartoon.porn^$generichide
 @@||cashier.ele.me^
 @@||casos-aislados.com^$generichide
@@ -10025,6 +10026,7 @@
 @@||gogodl.com/*/js/advertisement.js
 @@||goha.ru/app/video/adblock.teaser.js|$script,domain=goha.ru
 @@||golangnote.com^$generichide
+@@||goldenergy.pt^$stealth=dpi
 @@||gomaainfo.com^$generichide
 @@||gomein.net.cn^*,
 @@||goodinfo.tw/StockInfo/image/*.png
@@ -10929,6 +10931,7 @@
 @@||ign.com^$generichide
 @@||ignitetv.rogers.com/js/api/fingerprint.js$script,~third-party
 @@||ignitetv.shaw.ca/js/api/fingerprint.js$~third-party
+@@||iherb.com^$stealth=useragent
 @@||ihlv1.xyz/images$image,stealth=referrer,domain=weloma.art
 @@||ihlv1.xyz/images$stealth=referrer
 @@||ihow.info^$generichide
@@ -29375,6 +29378,7 @@ desokupa.com###SITE_ROOT ~ div[data-reactid*="siteAspectsContainer"]
 dessi.co##.pages__BannerWrapper-sc-1yt8jfz-0
 destinations.ua##.cookies
 destockplus.com##.page_warning
+destructoid.com##.gamurs-ad-container
 destructoid.com##.htlad-destructoidcom_leaderboard_atf
 destructoid.com,wegotthiscovered.com##.wp-block-gamurs-ad
 detail.mall.meizu.com##.app detail
@@ -40035,7 +40039,6 @@ ip-tracker.org##.lookup-ad-holder > #map + .track
 ip-tracker.org##.reklo-in-main
 ip-tracker.org##div[class^="adunit"]
 ip-tracker.org##td[style="height:135px; padding-left:2%"]
-ip-tracker.org,peggo.tv,fliqlo.com##div[class^="ad-"]
 ip.cn##.well > p > a
 ip.cn##img[src*="/img/"]:style(height:101px !important;)
 ip.me###navbarSupportedContent > a[target="_blank"]
@@ -49250,6 +49253,9 @@ nudogram.com##.wp_xsize_class
 nudogram.com##ul.primary > li > a[target="_blank"]:not([href*="nudogram.com"])
 nuevocaceres-sanfrancisco.es##.index_cookies
 nuget.org##.banner, #banner
+nugget.ca,northernnews.ca,leaderpost.com,thestarphoenix.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,ottawasun.com,ottawacitizen.com,calgarysun.com,ontariofarmer.com,tj.news,thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
+nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com##.epaper-widget
+nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com,pinchercreekecho.com,prrecordgazette.com,leducrep.com,thebeaumontnews.ca,fortmcmurraytoday.com,edmontonsun.com,edmontonexaminer.com,devondispatch.ca,dailyheraldtribune.com,calgarysun.com,calgaryherald.com,airdrieecho.com,thecragandcanyon.ca,thebeaumontnews.ca,cochranetimes.com,leaderpost.com,thestarphoenix.com,ottawasun.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,theprovince.com,woodstocksentinelreview.com,edmontonjournal.com##.widget--local-business
 nuggetroyale.io##.gameOverBannerAd
 nullaostalavoro.dlci.interno.it###panel
 nullforums.net##.sponsoredHomeContainer
@@ -66235,6 +66241,8 @@ xd0.com###HtmlMoKua_775790
 xda-developers.com###twig-top
 xda-developers.com##.honor-spon-banner
 xda-developers.com##.w-pencil-banner
+xda-developers.com,cbr.com,thegamer.com##.an-injected
+xda-developers.com,cbr.com,thegamer.com##.an-injector-zone
 xdaforums.com###xdaforums_leaderboard_atf
 xdaforums.com###xdaforums_leaderboard_btf
 xdaforums.com###xdaforums_right_1
