@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-06 09:47:50（北京时间）
+! Version: 2026-05-06 13:19:48（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68242
+! Total count: 68239
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2083,7 +2083,6 @@
 12306.cn,club.pchome.net,kdslife.com,qinbing.cn###slideBox
 12306.cn,club.pchome.net,qinbing.cn###slideBox
 12377.cn###notice
-123865.com##.bg_svip_block_ads
 123av.com##.w300
 123av.com,123av.ws,1av.to##[style^="width:300px;"]
 123av.fun##a[href="https://missav.run"]
@@ -4141,7 +4140,6 @@
 @@/\.(quest|shop|autos)\/.*\./$script,xmlhttprequest,domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*|limiteddollqjc.*
 @@/\/[js].?[js]\/.*\.js/$script,xmlhttprequest,domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*|limiteddollqjc.*
 @@/\/\d\d\d\d\d$/$xmlhttprequest,script,other,third-party,domain=jujmanga.com
-@@/\/\d\d\d\d\d$/$xmlhttprequest,script,other,third-party,domain=jujmanga.host
 @@/\/\d{5,7}$/$domain=mylink.*|my1ink.*|myl1nk.*|myli3k.*
 @@/^https:\/\/127\.0\.0\.1:10039\/\?callback=jQuery[0-9]{20,}_[0-9]{13}&HW&[A-z0-9]{22}==&&0&0&/$stealth=referrer
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/20\d{4}\/\d{2}\/\d{9}\/(?:original|thumbs_\d{2})\/\d{0,2}(?:\(m=e[0-9A-Za-z]{5,7}(?:aaaa)?\)\(mh=[-_0-9A-Za-z]{16}\))?\d{0,2}\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
@@ -7984,6 +7982,7 @@
 @@||code.jquery.com/*.min.js$domain=audioz.download
 @@||code.jquery.com^$domain=clickndownload.*|clicknupload.*
 @@||code.sms.mob.com^
+@@||codeberg.org^$stealth=ip|useragent
 @@||codec.kyiv.ua^$generichide
 @@||codehelppro.com^$generichide
 @@||codepen.io^$generichide
@@ -9991,7 +9990,6 @@
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
 @@||go-mpulse.net^$domain=costcobusinessdelivery.com
-@@||go.adjust.com^
 @@||go.adjust.com^|
 @@||go.admost.com/adx/get.ashx&accptck$domain=sahadan.com
 @@||go.admost.com/adx/js/admost.js^$domain=mackolik.com
@@ -11586,6 +11584,7 @@
 @@||interface3.music.163.com.163jiasu.com^
 @@||interface3.music.163.com^
 @@||interfans.org^$generichide
+@@||intersport.peerius.com^
 @@||intersport.peerius.com^|
 @@||intoday.in/embeded/*_live?
 @@||intro.limestart.cn^
@@ -13542,6 +13541,7 @@
 @@||nrc.nl^$generichide
 @@||nsclick.baidu.com^
 @@||nsfw.xxx/vendor/fingerprint/fingerprint2.min.js$script,~third-party
+@@||nsl.pincrux.com^$stealth=dpi
 @@||nstool.netease.com^
 @@||ntcdntempv*.com/data/images/$stealth=referrer
 @@||nthu.edu.tw^*ad
@@ -14728,7 +14728,6 @@
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=decrypt.day
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=filecr.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=production-api.androidacy.com
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=toolxox.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=tsubasa.im
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=zefoy.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy$script,domain=citroen-club.cz|renault-club.cz
@@ -21631,10 +21630,12 @@ apllogistics.com##.disclaimer
 apmg-international.com##.status-messages
 apnews.com##.Advertisement
 apnews.com##.FeedAd
+apnews.com##.LeaderBoardAd-Mobile
 apnews.com##.Page-header-leaderboardAd
 apnews.com##div[class^="TwoColumnContainer"]:has(> div[class^="TwoColumnContainer"][class$="-container"] > div > div#taboola-below-homepage-thumbnails)
 apnews.com,arabiaweather.com,atlasobscura.com,forum.audiogon.com,gamesindustry.biz,golfdigest.com,zerohedge.com##.leaderboard-container
 apnews.com,sidereel.com##+js(acs, document.getElementsByTagName, .pubads)
+apnews.com,suffolknews.co.uk##.Advertisement
 apnnews.com##.bottomAd2
 apogeum.com.pl###cookie
 apogeum.net.pl##body > div:not([id]):not([class])
@@ -23231,7 +23232,6 @@ base64decode.org##.ad_right_top
 base64decode.org,base64encode.org,beautifyjson.org,minifyjson.org,prettifycss.com,prettifyjs.net,uglifycss.com,uglifyjs.net,urldecoder.org,urlencoder.org,urlencoder.org.prettifycss.com##.ad_header_box
 base64decode.org,base64encode.org,beautifyjson.org,minifyjson.org,prettifycss.com,prettifyjs.net,uglifycss.com,uglifyjs.net,urldecoder.org,urlencoder.org,urlencoder.org.prettifycss.com##.ad_left_box
 base64decode.org,base64encode.org,beautifyjson.org,minifyjson.org,prettifycss.com,prettifyjs.net,uglifycss.com,uglifyjs.net,urlencoder.org,urlencoder.org.prettifycss.com##.ad_right_box
-base64decode.org,base64encode.org,numgen.org,pdfmrg.com,pdfspl.com,prettifycss.com,prettifyjs.net,pwdgen.org,strlength.com,uglifycss.com,urldecoder.org,urlencoder.org##[class^="banner_"]
 base64decode.org,urldecoder.org##.ad_right_bottom_box
 base64decode.org,urldecoder.org##.ad_right_top_box
 baseball-reference.com###content > .adblock
@@ -35357,7 +35357,6 @@ gerasanews.com###firstads_close_button
 gerasanews.com##.iads_border
 gerasanews.com##[class^="adsSpacer"]
 gerasanews.com##[class^="bestaAds_"]
-gerbeaud.com$$script:contains(:window,)
 gerlach.org.pl###top0info
 german-pavilion.com###privacy-flyout
 germaniasport.hr###gdpr-wrapper
@@ -50237,7 +50236,6 @@ otowejherowo.pl##.ai_widget
 otowejherowo.pl##.code-block
 otr-max.de##body > div[style*="scroll"]
 ottawacitizen.com##.adsizewrapper
-ottawasun.com,ottawacitizen.com,calgarysun.com,ontariofarmer.com,tj.news,thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
 ottawazine.com###sgpb-popup-dialog-main-div-wrapper
 ottawazine.com##.sgpb-popup-overlay
 ottawazine.com##div[id^="text-"]
@@ -60550,7 +60548,6 @@ thepricer.org##.reserved-ad-slot
 theprodkeys.com###adb
 theproducenews.com##div[id*="-gamwadvertisement-"]
 theprovince.com##.widget_pn_dfpad
-theprovince.com,woodstocksentinelreview.com,edmontonjournal.com##.widget--local-business
 theproxy.lol,unblock-it.com,uproxy2.biz###cookieConsentUR99472
 thequint.com##._3VDj4
 thequint.com##._4xQrn
@@ -60901,6 +60898,7 @@ ticketmaster##.kOwduY
 ticketmaster.com##.jTNWic
 ticketmaster.com##.jUIMbR
 ticketmaster.sg##.adsdisclaimer
+ticketnews.com##.tnam-content-ad
 ticketswap.be##ticketswap-portal > ul
 ticketswap.com##ticketswap-portal > ul
 ticketswap.com.br##ticketswap-portal > ul
@@ -64616,7 +64614,6 @@ watchmygf.me##.publicity
 watchmynewgf.com##body > section.bb
 watchonline.pro##a[href^="http://watchonline.pro/watch-now/"] > img[width="500"]
 watchporn.to##.container > center > .top > a > img
-watchporn4k.com,lolpol2.com##.order-1:has(> .video-block-happy)
 watchporn4k.com,mdhstream.cc,fucking-tube.com##.happy-section
 watchpornfree.info##aside > #execphp-2
 watchsomuch.to###VPN
