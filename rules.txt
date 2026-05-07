@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-07 07:40:32（北京时间）
+! Version: 2026-05-07 09:52:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68256
+! Total count: 68262
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7081,6 +7081,7 @@
 @@||cam-archive.com^$generichide
 @@||camarchive.tv/assets/ads.js
 @@||camcam.cc^$generichide
+@@||camel1.tv/lib/sensorsdata.full.min.js$~third-party
 @@||camel3.live/lib/sensorsdata.full.min.js$~third-party
 @@||camera.aeonax.com^$generichide
 @@||camerabay.tv/ads/entry/camerabay/fullbk/bg.jpg
@@ -23942,6 +23943,7 @@ bing.com###BottomAppPro
 bing.com###TopApp
 bing.com###b_content > div#pole > div[class="ra_car_block ra_pole"] > div.ra_car_container
 bing.com###b_content > main[aria-label] > #b_ims_bza_pole
+bing.com###b_results > li:has(.b_adProvider)
 bing.com###b_results > li[style*="padding-bottom: 8px;"][style*="235, 235, 235"]
 bing.com###banner
 bing.com###bepfo.popup[style^="visibility: visible"]
@@ -23957,6 +23959,8 @@ bing.com##.b_adBottom
 bing.com##.b_adLastChild
 bing.com##.b_adPATitleBlock
 bing.com##.b_adPATitleBlock + div
+bing.com##.b_algo:has(.ad_esltitle)
+bing.com##.b_algo:has(.b_ads1line)
 bing.com##.b_algo:has(.rms_img[src*="/th?id=OADD2."][src$="21.2"])
 bing.com##.b_algo:has(.rms_img[src*="=AdsPlus"])
 bing.com##.b_algo:has(> .b_title > h2 > .b_ads1line)
@@ -23975,6 +23979,7 @@ bing.com##.pa_sb
 bing.com##.productAd
 bing.com##.promotion-panel-inner
 bing.com##.ra_car_block
+bing.com##.sb_form_placeholder:has(>.ad-ghost-slug)
 bing.com##.shop_page .br-poleoffcarousel
 bing.com##.slide:has(.rtb_ad_caritem_mvtr)
 bing.com##.text-ads-container
@@ -23990,6 +23995,7 @@ bing.com##div[class="ins_exp vsp"]
 bing.com##li.b_ad
 bing.com##li.b_ad,#b_notificationContainer_bop
 bing.com##li[class=""][data-bm][style*="margin-bottom"]
+bing.com##li[class="b_algo"]:has(.b_attribution[data-partnertag]+p[class])
 bing.com##li[class="b_ans"][data-partnertag]:has(> div[class^="b_bza_"])
 bing.com##li[data-idx]:has(#mm-ebad)
 bing.com,cn.bing.net###bnp_rich_div
@@ -27553,6 +27559,9 @@ community.hackintoshshop.com##div[style="width: 100%; display: table;"]
 community.headlightmag.com##.Banner-B-Top-Step2
 communitychickens.com,keepingbackyardbees.com##.jumbo-ad
 communitynotes.twitter.com##div[aria-labelledby="notice-floating-ui-3-heading"]
+communitypress.ca,pembrokeobserver.com,saultthisweek.com,nugget.ca,northernnews.ca,leaderpost.com,thestarphoenix.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,ottawasun.com,ottawacitizen.com,calgarysun.com,ontariofarmer.com,tj.news,thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
+communitypress.ca,pembrokeobserver.com,saultthisweek.com,nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com##.epaper-widget
+communitypress.ca,pembrokeobserver.com,saultthisweek.com,ontariofarmer.com,norfolkandtillsonburgnews.com,napaneeguide.com,parisstaronline.com,nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com,pinchercreekecho.com,prrecordgazette.com,leducrep.com,thebeaumontnews.ca,fortmcmurraytoday.com,edmontonsun.com,edmontonexaminer.com,devondispatch.ca,dailyheraldtribune.com,calgarysun.com,calgaryherald.com,airdrieecho.com,thecragandcanyon.ca,thebeaumontnews.ca,cochranetimes.com,leaderpost.com,thestarphoenix.com,ottawasun.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,theprovince.com,woodstocksentinelreview.com,edmontonjournal.com##.widget--local-business
 comnuan.com##.cmnnsticky
 como-se-escribe.com###pck
 comohoy.com###contenthide > a[target="_blank"]
@@ -50906,9 +50915,6 @@ pelando.com.br##main ~ div
 pelit.fi##.notification
 pelop.gr###article_end
 pelop.gr##div[id^="inline"][style^="min-height:"]
-pembrokeobserver.com,saultthisweek.com,nugget.ca,northernnews.ca,leaderpost.com,thestarphoenix.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,ottawasun.com,ottawacitizen.com,calgarysun.com,ontariofarmer.com,tj.news,thestarphoenix.com,leaderpost.com,edmontonsun.com,driving.ca,calgaryherald.com,theprovince.com,canoe.com,financialpost.com##section[aria-describedby^="advertisment"]
-pembrokeobserver.com,saultthisweek.com,nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com##.epaper-widget
-pembrokeobserver.com,saultthisweek.com,ontariofarmer.com,norfolkandtillsonburgnews.com,napaneeguide.com,parisstaronline.com,nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com,pinchercreekecho.com,prrecordgazette.com,leducrep.com,thebeaumontnews.ca,fortmcmurraytoday.com,edmontonsun.com,edmontonexaminer.com,devondispatch.ca,dailyheraldtribune.com,calgarysun.com,calgaryherald.com,airdrieecho.com,thecragandcanyon.ca,thebeaumontnews.ca,cochranetimes.com,leaderpost.com,thestarphoenix.com,ottawasun.com,draytonvalleywesternreview.com,highrivertimes.com,stonyplainreporter.com,vulcanadvocate.com,theprovince.com,woodstocksentinelreview.com,edmontonjournal.com##.widget--local-business
 pemersatu.org###pemersatuDiv
 pemp.pl###divCiacho
 pen4pals.com###block-block-245
