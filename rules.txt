@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-10 23:42:30（北京时间）
+! Version: 2026-05-11 00:41:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68287
+! Total count: 68285
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -66178,8 +66178,6 @@ wykop.pl##body .pub-slot-wrapper
 wykop.pl##div[id^="bmone2n-"]
 wykop.pl##section[class]:has(> .wrapper > a:is([href*="clk.tradedoubler.com"], [href*="&landingPageId="][href*="&partner_id="]))
 wykop.pl##section[class]:has(> .wrapper > img:first-child + a[target="_blank"]:last-child)
-wykop.pl##section[class]:has(> .wrapper:only-child > a:is([href*="clk.tradedoubler.com"], [href*="&landingPageId="][href*="&partner_id="]))
-wykop.pl##section[class]:has(> .wrapper:only-child > img:first-child + a[target="_blank"]:last-child)
 wykop.pl$badfilter
 wyld.de##.optin
 wyniki.onet.pl,przegladsportowy.onet.pl##.dlapi-placeholder
