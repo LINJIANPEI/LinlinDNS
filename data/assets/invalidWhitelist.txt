@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14397
+! Total count: 14398
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-05-12 22:35:07（北京时间）
+! Version: 2026-05-13 11:52:38（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -314,9 +314,12 @@
 # @@||sylvan.apple.com^$important
 # API、接口、登录
 # API、网关、业务接口
+# ARD German Television
 # Adswizz sponsor clips before several podcasts
 # Akamai Technologies
 # Aliexpress.com
+# Amazon Prime Video and Amazon CDN
+# Apple
 # AppleMusic音乐
 # Audioscrobbler.com
 # Avangate Shop
@@ -327,10 +330,17 @@
 # Cloudinary Upload Platform
 # CrashGuard服务
 # Dataplicity.com
+# Disney+ Streaming
 # Drift.com
 # Dropbox
+# DynDns Provider
+# Earthquake App
 # Embedly.com
 # F1 TV
+# Firefox Browser
+# Formula 1 Mobile iOS
+# German Corona Apps Very Special lol
+# German Corona Warn App
 # Giphy.com
 # Github
 # Google
@@ -343,11 +353,17 @@
 # Joyn TV Stream
 # Jquery
 # Jsdelivr.net Open Source CDN
+# Lets Encrypt
 # Libsyn Podcast Hosting
 # MIUI 骚扰拦截
+# Mailbox.org
 # Malwarebytes Anti-Malware
+# Manager Magazin App
+# Meteologix Business
 # Microsoft
+# My Adguard Home whitelist
 # NOMO APP
+# Netflix
 # No-IP.com
 # OneDrive Mac客户端连接
 # Optimizely
@@ -358,20 +374,31 @@
 # QQ头像
 # QQ小程序 微博分享
 # QQ群内打卡图片
+# Reddit
 # Rlje.net VOD
+# Samsung TV network issue
+# Scalable
 # Shopify.com eCommerce Software
 # Sonarr TV Soft
+# Sonos
+# Spiegel.de
+# Spotify
 # Surveymonkey
 # Tawk Live Chat
 # Ted.com
+# The Pionneer App
 # Themoviedb.com
 # Thetvdb.com
+# Tidal
 # Tinyurl Shortener
 # Todesk
 # Twitter
 # Vidible Video Platform
+# Weather
+# WhatsApp
 # Wikipedia
 # Wordpress
+# Wow Tv App ex Sky
 # XKCD
 # Youtube
 # apple
@@ -696,6 +723,7 @@
 #APP扫码后登陆页面加载
 #APP聊天窗口内图片加载
 #APP设置页各选项内容布局加载
+#Adguard DNS
 #Android Apk下载页面
 #App内网易心小易界面游戏图标跳转链接
 #A站点赞
@@ -7630,7 +7658,7 @@
 @@||afasiaarchzine.com^$generichide
 @@||aff.bstatic.com^$image,domain=tonkosti.ru
 @@||affiliates.bundlehunt.com/wp-json/$domain=bundlehunt.com
-@@||affluentarmyequator.com^$domain=playhydrax.com|kissanime.com.ru
+@@||affluentarmyequator.com^$domain=kissanime.com.ru
 @@||affyun.com^$generichide
 @@||afisha.ru/proxy/videonetworkproxy.ashx?$xmlhttprequest
 @@||aflac.com/js/wt_capi.js
@@ -8231,7 +8259,6 @@
 @@||app.titsx.com*/search$domain=porn-plus.com
 @@||app.typetopia.com/media/ad/*.mp3|
 @@||app.veggly.net/plugins/cordova-plugin-admobpro/www/AdMob.js$script,~third-party
-@@||app.zyncfreesurveys.com/js/global/adverts.js
 @@||app2.putgate.org/static/*.html$xmlhttprequest,stealth=referrer
 @@||appapi.inspsearchapi.com^$domain=search.pch.com
 @@||appdn.net/wp-content/plugins/chilly-pot/assets/js/advertisement.min.js
@@ -8782,13 +8809,12 @@
 @@||bombaytimes.com/*ads$script,other,~third-party
 @@||bombhopper.io/prebid.js
 @@||bombuj.si^$generichide
-@@||boobausauhipsa.net^$domain=playhydrax.com|kissanime.com.ru
+@@||boobausauhipsa.net^$domain=kissanime.com.ru
 @@||book.com.tw/image/getImage?
 @@||book.com.tw/image/getImage?$domain=books.com.tw
 @@||booking.vietjetair.com/searchrespax.aspx$stealth
 @@||bookmate.com^*/impressions?$~third-party,xmlhttprequest
 @@||bookoffonline.co.jp/files/tracking/ac/clicktag.js$~third-party
-@@||bookscool.com/*/advertisement.js
 @@||bookwalker.com.tw/images/p_img/pc_ad*.png$~third-party
 @@||boot.dev^$generichide
 @@||bootcss.com^$script,domain=kan-tv.com
@@ -11690,6 +11716,7 @@
 @@||gn-web-assets.api.bbc.com/bbcdotcom/assets/$script,domain=bbc.co.uk
 @@||gn-web-assets.api.bbc.com/ngas/*/dotcom-ads.js$domain=bbc.com
 @@||gnar.grammarly.com/events$xmlhttprequest,domain=account.grammarly.com
+@@||gng.gumroad.com^$stealth=flash|java
 @@||gntm.connect.prosieben.de^$generichide
 @@||gnula.club/embed.php$stealth=referrer
 @@||go-links.net^$generichide
@@ -13158,7 +13185,7 @@
 @@||i3.sinaimg.cn/video/deco/2013/0325/js/
 @@||i8086.de^$generichide
 @@||ia.hit.interia.pl/*/date?$domain=interia.pl|pomponik.pl
-@@||iamcdn.net/players/*ads*.js$domain=hydrax.net|playhydrax.com
+@@||iamcdn.net/players/*ads*.js$domain=hydrax.net
 @@||iamcdn.net/players/ads.watch.js$domain=disneyplayvn.net
 @@||ias.global.rakuten.com/adv/$script,domain=rakuten.co.jp
 @@||iatv.tmgrup.com.tr^$script,stealth=referrer
@@ -15405,6 +15432,7 @@
 @@||nobugin.com^$generichide
 @@||nocookie.net^*/tracking-opt-in.min.js$script,domain=fandom.com
 @@||nocorspolicy.com^$xmlhttprequest,domain=taming.io|tamming.io
+@@||nodestatic.fbstatic.cn/weblts_spa_online/page/assets/files/sensorsdata.min.js
 @@||nodkey.xyz^$generichide
 @@||nodo313.net^$generichide
 @@||nohat.cc/*/advertisement.js
@@ -19376,6 +19404,7 @@
 @@||tpc.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sportshub.to
 @@||tpc.googlesyndication.com/pimgad/$image,domain=ads.google.com
 @@||tpc.googlesyndication.com/safeframe/*/html/container.html$xmlhttprequest,domain=megainteresting.com
+@@||tpc.googlesyndication.com/simgad/$domain=a2zapk.co
 @@||tpc.googlesyndication.com/simgad/$domain=a2zapk.io,image
 @@||tpc.googlesyndication.com/simgad/$domain=ads.google.com
 @@||tpc.googlesyndication.com/simgad/$domain=dropgalaxy.com
