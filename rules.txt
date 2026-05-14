@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-14 17:26:18（北京时间）
+! Version: 2026-05-14 19:43:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68300
+! Total count: 68326
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3632,6 +3632,7 @@
 6abc.com##div[class="placeholderWrapper"][style="min-height:550px"]
 6abc.com,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com##.StickyAdWrapper
 6abc.com,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com##.leaderboard2
+6abc.com,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com,abcotvs.net##.nav.sticky {top:0px;}
 6abc.com,abcnews.com,economictimes.indiatimes.com,goodmorningamerica.com##.taboola
 6abc.com,abcnews.go.com,goodmorningamerica.com##.taboola
 6fzd.com,eyy5.cn,fzd3.com##.area1
@@ -19752,6 +19753,7 @@ abc17news.com,adoredbyalex.com,agrodigital.com,al.com,aliontherunblog.com,allabo
 abc7news.com###themeProvider > div[class]:has(> div > div > div.placeholderWrapper)
 abchomeopathy.com###cookieQ
 abcnews.com##[data-testid="prism-sticky-ad"]
+abcnews.com,abcnews.go.com##.navigation--has-subnav {top:0;}
 abcnews.go.com###themeProvider > div[class]:has(> div[class] > div[data-box-type="fitt-adbox-thinbannerhome"])
 abcnews.go.com##.ScrollSpy_container > div[data-container="band"]:has(> div[class] > div.taboola)
 abcnews.go.com##.ScrollSpy_container > div[data-container="band"]:has(> div[class] > div[data-box-type^="fitt-adbox-thinbanner"])
@@ -24040,6 +24042,7 @@ birja-in.az##.right_banner
 birja.com##body .left-banner
 birja.com##body .right-banner
 birminghammail.co.uk,bristolpost.co.uk,dailyrecord.co.uk,hulldailymail.co.uk,irishstar.com,liverpoolecho.co.uk,manchestereveningnews.co.uk,stokesentinel.co.uk,walesonline.co.uk##div[data-testid^="commercial-"]
+birminghammail.co.uk,bristolpost.co.uk,dailyrecord.co.uk,hulldailymail.co.uk,liverpoolecho.co.uk,manchestereveningnews.co.uk,stokesentinel.co.uk##.sticky ~ header {top:0;}
 birminghammail.co.uk,bristolpost.co.uk,dailyrecord.co.uk,irishstar.com,liverpoolecho.co.uk,manchestereveningnews.co.uk,stokesentinel.co.uk,walesonline.co.uk##.react-loading-skeleton
 birminghammail.co.uk,bristolpost.co.uk,dailyrecord.co.uk,irishstar.com,liverpoolecho.co.uk,manchestereveningnews.co.uk,stokesentinel.co.uk,walesonline.co.uk##div[class^="sc-"]:has(> span[aria-live="polite"] > .react-loading-skeleton)
 birminghammail.co.uk,bristolpost.co.uk,dailyrecord.co.uk,irishstar.com,liverpoolecho.co.uk,manchestereveningnews.co.uk,stokesentinel.co.uk,walesonline.co.uk##div[data-testid^="commercial-"]
@@ -26294,6 +26297,7 @@ chess.com##div[class*="-sidebar-ad-"]
 chess.com##div[id^="medium-rectangle-"][id*="tf-ad"]
 chess.org##.messages
 chess24.com##.ad3rdParty
+chessgames.com##div[style="min-height:250px; text-align:center; margin:10px auto;"]
 chewy.com##.js-tracked-ad-product
 chewy.com##.kib-carousel-item:has(.kib-product-sponsor)
 chewy.com##[data-carousel-id="plp_sponsored_brand"]
@@ -29784,6 +29788,7 @@ distractify.com,greenmatters.com,inquisitr.com,okmagazine.com,radaronline.com##d
 distractify.com,inquisitr.com##.sc-fTZrbU
 distri.cz##body > div:not([id]):not([class])
 distritopostal.es###ecl-container-box
+distrowatch.com##.TablesTitle > div:not([style="padding"]) {width:100%;}
 distrowatch.com##a[href*="3cx.com"]
 distrowatch.com##td > table:has(> tbody > tr a[href^="https://www.3cx.com/"])
 distrowatch.com##td[style="width: 19%; vertical-align: top; border: none"] > table[class="News"]+br+table[width="100%"]
@@ -37810,6 +37815,7 @@ hindustantimes.com##.storyAd
 hindustantimes.com##.storyAd + .slideSection
 hindustantimes.com##.taboolaInine
 hindustantimes.com##.trendingSlider
+hindustantimes.com##body {padding-top:0;}
 hindustantimes.com##div[class*="_adPlaceHolder_"]
 hindustantimes.com##div[class*="adsHeight"]
 hindustantimes.com##div[class*="adsheight"]
@@ -39042,6 +39048,7 @@ ifi-audio.com##.l-cookie
 ifkdy.com##.hb
 ifkdy.com,ilxdh.com##a[href*=".yhm11.com"]
 iflscience.com###Billboard
+iflscience.com###Billboard {height:0px;}
 iflscience.com###BillboardAd
 iflscience.com##.header-secondary
 iflscience.com##.trendmd-container
@@ -39186,6 +39193,7 @@ ilmessaggero.it###outbrainWait
 ilmessaggero.it##.inread_adv
 ilmeteo.it###banner-320-50
 ilmeteo.it###banner-mnz-top
+ilmeteo.it###banner-mnz-topleft {height:80px;}
 ilmeteo.it##[id^="banner-mnz-"]
 iloveimg.com###toast, .toast
 ilovepdf.com###toast, .toast
@@ -43101,6 +43109,8 @@ ledlenser.ru##.alerting
 ledluxor.com##.noty_cont, .noty_bar
 leds-boutique.fr###event_banner
 leeapk.com###zdn-adblock-overlay
+leeapk.com##.acrp-ad-box-1
+leeapk.com##.acrp-ad-box-2
 leech360.com###cookie-required
 leechall.com###overly
 leechall.com##.digiseller-buy-standalone
@@ -45800,6 +45810,8 @@ meteum.ai##.gdpr__form
 meteum.ai##div[id^="adfox_"]
 methodshop.com##.mai-aec
 metoffice.gov.uk###lead-ad-spacer
+metoffice.gov.uk##.header {top:0;}
+metoffice.gov.uk##.map {top:52px;}
 metoffice.gov.uk##.maps-header-advert
 metolijf.nl###popup-container
 metradar.ch###closeonaction
@@ -46029,6 +46041,7 @@ mindbodygreen.com##.ad__callout
 mindbodygreen.com##.article-rail-item--ad
 mindbodygreen.com##.bftiFX
 mindbodygreen.com##.sc-10p0iao-0
+mindbodygreen.com##aside {background:transparent;}
 mindbodygreen.com##section[class*="AdUnit"]
 mindennapkonyv.hu###wrapper > div[style*="fixed"]
 mindgames.com##div[data-type="yad"]
@@ -46128,6 +46141,7 @@ mirror.co.uk###takeover
 mirror.co.uk##.recirculation__list > li.recirculation__item:not([data-tmdatatrack-index])
 mirror.co.uk##.shopwindow-adslot
 mirror.co.uk##.shopwindow-advertorial
+mirror.co.uk##.sticky ~ header {top:0px;}
 mirror.co.uk##.vf3-conversations-list__promo
 mirror.co.uk##[data-testid="affiliate-contents-embed"]
 mirror.co.uk##div.teaser[data-link-partner][data-element-type]
@@ -52769,6 +52783,7 @@ prawo.pl##.adserver-wrapper
 prawo.pl##.widget-banners
 prawobrzeze.info##body > div:not([id]):not([class])
 praxisplan.at###consent-modal
+praxistipps.chip.de,praxistipps.focus.de,netmoms.de###G32 {grid-template-rows:unset;}
 precincttv.com##.mosaic-banner
 predathor.pl##.spu-bg, .spu-box
 predb.net##.lambo-wrapper
@@ -53129,10 +53144,13 @@ prts.wiki##.nomobile[style*="810px;height:240"]
 prudential.co.za##.investor-type-box .cookie-policy-text
 pruefungshelden.de##.elo-btn
 prva.rs##div[id^="midasWidget"]
+prydwen.gg###pw-footer-ad-1
 prydwen.gg##.fuse-ad-placeholder
 prydwen.gg##.promo-special-banner
 prydwen.gg##.promo-top-new
 prydwen.gg##.special-promo-image
+prydwen.gg##[class*="promo-"]
+prydwen.gg##[id^="pw-header-ad"]
 prywatnie.eu##.wp-block-image > a[target="_blank"] > img
 przeambitni.pl##.banery
 przegladkoninski.pl,rzeszow.pl,esopot.pl,lowiczanin.info,gwarek.com.pl,tyna.info.pl,tusochaczew.pl,myglogow.pl,plonskwsieci.pl,spotradomsko.pl,portalsremski.pl,ekstrasierpc.pl,ki24.info,uniejow.net.pl,e-krajna.pl,gwio.pl,faktypilskie.pl,swiecie24.pl,grudziadz365.pl,mielec.pl,iszczecinek.pl,gniewkowo.eu,mojakruszwica.pl,expresskaszubski.pl,gorlice24.pl,gostyn24.pl,wpu24.pl,ddwloclawek.pl,ddtorun.pl##.baner
@@ -57112,6 +57130,7 @@ sneakernews.com##.active-footer-ad
 sneakernews.com##.adv-parent
 sneakernews.com##.advertisement-section
 sneakernews.com##.full-width-ad-blk
+sneakernews.com##.site-header {top:0;}
 snexplores.org##.ad-block__mq-wrapper
 snipboard.io##.non-pro > .main-page-parent > div > .ad-container + .call-to-action
 snipcash.com,tmearn.net##.box-main > .row + .banner-captcha
@@ -59303,6 +59322,7 @@ tass.ru##div[class*="Cookies_container"]
 tassbiz.ru##.adblock_notif
 tassimo.at###overlay-off-banner
 taste-of-koroni.de###consent
+taste.com.au##.main-header {top:0;}
 tasteatlas.com##.promotion:has(> div[ta-google-ad])
 tastedive.com##.tk-Footer-cc
 tastemade.co.uk##.legal-change-banner
@@ -61980,6 +62000,7 @@ triblive.com###storyContent > div[data-type="float"][data-stn-player]
 triblive.com##.mantine-Center-root:has(.ads-holder)
 tribuna.com##.CommonLayout-module__oYAJUw__common-layout__right-column
 tribuna.com##.Main-module__h0zGRO__main-layout__content-wrapper > div[style="min-height: auto;"]
+tribuna.com##body {overflow:auto;}
 tribuna.com##div[class$="__main-layout__empty-block"]
 tribuna.com##div[class$="_ads-container"]
 tribuna.com##div[class^="_structured-body_"] > div[class^="_"]:has(> div > span)
@@ -63619,6 +63640,7 @@ veka.es###darkener_cookie
 velenje.com##td.style5 > table
 velkaepocha.cz##.machr-cookie-message
 velo.outsideonline.com##.o-ad--leaderboard
+velo.outsideonline.com##main {margin-top:10px;}
 velophil.berlin##.cookie-z-index
 velotaf.com###modal_cookies
 velovert.com###modal_cookies
@@ -64385,6 +64407,8 @@ w3resource.com##article ~ hr.w3r_hr
 w3school.com.cn###fttg
 w3school.com.cn###sbtg
 w3school.com.cn###sp_tiy
+w3schools.com###tryitLeaderboard ~ #container {top:48px;}
+w3schools.com##.trytopnav {top:0;}
 w3schools.com##div[id*="contentadcontainer"]
 w3techs.com##.feat
 w4files.pw##div[align="center"] > a[href="/button/download.php"]
@@ -65954,6 +65978,7 @@ wuerzburg.de###chint
 wufoo.com###wufoo-privacy-banner
 wunderground.com###WX_WindowShade
 wunderground.com###targeted-banner
+wunderground.com##.content-wrap #inner-wrap {height:100vh;}
 wunderground.com##.pane-wu-fullscreenweather-ad-box-atf
 wunderground.com##AD-TRIPLE-BOX
 wunderground.com##ad-wx-top-300-small
@@ -67439,6 +67464,7 @@ yourcartoonporn.com##div[id^="yourc-"]
 yourcountdown.to##.adsense-fallback
 yourdailypornvideos.com##.span4.column_container > .widget_custom_html a[href][rel="noopener"] > img
 yourdictionary.com##.advertising-container
+yourdictionary.com##.header {top:0;}
 yourdictionary.com##.ui-advertisement
 yourharlow.com###single_rhs_ad_col
 yourharlow.com###top_ad_row
