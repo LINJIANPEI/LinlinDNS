@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-14 21:27:28（北京时间）
+! Version: 2026-05-15 00:04:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68326
+! Total count: 68331
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1232,7 +1232,6 @@
 /gen_204?$image,other,ping,script
 /generate_204?$image
 /geniee-adblock.js$script
-/get/*?zoneid=$script
 /get/*?zoneid=*&jp=$script
 /get/?go=1&data=$subdocument
 /get?go=1&data=$subdocument
@@ -4363,6 +4362,7 @@
 @@/live/*/*jpeg|$xmlhttprequest,stealth=referrer,domain=weakspell.org|weakspell.to
 @@/log/report/*$script,domain=bilibili.com
 @@/mangakakalot/*$stealth=referrer,image,domain=mangakakalot.com
+@@/media/*$stealth=referrer,media,domain=fsharetv.cc
 @@/media/*/js/adblock_detector.js$domain=eska.pl|eskarock.pl|voxfm.pl|vibefm.pl|radiosupernova.pl
 @@/mobileads.$domain=naviking.localking.com.tw
 @@/mono.m3u8$stealth=referrer
@@ -7476,6 +7476,7 @@
 @@||cdn.theguardian.tv/ad/*.m3u8$domain=theguardian.com
 @@||cdn.tiantiantiaosheng.com^
 @@||cdn.tiny.cloud/*/tinymce/*.js$stealth=referrer
+@@||cdn.turkarsiv.org/*.mp4$stealth=referrer
 @@||cdn.turner.com/*.swf
 @@||cdn.turner.com/*/ad_policy.xml
 @@||cdn.turner.com/*/getConfig$stealth=ip,domain=tbs.com
@@ -11073,6 +11074,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gameswf.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gamezhero.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gamoneinterrupted.com|urochsunloath.com|35volitantplimsoles5.com|antecoxalbobbing1010.com|cyamidpulverulence530.com|guidon40hyporadius9.com|bigclatterhomesguideservice.com|housecardsummerbutton.com|fittingcentermondaysunday.com|un-block-voe.net|voeunblk.com|voeunbl0ck.com|voeunblock2.com|voeunblock.com|voe-unblock.*|voe.sx|phenomenalityuniform.com|kathleenmemberhistory.com|paulkitchendark.com|edwardarriveoften.com|lukecomparetwo.com|kennethofficialitem.com|jamiesamewalk.com|johntryopen.com|morganoperationface.com|jayservicestuff.com|heatherdiscussionwhen.com|robertplacespace.com|alleneconomicmatter.com|josephseveralconcern.com|donaldlineelse.com|bethshouldercan.com|lisatrialidea.com|jessicaglassauthor.com|evelynthankregion.com|lorimuchbenefit.com|susanhavekeep.com|thomasalthoughhear.com|zacharycollectionmight.com|richardstorehalf.com|kimberlyonlocal.com|toddpartneranimal.com|jamessoundcost.com|brittneystandardwestern.com|sandratableother.com|robertordercharacter.com|maxfinishseveral.com|alejandrocenturyoil.com|heatherwholeinvolve.com|kristiesoundsimply.com|adrianmissionminute.com|nathanfromsubject.com|jennifercertaindevelopment.com|richardsignfish.com|sarahnewspaperbeat.com|diananatureforeign.com|jonathansociallike.com|mariatheserepublican.com|johnalwayssame.com|kellywhatcould.com|jilliandescribecompany.com|lukesitturn.com|mikaylaarealike.com|christopheruntilpoint.com|walterprettytheir.com|crystaltreatmenteast.com|lauradaydo.com|lancewhosedifficult.com|dianaavoidthey.com|jefferycontrolmodel.com|jessicaclearout.com|marissasharecareer.com|ianrequireadult.com|charlestoughrace.com|timmaybealready.com|richardquestionbuilding.com|charlessheimprove.com|brittanyaheadnew.com|maryspecialwatch.com|benjaminreducecommunity.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gamoneinterrupted.com|urochsunloath.com|35volitantplimsoles5.com|antecoxalbobbing1010.com|cyamidpulverulence530.com|guidon40hyporadius9.com|bigclatterhomesguideservice.com|housecardsummerbutton.com|fittingcentermondaysunday.com|un-block-voe.net|voeunblk.com|voeunbl0ck.com|voeunblock2.com|voeunblock.com|voe-unblock.*|voe.sx|phenomenalityuniform.com|kathleenmemberhistory.com|paulkitchendark.com|edwardarriveoften.com|lukecomparetwo.com|kennethofficialitem.com|jamiesamewalk.com|johntryopen.com|morganoperationface.com|jayservicestuff.com|heatherdiscussionwhen.com|robertplacespace.com|alleneconomicmatter.com|josephseveralconcern.com|donaldlineelse.com|bethshouldercan.com|lisatrialidea.com|jessicaglassauthor.com|evelynthankregion.com|lorimuchbenefit.com|susanhavekeep.com|thomasalthoughhear.com|zacharycollectionmight.com|richardstorehalf.com|kimberlyonlocal.com|toddpartneranimal.com|jamessoundcost.com|brittneystandardwestern.com|sandratableother.com|robertordercharacter.com|maxfinishseveral.com|alejandrocenturyoil.com|heatherwholeinvolve.com|kristiesoundsimply.com|adrianmissionminute.com|nathanfromsubject.com|jennifercertaindevelopment.com|richardsignfish.com|sarahnewspaperbeat.com|diananatureforeign.com|jonathansociallike.com|mariatheserepublican.com|johnalwayssame.com|kellywhatcould.com|jilliandescribecompany.com|lukesitturn.com|mikaylaarealike.com|christopheruntilpoint.com|walterprettytheir.com|crystaltreatmenteast.com|lauradaydo.com|lancewhosedifficult.com|dianaavoidthey.com|jefferycontrolmodel.com|jessicaclearout.com|marissasharecareer.com|ianrequireadult.com|charlestoughrace.com|timmaybealready.com|richardquestionbuilding.com|charlessheimprove.com|brittanyaheadnew.com|maryspecialwatch.com|benjaminreducecommunity.com|nicholasbreakplan.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gauchazh.clicrbs.com.br
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gaystream.pw
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gaystream.pw|vidplayer.live
@@ -22618,6 +22620,7 @@ azimutyachts.com##.floatFooter
 azimutyachts.cz##.floatFooter
 azlyrics.com##.lboard-wrap
 azlyrics.com##.ringtone
+azmovies.to,34-hub.com,ogfap.com,coindesk.com,ohcar2022.co.in,dailyhindiadda.com,fifakitcreator.com,fontscompare.com,sarna.net,theproducenews.com,kaoruhana.com,marinetraffic.live,governmentjobvacancies.com,biharkhabar.co,resizepixel.com,tradingeconomics.com,netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com,link.postearn.io##.ad-container:not(#style_important)
 aznude.com###direct-link-desktop
 aznude.com###exo-native-az-container
 aznude.com##.az-ads-banner
@@ -26020,8 +26023,6 @@ ceneo.pl##.js_top-banner[data-name]
 censor.net###usage_notice, #usage-notice-message
 censored.news,newstarget.com##[href^="https://www.survivalnutrition.com"]
 centauria.it##.header-welcome
-centering.raidrive.com###div-gpt-ad-1648048258625-0
-centering.raidrive.com###div-gpt-ad-1666694094447-0
 centoschina.cn##a[href="https://www.linuxprobe.com/"]
 centraalbeheer.nl##body > iframe
 centreceramique.nl###fancybox-overlay, #fancybox-wrap
@@ -37551,7 +37552,9 @@ hentaihd.net###sidebar > div.section:has(> div.textwidget a[href="https://xxxhdv
 hentaihd.net###sidebar > div.section:has(> div.textwidget ins[data-zoneid])
 hentaihd.net##.active-item
 hentaihd.net,xstream.top##div[style^="position:fixed;inset:0px;"]
+hentaihere.com###topbar_promo_casino
 hentaihere.com##.js-adzone
+hentaihere.com,hindustantimes.com##body {padding-top:0;}
 hentaiheroes.com###iframe_wrapper
 hentaihorizon.com##.adsfront
 hentaihorizon.com,contactform7.com,techgeekbuzz.com###block-5
@@ -43108,6 +43111,7 @@ lediomedee.it###cookie-choices
 ledlenser.ru##.alerting
 ledluxor.com##.noty_cont, .noty_bar
 leds-boutique.fr###event_banner
+leducrep.com,fortsaskatchewanrecord.com,edmontonsun.com,cochranetimes.com,dailyheraldtribune.com,devondispatch.ca,edmontonexaminer.com,princegeorgepost.com,airdrieecho.com,thechronicle-online.com,melfortjournal.com,clintonnewsrecord.com,wiartonecho.com,wetaskiwintimes.com,whitecourtstar.com,peacecountrysun.com,countymarket.ca,fairviewpost.com,pinchercreekecho.com,coldlakesun.com,canoe.com,nationalpost.com,financialpost.com,seaforthhuronexpositor.com,shorelinebeacon.com,simcoereformer.ca,elliotlakestandard.ca,recorder.ca,elliotlakestandard.ca,saultstar.com,stratfordbeaconherald.com,countyweeklynews.ca,wallaceburgcourierpress.com,stratfordbeaconherald.com,chathamdailynews.ca,todaysfarmer.ca,kincardinenews.com,theobserver.ca,communitypress.ca,pembrokeobserver.com,saultthisweek.com,nugget.ca,northernnews.ca,lucknowsentinel.com,mitchelladvocate.com,lakeshoreadvance.com,gananoquereporter.com,goderichsignalstar.com,thewhig.com##.epaper-widget
 leeapk.com###zdn-adblock-overlay
 leeapk.com##.acrp-ad-box-1
 leeapk.com##.acrp-ad-box-2
@@ -49823,6 +49827,7 @@ oneman.gr##.ads_element
 oneman.gr##div[class^="hp_ads"]
 onemanhua.com##body > div[style^="position: fixed;"][style*="z-index:"]
 onemanhua.com##div[id^="rn_ad_native"]
+onepace.co##.fake-player-overlay
 onepercentclub.com##.notification-bar-container
 onepiecepodcast.com##.mks_ads_widget
 onepiecepodcast.com##.vce_adsense_widget
@@ -58563,6 +58568,7 @@ streamable.com##.top-ad-banner
 streambolt.tv##.video > div[style*="z-index:"]:not([class])
 streambolt.tv##div[style*="z-index: 2147483647;"][style*="position: fixed;"]
 streambtw.com###overlay
+streamcasthub.store##.jw-media > a[target="_blank"]
 streamcr7.com##.container > a[href].btn-outline-primary
 streamcraft.com##.privacy-wraper
 streameast.app###stream-info > .flex > div[target="_blank"]
@@ -66122,8 +66128,6 @@ www.pixnet.net###extradiv5
 www.playno1.com##.eis_box_s
 www.portablesoft.org##div.postads
 www.qianwen.com##.leading-7.text-center.w-16.h-7.rounded-8.text-theme.text-12.bg-weaken
-www.qinav.com##div[class="b300"]
-www.qinav.com##div[id="qinav_b*"]
 www.qq.com##.adLeft,.adRight
 www.qq.com##div[class^="adRight"]
 www.raybt.com##td[width="13"]
@@ -67035,6 +67039,7 @@ yahoo.com##div[class*="bg-Ad"]
 yahoo.com##div[class*="gemini-ad"]
 yahoo.com##div[data-ad-feedback-beacon]
 yahoo.com##div[data-article-body] > div.hidden:has(div.ad-container)
+yahoo.com##div[data-article-body] > div:has(div.ad-container)
 yahoo.com##div[data-beacon] > div[class*="streamBoxShadow"]
 yahoo.com##div[data-content="廣告"]
 yahoo.com##div[data-content="廣告"]:not(#sda-MAST-iframe)
