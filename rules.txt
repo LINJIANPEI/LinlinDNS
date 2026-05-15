@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-15 10:01:24（北京时间）
+! Version: 2026-05-15 13:57:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68337
+! Total count: 68342
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -20867,7 +20867,6 @@ alwafd.news##center > a[href="#"]
 alypw.com##.adbkk
 alypw.com##.ceadd
 alyt.com###ALYT_privacyCookie
-alza.sk###boxes > div.box[data-analytics*="/adCommodityClick"]
 alza.sk##.brandingEars
 alza.sk##.gtm-promo-binded
 am.lk##.bannergroup
@@ -38272,6 +38271,8 @@ hotstar.com##div[data-testid^="ad-"]
 hotstash.net##.cash-list-top
 hotter.com##.enhanced-cookies__modal
 hotukdeals.com##.ad
+hotukdeals.com##.bRad--a
+hotukdeals.com##.listLayout-box:has(> .bRad--a)
 hotukdeals.com##div[id$="AdSlotPortal"]
 hotukdeals.com##div[id*="AdSlotPortal"]
 hotxv.com##.w3-main > div[style*="height:250px;"]
@@ -56803,9 +56804,11 @@ slang.net##.adTopLB
 slant.co##.SummaryPage-LustreEmbed
 slant.co##._SummaryPageSponsoredOptionView
 slantastoffe.de##.overlay
+slashdot.org###ai-stud-coding-bar
 slashdot.org###announcement
 slashdot.org###cloud
 slashdot.org###main-nav-badge-link
+slashdot.org###mongo-stick-it
 slashdot.org###slashdot_deals
 slashdot.org###vibe-coding-bar
 slashdot.org##.ad-blocked-newsletter
@@ -57644,8 +57647,10 @@ soundsgood.co##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd
 soundtoys.com##.content-info ~ section[style*="background"]
 soup.io###fpbanner
 soup.io##span[id*="_sidebar_ad_"]
+sourceforge.net###ai-studio-coding-bar
 sourceforge.net###banner-sterling
 sourceforge.net###floating-content-wrapper
+sourceforge.net###mongo-stick-bn
 sourceforge.net###nels
 sourceforge.net###top-placeholder
 sourceforge.net###vibe-coding-bar
