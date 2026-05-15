@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-15 21:26:18（北京时间）
+! Version: 2026-05-15 23:55:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68345
+! Total count: 68353
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9077,6 +9077,7 @@
 @@||embed.watchanimesub.net/inc/embed/ads.js
 @@||embed.watchanimesub.net/inc/embed/kampyle.js
 @@||embed.watchanimesub.net/inc/embed/suv4.js
+@@||embed.wcostream.com/assets/ads/advertisement.js
 @@||embed.wcostream.com/inc/embed/*.js$domain=embed.wcostream.com
 @@||embed.wcostream.com^$generichide
 @@||embed.wcostream.com^$subdocument,stealth=referrer
@@ -25164,6 +25165,8 @@ bulldogjob.pl###__next > footer ~ .fixed
 bulls.de##footer > div[class*="cookie-hinweis"]
 bulma.io##.bd-partner.bd-is-carbon
 bulma.io##.intro-carbon
+bulnews.bg###inbet_sticky_big
+bulnews.bg###inbet_sticky_small
 bulthaup.com##.bulthaup-cookie-notice
 bumper-io.com,trapz.io###bannerOverLeftSpr
 bumper-io.com,trapz.io###bannerSpr
@@ -37979,6 +37982,7 @@ hltv.org##.mid-container
 hltv.org##.mid-container + div[id]:has(> a[href] > img[alt][src])
 hltv.org##.world-ranking-banner
 hltv.org##csmoney-skins-widget
+hltv.org##img[src^="https://www.hltv.org/img/"][src*="&s="]
 hm4tech.info##.popSc
 hmama.tv,definebabe.com,pandamovies.org,englismovies.pro,tmail.io,4gay.fans,serialeonline.biz,bclikeqt.com,dailyporn.club,freefeds.com,teleriumtv.com,techgeek.digital,sharer.pw,za.gl,xozilla.com,analdin.com,fc.lc,mp4upload.com###overlay
 hmama.tv,hentaimama.io##.in-between-ad-one-wrapper
@@ -52159,6 +52163,7 @@ porndig.com##.dt_porndig
 porndig.com##.js_footer_partner_container_wrapper
 porndig.com##.vjs-toolbar
 porndig.com##iframe[src^="https://plx.porndig.com/"]
+porndish.com,xvipp.com,4drumkits.com,altselection.com##.g1-canvas + div[id][class*=" "]
 pornditt.com##.block-video div.table:has(iframe.na)
 pornditt.com##.primary > li:has(> a[href][target="_blank"])
 pornditt.com,hentaigem.com,pornify.tv,dafreeporn.com,pornolovers.net,hdporner.tv,transvids.tv,vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
@@ -59429,6 +59434,9 @@ teamliquid.net##div[style="margin-top: 2px; margin-bottom: 2px; height: 250px"]
 teamliquid.net##div[style^="max-width: 740px;  height:90px;"]
 teamliquidpro.com##body > div:not([id]):not([class])
 teamoney.site,lookmovie2.to,lilymanga.net##html > iframe[id][style*="position:"][style*="display:"]
+teamtalk.com##.ciam-article-tt > p[style]:has(> em > strong > a[href^="https://surfshark.com/"])
+teamtalk.com##.grid > article.mx-auto:has(> div[class] > div[class^="unis-rec-ai-mpu"])
+teamtalk.com##a[href^="https://surfshark.com/"]
 teamxnovel.com##.body-wrap > div[style^=" padding:50px "]
 teb.com.tr###cokieMain
 tebyan.net###ctl07_ctl00_ShowScriptBanner1_divScript
