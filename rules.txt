@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-16 20:56:20（北京时间）
+! Version: 2026-05-16 22:18:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68362
+! Total count: 68363
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2053,6 +2053,7 @@
 115.com##div.sub-qcode.bottom-qcode,div.top-banner,div.bottom-banner,div.banner-box
 115.com##li#js_common_act-enter
 115cdn.com##.feature-float
+115cdn.com##.flex-shrink-0 > .w-full:has(> div.spotlight-ad-container)
 115cdn.com##a[href="https://vip.115.com/"] > img
 118pan.com##.card.mt-2:nth-child(2)
 11livematches.com###mid_left > br
