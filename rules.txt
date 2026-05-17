@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-18 06:42:51（北京时间）
+! Version: 2026-05-18 07:47:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68373
+! Total count: 68378
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1232,6 +1232,7 @@
 /gen_204?$image,other,ping,script
 /generate_204?$image
 /geniee-adblock.js$script
+/get/*?zoneid=$script
 /get/*?zoneid=*&jp=$script
 /get/?go=1&data=$subdocument
 /get?go=1&data=$subdocument
@@ -26037,6 +26038,8 @@ ceneo.pl##.js_top-banner[data-name]
 censor.net###usage_notice, #usage-notice-message
 censored.news,newstarget.com##[href^="https://www.survivalnutrition.com"]
 centauria.it##.header-welcome
+centering.raidrive.com###div-gpt-ad-1648048258625-0
+centering.raidrive.com###div-gpt-ad-1666694094447-0
 centoschina.cn##a[href="https://www.linuxprobe.com/"]
 centraalbeheer.nl##body > iframe
 centreceramique.nl###fancybox-overlay, #fancybox-wrap
@@ -66171,6 +66174,8 @@ www.pixnet.net###extradiv5
 www.playno1.com##.eis_box_s
 www.portablesoft.org##div.postads
 www.qianwen.com##.leading-7.text-center.w-16.h-7.rounded-8.text-theme.text-12.bg-weaken
+www.qinav.com##div[class="b300"]
+www.qinav.com##div[id="qinav_b*"]
 www.qq.com##.adLeft,.adRight
 www.qq.com##div[class^="adRight"]
 www.raybt.com##td[width="13"]
