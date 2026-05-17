@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-17 09:57:30（北京时间）
+! Version: 2026-05-17 13:42:52（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68359
+! Total count: 68371
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6644,6 +6644,7 @@
 @@||bbc.gscontxt.net^$script,domain=bbc.com
 @@||bbcdn.go.eu.bbelements.com/bb/bb_one2n.*.js$domain=xtv.cz
 @@||bbs-static.miyoushe.com^
+@@||bbs.huorong.cn^
 @@||bbs.mobileapi.hupu.com^
 @@||bbs.tampermonkey.net.cn^
 @@||bbs.tgfcer.com^$generichide
@@ -7212,6 +7213,7 @@
 @@||cdn-pci.optimizely.com/public/*/sales_snippet.js$domain=talktalk.co.uk
 @@||cdn-static.pornhd.com/pornhd/*/css/dist/main.css$domain=pornhd.com
 @@||cdn-surfline.com/quiver/*/scripts/$domain=surfline.com
+@@||cdn-www.huorong.cn^
 @@||cdn.7tv.app^$stealth=dpi
 @@||cdn.ad.plus/player/adplayer.js$third-party,xmlhttprequest,domain=idyllic.app
 @@||cdn.ad4game.com/ad4game_html5_sdk.js$domain=anime47.com
@@ -8773,6 +8775,7 @@
 @@||douyucdn.cn^*-share-master/
 @@||dove-cameron.org^$generichide
 @@||dovkembed.pw/livetv/$stealth=referrer
+@@||down-tencent.huorong.cn^
 @@||down-update.qq.com^
 @@||down.360safe.com^
 @@||down.anticheatexpert.com^
@@ -8781,6 +8784,7 @@
 @@||down.sandai.net^
 @@||downfile.site/fuckadblock.js
 @@||downfile.site^$generichide
+@@||download-cdn.clf.jetbrains.com.cn^
 @@||download-cdn.jetbrains.com.cn^
 @@||download-cdn.jetbrains.com^
 @@||download.3dzip.org^$generichide
@@ -12496,6 +12500,7 @@
 @@||m.ds.163.com^
 @@||m.dxy.com^
 @@||m.facebook.com^
+@@||m.gushiwen.cn^
 @@||m.haberler.com/static/advertisement/ads_ima.js$domain=m.haberler.com
 @@||m.image.so.com^
 @@||m.intl.taobao.com^
@@ -13698,6 +13703,7 @@
 @@||omtrdc.net^*/mbox/json?$xmlhttprequest,domain=absa.co.za|att.com|pnc.com|vodafone.it
 @@||omutulove.blog.fc2.com^$generichide
 @@||omutulove.seesaa.net^$generichide
+@@||on.orf.at^$stealth=dpi
 @@||onceagain.mooo.com/prebid.js$domain=bigbtc.win
 @@||ondemand.sas.com^$subdocument
 @@||one.one.one.one^
@@ -15784,6 +15790,7 @@
 @@||resolver.gslb.mi-idc.com^
 @@||resolver.msg.xiaomi.net^
 @@||resources.blogblog.com/img/*.png#/$domain=mohanlalmovieshub.blogspot.com
+@@||resources.jetbrains.com.cn^
 @@||responder.wt-safetag.com/resp/api/get/$script,domain=myhermes.de
 @@||rest.edit.site/geoip-service/geoip$domain=systemshouse.com
 @@||restapi.amap.com^
@@ -18150,6 +18157,7 @@
 @@||ubisoft.com.first-party-js.datadome.co^$script,domain=connect.ubisoft.com
 @@||uc-titans-cn-01.heytapimage.com^
 @@||uc-titans-cn.heytapimage.com^
+@@||uc.huorong.cn^
 @@||uc.ucweb.com^
 @@||uceprotect.net^$stealth=flash
 @@||ucoz.net/cgi/uutils.fcg?$script,third-party
@@ -18232,6 +18240,7 @@
 @@||upbitcoin.com^$generichide
 @@||update.360safe.com^
 @@||update.hicloud.com^
+@@||update.huorong.cn^
 @@||update.vivo.com^
 @@||updateinfo.market.xiaomi.com^
 @@||updatesmarugujarat.in^$generichide
@@ -19057,6 +19066,7 @@
 @@||www.hisense.com^
 @@||www.hoyoverse.com^
 @@||www.huaweicloud.com^
+@@||www.huorong.cn^
 @@||www.ibook.info^
 @@||www.icloud.com^
 @@||www.ijinshan.com^
@@ -19069,6 +19079,7 @@
 @@||www.jd.com^
 @@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
+@@||www.jetbrains.com.cn^
 @@||www.jianshu.com^
 @@||www.jiaoyimao.com^
 @@||www.jsdelivr.com^
@@ -22202,6 +22213,7 @@ audiobookbay.is##[src="/images/dire.gif"]
 audiobookbay.is##a[href^="/dl-14-days-trial"]
 audiobookbay.is##div[style*="margin-bottom:"].ski
 audiobookbay.lu##.sky
+audiobookbay.lu##a[href^="/didl1-now"]
 audiobookbay.lu##a[href^="/dl-14-days-trial"]
 audiobookbay.lu##tr:has(> td:last-child > a:only-child > img[src^="/images/d"]:only-child)
 audiobookbay.lu##tr:has(> td:last-child > span > a[href*="?"])
