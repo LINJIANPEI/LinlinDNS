@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-18 18:56:22（北京时间）
+! Version: 2026-05-18 22:25:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68383
+! Total count: 68384
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -44080,6 +44080,7 @@ lowendtalk.com##img[width="258"][height="70"]
 lowes.com###lws_hp_recommendations_belowimage_1
 lowes.com##.lws_pdp_recommendations_southdeep
 lowes.com##div[data-testid="playwright-gam-carousel-banner"]
+lowes.com##div[data-testid="product-carousel"]:has(.sponsored-tag)
 lowfuelmotorsport.com###sksl
 lowfuelmotorsport.com###sksr
 lowfuelmotorsport.com##.ads-stats
