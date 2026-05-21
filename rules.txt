@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-22 06:10:14（北京时间）
+! Version: 2026-05-22 07:50:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68418
+! Total count: 68419
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -58406,6 +58406,7 @@ stat-nba.com###ad_video
 statecollege.com##div[class^="ad_code_"]
 statecollege.com##div[class^="adapex"]
 statesman.com##article > div:has(> div:first-child + div[data-block-type="ad"]:last-child)
+staticfile.link###player_pause
 staticice.com.au##a[href^="http://prf.hn/click/"]
 staticice.com.au##table[width="100%"] > tbody > tr > td[height="15"][valign="top"]:only-child
 staticice.com.au##table[width="500"][align="center"] > tbody > tr > td[height="21"]:only-child
