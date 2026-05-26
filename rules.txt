@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-26 07:05:38（北京时间）
+! Version: 2026-05-26 10:03:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68484
+! Total count: 68488
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9105,6 +9105,7 @@
 @@||embed.new.video^$stealth=referrer|ip
 @@||embed.redditmedia.com/widgets/platform.js$domain=gamerant.com
 @@||embed.sendtonews.com/player*.php$domain=earth.com
+@@||embed.sendtonews.com/player3/$domain=nypost.com
 @@||embed.watchanimesub.net/inc/embed/ads.js
 @@||embed.watchanimesub.net/inc/embed/kampyle.js
 @@||embed.watchanimesub.net/inc/embed/suv4.js
@@ -11202,6 +11203,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=ntvspor.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nuke.zone
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nydailynews.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nypost.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=observatornews.ro
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=oe24.at
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=oggi.it
@@ -13180,6 +13182,7 @@
 @@||moyu.im/*.jpg$stealth=referrer
 @@||mozu.com^*/monetate.js$script,domain=acehardware.com
 @@||mp.163.com^
+@@||mp.mmvideocdn.com/mini-player/$domain=nypost.com
 @@||mp.mmvideocdn.com/mini-player/$domain=theplayerstribune.com
 @@||mp.mmvideocdn.com/mini-player/prod/voltax_mp.js$domain=earth.com
 @@||mp.yidianzixun.com^
@@ -18673,6 +18676,7 @@
 @@||vms-players.minutemediaservices.com^$script,domain=si.com
 @@||vms-videos.minutemediaservices.com/*/m3u8/$domain=reignoftroy.com
 @@||vms-videos.minutemediaservices.com/*/mpd/$xmlhttprequest,domain=beargoggleson.com
+@@||vms-videos.minutemediaservices.com^$domain=nypost.com
 @@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=fortune.com
 @@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=si.com
 @@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=theplayerstribune.com
