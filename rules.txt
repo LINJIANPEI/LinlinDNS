@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-27 08:03:57（北京时间）
+! Version: 2026-05-27 13:08:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68513
+! Total count: 68522
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8905,6 +8905,7 @@
 @@||dss0.bdstatic.com^
 @@||dss2.bdstatic.com^
 @@||dsvplay.com^$generichide
+@@||dt.adsafeprotected.com/dt?adspot_id=$domain=247sports.com
 @@||dtdc.com/tracking/
 @@||dthumb.phinf.naver.net^$stealth=referrer
 @@||du.163.com^
@@ -12085,6 +12086,7 @@
 @@||kumo.network-n.com/dist/app.js$domain=discordbotlist.com
 @@||kumospace.com^$stealth=webrtc
 @@||kun.uz^$stealth=dpi
+@@||kunde-s.ergo.de/meineversicherungen/L1/api/$stealth=donottrack
 @@||kunlunpi.com^$important
 @@||kuramu.net^$generichide
 @@||kursjs.pl/js/ads-prebid.js
@@ -12768,6 +12770,7 @@
 @@||matlab.mathworks.com^$generichide
 @@||matomo.miraheze.org/matomo.js$script,~third-party
 @@||matomo.moeci.com/matomo.js$domain=moeci.com
+@@||matprat.no^$stealth=dpi
 @@||matrix.redditspace.com^$stealth=3p-auth
 @@||matsukiyococokara-online.com/store/*/rtoaster.js
 @@||matzoo.pl^$generichide
@@ -17932,6 +17935,7 @@
 @@||tpc.googlesyndication.com/pagead/js/*/elements/html/interstitial_ad_frame_$script,domain=safeframe.googlesyndication.com
 @@||tpc.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sportshub.to
 @@||tpc.googlesyndication.com/pimgad/$image,domain=ads.google.com
+@@||tpc.googlesyndication.com/safeframe/*/html/container.html$domain=247sports.com
 @@||tpc.googlesyndication.com/safeframe/*/html/container.html$xmlhttprequest,domain=megainteresting.com
 @@||tpc.googlesyndication.com/simgad/$domain=a2zapk.co
 @@||tpc.googlesyndication.com/simgad/$domain=a2zapk.io,image
@@ -21451,7 +21455,7 @@ ant.design##.snd-ad
 antagning.se###cookie-law
 antalis.co.uk###overlay
 antarestech.com###consent
-antarvasna3.com,indiansexstories2.net,issstories.xyz##iframe[src*=".videobaba.xyz/"]
+antarvasna3.com,issstories.xyz##iframe[src*=".videobaba.xyz/"]
 antdm.forumactif.com###main-content > div[class][style="overflow:visible"] > .inner > div[style="position:relative;height:90px; min-width: 728px px;"]
 antdv.com###right-bottom
 antdv.com##.main-menu-inner > div
@@ -21999,6 +22003,7 @@ arydigital.tv###zzright
 arydigital.tv,barakbulletin.com##.bsac
 arynews.tv##.tdi_103
 arzttermine.de##.cc_dialog_box
+as.com##.a_rel
 as.com##.ad-e2
 as.com##.slider-producto
 as.com,desdelinux.net,tutiempo.net,ubunlog.com##.publi
@@ -26060,6 +26065,7 @@ celebjihad.com##.crp_related td[align="center"] > a[href^="https://www.celebjiha
 celebjihad.com##a[href="https://www.celebjihad.com/widget/out/cjcams.php"]
 celebjihad.com##a[href^="https://go.admjmp.com/"]
 celebjihad.com##iframe[src^="https://go.bshrdr.com/"]
+celebmafia.com##.featured
 celebmafia.com##.wp-caption > [class]:has([width="300"])
 celebmafia.com##.wp-caption > div[class]:has(> .adsbyvli)
 celebritygalls.com##.articles-container > article.card[style="border:5px solid black;"]
@@ -38261,6 +38267,7 @@ honglingjin.co.uk##.rsads
 honkailab.com,genshinlab.com##div[id^="pw-incontent"]
 hoodtrendspredict.com##.generate-back-to-top + div[class*=" "]
 hookerhillstudios.com##div.items-center:has(> #articlead)
+hoopshype.com###__next > div[class*="__variable_"] > div:has(> div.ad-content)
 hop-on-hop-off-bus.com##.ckPol
 hop.com###cnil-layer
 hope1032.com.au##.s-supported-by
@@ -39670,6 +39677,7 @@ indianpornvideos.com##.col-md-6.hidden-xs.hidden-sm.hpba
 indianpornvideos.com##.vdo-unit
 indianpornvideos.com##iframe[src^="https://a.vartoken.com/"]
 indianpornvideotube.com##.spot_section
+indiansexstories3.com##iframe[src^="https://blazingserver.net/"]
 indiansgetfucked.com##.b850x80
 indiansgetfucked.com##img[width="650"][height="80"]
 indiatimes.com###adslot_wrapper
@@ -62521,6 +62529,7 @@ tupaki.com##.roadblocker-container
 tupaki.com##body div[id^="detail_wrap_ad_"]:not(#style_important)
 tupaki.com##div[class^="inside-post-ad-"]
 tupaki.com##div[id^="ad_"]:not(#style_important)
+tupaki.com##div[id^="detail_wrap_ad"]
 tuplus.com.co##.cookies
 tupowstalapolska.pl###menusDiv
 turbo.az,tap.az##.bg-bnr-container
