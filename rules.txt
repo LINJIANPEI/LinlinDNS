@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-27 16:59:09（北京时间）
+! Version: 2026-05-27 20:18:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68522
+! Total count: 68524
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4156,6 +4156,7 @@
 @@/WebAd/*$domain=yongyoujia.com
 @@/[Ww]eb[Tt]racking/$~subdocument,domain=ups.com
 @@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
+@@/\.(gif|jpg|png|svg).*#.*\/ad\//$image,domain=mizugigurabia.com|aimasummd.blog.fc2.com|newssokuhou666.blog.fc2.com|touhoudougamatome.blog.fc2.com|metamani.blog15.fc2.com|youkaiwatch2345.blog.fc2.com|dokuo666.blog98.fc2.com|mysafe.stisda.ac.id|metamani.blog15.fc2.com|link.technics-goods.info|gfilex.blogspot.com|codare.fun|ads-ti9ni4.blogspot.com|thelibrarydigital.blogspot.com|www-daftarharga.blogspot.com|mediapemersatubangsa.com|ear-phone-review.com|tienganhedu.com|itdmusics.com|burnbutt.com|valuable.hatenablog.com|leechpremium.net|lib.hatenablog.com|gametter.com|mini.surveyenquete.net|opatil.com
 @@/\.(gif|jpg|png|svg).*#.*\/ad\//$image,domain=mizugigurabia.com|aimasummd.blog.fc2.com|newssokuhou666.blog.fc2.com|touhoudougamatome.blog.fc2.com|metamani.blog15.fc2.com|youkaiwatch2345.blog.fc2.com|dokuo666.blog98.fc2.com|mysafe.stisda.ac.id|metamani.blog15.fc2.com|link.technics-goods.info|gfilex.blogspot.com|codare.fun|ads-ti9ni4.blogspot.com|thelibrarydigital.blogspot.com|www-daftarharga.blogspot.com|mediapemersatubangsa.com|love-stoorey210.net|ear-phone-review.com|tienganhedu.com|itdmusics.com|burnbutt.com|valuable.hatenablog.com|leechpremium.net|lib.hatenablog.com|gametter.com|mini.surveyenquete.net|opatil.com
 @@/\.(quest|shop|autos)\/.*\./$script,xmlhttprequest,domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*|limiteddollqjc.*
 @@/\/[js].?[js]\/.*\.js/$script,xmlhttprequest,domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*|limiteddollqjc.*
@@ -4980,6 +4981,7 @@
 @@||a.game.163.com^
 @@||a.lulucdn.com/js/dnsads.js
 @@||a.magsrv.com/ad-provider.js$domain=reshare.pm
+@@||a.magsrv.com/ad-provider.js$xmlhttprequest,domain=vlxy.org
 @@||a.magsrv.com/video-slider.js$domain=daemonanime.net
 @@||a.magsrv.com/video-slider.js$domain=xfreehd.com
 @@||a.magsrv.com^$domain=in91vip.win
@@ -9391,7 +9393,6 @@
 @@||feed-image.baidu.com^
 @@||feed.4strokemedia.com^$domain=video.corriere.it
 @@||feed.4strokemedia.com^$domain=video.gazzetta.it
-@@||feed.adrelayer.com^
 @@||feed.adrelayer.com^|
 @@||feedback-pa.clients*.google.com/*/google.internal.feedback.$stealth=referrer
 @@||feedback-pa.clients6.google.com^$stealth=referrer
@@ -13601,7 +13602,6 @@
 @@||nu.nl^$generichide
 @@||nu6i-bg-net.com^$generichide
 @@||nuevos-mu.ucoz.com^$generichide
-@@||nuggad.net^$domain=sportdeutschland.tv
 @@||nulledteam.com/js/*/adsservice.js
 @@||nulledteam.com^$generichide
 @@||nullforums.net/js/*/uvb-tag-ad.js
@@ -14855,6 +14855,7 @@
 @@||parking.namesilo.com^
 @@||parsely.com/keys/$script,domain=wmmr.com|wrif.com
 @@||partner-api.jobbio.com/channels/data$xmlhttprequest,third-party,domain=jobs.dailymail.com
+@@||partner.everydays.de^
 @@||partner.everydays.de^|
 @@||partner.googleadservices.com/gpt/pubads_$domain=nat-geo.ru
 @@||partner.googleadservices.com/gpt/pubads_$domain=video.foxnews.com|video.foxbusiness.com
@@ -15856,7 +15857,6 @@
 @@||reuters.com^$generichide
 @@||reutersmedia.net/resources^
 @@||rev.evrensel.net/www/delivery/*.php
-@@||revdownload.com/*.php$generichide
 @@||revive.adsession.com/www/delivery/ck.php$domain=spankwire.com
 @@||rexdlfile.com/index.php?id=$stealth=referrer
 @@||rg-tiles.b-cdn.net^$stealth=referrer
@@ -48815,6 +48815,7 @@ newsworthy.se##.Snack
 newsx.com##.leftaddsense
 newsx.com##.native-advts
 newtalk.tw###_popIn_recommend
+newtalk.tw##.ad-half
 newtalk.tw##.dable_response
 newtalk.tw##.extend_ad
 newtalk.tw##div[id^="ATS_"]
@@ -49962,6 +49963,8 @@ oneindia.com##ul > li:has(> div[class^="adg_"])
 oneindia.com,gizbot.com,careerindia.com,goodreturns.in##body .oiad
 oneinstack.com##.sidebar > .widget:last-child
 oneinstack.com##.w-ad
+onejailbreak.com##.gtm-cls
+onejailbreak.com##div[id^="slot-"]:not(#style_important)
 oneled.pl###cookie
 oneman.gr###phaistos_video_ad
 oneman.gr##.ads_element
@@ -54692,7 +54695,6 @@ reuters.com##div[class^="TwoColumnsLayout-leaderboard-"]
 reuters.com##div[class^="leaderboard"]
 reuters.com##div[data-variant-id="workspace-banner"]
 reuters.com##div[style="flex-basis: 1200px; margin-bottom: 120px;"]
-revdownload.com##.text-ads > a
 revenue.ie##.darker
 reverso.net###bottom-mega-rca-box
 reverso.net###locdbanner
