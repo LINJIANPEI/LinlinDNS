@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-05-28 07:09:01（北京时间）
+! Version: 2026-05-28 09:54:47（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68522
+! Total count: 68525
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7229,6 +7229,7 @@
 @@||cdn*.porno-film.site/vk_video$stealth=referrer
 @@||cdn*.pw/stream2/cdn-*/index.m3u8$stealth=ip|referrer
 @@||cdn*.vb*rexhammond.pw/stream*/cdn*$stealth=ip
+@@||cdn-*.pixel-sus-4k-image.com/stream/$stealth=referrer
 @@||cdn-a.yieldlove.com/yieldlove-bidder.js?meczyki.pl_mobile$domain=meczyki.pl
 @@||cdn-audio.qimao.com^
 @@||cdn-chateva.zhhainiao.com^
@@ -26044,6 +26045,7 @@ cdnstream.top,gaytry.com##div[style="position:relative;"] ~ div[style*="position
 cdrab.com,offerinfo.net##.adslr
 cdromance.org##.sidebar > .widget_custom_html:has(div[id^="ezoic-pub-ad-placeholder-"])
 cdromance.org,dailymusicroll.com,cdromance.com,pridesource.com,watchtv24.com,4sysops.com,artificialintelligencestechnology.com,paradacreativa.es,cdromance.com,techspite.com,aceofhacking.com,nationalchronicle.in,valuewalk.com###custom_html-8
+cdt.ch##div.wnh__banner
 ce.cn,chenjiayu.cn,chinabidding.com.cn,eastmoney.com,ieforex.com,laod.cn,likefont.com,shangyexinzhi.com,zp365.com##.advert
 ce.cn,chinabidding.com.cn,eastmoney.com,ieforex.com,laod.cn,xywy.com,zhangjunseo.com,zhujiceping.com##.advert
 cebit.com.pl###cookies
@@ -52790,6 +52792,7 @@ portmiamiwebcam.com##.info-left
 portmiamiwebcam.com##.info-right
 portmiamiwebcam.com##div[class^="horiz-banner-"]
 portofrotterdam.com##.block-por-cookies
+portsmouth.co.uk##div.align-right.wrapper > div[class^="sc-"]:has(> div[id^="mpuS"]:only-child)
 portsmouth.co.uk,northantstelegraph.co.uk###hero-pixels + div[class]:has(> a[href="http://www.shotstv.com"])
 portsmouth.co.uk,northantstelegraph.co.uk,thestar.co.uk##a[class^="Header__NatWorldTVLink-"]
 portsmouth.co.uk,thestar.co.uk,popularmechanics.com,shieldsgazette.com##.leaderboard-ad
