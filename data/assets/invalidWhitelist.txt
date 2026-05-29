@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14439
+! Total count: 14435
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-05-29 12:07:47（北京时间）
+! Version: 2026-05-29 23:52:10（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -8403,7 +8403,6 @@
 @@||assets.vlitag.com/prebid/default/prebid-*.js$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
 @@||assets.yasno.live/packs/assets/analytics-events-$script,~third-party
 @@||assets1.gio.com.au/suncorp/gio-bw-prod/Bootstrap.js$domain=gio.com.au
-@@||assistir.biz^$generichide
 @@||assoc-amazon.com/widgets/cm?$subdocument,domain=atcoder.jp
 @@||assortedia-as.allarknow.online^$stealth=ip
 @@||astatic.ccmbg.com/fc/js/prebid?v=$domain=journaldunet.com
@@ -8754,7 +8753,6 @@
 @@||biopills.net/wp-content/plugins/ad-inserter/*/*.js
 @@||biopills.net/wp-content/plugins/ad-inserter/images/ads.png
 @@||biopills.net^$generichide
-@@||bioskopkaca21.com^$generichide
 @@||birdflock.unipus.cn/ufe/third/sensorsdata/*/sensorsdata.min.js$domain=ucloud.unipus.cn
 @@||bitauto.com/bglogpostlog.js
 @@||bitbucket.org/SetCST^$stealth
@@ -10042,6 +10040,7 @@
 @@||connatix.com*/connatix.player.$script,domain=ebaumsworld.com|funker530.com|tvinsider.com|washingtonexaminer.com
 @@||connatix.com/min/connatix.renderer.infeed.min.js$domain=accuweather.com|collider.com|gamepress.gg|salon.com
 @@||connatix.com^$domain=euronews.com
+@@||connatix.com^$domain=nypost.com
 @@||connatix.com^$domain=sport-fm.gr|sport24.gr|variety.com
 @@||connatix.com^$domain=sun-sentinel.com
 @@||connect.facebook.*/en_US/AudienceNetworkPrebid.js$domain=cbssports.com
@@ -14696,7 +14695,6 @@
 @@||mail.yahoo.com/neo/ymstat$xmlhttprequest
 @@||mailgen.biz/*/js/$domain=mailgen.biz
 @@||mailingtechnology.com/tracking/tracking_$~third-party
-@@||mailocal2.xyz^$generichide
 @@||maimemo.oss-cn-hangzhou.aliyuncs.com/apk/*.apk$domain=maimemo.com
 @@||main.govpilot.com/jet/js/newrelic.js$~third-party
 @@||mainstream.whatfinger.com/wp-content/plugins/meks-easy-ads-widget/css/style.css$domain=mainstream.whatfinger.com
@@ -15404,7 +15402,6 @@
 @@||newad.abiechina.com^$domain=abiechina.com
 @@||newkso.ru/*.php$stealth=searchqueries|referrer
 @@||newrelic.com/nr-*.min.js$domain=surveymonkey.co.uk|surveymonkey.com|surveymonkey.de
-@@||news-tech.xyz^$generichide
 @@||news.bg^$generichide
 @@||news.goo.ne.jp^$generichide
 @@||news.u17i.com/advert/
@@ -15492,7 +15489,6 @@
 @@||novelgo.id^$generichide
 @@||novelmultiverse.com^$generichide
 @@||novelpia.com^$stealth=ip
-@@||noviello.it^$generichide
 @@||novinky.cz^$generichide
 @@||now.com/*/js/dfpAsset_prebid.js
 @@||now.gg^$generichide
@@ -16462,7 +16458,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=techacrobat.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=temp-mail.lol
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=tempumail.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=theprodkeys.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=theteacherscorner.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=thichcode.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=tmailor.com
@@ -16680,7 +16675,6 @@
 @@||pcoptimizedsettings.com/wp-content/plugins/koko-analytics/$~third-party
 @@||pcoptimizedsettings.com/wp-content/uploads/breeze/google/gtag.js$~third-party
 @@||pcprogramasymas.net^$generichide
-@@||pcso-lottoresults.com^$generichide
 @@||pcva*.manifest.auditude.com/auditude/live/live$domain=adultswim.com
 @@||pcworld.pl/*/news/thumbnails/$~third-party,image
 @@||pcworldcommunication.*.sc.omtrdc.net/b/ss/
@@ -20340,8 +20334,11 @@
 @@||wordpress.org/wp-slimstat/assets/banner-$image,~third-party
 @@||work.ink^$generichide
 @@||workers.dev/*%3D%3D.$xmlhttprequest,stealth=referrer
+@@||workers.dev/*.css$stealth=referrer
+@@||workers.dev/*.html$stealth=referrer
 @@||workers.dev/*.jpeg$stealth=referrer
 @@||workers.dev/*.jpg$xmlhttprequest,stealth=referrer
+@@||workers.dev/*.js$stealth=referrer
 @@||workers.dev/*.m3u8$stealth=referrer
 @@||workers.dev/*/file2/$xmlhttprequest,stealth=referrer
 @@||workers.dev^$xmlhttprequest,stealth=referrer,domain=vidfast.pro
@@ -20726,7 +20723,6 @@
 @@||zpmobi.cn^*/ad.css?$stylesheet
 @@||zsp1.luzdelsur.com.pe/*/fingerprint2/fingerprint2.min.js$~third-party
 @@||zstatic.net^$script,domain=niuyankan.top
-@@||zt-protect.com^$generichide
 @@||zxc.nyaa-tan.my.id/js/-ads-banner.js$domain=kusonime.com
 @@||zxmee.com^$generichide
 @@||zxzja.com:*/Cloud/Down/$subdocument,stealth=referrer
