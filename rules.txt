@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-01 16:23:29（北京时间）
+! Version: 2026-06-01 22:48:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68552
+! Total count: 68558
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4887,7 +4887,6 @@
 @@||5278.cc/static/image/common/ad_close.gif
 @@||5278.cool^$generichide
 @@||52zy.com/gg/
-@@||5471782.fls.doubleclick.net^
 @@||5471782.fls.doubleclick.net^|
 @@||5692.com.ua/assets/*/ads-complain.js
 @@||58.com/adJump?adType=
@@ -4913,7 +4912,6 @@
 @@||70.86.24.120:8060/*/
 @@||720static.com/resource/$stealth=referrer
 @@||75.125.41.29:8080/*/
-@@||79423.analytics.edgekey.net^
 @@||79423.analytics.edgekey.net^|
 @@||795pao.com:88/999pc/ckplayer.js
 @@||7k7k.com/channel$subdocument
@@ -8450,6 +8448,8 @@
 @@||data.mistat.*xiaomi.com^
 @@||data.mistat.intl.xiaomi.com^
 @@||data.mistat.xiaomi.com^
+@@||data.notify.macys.com^
+@@||data.notify.macys.com^|
 @@||data.orders.costco.com^
 @@||data.orders.costco.com^|
 @@||data.reactandshare.com/api/plugin/$stealth=referrer,domain=maanmittauslaitos.fi
@@ -18478,9 +18478,7 @@
 @@||vault-08.uwucdn.top/mp4$stealth=referrer,domain=kwik.cx
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
-@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
-@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -23598,6 +23596,9 @@ benchmark.pl##.wp-billboard
 benchmark.pl##.wp-screening-placeholder-container
 benchmark.pl##body .ad-ph
 benchmark.pl##div[class*=" "]:has(>div[class*=" "]:first-child + script:last-child)
+benchmark.pl,dobreprogramy.pl,so-magazyn.pl,parenting.pl,fotoblogia.pl,kafeteria.pl,pudelek.pl,genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img:is([src^="https://v.wpimg.pl/"], [src*="/images/adv/placeholder"]):first-child + div[class*=" "] + div[class*=" "] + script:last-child)
+benchmark.pl,dobreprogramy.pl,so-magazyn.pl,parenting.pl,fotoblogia.pl,kafeteria.pl,pudelek.pl,genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img:is([src^="https://v.wpimg.pl/"], [src*="/images/adv/placeholder"]):first-child + div[class*=" "] + script:last-child)
+benchmark.pl,wplatform.media,staszownews.pl,zdrowienews.pl,kurierostrowiecki.pl,ostrowiec24.info,kielce112.pl,lublinnews.pl,lovelifestyle.pl,telefan24.pl,marketing-zone.pl,panoramaplock.pl,dzieckopoznan.pl,historiapoznania.pl,sportpoznan.pl,kultura.wp.pl,facet.wp.pl,ipolska24.pl,wiadomosci.wp.pl,pysznosci.pl,open.fm,fotoblogia.pl,autokult.pl,money.pl,pudelek.pl##style + div[class*=" "]:has(> img:is([src^="https://v.wpimg.pl/"], [src*="/images/adv/placeholder"]) + div:last-child)
 bendibao.com###wxbox
 bendibao.com##.content_r_ad300
 benfilm.net##.alert-block
@@ -57837,8 +57838,11 @@ sourceforge.net##.projects > .trunc-eligible
 sourceforge.net##.projects > li.nel[data-cid]
 sourceforge.net##.sterling
 sourceforge.net##a[data-label^="avast"]
+sourceforge.net##body > div[id^="mdb"]
 sourceforge.net##body > div[id^="mongo"]
+sourceforge.net##body div[id^="vibe-main-row"]:not(#style_important)
 sourceforge.net##body div[id^="vibe-main-row-"]:not(#style_important)
+sourceforge.net##div[id*="-coding-bar"]
 sourceforge.net##section.m-project-search-results > ul.projects > li.nel:not([itemprop])
 sourceforge.net,freepik.com##div[data-id^="div-gpt-ad-"]
 sourcenaturals.com###policy_div
@@ -59820,6 +59824,7 @@ techrepublic.com###nav-ad
 techrepublic.com##.ad-active + div[style="width:100%"]:not([class]):not([id])
 techrepublic.com##div[data-medusa-async-options]
 techrepublic.com##section[class^="content-mpu"] > div
+techritual.com##.th-single-ad
 techrounder.com###footerFixBanner
 techrrival.com##.techr-aff
 techrrival.com##a[href^="http://stvkr.com/"]
@@ -60250,6 +60255,7 @@ the-scientist.com###leaderboard-below-magazine-widget
 the-scientist.com###leaderboard-top
 the-scientist.com###preHeader
 the-scientist.com###torpedo
+the-scientist.com##div[ad-id]
 the-star.co.ke###teasers
 the-sun.com##.dpa-grid
 the-sun.com##[data-component="zergnet"]
