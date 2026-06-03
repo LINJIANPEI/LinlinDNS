@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-03 20:29:22（北京时间）
+! Version: 2026-06-04 01:56:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68630
+! Total count: 68638
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -17302,6 +17302,7 @@
 @@||stpd.cloud/saas/$domain=azrhymes.com
 @@||stpd.cloud/saas/$script,domain=dragontea.ink
 @@||stpd.cloud/saas/5274$domain=dgb.lol
+@@||stpd.cloud/saas/6233?_=$xmlhttprequest
 @@||stpd.cloud^$domain=freemcserver.net
 @@||str.hit.gemius.pl^
 @@||str.hit.gemius.pl^|
@@ -21068,6 +21069,7 @@ anal.media##.overlayCreatives
 anal.media##.sidebarCreative
 anal.media##.text-ad-video
 anal.media##.videoNativeCreatives
+anal.media##.videoRecommendations:has(.thumb + a.external-link)
 anal.media,urlvoid.com,ebony8.com,babesource.com,babesource.tv,cosplayporntube.com##a[rel="nofollow sponsored"]
 analdin.com##.brazzers-link
 analdin.com##body[style="background: #000000; margin: 0; padding: 0"]:not([class*="video-page"])
@@ -31470,6 +31472,7 @@ elitebabes.com##.desktop-ban
 eliteindianporn.com##.br-b > .br
 eliteprospects.com##.AdSlot_rectangle__HUBWN
 eliteprospects.com##.LayoutAds_adWrapper__PM4K8
+eliteprospects.com##[class^="AdSlot_"]
 elitepvpers.com##.cw1h
 elitepvpers.com##.cwcontent
 elitepvpers.com##.page > div > a.ads
@@ -36486,6 +36489,7 @@ greatandhra.com##.AdinHedare
 greatandhra.com##._201223_
 greatandhra.com##._201223_2
 greatandhra.com##.container:has(> .container-inner > #id1.child)
+greatandhra.com##.dsk-slot
 greatandhra.com##.entry-content > p > span[style] > strong a[href^="https://urthindia.com/"]
 greatandhra.com##.full_width_home.border-topbottom
 greatandhra.com##.great_andhra_body > div[class^="great_andhra_main_"]:has(> div > a > img[width="330"][height="40"])
@@ -45962,6 +45966,7 @@ metasrc.com###footer-content
 metasrc.com###header_wrapper
 metasrc.com##div#side-video
 metasrc.com##div[style="display: flex;justify-content: center;"] > div:first-child[class] + div[class] + div[class]:last-child:empty
+metatft.com##.VideoAdContainer
 metatrader4.com###float-vertical-panel
 metbuat.az##.col-sm-8 > [class="wh_box hidden-sm hidden-xs"]
 metbuat.az##.col-sm-8 > div.wh_box:has(> div.row > div > ins)
@@ -49482,6 +49487,8 @@ nude.hu##a[href*="/click/"]
 nudecams.xxx###adb
 nudeclap.com##.style75
 nudeclap.com##a[target="_blank"][rel="nofollow noopener"]
+nudeindian.net##.bar-items-block
+nudeindian.net##.full-right-col
 nudemasta.com##a[href^="https://go.dzhjmp.com/?campaignId="]
 nudemasta.com##a[href^="https://go.smljmp.com/smartpop/"]
 nudespree.com###inplayer-banner
@@ -57479,6 +57486,7 @@ soccerlive24.pl,estadion.pl##a[href="/go/wp-pilot"] > img
 socceron.cc##iframe[style*="width: 1016px;"][style*="height: 237px"]
 soccerstats.com###hbanner
 soccerstats.com##.sidebar3
+soccerstats.com##div[style^="width:"][style*="height:"][style*="padding-top:"]:has(> ins[data-fluid-zoneid])
 soccerstreams-100.tv###__next > div[style="text-align:center;padding:1.2rem;z-index:1"]
 soccerstreams2.com##.content-area#primary ~ #right-sidebar
 soccerstreams2.com##a[href^="https://onclickprediction.com/"]
@@ -58306,6 +58314,8 @@ sportscardforum.com###wgo_affiliates
 sportscardforum.com##a[href^="https://www.sportscardforum.com/rbs_banner.php?"]
 sportschatplace.com##.above-mid-article-ad
 sportschatplace.com##.post-right > div[class="post-excerpt"]
+sportsdunia.com##.bg-\[\#FFFFFF1A\]
+sportsdunia.com##[class^="side-ad"]
 sportsgambler.com###stickysidebar::before
 sportsgambler.com##.widget > a[href^="/r/"]
 sportsgambler.com##div[class^="herobox"]
@@ -63812,8 +63822,6 @@ valvolgyikisvasut.hu###SITE_ROOT + div
 valyuta.com###bannerInvest
 valyuta.com##.center-iaz
 vancouversun.com##.vjs-loading-spinner
-vancouversun.com,hannaherald.com,4runner6g.com,fortmcmurraytoday.com,airdrieecho.com,calgaryherald.com,calgarysun.com,canoe.com,chathamdailynews.ca,clintonnewsrecord.com,cochranetimes.com,coldlakesun.com,communitypress.ca,countymarket.ca,countyweeklynews.ca,dailyheraldtribune.com,devondispatch.ca,draytonvalleywesternreview.com,driving.ca,edmontonexaminer.com,edmontonjournal.com,edmontonsun.com,elliotlakestandard.ca,fairviewpost.com,financialpost.com,fortmcmurraytoday.com,fortsaskatchewanrecord.com,gananoquereporter.com,goderichsignalstar.com,highrivertimes.com,kincardinenews.com,lakeshoreadvance.com,leaderpost.com,leducrep.com,lfpress.com,lucknowsentinel.com,mayerthorpefreelancer.com,melfortjournal.com,mitchelladvocate.com,napaneeguide.com,nationalpost.com,norfolkandtillsonburgnews.com,northernnews.ca,nugget.ca,ontariofarmer.com,ottawacitizen.com,ottawasun.com,parisstaronline.com,peacecountrysun.com,pembrokeobserver.com,pinchercreekecho.com,princegeorgepost.com,prrecordgazette.com,recorder.ca,saltwire.com,saultstar.com,saultthisweek.com,seaforthhuronexpositor.com,sherwoodparknews.com,shorelinebeacon.com,simcoereformer.ca,sprucegroveexaminer.com,stonyplainreporter.com,stratfordbeaconherald.com,thebeaumontnews.ca,thechronicle-online.com,thecragandcanyon.ca,theobserver.ca,theprovince.com,thestarphoenix.com,thewhig.com,tj.news,todaysfarmer.ca,vulcanadvocate.com,wallaceburgcourierpress.com,wetaskiwintimes.com,whitecourtstar.com,wiartonecho.com,woodstocksentinelreview.com##.epaper-widget
-vancouversun.com,hannaherald.com,4runner6g.com,fortmcmurraytoday.com,airdrieecho.com,calgaryherald.com,calgarysun.com,canoe.com,chathamdailynews.ca,clintonnewsrecord.com,cochranetimes.com,coldlakesun.com,communitypress.ca,countymarket.ca,countyweeklynews.ca,dailyheraldtribune.com,devondispatch.ca,draytonvalleywesternreview.com,driving.ca,edmontonexaminer.com,edmontonjournal.com,edmontonsun.com,elliotlakestandard.ca,fairviewpost.com,financialpost.com,fortmcmurraytoday.com,fortsaskatchewanrecord.com,gananoquereporter.com,goderichsignalstar.com,highrivertimes.com,kincardinenews.com,lakeshoreadvance.com,leaderpost.com,leducrep.com,lfpress.com,lucknowsentinel.com,mayerthorpefreelancer.com,melfortjournal.com,mitchelladvocate.com,napaneeguide.com,nationalpost.com,norfolkandtillsonburgnews.com,northernnews.ca,nugget.ca,ontariofarmer.com,ottawacitizen.com,ottawasun.com,parisstaronline.com,peacecountrysun.com,pembrokeobserver.com,pinchercreekecho.com,princegeorgepost.com,prrecordgazette.com,recorder.ca,saltwire.com,saultstar.com,saultthisweek.com,seaforthhuronexpositor.com,sherwoodparknews.com,shorelinebeacon.com,simcoereformer.ca,sprucegroveexaminer.com,stonyplainreporter.com,stratfordbeaconherald.com,thebeaumontnews.ca,thechronicle-online.com,thecragandcanyon.ca,theobserver.ca,theprovince.com,thestarphoenix.com,thewhig.com,tj.news,todaysfarmer.ca,vulcanadvocate.com,wallaceburgcourierpress.com,wetaskiwintimes.com,whitecourtstar.com,wiartonecho.com,woodstocksentinelreview.com##.widget--local-business
 vanderpoelmontage.nl##.cookie-settings
 vanis.io###ab-overlay
 vanis.io###player-data > div[style="text-align: center; height: 286px;"]
