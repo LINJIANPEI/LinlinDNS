@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-04 17:41:49（北京时间）
+! Version: 2026-06-04 20:36:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68638
+! Total count: 68641
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5427,6 +5427,7 @@
 @@||ads.mperience.net/vast$domain=imasdk.googleapis.com
 @@||ads.mxhnkn.pro/popup/popup-v2.js$domain=nettruyenaa.com
 @@||ads.nextday.media/prebid/jw-video/*.min.js$domain=gpblog.com
+@@||ads.openai.com^$popup
 @@||ads.pinterest.com^
 @@||ads.pinterest.com^$domain=3dpchip.com
 @@||ads.pinterest.com^$popup
@@ -7663,6 +7664,7 @@
 @@||chartbeat.com/swf/ChartbeatPDK.swf
 @@||chasecdn.com/web/*/eventtracker.js$domain=chase.com
 @@||chat.d-id.com/assets/mixpanel.$~third-party
+@@||chat.dbo-dengi.online/*/track?event=$script,domain=online.mtsdengi.ru
 @@||chat.deepseek.com^
 @@||chat.doubao.com^
 @@||chat.openai.com^$stealth=location|ip
@@ -57056,6 +57058,7 @@ slashdot.org##.deals-wrapper
 slashdot.org,sourceforge.net###ai-stud-coding-bar
 slashdot.org,sourceforge.net###floating-content
 slashdot.org,sourceforge.net##[id*="mongo-"]
+slashdot.org,sourceforge.net##div[id*="vibe"]
 slashfilm.com###primis-container
 slashfilm.com##.under-art
 slashfilm.com,healthdigest.com###primis-container
