@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-05 20:30:14（北京时间）
+! Version: 2026-06-05 23:47:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68668
+! Total count: 68678
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3592,7 +3592,6 @@
 5izyw.com##.chao_ggw
 5izyw.com##a[href="http://61.160.236.52"]
 5ka.ru###app > .message
-5mio.org$$script:contains(HTMLAllCollection)
 5nd.com##.songAds
 5pillarsuk.com##.td-ss-main-sidebar img[width="300"]
 5pillarsuk.com,babeltechreviews.com,cybersecuritynews.com,techviral.net,thestonedsociety.com,weekendspecial.co.za##.td-header-sp-recs
@@ -7901,7 +7900,10 @@
 @@||cloudcache.tencent-cloud.cn^
 @@||cloudcontrol.live.360.cn^
 @@||clouderrorreporting.googleapis.com^$domain=waze.com
+@@||cloudfam.io/assets/ads/adnetwork-sync.js
 @@||cloudfam.io/assets/ads/adsense.js
+@@||cloudfam.io/assets/ads/gpt-publisher.js
+@@||cloudfam.io/assets/ads/prebid.js
 @@||cloudfam.io^$generichide
 @@||cloudflare-dns.com^
 @@||cloudflare.com/ajax/libs/dash-shaka-playback/$script,domain=vpornvideos.com
@@ -14645,6 +14647,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fastssh.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=filexstream.sujanbotx.workers.dev
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=flixscans.*
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=freemagazines.top
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fsbot.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=general24news.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=genova24.it
@@ -17089,6 +17092,7 @@
 @@||static.cloud.coveo.com/coveo.analytics.js/$domain=cabelas.com
 @@||static.cloudflareinsights.com/beacon.min.js$domain=idlixku.com
 @@||static.cloudflareinsights.com/beacon.min.js$domain=topsporter.net
+@@||static.cloudflareinsights.com/beacon.min.js$xmlhttprequest,domain=freemagazines.top
 @@||static.cloudflareinsights.com/beacon.min.js$xmlhttprequest,domain=werfgt.fun
 @@||static.cloudflareinsights.com/beacon.min.js^$domain=sportshub.to
 @@||static.cloudflareinsights.com^
@@ -17521,6 +17525,7 @@
 @@||tags.t.tailtarget.com/t3m.js?$domain=superesportes.com.br
 @@||tags.tiqcdn.com/utag/*/utag.sync.js$domain=10.com.au|bankofamerica.com|hsbc.co.uk|samsung.com|sony.jp|visible.com|vmware.com
 @@||tags.tiqcdn.com/utag/*/utag.sync.js$domain=bankofamerica.com|hsbc.co.uk|samsung.com|sony.jp|visible.com|vmware.com
+@@||tags.tiqcdn.com/utag/10/10playsite/qa/utag.sync.js$xmlhttprequest,domain=10.com.au
 @@||tagtic.cn^
 @@||taiga.maven.io^
 @@||taiga.maven.io^|
@@ -18547,7 +18552,6 @@
 @@||vfsglobal.*/*/Track/*^$stealth=donottrack|useragent|ip
 @@||vg247.com/wp-content/themes/vg247/scripts/AdsLoad.js
 @@||vi-serve.com/vis-media/*$domain=9gag.com
-@@||vi.freewheel.tv/static/creatives/fw-ad-300x250.jpg$domain=peacocktv.com
 @@||via.placeholder.com^
 @@||vibefm.pl^$generichide
 @@||victor-mochere.com^$generichide
@@ -22188,6 +22192,7 @@ atg.se##.notice__info-info, .alert--info
 atgtickets.com###atgcookies-container
 athenesaccueil.com##body > div:not([id]):not([class])
 athinorama.gr##div[id^="ParentOFdiv-gpt-ad-"]
+athlete-insurance.com###kk-adblock-overlay
 athlinks.com###footer-container ~ div
 athlonoutdoors.com##.inserted-ad
 athlonsports.com##.card-grid > div[style="margin-bottom:24px"]
@@ -28257,6 +28262,8 @@ criticker.com###i_cookies
 criticker.com##.cr_advert
 criticker.com##.cr_native
 crizal.pl###__cookies_
+crizyman.online,ryfex.online###adblock-modal
+crizyman.online,ryfex.online###popup
 crmbuyer.com,ectnews.com,technewsworld.com##.content-block-slinks
 crmbuyer.com,ectnews.com,technewsworld.com##.content-tab-slinks
 crn.com###bottom-ribbon
@@ -33998,6 +34005,7 @@ forums.pcsx2.net##div[onclick^="MyAdvertisements."]
 forums.redflagdeals.com###header_billboard_bottom
 forums.redflagdeals.com###primisContainer
 forums.redflagdeals.com###primisPlayerContainerDiv
+forums.redflagdeals.com##.countdown-timer
 forums.redflagdeals.com##.forum_topic_inline_bigbox
 forums.redflagdeals.com##.topiclist > .topic:has(span.sponsored)
 forums.redflagdeals.com##div[class$="_post_ad"]
@@ -35407,6 +35415,8 @@ geeklectic.io##.consent, #consent
 geekpark.net,speedtest.cn##.sponsor
 geekrar.com##.adsbygoogle
 geekrar.com,techspite.com,professionaltutorial.com##.navigation-banner
+geeks3d.com##center[style^="width:"]:has(> .adsbygoogle)
+geeks3d.com##td[style*="background-color:"][style*="border:"] > a[target="_blank"] > img
 geeksforgeeks.org###rightBarSaleBanner:not(#style_important)
 geeksforgeeks.org###secondary div[style="min-height:600px"]
 geeksforgeeks.org##.textBasedMannualAds_2
@@ -39688,6 +39698,7 @@ independent.ie##.slot4
 independent.ie##div[data-label="Advertisement"]
 indepth.dev##.cookies
 index.hr##.ad-container
+index.hr##div.js-carousel-campaign
 indgovtjobs.in,techiesavi.com,magesy.blog###superadblocker
 india.com###cbanner
 india.com###co-container
@@ -51607,13 +51618,11 @@ ping-test.net##.rek970x90
 ping-test.net##div[style^="width: 336px; height: 280px;"]
 ping.chinaz.com##.sth > .col-red
 ping.eu##td > center[style="margin-bottom: 2px;"]
-ping0.cc###adbright
 ping0.cc###adfright
 ping0.cc###websites-wrap:has([rel$="sponsored"])
 ping0.cc##.adeles
 ping0.cc##.aditems
 ping0.cc##.xaeles
-ping0.cc##.xzeles
 ping0.cc##a[rel="noopener nofollow"][target="_blank"]:has(> [class^="close"])
 pingback.com##.cookies-modal
 pinggu.org##.banner2015
@@ -58004,6 +58013,7 @@ spankbang.com##div[data-testid="verified-creators"]
 spankbang.com,spankbang.party##body .ptgncdn_holder
 spankbang.com,spankbang.party##body .ptgncdn_holder_haeder
 spankbang.com,spankbang.party##iframe[src^="https://deliver.ptgncdn.com/"]
+spankbang.party##.banner_ad_text
 spankbang.party,spankbang.com##.ad_button
 spankbang.party,spankbang.com##.lv_cm_int_come_on
 spankbang.party,spankbang.com##.vjs-paused-banner-ad-container
