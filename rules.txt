@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-06 07:59:48（北京时间）
+! Version: 2026-06-06 10:57:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68677
+! Total count: 68685
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9120,6 +9120,7 @@
 @@||embed.new.video^$stealth=referrer|ip
 @@||embed.redditmedia.com/widgets/platform.js$domain=gamerant.com
 @@||embed.sendtonews.com/player*.php$domain=earth.com
+@@||embed.sendtonews.com/player3/$domain=clutchpoints.com
 @@||embed.sendtonews.com/player3/$domain=nypost.com
 @@||embed.watchanimesub.net/inc/embed/ads.js
 @@||embed.watchanimesub.net/inc/embed/kampyle.js
@@ -13200,6 +13201,7 @@
 @@||moyu.im/*.jpg$stealth=referrer
 @@||mozu.com^*/monetate.js$script,domain=acehardware.com
 @@||mp.163.com^
+@@||mp.mmvideocdn.com/mini-player/$domain=clutchpoints.com
 @@||mp.mmvideocdn.com/mini-player/$domain=nypost.com
 @@||mp.mmvideocdn.com/mini-player/$domain=theplayerstribune.com
 @@||mp.mmvideocdn.com/mini-player/prod/voltax_mp.js$domain=earth.com
@@ -25641,6 +25643,7 @@ caminspector.net,cambabe.me,camwhores.tv##.tdn
 camp-firefox.de###storage-notice
 campaignlive.com##.optanon-category-3
 campana-schott.com###cookie-copy
+campbellrivermirror.com,magnoliastatelive.com##.one_by_one_group
 campbellsoup.co.uk##.cookies
 camperscaravans.nl##div[id^="cookieConsentForm"]
 camping-app.info###cokmodal, .modal-backdrop
@@ -28990,6 +28993,7 @@ dalendo.com##.dr-footer-fixed-bar
 dalipan.com##.hongbao-wrap
 dallasinnovates.com##.ads-article-body
 dallasinnovates.com##.sponsor-footer
+dallasinnovates.com,fingerlakes1.com,namibian.com.na,thecoastnews.com,watchesbysjx.com##.gofollow
 dallasinnovates.com,fingerlakes1.com,thecoastnews.com,watchesbysjx.com##.gofollow
 dallasinnovates.com,thecoastnews.com,watchesbysjx.com##.gofollow
 dallasnews.com###fusion-app > div[class^="app_banners"]
@@ -32187,6 +32191,7 @@ euronews.com##.tp-outbrain
 euronews.com##aside > div[class*="o-article-newsy__aside__content-"]:has(> div[class*="u-show-for"])
 euronews.com##aside.o-article__aside > .OUTBRAIN
 euronews.com##div[class*="u-show-for"]
+euronews.com,globalnews.ca,stuff.tv##.c-ad
 euronova-italia.it##.cc-customdialog
 europa-vrachtwagens.nl###cookie
 europa.eu###edp-cookies-banner, .customCookie, .cookie-section
@@ -44345,6 +44350,7 @@ luben.tv##.nxAds
 lubetube.com##.sidead
 lubetube.com##a[href^="http://lubetube.com/out"]
 lubiehrubie.pl##.theiaStickySidebar > aside.lubie-widget:has(a:not([href*="youtube.com"]) > img)
+lubimyczytac.pl##.top-sponsorship-banner__preload
 lublin112.pl###sidebar > .ad ~ hr
 lublin112.pl##.boxa
 lublin112.pl##div[style="min-height: 200px"]
@@ -45431,6 +45437,7 @@ mashable.com##.exco
 mashable.com##.top-0.sticky > div
 mashable.com##.ziff-video-container
 mashable.com##[data-pogo="top"]
+mashable.com##[data-seamless-ad]
 mashable.com##aside[data-seamless-ad]
 mashable.com##div[data-pogo]
 mashable.com##section.mt-4 > div
@@ -47288,6 +47295,7 @@ msn.com##.drrTopAdWrapper
 msn.com##.eocb-ads
 msn.com##.galleryPage_eoabContent_new-DS-EntryPoint1-1
 msn.com##.galleryPage_eoabNativeAd_new-DS-EntryPoint1-1
+msn.com##.gem-display-ad-wrapper
 msn.com##.intra-article-ad-full
 msn.com##.intra-article-ad-half
 msn.com##.me-stripe-tile-content:has(a[href*="?"] .me-stripe-title-subtitle)
