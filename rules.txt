@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-09 14:11:46（北京时间）
+! Version: 2026-06-09 18:26:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68753
+! Total count: 68768
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8505,6 +8505,7 @@
 @@||dby*.xyz^$stealth=referrer,domain=molystream.*
 @@||dbz-fantasy.com/ads.css
 @@||dc.ads.linkedin.com/yoc^$domain=youronlinechoices.com
+@@||dc.services.visualstudio.com/v2/track$xmlhttprequest,domain=aiskillsnavigator.microsoft.com
 @@||dc.sigmob.cn^
 @@||dcbbwymp1bhlf.cloudfront.net^$script,domain=uploadmall.com
 @@||dcdirtylaundry.com/cdn-cgi/challenge-platform/$~third-party
@@ -16660,6 +16661,7 @@
 @@||similarweb.com/website/data/
 @@||similarweb.com^
 @@||simkl.com^$xmlhttprequest,elemhide,jsinject,extension
+@@||simpforselti.com/captcha.js$domain=simpcity.cr
 @@||simple.ripley.cl$generichide
 @@||simpleanalyticsexternal.com^$script,domain=inleo.io
 @@||simplebits.io/ads/700/cz.html$xmlhttprequest,domain=simplebits.io
@@ -34041,6 +34043,7 @@ forums.socialmediagirls.com##.p-sectionLinks
 forums.socialmediagirls.com##.samLinkUnit
 forums.socialmediagirls.com##.uix_nodeList > div[class="block"]:has([href^="/link-forums/"])
 forums.socialmediagirls.com##a[href^="https://secure.chewynet.com/"]
+forums.socialmediagirls.com##a[href^="https://striply.com/"]
 forums.socialmediagirls.com##a[href^="https://viralporn.com/"][href*="?utm_"]
 forums.socialmediagirls.com,titsintops.com##.samCodeUnit
 forums.somethingawful.com###notregistered
@@ -34723,6 +34726,7 @@ fxykx.com##a[href*="zyttx.com/"]
 fydeos.com##.cookie-modal
 fydisk.com###vbox
 fyi.tv,aetv.com,mylifetime.com,history.com##div[class^="Component-adBreak-"]
+fylio.com##div[data-slot]
 fyxxr.to,hihentaiporn.com,watchporn.to,camwhores.tv,japan-whores.com,thothub.vip,3dporndude.com,xcadr.tv,fapnow.xxx,bobs-tube.com##.fp-brand
 fz.se##body .bnr:not(#style_important)
 fzdao.cn###datu
@@ -46275,7 +46279,6 @@ militarne.pl###cookie
 military.china.com##.item_list > .medialist
 military.china.com##.slide_doubleimg > .baiBox
 military.com##.page__top
-military.com##.sidebar-first
 military.com##article.embedded-entity
 militaryleak.com##.gmr-floatbanner
 militarywatchmagazine.com##.v-size--x-small.theme--light
@@ -51180,6 +51183,8 @@ pcstore.com.tw##.priority1
 pcstore.com.tw##.priority_ad
 pcstore.com.tw##div[class^="ad388zone"]
 pcsx2.net##td[style^="vertical-align"] > p[style^="text-align: center;margin"]
+pctechmag.com##div.ai_widget-2 > h2
+pctechmag.com##div.cs-banner
 pctowap.com##.dowap_ads
 pctowap.com##a[href^="http://ptw.la/"]
 pcwarezbox.com##.entry-content > div[style]:has(> center a[href][rel="nofollow"])
@@ -51782,6 +51787,7 @@ pixelpost.pl##.sidebar-inwrap > aside#text-3
 pixelpost.pl##.sidebar-inwrap > aside#text-4
 pixelprivacy.com##div[data-ga="NordVPN Popup"]
 pixflow.net##.privacy-popup
+pixground.com,holidify.com,filexstream.sujanbotx.workers.dev,azmovies.to,34-hub.com,ogfap.com,coindesk.com,ohcar2022.co.in,dailyhindiadda.com,fifakitcreator.com,fontscompare.com,sarna.net,theproducenews.com,kaoruhana.com,marinetraffic.live,governmentjobvacancies.com,biharkhabar.co,resizepixel.com,tradingeconomics.com,netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com,link.postearn.io##.ad-container:not(#style_important)
 pixhost.to##.under-image
 pixilart.com##.panel-ad-only
 pixiv.net###root > div:first-child > div:only-child
@@ -58002,6 +58008,8 @@ sourceforge.net##.projects > .trunc-eligible
 sourceforge.net##.projects > li.nel[data-cid]
 sourceforge.net##.sterling
 sourceforge.net##a[data-label^="avast"]
+sourceforge.net##body > div[id][data-nosnippet]:has(> button.sticky-close + .sticky-inner)
+sourceforge.net##body > div[id^="at-bottom-"]
 sourceforge.net##body > div[id^="mdb"]
 sourceforge.net##body > div[id^="mongo"]
 sourceforge.net##body div[id^="vibe-main-row"]:not(#style_important)
@@ -59448,6 +59456,8 @@ sysnettechsolutions.com###header-widget-area > .hw-widget > a[href^="https://bit
 sysnettechsolutions.com##.header-addition > a[href][rel="nofollow"] > img
 system-rescue.org###sponsors-left
 systemkamera.one###privacyopt
+systemrequirementslab.com###stake-takeover-banner
+systemrequirementslab.com##.stake-skin-link
 systemrequirementslab.com##a[href^="http://ld.iobit.com/"]
 systemrequirementslab.com##a[id^="box-amazon-"]
 systemrequirementslab.com##div[style="width: 400px; position: fixed; inset: auto 5px 5px auto; z-index: 1000;"]
@@ -59925,6 +59935,7 @@ technofaq.org###ai_widget-6
 technofaq.org###black-studio-tinymce-7
 technology.org##.techorg-banner
 technologymagazine.com##div[data-isadrow]
+technologymagazine.com,fintechmagazine.com,zerohedge.com##div[class^="Advert_"]
 technologynetworks.com##.adverts_footer_scrolling_advert
 technologynetworks.com##.base_privacy_policy_notification
 technologynetworks.com##.inner_content_olp_on_site_landing_page
@@ -61138,6 +61149,7 @@ thestudentroom.co.uk##.custom-jucdap
 thestudentroom.co.uk##div[data-freestar-ad]
 thesun.co.uk###article-footer div[id*="-ads-"]
 thesun.co.uk##.article-sidebar .widget-sticky:has([class*="ad_widget"])
+thesun.co.uk##.article__content > .has-text-align-center:has(> strong > a[href])
 thesun.co.uk##.article__footer
 thesun.co.uk##.customiser-v2-layout-1-billboard-container
 thesun.co.uk##.dpa-slot
@@ -61146,6 +61158,7 @@ thesun.co.uk##.section-sponsorship-wrapper-section
 thesun.co.uk##.sun-grid-container:has([class*="ad_widget"])
 thesun.co.uk##.widget-height
 thesun.co.uk##[data-aspc="newBILL"]
+thesun.co.uk##div.module--1-billboard:has(> div.advert-wrapper)
 thesun.co.uk##div[data-aspc="BILL"]
 thesun.co.uk,sport.ua,xda-developers.com##amp-iframe
 thesurfersview.com##.mid-section > .right-part
@@ -61829,6 +61842,7 @@ tnapics.com##.cams_small
 tnapics.com##.sy_top_wide
 tns.fr###pop-cnil
 tntsports.co.uk##[data-testid="molecule-marketing-block"]
+tntsports.co.uk##div[aria-label="Betting - Sponsored"]
 tntsports.co.uk##div[data-testid="marketing-hbo-max-block"]
 tntsports.co.uk##div[role="banner"]
 to8to.com##.ad-commom
@@ -64946,6 +64960,7 @@ wanqu.co##.left-nav-panel:first-child
 wantedinafrica.com##.kn-widget-banner
 wantedinrome.com##.a--banner
 wantedinrome.com##.kn-widget-banner
+wantedinrome.com##div[id^="wantedinrome_com_"]
 wantgoo.com###FixModal
 wantgoo.com##.adsbox
 wantgoo.com##.fab-ad
