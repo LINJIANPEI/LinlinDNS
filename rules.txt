@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-10 14:56:45（北京时间）
+! Version: 2026-06-10 18:50:12（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68789
+! Total count: 68798
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3849,6 +3849,9 @@
 91porna.com##.row > div.flex-container:has(> a[href][target="_blank"] > img)
 91porna.com##.row > div[class^="col"]:has(> .video-wrap > a.checkNum)
 91porna.com##div[class^="col"] div.filters:has(a.checkNum)
+91porna.com,evgpopxb.cc##.ad-dialog
+91porna.com,evgpopxb.cc##.dx-banner-item
+91porna.com,evgpopxb.cc##.modal-backdrop
 91porny.com###playerJsvLayer.jsv-layer
 91porny.com##.container-fluid.p-0[class*="mb-"]
 91porny.com##.jsv-g1
@@ -27290,6 +27293,7 @@ cntv.cn##div[class^="tchmk_"]
 cnx-software.com###fixeddbar
 cnx-software.com###text-10
 cnx-software.com##.gnorthk
+cnx-software.com##.grootes
 cnx-software.com##.gsonoff
 cnx-software.com##.widget-area > section.popular-posts + section.widget
 cnx-software.com##.widget-area > section.widget[style="display: none !important;"] + section.widget
@@ -38427,6 +38431,7 @@ hostgreen.com###obal
 hostings.info##a[href^="https://hostings.info/go/banner."]
 hostingsdc.pl###informationbar
 hostkey.com###collectData
+hostzteam.com,bestensuree.com,tophostdeal.com,hostserverz.com,cloudhostingz.com##.search-popup + div[id][class*=" "]
 hot-dinners.com##.mod-custom
 hot-milf.co,milffuck.fun,hotmilfporn.site###video-id_fluid_html_on_pause
 hot-milf.co,teenfucking.org##.vid-skvares
@@ -50271,6 +50276,8 @@ onscreens.me##.mx-auto:has(> div[class*="250px"][class*="300px"])
 onscreens.me##body > section[class="mx-4 my-6"]
 onsite.fun##.MuiSnackbar-root
 ontariocolleges.ca###privacy-statement
+onthisday.com##.sponsor--center
+onthisday.com##.sponsor--footer
 ontinet.com###cook
 ontools.net###modal_blocker
 ontools.net##.modal-backdrop
@@ -53487,6 +53494,8 @@ proxysite.pro##div[style="height:280px;width:100%;"]
 prozeny.cz##.ogm-advert-static
 prozeny.cz##.tpl-royalty > div[class] > div[data-e2e="ogm-branding"] > div[class]:has(> .ogm-advert-static)
 prozeny.cz##div[data-advert="sticky-container"]
+prozeny.cz##div[data-e2e="ogm-branding"] > div[class]:has(> div:only-child > div:only-child > div[data-e2e="mol-advert"])
+prozeny.cz,garaz.cz##div[data-e2e="mol-advert"]
 prozon.com###rgpd-popup-container
 prts.wiki##.nomobile[style*="810px;height:240"]
 prudential.co.za##.investor-type-box .cookie-policy-text
