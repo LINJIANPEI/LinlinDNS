@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-11 08:07:05（北京时间）
+! Version: 2026-06-11 13:19:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68808
+! Total count: 68816
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -22288,6 +22288,7 @@ attitude.co.uk##.at-advert
 attractionsmagazine.com##a[href^="https://mousefantravel.com/"]
 atube.xxx##.sp-i
 atv.az##[style*="margin-top: 10px"] > object[height="102"]
+atv.com,motorcycle.com,autoguide.com##.sidebar-ad-unit
 atvrider.com,baggersmag.com,boatingmag.com,cruisingworld.com,cycleworld.com,dirtrider.com,fieldandstream.com,floridatravellife.com,flyingmag.com,islands.com,marlinmag.com,motorcyclecruiser.com,motorcyclistonline.com,outdoorlife.com,popphoto.com,popsci.com,saltwatersportsman.com,scubadiving.com,sportdiver.com,sportfishingmag.com,utvdriver.com,yachtingmagazine.com##.st-block.ads.separator
 atwonline.com##.gdpr
 atyun.com###r_banner > ul > li > a[href^="http"]:not([href*="atyun."])
@@ -38331,6 +38332,7 @@ homedepot.com##[id*="sponsored"]
 homedepot.com##section[id^="browse-search-pods-"] > div.browse-search__pod:has(div.product-sponsored)
 homedepot.com,nordstrom.com###revjet_container
 homeful.ly###__next > .container
+homehobbiesdaily.com,foodtalkdaily.com,petguide.com,atv.com,thefirearmblog.com##*:is(main, .main-content) > .billboardSize
 homehound.com.au##.left-banner
 homejardin.com##td[valign="top"] > p[style*="text-align:justify"]
 homejav.com,kbjfree.com,onscreens.me,xmorex.com,xsz-av.com##.h-\[250px\]
@@ -47054,8 +47056,6 @@ motor1.com##[data-m1-ad-label]
 motorauthority.com##.sq-block
 motorcycle.com##.ad-bottom-strip
 motorcycle.com##.infeed-ads
-motorcycle.com,autoguide.com##.sidebar-ad-unit
-motorcycle.com,autoguide.com##body .ad-top-strip
 motorcyclenews.com##.google-ads
 motorcyclenews.com##.mpu-ad
 motorcyclenews.com##.sticky-leaderboard-ad-container
@@ -51325,7 +51325,11 @@ pepboys.com###ccContainer
 pepco.hu##.cookies
 pepeenergy.com##.modal-cookie
 pepper.com,pepper.pl##.listLayout-box:has(> .ad:only-child)
+pepper.pl###sidebarContentPortal .listLayout-box:has(> .slot)
+pepper.pl##.box--content > .flex:has(> .slot--bg:only-child)
 pepper.pl##.listLayout-main > div:not([class], [id]) > .flex:has(> .ad--bg)
+pepper.pl##.listLayout-side > .flex:has(> div[id$="AdSlotPortal"])
+pepper.pl##.slot:has(div[id^="ad-"])
 pepper.pl##div[id$="AdSlotPortal"]
 pepperworldhotshop.com###OM-popups-container
 perchance.org###adCtn
@@ -56148,6 +56152,7 @@ seeklogo.com##.shutterBannerWp
 seeklogo.com##.sideAdsWp
 seeklogo.com##.sstkBannerWp
 seekube.com###app > div:nth-child(2):not(:last-child)
+seekyoursounds.com###leaderboard-master
 seemysex.com##.inline-video-adv__inner
 seemysex.com##.rain
 seewarte-schwerin.de###mc-consent-window
@@ -59995,6 +60000,8 @@ techonthenet.com##div[class*=" "] > div[id$="_slot"]
 techopedia.com##.footer_inner_ads
 techopedia.com##.header_inner_ads
 techopedia.com##.techo-adlabel
+techorange.com##a[href^="https://supr.link/"]
+techorange.com##div.elementor-widget > div.elementor-widget-container:has(> a[href*="utm_campaign"] > img)
 techotopia.com###coverstyle
 techotopia.com###mw-content-text > table[align="center"]
 techotopia.com###mw-panel > a > img
@@ -60477,6 +60484,7 @@ the-express.com##body [id^="div-gpt-ad"]:not(#style_important)
 the-independent.com###taboola-mid-article-thumbnails-ii
 the-match-factory.com###infoBar
 the-race.com##.full-width-ad-spot
+the-race.com##.tr-header-side-ad
 the-race.com##.tr-top-nav-ad
 the-scientist.com###Torpedo
 the-scientist.com###boombox-top
@@ -60703,7 +60711,6 @@ thefinancialexpress.com.bd###innerAds
 thefinancialexpress.com.bd##.ads-carousel-container
 thefinancialexpress.com.bd##.popup-ads-container
 thefintechtimes.com##.penci-widget-sidebar
-thefirearmblog.com##main > .billboardSize
 thefiscaltimes.com##div[class*="pane-dfp-"]
 thefix.nine.com.au##.latest-feed__ad
 thefork.it###root > div > p
@@ -61105,6 +61112,7 @@ thesaurus.com##.ftsp
 thesaurus.com##[id^="tco"]
 thesaurus.com##aside[id*="_serp_"][id*="tf_"][class]
 thesaurus.com##div[id^="thesaurus_"][style]
+thesavvyexplorers.com,hometalk.com,thegoldendaily.com,rvguide.com,motorcycle.com,autoguide.com##body .ad-top-strip
 thesciencetoday.com###primary > div[style]:has(> div.container > iframe[src="/vastad"])
 thesciencetoday.com##div[id^="custom_html-"]:has(> div.textwidget > ins.adsbymahimeta)
 thescore.com##.Ad__container--MeQWT
