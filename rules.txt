@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-16 00:11:32（北京时间）
+! Version: 2026-06-16 04:19:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68898
+! Total count: 68918
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4393,8 +4393,8 @@
 @@/owa/service.svc$document
 @@/pic/ad/*$domain=ybjk.com
 @@/player/*$stealth=referrer,domain=ibomma.*
-@@/player/stats.php$domain=boysxclusive.com|camwhores.tv|viralxxxporn.com|thothub.vip|yesporn.vip|85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com|porno24.to|fyxxr.to
-@@/player_ads.html$domain=boysxclusive.com|camwhores.tv|viralxxxporn.com|thothub.vip|yesporn.vip|85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to|porno24.to|fyxxr.to|camhub.one
+@@/player/stats.php$domain=boysxclusive.com|camwhores.tv|viralxxxporn.com|thothub.vip|yesporn.vip|85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|watchmdh.to|porn4fans.com|porno24.to|fyxxr.to|camfoxes.tv
+@@/player_ads.html$domain=boysxclusive.com|camwhores.tv|viralxxxporn.com|thothub.vip|yesporn.vip|85po.com|85po.net|85xo.com|85xo.com|watchporn.to|viralpornhub.com|camwhoresbay.porn|watchmdh.to|ebalovo.porn|ebalovo.adult|camlovers.tv|camhub.tv|pornissimo.org|porntn.com|femdomtb.com|pornoham.me|tubsexer.com|homegrownfreaks.net|pornfd.com|sexcams-24.com|watchmdh.to|porno24.to|fyxxr.to|camhub.one|camfoxes.tv
 @@/playlist.m3u8$stealth=referrer|ip
 @@/playlist/*caxi.m3u8$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|streameast.app|1stream.eu|buffstreams.app
 @@/playlists/*/play*.jpeg$xmlhttprequest,stealth=referrer
@@ -5711,6 +5711,7 @@
 @@||akwams.$generichide
 @@||akyapitv.idealdata.com.tr^$stealth=dpi
 @@||alaev.net/reklama/
+@@||alb-jjexm35p5nv4ven8gt.cn-shenzhen.alb.aliyuncsslb.com^
 @@||albforex.com.tr^$stealth=dpi
 @@||albyatirim.com.tr^$stealth=dpi
 @@||alexgoldcheidt.com^$generichide
@@ -7455,6 +7456,11 @@
 @@||cdn.mangaeden.com/js/ad/advertisement.js
 @@||cdn.maskinbladet.dk/*assets/templates/*/img/adblocker/ads.png
 @@||cdn.matomo.cloud/tekuchi.matomo.cloud/matomo.js$domain=berkeleygroup.digital
+@@||cdn.membrana.media/ntp/ym.js$domain=ntvspor.net
+@@||cdn.membrana.media/pub_scripts/common/videojs/videojs.ima.mod.min.js$domain=ntvspor.net
+@@||cdn.membrana.media/video/ntp/desktop/videoSources.json$domain=ntvspor.net
+@@||cdn.membrana.media/video/video.css$domain=ntvspor.net
+@@||cdn.membrana.media/video/video.js$domain=ntvspor.net
 @@||cdn.movie-pass.live/scripts/nwm-fcn.min.js$domain=opensubtitles.org
 @@||cdn.mp4upload.com/pl/plyr*.js
 @@||cdn.muratordom.smcloud.net/t/advert.js
@@ -12505,6 +12511,7 @@
 @@||login.mobywatel.gov.pl^$stealth
 @@||login.nvgs.nvidia.com^$stealth
 @@||login.nvidia.com^$stealth=3p-auth
+@@||login.olx.$stealth=flash|java
 @@||login.sendpulse.com^
 @@||login.sendpulse.com^|
 @@||login.sina.com.cn^
@@ -17859,6 +17866,7 @@
 @@||tickle.porn/player/html.php?aid=pre_roll$subdocument,domain=tickle.porn
 @@||ticonsiglio.com/wp-content/*/plugins/ad-ace/includes/adblock-detector/advertisement-*.js
 @@||tidal.com^$generichide
+@@||tieba-ares.cdn.bcebos.com^
 @@||tienganhedu.com^$generichide
 @@||tiengnhatpro.net^$generichide
 @@||tii.la^$generichide
@@ -20743,6 +20751,7 @@ ali213.net##.weixincode
 ali213.net##.zadmainholder
 ali213.net##div[class^="GG"]
 ali213.net##div[id^="ali-ad-js-"]
+alibaba.com##.creative-dot-wrapper
 alibaba.com##.gallery-card:has(.searchx-card-e-ad)
 alibaba.com##.is-creative
 alibaba.com##.list-card:has([data-role="ad-area"])
@@ -23360,7 +23369,6 @@ barelist.com,spankingtube.com##a[onclick]
 barenbrug.fr##vk-cookie-manager
 barkinganddagenhampost.co.uk,becclesandbungayjournal.co.uk,blogto.com,burymercury.co.uk,cambstimes.co.uk,cardealermagazine.co.uk,crimemagazine.com,dailyedge.ie,datalounge.com,derehamtimes.co.uk,dermnetnz.org,developingtelecoms.com,dissmercury.co.uk,eadt.co.uk,eastlondonadvertiser.co.uk,economist.com,edp24.co.uk,elystandard.co.uk,etf.com,eveningnews24.co.uk,exmouthjournal.co.uk,fakenhamtimes.co.uk,football.co.uk,gearspace.com,gematsu.com,gobankingrates.com,greatyarmouthmercury.co.uk,hackneygazette.co.uk,hamhigh.co.uk,hertsad.co.uk,huntspost.co.uk,icaew.com,ilfordrecorder.co.uk,iol.co.za,ipswichstar.co.uk,islingtongazette.co.uk,lgr.co.uk,lowestoftjournal.co.uk,maltapark.com,midweekherald.co.uk,newhamrecorder.co.uk,newstalkzb.co.nz,northnorfolknews.co.uk,northsomersettimes.co.uk,pinkun.com,podtail.com,proxcskiing.com,remindmagazine.com,romfordrecorder.co.uk,royston-crow.co.uk,saffronwaldenreporter.co.uk,sidmouthherald.co.uk,stowmarketmercury.co.uk,stylecraze.com,sudburymercury.co.uk,the42.ie,thecomet.net,thedrum.com,thejournal.ie,thinkspain.com,tineye.com,trucksplanet.com,varsity.co.uk,videogameschronicle.com,wattonandswaffhamtimes.co.uk,wccftech.com,whtimes.co.uk,wisbechstandard.co.uk,wtatennis.com,wymondhamandattleboroughmercury.co.uk##.advert
 barkinganddagenhampost.co.uk,becclesandbungayjournal.co.uk,blogto.com,burymercury.co.uk,cambstimes.co.uk,cardealermagazine.co.uk,crimemagazine.com,dailyedge.ie,datalounge.com,derehamtimes.co.uk,dermnetnz.org,developingtelecoms.com,dissmercury.co.uk,eadt.co.uk,eastlondonadvertiser.co.uk,edp24.co.uk,elystandard.co.uk,etf.com,eveningnews24.co.uk,exmouthjournal.co.uk,fakenhamtimes.co.uk,football.co.uk,gearspace.com,gematsu.com,gobankingrates.com,greatyarmouthmercury.co.uk,hackneygazette.co.uk,hamhigh.co.uk,headforpoints.com,hertsad.co.uk,huntspost.co.uk,icaew.com,ilfordrecorder.co.uk,iol.co.za,ipswichstar.co.uk,islingtongazette.co.uk,lgr.co.uk,lowestoftjournal.co.uk,maltapark.com,midweekherald.co.uk,momjunction.com,newhamrecorder.co.uk,newstalkzb.co.nz,northnorfolknews.co.uk,northsomersettimes.co.uk,pinkun.com,podtail.com,proxcskiing.com,remindmagazine.com,romfordrecorder.co.uk,royston-crow.co.uk,saffronwaldenreporter.co.uk,sidmouthherald.co.uk,stowmarketmercury.co.uk,stylecraze.com,sudburymercury.co.uk,the42.ie,thebridalbox.com,thecomet.net,thedrum.com,thejournal.ie,thinkspain.com,tineye.com,trucksplanet.com,varsity.co.uk,videogameschronicle.com,wattonandswaffhamtimes.co.uk,wccftech.com,whtimes.co.uk,wisbechstandard.co.uk,wtatennis.com,wymondhamandattleboroughmercury.co.uk##.advert
-barkinganddagenhampost.co.uk,becclesandbungayjournal.co.uk,blogto.com,burymercury.co.uk,cambstimes.co.uk,cardealermagazine.co.uk,crimemagazine.com,dailyedge.ie,datalounge.com,derehamtimes.co.uk,dermnetnz.org,developingtelecoms.com,dissmercury.co.uk,eadt.co.uk,eastlondonadvertiser.co.uk,edp24.co.uk,elystandard.co.uk,etf.com,eveningnews24.co.uk,exmouthjournal.co.uk,fakenhamtimes.co.uk,football.co.uk,gearspace.com,gematsu.com,gobankingrates.com,greatyarmouthmercury.co.uk,hackneygazette.co.uk,hamhigh.co.uk,hertsad.co.uk,huntspost.co.uk,icaew.com,ilfordrecorder.co.uk,iol.co.za,ipswichstar.co.uk,islingtongazette.co.uk,lgr.co.uk,lowestoftjournal.co.uk,maltapark.com,midweekherald.co.uk,momjunction.com,newhamrecorder.co.uk,newstalkzb.co.nz,northnorfolknews.co.uk,northsomersettimes.co.uk,pinkun.com,podtail.com,proxcskiing.com,remindmagazine.com,romfordrecorder.co.uk,royston-crow.co.uk,saffronwaldenreporter.co.uk,sidmouthherald.co.uk,stowmarketmercury.co.uk,stylecraze.com,sudburymercury.co.uk,the42.ie,thebridalbox.com,thecomet.net,thedrum.com,thejournal.ie,thinkspain.com,tineye.com,trucksplanet.com,varsity.co.uk,videogameschronicle.com,wattonandswaffhamtimes.co.uk,wccftech.com,whtimes.co.uk,wisbechstandard.co.uk,wtatennis.com,wymondhamandattleboroughmercury.co.uk##.advert
 barnebys.se###__next > div + div:last-child
 barnes-international.com###managerCookies
 barnstormers.com##.banner_holder
@@ -25233,6 +25241,9 @@ brusletto.no###main-header ~ footer ~ div + div:last-child
 brutal.io##.bannerBox
 bryk.pl##.omnibusBannerContainer
 bryncynonstrategy.co.uk###SITE_ROOT ~ div[data-reactid*="siteAspectsContainer"]
+bsc.news###bscn-banner
+bsc.news###igaming-carousel-container
+bsc.news##div[id^="bscn-ad-"]
 bsc.news,web3wire.news##.banner-one
 bscscan.com###ContentPlaceHolder1_lblTextAd
 bscscan.com##.bg-dark > div.container > div.row > div.col-12.col-lg-5
@@ -33145,7 +33156,6 @@ filecr.com##.filec-widget
 filecr.com##.gigabyte
 filecr.com##.google-ad-area-list
 filecr.com##.ishtehar
-filecrypt.cc##.butt1ns > span
 filecrypt.cc##.butt1ns button[onclick*="href='/Link/"]
 filecrypt.cc##.butt1ns button[onclick*="loc.href='/Link/"]
 filecrypt.cc##.fiIItheadblockqueue4
@@ -33163,6 +33173,7 @@ filecrypt.co##a[target="_new"] > img
 filecrypt.co##button[onmousedown^="var lsj = this;loc.href="]
 filecrypt.co##div[class^="fiIItheadblockqueue"]
 filecrypt.co##form > .protection.online ul > li:not(.buttons) > div:not(.circle_captcha)
+filecrypt.co,filecrypt.cc##.butt1ns > span
 filedesc.com###cwarn
 filedesc.com,datatypes.net,pdf-warehouse.alloverinformation.com##div[class]:has(> ins.adsbygoogle)
 filedir.com##.content_right > ul > .si_li[style^="padding:"]
@@ -35418,6 +35429,7 @@ gbmb.org##.mardinad
 gbmb.org##.minh250
 gbmb.org##main > div.center
 gbnews.com##.ad--billboard
+gbnews.com##.desktop-billboard
 gbnews.com##.sticky-banner-wrapper
 gbnews.com##.stiky_sky.left::before
 gbnews.com##.stiky_sky.right::before
@@ -36353,6 +36365,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.cn,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.je,google.jo,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.vg,google.vu,google.ws##div[role="navigation"] + c-wiz > div > .kxhcC
 google.com###belowsb
 google.com###bres
+google.com###center_col > #gevUs > #topstuff
 google.com###fbar
 google.com###footer
 google.com###sfooter
@@ -36382,6 +36395,9 @@ goosedaily.com##.lightboxbnr
 goosedaily.com##div[class^="ad-area-"]
 goout.net##.goout-cookie-overlay
 goplextor.com###notebox2
+goral24.pl##.adv
+goral24.pl##.grid__ad
+goral24.pl##.grid__col > div.card:has(> div.custom-html-box)
 gordonua.com##.cookie-label
 gorecenter.com,guruhitech.com##body > div[id][class^="popup"][class$="wrap"][style]
 gorillas.io###cookie-settings
@@ -38267,6 +38283,7 @@ hlgnet.com##.co_ad
 hlgnet.com##.co_ad3
 hlgnet.com,sina.com##.tad
 hlsloader.com##.text-center > span[style="opacity:0.7;font-size:x-small"]
+hltv.org###betting
 hltv.org##.centered-placement
 hltv.org##.gen-firstcol-box
 hltv.org##.kgN8P9bvyb2EqDJR
@@ -42621,7 +42638,6 @@ kobietaxl.pl##.cookie_al
 kobo.com##body > div[id^="cki"]
 koc.com.tw##.single_ads
 kochen-und-design.de##body > div:not([id]):not([class])
-koco.com,wapt.com,wyff4.com##.ad-track
 kocpc.com.tw###scroll_div
 kocpc.com.tw##.Zi_ad_ar_O_3
 kocpc.com.tw##.kocpc_bot_ad
@@ -45036,7 +45052,6 @@ magazineluiza.com.br##main > section ~ div[width="100%"]
 magazinizmir.com##footer a[class^="BoomadsButtonLink"]
 magazynpracy.pl##body > div:not([id]):not([class])
 magazzinirossi.eu###informativaBreve
-magcourse.site,supjav.ru,umatechnology.org,3dvf.com,aimhaven.com,comicsuniverse.it,macmagazine.com.br,ubunlog.com,thesportsgrail.com,downtownbellevue.com,androidsis.com,voiceofmotown.com,thethaiger.com,unseki.co.jp,wikibio.us,nexus-games.net,freecoursesite.com,formu1a.uno,toolsai.net,rightrasta.com,kaystls.site,gamertweak.com,mrinformatico.it,pianetacellulare.it,inwepo.co,updoc.site,oliveoiltimes.com,cgmagonline.com,happymag.tv,cpophome.com##.code-block
 magdalena24.pl###cookie
 magentatv.pl##nav > [class*="InfoBar"]
 magesy.pro##.fuckGitHUB_blackoverlay
@@ -52245,6 +52260,7 @@ poczta.wp.pl##dd-holder[slot="DOUBLE_BILLBOARD"]
 poczta.wp.pl##dd-holder[slot="PANEL_PREMIUM"]
 poczta.wp.pl##div[ng-if="CommonController.showBannerTop"]
 poczta.wp.pl##native-feed[slot="ListDirectiveController.nativeFeedSlot"]
+poczta.wp.pl,poczta.o2.pl##div[data-placeholder-div="div"]
 podatnik.info##.p14-footer > div:not([class])
 podbean.com##.downloads > .down:first-child
 podbean.com##body > div:not([id]):not([class])
@@ -53332,6 +53348,8 @@ printn1.ru###info-bott-message
 printweek.in###div-button1-ad
 printweek.in##[class^="ad-section-"]
 prinxy.app##.sticky-footer
+prisjakt.no##.max-w-page-content-incl-ads > div[data-sentry-component="Section"]:empty
+prisjakt.no##.pjra\:hidden
 prismmarketingco.com,questloops.com##body > div.site-outer ~ div[id][class*=" "]
 privacy-center.org$domain=elconfidencial.com|diariodecadiz.es|lavozdegalicia.es|publico.es|diariodesevilla.es|eleconomista.es|granadahoy.com|malagahoy.es|diariodealmeria.es|lavozdeasturias.es|culturainquieta.com|segre.com|mappy.com|radioplayer.fr|goplay.be|lavoixdunord.fr|muyinteresante.es|t-mobile.pl|autocasion.com|europasur.es|pisos.com|lagacetadesalamanca.es|meilleure-innovation.com|huelvainformacion.es|futura-sciences.com|elpais.com|diariodejerez.es|leonoticias.com|france24.com|retinatendencias.com|eldiadecordoba.es|fameplay.tv
 privacy-manager-v*$domain=df.eu
@@ -54875,6 +54893,7 @@ renren.com###videoAd12
 renren.com##.toplive
 renren.com##.wp-rrzm-popup
 rent.591.com.tw##.listRight-ad
+rent.com##li[data-tid^="ad-slot-"]
 rent.ie###sresult_banner
 rentalens.ch###dabar
 rentanadviser.com##.reklamtitle
@@ -56184,6 +56203,7 @@ seattletimes.com##.u-df.revcontent__recommended-wrapper
 seazon.fr###root > div > .flexRow
 seb.lv###seb-consent
 sebgroup.com##.disclaimer-container
+secnews.gr,magcourse.site,supjav.ru,umatechnology.org,3dvf.com,aimhaven.com,comicsuniverse.it,macmagazine.com.br,ubunlog.com,thesportsgrail.com,downtownbellevue.com,androidsis.com,voiceofmotown.com,thethaiger.com,unseki.co.jp,wikibio.us,nexus-games.net,freecoursesite.com,formu1a.uno,toolsai.net,rightrasta.com,kaystls.site,gamertweak.com,mrinformatico.it,pianetacellulare.it,inwepo.co,updoc.site,oliveoiltimes.com,cgmagonline.com,happymag.tv,cpophome.com##.code-block
 secrant.com##.divHLeaderFull
 secrant.com##.lowLead
 secretchicago.com##.google-ad-manager-ads-header
