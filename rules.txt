@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-16 20:01:07（北京时间）
+! Version: 2026-06-17 01:52:34（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68923
+! Total count: 68930
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -58,6 +58,7 @@
 *$script,third-party,domain=primewire.mov
 *$script,third-party,domain=ziperto.com
 *$script,third-party,xmlhttprequest,domain=m.biquge700.com|biquge001.com
+*$script,xmlhttprequest,image,third-party,domain=360lele.cc
 *$script,xmlhttprequest,third-party,domain=m.1024txt.com
 *$script,xmlhttprequest,third-party,domain=m.niupizhi.net
 *$subdocument,redirect-rule=noopframe,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
@@ -1326,6 +1327,7 @@
 /link.news.*/mo/*$image
 /link.oneplus.com/mo$image
 /link.pbtech.co.nz/mo/*$image
+/link.php?cat=&idzone=$all
 /link.thrillist.com/img/*$image
 /link?c=$image
 /link?z=$subdocument
@@ -2976,6 +2978,7 @@
 360kuai.com##.side-wrapper
 360kuai.com##.taskbar
 360kuai.com,hao.360.com###cangbao_redbags
+360lele.cc##.container > div[id]:has(> div[style*="width: 100vw; position: relative;"] > span + img)
 360qpon.it###footerSlideContainer
 365.bank##.cookies
 365curtains.com##.top_warning
@@ -4334,6 +4337,7 @@
 @@/hls*/*.m3u8$stealth=referrer,domain=techclips.net|b4ucast.com
 @@/hls.key$stealth=referrer
 @@/hls/*$stealth=referrer,domain=closeload.top
+@@/hls/*$xmlhttprequest,stealth=referrer,domain=cinesrc.st
 @@/hls/*.m3u8$stealth=referrer
 @@/hls/*.ts$stealth=referrer,domain=techclips.net
 @@/hls2/*$xmlhttprequest,stealth=referrer,domain=vidora.stream
@@ -4519,8 +4523,12 @@
 @@=mywebloadt1&$domain=myweb.hinet.net
 @@?_adcheck=$xmlhttprequest,domain=manhuarmmtl.com
 @@?adType=$domain=taotaosou.com
+@@?m3u8=$xmlhttprequest,stealth=referrer,domain=cinesrc.st
+@@?seg=$xmlhttprequest,stealth=referrer,domain=cinesrc.st
 @@?sid=ads$domain=126.com|mail.163.com
 @@^abcheck=$domain=animeshqip.org
+@@^q=$xmlhttprequest,stealth=referrer,domain=vidcore.net
+@@^stream^$xmlhttprequest,media,stealth=referrer,domain=cinesrc.st
 @@^utm_source=aff^$popup,domain=gamble.co.uk|gokkeninonlinecasino.nl|top5casinosites.co.uk
 @@^vast^$domain=4gtv.tv,~script,~image
 @@_300_250.$domain=nanrenwo.net
@@ -14347,7 +14355,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hqq.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=htmlsave.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idhubs.app
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org|hentaicovid.org|gofile.download|cosplay-xxx.com|s-porn.com|shentai-anime.com|chinese-pics.vip|hentai-manga.org|cosplaytele.vip
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=idol69.net|xcamcovid.com|fc2ppv.stream|blackwidof.org|sweetie-fox.com|hentaicovid.com|pig69.com|fikfok.net|ai18.pics|javball.com|javtele.net|cnxx.me|cosplay18.pics|cnpics.org|3minx.com|javsunday.com|porn4f.org|hentaipig.com|555fap.com|kin8-av.com|javbee.*|fikfok.net|porn-pig.com|hentai4f.com|cn-av.com|kr-av.com|hentaixnx.com|hentai-sub.com|chinese-pics.com|anime-jav.com|xxpics.org|hentaicovid.org|gofile.download|cosplay-xxx.com|s-porn.com|shentai-anime.com|chinese-pics.vip|hentai-manga.org|cosplaytele.vip|1minx.com|hentaicovid.vip
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=iembra2or.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ifate.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=igniel.com
@@ -15904,7 +15912,6 @@
 @@||res.xmcdn.com^
 @@||res.xunfei.cn^
 @@||research.hchs.hc.edu.tw/*/banner.php$domain=research.hchs.hc.edu.tw
-@@||researchgate.net^$stealth=flash
 @@||researchgate.net^$stealth=flash|java
 @@||researchintel.com^*/feedback.asp$xmlhttprequest,domain=intel.com
 @@||resetoff.pl/static/js/application/views/advertise/Advertise_view.js
@@ -26431,10 +26438,10 @@ cheater.ninja###AdvallyAdhesion
 cheatsheet.com##.sidebar
 cheatsheet.com##.top-ad
 cheatslips.com##div.pb-2[style^="min-height:"]
+check-host.net##.mb-2.rounded.text-sm
 check-host.net##.ra-elative
-check-host.net##div[class*="-l-8"]
-check-host.net##div[class]:has(> [class^="alxa"])
-check-host.net##div[id^="amspeayvrkfb"]
+check-host.net##div[class]:has(> [class^="alxb"])
+check-host.net##div[id^="amspeaytpuik"]
 check-host.net##div[id^="antpeayvraea"]
 check.toys###COO
 checkdomain.de###notifications-container
@@ -27097,6 +27104,7 @@ cloud.getpczone.com##form > center > a[target="_blank"]
 cloud.tencent.com##.cdc-commercial-swiper
 cloud.tencent.com##.mod-commercial
 cloudeng.it##.commons-alert-box, .commons-alert-overlay
+cloudfam.io##.cf-body > .cf-ad-box
 cloudflareinsights.com$third-party
 cloudwards.net##.max-medium
 cloudwards.net,guitaradvise.com###cbox
@@ -30598,6 +30606,7 @@ dreammachines.pl###qkies_info, .modal-backdrop
 dreamworks.com##.notice-modal
 dreamworksanimation.com##.dwa-embed-cookie-consent-container
 drednot.io##.shipyard-ad
+dredyson.com###bloghash-scroll-top + div[id][class*=" "]
 dressupmix.com##.banner300x600
 dressupmix.ru,teensgames.ru###adblock_popup
 drevostavitel.cz##a[id^="prevleceni_"]
@@ -32819,6 +32828,7 @@ fapello.com,japan-whores.com,redfans.org,ryuugames.com,biqle.org,shemaleporn.xxx
 faperme.it##.alert, #alert
 fapeza.com##.azz_div
 fapeza.com##.navbar-item-sky
+fapfapgames.com,pornosubtitula2.com,softdevelopp.com,fitnesstipz.com,stock-rom.com,xporn.to,kodibeginner.com,windbreaker.me,fazy.online,wikijankari.com,greett.xyz,cricket12.com,stimotion.pl,thelastgamestandingexp.com,chart.services,moneysave.info,pornmz.com,yakisurume.com,tehnar.net.ua,rocdacier.com,audiotrip.org,flowsnet.com,brulosophy.com,reprezentacija.rs##body > div#page ~ div[id][class*=" "]
 fapfolder.club##.hbanner
 faphouse.com##a[href^="https://flirtify.com/"]
 fapnado.com##.content > div[style="text-align:center; width:100%;"]
@@ -50897,6 +50907,7 @@ paladins.com##section.footer ~ div
 palestinechronicle.com###media_image-4
 palestinechronicle.com##.widget_media_image > a[href^="https://www.amazon.com/"]
 pali.media##.l-cooperation
+paliatracker.com##.container > div.relative.rounded.bg-gray-100
 palit.com###pp_overlay, #pp_info
 palixi.com##.cookies-wrapper
 palixi.net##.cookies-wrapper
@@ -52878,7 +52889,6 @@ pornone.com##h2.tracking-tight
 pornoreino.com##.bottom-bang
 pornoreino.com##.right-side
 pornoreino.com,camvideos.tv,vjav.com,freepornvideo.sex,xxxhare.com,sleazyneasy.com##.bottom-adv
-pornosubtitula2.com,softdevelopp.com,fitnesstipz.com,stock-rom.com,xporn.to,kodibeginner.com,windbreaker.me,fazy.online,wikijankari.com,greett.xyz,cricket12.com,stimotion.pl,thelastgamestandingexp.com,chart.services,moneysave.info,pornmz.com,yakisurume.com,tehnar.net.ua,rocdacier.com,audiotrip.org,flowsnet.com,brulosophy.com,reprezentacija.rs##body > div#page ~ div[id][class*=" "]
 pornotube.xxx,vidsvidsvids.com,hardcoreinhd.com,hdpornstar.com,freefuckvidz.com###footZones
 pornotube.xxx,xxxx.se,vidsvidsvids.com,freefuckvidz.com,hardcoreinhd.com,hdpornstar.com###tabVideo > div.rmedia
 pornova.org##.head-t
@@ -57465,6 +57475,9 @@ smak.pl##div[style="height:775px;"]
 smaker.pl##.adveet--container
 smaker.pl##.advert--container
 smaker.pl##.block--adv--padding
+smaki.pl###page-box-logotypes > .section-partners
+smaki.pl##.ad-aside
+smaki.pl##.right-column > .right-column-fix:has(div[data-ad])
 smakizycia.pl###info-bar
 smakmagasinet.no###coco
 smallbiztrends.com###bottom-sidebar-ad-300x250-v2-wrap
@@ -59327,6 +59340,7 @@ sunny-dessous.de##.cookie_licence
 sunnylife.tw###custom_html-5
 sunnylife.tw##.Zi_ad_a_H
 sunnylife.tw##.post-entry > div[style="min-width: 300px; min-height:300px;"]
+sunnylife.tw##div[style="min-width: 300px; min-height:400px;"]
 sunofbeach.net##div[id$="-ad"]
 sunporno.com###atop
 sunporno.com###footer_a
@@ -63290,6 +63304,8 @@ txxx.com##.listing-content.listing-videos > div.listing-item
 txxx.com##.mpululuoopp
 txxx.com##.polumlluluoopp
 txxx.com##.sugggestion
+txxx.porn##.item:has(> a[href^="https://a.aivanta76.com/"])
+txxx.porn##a[href^="https://track.lovescape.link/"]
 txxxporn.tube##.sugggestio
 txzqw.me##.tac[style="margin-bottom:5px;"]
 ty2016.net##div[class^=bread_]
@@ -64444,16 +64460,6 @@ vidlii.com$$script[tag-content="|babasbmsgx|"][min-length="5000"][max-length="27
 vidmoly.biz,vidmoly.me,vidmoly.net,vidmoly.to###adsblock
 vidmoly.biz,vidmoly.me,vidmoly.net,vidmoly.to###x-adb-root
 vidmoly.biz,vidmoly.me,vidmoly.net,vidmoly.to##body > div[style*="opacity:"][style*="position: fixed; width:"][style*="z-index:"]
-vidmoly.me###adios_container
-vidmoly.me###boxs
-vidmoly.me###lo_sd
-vidmoly.me,vidmoly.net,vidmoly.to###sc-splash
-vidmoly.me,vidmoly.net,vidmoly.to###vope
-vidmoly.me,vidmoly.net,vidmoly.to##div[class^="custom-overlay"]
-vidmoly.to###dos_vlock
-vidmoly.to###mg_vd
-vidmoly.to###mg_vd2
-vidmoly.to###voc_block
 vidmoly.to##body > div[style*="opacity:"][style*="position: fixed; width:"][style*="z-index:"]:not([class], [id])
 vidnest.fun,vidnest.live,vidnest.io##.main_container center p a[target="_blank"][rel="noopener"]
 vidnest.fun,vidnest.live,vidnest.io##a[href="https://candai.online/"]
@@ -65552,6 +65558,7 @@ webstick.blog##.main > article > p.center2
 websummit.com##div[class*="civic_cookie"]
 websupport.se##.b-toaster
 websupport.sk##.b-toaster
+webtech360.com##.service-box
 webtoolhub.com###banner_719_105
 webtoolhub.com##.hdShade > div
 webtoolhub.com##.wth_zad_text
