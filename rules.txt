@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-16 14:22:45（北京时间）
+! Version: 2026-06-16 20:01:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68922
+! Total count: 68923
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14923,7 +14923,6 @@
 @@||parking.namesilo.com^
 @@||parsely.com/keys/$script,domain=wmmr.com|wrif.com
 @@||partner-api.jobbio.com/channels/data$xmlhttprequest,third-party,domain=jobs.dailymail.com
-@@||partner.everydays.de^
 @@||partner.everydays.de^|
 @@||partner.googleadservices.com/gpt/pubads_$domain=nat-geo.ru
 @@||partner.googleadservices.com/gpt/pubads_$domain=video.foxnews.com|video.foxbusiness.com
@@ -15906,6 +15905,7 @@
 @@||res.xunfei.cn^
 @@||research.hchs.hc.edu.tw/*/banner.php$domain=research.hchs.hc.edu.tw
 @@||researchgate.net^$stealth=flash
+@@||researchgate.net^$stealth=flash|java
 @@||researchintel.com^*/feedback.asp$xmlhttprequest,domain=intel.com
 @@||resetoff.pl/static/js/application/views/advertise/Advertise_view.js
 @@||resfile.lixincsb.com^
@@ -16474,6 +16474,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tetrads.io
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=theglobeandmail.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=thehealthsite.com
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=thesun.co.uk
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tractorsupply.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tstrs.me
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=viduyy.com
@@ -18556,7 +18557,6 @@
 @@||vali-dns.cp31.ott.cibntv.net^
 @@||vali-g1.cp31.ott.cibntv.net^
 @@||vali01.cp31.ott.cibntv.net^
-@@||validate.perfdrive.com^
 @@||validate.perfdrive.com^|
 @@||valipl.cp31.ott.cibntv.net^$xhr,domain=youku.com
 @@||valuable.hatenablog.com^$generichide
@@ -18574,9 +18574,7 @@
 @@||vault-08.uwucdn.top/mp4$stealth=referrer,domain=kwik.cx
 @@||vb.icdrama.se/advertisement.js
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
-@@||vcentry2.valuecommerce.ne.jp^
 @@||vcentry2.valuecommerce.ne.jp^|
-@@||vcentry3.valuecommerce.ne.jp^
 @@||vcentry3.valuecommerce.ne.jp^|
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vcs-quality.zijieapi.com^
@@ -21261,7 +21259,9 @@ andreaminini.com##.privacy
 andrewlock.net,centos.org,domainincite.com,europages.co.uk,gamingcloud.com,ijr.com,kpbs.org,manutd.com,phillyvoice.com,phish.report,speedcafe.com,thegatewaypundit.com,topsurgery.net,ufile.io,westernjournal.com,wnd.com##.sponsor
 android.com##snack-bar-container
 android.com.pl##.banner
+android.com.pl##.products-feed
 android.com.pl##.products-feed__tag
+android.com.pl##.wp-block-acp-affiliate-box
 android.com.pl##a[href="https://biznesenter.pl/"] > img[alt^="Baner"]
 android.com.pl##a[href^="https://and.co.pl/"][rel*="sponsored"]
 android.com.pl##div[class^="welcome-screen" i]
@@ -43170,6 +43170,7 @@ landiannews.com##article > .content-gg > a[target="_blank"][rel="nofollow"]
 landiannews.com##section[id^="media_image"]
 landiannews.com,meijumi.net##.widget_metaslider_widget
 landkreis-ostallgaeu.de###cookie
+landline.media##.ads-sec
 landtag.de###matomo-cookie-consent
 landyzone.co.uk##.p-body-header > div.p-description:has(> b > a[href^="https://www.adrianflux.co.uk/"])
 lanebypost.com##.sqs-announcement-bar
