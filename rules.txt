@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-17 22:21:51（北京时间）
+! Version: 2026-06-18 01:42:57（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 68953
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -10836,6 +10836,7 @@
 @@||href.li^
 @@||href.li^|
 @@||hsforms.net^
+@@||hsnstore.*^$stealth=flash|java
 @@||hsr.hoyoverse.com^
 @@||hsugoi.com/*.mp4$stealth=referrer
 @@||ht.cdn.turner.com/*.smil$document
@@ -23572,7 +23573,6 @@ bdjobs.com##.single-promo
 bdmbase.ru##html > .q1
 bdnews24.com##.adHome-area
 bdnews24.com##.floating-ad-bottom
-bdnews24.com##div[class^="ad-slot"]
 bdnews24.com##div[class^="floating-ad-"]
 bdnews24.com##div[id$="-ad"]
 bdprice.com.bd##.aps-sidebar > div.widget_text.aps-widget
@@ -27001,6 +27001,8 @@ classic.gamcore.com###center > .flashes > .wide:has(> a[href][rel])
 classic.gamcore.com##[id]:has(> .warningbox)
 classicalradio.com,jazzradio.com,radiotunes.com,rockradio.com,zenradio.com##.sidewall-ad-component
 classicfm.com##.apple_music
+classicgames.me##.download-rom-section > div[style="width: 300px;height:250px;"]
+classicgames.me,bdnews24.com##div[class^="ad-slot"]
 classicreload.com###content-top
 classicreload.com###main-dialog-window
 classicreload.com##.content-top-wrapper
@@ -28993,7 +28995,6 @@ dailydot.com##footer:has(> .wrapper:only-child > .text-center:only-child > .arti
 dailydriven.ro##.dd-dda
 dailyecho.co.uk##div[data-uses-js="dfp-top-ad-fixed"]
 dailyecho.co.uk,dissmercury.co.uk,glasgowtimes.co.uk,heraldseries.co.uk,salisburyjournal.co.uk,somersetcountygazette.co.uk,thenational.scot##.mar-leaderboard--top
-dailyecho.co.uk,dissmercury.co.uk,glasgowtimes.co.uk,heraldseries.co.uk,somersetcountygazette.co.uk,thenational.scot##.mar-leaderboard--top
 dailyedge.ie###notify-container
 dailyegyptian.com,northernstar.info,theorion.com,theprospectordaily.com##.leaderboardwrap
 dailyevergreen.com##.sno-hac-desktop-1
@@ -29627,7 +29628,6 @@ desihoes.com###topRightBanner
 desimartini.com##.bor_bot > div[style="background-color: #f5f5f5; min-height: 110px; padding: 10px 0 10px 0;"]:empty
 desipapa.tv##.video-tb > .video-col
 desiporn.one,gay0day.com,thetranny.com,xlilith.com##.block-video > .table:has(> div[id][style^="height:"] > iframe.na)
-desiporn.one,gay0day.com,thetranny.com,xlilith.com##.sponsor
 desiporn.tube##div[style="margin-top: 20px;"]
 desitales2.com##.inside-right-sidebar > aside[class$="widget_block"]
 desixflix.com##iframe[data-src^="//ad.a-ads.com/"]
@@ -32845,7 +32845,6 @@ faperme.it##.alert, #alert
 fapeza.com##.azz_div
 fapeza.com##.navbar-item-sky
 fapfapgames.com,pornosubtitula2.com,softdevelopp.com,fitnesstipz.com,stock-rom.com,xporn.to,kodibeginner.com,windbreaker.me,fazy.online,cricket12.com,stimotion.pl,thelastgamestandingexp.com,chart.services,moneysave.info,pornmz.com,yakisurume.com,tehnar.net.ua,rocdacier.com,audiotrip.org,flowsnet.com,brulosophy.com,reprezentacija.rs##body > div#page ~ div[id][class*=" "]
-fapfapgames.com,pornosubtitula2.com,softdevelopp.com,fitnesstipz.com,stock-rom.com,xporn.to,kodibeginner.com,windbreaker.me,fazy.online,wikijankari.com,greett.xyz,cricket12.com,stimotion.pl,thelastgamestandingexp.com,chart.services,moneysave.info,pornmz.com,yakisurume.com,tehnar.net.ua,rocdacier.com,audiotrip.org,flowsnet.com,brulosophy.com,reprezentacija.rs##body > div#page ~ div[id][class*=" "]
 fapfolder.club##.hbanner
 faphouse.com##a[href^="https://flirtify.com/"]
 fapnado.com##.content > div[style="text-align:center; width:100%;"]
@@ -46812,7 +46811,6 @@ mod1s.com##.stuAd
 modaco.com##li[data-blocktitle="Custom Blocks"] a > img
 modapk.world##body > #page > footer.site-footer + div[id][class*=" "]
 modapkvn.com,apkmodvn.com###adBlock
-modcombo.com##.txt-ads
 modd.io##.ads-card-block
 moddb.com###subheader > a[href^="http://bit.ly/"]
 moddb.com##.motybg
@@ -53847,6 +53845,7 @@ puzzle-minesweeper.com,puzzle-chess.com,puzzle-thermometers.com,puzzle-norinori.
 puzzlegarage.com##.banner--inside
 puzzlegarage.com##.modal--cookies
 puzzlemaster.ca##.toast
+pv-magazine.com##.advert-block__container
 pv-magazine.com##.pvmagazine-advert-group
 pvcalc.ru##div[style^="position:fixed; top:0px; left:0px; opacity: 0.9;"]
 pvpoke.com##div[id^="nitro-sidebar-"]
@@ -55329,6 +55328,7 @@ romhustler.org##[class^="leaderboard_ad"]
 romo-tonder.dk##.elementor-popup-modal
 romper.com##.adWrapper
 romsdl.com###ad-header
+romsdroid.com##.download_block > a[target="_blank"]
 romsfun.com###ad-unit-1
 romsfun.com###ad-unit-2
 romsfun.com###ad-unit-3
@@ -62725,6 +62725,8 @@ trueachievements.com,truesteamachievements.com,truetrophies.com##.lb_holder
 trueachievements.com,truesteamachievements.com,truetrophies.com##.nn_player
 trueamateurporn.org##.ad-row-x
 trueamateurporn.org##.out-wrap
+trueamateurporn.org##div.item-ad2
+trueamateurporn.org,desiporn.one,gay0day.com,thetranny.com,xlilith.com##.sponsor
 truecaller.com###__nuxt > div > .bottom-0, #__nuxt > .bottom-0
 truecaller.com##.ProfileAd
 truecar.com##.card:has([href*="marketplace&sponsored"])
@@ -66450,8 +66452,6 @@ worldtimezone.com##table[width="472"]
 worldtribune.com###text-101
 worldve.com###fdkDiv
 worldve.com###img
-worldwidefaucet.com##body > div.container ~ script + style + div[id]
-worldwidefaucet.com##body > div.container ~ script + style + div[id] + div[class]
 wormate.io###loa831pibur0w4gv
 wormate.io###results-view > div[id]:has(> .label:first-child + div[id]:last-child > #wormate-io_970x250)
 worthitorwoke.com##.btPageWrap + div[id][class*=" "]
