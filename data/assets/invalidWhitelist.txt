@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14527
+! Total count: 14526
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-06-17 01:03:57（北京时间）
+! Version: 2026-06-17 12:44:15（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -427,6 +427,7 @@
 # 修复小米健康无法打开手表公交卡的问题
 # 内容、图片、视频、存储、CDN
 # 商家/配送/地图
+# 图片、资源、赛事、数据接口子域名
 # 图片、静态资源、CDN
 # 天翼云认证登陆
 # 太平洋科技
@@ -555,11 +556,13 @@
 # 豌豆荚
 # 账号/登录/会员/支付
 # 输入法云输入、语音、表情、资源
+# 迈金硬件配套域名（码表/骑行台联动必需）
 # 酷狗
 # 闪购/小时达/即时零售核心域名
 # 阿里云DNS网页
 # 阿里云搜索结果
 # 阿里巴巴矢量图标库
+# 顽鹿运动/顽鹿竞技 主域名全局放行
 # 饿了么统计/推送/风控（必加，否则APP异常）
 # 驾考宝典教学视频
 ## 163登陆
@@ -8341,7 +8344,6 @@
 @@||appsha-pnd.ctengine.io/js/script.js$domain=faucetcrypto.com
 @@||apptoko.com^$generichide
 @@||appvn.com^$generichide
-@@||appzdam.net^$elemhide
 @@||aps-web.adobe.io/webapps/access_profile$stealth=3p-auth
 @@||apv-launcher.minute.ly/api/$script
 @@||aqlier.com^$generichide

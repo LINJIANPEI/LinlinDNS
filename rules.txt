@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-17 08:07:39（北京时间）
+! Version: 2026-06-17 13:58:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68930
+! Total count: 68943
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -54,7 +54,7 @@
 *$script,third-party,denyallow=tvableon.me|mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|doodcdn.io|intensedebate.com|vixcloud.co|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|jwplayer.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|imgsmail.ru|cloudflare.net|rabbitstream.net|x.com|ko-fi.com|wsimg.com|sharethis.com|utteranc.es|cloudflareinsights.com|tailwindcss.com|capo6play.com|jpg5.su|jpg6.su|tolstoycomments.com|code.iconify.design|alicdn.com|addtoany.com|waust.at|tenor.com|pinterest.com,_____,domain=vivicomi18.info|vivicomi19.info|vivicomi20.info|vivicomi21.info|vivicomi22.info|vivicomi23.info|vivicomi24.info|vivicomi25.info|vivicomi26.info|vivicomi27.info|vivicomi28.info|vivicomi29.info|vivicomi30.info|vivicomi31.info|vivicomi32.info|vivicomi33.info|vivicomi34.info|vivicomi35.info|vivicomi36.info|vivicomi37.info|vivicomi38.info|vivicomi39.info|vivicomi40.info|vivicomi41.info|vivicomi42.info|vivicomi43.info|vivicomi44.info|vivicomi45.info|vivicomi46.info|vivicomi47.info|vivicomi48.info|vivicomi49.info|vivicomi50.info
 *$script,third-party,domain=apne.co
 *$script,third-party,domain=huanggua22.com
-*$script,third-party,domain=m.roushuwu.vip
+*$script,third-party,domain=m.roushuwu.vip|xiaoaimh.com
 *$script,third-party,domain=primewire.mov
 *$script,third-party,domain=ziperto.com
 *$script,third-party,xmlhttprequest,domain=m.biquge700.com|biquge001.com
@@ -6158,6 +6158,7 @@
 @@||api.lab.amplitude.com^$domain=watch.outsideonline.com
 @@||api.live.bilibili.com^
 @@||api.m.jd.com^
+@@||api.magene.cn^
 @@||api.map.baidu.com^
 @@||api.mapbox.com/*/mapbox.mapbox-terrain-*,mapbox.mapbox-streets-*^$stealth=referrer
 @@||api.mapbox.com/*/mapbox.satellite/$stealth=referrer
@@ -6192,6 +6193,7 @@
 @@||api.nyda.pro^$websocket
 @@||api.onedrive.com^
 @@||api.onedrive.com^$stealth=3p-auth
+@@||api.onelap.cn^
 @@||api.open.uc.cn^
 @@||api.openprovider.com^$stealth=3p-auth
 @@||api.os.fressnapf.com^$stealth=3p-auth,domain=fressnapf.de
@@ -7481,6 +7483,7 @@
 @@||cdn.needrom.com/advert*.js
 @@||cdn.nlark.com^$image,stealth=referrer,domain=yuque.com
 @@||cdn.ocmhood.com/sdk/hood.js$xmlhttprequest,domain=idlixvip.asia
+@@||cdn.onelap.cn^
 @@||cdn.optimizely.com/js/$domain=account.microsoft.com
 @@||cdn.optimizely.com/js/*.js$domain=kktv.me
 @@||cdn.optimizely.com/public/*.json/tag.js$domain=mobile.de
@@ -8515,6 +8518,7 @@
 @@||data.mistat.xiaomi.com^
 @@||data.notify.macys.com^
 @@||data.notify.macys.com^|
+@@||data.onelap.cn^
 @@||data.orders.costco.ca^
 @@||data.orders.costco.ca^|
 @@||data.orders.costco.com^
@@ -11528,6 +11532,7 @@
 @@||img.mp.itc.cn^
 @@||img.mxomo.com^$image,stealth=referrer
 @@||img.noobzone.ru^$stealth=referrer
+@@||img.onelap.cn^
 @@||img.pddpic.com^
 @@||img.qidian.com^
 @@||img.rakudaclub.com/adv/$~third-party
@@ -12700,6 +12705,7 @@
 @@||magdyman.com^$generichide
 @@||mage.si/advertisement.js
 @@||mage.si^$generichide
+@@||magene.cn^
 @@||magento-recs-sdk.adobe.net/v2/index.js$script,domain=superbrightleds.com
 @@||magesy.blog^$generichide
 @@||magesy.eu^$generichide
@@ -13836,6 +13842,8 @@
 @@||onegoods.nosdn.127.net^
 @@||onehack.us^$generichide
 @@||onekey1.cmpassport.com^
+@@||onelap.cn^
+@@||onelap.com^
 @@||oneline.nextday.media^
 @@||oneline.nextday.media^|
 @@||oneman.gr^$generichide
@@ -15719,6 +15727,7 @@
 @@||r4---sn-npoldn7s.gvt1.com^
 @@||r4---sn-qxo7rn7e.googlevideo.com^
 @@||r5---sn-4g5ednsl.googlevideo.com^
+@@||race.onelap.cn^
 @@||racedepartment.com^$generichide
 @@||racevpn.com^$generichide
 @@||racingsportscars.com^$generichide
@@ -17242,6 +17251,7 @@
 @@||static.miraheze.org^
 @@||static.mobile.eu^*/resources/images/ads/superteaser_$image,domain=automobile.fr|automobile.it|mobile.eu|mobile.ro
 @@||static.myfinance.com/widget/$domain=savingspro.org
+@@||static.onelap.cn^
 @@||static.opensubtitles.org/libs/js/ad_
 @@||static.opensubtitles.org/libs/js/common.js
 @@||static.opensubtitles.org/libs/js/subbrowse.js
@@ -18302,6 +18312,7 @@
 @@||typingtestnow.com^$generichide
 @@||u.10010.cn^
 @@||u.163.com^
+@@||u.onelap.cn^
 @@||u.oppomobile.com^
 @@||u1.img.mobile.sina.cn^
 @@||uab.gov.tr^$stealth=dpi
@@ -18884,6 +18895,7 @@
 @@||watchseries.video^$generichide
 @@||watchsmallvilleonline.net^$generichide
 @@||watoday.com.au^$generichide
+@@||wattp.net^
 @@||wavepc.pl/wp-content/*-500x100.png$image,~third-party
 @@||wavse.com^$generichide
 @@||wb.amap.com^
@@ -32398,7 +32410,6 @@ evopayments.eu###zwcc
 evowars.io##div[id^="evowars-io_"]
 evreporter.com##.widget_media_image:not(:has(a[href^="https://evreporter.com/"]))
 evs.com##.language-switcher
-evspec.in,bradola.com,paradoxscans.com,hispajav.com,sub69.online,itdmusicy.com,janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
 ew.com###article__primary-video-jw_1-0
 ewarszawa.pl##div[class]:has(> div[id^="div-gpt-ad"]:only-child)
 ewebtrans.com###webtrans_cookie_bar
@@ -40876,6 +40887,8 @@ itchygame.com##div[class^="candySide"]
 itchygame.com##div[class^="ntkSide"]
 itdmusics.com##.content > * > div[style="width:300px;height:250px"]
 itdmusics.com##.itdmu-widget
+itdmusicy.com,itdmusics.com##body > div[class]:has(> a[href^="https://chpadblock.com/"])
+itdmusicy.com,itdmusics.com,evspec.in,bradola.com,paradoxscans.com,hispajav.com,sub69.online,itdmusicy.com,janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
 itdog.cn##+js(aopr,alert)
 itdog.cn##.card[style="padding: 6px 10px 5px 5px;"]
 itdog.cn##.col-12 > .card.mb-3[style="padding: 5px;"]
@@ -63300,7 +63313,6 @@ txtbook.com.cn##.ledu-advWrap
 txxx.com##._ccw-wrapper
 txxx.com##.herrmhlmolu
 txxx.com##.hgggchjcxja
-txxx.com##.listing-content.listing-videos > div.listing-item
 txxx.com##.mpululuoopp
 txxx.com##.polumlluluoopp
 txxx.com##.sugggestion
@@ -67066,6 +67078,7 @@ xianzhenyuan.cn##.bm.a_c
 xianzhenyuan.cn##.sd_ad:not(#xztba)
 xianzhenyuan.cn##a[href*=".tmall.com"]:not(#xztba)
 xiao-mi.fr##.uk-position-fixed
+xiaoaimh.com##.flex-cols.tops
 xiaobaipan.com##.f_ad
 xiaohongshu.com##.android.all-comment
 xiaohongshu.com##.bottom-bar.button-bottom-bar.cube-z-bottom-bar
