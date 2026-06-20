@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-20 07:58:25（北京时间）
+! Version: 2026-06-20 10:58:49（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68985
+! Total count: 68989
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1264,7 +1264,9 @@
 /htmm/20*.php$popup
 /https?:\/\/[a-z0-9]{10,25}\.[a-z0-9]{10,20}\.cfd\/[a-zA-Z0-9]{10,25}\/[a-zA-Z0-9]{1,5}$/$script,match-case,header=set-cookie:/^GL_UI4=/
 /https?:\/\/[a-z]{10,15}\.com\/[0-9a-zA-Z]{5,20}\/[0-9]{1,10}$/$script,match-case,header=set-cookie:/^GL_UI4=/
+/https?:\/\/[a-z]{2}\.[a-z]{10,15}\.com\/[0-9a-zA-Z]{1,5}\/\d{1,5}\?[a-z]{1,5}=.{700,1200}$/$script,match-case,header=set-cookie:/^GL_UI4=/
 /https?:\/\/[a-z]{2}\.[a-z]{10,15}\.com\/[0-9a-zA-Z]{5,15}\/[a-zA-Z]{1,5}$/$script,match-case,header=set-cookie:/^GL_UI4=/
+/https?:\/\/[a-z]{2}\.[a-z]{10,15}\.com\/[0-9a-zA-Z]{5,20}\/[0-9a-zA-Z]{1,5}$/$script,match-case,header=set-cookie:/^GL_UI4=/
 /i?aid=*&se_ac=open&$image
 /idnes.cz\/[-_a-zA-Z0-9]{20,}\/[-_a-zA-Z0-9]{20,}\/[-_a-zA-Z0-9]{20,}\/[-_a-zA-Z0-9]{20,}/$subdocument,image,important
 /image.info.jr-odekake.net/lib/*$image
@@ -22033,6 +22035,7 @@ argos.co.uk##[class^="styles__LazyHydrateCard-sc"]:has([class*="SponsoredBadge"]
 argos.co.uk##[data-testid="citrus_products-carousel"]
 argos.co.uk##[data-testid="monetisation-product-carousel"]
 arguedas.es###barra
+arhfoundation.org###popup-banner
 arhivanalitika.hr###cookie
 arhplyrics.in###adb
 ariaspa.it###cookieAria
@@ -68170,6 +68173,7 @@ youthwant.com.tw##.side_adbox
 youtrannytube.com##.banner-td
 youtube-nocookie.com##.ytp-ad-progress-list
 youtube.com###ad-image\:22
+youtube.com###contents > ytd-rich-item-renderer:has(> ytd-ad-slot-renderer)
 youtube.com###contents>ytd-search-pyv-renderer
 youtube.com###description-inner > ytd-merch-shelf-renderer > #main.ytd-merch-shelf-renderer
 youtube.com###masthead-ad
