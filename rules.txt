@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-20 10:58:49（北京时间）
+! Version: 2026-06-20 14:59:53（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68989
+! Total count: 68991
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1265,7 +1265,6 @@
 /https?:\/\/[a-z0-9]{10,25}\.[a-z0-9]{10,20}\.cfd\/[a-zA-Z0-9]{10,25}\/[a-zA-Z0-9]{1,5}$/$script,match-case,header=set-cookie:/^GL_UI4=/
 /https?:\/\/[a-z]{10,15}\.com\/[0-9a-zA-Z]{5,20}\/[0-9]{1,10}$/$script,match-case,header=set-cookie:/^GL_UI4=/
 /https?:\/\/[a-z]{2}\.[a-z]{10,15}\.com\/[0-9a-zA-Z]{1,5}\/\d{1,5}\?[a-z]{1,5}=.{700,1200}$/$script,match-case,header=set-cookie:/^GL_UI4=/
-/https?:\/\/[a-z]{2}\.[a-z]{10,15}\.com\/[0-9a-zA-Z]{5,15}\/[a-zA-Z]{1,5}$/$script,match-case,header=set-cookie:/^GL_UI4=/
 /https?:\/\/[a-z]{2}\.[a-z]{10,15}\.com\/[0-9a-zA-Z]{5,20}\/[0-9a-zA-Z]{1,5}$/$script,match-case,header=set-cookie:/^GL_UI4=/
 /i?aid=*&se_ac=open&$image
 /idnes.cz\/[-_a-zA-Z0-9]{20,}\/[-_a-zA-Z0-9]{20,}\/[-_a-zA-Z0-9]{20,}\/[-_a-zA-Z0-9]{20,}/$subdocument,image,important
@@ -59438,6 +59437,7 @@ superhex.io##div[id][style="width:300px;height:250px;"]
 superhumanradio.net##.rotating_zone
 superlife.ca##.sidebar-ad-zone
 supermarchesmatch.fr###fevad
+supermarketnews.co.nz,tutorialrepublic.com##.sidebar
 supermarketnews.com###roadblockbackground
 supermarketnews.com###roadblockcontainer
 supermedia.pl###cookie
@@ -62336,6 +62336,8 @@ toro.it###sidebar > .ai_widget a[target="_blank"]
 toro.it##div[id^="ad_dyn"]
 toronto.citynews.ca##.big-box-ad
 toronto.citynews.ca##div[data-ad-type]
+torontosun.com##.mia-outstream
+torontosun.com##section[aria-describedby*="advertisment"]
 toros.co##.trtbl
 torquenews.com##.adsense
 torquenews.com##.header-wrapper
