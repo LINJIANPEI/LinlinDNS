@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-21 18:58:01（北京时间）
+! Version: 2026-06-21 21:02:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68998
+! Total count: 69001
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -8986,6 +8986,7 @@
 @@||dubaji.com^
 @@||duckduckgo.com/?q=$generichide
 @@||duckduckgo.com/?q=$generichide,badfilter
+@@||duckduckgo.com/local.js$~third-party
 @@||duckduckgo.com/y.js?*url
 @@||duckduckgo.com^
 @@||duelmeta.com^$generichide
@@ -24548,6 +24549,7 @@ blockadblock.com##div[style^="display:block; width:350px;"]
 blockaway.net###infoBarContainer
 blockaway.net##.twitterWidget
 blockaway.net##a[href^="https://www.patreon.com/croxyproxy?"]
+blockchain.com##a[href^="https://snapmarkets.com/?utm_"]
 blockchain.info###tx_container > div:not([id]):not([class]) > table.table.table-striped[style="float:left;margin:0;width:100%;padding: 0 0 30px;"]
 blockchain.info##li.ad
 blockchain.info##span[translate="SPONSORS"]
@@ -36161,6 +36163,7 @@ gloswielkopolski.pl##.componentsPromotionsPromoted__list
 gloswielkopolski.pl##.linkiSponsorowane
 gloucestershire.gov.uk##.ui-widget, .ui-widget-overlay
 glovoapp.com##.down-banner
+glowing.com##.adsWrapper-0-0-136
 glyphweb.com##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 gmanetwork.com###mrec-container
 gmanetwork.com##.ad-hldr
