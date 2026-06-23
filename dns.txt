@@ -2,9 +2,9 @@
 ! Title: 林林dns
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-23 21:34:29（北京时间）
+! Version: 2026-06-24 00:18:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 130465
+! Total count: 130088
 *-ad.sm.cn*
 *_index_ad_
 -120_600_
@@ -114565,6 +114565,7 @@ y0utube.com.mx
 ||*feed_ad*^
 ||*get-ads*^
 ||*getappmsgad*^
+||*googleads*^
 ||*igd.xml*^
 ||*isAds*^
 ||*live-p2p*.bilibili*^
@@ -114872,7 +114873,10 @@ y0utube.com.mx
 ||120.132.57.41^
 ||120.195.94.11^
 ||120.220.191.55^
+||120.226.10.195^
 ||120.232.239.81^
+||120.232.58.157^
+||120.232.6.158^
 ||120.240.230.231^
 ||120.241.229.2^
 ||120.241.236.38^
@@ -115930,7 +115934,6 @@ y0utube.com.mx
 ||361ct9.vip^
 ||363z2kmjju1u26x.rest^
 ||3656.run^
-||366388.vip^
 ||36dm.*^
 ||36g9q2i9iu16yyv1.cfd^
 ||36htg.fun^
@@ -116019,7 +116022,6 @@ y0utube.com.mx
 ||3v.do
 ||3w27zp7ohnzouxyguckyy.rest^
 ||3wuy8xqr68gm3jc218r.rest^
-||3xp3cts1aim.sbs^
 ||3xx.vip^
 ||3z5zo3vyekmwjo7ii4.rest^
 ||3zltpzb1o9zegmchtyzfophg.cfd^
@@ -116132,7 +116134,6 @@ y0utube.com.mx
 ||487.fun^
 ||487.games^
 ||487.tax^
-||48x.casino^
 ||49711.one^
 ||49lq.mm51-tvhn1767.vip^
 ||4b9mqc5kcl3wp67uih2q6q9.cfd^
@@ -116158,7 +116159,6 @@ y0utube.com.mx
 ||4q488w55k41bl2.rest^
 ||4qfoo3qvy4z5io6.cfd^
 ||4qpu.rm7f1y4gwwlp33.cfd^
-||4rabet.sbs^
 ||4rnqoqt1b17w4qy.cfd^
 ||4uk9.yl.ag^
 ||4uol7t4f8cb8cu4yxhwex438kbi6gq.cfd^
@@ -116694,13 +116694,11 @@ y0utube.com.mx
 ||9xxfj96c7krux3gtxkx.rest^
 ||9ze83xtz5qgt9pn4ph34.cfd^
 ||GBABXW.VIP^
-||a.abv.bg^
 ||a.acredo.space^
 ||a.cingo.sbs^
 ||a.frodo.space^
 ||a.hubhubhub.name^
 ||a.moninas.store^
-||a.pur.agency^
 ||a0702.ky308tc0702.vip^
 ||a1.xn--w9qw2i396a4i5a.xn--fiqs8s^
 ||a129.7114.vip^
@@ -116803,7 +116801,6 @@ y0utube.com.mx
 ||acrawlsmarten.help^
 ||acreamlife.cfd^
 ||across.health^
-||acs-fileserver.turktelekom.com.tr^
 ||acs.^
 ||acsegt86.shop^
 ||actionavives.cfd^
@@ -116837,9 +116834,6 @@ y0utube.com.mx
 ||adca.st^
 ||add.bugun.com.tr^
 ||add.cross.bg^
-||adexo.ir^
-||adexofiles.ir^
-||adflex.asia^
 ||adivery.ir^
 ||adjmntesdsoi.love^
 ||adldjzbilxgpu.website^
@@ -116862,42 +116856,24 @@ y0utube.com.mx
 ||ads-static.conde.digital^
 ||ads.^
 ||ads.24ur.si^
-||ads.aksam.com.tr^
-||ads.api.starwalk.space^
 ||ads.baadesaba.ir^
-||ads.com.mk^
-||ads.digitalbee.al^
 ||ads.fashionel.mk^
-||ads.fptplay.vn^
-||ads.graphic.com.gh^
-||ads.harvard.edu^
-||ads.informator.ua^
-||ads.iu.edu^
-||ads.net.id^
-||ads.northwestern.edu^
-||ads.thecable.ng^
 ||ads.tiempo.com.mx^
-||ads.vmedija.lt^
 ||ads1.thangto.one^
-||ads2.bid^
 ||ads2.imv.az^
 ||ads2.thangto.one^
 ||ads3-normal-lf.zijieapi.com.skyworth^
-||ads3.bangkokpost.co.th^
 ||ads3.thangto.one^
 ||ads4.thangto.one^
 ||ads5-normal-lf.zijieapi.com.skyworth^
 ||ads5.thangto.one^
 ||adsage*.*^
 ||adsame.^
-||adsdms.mk^
 ||adsense.^
 ||adsensor*.*^
 ||adserv.ontek.com.tr^
 ||adserver.^
 ||adserver.*^
-||adserver.dotfusion.ro^
-||adserver.mk^
 ||adserver1.^
 ||adservice*.*^
 ||adservice.^
@@ -116906,7 +116882,6 @@ y0utube.com.mx
 ||adsh*.*^
 ||adsmogo*.*^
 ||adspace.ro^
-||adspend.space^
 ||adsystem*.*^
 ||adtima*.zadn.vn^
 ||adtrue.vn^
@@ -116944,7 +116919,6 @@ y0utube.com.mx
 ||afevbpy640.vip^
 ||aff.taptap.asia^
 ||affereiodizer.cfd^
-||affilio.ir^
 ||afflictcaraibe.cfd^
 ||afftrk.altex.ro^
 ||affumvkwgpvbe.website^
@@ -117181,15 +117155,9 @@ y0utube.com.mx
 ||analytics.airtel.africa^
 ||analytics.akharinkhabar.ir^
 ||analytics.any.run^
-||analytics.app.buff.game^
-||analytics.appa.pe^
-||analytics.apps.com.tr^
-||analytics.appstate.edu^
-||analytics.asu.edu^
 ||analytics.audio.one^
 ||analytics.bask.health^
 ||analytics.bc.edu^
-||analytics.blogspot.co.il^
 ||analytics.capella.edu^
 ||analytics.close.marketing^
 ||analytics.comcom.ge^
@@ -117207,60 +117175,33 @@ y0utube.com.mx
 ||analytics.googlie.vip^
 ||analytics.govinfo.gov^
 ||analytics.gzw.madfinger.games^
-||analytics.haraj.com.sa^
-||analytics.hbs.edu^
 ||analytics.index.pe^
 ||analytics.insightly.services^
-||analytics.istores.co.il^
 ||analytics.justica.gov.pt^
 ||analytics.linkre.direct^
-||analytics.lubriderm.com.mx^
 ||analytics.makeup.global^
 ||analytics.mantis.marketing^
-||analytics.matichon.co.th^
 ||analytics.mobile.walmart.com.mx^
 ||analytics.nca.by^
-||analytics.ncsu.edu^
 ||analytics.netdirector.auto^
 ||analytics.nitrogr.am^
 ||analytics.nordnet.dk^
 ||analytics.nsdcc.go.ke^
-||analytics.olx.ba^
 ||analytics.ome.lt^
 ||analytics.onestate.space^
 ||analytics.play.works^
-||analytics.pobo.space^
-||analytics.pumper.run^
-||analytics.ra.ee^
 ||analytics.revive.digital^
-||analytics.sandstorm.game^
 ||analytics.scccd.edu^
-||analytics.shift.agency^
 ||analytics.sinchew.com.my^
 ||analytics.sintact.ro^
 ||analytics.sjsu.edu^
 ||analytics.sre.gob.mx^
-||analytics.stitch.money^
 ||analytics.streamfab.^
 ||analytics.tcbs.com.vn^
-||analytics.teapuesto.pe^
-||analytics.telewebion.ir^
 ||analytics.tepper.cmu.edu^
 ||analytics.ticketmaster.^
-||analytics.ticketmaster.co.za^
-||analytics.ticketmaster.com.mx^
-||analytics.tnt.studio^
-||analytics.ucf.edu^
-||analytics.uhero.hawaii.edu^
-||analytics.umass.edu^
-||analytics.usa.gov^
 ||analytics.vgtimes.^
-||analytics.washington.edu^
-||analytics.wemeta.world^
-||analytics.wharton.upenn.edu^
 ||analytics.wmt.digital^
-||analytics.xspswap.finance^
-||analytics.zenfy.ac^
 ||anank.ke
 ||anasaraias.help^
 ||anathemmicrons.cfd^
@@ -117273,9 +117214,7 @@ y0utube.com.mx
 ||anensttarde.rest^
 ||aneurinnoddles.digital^
 ||anews.az^
-||anews.one^
 ||anflcwigejplk.website^
-||anh.24h.com.vn^
 ||anhimaetoller.help^
 ||anillabedders.shop^
 ||animalporn.dog^
@@ -117327,7 +117266,6 @@ y0utube.com.mx
 ||apaceoopod.qpon^
 ||apaiddowsets.cfd^
 ||apathyafresca.rest^
-||apathyjav128.fun^
 ||apcfgmcjbyida.space^
 ||apeboard.finance^
 ||apercusbayok.rest^
@@ -117336,14 +117274,12 @@ y0utube.com.mx
 ||apexbhoosa.world^
 ||apgate.hubhubhub.name^
 ||aphagiastarve.qpon^
-||api-bloomreach.comfy.ua^
 ||api-cf.nn.ci^
 ||api-iframe.fulla.bet^
 ||api-v4.trbo.com*plvid^
 ||api.99vn.bet^
 ||api.9bet.win^
 ||api.adultdeepfakes.cam^
-||api.around.xxx^
 ||api.buff.vip^
 ||api.iconify.design^
 ||api.max79.win^
@@ -117351,7 +117287,6 @@ y0utube.com.mx
 ||api.nbet.fan^
 ||api.nbet.vin^
 ||api.nn.ci^
-||api.peer2profit.global^
 ||api.pixai.art^
 ||api.red88.vip^
 ||api.redx.vip^
@@ -117810,9 +117745,7 @@ y0utube.com.mx
 ||be5htf7u.jdr089.xin^
 ||be9nr64m9rgl9m.cfd^
 ||beachedbitted.help^
-||beacon-v2.helpscout.help^
 ||beacon.^
-||beacon.cimb.com.my^
 ||beacon.www.lider.cl^
 ||beakieryuppie.help^
 ||beam.remp.nv.ua^
@@ -117844,7 +117777,6 @@ y0utube.com.mx
 ||behance.ltd
 ||behavesyahan.qpon^
 ||beiyu.xin^
-||beja.shop^
 ||bekickpulsing.digital^
 ||bekingstowp.qpon^
 ||belattercel.cfd^
@@ -117861,7 +117793,6 @@ y0utube.com.mx
 ||bemoonunbroid.shop^
 ||bemyhole.cam^
 ||ben.bet^
-||benettonoutletstore.shop^
 ||bengalifistify.cfd^
 ||bennesfavored.rest^
 ||benneunbrown.qpon^
@@ -117872,8 +117803,6 @@ y0utube.com.mx
 ||beratfoaming.shop^
 ||berberomber.qpon^
 ||berendcarols.shop^
-||bergfreunde-outlet.shop^
-||berglust.shop^
 ||berkflanger.help^
 ||bernooemerges.qpon^
 ||beroeform.qpon^
@@ -117890,7 +117819,6 @@ y0utube.com.mx
 ||best-u.vip^
 ||bestbonusprize.life^
 ||bestfreetube.xxx^
-||bestx.stream^
 ||bet.co.za^
 ||bet20.bet^
 ||bet25.dk^
@@ -117901,7 +117829,6 @@ y0utube.com.mx
 ||betcostarica.ag^
 ||beteemsheeves.digital^
 ||betflash.co.za^
-||bethlengabor.ro^
 ||betmania.ag^
 ||betonline.ag^
 ||betonusa.ag^
@@ -117982,11 +117909,9 @@ y0utube.com.mx
 ||bikespeed.shop^
 ||bikestripara.cfd^
 ||bikingdecare.help^
-||bil.su^
 ||bildirim.com.tr^
 ||bilgingregally.cfd^
 ||bimasmetonym.help^
-||binaryedge.ninja^
 ||bing001.shop^
 ||bing003.shop^
 ||bing005.shop^
@@ -117998,7 +117923,6 @@ y0utube.com.mx
 ||bingohall.ag^
 ||binhoutwalk.qpon^
 ||binnitearchie.digital^
-||bio-me.bio^
 ||biodrising.shop^
 ||biohermpasan.cfd^
 ||biontsjudokas.help^
@@ -118007,7 +117931,6 @@ y0utube.com.mx
 ||biqqounvexmcs.website^
 ||biquge.lu
 ||biquge.vip
-||bird.money^
 ||birdmanstook.life^
 ||birdsend.email^
 ||birlieunguled.qpon^
@@ -118017,14 +117940,10 @@ y0utube.com.mx
 ||bistrosorating.qpon^
 ||bitcointraffic.ltd^
 ||bitdragonapp.monster^
-||bither.one^
 ||bitmain.vip
 ||bitmakler.*^
-||bitte.net.ua^
 ||bittorantral.help^
 ||bitwozvhflsbc.website^
-||bitz1.vip^
-||bitz2.vip^
 ||bivdhulygjipf.store^
 ||biz5.^
 ||bizimxeber.az^
@@ -118047,7 +117966,6 @@ y0utube.com.mx
 ||bjscklkcwhlcn.space^
 ||bjsvp*.space^
 ||bjsvp35.space^
-||bjsvp49.space^
 ||bk-xctgdnf.life^
 ||bk8mys68.asia^
 ||bk8vn.vip^
@@ -118061,7 +117979,6 @@ y0utube.com.mx
 ||bkujuvnjjxlnj.space^
 ||bkwpguxysranb.space^
 ||bl.orkoj4zgwhbzv2b.cfd^
-||blackfridaysales.ro^
 ||blameless.work^
 ||blankedbemail.cfd^
 ||blartexonym.cfd^
@@ -118078,7 +117995,6 @@ y0utube.com.mx
 ||blickeyturkman.rest^
 ||blik.ua^
 ||blindlycckw.qpon^
-||blitzwallet.cfd^
 ||bliykilfbshej.website^
 ||blksizelensmen.rest^
 ||bllzgqbyp^
@@ -118086,7 +118002,6 @@ y0utube.com.mx
 ||blockchained.party
 ||blockertrilli.life^
 ||blog-uploads.eneba.games^
-||blog.admixer.academy^
 ||blog.anank.ke
 ||blog.maxbet.rs^
 ||blog.meow.tg^
@@ -118166,7 +118081,6 @@ y0utube.com.mx
 ||bondzgi*.^
 ||bong88.cam^
 ||bong90.bet^
-||bong99.cfd^
 ||bong99.vin^
 ||bong99.vip^
 ||bongdaplus.vn^
@@ -118332,7 +118246,6 @@ y0utube.com.mx
 ||bummestkaffir.help^
 ||bumpertenets.help^
 ||bunchedfifers.shop^
-||bundle.africa^
 ||bundtdroners.help^
 ||bunkersparring.shop^
 ||bunkr.*^
@@ -118368,7 +118281,6 @@ y0utube.com.mx
 ||buy360.vip
 ||buyerneedly.help^
 ||buyidesarea.qpon^
-||buymores.shop^
 ||bv1uktljih4r5gu9hftm8ozv11lx.cfd^
 ||bv8rjlooeg8wxw81tt4ge9g7yx7qon4l2xyxl8.cfd^
 ||bv967egpj6lb7p1ryrixkcpqkwryhy.cfd^
@@ -118471,7 +118383,6 @@ y0utube.com.mx
 ||cancersjayceesetui.cfd^
 ||candyhbodes.rest^
 ||canionscowshut.shop^
-||cannibeauty.shop^
 ||canonrysenci.rest^
 ||canteenelixate.rest^
 ||cantelgrueler.qpon^
@@ -118479,7 +118390,6 @@ y0utube.com.mx
 ||caoliu.sex^
 ||caoymjqpsflnb.space^
 ||capeneist.rest^
-||capi.tr.ee^
 ||caponsstop.help^
 ||cappaecoignes.life^
 ||capriblewits.qpon^
@@ -118502,7 +118412,6 @@ y0utube.com.mx
 ||carvelshavage.cfd^
 ||casavisancho.shop^
 ||casefulautist.shop^
-||cashalot.bet^
 ||cashsweep.com.my^
 ||casinoadmiral.lt^
 ||casinoportugal.pt^
@@ -118517,6 +118426,7 @@ y0utube.com.mx
 ||catfacenuclein.qpon^
 ||catfalliacchos.help^
 ||cathecthumpty.qpon^
+||catodonacidoid.cfd^
 ||cattednatalia.help^
 ||cauchapeek.rest^
 ||cauldssinism.shop^
@@ -118530,7 +118440,6 @@ y0utube.com.mx
 ||cavrhexis.help^
 ||cavylvupcwnyp.website^
 ||cawquawgnoff.help^
-||cb75.vip^
 ||cbcsport.az^
 ||cbdfjelmkjele.website^
 ||cbdsrltmmlbnu.space^
@@ -118844,7 +118753,6 @@ y0utube.com.mx
 ||click-eu.pclk.name^
 ||click.freepopnews.skin^
 ||click.pclk.name^
-||click.spe.ometria.email^
 ||clickalburn.cfd^
 ||clickhouse-collector.*.prod.plat.agency^
 ||climbsevolate.help^
@@ -118856,7 +118764,6 @@ y0utube.com.mx
 ||clk.wiki^
 ||cloakedjesses.cfd^
 ||cloddermowburn.qpon^
-||clog.yalla.games^
 ||clogbl.qpon^
 ||clonesboccale.help^
 ||cloppedopossum.rest^
@@ -118887,21 +118794,17 @@ y0utube.com.mx
 ||cn.vc
 ||cn.xiaochuankeji.tieba^
 ||cnaqnvcexfuwj.website^
-||cnbvnc.win^
 ||cnki.vip
 ||cnltkwkhxmdqz.space^
 ||cnmya.store^
 ||cnqsocfzpdfkp.space^
-||cnt.drtuber.desi^
 ||cnt.hd21.^
 ||cnt.nuvid.^
 ||cnt.proporn.^
 ||cnt.tubeon.^
 ||cnt.vivatube.^
 ||cnt.winporn.^
-||cnt.xhamster.desi^
 ||cnt.yeptube.^
-||cntr.pravda.com.ua^
 ||cntxfrzwgdzud.space^
 ||cnvggbhoozkdr.space^
 ||cnwafglwlbcro.life^
@@ -118950,19 +118853,12 @@ y0utube.com.mx
 ||coilerssneezer.cfd^
 ||coinall.ltd
 ||coinersnubby.help^
-||coins.game^
 ||coitajivas.help^
 ||coliessapinda.cfd^
 ||collatent.rest^
-||collect.rtb.events^
-||collector.auth.xhamster.desi^
 ||collector.hamsterix.^
-||collector.tribe.so^
 ||collector.xhamster*.^
 ||collector.xhamster*.desi^
-||collector.xhamster1.desi^
-||collector.xhamster45.desi^
-||collector.xhamster46.desi^
 ||colletrecurse.help^
 ||colleylevi.help^
 ||collieakha.qpon^
@@ -118979,7 +118875,6 @@ y0utube.com.mx
 ||comicaldiarch.help^
 ||cominolovepot.rest^
 ||commentalumins.help^
-||commercialmortgages.london^
 ||community.washokufinder.lol^
 ||comodoseconds.qpon^
 ||compereupburn.qpon^
@@ -119009,14 +118904,12 @@ y0utube.com.mx
 ||consuteflyway.qpon^
 ||contacts.kakuyomu.life^
 ||content-api-*.space^
-||content.console.pendo.legion.work^
 ||content.ikon.mn^
 ||contrib.nn.ci^
 ||contus.sbs^
 ||convert.guru^
 ||convitejowel.help^
 ||cookersrecking.help^
-||cookie-consent-tracking-app.codeblocks.sk^
 ||cookie-consent.etisalat.ae^
 ||cookie.marsus.digital^
 ||cookie.support^
@@ -119257,7 +119150,6 @@ y0utube.com.mx
 ||cxajgzjwemsjd.website^
 ||cxfzjbczatqgm.space^
 ||cxwdgmldczxwa.website^
-||cy.hexereisellout.shop^
 ||cyaneanvagrommorros.qpon^
 ||cydia.love
 ||cyg-byzlgtns.world^
@@ -119366,11 +119258,8 @@ y0utube.com.mx
 ||dasheragee.cfd^
 ||dashinmazemlak.az^
 ||dat.red^
-||data-getway.pixai.art^
 ||data.angel.digital^
-||data.console.pendo.legion.work^
 ||data.u.software^
-||datafeed.bet^
 ||datapacstereos.shop^
 ||datiscamammodi.help^
 ||dato.porn^
@@ -119381,7 +119270,6 @@ y0utube.com.mx
 ||dawkincreagh.qpon^
 ||dawkxguktvcnw.space^
 ||dayday.plus
-||daydot.agency^
 ||dayfund.*^
 ||daynetredeyes.rest^
 ||dayong.name
@@ -119501,13 +119389,11 @@ y0utube.com.mx
 ||deservetourism.qpon^
 ||deshui.wang
 ||designbin.lol^
-||desktop-dna.osp.opera.software^
 ||desmicunhappi.qpon^
 ||detarbureaux.qpon^
 ||deturbsparged.help^
 ||devfrog.shop^
 ||deviatesbirro.shop^
-||devid.drp.su^
 ||devilysuiform.qpon^
 ||devotesobeyed.help^
 ||dewanbirchen.qpon^
@@ -119522,15 +119408,9 @@ y0utube.com.mx
 ||deyun.fun
 ||dezaleyaporiae.shop^
 ||df.infra.shopee.^
-||df.infra.shopee.com.mx^
-||df.infra.shopee.com.my^
 ||df.infra.sz.shopee.^
-||df.infra.sz.shopee.co.id^
-||df.infra.sz.shopee.co.th^
-||df.infra.sz.shopee.vn^
 ||dfczapfxewrto.store^
 ||dfhjdhjh.jinshaghrt88sd.shop^
-||dficgbecdhchcicdhaca.world^
 ||dfqirjrmqxnbg.space^
 ||dfsuphjlbrxmv.website^
 ||dfycwmrofqyeh.website^
@@ -119544,7 +119424,6 @@ y0utube.com.mx
 ||dh.cx
 ||dhbbfvljzjouy.website^
 ||dhcc.wang
-||dhfjddfijjfbhjffaacb.world^
 ||dhqiveduzcsym.space^
 ||dhurratrait.qpon^
 ||dhzqlqrfwjqgv.website^
@@ -119575,7 +119454,6 @@ y0utube.com.mx
 ||dilagatha.life^
 ||dilidili.wang^
 ||dilluedioxid.help^
-||dimax.one^
 ||dimerspelt.help^
 ||dimplesnoyful.help^
 ||dinejav11.fun^
@@ -119617,10 +119495,8 @@ y0utube.com.mx
 ||diyibanzhu*^
 ||diyibanzhu^$important
 ||diyiwl.wang
-||diymalennachzahlen.shop^
 ||dizhi.xin
 ||djcrfxlwwntoi.website^
-||djdgafhfgbhgdaihaacc.world^
 ||djdyogkfkexna.space^
 ||djersaongaro.qpon^
 ||djerycom.ug^
@@ -119675,7 +119551,6 @@ y0utube.com.mx
 ||dobbinfleying.cfd^
 ||dociiopyfxovz.website^
 ||dockenabn.cfd^
-||doctruyencotich.vn^
 ||dodgilycindymetric.cfd^
 ||doekvivek.qpon^
 ||dogfallkeach.qpon^
@@ -119689,7 +119564,6 @@ y0utube.com.mx
 ||dolcianjaypie.shop^
 ||dolhuvumjpzwv.website^
 ||doljqrkgovqce.website^
-||dolnyzemplin.korzar.sme.sk^
 ||dolushusks.qpon^
 ||dominaplounce.help^
 ||domptphytane.shop^
@@ -119761,7 +119635,6 @@ y0utube.com.mx
 ||drechecelosia.qpon^
 ||dreeawfwbvuos.website^
 ||dreksungulae.qpon^
-||drelkuvizen.business^
 ||drenling.vip^
 ||drestballone.qpon^
 ||drferingi.rest^
@@ -119868,17 +119741,14 @@ y0utube.com.mx
 ||dyphonepuca.shop^
 ||dywuhp-unbnf.love^
 ||dz.tt
-||dzerkalo.casino^
 ||dzjgwhtqttqfx.website^
 ||dzjlxonxrnetj.website^
 ||dzkmjwirelhdd.space^
 ||dzluqragnoyth.space^
 ||dzojjzwjlwbeh.space^
 ||dzphmsyyaxoaa.website^
-||e-car.day^
 ||e-lock.xin
 ||e-loterie.ma^
-||e-ranok.com.ua^
 ||e.mocuvmnjp1p83l2g9lgvu1qcghg3ibrg.cfd^
 ||e121curmecn9ug47fcum.cfd^
 ||e15hz6n67pl7m2xp.rest^
@@ -119908,16 +119778,12 @@ y0utube.com.mx
 ||easilystract.rest^
 ||easternepoch.life^
 ||eastingnepeta.qpon^
-||easy-aktualisierung-portal.locker^
 ||easyjav12.fun^
 ||easynet.vip
 ||easyporn.xxx^
-||easysitelabs.my^
 ||eauxabzmqkikf.space^
 ||eavcrphmbwtte.website^
-||ebbchhjcceaaicbiaacd.world^
 ||ebgqxduqbbfke.website^
-||ebonylinebeauty.shop^
 ||ebook.name
 ||ebriosetoruses.cfd^
 ||eceunutlxxfha.website^
@@ -119925,10 +119791,8 @@ y0utube.com.mx
 ||echarjutka.shop^
 ||echoertongers.qpon^
 ||echucatapmost.qpon^
-||ecijfaaiigcfddejaace.world^
 ||ecinw7ux5nyzcoy4ef8.cfd^
 ||eclassified.my^
-||ecliptic.services^
 ||ecng1vr8lcn1fp9bvncfp9gx4w.rest^
 ||ecos.am^
 ||ecqzlunarvyfe.website^
@@ -119938,7 +119802,6 @@ y0utube.com.mx
 ||ecxjncetxiila.space^
 ||ed.jinri.red^
 ||ed2.fun^
-||edapotheke.store^
 ||edapzbfomusjm.space^
 ||edbl.space^
 ||eddymahoe.qpon^
@@ -120167,7 +120030,6 @@ y0utube.com.mx
 ||ernejamaica.rest^
 ||ernz2lcly4o2qfl7.74x4er4kpl8pxek327.cfd^
 ||ero-labs.*^
-||ero-labs.vip^
 ||erperfsxtafoh.store^
 ||erqgoroithcuu.space^
 ||errandsfloes.help^
@@ -120192,7 +120054,6 @@ y0utube.com.mx
 ||eskarsnoxally.help^
 ||eskerlaveroc.help^
 ||espinalarmor.qpon^
-||esrogssannop.shop^
 ||estadisticas.comunidad.madrid^
 ||estorilsolcasinos.pt^
 ||esurinebrahmic.cfd^
@@ -120217,7 +120078,6 @@ y0utube.com.mx
 ||etuiostlers.shop^
 ||etwiterehedge.rest^
 ||etwiwgnnyouvw.space^
-||etymonstheine.shop^
 ||eu-soaxtatl.life^
 ||eu88.bet^
 ||eua.design
@@ -120234,7 +120094,6 @@ y0utube.com.mx
 ||euripusrochet.help^
 ||eurobet.bg^
 ||eurofootball.bg^
-||euromarkt.shop^
 ||european-eel.yingt.fun^
 ||euslhmqbgjogp.space^
 ||eusnqnhfbifjv.space^
@@ -120246,12 +120105,10 @@ y0utube.com.mx
 ||evenimbauba.cfd^
 ||events*.cre.ma^
 ||events3.cre.ma^
-||eventtracker.dsa.apps.schwarz^
 ||everbet.bg^
 ||everniasci.cfd^
 ||evil.infinitybet.win^
 ||evincedendears.cfd^
-||evisas.travel^
 ||evj14q.vip^
 ||evjgmxwqhqzhl.space^
 ||evocatepooly.help^
@@ -120365,10 +120222,8 @@ y0utube.com.mx
 ||faltchefeoffee.cfd^
 ||falxreacher.digital^
 ||famdsjspvquah.website^
-||fanatics.bet^
 ||fanbungmiens.cfd^
 ||fanciedmarrer.rest^
-||fandomsmarcot.shop^
 ||fanfishupases.world^
 ||fanionscapererzolaism.cfd^
 ||fannonlacmus.qpon^
@@ -120391,17 +120246,13 @@ y0utube.com.mx
 ||farhandvitular.qpon^
 ||farmeelshop.help^
 ||farseermalloy.cfd^
-||fartingpangane.shop^
 ||fas.li^
 ||fasceshelped.life^
 ||faselhd.center^
 ||fasfsv-sli.love^
 ||fashercartop.cfd^
 ||faspc.hubhubhub.name^
-||fast.ge^
-||fastblogzone.my^
 ||fastlyvetanda.qpon^
-||fastmarket.store^
 ||fatallybering.help^
 ||fatallydecresc.cfd^
 ||fatdeciles.shop^
@@ -120409,7 +120260,6 @@ y0utube.com.mx
 ||fauldchildessewen.cfd^
 ||favelassimar.cfd^
 ||favipumex.cfd^
-||favorit.com.ua^
 ||favorites.ren
 ||fawnersomehow.qpon^
 ||faxesscrewy.qpon^
@@ -120471,11 +120321,9 @@ y0utube.com.mx
 ||ferisonbiogens.shop^
 ||fernerysooths.rest^
 ||ferrierstrewth.help^
-||ferring.com.ar^
 ||ferzgatzocmig.website^
 ||festinocaranna.qpon^
 ||festivelaggin.shop^
-||festoonwaldorf.rest^
 ||feuagescowing.cfd^
 ||ff.nsg.org.ua^
 ||ffbcyjedmvejy.website^
@@ -120503,7 +120351,6 @@ y0utube.com.mx
 ||fi88.vip^
 ||fiascosheeding.qpon^
 ||fibo.guru^
-||fickotstuk.space^
 ||fidawiluddite.cfd^
 ||fiddlerfoxily.qpon^
 ||fidelslaggy.help^
@@ -120519,7 +120366,6 @@ y0utube.com.mx
 ||filma24.*^
 ||filmicwiwi.cfd^
 ||filter.popunder.bid^
-||filterjavgg124.fun^
 ||fimblespillow.digital^
 ||finalisexilian.rest^
 ||finallyswirly.cfd^
@@ -120538,10 +120384,8 @@ y0utube.com.mx
 ||firmware.center^
 ||firsrecoct.qpon^
 ||firsstudtog.cam^
-||fisconline.casa^
 ||fishilytrisomy.shop^
 ||fishnetunbid.qpon^
-||fitnes-trener.com.ua^
 ||fittilydeerfly.shop^
 ||fittingneoza.shop^
 ||fittitbundook.cfd^
@@ -120573,7 +120417,6 @@ y0utube.com.mx
 ||fjtgyxa.vip
 ||fjwrelzhabrhh.space^
 ||fkemyu2j61pkqy3yf.cfd^
-||fkm.asia^
 ||fkp.samsungcloudsolution.^
 ||fktz.yl.ag^
 ||fkwwiawjeqatk.website^
@@ -120621,12 +120464,14 @@ y0utube.com.mx
 ||flow.ci
 ||flower1266.fun^
 ||flowkquick.cfd^
+||flowtrck.uno^
 ||flqjbuvqpxlzt.website^
 ||fltvwnshbwzzr.website^
 ||flubviolate.qpon^
 ||flueytantivy.rest^
 ||fluingegging.rest^
 ||flummoxmaney.help^
+||flurrrooklet.qpon^
 ||fluxingdirely.help^
 ||flv2mp3.by^
 ||flyballjazzer.rest^
@@ -120671,11 +120516,9 @@ y0utube.com.mx
 ||follisspiss.qpon^
 ||followjav182.fun^
 ||folsomofay.qpon^
-||fondleaegipan.shop^
 ||fondlerrhesus.help^
 ||fondsektenes.life^
 ||fontech.startitup.sk^
-||food-metric.shopee.co.th^
 ||foodpanda.bg^
 ||foodpanda.co.th^
 ||foodpanda.com.bd^
@@ -120737,13 +120580,11 @@ y0utube.com.mx
 ||fr8umk51igjwbr57lzpnth318ygv.rest^
 ||fracaspleopod.cfd^
 ||francokerugma.cfd^
-||franken-analytics.makeup.global^
 ||fraplepintano.cfd^
 ||fraterhents.rest^
 ||freakedaani.digital^
 ||freaksgallus.qpon^
 ||free.mk
-||free2play.asia^
 ||freecontent.bid
 ||freecontent.download
 ||freecontent.faith
@@ -120758,7 +120599,6 @@ y0utube.com.mx
 ||freecontent.trade
 ||freecontent.win
 ||freecontent.win^
-||freehd.com.ua^
 ||freeidea.win
 ||freepik.*^
 ||freepornhq.xxx^
@@ -120766,7 +120606,6 @@ y0utube.com.mx
 ||freeteen.sex^
 ||frenzyjerids.help^
 ||frescozoilean.cfd^
-||fresh.casino^
 ||fretizerede.cfd^
 ||freychang.fun^
 ||frfve33.fun^
@@ -120962,6 +120801,7 @@ y0utube.com.mx
 ||garbohenism.qpon^
 ||gardenyyukata.rest^
 ||garglenominee.help^
+||garlicbourlawupfolds.cfd^
 ||garnelbura.help^
 ||garnishrnd.cfd^
 ||garredtriter.help^
@@ -121092,6 +120932,7 @@ y0utube.com.mx
 ||gewqashbwq.fun^
 ||gewu.vc
 ||gf0c0qtw080425z7.cfd^
+||gf7r23zxp1i2vkvfx33ezlbqet.cfd^
 ||gffedashb6.fun^
 ||gfnpfbalgsfgw.space^
 ||gftkvlbymvdty.website^
@@ -121125,7 +120966,6 @@ y0utube.com.mx
 ||ghoonfjdictaf.space^
 ||ghostsgloams.cfd^
 ||ghpgtibxzldsh.website^
-||ghrh.shop^
 ||gibbalslucerne.rest^
 ||gibbonfamily.store^
 ||gieselrabific.qpon^
@@ -121166,7 +121006,6 @@ y0utube.com.mx
 ||glami.com.tr^
 ||glariercubebs.shop^
 ||glassdoor.*^
-||glassybabyofficial.shop^
 ||glauryrhenic.cfd^
 ||glauxtxteltvi.space^
 ||gldkzr-lpqw.buzz^
@@ -121225,7 +121064,6 @@ y0utube.com.mx
 ||go99code.store^
 ||go99code.vip^
 ||goalavejoces.cfd^
-||goaleenarra.qpon^
 ||goaloo.*^
 ||goavesyuruk.qpon^
 ||gobangshowking.help^
@@ -121233,7 +121071,6 @@ y0utube.com.mx
 ||gocn.vip
 ||godetiasummar.shop^
 ||godsakesucraselarked.cfd^
-||godsave.lgbt^
 ||godwardunhusks.shop^
 ||goetybesort.qpon^
 ||gofm99mh9o99yj.rest^
@@ -121280,9 +121117,6 @@ y0utube.com.mx
 ||gossepconcur.help^
 ||gostats.*^
 ||gosusport.store^
-||got.by^
-||gotbest.by^
-||gotcha-server.evo.run^
 ||gouhuasuan.shop
 ||gowdnieteap.help^
 ||gowkcfvlcvmsm.space^
@@ -121290,7 +121124,6 @@ y0utube.com.mx
 ||gpbmzdzzhcymp.space^
 ||gpkbvwlczebwv.website^
 ||gplywfirosiwd.one^
-||gpt-ai.tips^
 ||gpviryfjyadhj.website^
 ||gpvoqfwzgyoxi.space^
 ||gpxmfzexfgnvo.space^
@@ -121307,7 +121140,6 @@ y0utube.com.mx
 ||grafstat.ro^
 ||grallictaiping.cfd^
 ||gran.work
-||granadoespada.in.th^
 ||granateunwelth.cfd^
 ||granatkingpin.qpon^
 ||granchachene.rest^
@@ -121319,7 +121151,6 @@ y0utube.com.mx
 ||grayedcoptersthrip.cfd^
 ||grayerkhlysti.help^
 ||gre.vip
-||greenanalytics.autos^
 ||greevedaikon.cfd^
 ||grelotsorghos.help^
 ||gretegreyly.help^
@@ -121346,7 +121177,6 @@ y0utube.com.mx
 ||groutstuxedos.rest^
 ||growjav11.fun^
 ||growssatisfy.qpon^
-||growth.shop^
 ||grrtulchin.digital^
 ||grsfjulsqrvdg.space^
 ||grskayynfqwfe.space^
@@ -121354,12 +121184,10 @@ y0utube.com.mx
 ||grudgeddanging.shop^
 ||grudgesscup.shop^
 ||grummerscult.help^
-||grupovo.bg^
 ||gruysroister.cfd^
 ||grwprms1188.vip^
 ||gsdedash9b.fun^
 ||gsgqwl.wang^
-||gsi.net.vn^
 ||gsjxmrromeuae.space^
 ||gsnasaaaljfmr.website^
 ||gtbbgjo.art^
@@ -121551,6 +121379,7 @@ y0utube.com.mx
 ||hashing.win
 ||hastedbeatas.cfd^
 ||hastilysynch.help^
+||hathpedant.cfd^
 ||hatticbecco.life^
 ||hausundwerkzeuge.store^
 ||havaikipigmies.rest^
@@ -121669,7 +121498,6 @@ y0utube.com.mx
 ||hevvkdbzaamce.space^
 ||hewersokapi.cfd^
 ||hexapodexalt.world^
-||hexasoft.com.my^
 ||hexodecowpats.shop^
 ||hexun.*^
 ||hey.lt^
@@ -122089,7 +121917,6 @@ y0utube.com.mx
 ||ifuqkhrbh5xzqu78k.cfd^
 ||ifwajrmztvlpl.website^
 ||ifwtkyfcizwlj.space^
-||ify.ac^
 ||ig62.vip^
 ||ig69.vip^
 ||igg-games.*^
@@ -122251,10 +122078,8 @@ y0utube.com.mx
 ||insider.az^
 ||insidesoci.al^
 ||insistsethanol.help^
-||inspannondeaf.shop^
 ||instant.one^
 ||insteamarchont.help^
-||institto.casa^
 ||instkeup.digital^
 ||insultscollyr.cfd^
 ||insure1266.fun^
@@ -122295,15 +122120,11 @@ y0utube.com.mx
 ||ipcyheeusjzdz.space^
 ||ipfgvwdwcqiwo.space^
 ||iphone-caviar.ru*entranceId
-||ipic.su^
 ||ipidcasinet.rest^
 ||ipjmrux9e8l5fk.cfd^
 ||iporn.world^
-||iprank.ir^
 ||ipseandfrond.rest^
 ||ipt5xc461ynq8og.cfd^
-||iptv-kaufen-germany.shop^
-||iptvkaufen24.shop^
 ||ipv4.host
 ||ipvaqxfgypulc.website^
 ||iqgesmsbngwtj.space^
@@ -122320,9 +122141,7 @@ y0utube.com.mx
 ||iratisspbczav.website^
 ||irclsopmebtqz.space^
 ||iread.cf
-||ireklama.mk^
 ||iriditepeiser.qpon^
-||iridium.services^
 ||irisateduluth.cfd^
 ||irliepaja.lv^
 ||irlmioalvqymu.space^
@@ -122333,11 +122152,9 @@ y0utube.com.mx
 ||irs01.^
 ||irssptjnnupxz.space^
 ||irtearful.help^
-||irwin.casino^
 ||irwyiaexxopok.love^
 ||irymqsskczira.website^
 ||isaminvagancy.cfd^
-||isb.ens.tn^
 ||isbycgqyhsze.world^
 ||isdnoutjet.world^
 ||isee.mn^
@@ -122356,9 +122173,7 @@ y0utube.com.mx
 ||isoporagonal.cfd^
 ||isotopetaxers.cfd^
 ||isp.cx
-||issh.gov.al^
 ||issitekelter.shop^
-||istat24.com.ua^
 ||itbyppgzzuamb.store^
 ||itc.*^
 ||itchvainly.rest^
@@ -122419,7 +122234,6 @@ y0utube.com.mx
 ||iyxdm.*^
 ||iyzquftuewrrq.website^
 ||izalyzvesmopi.website^
-||izgodni.bg^
 ||izi.su^
 ||j-mxponyz.love^
 ||j.j8y2r7y1.work^
@@ -122446,7 +122260,6 @@ y0utube.com.mx
 ||jagatpolary.qpon^
 ||jaggarjujubes.shop^
 ||jaglessberendo.rest^
-||jahfkjha.cfd^
 ||jahvehbitnet.rest^
 ||jailishwabbles.cfd^
 ||jailorscoman.cfd^
@@ -122468,13 +122281,11 @@ y0utube.com.mx
 ||javporn.best^
 ||jaxzqimtstsez.space^
 ||jazzsports.ag^
-||jb.join.webcam^
 ||jbb.one
 ||jbkdauf540.vip^
 ||jbkwfrjaqpprv.website^
 ||jbmhqwizvlryt.space^
 ||jc83v8.j8y2r7y1.work^
-||jccompa.store^
 ||jcefzyezfomjd.space^
 ||jcen.avdog-t0065.vip^
 ||jciokqknvlfyc.website^
@@ -122491,7 +122302,6 @@ y0utube.com.mx
 ||jebustidies.shop^
 ||jeciwgjoudnza.website^
 ||jeee.ltd
-||jeffreysachs.center^
 ||jejlapwrnjnap.store^
 ||jellabtravest.help^
 ||jeribslaves.qpon^
@@ -122550,7 +122360,6 @@ y0utube.com.mx
 ||jiub.ren
 ||jiujy5r3.fun^
 ||jiuyou.ky^
-||jive.1.vg^
 ||jivingolf.rest^
 ||jivoyypvjddcb.website^
 ||jj.join.webcam^
@@ -122773,7 +122582,6 @@ y0utube.com.mx
 ||kaxtmrwgsmjkl.space^
 ||kayak.*^
 ||kaywarduncheat.qpon^
-||kaz.kz^
 ||kbex72oiu2ycl1c3.cfd^
 ||kbfvzoboss.bid^
 ||kblzmuvgszdjs.website^
@@ -122789,7 +122597,6 @@ y0utube.com.mx
 ||kdqlejwrbjkga.store^
 ||kdqtmxmwygsny.space^
 ||kdtgodshwlwbx.website^
-||kdufdi.shop^
 ||keauwobihhkxc.space^
 ||kebyarsaron.rest^
 ||kecheluntie.cfd^
@@ -122803,7 +122610,6 @@ y0utube.com.mx
 ||kehuhoyyxwbui.website^
 ||kejet.^
 ||kejian.design
-||keliones.lt^
 ||kellen.wang
 ||kellionpenally.shop^
 ||kenafbunchy.shop^
@@ -122824,7 +122630,6 @@ y0utube.com.mx
 ||keweifuwu.shop^
 ||keyan.life
 ||keysetsunquiet.cfd^
-||keystonehub.shop^
 ||kezesarijvytg.world^
 ||kf03.6299zz.vip^
 ||kf06.6299zz.vip^
@@ -122865,7 +122670,6 @@ y0utube.com.mx
 ||kinarums.rest^
 ||kinboy.wang
 ||kindlesseepage.digital^
-||kingads.digital^
 ||kingcupdrawnly.help^
 ||kingrowantilog.cfd^
 ||kingrowolax.qpon^
@@ -122907,7 +122711,6 @@ y0utube.com.mx
 ||klatchunpins.shop^
 ||klephtsfreety.cfd^
 ||klik4d.asia^
-||klikivabrik.ee^
 ||klippenfallals.life^
 ||klix.ba^
 ||klkk66.fun^
@@ -122924,7 +122727,6 @@ y0utube.com.mx
 ||kmnj59fi86qczv.rest^
 ||kmolerhebok.cfd^
 ||kmrfxxxyogzka.space^
-||kmspico.lc^
 ||kmupo.one^
 ||kmwvvjlzrwzbe.space^
 ||knalpmavgfdum.space^
@@ -122940,7 +122742,6 @@ y0utube.com.mx
 ||knoutedairns.qpon^
 ||knpfx.life^
 ||knqhlbohzazcz.website^
-||kntr.ir^
 ||knurrymeaconafghani.cfd^
 ||knzsqrnnoagck.website^
 ||ko4kkcpme7oql72.cfd^
@@ -123034,7 +122835,6 @@ y0utube.com.mx
 ||kurakura21.space^
 ||kurdishriles.cfd^
 ||kursors.lv^
-||kurwa-bober.ninja^
 ||kusanming.qpon^
 ||kuteblanket.store^
 ||kutehoodie.store^
@@ -123063,7 +122863,6 @@ y0utube.com.mx
 ||kxdhulgpyokoq.space^
 ||kxdo.yl.ag^
 ||kxdzhgidmcqwi.space^
-||kxktrr.shop^
 ||kxkvomqjyhfmq.space^
 ||kxlraxeanprcj.space^
 ||kxqdayzmwcoox.website^
@@ -123095,9 +122894,7 @@ y0utube.com.mx
 ||l8.g6549pn731ik6h.cfd^
 ||l9vzxerxxrwixjrkb92lgp79fp.rest^
 ||labaaraseta.cfd^
-||labourjavgg124.fun^
 ||labretabut.qpon^
-||labububox.store^
 ||labview.help
 ||lacavihvoreng.space^
 ||lackersmank.help^
@@ -123126,7 +122923,6 @@ y0utube.com.mx
 ||lamplitreemish.help^
 ||lander-events-api.c4s-rd.services^
 ||landian.vip
-||landin.ir^
 ||landscrushes.help^
 ||langlezebras.qpon^
 ||langzi.fun
@@ -123297,7 +123093,6 @@ y0utube.com.mx
 ||likedatings.life^
 ||lillly.shop^
 ||limaceacellarjumble.cfd^
-||limidaeiffy.qpon^
 ||limostreen.cfd^
 ||limpyptomain.qpon^
 ||lin02.bid^
@@ -123346,10 +123141,6 @@ y0utube.com.mx
 ||lives.one
 ||livescore.az^
 ||livesport.ge^
-||livetech.shopee.co.id^
-||livetech.shopee.co.th^
-||livetech.shopee.com.my^
-||livetech.shopee.vn^
 ||livetwo.space^
 ||lividlywarri.shop^
 ||liwei.life
@@ -123388,7 +123179,6 @@ y0utube.com.mx
 ||lmhfmxbygiuas.space^
 ||lmmnkwbtxmrxq.website^
 ||lmr7rv2d3.vip^
-||lmsffr.shop^
 ||lmvjrqhodlpcw.store^
 ||lmvq.hzwulbxmhxrjuzgywt7zyopmvn4wzrnev.cfd^
 ||lmvugtjbkotmy.website^
@@ -123575,7 +123365,6 @@ y0utube.com.mx
 ||lust-burning.rest^
 ||lust-goddess.buzz^
 ||lutenew.qpon^
-||lutewayredug.shop^
 ||lutrija.rs^
 ||lutttkpgmlqsf.website^
 ||luvianyao.cfd^
@@ -123642,7 +123431,6 @@ y0utube.com.mx
 ||m2.tin88.vip^
 ||m2xg.space^
 ||m2yzcfnq.z2ny961rqc3qiig.cfd^
-||m3.wtf^
 ||m3232gkqtqkpkf8coq.rest^
 ||m3vzfcq9li8mg6.cfd^
 ||m4r.fun^
@@ -123661,7 +123449,6 @@ y0utube.com.mx
 ||maculaknabble.qpon^
 ||macularunkly.help^
 ||madlan.co.il^
-||maehrobot.shop^
 ||magasscraggy.cfd^
 ||magekeenersmythism.cfd^
 ||magicalbifoil.shop^
@@ -123681,8 +123468,6 @@ y0utube.com.mx
 ||majasannatto.shop^
 ||majorattamine.help^
 ||majorbaizes.shop^
-||majorsflexpress43.vip^
-||majuhome.com.my^
 ||makarireimply.qpon^
 ||makateacalc.cfd^
 ||makejav11.fun^
@@ -123730,7 +123515,6 @@ y0utube.com.mx
 ||marginjavgg124.fun^
 ||margotfoehn.cfd^
 ||mark-media.com.ua^
-||marketing.smartcamp.asia^
 ||marlinbrawest.cfd^
 ||marlynothal.shop^
 ||marmotachinela.world^
@@ -123742,7 +123526,6 @@ y0utube.com.mx
 ||marshdromoi.cfd^
 ||martelstoved.help^
 ||martingpaction.qpon^
-||marvelcasino.games^
 ||masaflagman.qpon^
 ||mashakhesione.qpon^
 ||mashakwurrup.rest^
@@ -123760,32 +123543,17 @@ y0utube.com.mx
 ||materbennet.shop^
 ||matinshell.help^
 ||matomo.*.vn^
-||matomo.incred.digital^
-||matomo.lib.ncsu.edu^
-||matomo.montana.cat^
-||matomo.oema.dk^
 ||matomo.privatbank.ua^
 ||matomo.uvdata.dk^
 ||matricfairmunclot.cfd^
-||matrics.ro^
 ||matt.mercadolibre.^
-||matt.mercadolibre.cl^
-||matt.mercadolibre.com.ar^
-||matt.mercadolibre.com.mx^
-||matt.mercadolibre.com.pe^
 ||matt.mercadolibre.com.uy^
-||matt.mercadolibre.com.ve^
 ||matt.mercadopago.cl^
-||matt.mercadopago.com.ar^
-||matt.mercadopago.com.mx^
 ||maturesex.fun^
 ||mautic.*.vn^
-||mautic.bdev.co.th^
 ||maxbet.website^
 ||maxhub.vip
-||maxi-store.com.ua^
 ||maximsclown.life^
-||maxline.by^
 ||may88.fun^
 ||may88.vip^
 ||may88.win^
@@ -123808,7 +123576,6 @@ y0utube.com.mx
 ||mbzehrfmgiz7484q36.rest^
 ||mc.chunsise.bar^
 ||mc.fyi
-||mc.yandex.com.ge^
 ||mcgcandid.shop^
 ||mcheyadqlxjja.space^
 ||mchrwxh.j3b4m3g8.work^
@@ -123841,7 +123608,6 @@ y0utube.com.mx
 ||mediacontext.^
 ||medialand.^
 ||medianews.az^
-||mediaport.ua^
 ||mediaserver.emol.cl^
 ||mediaupdate.co.za^
 ||medibot.delling.care^
@@ -123903,12 +123669,10 @@ y0utube.com.mx
 ||metrezaannatto.shop^
 ||metrica.yandex.com.tr^
 ||metrics.ainews.kz^
-||metrics.bottlerocket.aws^
 ||metrics.com.eg^
 ||metrics.fnb.co.za^
 ||metrics.fullstack.cash^
 ||metrics.hub.caaws.services^
-||metrics.moory.dk^
 ||metrics.push.delivery^
 ||metrics.spidermanbrandnewday.movie^
 ||metrics.stanford.edu^
@@ -124113,7 +123877,6 @@ y0utube.com.mx
 ||moocherflaps.rest^
 ||moodjav12.fun^
 ||mooingdisring.qpon^
-||moonbitcoin.cash^
 ||mooncell.wiki
 ||moonday.autos^
 ||moonratnawabs.help^
@@ -124453,6 +124216,7 @@ y0utube.com.mx
 ||net88.men^
 ||net88.run^
 ||net88.vip^
+||nettysmeech.qpon^
 ||netu.ac^
 ||neuralenitro.help^
 ||neuronparolee.digital^
@@ -124472,7 +124236,6 @@ y0utube.com.mx
 ||newtarcked.cfd^
 ||newtfucoid.rest^
 ||newton.pm^
-||newtop.one^
 ||nex8.space^
 ||nextdoor.*^
 ||nextech.sk^
@@ -124546,7 +124309,6 @@ y0utube.com.mx
 ||nitrateoctode.help^
 ||nitridsamas.help^
 ||nitrioturinary.shop^
-||nitrosoftwares.shop^
 ||niu4eme6ur2ygmp9mh43rr5z6ny3eq55.rest^
 ||niulai0323166.space^
 ||niuneujrvefqb.website^
@@ -124622,9 +124384,7 @@ y0utube.com.mx
 ||notchergrillee.shop^
 ||notebookcheck*.*^
 ||notemanedith.life^
-||nothingness.asia^
 ||notifications.ltd^
-||notimetodie.mom^
 ||notion.so^
 ||notube.*^
 ||noughtspicule.qpon^
@@ -124677,7 +124437,6 @@ y0utube.com.mx
 ||nuddmuckite.qpon^
 ||nudipedcierzo.shop^
 ||nudistrefuged.help^
-||nugg.ad^
 ||nujmsvdnhqctb.website^
 ||numerosclaggum.help^
 ||numidacarped.help^
@@ -124726,7 +124485,6 @@ y0utube.com.mx
 ||nyftieeoryant.space^
 ||nymldrsksswqq.space^
 ||nyqfvttopmpck.space^
-||nyutxe.shop^
 ||nyzutyzsollwd.website^
 ||nzdkicnygnzlu.website^
 ||nze8iergwqe66o.cfd^
@@ -124740,7 +124498,6 @@ y0utube.com.mx
 ||o.7jn1iq4k45u4m5qzw4onwqzciv88j12vzm8j8mz.cfd^
 ||o.octoberads.space^
 ||o.outstreamoctober.store^
-||o.send.now^
 ||o25241l84jmcukt.cfd^
 ||o3tsuk.vip^
 ||o3vegl8mhh47wpzfuqv2gxq9ci2.cfd^
@@ -124900,15 +124657,12 @@ y0utube.com.mx
 ||onagrifoussa.qpon^
 ||onbfqhjqgifas.website^
 ||onbwqcyctaoqd.website^
-||onclick.ir^
 ||oncliylqoycyu.space^
 ||one.store^
 ||one88.vin^
 ||one88.vip^
 ||oneijnarbxrvk.space^
-||onepage.website^
 ||onervogie.life^
-||onestopdrip.shop^
 ||onetrust.^
 ||onetwo.ren
 ||onev.cat
@@ -124919,16 +124673,15 @@ y0utube.com.mx
 ||online.caliente.mx^
 ||online.casinoadmiral.lt^
 ||online.marketing^
-||online.tm^
 ||onlineshopping.co.za^
 ||only4.work
-||onlyfuns.win^
 ||onvvhxotlbtoq.space^
 ||onvvn4qughney3le8p64eutrp585zur.rest^
 ||onxgvepucicfi.space^
 ||onymebonise.qpon^
 ||onymitydeduce.cfd^
 ||onymouswawahavocat.cfd^
+||ooauorttoseto.website^
 ||oobjgdipisfxe.website^
 ||ooflesshelved.qpon^
 ||oogloeafifties.help^
@@ -124961,7 +124714,6 @@ y0utube.com.mx
 ||optibet.lt^
 ||opticsissy.life^
 ||optimix.asia
-||optimizeactive.shop^
 ||optimummontera.qpon^
 ||optimus-ads.ama^
 ||opttuckner.cfd^
@@ -124998,13 +124750,11 @@ y0utube.com.mx
 ||os.tc^
 ||oscarey.my.id^
 ||oscarsverver.cfd^
-||oschadnybank.com.ua^
 ||osciwwvfrejzj.store^
 ||oselleasslike.help^
 ||osetpntoseoxz.space^
 ||osg.so
 ||oshdjsphqmezp.website^
-||oski.one^
 ||osmesisgrogs.qpon^
 ||osminaunpaper.help^
 ||osmundwezenrue.cfd^
@@ -125018,7 +124768,6 @@ y0utube.com.mx
 ||ostendemitter.digital^
 ||osticsabin.qpon^
 ||ostreaencarpalingtow.cfd^
-||osvitaportal.com.ua^
 ||osx.cx
 ||otateteda.rest^
 ||otcvsbxhfxubm.space^
@@ -125044,11 +124793,9 @@ y0utube.com.mx
 ||ouggltcbkrrej.space^
 ||ouhcukdnksvft.space^
 ||oumvtxcrf5yrgl17p.p182qlx5wmkp5k3x1cb8.cfd^
-||ouoyui.win^
 ||ouszazqstwlex.space^
 ||outagepaction.help^
 ||outbawlkiddy.help^
-||outcameteinds.shop^
 ||outcullhanses.rest^
 ||outdoertaoist.qpon^
 ||outenoxalite.help^
@@ -125125,7 +124872,6 @@ y0utube.com.mx
 ||oy3iti2y8696xk2f.rest^
 ||oyezpapayaortyx.cfd^
 ||oyjudvyimkzzu.space^
-||oylgklds.win^
 ||oystermesonyx.qpon^
 ||ozarkmissay.cfd^
 ||ozbfgdzrpioaa.website^
@@ -125265,6 +125011,7 @@ y0utube.com.mx
 ||pb8vmnbko4y9qefvl.rest^
 ||pbeyvw97z2hn4t.rest^
 ||pbfh96fltj24y5frhvxwbe4r53yzi.cfd^
+||pbfrbivihszxk.space^
 ||pbmlcgdxrjxcp.website^
 ||pbmmqjehjhyff.website^
 ||pbnl1x4bu7riux8bz.rest^
@@ -125320,7 +125067,6 @@ y0utube.com.mx
 ||peplosknuckle.help^
 ||pepprpvc.vip
 ||peptichanoi.cfd^
-||perfa.pk^
 ||perfumybarrat.qpon^
 ||periostmoraine.help^
 ||perjurysubbeau.cfd^
@@ -125343,8 +125089,6 @@ y0utube.com.mx
 ||pg5yzy71z4xc8mi454.cfd^
 ||pgbsbhmayajsu.space^
 ||pgdfbqnkprprf.space^
-||pgdskofjaloka.si^
-||pggame365.agency^
 ||pgmjejgfvmxqp.website^
 ||pgnhzk.vip^
 ||pgnywmtnskmng.space^
@@ -125352,13 +125096,11 @@ y0utube.com.mx
 ||pgrvesxotrian.space^
 ||pgwwumwejaops.website^
 ||pgyoihqqfjafy.space^
-||ph.casino^
 ||ph5kobkijeyg4rboce64h.cfd^
 ||phagedaormazd.cfd^
 ||phajusabluent.cfd^
 ||pharehocks.cfd^
 ||phecdacushier.qpon^
-||pheenecs.com.ua^
 ||phellumunused.cfd^
 ||philiculitis.qpon^
 ||phkfjfnsnhfqe.website^
@@ -125367,7 +125109,6 @@ y0utube.com.mx
 ||phlorolminever.cfd^
 ||pho.so
 ||phonalodinian.shop^
-||phonecloud.website^
 ||phonsmidgen.qpon^
 ||phoseande.qpon^
 ||photo.*.html^
@@ -125416,7 +125157,6 @@ y0utube.com.mx
 ||pilotedtunner.cfd^
 ||pilzqvuhqfxew.website^
 ||pimkctwcvfhvn.space^
-||pin-up.casino^
 ||pinco225.win^
 ||pinduoduo.*^
 ||pinesapmitring.help^
@@ -125485,11 +125225,6 @@ y0utube.com.mx
 ||plao.1921obfz.vip^
 ||plasticinlaw.cfd^
 ||platform.pubadx.one^
-||plausible.godot.foundation^
-||plausible.intelego.pe^
-||plausible.kemnaker.go.id^
-||plausible.lingxi.center^
-||plausible.saostar.vn^
 ||play.789club.sx^
 ||play.bay789.life^
 ||play.fa88.tel^
@@ -125543,7 +125278,6 @@ y0utube.com.mx
 ||plumiervills.help^
 ||plumpytitians.cfd^
 ||plushd.bio^
-||plx.tukif.porn^
 ||plxduievuehvu.website^
 ||plxrafpdsvxyu.website^
 ||pm5n5lns.um2pcx.quest^
@@ -125694,6 +125428,7 @@ y0utube.com.mx
 ||prevoidfustee.qpon^
 ||prevoterfb.qpon^
 ||prevotmobile.shop^
+||prhykyumvljjx.space^
 ||priapichoya.qpon^
 ||priapiclochy.rest^
 ||price.ua^
@@ -125758,6 +125493,7 @@ y0utube.com.mx
 ||psgtmjbcngxdv.website^
 ||psoricdiver.cfd^
 ||psstlexica.qpon^
+||psuqmrizfafci.website^
 ||psvblociwyfzx.website^
 ||pswaplanat.digital^
 ||psxsyzflvppte.space^
@@ -125772,14 +125508,12 @@ y0utube.com.mx
 ||ptveoqlsfzvxd.website^
 ||puabhxebvxluh.space^
 ||pub88.win^
-||pubapi.ticketmaster.com.mx^
 ||pubend81372.vip^
 ||pubghio.fun^
 ||public1266.fun^
 ||publicimpondo.cfd^
 ||publika.az^
 ||publisher.freerider.ro^
-||pudding.studio^
 ||pudgygob.world^
 ||puefknpdsruum.website^
 ||pueowjofhubvq.space^
@@ -125791,7 +125525,6 @@ y0utube.com.mx
 ||pujamenials.help^
 ||pujlcvkvcnhks.space^
 ||pullerscaneton.life^
-||pulsero.shop^
 ||pulsersaristoi.qpon^
 ||pumpmenrestage.rest^
 ||punchytitties.rest^
@@ -125812,7 +125545,6 @@ y0utube.com.mx
 ||push.knd.ro^
 ||push.world^
 ||pushit.work^
-||pushmeup.art^
 ||pussiesactives.shop^
 ||pusslyoxalato.help^
 ||pussyspace.^
@@ -125897,8 +125629,10 @@ y0utube.com.mx
 ||qctltbddoojgy.website^
 ||qcwectnsirmoe.website^
 ||qcxavhaxbsdie.space^
+||qdslnslohsisa.space^
 ||qdsogzlxcrgtg.space^
 ||qdvfzslnkahdn.space^
+||qdzspuqzdjyiy.space^
 ||qebgcdcjr000.fun^
 ||qehlpxpuhbxon.space^
 ||qejfjnckgfury.space^
@@ -126043,11 +125777,11 @@ y0utube.com.mx
 ||qspylmhnisdrq.space^
 ||qsrvzbuhumwow.website^
 ||qsvbi.space^
-||qtduox.shop^
 ||qtgfeyhcqcrhx.space^
 ||qtjlciojkhkfl.website^
 ||qtnljylmjmwpz.website^
 ||qtocttskrpfzi.space^
+||qtrommulyiytv.website^
 ||qtroytj33.fun^
 ||qtvjpisthvezx.website^
 ||quakilyporite.cfd^
@@ -126057,7 +125791,6 @@ y0utube.com.mx
 ||quarredirride.help^
 ||quarreltopped.help^
 ||quatuorkebob.help^
-||quayeduntwine.shop^
 ||qubbitkwznett.space^
 ||queachhewing.qpon^
 ||quellercrises.qpon^
@@ -126123,7 +125856,6 @@ y0utube.com.mx
 ||qydglzrnpltna.website^
 ||qyh.j3b4m3g8.work^
 ||qymdagqeorsol.space^
-||qyreqm.shop^
 ||qyule.fun^
 ||qyun.vip^
 ||qyxqrwpxdvtzy.space^
@@ -126310,7 +126042,6 @@ y0utube.com.mx
 ||reiveexclave.help^
 ||rekickgigger.cfd^
 ||reklama.lv^
-||reklama.wisdom.bg^
 ||rekord.az^
 ||relastcist.cfd^
 ||relaxesgyrocar.help^
@@ -126366,7 +126097,6 @@ y0utube.com.mx
 ||residelungful.cfd^
 ||resinktikur.cfd^
 ||resort1266.fun^
-||rest.comfy.ua^
 ||restampharrows.cfd^
 ||resurgevallar.world^
 ||resurgewoodwax.rest^
@@ -126379,15 +126109,12 @@ y0utube.com.mx
 ||retraindatsuns.qpon^
 ||retrimsrohangunners.cfd^
 ||retrosowenian.shop^
-||retrostage.shop^
 ||retwineroncos.qpon^
 ||reubinlets.help^
 ||reusrtmgoxllr.website^
-||revanced.art^
 ||revercosta.shop^
 ||revertsskimmia.shop^
 ||revisorlogout.help^
-||revistas.tec.ac.cr^
 ||revoke1266.fun^
 ||revokejav128.fun^
 ||rewardjav128.fun^
@@ -126396,7 +126123,6 @@ y0utube.com.mx
 ||rewindcurine.cfd^
 ||rewovenentonic.help^
 ||rewrwrt4.fun^
-||rezina-diski.com.ua^
 ||rf.tm
 ||rfcrdazxkywlw.space^
 ||rfhdiykjbiyba.space^
@@ -126417,7 +126143,6 @@ y0utube.com.mx
 ||rhaphekrait.qpon^
 ||rhcaqqznvkpji.space^
 ||rheboksheroner.cfd^
-||rhebus.works^
 ||rhedaeteri.qpon^
 ||rhgycbyetzlqv.website^
 ||rhizomapatrick.rest^
@@ -126481,10 +126206,8 @@ y0utube.com.mx
 ||rixezmpshxviy.space^
 ||rixyceruses.world^
 ||rjbpvxjzstydt.space^
-||rjfnnnoc.win^
 ||rjfof7xftl9f2ol8yl33.cfd^
 ||rjmyezxkxapco.website^
-||rjpstr.shop^
 ||rjykjiitsaoyw.space^
 ||rkdpzcdehop.fun^
 ||rkfcufx39zhvi91.rest^
@@ -126532,6 +126255,7 @@ y0utube.com.mx
 ||roeyaphodi.help^
 ||roeymarara.rest^
 ||roggledanaid.help^
+||rohtx3k1qmrqzi4.rest^
 ||rokjyyqpxwzhp.website^
 ||roks.ua^
 ||romaindurance.rest^
@@ -126580,7 +126304,6 @@ y0utube.com.mx
 ||rowtmondes.cfd^
 ||roxieguru.qpon^
 ||royalechelon.help^
-||royaura.shop^
 ||rozup.ir^
 ||rpbzgqpanncst.website^
 ||rpfcbxzcycpgz.website^
@@ -126639,7 +126362,6 @@ y0utube.com.mx
 ||rukurhxlilmwh.website^
 ||rule34.xxx^
 ||ruledlyas.qpon^
-||rum.u-team.by^
 ||rum39bxk.fun^
 ||rummeslansat.help^
 ||rundelpolyol.cfd^
@@ -126654,7 +126376,6 @@ y0utube.com.mx
 ||rvanquuezropi.website^
 ||rvijxxhfcmjtd.space^
 ||rviqayltwu.love^
-||rvv3.pdnegocios.cl^
 ||rvvmynjd.love^
 ||rvxakxeysxxnv.space^
 ||rvybbvrixxwyb.website^
@@ -126686,7 +126407,6 @@ y0utube.com.mx
 ||s.guiheng.wang^
 ||s.id^
 ||s.octoberads.space^
-||s.pu.go.id^
 ||s.yimg.*^
 ||s08x.yl.ag^
 ||s26bet.ltd^
@@ -126724,11 +126444,9 @@ y0utube.com.mx
 ||sailorjav128.fun^
 ||sakyyfqmtgldg.website^
 ||salatcenoby.help^
-||salescobbing.shop^
 ||salidzini.lv^
 ||salitedhendly.help^
 ||saljfnxhikwwz.website^
-||salkic.co.ba^
 ||salrnflgyvntw.website^
 ||saltagruelly.cfd^
 ||saltanthankies.help^
@@ -126743,7 +126461,6 @@ y0utube.com.mx
 ||sams.com.mx^
 ||samtykker.agm.as^
 ||samuintypical.help^
-||samuraistudio.com.mx^
 ||samvip.bet^
 ||samwjxrnttefu.space^
 ||sana.sy^
@@ -126815,7 +126532,6 @@ y0utube.com.mx
 ||schain.group^
 ||schappebopyrid.qpon^
 ||scherzocandyh.shop^
-||school.obec.go.th^
 ||schuitspimenta.cfd^
 ||schutecahnite.qpon^
 ||schwarzcarlock.qpon^
@@ -126911,7 +126627,6 @@ y0utube.com.mx
 ||sengiprexes.cfd^
 ||sensateinpour.cfd^
 ||sensohellers.life^
-||sensors.h5.xed.plus^
 ||sentry.hetzner.company^
 ||sentry.kontur.host^
 ||seo.tm
@@ -126956,13 +126671,11 @@ y0utube.com.mx
 ||sgazxwpurrfsy.space^
 ||sgegie.fun^
 ||sgtm.arcelik.com.tr^
-||sgtm.beko.com.tr^
 ||sgtm.craftlands.host^
 ||sgtm.elgiganten.dk^
 ||sgtm.fairmont.^
 ||sgtm.fashionunited.^
 ||sgtm.harald-nyborg.dk^
-||sgtm.htzone.co.il^
 ||sgtm.koctas.com.tr^
 ||sgtm.wimdu.^
 ||sh96nf.vip^
@@ -127105,11 +126818,9 @@ y0utube.com.mx
 ||sinoperstriped.shop^
 ||sirisextatic.help^
 ||siseterral.qpon^
-||site-p2p-ads.tngdigital.com.my^
 ||site.flashx.^
 ||sitrepfreaky.help^
 ||situpsunleft.shop^
-||six.net.pk^
 ||sixu.life
 ||siyvxnnrigoxv.website^
 ||siz3wxt8p.shop^
@@ -127200,7 +126911,6 @@ y0utube.com.mx
 ||slopedtoffies.help^
 ||sloperswhens.qpon^
 ||slotino.bg^
-||slovenskolekaren.sk^
 ||slowbeetle.cfd^
 ||slowfulfoujdar.help^
 ||slslkeszupdwl.space^
@@ -127219,15 +126929,11 @@ y0utube.com.mx
 ||smeartagger.cfd^
 ||smemsbyitdrri.website^
 ||smeusedagging.qpon^
-||smi.expert^
 ||smi.pp.ua^
 ||smirchprivacy.shop^
 ||smithyknab.shop^
 ||smlfuxuadpsbw.space^
 ||smlrhjigyxnmt.website^
-||smove.city^
-||smptrffc.fyi^
-||smtijogja.sch.id^
 ||smvuvscjqofbm.website^
 ||smykirfgsmfpl.space^
 ||smzgftbxpxcxv.store^
@@ -127343,9 +127049,9 @@ y0utube.com.mx
 ||spignelwide.qpon^
 ||spilnu.dk^
 ||spinandwin.casino^
+||spinedblowth.cfd^
 ||spinknappers.help^
 ||spinkpooder.shop^
-||spinna.shop^
 ||spinoffevirato.cfd^
 ||spintrytherial.shop^
 ||spiral.world^
@@ -127362,7 +127068,6 @@ y0utube.com.mx
 ||sponginarist.cfd^
 ||sponsored-ads-eu.amazon.ae^
 ||sponsored-ads-eu.amazon.com.tr^
-||sponsored-ads-eu.amazon.sa^
 ||sponsored-ads.amazon.com.mx^
 ||spoofedwhitey.shop^
 ||spookstropin.qpon^
@@ -127457,7 +127162,6 @@ y0utube.com.mx
 ||stashedbhumij.life^
 ||stat.^
 ||stat.its.porn^
-||stat.pornobolt.vip^
 ||stat.re^
 ||stat.rule34.art^
 ||stat.tiara.^
@@ -127516,7 +127220,6 @@ y0utube.com.mx
 ||stoopedbedaub.cfd^
 ||stooq.*^
 ||stopensipper.cfd^
-||stoperinbent.world^
 ||storage.fshare.vn^
 ||store.7box.vip^
 ||storm.mg^
@@ -127552,9 +127255,9 @@ y0utube.com.mx
 ||strokedunhurt.help^
 ||stroudspilule.shop^
 ||strtapewithadblock.art^
+||stsylxihypypw.space^
 ||stt6.cfd^
 ||studdydermal.shop^
-||student-rest-onto-trade.run^
 ||studentloan.host^
 ||studzebus.help^
 ||stumblespeel.cfd^
@@ -127564,7 +127267,6 @@ y0utube.com.mx
 ||stw.zone-telechargement.^
 ||stxtocrtgkwgb.website^
 ||styanet.rest^
-||stylearena.store^
 ||stylusanswer.help^
 ||su.pr^
 ||su789.win^
@@ -127582,7 +127284,6 @@ y0utube.com.mx
 ||subsalefurrowy.qpon^
 ||subseptmaint.shop^
 ||subsidesmuglypails.qpon^
-||subsworker.bid^
 ||subwardidym.help^
 ||succahsflotsam.cfd^
 ||succousgrowths.qpon^
@@ -127638,10 +127339,8 @@ y0utube.com.mx
 ||suqhhoywdpvly.space^
 ||surculisiwan.digital^
 ||surfaceunvest.help^
-||surfy.space^
 ||survbrahma.qpon^
 ||surviewoath.qpon^
-||susmovies.lol^
 ||susurrmucific.qpon^
 ||suttenbattish.cfd^
 ||suttinaldrin.shop^
@@ -127686,7 +127385,6 @@ y0utube.com.mx
 ||swhaukkkcokrv.space^
 ||swidgeromper.help^
 ||swifter.tips
-||swirlstousy.shop^
 ||switch1266.fun^
 ||swiveiba.qpon^
 ||swizzlebuckone.cfd^
@@ -127696,7 +127394,6 @@ y0utube.com.mx
 ||swungenkotylos.help^
 ||swwmskezpygym.website^
 ||sxbiqbcoqqjud.website^
-||sxgeo.city^
 ||sxjvnyieakqua.website^
 ||sxqxvcymtiwxo.space^
 ||sxyafktbljyuq.store^
@@ -127735,7 +127432,6 @@ y0utube.com.mx
 ||t.pixai.art^
 ||t.snaptrckr.fun^
 ||t.tt
-||t.wivowu.my^
 ||t11.store
 ||t13.cl^
 ||t1g6zmv7lw9k1wfk.cfd^
@@ -127835,7 +127531,6 @@ y0utube.com.mx
 ||tappetshindig.rest^
 ||tapplay.vip^
 ||tapvigai.property^
-||tarciontrip.pineapple.page^
 ||tarkhandoled.help^
 ||tarlikehirer.help^
 ||tarokajar.qpon^
@@ -127871,7 +127566,7 @@ y0utube.com.mx
 ||tclcc1bog2lrph.rest^
 ||tcz.name
 ||tdbvqojmutjqt.website^
-||tdska.cfd^
+||tdopeofamsccp.website^
 ||tdtc.fun^
 ||tdtc.vn^
 ||tduenkq839.shop^
@@ -127883,7 +127578,6 @@ y0utube.com.mx
 ||teatimestrati.help^
 ||tebbetservile.shop^
 ||tebtfljxiwmwj.space^
-||techinnovhub.co.za^
 ||teddingupsun.rest^
 ||teenporno.xxx^
 ||teenpornvideo.fun^
@@ -127894,26 +127588,14 @@ y0utube.com.mx
 ||teindsgoal.cfd^
 ||tejcdxy640.vip^
 ||teleishlocks.qpon^
-||telemetry.astro.build^
-||telemetry.attio.build^
-||telemetry.avail.so^
-||telemetry.dataplatform.simple.life^
-||telemetry.dataplatform.zing.coach^
-||telemetry.onestate.space^
-||telemetry.rapido.bike^
-||telemetry.savvy.security^
-||telemetry.scratch.mit.edu^
 ||telemetry.tcbs.com.vn^
 ||telesmdhal.help^
 ||telosstopen.help^
-||temp-plausible.anijgu.easypanel.host^
 ||tempguttled.shop^
 ||templates_pc^
 ||tempr.email^
 ||tenablegliosis.qpon^
 ||tenantbororo.help^
-||tenderjav128.fun^
-||tennisi.kz^
 ||tenrecgange.cfd^
 ||tensivemoonman.cfd^
 ||tentersforesay.qpon^
@@ -127961,7 +127643,6 @@ y0utube.com.mx
 ||thaveforst.help^
 ||thbksnboyjnoh.website^
 ||thctu74f2w29rhzfekt7z6p4p.rest^
-||the-gentleman.store^
 ||the8l9vhfej1hz89be3ncuj6uhlil6q.cfd^
 ||thead.cat^
 ||theavesuppage.shop^
@@ -127972,7 +127653,6 @@ y0utube.com.mx
 ||theftssavine.qpon^
 ||thegay.porn^
 ||thegreatesthits.^
-||theharityhild.buzz^
 ||theorboswear.help^
 ||thepiratebay.^
 ||thepiratebay.*^
@@ -128043,7 +127723,6 @@ y0utube.com.mx
 ||tigrinevikings.world^
 ||tigualuffs.shop^
 ||tik.porn^
-||tikstok.fun^
 ||tiltersresidua.shop^
 ||timaliatempos.shop^
 ||timeout.*^
@@ -128070,7 +127749,6 @@ y0utube.com.mx
 ||titoismparsing.rest^
 ||tiv1.am^
 ||tixj61yrbwqwijxcn.cfd^
-||tj-tracker.store^
 ||tj.03715.vip^
 ||tj.allcdn.vip^
 ||tj.com.day^
@@ -128083,7 +127761,6 @@ y0utube.com.mx
 ||tjqqyyzertwnt.space^
 ||tjr6byplbt62yke7.euj1nuwx4233c38cvk19ukle.cfd^
 ||tjzgovuquwlji.website^
-||tk-gregoric.si^
 ||tk777.vip^
 ||tk88.game^
 ||tk88.store^
@@ -128146,10 +127823,8 @@ y0utube.com.mx
 ||tool.cx
 ||tool.lu
 ||toolkitpondage.cfd^
-||toolmatrix.plus^
 ||top-performance.best^
 ||top.bet20.bet^
-||top.rodeo^
 ||top.zp.ua^
 ||top88.vip^
 ||topcasinos.bg^
@@ -128179,7 +127854,6 @@ y0utube.com.mx
 ||tossutrhinion.rest^
 ||tostervar.shop^
 ||tot.name
-||totally-not.spyware.lol^
 ||totalsportek.*^
 ||totedasouth.qpon^
 ||totemslakesky.cfd^
@@ -128207,7 +127881,6 @@ y0utube.com.mx
 ||tqptpnliwnkcy.space^
 ||tr.freeporno.xxx^
 ||tr.minval.az^
-||tr.redporn.porn^
 ||tracemonitorusa.life^
 ||track.liangka.vip^
 ||track.opentable.com.mx^
@@ -128223,7 +127896,6 @@ y0utube.com.mx
 ||tracking.shopee.com.my^
 ||tracking.shopee.vn^
 ||tracking.the.tube^
-||tracking.zalopay.vn^
 ||trafficbc3.host^
 ||training.graduateschool.edu^
 ||trajetegotist.shop^
@@ -128474,16 +128146,14 @@ y0utube.com.mx
 ||uflzxeqahgtvk.website^
 ||ugbqsahpyjuvq.website^
 ||ugfntiwdellss.space^
-||ugfxrl.shop^
 ||ugkholrbztybq.space^
 ||uglybalei.help^
 ||ugqaxpmhdveiv.website^
 ||ugtmlggwfkdts.website^
 ||ugvqmkkvqrjnx.space^
+||uhaqlawtipokn.website^
 ||uhauhqiuqbjoq.website^
 ||uhdobftqarvye.space^
-||uhealth.care^
-||uhrenkunst.shop^
 ||uhsfoists.help^
 ||uhtqrghdgtgvp.website^
 ||uhuf56.fun^
@@ -128505,7 +128175,6 @@ y0utube.com.mx
 ||ukbltxlyrcxww.website^
 ||ukgqdpte.asia^
 ||ukopbbbacvppg.website^
-||ukrshoping.shop^
 ||ukwuq9rqcmlrxrq7.rest^
 ||ukzeylzjxqvjc.website^
 ||ulaulaholiest.rest^
@@ -128517,8 +128186,6 @@ y0utube.com.mx
 ||ulymhoghpradf.space^
 ||um7emj5gq57nqwm6qk4q6vv3h8x.cfd^
 ||umami.*^
-||umami.carasso-nadlan.co.il^
-||umami.oyo.cool^
 ||umbrelthrifty.shop^
 ||umbrereforrard.qpon^
 ||umgdnydrttdpl.space^
@@ -128580,9 +128247,7 @@ y0utube.com.mx
 ||union.^
 ||uniowarvvdsto.website^
 ||uniqueshirt.shop^
-||uniswap.ro^
 ||unitagepuniturpaiking.cfd^
-||universidad.uflo.edu.ar^
 ||unjoinesprit.help^
 ||unjtzpdbpwmkv.website^
 ||unlaidsixing.help^
@@ -128598,7 +128263,6 @@ y0utube.com.mx
 ||unmistgenoms.world^
 ||unmistspeeded.shop^
 ||unmoraldisband.cfd^
-||unmuha.ac.id^
 ||unnoblynutatedejected.help^
 ||unoptedtapuyan.cfd^
 ||unpacksminas.world^
@@ -128701,7 +128365,6 @@ y0utube.com.mx
 ||usablebossier.rest^
 ||usaraexturb.cfd^
 ||usbetting.co.za^
-||uscc.ua^
 ||usdt11.vip^
 ||usedthoric.cfd^
 ||useholdcaaba.shop^
@@ -128799,7 +128462,6 @@ y0utube.com.mx
 ||vanillasurfing.shop^
 ||vannedslued.help^
 ||vannicflench.cfd^
-||vao.cdn.trm.digital^
 ||vao789club.win^
 ||vaobet.win^
 ||varnasputoutsinfamy.cfd^
@@ -128838,34 +128500,30 @@ y0utube.com.mx
 ||vebo.bet^
 ||vectioncorpse.digital^
 ||vectionturmitassoin.cfd^
-||veen.world^
 ||vefwoycijwbkr.store^
 ||veinaldink.cfd^
 ||veinletscamper.help^
 ||velafamed.cfd^
 ||velduncinus.cfd^
 ||veloutecaite.shop^
+||veltrix1.space^
 ||velvetybowtie.rest^
-||venaescag.shop^
 ||veneralthecla.qpon^
 ||venienceilo.fun^
 ||venitegode.qpon^
 ||vente-unique.*^
 ||vepssafi.cfd^
 ||ver.gratis^
-||ver.grypowls.sbs^
 ||verandasandbag.cfd^
 ||vercorslet.rest^
 ||vernagefiacres.rest^
 ||versteether.cfd^
-||vertizontal.ro^
 ||ververboding.help^
 ||ververmajashackney.cfd^
 ||veryt111.fun^
 ||vespidbornean.help^
 ||vesti.az^
 ||vesti.lv^
-||vetedo.my^
 ||vetxanh.edu.vn^
 ||vexesunpay.help^
 ||vfdvdfv77.fun^
@@ -128901,11 +128559,9 @@ y0utube.com.mx
 ||vicoitegustoso.cfd^
 ||victimenmesh.life^
 ||vid.media.cm^
-||video-ad.stgy.ovh^
 ||videoassets.antenaplay.ro^
 ||videoclick.^
 ||videoclik.^
-||videolink.host^
 ||vider.*^
 ||vidnest.*^
 ||vidryfanglet.qpon^
@@ -128941,7 +128597,6 @@ y0utube.com.mx
 ||vivaldi.*^
 ||vivariarageous.help^
 ||vivatube.*^
-||vividwinter.shop^
 ||vivifz.vip
 ||vivoyuncdn.vip^
 ||vjfdzpydatidx.space^
@@ -128972,7 +128627,6 @@ y0utube.com.mx
 ||vnbrcfmdndguz.life^
 ||vnebyz58g8nrpolgk1.rest^
 ||vnhmdeyzvmgho.love^
-||vnmfvnkd.win^
 ||vnq2i.j9n1c8r6.work^
 ||vnq8.win^
 ||vnsodo.fun^
@@ -128982,7 +128636,6 @@ y0utube.com.mx
 ||volagemixtec.shop^
 ||volarocypode.cfd^
 ||voletcobras.world^
-||volna.casino^
 ||voltejunonia.qpon^
 ||volumedwidegap.qpon^
 ||vona.xin
@@ -129159,7 +128812,6 @@ y0utube.com.mx
 ||wasm.stream^
 ||waspnaut.cfd^
 ||wasteresents.shop^
-||watchmark.shop^
 ||watchonlinemovies.com.pk^
 ||watchseries.*^
 ||waterkeeled.help^
@@ -129172,7 +128824,6 @@ y0utube.com.mx
 ||wayfareyomin.qpon^
 ||waylon.wang
 ||waymatevelamen.life^
-||wazbee.casino^
 ||wb3399.vip
 ||wbjjeykbznavr.space^
 ||wbkokfwzpfuai.life^
@@ -129183,7 +128834,6 @@ y0utube.com.mx
 ||wcdn.vbet88.fun^
 ||wcgmlydzhwfgq.website^
 ||wcog4iiuz4o8tjb53p.rest^
-||wcpkckormoghp.website^
 ||wcwijbtqgajxf.global^
 ||wdff.buzz^
 ||wdkmoxkhtnkss.space^
@@ -129212,7 +128862,6 @@ y0utube.com.mx
 ||web18781.hubhubhub.name^
 ||web3.xin
 ||webads.*^
-||webanalytics.sumtotal.host^
 ||webapi.*^
 ||webapi.dantri.com.vn^
 ||webassembly.stream
@@ -129223,8 +128872,6 @@ y0utube.com.mx
 ||webs.so
 ||webserver.one^
 ||websphonedevprivacy.autos^
-||webstatistik.lintoo.dk^
-||webstats.nbtc.go.th^
 ||webuy.vip
 ||wecfgy36.shop^
 ||wechat.ba
@@ -129244,11 +128891,9 @@ y0utube.com.mx
 ||wenhui.space
 ||wenjuan.ltd
 ||wenjunjiang.win
-||wep.wf^
 ||weqnjiiqjtrup.website^
 ||weryt111.fun^
 ||weskitstoiler.help^
-||westhavenuniv.edu^
 ||wetbirdchats.cfd^
 ||wetbirdchkalik.shop^
 ||wetv.vip
@@ -129275,7 +128920,6 @@ y0utube.com.mx
 ||whapsbausond.help^
 ||wharfedreduced.cfd^
 ||whasewasabi.qpon^
-||whatismyip.uno^
 ||whcvljzpppddr.website^
 ||wheelerabacay.life^
 ||whehiadsxfhlt.space^
@@ -129288,7 +128932,6 @@ y0utube.com.mx
 ||whinedlibertytriers.cfd^
 ||whippedsines.help^
 ||whisheszinke.cfd^
-||whisketwraps.rest^
 ||whitenshektare.qpon^
 ||whitewolf.space
 ||whjrtaifzetxn.website^
@@ -129316,7 +128959,6 @@ y0utube.com.mx
 ||winbet.bg^
 ||winbetaffiliates.bg^
 ||windelidlety.qpon^
-||windows.day^
 ||winds.red
 ||wineworld.vip
 ||winfulrevving.cfd^
@@ -129332,7 +128974,6 @@ y0utube.com.mx
 ||wintlesdeiced.cfd^
 ||winvn.bet^
 ||winvn.vip^
-||winwin.bet^
 ||winzesmooring.qpon^
 ||wirierattila.shop^
 ||wiringswyes.shop^
@@ -129350,7 +128991,6 @@ y0utube.com.mx
 ||wjbphrbiisvag.space^
 ||wjghanngbilui.space^
 ||wjqtqnstdthrb.website^
-||wjvgsj.shop^
 ||wjw4crqngk5l8tfqg2nku4.cfd^
 ||wk11ukgn9qgu21.rest^
 ||wkawzrhphlbus.space^
@@ -129501,7 +129141,6 @@ y0utube.com.mx
 ||www.8xbet.fun^
 ||www.99vn.bet^
 ||www.abcislands.ag^
-||www.admixer.academy^
 ||www.aitongji.vip^
 ||www.allhorseracing.ag^
 ||www.allyoubet.ag^
@@ -129573,8 +129212,6 @@ y0utube.com.mx
 ||www.kubet88.fun^
 ||www.latloto.lv^
 ||www.legolas.bet^
-||www.linkbrawlstars.store^
-||www.linkweb.ro^
 ||www.loterie.lu^
 ||www.loterie.ma^
 ||www.loterija.si^
@@ -129582,7 +129219,6 @@ y0utube.com.mx
 ||www.loto.ro^
 ||www.lowvig.ag^
 ||www.lutrija.rs^
-||www.magazinuldecase.ro^
 ||www.magnum4d.my^
 ||www.manoloto.lt^
 ||www.maxbet.id^
@@ -129596,7 +129232,6 @@ y0utube.com.mx
 ||www.mt144ti.vip^$important
 ||www.multiup.*^
 ||www.nationallottery.co.za^
-||www.netsuccess.sk^
 ||www.nlb.lk^
 ||www.oddsmaker.ag^
 ||www.olybet.lt^
@@ -129607,12 +129242,10 @@ y0utube.com.mx
 ||www.peoplemagazine.co.za^
 ||www.perkamkopa.lv^
 ||www.playersonly.ag^
-||www.pohodo.sk^
 ||www.presstv.ir^
 ||www.promotions.epic.partners^
 ||www.qqssvyk368.vip^
 ||www.redzonesports.bet^
-||www.securemed.shop^
 ||www.sinbet.vip^
 ||www.sky88.win^
 ||www.skybook.ag^
@@ -129632,10 +129265,8 @@ y0utube.com.mx
 ||www.tipos.sk^
 ||www.top88.fun^
 ||www.topcatsports.ag^
-||www.topoloveni.ro^
 ||www.topsport.lt^
 ||www.toto.bg^
-||www.triglavtek.si^
 ||www.ttr.casino^
 ||www.twinsbet.lt^
 ||www.usbetting.co.za^
@@ -129679,7 +129310,6 @@ y0utube.com.mx
 ||wycc.porn^
 ||wychesmeeter.digital^
 ||wyidsbopxpifd.love^
-||wyrmkinsolar.shop^
 ||wysww.vip
 ||wyydsb.xin
 ||wzfw.ltd
@@ -129841,7 +129471,6 @@ y0utube.com.mx
 ||xocdiaonline.cool^
 ||xogsianekalgsysv.domaislpi5732.mom^
 ||xoqod.sbs^
-||xoslotz.agency^
 ||xoso66.life^
 ||xoso66.men^
 ||xoso66.one^
@@ -129879,7 +129508,6 @@ y0utube.com.mx
 ||xtapes.porn^
 ||xtbgpyxtprqqr.space^
 ||xtczzugwsnucb.website^
-||xtdqvn.shop^
 ||xtdztyiqyhmet.global^
 ||xtftkmthhfjpy.website^
 ||xtits.*^
@@ -129909,7 +129537,6 @@ y0utube.com.mx
 ||xwowmgmlnzrsk.website^
 ||xwxdrtxjwrkqe.store^
 ||xxirchauff.qpon^
-||xxvsxn.shop^
 ||xxx18.uno^
 ||xybev.9m5kp8e5r687jn1w3t3.cfd^
 ||xycycwtdnmhex.website^
@@ -129971,7 +129598,6 @@ y0utube.com.mx
 ||yaoying.vip
 ||yapockwaters.help^
 ||yapsterpaviesneger.cfd^
-||yarelymarker.help^
 ||yasmakshereby.qpon^
 ||yau-awards.science
 ||yawjmjhvpqfpu.website^
@@ -130029,7 +129655,6 @@ y0utube.com.mx
 ||yh.amyhbuuis.vip^
 ||yh.amyhlmbvvp.vip^
 ||yh.gdian.care^
-||yh.rostelshute.shop^
 ||yh.yanghetp.vip^
 ||yh300.vip
 ||yh300.vip^
@@ -130072,7 +129697,6 @@ y0utube.com.mx
 ||ykvxdyipezupr.space^
 ||ykwoclkfabviu.space^
 ||yl-sooippd.vip^
-||ylad.ir^
 ||ylhwjxnnxbkgz.website^
 ||ylkdnoibgafda.website^
 ||ylll1558.bosios23pi.vip^
@@ -130335,7 +129959,6 @@ y0utube.com.mx
 ||zhuoyue.wang
 ||zhuye.kim
 ||zhwx.yl.ag^
-||zibenbang.vip^
 ||zics.8jclpk.shop^
 ||ziegerwelfare.qpon^
 ||ziixnyrmrudmn.website^
