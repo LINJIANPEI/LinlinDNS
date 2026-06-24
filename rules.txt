@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-24 21:10:01（北京时间）
+! Version: 2026-06-25 00:06:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68985
+! Total count: 68990
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -21370,6 +21370,7 @@ anime-loads.org##.skycontent
 anime-masters.com##.banner-close
 anime-masters.com##center > p > a[target="_blank"] > img
 anime-masters.com##p[class^="center_"] > a[target="_blank"] > img
+anime-odcinki.pl##.ao-ad-wrapper
 anime-odcinki.pl##.region-sidebar-second > .widget_text > .textwidget > center > div[id][style="width:300px;height:250px;"]:empty
 anime-odcinki.pl##a[href="https://e-neko.pl/"] > img
 anime-odcinki.pl$$script[tag-content="zfgloadedpushopt"][min-length="30000"][max-length="50000"]
@@ -36365,7 +36366,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.cn,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.je,google.jo,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.vg,google.vu,google.ws##div[role="navigation"] + c-wiz > div > .kxhcC
 google.com###belowsb
 google.com###bres
-google.com###center_col > #gevUs > #topstuff
+google.com###center_col > #gevUs > #topstuff:has(> div[class] > div[class] > h2 + ol[style])
 google.com###fbar
 google.com###footer
 google.com###sfooter
@@ -36627,6 +36628,8 @@ grazia-magazin.de##.safeSpaceForClose
 graziadaily.co.uk##.adContainer--inline
 graziadaily.co.uk,livefortheoutdoors.com##.article_adContainer__qr_Hd
 grdf.fr###ckieBnr_banner
+greasyfork.org###installation-instructions-modal-content > .ad-marker
+greasyfork.org###installation-instructions-modal-content > .ad-marker + a[target="_blank"] > img
 greasyfork.org##.ad-entry
 greatandhra.com##.AdinHedare
 greatandhra.com##._201223_
@@ -52864,6 +52867,7 @@ pornmega.com##.list-videos > center > a[href*="&utm_campaign="]
 pornmeka.com##.spot_wrapper
 pornmike.com##aside.module:has(> .container > .position-relative > .video-grid a[href^="https://go.mavrtracktor.com/"])
 pornmium.com,mlsbd.shop,esports.net,10hd.xyz,vivahentai4u.net,dmerharyana.org,learncomputerscienceonline.com,animationxpress.com,coursesxpert.com,javhoho.com,thefappeningblog.com,aagmaal.com,playsexgames.xxx###text-3
+pornmz.com##.nina-final-layer
 porno-usa.com##img[alt="chaturbate"]
 porno247.net###spot-player
 porno247.net##.top-spot
@@ -53049,7 +53053,6 @@ pornx.to##.above-single-player
 pornx.to##.ads-above-single-player
 pornx.to##.elementor-element-e8dcf4f
 pornxbox.com##.opt
-pornxp.org##.player_right
 pornxs.com##.video__container > .video__inner > div > div[data-place^="ntv"]
 pornxs.com##div[data-ad-index-parent]
 pornxs.com##div[id^="div_theAd"]
@@ -53853,6 +53856,7 @@ pxedt.net##.index_nav_juzhong
 pxedt.net##.pf_dw
 pxhere.com##.hub-photo-main > .mb10[style="height: 90px;"]
 pxhere.com##.policy-info
+pxp.farm,pxp.porn,pornxp.org##.player_right
 py.cn##.index-advert
 py.cn##.right-pops
 py91.net##.widget_textads
@@ -57228,6 +57232,7 @@ skapiec.pl##.cookies-rwd
 skardu.pk,iumkit.net,latinluchas.com,zegtrends.com,sysguides.com##body > .wrapper + div[id][class*=" "]
 skargards.com###cc_dialog
 skat-spielen.de###cookieTest
+skateboarding.com##.header-ad-slot
 skatteverket.se##skv-cookie-banner, fin-skv-cookie-banner
 skdd.hr###rgnCookie
 skdesu.com##.inside-article > div.gb-container:has(> center > ins.adsbygoogle)
