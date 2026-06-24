@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-24 07:53:12（北京时间）
+! Version: 2026-06-24 10:06:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69040
+! Total count: 69045
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5878,6 +5878,7 @@
 @@||ams.cdn.arkadiumhosted.com/assets/arena-4/arena/heap/advertisements.js$script,domain=jeux.lemonde.fr
 @@||amsarkadium-a.akamaihd.net/assets/*/arena/heap/advertisements.js$domain=nydailynews.com
 @@||amtonline.com.br^$generichide
+@@||an-sm.naughtycdn.com/js/lti-analytics-*.min.js$domain=members.naughtyamerica.com
 @@||an.facebook.com/v1/instream/vast.xml?placementid=$xmlhttprequest,domain=anime47.com
 @@||an.yandex.ru/jstracer?aab_detect=$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua
 @@||an.yandex.ru/mapuid/*?location=*&jsredir=
@@ -30529,6 +30530,7 @@ down.mdiaload.com##.btn-dow[href*=".html"]
 down.mdiaload.com##.captcha-wrapper + .download-option-btn
 downbank.cn##.speed-downlist
 downbank.cn,greenxf.com###speed-download
+downdetector.com##div[data-service-list-ad]
 downfile.site##img[alt^="Banner"]
 downforeveryoneorjustme.com###asurion
 downforeveryoneorjustme.com###bsa
@@ -42740,6 +42742,8 @@ koerbchen.app##body > flt-glass-pane > flt-scene-host > flt-scene > flt-transfor
 kofc.org##kc-cookie-consent
 kogama.com###main-content div[class]:has(> div[id^="kogama"]:first-child + div[class]:last-child)
 koh-i-noor.cz###EuConsentV2, .modal-backdrop
+koha.net##.reklama_holder
+koha.net##body > div.container:has(> div.d-flex > div.reklame_live)
 kohls.com###PDP_monetization_HL
 kohls.com###PMP_monetization_HL
 kohls.com###kmn-featured-carousel
@@ -59284,6 +59288,7 @@ studytonight.com###body-content > div[style="min-height: 300px;overflow: auto;"]
 studytonight.com##.asc-ads
 studytonight.com##.container-fluid > div.center[style^="min-height:"]
 stuff.co.nz##.between-ad-slot
+stuff.co.nz##.header-container
 stuff.co.nz##.horizontal-ad-slot
 stuff.co.nz##.min-h-\[133px\]
 stuff.co.nz,thepost.co.nz##.horizontal-ad-slot
