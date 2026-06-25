@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-25 21:09:09（北京时间）
+! Version: 2026-06-26 00:13:57（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69013
+! Total count: 69026
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7308,9 +7308,9 @@
 @@||cdn.adsninja.ca/adsninja_worker_caller.js$domain=makeuseof.com|howtogeek.com
 @@||cdn.adsninja.ca/an_sn.js$domain=polygon.com
 @@||cdn.adsninja.ca/api/$domain=polygon.com
-@@||cdn.adsninja.ca/v*/an.js$domain=thegamer.com
-@@||cdn.adsninja.ca/v*/init.js$domain=thegamer.com
-@@||cdn.adsninja.ca/v*/valstream.js$domain=thegamer.com
+@@||cdn.adsninja.ca/v*/an.js$domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
+@@||cdn.adsninja.ca/v*/init.js$domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
+@@||cdn.adsninja.ca/v*/valstream.js$domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
 @@||cdn.adspirit.de/banner/_default/160x600.jpg$domain=streetdir.com|roaddir.com
 @@||cdn.adspirit.de/banner/_default/300x250.jpg$domain=streetdir.com|roaddir.com
 @@||cdn.adspirit.de/banner/_default/468x60.jpg$domain=streetdir.com|roaddir.com
@@ -8492,7 +8492,6 @@
 @@||dashboard.tinypass.com/xbuilder/experience/$domain=cnbc.com
 @@||dashi.163.com^
 @@||data-*.herz-fuer-tiere.de^|
-@@||data.adpresenter.de^$domain=xswiper.com|sexeey.com
 @@||data.adpresenter.de^$domain=xswiper.com|sexeey.com|vidizzy.com
 @@||data.adxcel-ec2.com^$image,domain=laguardia.edu
 @@||data.alicloudccp.com^$stealth,domain=aliyundrive.com
@@ -8687,6 +8686,7 @@
 @@||dirrrtyremixes.com^$generichide
 @@||dirtyship.net/dirtyship/$media,stealth
 @@||disco-api.com^$stealth=3p-auth
+@@||discord.com/api/*/quests/$stealth=useragent
 @@||discord.com^$generichide
 @@||discordapp.com/banners/$image
 @@||discordemoji.com^$generichide
@@ -18079,6 +18079,7 @@
 @@||trip-jam.com/resources/js/adsense.js
 @@||trip.cmbchina.com^$generichide
 @@||tripcentral.ca^$stealth=dpi
+@@||tripo-data.s*-accelerate.amazonaws.com^$stealth=3p-auth,domain=tripo3d.ai
 @@||tritinia.com^$generichide
 @@||trj.valuecommerce.com/vcushion.js
 @@||trk.ecomm.lenovo.com^
@@ -18310,6 +18311,7 @@
 @@||unfriend-app.com^$generichide
 @@||unian.net/player/$stealth=referrer|ip
 @@||unicode.org^$content
+@@||unifiedapicommerce-ca.axs.com/veritix/$stealth=ip
 @@||unimedsorocaba.coop.br^$stealth=dpi
 @@||union-click.jd.com^
 @@||union.bokecc.com/flash/api/
@@ -21311,6 +21313,7 @@ androidpolice.com##.w-pencil-banner
 androidpolice.com##a.no-style[href^="http://andp.lc/"][target="_blank"]
 androidpolice.com##a[href^="https://www.visible.com"][target="_blank"] > img
 androidpolice.com##div[class*="ains-ap2_"] a[class$="_adb"]
+androidpolice.com,babygaga.com,backyardboss.net,carbuzz.com,cbr.com,collider.com,dualshockers.com,footballfancast.com,footballleagueworld.co.uk,gamerant.com,givemesport.com,hardcoregamer.com,hotcars.com,howtogeek.com,makeuseof.com,moms.com,movieweb.com,pocket-lint.com,pocketnow.com,screenrant.com,simpleflying.com,thegamer.com,therichest.com,thesportster.com,thethings.com,thetravel.com,topspeed.com,xda-developers.com###secondary div[id^="sidebar-"]
 androidpolice.com,babygaga.com,backyardboss.net,carbuzz.com,cbr.com,collider.com,dualshockers.com,footballfancast.com,footballleagueworld.co.uk,gamerant.com,givemesport.com,hardcoregamer.com,hotcars.com,howtogeek.com,makeuseof.com,moms.com,movieweb.com,pocket-lint.com,pocketnow.com,screenrant.com,simpleflying.com,thegamer.com,therichest.com,thesportster.com,thethings.com,thetravel.com,topspeed.com,xda-developers.com##.ad-zone-container-sidebar-default
 androidpolice.com,babygaga.com,backyardboss.net,carbuzz.com,cbr.com,collider.com,dualshockers.com,footballfancast.com,footballleagueworld.co.uk,gamerant.com,givemesport.com,hardcoregamer.com,hotcars.com,howtogeek.com,makeuseof.com,moms.com,movieweb.com,pocket-lint.com,pocketnow.com,screenrant.com,simpleflying.com,thegamer.com,therichest.com,thesportster.com,thethings.com,thetravel.com,topspeed.com,xda-developers.com##.ad-zone-sidebar-default
 androidpolice.com,babygaga.com,backyardboss.net,carbuzz.com,cbr.com,collider.com,dualshockers.com,footballfancast.com,footballleagueworld.co.uk,gamerant.com,givemesport.com,hardcoregamer.com,hotcars.com,howtogeek.com,makeuseof.com,moms.com,movieweb.com,pocket-lint.com,pocketnow.com,screenrant.com,simpleflying.com,thegamer.com,therichest.com,thesportster.com,thethings.com,thetravel.com,topspeed.com,xda-developers.com##.ad-zone-sidebar-first
@@ -22201,8 +22204,6 @@ assettoworld.com##.nitro-ads
 associationeconomienumerique.fr###cmp-settings-button
 asspoint.com,babepedia.com,babesandstars.com,dbnaked.com,freeones.com,gfycatporn.com,mansurfer.com,newpornstarblogs.com,ok.porn,porn-star.com,porn.com,porndoe.com,pornhubpremium.com,pornstarchive.com,rogreviews.com,sexyandfunny.com,shemaletubevideos.com,spankbang.com,str8upgayporn.com,the-new-lagoon.com,tube8.com,wcareviews.com,xxxonxxx.com,youporn.com##a[href*=".com/track/"]
 asst-pg23.it###divInformativaBreve
-assume.gguaklar.cc,51cg1.com,51baoliao01.com,91cg1.com###adFloat
-assume.gguaklar.cc,51cg1.com,51baoliao01.com,91cg1.com##.recommend-layer
 assura.ch###__next > div[class] > div[display]
 assurances.groupebpce.com##.modal-backdrop
 assurland.com###consentManagementPlatform, .modal-backdrop
@@ -30592,7 +30593,6 @@ dreammachines.pl###qkies_info, .modal-backdrop
 dreamworks.com##.notice-modal
 dreamworksanimation.com##.dwa-embed-cookie-consent-container
 drednot.io##.shipyard-ad
-dredyson.com###bloghash-scroll-top + div[id][class*=" "]
 dressupmix.com##.banner300x600
 dressupmix.ru,teensgames.ru###adblock_popup
 drevostavitel.cz##a[id^="prevleceni_"]
@@ -36990,6 +36990,8 @@ guthaben.de##.cookie
 gutscheinsammler.de##.gs-privacy-policy-widget
 gv.at###am-cookie, #l42-cc__body
 gvg-glasfaser.de##.Container_CookieHint
+gvhot.net,gvhot.com###adblock-overlay
+gvhot.net,gvhot.com###clickCounterText
 gvm.com.tw###cboxOverlay
 gvm.com.tw###colorbox
 gvm.com.tw##.promotion > .sp-txt
@@ -45395,6 +45397,7 @@ mangaku.blog##.nctr
 mangalong.com##.post_content > div.align-items-center
 mangamelon.com##.layout > .flex > .v-card > div[style="height:280px;"]:not([class]):not([id])
 mangamiso.net##.container > div.v-sheet--outlined
+manganato.gg##.container-chapter-reader > div[class] > a[href^="https://flax.to/"]
 mangaowl.com,037hdd.com##div[id^="ads_"]
 mangapark.net##.ad-page-3x
 mangapark.net##div[claass="ad-970x250"]
@@ -46351,6 +46354,9 @@ miastodzieci.pl##.widget_custom_html > .custom-html-widget > .sw_slider
 miastodzieci.pl##.widget_shwd .weleda
 miastodzieci.pl##body .r_ov
 miastograf.pl##.ui-widget, .ui-widget-overlay
+miastorumia.pl###sidebar #posts_custom_box > .content > a > img
+miastorumia.pl###sidebar > a > img
+miastorumia.pl##.banners
 miauscan.com,hscans.com,mitsmits.com,csharpprogram.com,grasta.net,pokemonmatome.online,shirurin.com,huntersscan.xyz,freemagazinespdf.com,wabetainfo.com##body > script[id] + div[id][class*=" "]
 mic.com##body > div > div[class*=" "]
 michael-martin.de###coo_note
@@ -59252,10 +59258,15 @@ studytonight.com###body-content > div.layout_size
 studytonight.com###body-content > div[style="min-height: 300px;overflow: auto;"]
 studytonight.com##.asc-ads
 studytonight.com##.container-fluid > div.center[style^="min-height:"]
+stuff.co.nz###cw-brand-banner
+stuff.co.nz###fisher-funds-banner
+stuff.co.nz###stuff-to-solve-no-sponsor
+stuff.co.nz###suzuki-sport-section-banner
 stuff.co.nz##.between-ad-slot
 stuff.co.nz##.header-container
 stuff.co.nz##.horizontal-ad-slot
 stuff.co.nz##.min-h-\[133px\]
+stuff.co.nz##div[data-testid="sponsor"]
 stuff.co.nz,thepost.co.nz##.horizontal-ad-slot
 stuff.co.nz,thepost.co.nz,thepress.co.nz,waikatotimes.co.nz##.header-ads-block
 stuff.tv##.c-ad--mpu-bottom
@@ -62004,6 +62015,7 @@ tivis.101vn.com##div[id][style="height: 100px;width:300px;bottom:12px"]
 tivocommunity.com###messageList .messageContent .messageText > .tivoBoxMessage
 tj.xinhuanet.com##.xhdf_num1_col3
 tjrwrestling.net##[ad-slot]
+tkn24.pl,przelom.pl##.baner
 tko.pl##article[class^="post-"] > div[id^="tdi_"] > div.tdc_zone > div.tdc-row > div.vc_row > style + div.vc_column > div.wpb_wrapper > div.vc_row_inner:not(:has(div.td_block_wrap))
 tko.pl##div[id^="nol24-"]
 tl.net###main-content > div[style^="max-width: 740px; height:108px; overflow: hidden; padding:"]
@@ -67697,6 +67709,7 @@ yahoo.com##.js-stream-content > div > div > div > h3 > a[href^="https://hk.promo
 yahoo.com##.js-stream-featured-ad
 yahoo.com##.mx-\[-50vw\]
 yahoo.com##.ntk-ad-item
+yahoo.com##.pointer-events-auto.h-\[91px\]
 yahoo.com##.pointer-events-auto:has(> .ad-container:only-child)
 yahoo.com##.pointer-events-none > .sticky:has(> div[id^="sda-"][id$="-iframe"]:only-child)
 yahoo.com##.searchCenterBottomAds
