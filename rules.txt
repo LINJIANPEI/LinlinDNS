@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-25 07:56:44（北京时间）
+! Version: 2026-06-25 10:33:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 68990
+! Total count: 68996
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -58,6 +58,7 @@
 *$script,third-party,domain=ziperto.com
 *$script,third-party,xmlhttprequest,domain=m.biquge700.com|biquge001.com
 *$script,xmlhttprequest,image,third-party,domain=360lele.cc
+*$script,xmlhttprequest,image,third-party,domain=360lele.cc|fxshu.top
 *$script,xmlhttprequest,third-party,domain=m.1024txt.com
 *$script,xmlhttprequest,third-party,domain=m.niupizhi.net
 *$subdocument,redirect-rule=noopframe,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
@@ -7338,6 +7339,7 @@
 @@||cdn.bewab.co/embed-$subdocument,stealth=referrer
 @@||cdn.bg-gledai.*/embed.php$generichide
 @@||cdn.bg/live/$stealth=referrer
+@@||cdn.bigcrunch.com/ads.js$domain=tvtropes.org
 @@||cdn.bluebillywig.com/apps/player/*/components/admanager.js$domain=eurogamer.net
 @@||cdn.blueconic.net/hearst.js$domain=theridgefieldpress.com|thetelegraph.com|beaumontenterprise.com|bigrapidsnews.com|chron.com|ctinsider.com|ctpost.com|darientimes.com|seattlepi.com|expressnews.com|fuelfix.com|greenwichtime.com|houstonchronicle.com|lakecountystar.com|lmtonline.com|manisteenews.com|michigansthumb.com|middletownpress.com|milfordmirror.com|mrt.com|myjournalcourier.com|myplainview.com|mysanantonio.com|ncadvertiser.com|newstimes.com|nhregister.com|ourmidland.com|recordpatriot.com|registercitizen.com|seattlepi.com|sfchronicle.com|sfgate.com|sheltonherald.com|smallbusiness.chron.com|stamfordadvocate.com|theheraldreview.com|thehour.com|theintelligencer.com|timesunion.com|trumbulltimes.com|weekand.com|wiltonbulletin.com|work.chron.com|yourconroenews.com
 @@||cdn.blueconic.net/pon.js$domain=seat.nl
@@ -21590,6 +21592,7 @@ anysex.com##.native_middle
 anysex.com##.no_pop > iframe
 anysex.com##div[style="margin-top:-16px;"]
 anysex.com,jizzberry.com###main_video_fluid_html_on_pause
+anysex.com,onmpeg.com,some.porn##.fluid_html_on_pause_container
 anyshemale.com##.section > .wide + .sidebarv
 anyshemale.com##.wide > .af
 anywhere.pl##.g > div[class^="g-single a-"]
@@ -34794,6 +34797,7 @@ fxmag.pl##text[class^="Ad_"]
 fxp.co.il##div[style^="position: fixed;width: 162px; height: 600px;"]
 fxsforexsrbijaforum.com###pun-announcement
 fxsforexsrbijaforum.com##.module_ahlaejaba
+fxshu.top##.com_t > div[id]:has(> div[style*="width: 100vw; position: relative;"] > span + img)
 fxsolver.com###tframe
 fxstreet.com###fxs-sposorBroker-topBanner
 fxstreet.com##.fxs_leaderboard
@@ -44353,6 +44357,7 @@ lookmovie.io##.notifyjs-corner
 lookmovie.io##div[class$="-page-ads-wrapper"]
 loombard.pl##.modal[id*="cookieconsent"]
 looper.com##.recommended-heading
+looper.com##.under-art
 looperman.com##.freestar
 looperman.com,sailingmagazine.net###header-top
 loot.io###app > main > div:first-child
@@ -55282,6 +55287,7 @@ rodadas.net##.faldonCookies
 rode.com###gdpr
 rodopchani.bg###abck
 rogerebert.com###PostInlineVideoContainer
+rogerebert.com###ReviewInlineVideoContainer
 rogerebert.com##.page-content--ad-block
 rogerebert.com##.roger-review-inline-1-2
 rogerebert.com##.roger-review-inline-2-2
