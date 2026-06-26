@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-26 16:47:43（北京时间）
+! Version: 2026-06-26 19:37:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69106
+! Total count: 69113
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -436,13 +436,16 @@
 -banner-ads-$~script
 -banner-ads.
 -banner728x90.
+-cina777.
 -click-tracker.
 -contrib-ads.$~stylesheet
 -iklan1.
 -iklan2.
 -ikln.
+-indo666.
 -inview-tracker.
 -monero-miner.$domain=~wp-monero-miner.com
+-pentaslot.
 -sponsor-ad.$image
 -track-inview.
 -tracking-pixel.
@@ -4298,6 +4301,7 @@
 @@/common/cf/*$domain=66u.com|changhong.com|fei3d.com|oneplusbbs.com|readboy.com
 @@/content/*.html$xmlhttprequest,stealth=referrer,domain=tvids.icu
 @@/content/*page-*.html$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
+@@/content/*page-*.html$xmlhttprequest,stealth=referrer,domain=cloudnestra.com|nextgencloudfabric.com
 @@/content/tour/banner/*$domain=digitalplayground.com
 @@/cpc_cpm_$domain=ygo-sem.cn
 @@/crossdomain.xml$domain=channel4.com
@@ -26473,6 +26477,7 @@ chcj.com##img[width="960"]
 chdbits.co##a[href*=".taobao"]
 cheaa.com###AD002
 cheaa.com###ADText
+cheapassgamer.com###placement-header
 cheapdigitaldownload.com##a[class^="bg-link-"][target="_blank"]
 cheapoair.com###gdprWrap
 cheapsslsecurity.com##.popuphome
@@ -66118,6 +66123,7 @@ wiki.cs.money###modal
 wiki.gg###wikigg-sl-footer
 wiki.gg###wikigg-sl-header
 wiki.gg###wikigg-sl-rail
+wiki.gg##.wgg-netbar__deals-link
 wiki.gg##.wikigg-showcase__unit
 wiki.gg##[href^="https://app.wiki.gg/showcase/"]
 wiki.gg##div[class^="games-showcase"]
@@ -67807,6 +67813,7 @@ yahoo.com##.wrapper-border > .Pos\(r\) > .VideoPlayer.D\(b\).Pos\(r\)
 yahoo.com##[data-content="Advertisement"]
 yahoo.com##[data-wf-beacons]
 yahoo.com##[data-wf-image-beacons][data-wf-beacons*="beap.gemini.yahoo.com"]
+yahoo.com##[style*="300px;"]
 yahoo.com##a[class^="Pos"][href*=".promotions."]
 yahoo.com##a[data-test-id="large-image-ad"]
 yahoo.com##a[href^="https://api.taboola.com/"]
