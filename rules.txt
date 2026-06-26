@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-26 21:59:32（北京时间）
+! Version: 2026-06-27 00:15:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69115
+! Total count: 69118
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4302,7 +4302,6 @@
 @@/clickn(download|upload)\.[a-z]{3,5}/$script,xmlhttprequest,domain=clickndownload.*|clicknupload.*
 @@/common/cf/*$domain=66u.com|changhong.com|fei3d.com|oneplusbbs.com|readboy.com
 @@/content/*.html$xmlhttprequest,stealth=referrer,domain=tvids.icu
-@@/content/*page-*.html$xmlhttprequest,stealth=referrer,domain=cloudnestra.com
 @@/content/*page-*.html$xmlhttprequest,stealth=referrer,domain=cloudnestra.com|nextgencloudfabric.com
 @@/content/tour/banner/*$domain=digitalplayground.com
 @@/cpc_cpm_$domain=ygo-sem.cn
@@ -25540,6 +25539,7 @@ businesstoday.in##.right-side-tabola
 businesstoday.in##.right_side_tabola
 businesstoday.in##.secondAdPosition
 businesstoday.in##.sponsored_widget
+businesstoday.in##.storysecondads
 businesstoday.in##.stoybday-ad
 businesstoday.in,aajtak.in##.right-side-tabola
 businessweekly.com.tw##.Single-hot-news
@@ -30193,6 +30193,8 @@ dll-files.com##div[style="text-align: center; padding-bottom: 10px; padding-top:
 dllme.com##.captchabox > div
 dllme.com##.s-slot
 dlsharefile.com##a[href^="https://dlmonitize.com/"]
+dlsrv.online##.mx-auto > .banner-glow
+dlsrv.online##.mx-auto > .banner-glow + .items-center:has(> a[target="_blank"])
 dltv.org##.britain
 dltv.org##.bucharest
 dltv.org##.luanda
@@ -36735,6 +36737,7 @@ greatandhra.com##._201223_
 greatandhra.com##._201223_2
 greatandhra.com##.container:has(> .container-inner > #id1.child)
 greatandhra.com##.dsk-slot
+greatandhra.com##.entry-content > p > span[style="color: #ff0000;"]
 greatandhra.com##.entry-content > p > span[style] > a[href^="https://urthindia.com/"]
 greatandhra.com##.full_width_home.border-topbottom
 greatandhra.com##.great_andhra_body > div[class^="great_andhra_main_"]:has(> div > a > img[width="330"][height="40"])
