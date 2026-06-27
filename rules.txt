@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-06-27 23:07:08（北京时间）
+! Version: 2026-06-28 00:54:19（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69130
+! Total count: 69129
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3874,8 +3874,6 @@
 91porny.com##.jsv-g1
 91porny.com##.mobile-jsv-bottom,.mb-3.p-0,.d-sm-none,.mb-0.p-0
 91porny.com##A.display.d-block[href^='http'],A.display.d-block[href^='http'] ~ *
-91porny.com,91porn.fans###main > div[class][id] > .mb-0
-91porny.com,91porn.fans##.videoPlayContainer > style + div[data-nosnippet]
 91porny.com,91porn.fans,91porny.org###main > div[class][id] > .mb-0
 91porny.com,91porn.fans,91porny.org##.videoPlayContainer > style + div[data-nosnippet]
 91porny.org,jstv600.com,x9av7.com###main > div[id^="rd"]
@@ -8712,6 +8710,7 @@
 @@||dir.minigame.qq.com^
 @@||direct-link.net^$generichide
 @@||direct.wap.zol.com.cn^
+@@||directg.jp/js/fingerprint2.js$~third-party
 @@||directline.botframework.com^$stealth=referrer
 @@||directly.com/chat?cfgId=$stealth=referrer
 @@||dirrrtyremixes.com^$generichide
