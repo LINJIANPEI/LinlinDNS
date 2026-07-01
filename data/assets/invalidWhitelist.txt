@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14587
+! Total count: 14586
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-07-01 12:20:40（北京时间）
+! Version: 2026-07-01 22:47:03（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -7217,6 +7217,7 @@
 @@||account.adguard.*/api_acc/$stealth=3p-auth
 @@||account.adobe.com/newrelic.js$~third-party
 @@||account.adobe.com^$document,domain=services.adobe.com,stealth=useragent
+@@||account.deezer.com/$stealth=flash
 @@||account.mail.ru^$stealth=useragent
 @@||account.mcid.mynavi.jp^$stealth=referrer
 @@||account.microsoft.com/?refd=$stealth=3p-cookie
@@ -10253,7 +10254,6 @@
 @@||cqcounter.com^$domain=cqcounter.com
 @@||cr.acecounter.com/Web/AceCounter_AW.js$domain=berryjam.co.kr
 @@||cr.acecounter.com/Web/AceCounter_AW.js$domain=pedalparts.co.kr
-@@||crackedgameservers.com/uploads/set_resources*adframe.js
 @@||crackedresource.com^$generichide
 @@||crackedvst.com^$generichide
 @@||cracking.org/js/siropu/am/ads.min.js
@@ -10397,6 +10397,7 @@
 @@||d31j93rd8oukbv.cloudfront.net/metrika/watch_ua.js$domain=novayagazeta.ru
 @@||d347cldnsmtg5x.cloudfront.net/util/1x1.gif$image,domain=aplaceforeverything.co.uk
 @@||d3lppnezw695ey.cloudfront.net^$xmlhttprequest,domain=ipacrack.com
+@@||d3lppnezw695ey.cloudfront.net^$xmlhttprequest,domain=ipalibrary.me
 @@||d3njgrq4uvb497.cloudfront.net/videojs/videojs-contrib-ads.js$domain=ksl.com
 @@||d41.co/tags/ff-2.min.js$domain=ads.spotify.com
 @@||d81mfvml8p5ml.cloudfront.net/n8hnletr.js$domain=countryattire.com
@@ -14638,6 +14639,7 @@
 @@||ll-media.tmz.com/*-300x250.
 @@||lloydstsb.com/it/xslt/touchclarity/omtr_tc.js
 @@||lluban.by^$stealth=dpi
+@@||llvpn.com/tag.min.js$xmlhttprequest,domain=cinehd.app
 @@||lmjvideocdn.*-cdn.net/*.mp4?hash=$stealth=referrer,domain=letmejerk.com
 @@||lncn.org/ad.json
 @@||lngtd.com/ehftv_ros.js$domain=ehftv.com
@@ -19432,7 +19434,6 @@
 @@||thisav.com^$generichide
 @@||thisiswaldo.com/static/js/$script,domain=bestiefy.com
 @@||thizissam.in^$generichide
-@@||thoaimedia.com^$generichide
 @@||thomas.co/sites/default/files/google_tag/primary/google_tag.script.js$script,~third-party
 @@||thothd.com/player/player_ads.html?advertising_id=$subdocument,domain=thothd.com|thothd.to
 @@||thothd.com/player/stats.php?event=Init$domain=thothd.com|thothd.to
@@ -19914,7 +19915,6 @@
 @@||up4load.com^$generichide
 @@||upaiyun.com/libs/$script,domain=xddxsw.net
 @@||upaiyun.com^*.js$domain=cilimao.co|cilimao.one
-@@||upbitcoin.com^$generichide
 @@||updatesmarugujarat.in^$generichide
 @@||upload*.jianshu.io^$stealth=referrer
 @@||upload.far7net.com^$generichide
@@ -20316,7 +20316,6 @@
 @@||watchdirty.to/player/stats.php
 @@||watchdoctorwhoonline.com^$generichide
 @@||watcheverybodylovesraymond.com^$generichide
-@@||watchhouseonline.net^$generichide
 @@||watchparksandrecreation.net^$generichide
 @@||watchpsychonline.net^$generichide
 @@||watchseries.video^$generichide
