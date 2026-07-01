@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-01 15:02:26（北京时间）
+! Version: 2026-07-01 19:15:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69199
+! Total count: 69228
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5079,6 +5079,7 @@
 @@||abv-p.com/Images/adv.png
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth=referrer
 @@||ac.dun.163yun.com^
+@@||ac.ebis.ne.jp^
 @@||ac.ebis.ne.jp^|
 @@||ac.kr^$stealth=dpi
 @@||ac.namu.la^$domain=arca.live,media,image,stealth=referrer
@@ -5093,6 +5094,7 @@
 @@||account.adobe.com/newrelic.js$~third-party
 @@||account.adobe.com^$document,domain=services.adobe.com,stealth=useragent
 @@||account.agiso.com^
+@@||account.deezer.com/$stealth=flash
 @@||account.dianping.com^
 @@||account.mail.ru^$stealth=useragent
 @@||account.mcid.mynavi.jp^$stealth=referrer
@@ -7239,6 +7241,7 @@
 @@||cat.telia.no/gtm.js$script,domain=telia.no
 @@||catchapp.net/ad/img/$~third-party
 @@||catchmyjobs.com^$generichide
+@@||catchup.thisisdax.com^
 @@||catchup.thisisdax.com^|
 @@||cazzette.com^$generichide
 @@||cb.baidu.com/crossdomain.xml$domain=v.baidu.com
@@ -7356,6 +7359,7 @@
 @@||cdn.apple-mapkit.com/*?apiVersion=$stealth=3p-auth
 @@||cdn.apple-mapkit.com/ma/bootstrap?$stealth=3p-auth,domain=icloud.com
 @@||cdn.ark.qq.com^
+@@||cdn.atmedia.hu^
 @@||cdn.atmedia.hu^|
 @@||cdn.bannersnack.com/banners/$image,subdocument,domain=audiogon.com
 @@||cdn.bannersnack.com/banners/$~third-party,image,subdocument
@@ -7543,6 +7547,7 @@
 @@||cdn.reignn.com/Products/Reignn/DataPixels/AdBlockerCheck/ads.js
 @@||cdn.reverso.net/*/static/js/advertising.js^
 @@||cdn.rhombusads.com/js/rh.min.js$domain=spin.com
+@@||cdn.rozetka.com.ua^
 @@||cdn.rozetka.com.ua^|
 @@||cdn.run-syndicate.com/sdk/v1/n.js$domain=mangarock.com
 @@||cdn.runative-syndicate.com/sdk/*/n.js$domain=onemanhua.com
@@ -8435,6 +8440,7 @@
 @@||customeragent-v3.seb.se/Amelia$stealth=donottrack
 @@||customgames.ru/forum/js/*/ads.min.js
 @@||custommapposter.com^$generichide
+@@||cutcaptcha.com^
 @@||cutcaptcha.com^|
 @@||cuttlinks.com^$generichide
 @@||cv-h.phncdn.com^
@@ -9065,6 +9071,7 @@
 @@||e-podroznik.pl/public/$stealth=referrer|3p-cookie
 @@||e-stat.go.jp/modules/custom/retrieve/src/js/stat.js?$script,~third-party
 @@||e.cn.miaozhen.com/r/k=*=http
+@@||e.customeriomail.com^
 @@||e.customeriomail.com^|
 @@||e.issuu.com^$stealth=referrer
 @@||e.mail.ru^$stealth=webrtc
@@ -9935,6 +9942,7 @@
 @@||gapl.hit.gemius.pl/gplayer.js$domain=redefine.pl
 @@||garaveli.de^$generichide
 @@||gardenista.com/assets/scripts/advert.js
+@@||gate.first-id.fr^
 @@||gate.first-id.fr^|
 @@||gatevidyalay.com^$generichide
 @@||gateway.ea.com/proxy/commerce/carts2$stealth=3p-auth
@@ -10870,6 +10878,7 @@
 @@||hqq.tv/player/embed_player.php$stealth
 @@||hr.163.com^
 @@||href.li/?https://rm.freex2line.online/redirectingfree/$stealth=referrer
+@@||href.li^
 @@||href.li^|
 @@||hsforms.net^
 @@||hsnstore.*^$stealth=flash|java
@@ -10969,6 +10978,7 @@
 @@||i72.lanzoug.com^
 @@||i8086.de^$generichide
 @@||i82.lanzoug.com^
+@@||ia.hit.interia.pl^
 @@||ia.hit.interia.pl^|
 @@||iaas.cloud.tencent.com^
 @@||iamcdn.net/players/*ads*.js$domain=hydrax.net|playhydrax.com
@@ -12510,6 +12520,7 @@
 @@||lk.gpnbonus.ru^$stealth=dpi
 @@||ll-media.tmz.com/*-300x250.
 @@||lluban.by^$stealth=dpi
+@@||llvpn.com/tag.min.js$xmlhttprequest,domain=cinehd.app
 @@||lmjvideocdn.*-cdn.net/*.mp4?hash=$stealth=referrer,domain=letmejerk.com
 @@||lncn.org/ad.json
 @@||lngtd.com/ehftv_ros.js$domain=ehftv.com
@@ -13434,6 +13445,7 @@
 @@||my.onvista.de^$stealth=dpi
 @@||my.prom.ua/*/iframe$stealth=referrer
 @@||my.prom.ua/remote/$stealth=referrer
+@@||my.tealiumiq.com^
 @@||my.tealiumiq.com^|
 @@||my.westfieldinsurance.com^$document
 @@||my.xunlei.com^
@@ -13858,9 +13870,11 @@
 @@||omggamer.com/porpoiseant/banger.js
 @@||omglyrics.com^$generichide
 @@||omhm.qc.ca^$stealth=dpi
+@@||omniture.walmart.com^
 @@||omniture.walmart.com^|
 @@||omns.americanexpress.com/b/ss/
 @@||omofun.link^
+@@||omsc.kpn.com^
 @@||omsc.kpn.com^|
 @@||omtrdc.net/b/ss/$image,domain=ba.com|britishairways.com|halifax-online.co.uk
 @@||omtrdc.net/b/ss/acsca-prod/$domain=amazon.ca|amazon.co.uk|amazon.com
@@ -15548,6 +15562,7 @@
 @@||psstatic.cdn.bcebos.com^
 @@||pstatic.net^$image,stealth=referrer
 @@||psynet.co.kr^$stealth=dpi
+@@||pt.afl.rakuten.co.jp^
 @@||pt.afl.rakuten.co.jp^|
 @@||ptitchef.com/js/ads.js
 @@||ptlogin.yuewen.com^
@@ -15651,6 +15666,7 @@
 @@||pushpushgo.com/js/$script,domain=centrumriviera.pl
 @@||pussyspace.com/class/captcha/captcha.php$domain=pussyspace.com
 @@||puui.qpic.cn^
+@@||puzzles-games-api.gp-prod.conde.digital^
 @@||puzzles-games-api.gp-prod.conde.digital^$domain=newyorker.com
 @@||puzzles-games-api.gp-prod.conde.digital^|
 @@||pv.sohu.com/cityjson$domain=ems.com.cn
@@ -16332,6 +16348,7 @@
 @@||secure.selfwealth.com.au^$stealth=ip
 @@||securecard.jp/card_input.html$stealth=referrer
 @@||securegames.iwin.com/data/gtm.json$~third-party,xmlhttprequest
+@@||secureimage.securedataimages.com^
 @@||secureimage.securedataimages.com^|
 @@||securemetrics.apple.com^
 @@||securenetsystems.net/*/scripts/ads/prebid.js
@@ -16562,6 +16579,7 @@
 @@||securitykiss.com$document
 @@||securitytrails.com/app/api/$domain=securitytrails.com
 @@||securitytrails.com/domain/$domain=securitytrails.com
+@@||sedge.nfl.com^
 @@||sedge.nfl.com^|
 @@||seeitworks.com/advertisement.js
 @@||seg-cdn.pumpkin.care/analytics.js/$~third-party
@@ -17150,6 +17168,7 @@
 @@||startpage.com^$generichide
 @@||startrek.website/pictrs/image/$xmlhttprequest
 @@||startribune.com/analytics-assets/sitecatalyst/appmeasurement.js$~third-party
+@@||stash.roistat.com^
 @@||stash.roistat.com^|
 @@||stat-rock.com/player.js$domain=4shared.com
 @@||stat-rock.com/player/$domain=4shared.com|adplayer.pro
@@ -17662,6 +17681,7 @@
 @@||tags.tiqcdn.com/utag/*/utag.sync.js$domain=bankofamerica.com|hsbc.co.uk|samsung.com|sony.jp|visible.com|vmware.com
 @@||tags.tiqcdn.com/utag/10/10playsite/qa/utag.sync.js$xmlhttprequest,domain=10.com.au
 @@||tagtic.cn^
+@@||taiga.maven.io^
 @@||taiga.maven.io^|
 @@||taihainet.com^*/thumb_300_250_
 @@||tailscale.com^$generichide
@@ -17979,6 +17999,7 @@
 @@||tkqlhce.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@||tlaol.com^|
 @@||tlc.com^$generichide
+@@||tlh.gedidigital.it^
 @@||tlh.gedidigital.it^|
 @@||tm.jsuol.com.br/modules/external/admanager/noticias_ads.js$domain=uol.com.br
 @@||tm.r-ad.ne.jp/128/ra346756.js$script,domain=hpdsp.net
@@ -17988,6 +18009,7 @@
 @@||tmall.com/go/*/banner.php
 @@||tmearn.com/js/ads*.js
 @@||tmgrup.com.tr/site/$script,stylesheet,stealth=referrer
+@@||tms.capitalone.com^
 @@||tms.capitalone.com^|
 @@||tms.oracle.com/main/prod/utag.sync.js$~third-party
 @@||tn.txxx.tube^
@@ -18045,6 +18067,7 @@
 @@||topwebsitelists.com^$generichide
 @@||topzone.lt^$generichide
 @@||toramemoblog.com^$generichide
+@@||torimochi.line-apps.com^
 @@||torimochi.line-apps.com^|
 @@||torproject.org^
 @@||torrage.info/torrent.php$popup,third-party
@@ -18624,6 +18647,7 @@
 @@||vali-dns.cp31.ott.cibntv.net^
 @@||vali-g1.cp31.ott.cibntv.net^
 @@||vali01.cp31.ott.cibntv.net^
+@@||validate.perfdrive.com^
 @@||validate.perfdrive.com^|
 @@||valipl.cp31.ott.cibntv.net^$xhr,domain=youku.com
 @@||valuable.hatenablog.com^$generichide
@@ -19302,6 +19326,7 @@
 @@||www.itools.info^
 @@||www.javbangers.com^
 @@||www.jd.com^
+@@||www.jdoqocy.com^
 @@||www.jdoqocy.com^|
 @@||www.jetbrains.com.cn^
 @@||www.jianshu.com^
@@ -30009,6 +30034,7 @@ digitalthinkerhelp.com##.ezoic-ad + div[id^="media_image-"]
 digitaltrends.com##.b-adhesion
 digitaltrends.com##.b-banner
 digitaltrends.com##.b-connatix
+digitaltrends.com##.b-mem__post--ads
 digitaltrends.com##.b-right-rail--ads
 digitaltrends.com##.dtads-location
 digitaltrends.com##.dtcc-affiliate
@@ -46161,6 +46187,7 @@ megaxh.com##.xplayer-banner-bottom
 megayoungsex.com###divExoLayerWrapper
 megayoungsex.com##.SAbnBot
 megfoglak.hu##.modal.consent
+meghalayajobportal.in,constructionmethodology.com,pornincest.net,examscisco.com,game5s.com,reviewmedium.com##a[href="#"] + div[id][class*=" "]
 meghalayajobportal.in,constructionmethodology.com,pornincest.net,examscisco.com,game5s.com,reviewmedium.com,stbemuiptvn.com##a[href="#"] + div[id][class*=" "]
 megogo.net,megogo.ru##.specialBlock_v1
 megustaleer.com##.cookie, .cookie_mobile
@@ -57467,6 +57494,7 @@ skrotymeczow.pl##[class^="cool-stuff"]
 sky.com.br###wrap-aviso-cookie
 skyandtelescope.org##.c-ad--label
 skyblock.bz##[id^="flips-"]
+skycall.online##body > #page + script + div[id][class*=" "]
 skycn.com###top970,ul.ul_Address>h3,a[href^="http://down.xiazaidc.com/"]
 skydy.top##.swiper-slide[style="width: 1170px;"]
 skyfi.com###app-body > div > div > div > .fixed.bottom-0
@@ -65544,6 +65572,7 @@ watchporn.to##.header__top-txt
 watchporn.to##.single__holder > .single__aside:has(> .table)
 watchporn4k.com,mdhstream.cc,fucking-tube.com##.happy-section
 watchpornfree.info##aside > #execphp-2
+watchsmallvilleonline.net,watchpsychonline.net,watchdoctorwhoonline.com,watcheverybodylovesraymond.com###contenedor > #keeper
 watchsomuch.to###VPN
 watchsomuch.to##.getVIPAds
 watchsports.to##.sp-promo-card
