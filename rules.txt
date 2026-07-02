@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-02 08:10:49（北京时间）
+! Version: 2026-07-02 12:52:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69241
+! Total count: 69253
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4183,7 +4183,7 @@
 @@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 @@/\.(gif|jpg|png|svg).*#.*\/ad\//$image,domain=mizugigurabia.com|aimasummd.blog.fc2.com|newssokuhou666.blog.fc2.com|touhoudougamatome.blog.fc2.com|metamani.blog15.fc2.com|youkaiwatch2345.blog.fc2.com|dokuo666.blog98.fc2.com|mysafe.stisda.ac.id|metamani.blog15.fc2.com|link.technics-goods.info|gfilex.blogspot.com|codare.fun|ads-ti9ni4.blogspot.com|thelibrarydigital.blogspot.com|www-daftarharga.blogspot.com|mediapemersatubangsa.com|ear-phone-review.com|tienganhedu.com|itdmusics.com|burnbutt.com|valuable.hatenablog.com|leechpremium.net|lib.hatenablog.com|gametter.com|mini.surveyenquete.net|opatil.com
 @@/\.(quest|shop|autos)\/.*\./$script,xmlhttprequest,domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*|limiteddollqjc.*
-@@/\/[a-z0-9]{8}\/[a-zA-Z0-9_-]{200,900}/$xmlhttprequest,third-party,match-case,stealth=referrer,domain=player.videasy.*|cineby.*|cineplay.to|fmovies.*|vidup.to|vidfast.pro|www.fmovies.gd|vidking.net
+@@/\/[a-z0-9]{8}\/[a-zA-Z0-9_-]{200,900}/$xmlhttprequest,third-party,match-case,stealth=referrer,domain=player.videasy.*|cineby.*|cineplay.to|fmovies.*|vidup.to|vidfast.pro|www.fmovies.gd|vidking.net|111movies.net
 @@/\/[js].?[js]\/.*\.js/$script,xmlhttprequest,domain=rbtv77.*|live-streamfootball.*|superabbit77.*|superabbit33.*|superdom77.*|superlee77.*|superleo77.*|superargo77.*|superbarca77.*|linelocatemfsn.*|homebasis4d.*|mindmotion93y8.*|monkeynecktj4w.*|masterenjoyao.*|differenceprimitive85p.*|blewdiffera3j2.*|strangernervousql.*|leadmorning4ivn.*|somehowrockyng.*|currentcolorq2dv.*|determinemousecshe.*|publicspeed5c.*|limiteddollqjc.*
 @@/\/\d\d\d\d\d$/$xmlhttprequest,script,other,third-party,domain=jujmanga.com
 @@/\/\d{5,7}$/$domain=mylink.*|my1ink.*|myl1nk.*|myli3k.*
@@ -10818,7 +10818,6 @@
 @@||hobbykafe.com^$generichide
 @@||hobbyking.com^*/gtm.js$script,~third-party
 @@||hoge.cn/advertisement.swf
-@@||hollaforums.com/js/adcash.js
 @@||hollywoodmask.com^$generichide
 @@||holmesmind.com/js/drawV2.$domain=bingfong.com
 @@||holywarsoo.net^$stealth
@@ -43010,6 +43009,7 @@ korsrt.eu.org##.cutemag-scroll-top + div[id][class*=" "]
 kortingscouponcodes.nl##.spu-box
 korwin-mikke.pl##body > div:not([id]):not([class])
 koryotel.com###footer_overlay
+kosicak.sk##div[style^="width:100%;min-height:"]
 kosicednes.sk###gateBanner
 kosicednes.sk##[data-banner-type]
 kosmetykizameryki.pl###polityka
@@ -53031,7 +53031,6 @@ pornicom.com##.spots:has(> div > div[data-banner])
 pornicom.com##.sug-block
 pornicom.com##.thumb_aside
 pornicom.com,sleazyneasy.com##.im_block
-pornid.name##.rsidebar-spots
 pornid.name,pornid.xxx##.aside-box
 pornid.name,pornid.xxx##.cs-under-player-link
 pornid.name,pornid.xxx##.spots-bottom
@@ -55412,6 +55411,8 @@ rmf.fm##body > div[style^="height:300px"]
 rmf.fm##div[id^="RMF_FM_podstrony_"]
 rmf24.pl###RMF_24_podstrony_top_bill
 rmf24.pl##.reklamaPage
+rmf24.pl##.text-muted[style*="min-height:"]:has(> div[id^="RMF_24_"])
+rmf24.pl##aside .text-muted[style*="min-height:"]:has(> .sticky-wrapper > #sticker > #adsSmall)
 rmfmaxx.pl,rmfmaxxx.pl##.ph-ad-zone
 rmfon.pl###ad-gora-bill
 rmweb.co.uk,andhrafriends.com##li[data-blockid^="app_cms_"]
@@ -62839,6 +62840,7 @@ trend-chaser.com##div[class="attribution attribution-over attribution-center"]
 trend.az###header > div > div[id^="TREND_slot"]
 trend.az##.adv-wrapper
 trend.az##.adv-wrapper-horizontal
+trend.az##.banner-on-visible
 trend.az##div[class^="adv-wrapper-"]
 trendhunter.com##.hcamp
 trendhunter.com##.tha__adph
@@ -63123,6 +63125,16 @@ tubeoffline.com##table[width="100%"] > tbody > tr[style="text-align:center"] > t
 tubeon.com##.drt-sponsor-block
 tubeon.com##.puFloatLine
 tubeon.com##i[class="abtext"][style="display:block;margin-left: 10px;"]
+tubeon.com,tubeon.net###banner_overlay-postitial-video
+tubeon.com,tubeon.net###spot_video_underplayer_livecams
+tubeon.com,tubeon.net##.cams-opener
+tubeon.com,tubeon.net##.header_premium_bar
+tubeon.com,tubeon.net##.player_premium_bar
+tubeon.com,tubeon.net##a[href^="https://fhgte.com/"]
+tubeon.com,tubeon.net##a[href^="https://go.xliiirdr.com/"]
+tubeon.com,tubeon.net##div[class^="adv-"]
+tubeon.com,tubeon.net##section > div.container:has(> div#spot_video_livecams)
+tubeon.comtubeon.net##.thumb-link-rounded
 tubeorigin.com##div[data-continuation]
 tubepornclassic.com##.___it0h1l3u2se2lo
 tubepornclassic.com##.irvdvvi
