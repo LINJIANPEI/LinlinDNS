@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-03 18:25:10（北京时间）
+! Version: 2026-07-03 20:51:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69270
+! Total count: 69283
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4117,6 +4117,7 @@
 @@.jpg#$domain=huhupan.com
 @@.jpg#$domain=ktmx.pro
 @@.jpg#$domain=marketmovers.it
+@@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.js?fcd=true$domain=snopes.com
 @@.m3u8$domain=rapid-cloud.co,xmlhttprequest,stealth=referrer
 @@.m3u8$stealth,domain=luluvdo.com
@@ -4126,6 +4127,7 @@
 @@.m3u8$stealth=referrer,domain=yfsp.tv
 @@.m3u8$third-party,xmlhttprequest,stealth=referrer,domain=player.videasy.*|cineby.*|cineplay.to|fmovies.*|vidfast.pro|www.fmovies.gd|vidking.net
 @@.m3u8$xmlhttprequest,stealth=referrer,domain=megaup.site
+@@.m3u8$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.m3u8|$stealth=referrer,domain=embdmstrplayer.com
 @@.m3u8|$stealth=referrer,domain=streamingnow.mov
 @@.m4s$domain=crunchyroll.com,stealth=referrer
@@ -11217,6 +11219,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=facepunch.io|biters.io|fisp.io
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=familyminded.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=feltet.dk
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=firestream.to
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=flipboard.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=footballtransfers.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=fortune.com
@@ -21629,6 +21632,7 @@ anon-v.com##.video-holder > div[style="padding:5px;margin:5px;text-align:center;
 anon-v.com##div[style="max-width: 640px; text-align: center; margin: 0 auto;"]
 anoneko.com,dmhy.org,ye1213.com##div[id$="_ad"] > a:first-child > img
 anonfile.co,arahdrive.com,fastupload.io,video.hizliresim.com##.vr-adv-unit
+anonfile.co,fastupload.io,video.hizliresim.com##.vr-adv-unit
 anonse.com###polityka
 anonym.to##a[href^="https://www.spyoff.com"]
 anonymousemail.me##.center > a[target="_blank"] > img
@@ -22074,6 +22078,7 @@ architecture.com##.info-bar
 architecturesideas.com##.linkpub_right_img
 architonic.com###header-top
 archive.ph##div[style]:has(> div[id^="iqadtile"]:only-child)
+archive.yota.ru##main[class^="_layout_"] > div[class^="_block_"][class*="_appear_"]:has(> div[class^="_cookie_"])
 archivebate.com###detect
 archivespasdecalais.fr##.cookies
 archiviodistatotorino.beniculturali.it###system-message
@@ -23345,6 +23350,7 @@ baixing.com,leiphone.com,sina.com.cn##.top-banner
 bajeczki.org##.site-content > .vjs-ex-mcn-video
 bajeczki.org##a[onclick*="https://www.greatdexchange.com/"]
 bakecaincontrii.com##.alert.fixed-bottom
+baked.live###adbanner
 baking-forums.com,windows10forums.com##div.message--post.message
 bakker.com###footerDiv
 baku.ws##.ban_mac
@@ -31608,6 +31614,7 @@ elamigosgamez.net##.row > div.portfolio-item:not(:has(> div.card > a[href^="http
 elamigosgamez.net$$script:contains(checkAdblockUser)
 elamigosweb.com###dwin6
 elamigosweb.com##center > button[onclick^="window.open("]
+elaoffcial.com,europeelects.eu,telugusexkathalu.com,daemon-hentai.com,teamkong.rf.gd,ad4msan.com,ossels.ai,world-iptv.club###zdn-adblock-overlay
 elbalad.news##.left-col > div[style="height:300px"]
 elblandkliniken.de###Datenschutz
 elbotola.com##.hero-pub
@@ -32453,6 +32460,7 @@ europeantimes.news##.tdi_71
 europeelects.eu,telugusexkathalu.com,daemon-hentai.com,teamkong.rf.gd,ad4msan.com,ossels.ai,world-iptv.club###zdn-adblock-overlay
 eurosender.com###__next > div[class*="container"]
 eurosport.tvn24.pl##.AdContainer
+eurosport.tvn24.pl##div[data-testid="marketing-hbo-max-block"]
 eurosport.tvn24.pl,eurosport.com##.d3-side-advert
 eurosport.tvn24.pl,eurosport.com##.d3-top-advert
 eurosportplayer.com###app div[class^="cookie-policy"]
@@ -42672,6 +42680,7 @@ kingmods.net##.banner-ad
 kingmods.net##[data-ad-wrapper-slot]
 kingmods.net##[x-data="nativeAd"]
 kingmods.net,tappedout.net##.banner-ad
+kingmods.net,tappedout.net,tvinsider.com##.banner-ad
 kingscross.co.uk##.argent_consent
 kingslandscapes.com##.themify-popup.bottom-center
 kingsleague.pro###partnersGrid
@@ -45167,8 +45176,10 @@ m4fz.com##a[data-etime]
 m4sport.hu###cookie
 m4ufree.co##a > img[title*="Free Download"]
 m4ufree.com##a[href^="//look.ichlnk.com/"]
+m9.news###blocker
 m9.news###single-top-ad
 m9.news##.ads-wrap-qqq
+m9.news##.home-hero-center .d-block[style^="margin-bottom:"] > a[target="_blank"] > img
 m9.news##.m9-banner-ad
 m9.news##.main-content > p:has(> ins.adsbygoogle)
 ma-calculatrice.fr###manger-des-minis-gateaux
@@ -46044,6 +46055,7 @@ med66.com##.banner
 med66.com##.coach_pic
 medarbejdernet.dk###modalLayer
 medatixx.de###cky-notification
+medeberiya.net,kailaba.com,lelmak.com,sayphotobooth.com,odiadance.com,bellezashot.com,magesypro.com,pasatiemposparaimprimir.com,assignmentdon.com,berlin-teltow.de,bestofarea.com,coderblog.in,dailytips247.com,davewigstone.com,deutschpersischtv.com,domainregistrationtips.info,friedrichshainblog.de,funztv.com,healthcheckup.com,hindinest.com,infokita17.com,negative.tboys.ro,onestringlab.com,poco.rcccn.in,prensaesports.com,start-to-run.be,stimotion.pl,symboleslowianskie.pl,thegnomishgazette.com,utilidades.ecuadjsradiocorp.com,kakashiyt.com,eldawly.xyz,elbadr.xyz,abda3.xyz,wisw.online,stelux.online,gooltok.com,cgcosplay.org,loiz.store,towerofgod.me,chevalmag.com,infinityskull.com,audiotools.blog,fattelodasolo.it,koume-in-huistenbosch.net,mens1069.com,english-dubbed.com,businessnews-nigeria.com,day4news.com,net4you.xyz,gameblog.jp,ster-blog.xyz,yazilidayim.net,pandanote.info,forexrw7.com,hyogo.ie-t.net,chatgbt.one,shrinklinker.com,felicetommasino.com,chatgptfree.ai,keroseed.net,ewybory.eu,nghetruyenma.net,azrom.net,mitaku.net,siirtolayhaber.com,japannihon.com,kllproject.lv,telephone-soudan.com###page + div[id][class]
 medeberiya.net,kailaba.com,servicemassar.ma,lelmak.com,sayphotobooth.com,odiadance.com,bellezashot.com,magesypro.com,pasatiemposparaimprimir.com,assignmentdon.com,berlin-teltow.de,bestofarea.com,coderblog.in,dailytips247.com,davewigstone.com,deutschpersischtv.com,domainregistrationtips.info,friedrichshainblog.de,funztv.com,healthcheckup.com,hindinest.com,infokita17.com,negative.tboys.ro,onestringlab.com,poco.rcccn.in,prensaesports.com,start-to-run.be,stimotion.pl,symboleslowianskie.pl,thegnomishgazette.com,utilidades.ecuadjsradiocorp.com,kakashiyt.com,eldawly.xyz,elbadr.xyz,abda3.xyz,wisw.online,stelux.online,gooltok.com,cgcosplay.org,loiz.store,myprivatejobs.com,towerofgod.me,chevalmag.com,infinityskull.com,audiotools.blog,fattelodasolo.it,koume-in-huistenbosch.net,mens1069.com,english-dubbed.com,businessnews-nigeria.com,day4news.com,net4you.xyz,gameblog.jp,ster-blog.xyz,yazilidayim.net,pandanote.info,forexrw7.com,hyogo.ie-t.net,chatgbt.one,shrinklinker.com,felicetommasino.com,chatgptfree.ai,keroseed.net,ewybory.eu,nghetruyenma.net,azrom.net,mitaku.net,siirtolayhaber.com,japannihon.com,kllproject.lv,telephone-soudan.com###page + div[id][class]
 medeqstars.ru###use-cookies
 meder-frankfurt.de###ch
@@ -57069,6 +57081,7 @@ shorterall.com##.row > div[class] > style + div.sticky
 shortix.co###blur-background
 shortix.co##.popSc
 shortlist.com##.align-xl-content-between
+shortlist.com##div[data-ad-slot-path]
 shortnest.com###dl-bbtn
 shortpixel.com###shortpixel-cookies
 shortwaveschedule.com###reclama_mijloc
