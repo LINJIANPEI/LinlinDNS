@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-04 00:25:57（北京时间）
+! Version: 2026-07-04 02:07:00（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 69280
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -13645,6 +13645,7 @@
 @@||nineto5mac-d.openx.net^|
 @@||nineyu.com/*.jpg$stealth=referrer,domain=missav.live|missav.ws|missav123.com|missav888.com|missav.*
 @@||ninja.io/js/dist/ads.js
+@@||ninstream.com/*.jpg|$xmlhttprequest,stealth=referrer,domain=senshi.live
 @@||nintendo.co.jp/ring/*/adv$~third-party
 @@||nintendo.co.kr^$stealth=dpi
 @@||nintendolife.com/themes/base/javascript/fingerprint.js$~third-party
@@ -42679,7 +42680,6 @@ kingmodapk.net,online-calculator.org##[style*="height:300px"]
 kingmods.net##.banner-ad
 kingmods.net##[data-ad-wrapper-slot]
 kingmods.net##[x-data="nativeAd"]
-kingmods.net,tappedout.net##.banner-ad
 kingmods.net,tappedout.net,tvinsider.com##.banner-ad
 kingscross.co.uk##.argent_consent
 kingslandscapes.com##.themify-popup.bottom-center
@@ -58855,7 +58855,6 @@ sports24.club##div[id][style^="width:300px;height:250px;overflow:"]
 sportsbay.dk##.VideoPlayer + div[style]
 sportsbettingdime.com##.top-promos
 sportsbettingdime.com##div[id^="bet-"]
-sportsbite.lol##.inset-0.fixed
 sportscardforum.com###wgo_affiliates
 sportscardforum.com##a[href^="https://www.sportscardforum.com/rbs_banner.php?"]
 sportschatplace.com##.above-mid-article-ad
@@ -60914,6 +60913,7 @@ the-scientist.com##div[ad-id]
 the-star.co.ke###teasers
 the-sun.com##.dpa-grid
 the-sun.com##[data-component="zergnet"]
+the-sun.com##div[class$="billboard"]
 the-sun.com,thescottishsun.co.uk,thesun.co.uk,thesun.ie##.customiser-v2-layout-1-billboard
 the-sun.com,thescottishsun.co.uk,thesun.co.uk,thesun.ie##.customiser-v2-layout-three-native-ad-container
 the-village.com.ua##.infoA

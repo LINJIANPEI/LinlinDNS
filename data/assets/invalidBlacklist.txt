@@ -369,8 +369,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 101674
-! Blocked Filters: 43327
+! Blocked Filters: 101691
+! Blocked Filters: 43328
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -408,7 +408,7 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 180829
+! Blocked domains: 180924
 ! Blocked domains: 4863
 ! Blocked: 4.886 rules
 ! Blocked: 564 rules
@@ -435,13 +435,13 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
-! Checksum: 6th3YBDIwDQBS6TF4ThMrA
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: LMAKMzqMSfhBTqOkdhWSMw
+! Checksum: GLc1qXLctI8dPrUaz5hI2A
+! Checksum: Ml1/M7gNv5SUXIaw5+3ZCQ
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
+! Checksum: b6rQ0qVGog8Cp9i5dTpnQg
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
-! Checksum: zzOs9/RarDRNFtHF2yR7zQ
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -752,8 +752,8 @@
 ! Last Modified: 2025年01月30日 14:00
 ! Last Update: 2020/08/07
 ! Last modified: 03 Feb 2014 03:50 UTC
-! Last modified: 03 Jul 2026 16:12 UTC
 ! Last modified: 03 Jul 2026 16:18 UTC+7
+! Last modified: 03 Jul 2026 17:52 UTC
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
@@ -762,7 +762,7 @@
 ! Last modified: 2026-06-15T14:19:40.740Z
 ! Last modified: 2026-07-03T10:57:30.630Z
 ! Last modified: 2026/03/11 09:15 +0800
-! Last modified: 2026/07/03 18:43:10
+! Last modified: 2026/07/04 01:38:27
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1191,7 +1191,7 @@
 ! Used with many websites to generate multiple popups
 ! Utiq :  utiq-aws.net disguised trackers
 ! VPN Affiliate Banners
-! Version:    最后同步时间: 2026-07-03 01:15:05
+! Version:    最后同步时间: 2026-07-04 01:15:05
 ! Version: 04December2020v1-Alpha
 ! Version: 06September2020v1
 ! Version: 1.0.0.43
@@ -1218,8 +1218,8 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260628141154
-! Version: 202607031612
-! Version: 20260703184310
+! Version: 202607031752
+! Version: 20260704013827
 ! Version: 2607031618
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3485,7 +3485,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-07-03T23:51:23+08:00
+# Update time: 2026-07-04T01:51:20+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -60663,6 +60663,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||nineto5mac-d.openx.net^|
 @@||nineyu.com/*.jpg$stealth=referrer,domain=missav.live|missav.ws|missav123.com|missav888.com|missav.*
 @@||ninja.io/js/dist/ads.js
+@@||ninstream.com/*.jpg|$xmlhttprequest,stealth=referrer,domain=senshi.live
 @@||nintendo.co.jp/ring/*/adv$~third-party
 @@||nintendo.co.kr^$stealth=dpi
 @@||nintendolife.com/themes/base/javascript/fingerprint.js$~third-party
@@ -67596,6 +67597,8 @@ adultcomixxx.com##center > a > img
 adultcomixxx.com,lewdsteam.com,skiplinks.xyz,androidadult.com#%#//scriptlet('abort-on-property-write', 'AdProvider')
 adultcomixxx.com,lewdsteam.com,skiplinks.xyz,androidadult.com#%#//scriptlet('trusted-suppress-native-method', 'document.write', '"track"')
 adultdeepfakes.com##.inter
+adultdeepfakes.com#%#//scriptlet('trusted-replace-node-text', 'script', 'flashvars', 'const flashvars =', 'var flashvars =')
+adultdeepfakes.com,jerkwell.com#%#//scriptlet('set-constant', 'flashvars.adv_post_src', '')
 adultdvdempire.com##a[href*="?partner_id="][href*="&utm_"]
 adultdvdtalk.com###top-elements > div[style^="float:right;"]
 adultdvdtalk.com##div[style^="position: fixed; margin"][style*="text-align: center;"]
@@ -77075,6 +77078,9 @@ collegiateparent.com##.sidebar_ad_wrap
 collibra.com##.collibra-cookie-accept
 collider.com###adsninja-below-main-pic
 collider.com#%#(()=>{const n=[];n.push=n=>{try{n()}catch(n){console.error(n)}},window.adsNinja=window.adsNinja||{queue:n}})();
+collider.com#@#.ad-current
+collider.com#@#.ad-zone-container
+collider.com#@#.adsninja-ad-zone
 collider.com#@#.w-adsninja-video-player
 colliderporn.com##.player-container > .aside-blocks
 collinsdictionary.com##.btmslot_a-container
@@ -96120,7 +96126,6 @@ kingmodapk.net,online-calculator.org##[style*="height:300px"]
 kingmods.net##.banner-ad
 kingmods.net##[data-ad-wrapper-slot]
 kingmods.net##[x-data="nativeAd"]
-kingmods.net,tappedout.net##.banner-ad
 kingmods.net,tappedout.net,tvinsider.com##.banner-ad
 kingscross.co.uk##.argent_consent
 kingslandscapes.com##.themify-popup.bottom-center
@@ -102684,14 +102689,17 @@ msn.com#$?#.adslidedata-container { remove: true; }
 msn.com#$?#.swipenav > li:has(>a.nativead) { remove: true; }
 msn.com#$?#li[data-adindex] { remove: true; }
 msn.com#%#//scriptlet('hide-in-shadow-dom', '.ad-banner-wrapper')
+msn.com#%#//scriptlet('hide-in-shadow-dom', '.display-ads-container')
 msn.com#%#//scriptlet('hide-in-shadow-dom', '.me-stripe-tile-content:has(a[href*="?"] .me-stripe-title-subtitle)')
 msn.com#%#//scriptlet('inject-css-in-shadow-dom', '#entry-point-hp-wc-header[style^="top:"] { top: 0 !important; }')
 msn.com#%#//scriptlet('inject-css-in-shadow-dom', '#entry-point-hp-wc-root-wrapper[style^="margin-top:"] { margin-top: 0 !important; }')
 msn.com#%#//scriptlet('inject-css-in-shadow-dom', '.ad-container-skyscraper, .ad-container, .vd-ad, cs-native-ad-card-no-hover, display-ads, .display-ad-container, .display-ads-container, .views-right-rail-top-display, #entry-point-hp-wc-banner, .me-stripe-title-subtitle, #displayAdCard, a[href*=".booking.com/"], a[href^="https://amzn.to/"], shopping-sd-card { display: none !important; }')
+msn.com#%#//scriptlet('inject-css-in-shadow-dom', '.eocb-ads, .ad-container-skyscraper, .ad-container, .vd-ad, cs-native-ad-card-no-hover, display-ads, .display-ad-container, .display-ads-container, .views-right-rail-top-display, #entry-point-hp-wc-banner, .me-stripe-title-subtitle, #displayAdCard, a[href*=".booking.com/"], a[href^="https://amzn.to/"], shopping-sd-card { display: none !important; }')
 msn.com#%#//scriptlet('inject-css-in-shadow-dom', 'cs-native-ad-card { visibility: hidden !important; }')
 msn.com#%#//scriptlet('json-prune', '*', 'list.*.link.ad list.*.link.kicker')
 msn.com#%#//scriptlet('json-prune', '*.*', 'adFeedbackData adType adServedUrls')
 msn.com#%#//scriptlet('json-prune', 'configs.*.properties.slideshowWCSettings.interstitialNativeAds configs.*.properties.fullScreenSlideshowSettings.interstitialNativeAds properties.componentConfigs.slideshowConfigs.interstitialNativeAds properties.componentConfigs.slideshowConfigs.*.interstitialNativeAds configs.*.properties.componentConfigs.slideshowConfigs.*.interstitialNativeAds sections.[].cards.[].subCards.[-].type.[=].nativead sections.[].cards.[-].type.[=]./nativead|displayad/')
+msn.com#%#//scriptlet('json-prune', 'configs.[].properties.componentConfigs.articlePageConfig.nativeAdLoadingRules configs.[].properties.componentConfigs.articlePageConfig.slots.intraArticleNativeAd configs.[].properties.componentConfigs.endOfContentBlockConfigs.slots.endOfContentNativeAd configs.[].properties.slots.bannerAd configs.*.properties.adPlacementConfig.* configs.*.properties.slideshowWCSettings.interstitialNativeAds configs.*.properties.fullScreenSlideshowSettings.interstitialNativeAds properties.componentConfigs.slideshowConfigs.interstitialNativeAds properties.componentConfigs.slideshowConfigs.*.interstitialNativeAds configs.*.properties.componentConfigs.slideshowConfigs.*.interstitialNativeAds sections.[].cards.[].subCards.[-].type.[=].nativead sections.[].cards.[-].type.[=]./nativead|displayad/ sections.[].subSections.[].cards.[-].type.[=].cmsad')
 msn.com#?##main > .stripecontainer > .lifestyle:has(> .stripe > .stripenav > ul > li > span.adslabel)
 msn.com#?#.todaystripe > ul > li:has(> .nativead)
 msn.com#?#.views-article-body > h3.article-sub-heading:has(> a[href*="join.popularmechanics.com"])
@@ -116999,7 +117007,6 @@ sports24.club##div[id][style^="width:300px;height:250px;overflow:"]
 sportsbay.dk##.VideoPlayer + div[style]
 sportsbettingdime.com##.top-promos
 sportsbettingdime.com##div[id^="bet-"]
-sportsbite.lol##.inset-0.fixed
 sportsbite.lol#%#//scriptlet('prevent-fetch', '/adsbygoogle|divorceabetpiano\.com/')
 sportscardforum.com###wgo_affiliates
 sportscardforum.com##a[href^="https://www.sportscardforum.com/rbs_banner.php?"]
@@ -119721,6 +119728,7 @@ the-scientist.com##div[ad-id]
 the-star.co.ke###teasers
 the-sun.com##.dpa-grid
 the-sun.com##[data-component="zergnet"]
+the-sun.com##div[class$="billboard"]
 the-sun.com,gmx.*,transfermarkt.*#%#//scriptlet("abort-on-property-read", "Object.prototype.autoRecov")
 the-sun.com,gmx.*,transfermarkt.*$$script[tag-content="Flags."][min-length="20000"][max-length="300000"]
 the-sun.com,thescottishsun.co.uk,thesun.co.uk,thesun.ie##.customiser-v2-layout-1-billboard
