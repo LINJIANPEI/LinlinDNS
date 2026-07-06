@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-06 19:26:56（北京时间）
+! Version: 2026-07-06 22:54:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69290
+! Total count: 69314
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -19593,6 +19593,7 @@
 @@||xvideos.com^
 @@||xweb.instagram.com/ads/preferences/
 @@||xxvideoss.net/e/$subdocument,stealth=useragent
+@@||xxxcdn.org^$image,stealth=referrer
 @@||xxxdao.com^$generichide
 @@||xxxxx520.com^$generichide
 @@||xxxy.jnu.edu.cn/_upload/tpl/08/ad/2221/template2221/$script
@@ -21164,6 +21165,9 @@ amateurest.com##.under-player-text
 amateurfapper.com,iceporn.tv,pornmonde.com##.sources
 amateurphotographer.com##.content-ad
 amateurphotographer.com,cryptoslate.com,techspot.com##.cta
+amateurphotographer.com,mensfitness.co.uk,worldsoccer.com###VideoAdContainer
+amateurphotographer.com,mensfitness.co.uk,worldsoccer.com##.content-ad
+amateurphotographer.com,mensfitness.co.uk,worldsoccer.com##.pageskin-ads
 amateurphotographer.com,sherwood.news##.content-ad
 amateurporn.me,eachporn.com##.item[style]
 amateurpornvidz.com##div[style="height:280px;"]
@@ -21574,6 +21578,7 @@ animenewsnetwork.com##.herald-boxes > div[class="box"]:first-child
 animenewsnetwork.com##.iab
 animeporngif.com##.block-vda
 animerigel.com##.adflexbox
+animesa.net,9-anime.me,9anime-hub.com###mdl-register
 animeschedule.net###site-theme
 animeschedule.net###site-theme-foot
 animeschedule.net##.custom-consent
@@ -23045,6 +23050,8 @@ badminton.de###cookieGradient, #cookiePrivacy
 badmintoncn.com###bottomad_big
 badplaats.nl##.cnotice
 badtaste.it##.premium-float-footer
+badvault.com##.ad-slot-global-wrapper
+badvault.com##.video-card-ad-wrapper
 baeldung.com,cheatsheet.com,mensjournal.com,pwinsider.com##+js(rmnt, script, admiral)
 bagaggio.com.br##.lgpd
 bagas31.info##.frame-banner-places-popup
@@ -25883,6 +25890,7 @@ camsmut.com##a[href^="/go/"]
 camsmut.com##row:has(a[href*="?free-sex-live-cam-chat"])
 camsoda.com##div[class*="adHolder"]
 camsoda.com##div[class^="AdsRight-"]
+camsrip.com##.container-lg > div.row:has(> section > div[data-cl-spot])
 camstreams.tv###div-cr-inter-0
 camstreams.tv##a[href="https://www.sexedchat.com"]
 camstreams.tv##body #sliderBox
@@ -26017,6 +26025,7 @@ carboncredits.com##.tdi_72
 carbonite.com###notice
 carbuzz.com##.cb-video-ad-block
 carcomplaints.com,dolldivine.com,entrepreneur.com,interglot.com,news18.com,pricespy.co.nz,sourcedigit.com,telegraphindia.com##.adbox
+cardcluster.com,traderie.com##div[class^="AdSlot__"]
 cardealermagazine.co.uk##.desktop
 cardekho.com##.adHolderTop
 cardgames.io##.don-draper > label
@@ -31882,6 +31891,7 @@ emturbovid.com,tuborstb.co###pop
 emulatorgames.net##.mx-auto.text-center:has(> div.site-label)
 emulatorgames.onl###cg > #button
 emulatorjs.com##.frame-2
+emule-security.org##.partner-block
 emumax.com##.tbanner
 emurom.net###annonce
 en.namu.wiki,ja.namu.wiki##div[id][class]:empty
@@ -38888,6 +38898,7 @@ hqjavporn.com###topbar1
 hqjavporn.com##.content > div.line-bs
 hqjavporn.com##.invideo[onclick^="$('.close-btn')"]
 hqjavporn.com##.v-line-bs > .v-line-b
+hqporner.com###nav > ul > li:has(> a[rel="sponsored"])
 hqporner.com##.ad_video
 hqporner.com##.black_friday
 hqporner.com##.hide_ad_marker
@@ -43038,6 +43049,8 @@ kotipizza.fi##.notification-bottom
 kotrak.com##.configMessages
 kottke.org##.bling-title
 kottke.org##a[href^="http://carbonads.net"]
+koty.pl,psy.pl###main-content > .b-newest-posts::before
+koty.pl,psy.pl##.c-hd-desktop__ad
 koty.pl,psy.pl##.portal-header + hr:empty
 koty.pl,psy.pl##.portal-top-banner
 koty.pl,psy.pl##section[class*="portal-homepage-placeholder-"]
@@ -44381,6 +44394,9 @@ livescore.com##.right-bar > div[data-type="dfpbnr"]
 livescore.com##.top-add
 livescore.com##.wrapper > .bb:not(.header)
 livescore.com##div[class^="HeaderAdsHolder_"]
+livescore.com##div[data-ad-unit-id]
+livescore.com##div[data-id^="ads-"]
+livescore.com##div[data-test-id="virtuoso-item-list"] > div[data-item-index] > div[data-index] > div[class]:last-child:empty
 livescore.com##div[id$="-ad-holder"]
 livescore.net##.row[data-id="infobar"]
 livescores.biz##.banner-slot
@@ -48628,6 +48644,8 @@ natlawreview.com##.\#div\.block-native_bf
 natlawreview.com##.block-content-ad_block
 natomanga.com##.ads-contain
 natomanga.com##.fly-ads-chapter-page
+natomanga.com,fakazavibes.com,zamusic.org,javhdo.net,movies.meetdownload.com##a[href^="https://bit.ly/"]
+natomanga.com,nelomanga.net,mangakakalove.com,mangabats.com,manganato.gg##.ads-contain-v2
 nats.io###main_gdpr
 natural-cosmetology.ru##body > div[style*="background-color:#ff0000;color:#ffffff;"]
 naturalblaze.com##.n553lfzn75
@@ -51373,6 +51391,8 @@ paultan.org##.wrapper-footer
 pausecafein.fr###adb-pop
 pavillonfrance.fr##body > div:not([id]):not([class])
 pavinviaggi.com###otp-privacy
+pawgpornstars.com##a[href^="https://pawgpornstars.com/link/brazzers/"]
+pawgpornstars.com##a[href^="https://www2.pornfidelity.com/track/"]
 payback-ltd.com##div[class*="cookiesPopUp"]
 payberry.ru##.noun-cookie-container
 paybyphone.fr##.MuiBox-root[data-testid="cookies-box"]
@@ -56726,6 +56746,8 @@ sevenst.us,watchfacebook.com##body > button + div[id][class*=" "]
 severeporn.com##.fp-player > div[style*="inset:"][style*="z-index:"][style*="position: absolute;"]
 severeporn.com##.link-holder
 severeporn.com##.top > a[href="https://severeporn.com/link/brazzers-big-pornstar/"]
+severeporn.com,fpoxxx1.com,pornditt.com,hentaigem.com,pornify.tv,dafreeporn.com,pornolovers.net,hdporner.tv,transvids.tv,vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
+severeporn.com,porntn.com,shareanynudes.com,camstreams.tv,teenager365.to,amateur8.com,nudespree.com##.top-links
 severeweather.wmo.int##.gdpr
 severin.de##.veil
 sex-gen.com##.navi
@@ -56779,6 +56801,7 @@ sexmummy.com##td[width="330"] table[width="320"][height="100%"]
 sexodi.com###background-cloud
 sexodi.com###video_reklamy
 sexomercadobcn.com##.hidder, .disclamer
+sexplex.com,trannyvip.com,topsporter.net##.banner-ads
 sexpositions.club###main-content > aside[id="sidebar"]
 sexpuss.org##.bn1
 sexpuss.org##.tu-sexc3
@@ -69249,6 +69272,7 @@ zuoyebang.com##img[class^="bottomBanner_"]
 zuoyesou.com##.banner-box
 zurich.co.uk###opnotification
 zurich.de##.mod-notification-teaser
+zurnal24.si##.dfp_banner
 zutobi.com##div[class*="ModalCookies"]
 zvono.eu###footer > table
 zvv.ch##.mod_content_infobanner
