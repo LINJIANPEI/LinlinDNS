@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-06 22:54:11（北京时间）
+! Version: 2026-07-07 01:33:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69314
+! Total count: 69312
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3937,7 +3937,6 @@
 9am.ro##.ad-in-artilce
 9am.ro##.minh-250
 9am.ro##.retail_insert_in_article
-9anime-hub.com###mdl-register
 9anime-tv.com##body > iframe[class][style^="border:"][style*="z-index:"]:not([src])
 9animetv.to,hianime.to##.pizza
 9bis.net###gad
@@ -7992,6 +7991,7 @@
 @@||cloudcache.tencent-cloud.cn^
 @@||cloudcontrol.live.360.cn^
 @@||clouderrorreporting.googleapis.com^$domain=waze.com
+@@||cloudfam.io/*/pixel.gif
 @@||cloudfam.io/assets/ads/adnetwork-sync.js
 @@||cloudfam.io/assets/ads/adsense.js
 @@||cloudfam.io/assets/ads/gpt-publisher.js
@@ -10505,6 +10505,7 @@
 @@||gs.statcounter.com^|
 @@||gse.it^$stealth=ip
 @@||gsm1x.xyz^$generichide
+@@||gsmfile2025.blogspot.com^$generichide
 @@||gsp0.baidu.com^
 @@||gsp1.apple.com^
 @@||gsp1.baidu.com^
@@ -10546,6 +10547,7 @@
 @@||guide-acs.m.taobao.com^
 @@||guide.imggaming.com/prod|$stealth=3p-auth
 @@||guinnessworldrecords.jp/ezais/analytics$~third-party
+@@||gumroad.com^$stealth=flash|java
 @@||gumtree.co.za/my/ads.html$~third-party
 @@||gumtree.com*/p-post-ad*.html
 @@||gumtree.com.au/p-post-ad*.html
@@ -12004,6 +12006,7 @@
 @@||jsc.adskeeper.com/i/n/indexsubtitle.cc.*.js$domain=indexsubtitle.cc
 @@||jsc.adskeeper.com/site/*.js$domain=ranoz.gg
 @@||jsc.adskeeper.com/site/*.js$xmlhttprequest,domain=lockr.so
+@@||jsc.adskeeper.com/site/1091589.js$domain=cloudfam.io
 @@||jscdn.greeter.me/dropgalaxy.onlinehead.js$script,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
 @@||jsdelivr.net/combine/npm/$domain=ulifestyle.com.hk
 @@||jsdelivr.net/combine/npm/jquery@3,npm/social-share.js
@@ -19508,6 +19511,7 @@
 @@||xda-developers.com/adsninja_package/js/adsninja-refreshing-ad-zone.js
 @@||xda-developers.com/app/plugins/xda-kco-affiliate/public/js/xda-kco-affiliate-public.js
 @@||xdiv.space/io/p/?token=$stealth=referrer
+@@||xdownloaderz.com^$generichide
 @@||xe.awinriglet.com/*/$domain=olamovies.blog
 @@||xeroshoes.co.uk/affiliate/scripts/trackjs.js$~third-party
 @@||xes.pl/sign-in.html$stealth=ip
@@ -27278,7 +27282,9 @@ clutchpoints.com##.RzKEf
 clutchpoints.com##.cafemedia-clutchpoints-header
 clutchpoints.com##.ehgtMe.sc-ed3f1eaf-1
 clutchpoints.com##.hYrQwu
+clutchpoints.com##div.flex.border:has(> div[class] > .ad-slot)
 clutchpoints.com##div[class*="cafemedia-clutchpoints-"]
+clutchpoints.com,hockeyfeed.com##.not-prose
 cluvens.net##.gdpr
 cm-fima.com###cookie
 cm.be##.new-notification
@@ -27642,7 +27648,6 @@ coin360.com##.StickyCorner
 coin360.com##.b5BiRm
 coin360.com##.y49o7q
 coin360.com##[style="display:flex;justify-content:center;align-items:center;min-height:100px;position:relative"]
-coinadster.com##.banner-container
 coinadster.com##a[href^="https://fairspin.me/"]
 coinarbitragebot.com###adathm
 coinarbitragebot.com###botfix
@@ -32798,7 +32803,6 @@ fairtrade-deutschland.de###cc
 fairtrade.at###cc
 faithpot.com##.inarticle-ad
 fajnegotowanie.pl##.banner-container
-fakazavibes.com,zamusic.org,javhdo.net,movies.meetdownload.com##a[href^="https://bit.ly/"]
 fake-it.ws##.banner-frame
 fakedetail.com,telegraphindia.com,ltnovel.com##.adsbox
 fakemail.net##div.noPadding[style="height:200px !important;"]
@@ -32902,6 +32906,7 @@ fanlesstech.com###HTML5 > .widget-content
 fanlesstech.com###HTML6 > .widget-content
 fanlesstech.com###footer-1
 fanlink.to##.link-terms
+fanpage.it##.adv-wrapper
 fanpage.it##.box-news-banner
 fanpage.it##div[class^="taboola-widget-"]
 fanqiangzhe.com###mobile-bottom-ads
@@ -34407,7 +34412,6 @@ fplstatistics.com##div[style^="float:"] > a[target="_blank"] > img
 fpo.xxx##.fp-player > .fp-ui > div[style^="position: absolute; overflow: hidden; display: block; left:"]
 fpo.xxx##.top > a[rel="nofollow"]
 fpo.xxx,nikporn.com,fpoxxx1.com,xxbrits.com##.network
-fpoxxx1.com,pornditt.com,hentaigem.com,pornify.tv,dafreeporn.com,pornolovers.net,hdporner.tv,transvids.tv,vipporns.com,thetranny.com,shemalesin.com,stileproject.com,pornbimbo.com,faptube.com,amateur8.com,maturetubehere.com,lesbian8.com,sortporn.com,bigtitslust.com,18pussy.porn,pornrabbit.com,love4porn.com,fpo.xxx,keekass.com##.footer-margin
 fpoxxx1.com,xasiat.com,everydayporn.co,danude.com,pornchimp.com##.top
 fqlook.cn###rtj1009_iho3
 fqlook.cn###rtj1009_ren_imme1
@@ -36990,6 +36994,10 @@ gsmchoice.com###left-con > div[style="min-height:280px;"]
 gsmchoice.com##.header__promo-wide
 gsmchoice.com##div[class="row"][style="height: 336px"]
 gsmchoice.com##div[style="min-height: 280px; display: flex; align-items: center; justify-content: center;"]
+gsmfile2025.blogspot.com##.ad-left-wrapper
+gsmfile2025.blogspot.com##.ad-right-wrapper
+gsmfile2025.blogspot.com##.ad-top-banner
+gsmfile2025.blogspot.com##.fake-downloads
 gsmmaniak.pl###posts > div[style^="margin:0px"]
 gsmmaniak.pl###topMenu > #topMenu-wrapper[style^="width:"][style*="min-height:"]
 gsmserver.com##.widget_banner-container_three-horizontal
@@ -40986,7 +40994,6 @@ ispreview.co.uk###sidebar-slot-5
 ispreview.co.uk##.block--messages .block-body > div[align="center"]:has(> .vm-placement)
 ispreview.co.uk##.midarticle-slot-10
 ispreview.co.uk##div[style^="clear:both;border-radius:8px;"]
-israel21c.org##.banner-container
 israelnationalnews.com###banner-sticky
 israelnationalnews.com###taboola-3
 israelnationalnews.com###taboola-mid-main-column-thumbnails
@@ -46307,9 +46314,6 @@ menicka.cz##div[class^="banner_"]
 menmania.pl###text-2
 menmania.pl##.widget_times_ad_widget
 menobr.ru##div[class*="cookieContainer"]
-mensfitness.co.uk,worldsoccer.com###VideoAdContainer
-mensfitness.co.uk,worldsoccer.com##.content-ad
-mensfitness.co.uk,worldsoccer.com##.pageskin-ads
 mensfitness.com##.block-ami-dfp-blocks
 mensfitness.com##.rr-first-block-wrapper
 mensfitness.com##.rr-zergnet-wrapper
@@ -48820,7 +48824,6 @@ nekoray.org##main > div[data-elementor-type="single-page"] > div.elementor-eleme
 nelipyora.fi##.gw-cookie-consent
 nelomanga.net##.fly-ads-chapter-page
 nelomanga.net,mangabats.com,mangakakalove.com,manganato.gg,mangakakalot.gg##.ads-contain
-nelomanga.net,mangakakalove.com,mangabats.com,manganato.gg##.ads-contain-v2
 nelomanga.net,mangakakalove.com,mangabats.com,manganato.gg,mangakakalot.gg##.banner-ads
 nemocnicepribram.cz###cookies_lista_2022
 nemzetisport.hu##.ado-holder
@@ -53220,7 +53223,6 @@ porntb.com##div:is([class$="-vda"], .movable-top):has(> .tick > ins[data-zoneid]
 pornteentube.tv##.player-bns-block
 porntn.com##body > div.fullbar:has(> a.top-bar-porntn-static)
 porntn.com##div[id^="list_videos"] > div.item:has(> a:not([href*="porntn.com"]) > div > iframe)
-porntn.com,shareanynudes.com,camstreams.tv,teenager365.to,amateur8.com,nudespree.com##.top-links
 porntok.io##a[href^="https://go.mavrtracktor.com"]
 porntop.com###offerbtn
 porntop.com##.content > div.headline:has(> h2 > span.badge-ad)
@@ -62571,7 +62573,6 @@ topsmerch.com##.padding-50px
 topsmerch.com##.padding-top-20px.br-t
 topsport.bg$$script:contains(baitTest)
 topsporter.net###fl-ai-widget-placement
-topsporter.net##.banner-ads
 topsporter.net##.global-blog-wrapper > .post-item > .post-item-wrap[style="max-height: 300px;min-height: 300px;"]
 topstreams.info##.ui-widget-content
 topstreams.info##.ui-widget-overlay
@@ -62757,7 +62758,6 @@ traderepublic.com##.consentCard
 traderie.com###ad-rails
 traderie.com##.ae-fixed
 traderie.com##.cool-slot
-traderie.com##div[class^="AdSlot__"]
 traderie.com##div[height="250px"][width="300px"]
 traderie.com##div[height="600px"][width="160px"]
 traderie.com##div[height="600px"][width="300px"]
@@ -62805,7 +62805,6 @@ trannytube.tv##.b-secondary-column__banners
 trannytube.tv,icegaytube.tv##.b-secondary-column__banners
 trannyvideosx.com###ad-controls
 trannyvideosxxx.com###text-2
-trannyvip.com##.banner-ads
 trans.info##.font-normal:has(+ .hidden > a[href*="_banner_ad"][target="_blank"] > img)
 trans.info##a[href*="_banner_ad"][target="_blank"] > img
 trans.info##div.w-full:has(> div.leading-xs)
@@ -64552,7 +64551,6 @@ vecer.com##div[data-ocm-ad]
 vecer.com##div[x-show="show"] > .fixed
 vecernji.hr##.single-article__row--top-offer
 vecernji.hr##div[data-client="vecernji_hr_spotlight"]
-veck.io,filmelier.com,ncaa.com,short.croclix.me##.banner-container
 vecteezy.com##.eezy-sponsored-results
 vecteezy.com##.ez-sponsored-results
 vecteezy.com##.partner-sponsored-results
