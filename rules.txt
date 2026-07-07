@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-08 00:16:15（北京时间）
+! Version: 2026-07-08 02:53:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69344
+! Total count: 69340
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3879,6 +3879,7 @@
 91porny.com##.jsv-g1
 91porny.com##.mobile-jsv-bottom,.mb-3.p-0,.d-sm-none,.mb-0.p-0
 91porny.com##A.display.d-block[href^='http'],A.display.d-block[href^='http'] ~ *
+91porny.com##div[data-nosnippet]:has(div.row a[href][rel^="noopener"])
 91porny.com,91porn.fans,91porny.org###main > div[class][id] > .mb-0
 91porny.com,91porn.fans,91porny.org##.videoPlayContainer > style + div[data-nosnippet]
 91porny.org,jstv600.com,x9av7.com###main > div[id^="rd"]
@@ -7362,6 +7363,7 @@
 @@||cdn.apple-mapkit.com/*?apiVersion=$stealth=3p-auth
 @@||cdn.apple-mapkit.com/ma/bootstrap?$stealth=3p-auth,domain=icloud.com
 @@||cdn.ark.qq.com^
+@@||cdn.asdasdhg.com^$image,stealth=referrer,domain=silentquill.net
 @@||cdn.atmedia.hu^
 @@||cdn.atmedia.hu^|
 @@||cdn.bannersnack.com/banners/$image,subdocument,domain=audiogon.com
@@ -10802,7 +10804,6 @@
 @@||hlok.qertewrt.com/offer?prod=
 @@||hls*-cf.xnxx-cdn.com^
 @@||hls*.*.*/hls*/*.PNG$stealth=referrer,third-party,xmlhttprequest,domain=kisskh.*
-@@||hls*.*.*/hls*/*.PNG$stealth=referrer,xmlhttprequest,domain=kisskh.*
 @@||hls*.burntburst*.store/*/master.m3u8$stealth=referrer
 @@||hls-hw.xvideos-cdn.com^
 @@||hls-live.bdstatic.com/*/stream_$stealth=referrer
@@ -10810,7 +10811,6 @@
 @@||hls.exmarketplace.com/*.ts$domain=tvserial.it
 @@||hls.redefine.pl^$stealth=referrer
 @@||hls0*.*.*.mp4?ip=$stealth=referrer,media,domain=kisskh.*
-@@||hls0*.*.*.mp4?ip=$stealth=referrer,media,domain=kisskh.co
 @@||hls3-cf.xvideos-cdn.com^
 @@||hls3-l3.xvideos-cdn.com^
 @@||hls9-cf.xvideos-cdn.com^
@@ -18085,7 +18085,6 @@
 @@||torrentz.adtrackers.net/mgid/ad.js
 @@||torrentz.bannertrack.net/mgid/ad.js
 @@||tortuga.wtf^$stealth=referrer
-@@||torupload.com/token/gettoken.php$domain=torupload.com
 @@||torupload.com/token/gettoken.php$domain=torupload.com|nathanmichaelphoto.com
 @@||tot.hoyoverse.com^
 @@||total-sportek.to^$generichide
@@ -19196,7 +19195,6 @@
 @@||wowsai.com/data/files/ad/
 @@||wp.pl/*-FwkqOxhmGz4XCSo7GGYbPhcJKjsYZhs-$script,domain=pilot.wp.pl
 @@||wp.pl^$generichide
-@@||wp.youtube-anime.com^$image,stealth=referrer,domain=allmanga.to
 @@||wp.youtube-anime.com^$image,stealth=referrer,domain=allmanga.to|mkissa.to
 @@||wpb.shueisha.co.jp^$generichide
 @@||wpfc.ml/b.gif$image,domain=holybooks.com
@@ -27901,8 +27899,6 @@ comicbookrealm.com###brad
 comicbookrealm.com###rad
 comicbookrealm.com###right-rail > .module
 comicbookrealm.com###tad
-comick.art##.owl-stage > div.owl-item:has(> div[class*=" AD"] img[src*="/ads/"])
-comick.art##div[class^="AD"] a[target="_blank"]
 comick.art,comick.live##.ads-banner-container
 comick.fun##.float-right > .mx-auto > a[href^="https://comick.app/product/"]
 comick.fun##.images-reader-container .mx-auto > a[href^="https://comick.app/product/"]

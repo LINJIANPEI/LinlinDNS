@@ -369,8 +369,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 101713
-! Blocked Filters: 43250
+! Blocked Filters: 101719
+! Blocked Filters: 43257
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -408,7 +408,7 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 182173
+! Blocked domains: 182272
 ! Blocked domains: 4987
 ! Blocked: 4.886 rules
 ! Blocked: 564 rules
@@ -437,10 +437,10 @@
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
+! Checksum: VcXEUVhVahgP2IPEM+yIdA
+! Checksum: WN7uEy74J8P7SUjMYP2rgw
+! Checksum: YiXq6Xov8HchHdp9+N9diw
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: mjNpMF/vAMi1qJ4wRvqMMA
-! Checksum: nfjQ4RMKHUjW8o21XsAikQ
-! Checksum: rpqchLHJZ23G13aNATuF7w
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -753,16 +753,16 @@
 ! Last Update: 2020/08/07
 ! Last modified: 03 Feb 2014 03:50 UTC
 ! Last modified: 06 Jul 2026 14:28 UTC+7
-! Last modified: 07 Jul 2026 16:02 UTC
+! Last modified: 07 Jul 2026 18:41 UTC
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-06-15T14:19:40.740Z
-! Last modified: 2026-07-07T15:03:25.835Z
+! Last modified: 2026-07-07T18:45:10.869Z
 ! Last modified: 2026/03/11 09:15 +0800
-! Last modified: 2026/07/07 19:13:27
+! Last modified: 2026/07/08 02:04:39
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1191,7 +1191,7 @@
 ! Used with many websites to generate multiple popups
 ! Utiq :  utiq-aws.net disguised trackers
 ! VPN Affiliate Banners
-! Version:    最后同步时间: 2026-07-07 01:15:06
+! Version:    最后同步时间: 2026-07-08 01:15:08
 ! Version: 04December2020v1-Alpha
 ! Version: 06September2020v1
 ! Version: 1.0.0.43
@@ -1218,8 +1218,8 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260628141154
-! Version: 202607071602
-! Version: 20260707191327
+! Version: 202607071841
+! Version: 20260708020439
 ! Version: 2607061428
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3486,7 +3486,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-07-07T23:51:24+08:00
+# Update time: 2026-07-08T02:51:27+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -39865,6 +39865,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .gif|$domain=99a68.com|99re.com
 .gif|$domain=99re.com
 .gif|$image,domain=mj859.com|qmtrd.com
+.gif|$image,third-party,domain=91porny.com
 .gif|$image,third-party,domain=huanggua22.com
 .gif|$image,third-party,domain=jiuqugan.top|91jp3.beauty
 .gif|$third-party,domain=33235.net
@@ -50468,6 +50469,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 91porny.com##.jsv-g1
 91porny.com##.mobile-jsv-bottom,.mb-3.p-0,.d-sm-none,.mb-0.p-0
 91porny.com##A.display.d-block[href^='http'],A.display.d-block[href^='http'] ~ *
+91porny.com##div[data-nosnippet]:has(div.row a[href][rel^="noopener"])
 91porny.com,91porn.fans,91porny.org###main > div[class][id] > .mb-0
 91porny.com,91porn.fans,91porny.org##.videoPlayContainer > style + div[data-nosnippet]
 91porny.com,91porn.fans,91porny.org#?##main > div[class][id]:-abp-has(>style)
@@ -54384,6 +54386,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||cdn.apple-mapkit.com/*?apiVersion=$stealth=3p-auth
 @@||cdn.apple-mapkit.com/ma/bootstrap?$stealth=3p-auth,domain=icloud.com
 @@||cdn.ark.qq.com^
+@@||cdn.asdasdhg.com^$image,stealth=referrer,domain=silentquill.net
 @@||cdn.atmedia.hu^
 @@||cdn.atmedia.hu^|
 @@||cdn.bannersnack.com/banners/$image,subdocument,domain=audiogon.com
@@ -57824,7 +57827,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||hlok.qertewrt.com/offer?prod=
 @@||hls*-cf.xnxx-cdn.com^
 @@||hls*.*.*/hls*/*.PNG$stealth=referrer,third-party,xmlhttprequest,domain=kisskh.*
-@@||hls*.*.*/hls*/*.PNG$stealth=referrer,xmlhttprequest,domain=kisskh.*
 @@||hls*.burntburst*.store/*/master.m3u8$stealth=referrer
 @@||hls-hw.xvideos-cdn.com^
 @@||hls-live.bdstatic.com/*/stream_$stealth=referrer
@@ -57832,7 +57834,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||hls.exmarketplace.com/*.ts$domain=tvserial.it
 @@||hls.redefine.pl^$stealth=referrer
 @@||hls0*.*.*.mp4?ip=$stealth=referrer,media,domain=kisskh.*
-@@||hls0*.*.*.mp4?ip=$stealth=referrer,media,domain=kisskh.co
 @@||hls3-cf.xvideos-cdn.com^
 @@||hls3-l3.xvideos-cdn.com^
 @@||hls9-cf.xvideos-cdn.com^
@@ -65107,7 +65108,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||torrentz.adtrackers.net/mgid/ad.js
 @@||torrentz.bannertrack.net/mgid/ad.js
 @@||tortuga.wtf^$stealth=referrer
-@@||torupload.com/token/gettoken.php$domain=torupload.com
 @@||torupload.com/token/gettoken.php$domain=torupload.com|nathanmichaelphoto.com
 @@||tot.hoyoverse.com^
 @@||total-sportek.to^$generichide
@@ -66218,7 +66218,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||wowsai.com/data/files/ad/
 @@||wp.pl/*-FwkqOxhmGz4XCSo7GGYbPhcJKjsYZhs-$script,domain=pilot.wp.pl
 @@||wp.pl^$generichide
-@@||wp.youtube-anime.com^$image,stealth=referrer,domain=allmanga.to
 @@||wp.youtube-anime.com^$image,stealth=referrer,domain=allmanga.to|mkissa.to
 @@||wpb.shueisha.co.jp^$generichide
 @@||wpfc.ml/b.gif$image,domain=holybooks.com
@@ -69137,7 +69136,6 @@ aniagotuje.pl##.ad1
 aniagotuje.pl##.ad2
 anichin.co.id###floatcenter
 anichin.co.id#%#//scriptlet('abort-current-inline-script', '$', 'window.open(')
-anihq.cc,universal-lover-zz.icu,7fractals.icu,rupadirecta.lat,ffc786.icu#%#//scriptlet('prevent-window-open', '_blank')
 anihq.cc,vik1ngfile.site,kungfutv.net,nexusgames.to#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'window.open')
 anikai.to#%#//scriptlet('set-cookie', '__p_mov', '1')
 anikore.jp##html[class^="loading"]:style(visibility: visible !important;)
@@ -77206,8 +77204,6 @@ comick.app#?#.mx-auto > .items-center:has(> #protag-header)
 comick.app#?#.padding-safe-left > .mx-auto:has(> .items-center > #protag-header)
 comick.app#?#div.relative > div.py-2:has(> div#ads-top)
 comick.app#?#div[class^="xl:pt-0 "] > .py-6:has(> #ads-top:only-child)
-comick.art##.owl-stage > div.owl-item:has(> div[class*=" AD"] img[src*="/ads/"])
-comick.art##div[class^="AD"] a[target="_blank"]
 comick.art,comick.live##.ads-banner-container
 comick.fun##.float-right > .mx-auto > a[href^="https://comick.app/product/"]
 comick.fun##.images-reader-container .mx-auto > a[href^="https://comick.app/product/"]
@@ -98882,6 +98878,7 @@ luogu.com.cn##.side > div:not(.l-card):has(> span > svg.fa-rectangle-ad)
 luogu.me##.propaganda
 luongovincenzo.it#%#//scriptlet("abort-on-property-write", "ai_adb")
 luoqiuzw.com##DIV[id^="a-loading-"]
+luottruyen12.com,vidavaca.net,hentainexus.com,xfans.st,mangakakalot.gg,26img.com,javbee.co,vindaz.shop,xca.cymru,shavetape.cash,vidsonic.net,bigshare.io,herexxx.com,avdbapi.com,rule34vault.com,speedporn.net,taboodude.com,pornxp.ph,cdn.loadvid.com,vidara.so,vidara.to,pornwatch.ws,rpmplay.online,embedseek.online,pandamovies.org,hepidrive.online,hentaicop.com,livecamrips.*,asianporn.li,vik1ngfile.site,mangago.me,klmanga.ec,chochox.com,comick.art,qmh.sex,cap3.sex,hindilinks4u.*,doujindesu.tv,easyvidplayer.com,camwhores.*,player4me.*,faselhds.biz,severeporn.com,rule34video.com,niyaniya.moe,pornxp.net,upns.online,seekplayer.vip#%#//scriptlet('abort-current-inline-script', 'WebAssembly', 'atob')
 lupa.cz###adsGalleryDesktop
 lupa.cz##.design-page__content-row > .leaderboard-dynamic-height-wrapper
 lupa.cz#%#//scriptlet('set-constant', 'Gallery.prototype.setupAdsGallery', 'noopFunc')
@@ -121955,7 +121952,6 @@ torrnado.win##body > div > .a-overlay
 torupload.com#$##adblockModal { display: none !important; }
 torupload.com#$#body { overflow: auto !important; }
 torupload.com#%#//scriptlet('prevent-element-src-loading', 'img', 'googlesyndication.com')
-torupload.com#%#//scriptlet('set-constant', 'loadads', 'noopFunc')
 toscana-notizie.it###banner-overlay-top-page
 toscana.it###epic_cookie, #cookPol, #banner-overlay-top-page, #myCookie
 tosdr.org##.toast.fixed-bottom
@@ -124987,7 +124983,6 @@ vik1ngfile.site##a[href="/fast-download"]
 vik1ngfile.site#%#//scriptlet('abort-current-inline-script', 'JSON.parse', 'atob')
 vik1ngfile.site#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'document.createElement')
 vik1ngfile.site#%#//scriptlet('prevent-addEventListener', 'click', 'document.createElement')
-vik1ngfile.site,kungfutv.net,nexusgames.to#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'window.open')
 vik1ngfile.site,zpaste.net#%#//scriptlet('abort-current-inline-script', 'Uint8Array', '/=\[\][\s\S]*?new[\s\S]*?\)\)\(\)\}\)/')
 vikacg.com#%#//scriptlet('prevent-window-open', '!/external')
 vikacg.com,vikacg.icu,vikacg.xyz##div[class^="my-"] > .grid > a[href^="http"]:not([href*="vikacg."])
