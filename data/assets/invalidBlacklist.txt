@@ -435,13 +435,13 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
+! Checksum: 34MryXZLLmRZuRp7wp9Niw
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: DIYzqDl7+hx2g5Hmls+epQ
-! Checksum: MZdGl+pk4M3DaJnVKvdrlw
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
+! Checksum: qP0GANs1SGwozZZf70CWng
 ! Checksum: vXO2skD37egAcrKzRVhe1A
-! Checksum: x8bUKCIiSv9wnBLBy/KCPg
+! Checksum: xB13iLHz+01UhvE/LqiJ5A
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -753,7 +753,7 @@
 ! Last Update: 2020/08/07
 ! Last modified: 03 Feb 2014 03:50 UTC
 ! Last modified: 06 Jul 2026 14:28 UTC+7
-! Last modified: 08 Jul 2026 07:12 UTC
+! Last modified: 08 Jul 2026 09:51 UTC
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
@@ -1218,7 +1218,7 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260628141154
-! Version: 202607080712
+! Version: 202607080951
 ! Version: 20260708112130
 ! Version: 2607061428
 ! Version: 350.202311301133
@@ -3285,7 +3285,7 @@
 # Last modified: 16 Dec 2025 16:23 UTC+7
 # Last modified: Fri, 19 Dec 2025, 21:01 UTC+01:00
 # Last modified: Sun, 05 Jul 2026, 14:59 UTC+02:00
-# Last update: 2026-07-07
+# Last update: 2026-07-08
 # Last updated: 2020-06-19
 # Last updated: 2025-12-19 21:17:15 (UTC)                      #
 # Last updated: 2026-07-05 16:34:09 (UTC)                      #
@@ -3320,7 +3320,7 @@
 # Modified Hosts End
 # Modified Hosts Start
 # Notes: The Operating System does not read the "#" symbol #
-# Number of domains: 109200
+# Number of domains: 109043
 # Number of entries: 479
 # Number of entries: 807
 # Number of unique domains: 78,187
@@ -3486,7 +3486,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-07-08T14:51:26+08:00
+# Update time: 2026-07-08T17:51:21+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -50474,9 +50474,12 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 91porny.com##div[data-nosnippet]:has(div.row a[href][rel^="noopener"])
 91porny.com,91porn.fans,91porny.org###main > div[class][id] > .mb-0
 91porny.com,91porn.fans,91porny.org##.videoPlayContainer > style + div[data-nosnippet]
+91porny.com,91porn.fans,91porny.org#?##main > div[class][id]:-abp-has(.video-elem>a[rel="noopener nofollow"])
+91porny.com,91porn.fans,91porny.org#?##main > div[class][id]:-abp-has(>div>style)
 91porny.com,91porn.fans,91porny.org#?##main > div[class][id]:-abp-has(>style)
 91porny.com,91porn.fans,91porny.org#?##main > div[class][id]:has(>style)
 91porny.com,91porn.fans,91porny.org#?#.colVideoList:-abp-has(>.video-elem>.d-block[href^="http"])
+91porny.com,91porn.fans,91porny.org#?#.colVideoList:-abp-has(>.video-elem>.display[href^="http"])
 91porny.com,91porn.fans,91porny.org#?#.colVideoList:has(>.video-elem>.d-block[href^="http"])
 91porny.com/api/getPos?jspath=/
 91porny.org,jstv600.com,x9av7.com###main > div[id^="rd"]
@@ -91425,6 +91428,8 @@ htnovo.net#$##wrapfabber { height: 1px!important; }
 htnovo.net#%#//scriptlet('prevent-setTimeout', 'baitElement.offsetHeight')
 htpcguides.com##.inside-right-sidebar > #text-18
 http$third-party,~image,domain=imgblaze.net|pixsera.net|imgfrost.net
+http.dog##a[href^="https://http.app/"]
+http.dog##a[href^="https://searchbrothers.com/"]
 http://*/letv-gug/
 http://defaultts.tc.qq.com/
 http://lmbsy.qq.com/
