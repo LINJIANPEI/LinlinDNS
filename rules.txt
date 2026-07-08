@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-09 01:17:05（北京时间）
+! Version: 2026-07-09 03:03:46（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69354
+! Total count: 69360
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -68,6 +68,7 @@
 *$xmlhttprequest,redirect-rule=nooptext,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
 *$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz,badfilter
 *$xmlhttprequest,redirect-rule=nooptext,domain=sportshub.to
+*$xmlhttprequest,third-party,denyallow=kstatic.to,domain=kagane.to
 *$xmlhttprequest,third-party,redirect-rule=noopjs,domain=asiaon.top
 *$xmlhttprequest,third-party,redirect=nooptext,domain=vidizzy.com
 *-160-600.jpg|$image
@@ -7119,6 +7120,7 @@
 @@||c.amazon-adsystem.com/aax2/apstag.js$domain=tasteofhome.com
 @@||c.amazon-adsystem.com/aax2/apstag.js$domain=thedailybeast.com
 @@||c.amazon-adsystem.com/aax2/apstag.js$domain=time.com
+@@||c.amazon-adsystem.com/aax2/apstag.js$domain=upfilesgo.com|upplinks.net|upfion.com|upfiles.app|upfiles-urls.com|falpus.com|fooak.com
 @@||c.amazon-adsystem.com/aax2/apstag.js$domain=venge.io
 @@||c.amazon-adsystem.com/aax2/apstag.js$domain=wgntv.com
 @@||c.amazon-adsystem.com/aax2/apstag.js$domain=wivb.com
@@ -7594,6 +7596,7 @@
 @@||cdn.syndication.twimg.com/tweets.json?callback=$domain=wrestlinginc.com
 @@||cdn.taboola.com/libtrc/*/loader.js$domain=cnet.com
 @@||cdn.taboola.com/libtrc/loader.js$xmlhttprequest,domain=exeygo.com
+@@||cdn.taboola.com/libtrc/loader.js$xmlhttprequest,domain=upfilesgo.com|upplinks.net|upfion.com|upfiles.app|upfiles-urls.com|falpus.com|fooak.com
 @@||cdn.taboola.com/libtrc/unip/loader.js$domain=techedubyte.com
 @@||cdn.taboola.com/libtrc/unresolved/tfa.js$script,domain=rophim1.vip
 @@||cdn.taboola.com/magazine/$domain=taboolanews.com
@@ -18490,6 +18493,7 @@
 @@||update.vivo.com^
 @@||updateinfo.market.xiaomi.com^
 @@||updatesmarugujarat.in^$generichide
+@@||upfilesgo.com^$generichide
 @@||upgrade.ptmi.gitv.tv^
 @@||upgrade.vivo.com^
 @@||upload*.jianshu.io^$stealth=referrer
@@ -66649,6 +66653,8 @@ wmeentertainment.com##.notification
 wmsj.pw##[class^="asb-"]
 wmt.top##.cookie
 wmtips.com##.a3f17
+wmur.com,ksbw.com,kmbc.com,mynbc5.com,koat.com,ketv.com,gulfcoastnewsnow.com,wapt.com##article:has(> div[class^="css-"] > div[data-type] > div.ad-container)
+wmur.com,ksbw.com,kmbc.com,mynbc5.com,koat.com,ketv.com,gulfcoastnewsnow.com,wapt.com##div[class^="css-"]:has(> div[data-type] > div.ad-container)
 wmzhe.com##.a_dwrap
 wmzhe.com##.ads_wmzhe_software_bannerRight
 wmzhe.com##.aibyte_ad
