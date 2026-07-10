@@ -712,7 +712,6 @@
 {"original":"|https://www.36dm.com/tbklb/","existingRule":"||https^"}
 {"original":"|javascript:*window.location$popup","existingRule":"||javascript^"}
 {"original":"||*.$image,rewrite=abp-resource:1x1-transparent-gif,third-party,domain=rmdown.com","existingRule":"||*.^"}
-{"original":"||*.mp4$rewrite=abp-resource:blank-mp3,domain=huavod.com|huaren.live","existingRule":"||*.mp4^"}
 {"original":"||*/ad/$rewrite=abp-resource:blank-mp3,domain=huaren.tv","existingRule":"||*^"}
 {"original":"||*/ads/index.htm*^","existingRule":"||*^"}
 {"original":"||*/api/ad/*^","existingRule":"||*^"}
@@ -720,8 +719,10 @@
 {"original":"||*/effect_ad/*^","existingRule":"||*^"}
 {"original":"||*/effect_ad/splash_screen/*^","existingRule":"||*^"}
 {"original":"||*/game/abtest/*^","existingRule":"||*^"}
+{"original":"||*/omts.tc.qq.com^","existingRule":"||*^"}
 {"original":"||*/peak/download*^","existingRule":"||*^"}
 {"original":"||*/pgc/app/preload*^","existingRule":"||*^"}
+{"original":"||*/snscosdownload/*/reserved/*^","existingRule":"||*^"}
 {"original":"||*/splash/list?access_key*^","existingRule":"||*^"}
 {"original":"||*/splash/show*^","existingRule":"||*^"}
 {"original":"||*/videos/other/*.f4v$object,domain=iqiyi.com","existingRule":"||*^"}

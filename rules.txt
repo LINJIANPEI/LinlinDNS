@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-10 09:47:42（北京时间）
+! Version: 2026-07-10 13:52:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69359
+! Total count: 69346
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -18796,6 +18796,7 @@
 @@||vidlii.com^$generichide
 @@||vidload.lol/iframe/$stealth=referrer
 @@||vidload.site^$stealth=referrer
+@@||vidmixi.com/embed/$stealth=referrer
 @@||vidmoly.to/embed-$stealth=referrer|ip
 @@||vidnest-*.workers.dev/mp4-proxy$stealth=referrer
 @@||vidnest.io^$generichide
@@ -20883,7 +20884,6 @@ aliexpress.com,aliexpress.us##div[class*="search-item-card-wrapper-"]:has(span[c
 aliexpress.com,aliexpress.us##div[data-spm="seoads"]
 aliexpress.ru##div[class*="PrivacyPolicyBanner"]
 aliexpress.us###gdpr-new-container, #voyager-gdpr
-aliez.me###adbtm
 alipaczka.pl###bottom-charm, .cookies
 alipay.com###J-cooperant-banner
 alison.com##.search-top-ad
@@ -31626,17 +31626,16 @@ elamigos-games.net##a[href^="https://www.instant-gaming.com/"][href*="?igr="]
 elamigosedition.com##.side-b:has(> div[style] > a[href^="https://www.etsy.com/"])
 elamigosedition.com##.tabs-b > div[class^="but"] > a[target="_blank"]
 elamigosedition.com##center > a[onclick*="window.open("][class^="button"]
-elamigosgames.org,elamigos-games.net##.content_store
-elamigosgames.org,elamigos-games.net##.iframeDiv
+elamigosgames.net,elamigosweb.net,elamigosweb.com###dwin6
+elamigosgames.net,elamigosweb.net,elamigosweb.com##center > button[onclick^="window.open("]
+elamigosgames.net,elamigosweb.net,elamigosweb.com,elamigosgamez.net,elamigosgames.org,elamigos-games.net##.content_store
+elamigosgames.net,elamigosweb.net,elamigosweb.com,elamigosgamez.net,elamigosgames.org,elamigos-games.net##.iframeDiv
+elamigosgames.net,elamigosweb.net,elamigosweb.com,sulasok.cz###floatingBanner
 elamigosgamez.com###xdbqsk
 elamigosgamez.com##.banner-lateral
 elamigosgamez.com##div[id^="ig-banner"]
-elamigosgamez.net##.content_store
-elamigosgamez.net##.iframeDiv
 elamigosgamez.net##.row > div.portfolio-item:not(:has(> div.card > a[href^="https://www.elamigosgamez.net/"]))
 elamigosgamez.net$$script:contains(checkAdblockUser)
-elamigosweb.com###dwin6
-elamigosweb.com##center > button[onclick^="window.open("]
 elaoffcial.com,europeelects.eu,telugusexkathalu.com,daemon-hentai.com,teamkong.rf.gd,ad4msan.com,ossels.ai,world-iptv.club###zdn-adblock-overlay
 elbalad.news##.left-col > div[style="height:300px"]
 elblandkliniken.de###Datenschutz
@@ -43405,7 +43404,7 @@ lamaletaintima.com##.st_notification_wrap
 lambdatest.com##.cookiesdiv
 lambgoat.com###pwDeskLbAtf-container
 lame.buanzo.org##.box:has(> ins.adsbygoogle)
-lame.buanzo.org,mmorpg.com,airnavradar.com,routinehub.co,unlimited.waifu2x.net,dutasex.info,redpornblog.com,freeromsdownload.com,roms-hub.com,roms-download.com,food-foto.jp,model-foto.jp,4qrcode.com,findaphd.com,grammaire.reverso.net,sportslogos.net,cyrobo.com,aliez.me,aliez.tv,ip-address.org###ads
+lame.buanzo.org,mmorpg.com,airnavradar.com,routinehub.co,unlimited.waifu2x.net,dutasex.info,redpornblog.com,freeromsdownload.com,roms-hub.com,roms-download.com,food-foto.jp,model-foto.jp,4qrcode.com,findaphd.com,grammaire.reverso.net,sportslogos.net,cyrobo.com,aliez.tv,ip-address.org###ads
 lamiareport.gr###backgroundlink
 lamiareport.gr##.head728
 lamium.io##.lamium-cookie-consent
@@ -46543,11 +46542,6 @@ mgtv.com##.c-95060-top
 mh160.com###jusha1
 mhgui.com##.mt10[style="width: 300px; height: 250px;"]
 mhiae.com###popup, .popup
-mhktricks.net###bottom-promo-dload
-mhktricks.net##.jetpack-image-container > a:not([href^="http://mhktricks.net/"]) > img
-mhktricks.net##.postcontent > blockquote > p > a > img
-mhktricks.net##.postcontent > p > a > img
-mhktricks.net##a[href="javascript:void(0);"][rel="nofollow"] > img
 mhra.gov.uk###__next > button, #__next > aside
 mhwilds.kiranico.com##div[id="mhwilds.banner.top"]
 mi-globe.com##.td_block_wrap[style="display: none !important;"] + .td_block_separator
@@ -49834,7 +49828,6 @@ nosolosalud.com###downbar
 nosteamgames.ro###fanback
 nosteamgames.ro##body > div[id^="c_window_"][style="width: 300px; height: 280px;"]
 nosteamgames.ro$$script[tag-content="javascript:window.focus();"][min-length="3000"][max-length="12000"]
-notalwayslearning.com###topbar_leaderboard
 notariat-schoeffmann.at##body > div:not([id]):not([class])
 notateslaapp.com##.mod-sponsors
 notateslaapp.com##.vtwjhpktrbfmw
@@ -55175,9 +55168,6 @@ releasestv.com##.ast-above-header-wrap
 releasestv.com##div[class^="astra-advanced-hook-"]
 relevantmagazine.com##.ad-supported
 religionnews.com##.sticky-ad-white-space
-relink.to###iBunkerSlideWrap
-relink.to##div[class^="ad_right"]
-relink.to##div[style="float:left;"] > div.view_middle_block
 relmz.io###relmz-io_300x250
 relmz.io###relmz-io_728x90
 relojes4you.es###cookie
@@ -55498,8 +55488,6 @@ robbreport.com###icon-sprite
 robe-materiel-medical.com##.w3-container
 robert-thomas.de##.cookie--consent
 robertplant.com###cookieplugin
-robinwidget.org##.banner-1
-robinwidget.org##.banner-2
 robinwieruch.de###___gatsby div[class^="AnalyticsFooter"]
 robinwieruch.de###gatsby-focus-wrapper div[class^="withBorder-module"]:has(> div[class^="index-module"] small > a[href^="https://amzn.to/"])
 roblox.com###Skyscraper-Abp-Left
@@ -56077,7 +56065,6 @@ sammobile.com##.desktop-leaderboard-ad-wrapper
 sammobile.com##.g-59
 sammobile.com##.header-top[data-nosnippet]
 sammobile.com##.news-for-you-wrapper
-sammobile.com##.rev
 sammyspizza.de##.responsiveFooterBar
 samnaprawiam.com##.adsbygoogle
 sampledrive.org##body > div[id][style="display: block;"]:has(> div[id]:only-child > div[style*="margin: clamp"])
@@ -59324,6 +59311,7 @@ stlmag.com##main > div.has-neutral-silver-03-background-color:has(> div.o-sectio
 stltoday.com##.scrbbl-post-type-advertisement
 stnn.cc###FloatDIV
 stnn.cc##div[style="width:960px;height:90px;float:left;"]
+stock-calculator.net##.grid > div > div.overflow-hidden:has(> div.inset-0 > ins.adsbygoogle)
 stock87.com##a[href^="http"]:not([href*="stock87."]) > img[src*="uploadfiles/image/"]
 stock87.com##div[id^="Javascript"]
 stock87.com##div[style^="position:relative;width:1000px;height:90px;"]
@@ -59639,7 +59627,6 @@ suizhoushi.com##.sznew_ad_top
 suizhoushi.com##div[id^="sznew_ad"]
 sukebei.nyaa.si##.servers-cost-money1
 sukidesuost.info###custom_html-23
-sulasok.cz###floatingBanner
 sulasok.cz##body > div[style^="position: fixed; top:"][style*="z-index:"]
 sulasok.uno,sulasokvids.net##a[href="https://otits.tv/"]
 sulasokvids.net##.col-md-8 > div[style]:has(> p > a[href="https://Xpinay.tv"])
