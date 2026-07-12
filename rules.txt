@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-12 20:52:34（北京时间）
+! Version: 2026-07-12 22:21:43（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69362
+! Total count: 69394
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1405,6 +1405,7 @@
 /optiextension.dll?$script
 /os2023001.oss-$script
 /out?zoneId=$popup
+/outbrain.js$~xmlhttprequest
 /p/rp/*?mi_u=*=&sap_id=$image
 /pa.dajiahao*.top/
 /page-peel$~xmlhttprequest
@@ -1616,6 +1617,7 @@
 /t.yesware.com/t/*$image
 /taboola-footer.js$script
 /taboola-header.js$script
+/taboola.js$~xmlhttprequest
 /taboola_8.9.1.js$script
 /tabu/display.js$script
 /tag?name=PageView$xmlhttprequest
@@ -4724,13 +4726,16 @@
 @@||*-open-sign.byteimg.com^
 @@||*-open.byteimg.com^
 @@||*.*.szbdyd.com^
+@@||*.95516.com^
 @@||*.a.yximgs.com^
 @@||*.akamai-cdn-content.com^
 @@||*.allawntech.com^
 @@||*.anjuke.com^
 @@||*.bblmw.cn^
 @@||*.cdninstagram.com^
+@@||*.cup.com.cn^
 @@||*.dlied1.cdntips.net^
+@@||*.forgecdn.net^
 @@||*.heytapdownload.com^
 @@||*.img.mobile.sina.cn^
 @@||*.in-addr.arpa^
@@ -6728,6 +6733,7 @@
 @@||baozhang.baidu.com^
 @@||bapi.adsafeprotected.com/bapi?anId=*&auth_token=$domain=entrepreneur.com
 @@||bapi.adsafeprotected.com/dbapi?ias_callback=__IntegralAS_$domain=entrepreneur.com
+@@||base.cup.com.cn^
 @@||base64.online/ads.txt
 @@||basemapstyles-api.arcgis.com^$stealth=referrer,domain=radar.weather.gov
 @@||basicthinking.de/blog/advertisment/
@@ -6749,6 +6755,7 @@
 @@||bbcdn.go.eu.bbelements.com/bb/bb_one2n.*.js$domain=xtv.cz
 @@||bbs-static.miyoushe.com^
 @@||bbs.huorong.cn^
+@@||bbs.mcmod.cn^
 @@||bbs.mobileapi.hupu.com^
 @@||bbs.tampermonkey.net.cn^
 @@||bbs.tgfcer.com^$generichide
@@ -7063,6 +7070,7 @@
 @@||bucket.fitwhey.com/Banners^$domain=fitwhey.com
 @@||bud.iqiyi.com^
 @@||buffer.com^$elemhide
+@@||bug.mcmod.cn^
 @@||bugsnag.com^$~third-party,domain=app.bugsnag.com
 @@||bugswave.com^$generichide
 @@||builder.io^$generichide
@@ -8077,6 +8085,7 @@
 @@||cn.pornhub.com^
 @@||cn.register.xmpush.xiaomi.com^
 @@||cn.ultraiso.net^
+@@||cn.unionpay.com^
 @@||cn.uptodown.com^
 @@||cnbc.com/20*-ad-
 @@||cnbeta.com.tw^$generichide
@@ -10964,6 +10973,7 @@
 @@||i.ibb.co^
 @@||i.imgur.com^
 @@||i.kinja-img.com^$stealth=referrer
+@@||i.mcmod.cn^
 @@||i.meituan.com^
 @@||i.mi.com^
 @@||i.pl^$generichide
@@ -10998,6 +11008,7 @@
 @@||ias.global.rakuten.com/adv/$script,domain=rakuten.co.jp
 @@||iask.cn^
 @@||iask.com.cn^
+@@||iassapi.cup.com.cn^
 @@||iatv.tmgrup.com.tr^$script,stealth=referrer
 @@||ib.adnxs.com$domain=prmgr.a3cloud.net
 @@||ib.adnxs.com/getuid$domain=wearemiq.com
@@ -12400,6 +12411,7 @@
 @@||libs.baidu.com^$domain=m.supfree.net
 @@||libs.baidu.com^$domain=zyywenxue.com|11bqg.com|xbotaodz.com|0794.org|12zw.net|1biqu.com|1kans.net|23hh.com|23sk.net|23wxx.com|3yt.com|4xiaoshuo.net|56shuku.info|777zw.net|81book.com|99mk.net|aiwx.info|aixs.la|aikushuge.com|bequmo.com|bimixsw.com|biqivge.cc|biqudu.tv|biquge775.com|biquge98.net|biqugecd.com|aidu123.com|biqutsxs.com|bshuku.com|bxwx.live|bxwx.org|damengzhu1.com|gdbzkz.info|hongyeshuzhai.com|ibiquges.com|ibiquges.org|ibotaodz.org|imianhuatang.info|ishisetianxia.com|ishubao.org|xvipxs.net|iwurexs.info|ixs.la|lewenge.cc|liewenn.com|liudatxt.org|paoshu8.com|paoshuzw.com|pksge.com|qishuta.info|shu008.com|shumil.co|silukex.com|siluwx.org|sthuojia.org|tutengzw.com|u33.cc|wenxuem.com|xbiquke.com|xdingdian.cc|xiaxs.info|xs5200.com|xszww8.net|xuanshu.org|xuessex.com|yqd6.com|yunxs.info|zjsw.org|zzs5.info
 @@||libs.baidu.com^$domain=zyywenxue.com|11bqg.com|xbotaodz.com|0794.org|12zw.net|1biqu.com|23hh.com|23sk.net|23wxx.com|3yt.com|4xiaoshuo.net|56shuku.info|777zw.net|81book.com|99mk.net|aiwx.info|aixs.la|aikushuge.com|bequmo.com|bimixsw.com|biqivge.cc|biqudu.tv|biquge775.com|biquge98.net|biqugecd.com|aidu123.com|biqutsxs.com|bshuku.com|bxwx.live|bxwx.org|damengzhu1.com|gdbzkz.info|hongyeshuzhai.com|ibiquges.com|ibiquges.org|ibotaodz.org|imianhuatang.info|ishisetianxia.com|ishubao.org|xvipxs.net|iwurexs.info|ixs.la|lewenge.cc|liewenn.com|liudatxt.org|paoshu8.com|paoshuzw.com|pksge.com|qishuta.info|shu008.com|shumil.co|silukex.com|siluwx.org|sthuojia.org|tutengzw.com|u33.cc|wenxuem.com|xbiquke.com|xdingdian.cc|xiaxs.info|xs5200.com|xszww8.net|xuanshu.org|xuessex.com|yqd6.com|yunxs.info|zjsw.org|zzs5.info
+@@||life.cup.com.cn^
 @@||lifeblogid.com^$generichide
 @@||lifemakeovermysg.archosaur.com^
 @@||lifestyle.bg^$generichide
@@ -12434,6 +12446,7 @@
 @@||linguatec.org/VoiceReaderWeb15WebService^$stealth=referrer
 @@||link-to.net^$generichide
 @@||link.adtidy.org/forward.html
+@@||link.mcmod.cn^
 @@||link.meet5.net^
 @@||link.meet5.net^|
 @@||link.morningbrew.com^
@@ -13265,7 +13278,9 @@
 @@||modekoninginmaxima.nl^$generichide
 @@||modelbazar.cz^$generichide
 @@||modetour.com^$stealth=dpi
+@@||modfile.mcmod.cn^
 @@||modhoster.de/assets/advertisement-*.js
+@@||modrinth.com^
 @@||modshost.net^$generichide
 @@||modulous.huffpost.com/static/js/prebid-ads.js
 @@||modyolo.com/?s$stealth=useragent
@@ -13954,6 +13969,8 @@
 @@||open.oppomobile.com^
 @@||open.snssdk.com^
 @@||open.spotify.com^$generichide
+@@||open.unionpay.com^
+@@||open.unionpayintl.com^
 @@||open.video/ezais/analytics?$~third-party
 @@||open.video^$script,~third-party
 @@||openad.oss-cn-shanghai.aliyuncs.com^$domain=yicai.com
@@ -14457,6 +14474,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kawarthanow.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kdbhbd.blogspot.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kdvqi.xyz
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kdvqi.xyz|famasocial.site
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=keralatelecom.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=key-hub.eu
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kharisma-adzana.blogspot.com
@@ -15060,6 +15078,7 @@
 @@||pawastreams.info/gamer/*.php$subdocument,stealth=referrer
 @@||pay.bilibili.com^
 @@||pay.citylink.pro/stats/services/$~third-party
+@@||pay.cup.com.cn^
 @@||pay.heytap.com^
 @@||pay.openspeech.cn^
 @@||pay.soulapp.cn^
@@ -15256,6 +15275,7 @@
 @@||play.geforcenow.com/mall/$stealth=webrtc
 @@||play.googleapis.com^
 @@||play.history.com^$elemhide
+@@||play.mcmod.cn^
 @@||play.moviehd.cfd/play/$stealth=referrer
 @@||play.nova.bg/prebid-ads.js
 @@||play.openhub.tv/playurl$stealth=referrer,domain=highporn.net
@@ -16283,6 +16303,7 @@
 @@||scamwatcher.com/js/pubPolicy/ads-prebid.js$domain=scamwatcher.com
 @@||scan.call.f.360.cn^
 @@||scatfap.com/scat-porn/modules/vids/misc_static/adverts.js
+@@||scene.cup.com.cn^
 @@||schemeflood.com^$generichide
 @@||schwab.com/scripts/appdynamic/adrum-ext.$script,~third-party
 @@||schwab.com^$stealth=referrer
@@ -16332,6 +16353,7 @@
 @@||search.brave.com/search$xmlhttprequest
 @@||search.doubao.com^
 @@||search.kuwo.cn^
+@@||search.mcmod.cn^
 @@||search.powergap.de/indexes/$stealth=3p-auth
 @@||search.sogoucdn.com^
 @@||search.spotxchange.com/vmap/*&content_page_url=www.bsfuji.tv$xmlhttprequest,domain=imasdk.googleapis.com
@@ -17107,6 +17129,7 @@
 @@||ssl.sdcdn.com/cms/ads/*$domain=stardoll.com
 @@||sso.*.gov.vn^$stealth=dpi
 @@||sso.adperfect.com/client_authentication/?$elemhide,jsinject,extension,xmlhttprequest
+@@||sso.curseforge.com^
 @@||sso.ele.me^
 @@||sso.kinopoisk.ru^$stealth=3p-cookie
 @@||sso.myscript.com^$stealth=3p-auth
@@ -17193,6 +17216,7 @@
 @@||static*.nytimes.com/newsgraphics/*/_assets/graphics/$xmlhttprequest,elemhide,jsinject,extension
 @@||static-*.xvideos-cdn.com^
 @@||static-*.xvideos.com/*/js/
+@@||static-beta.curseforge.com^
 @@||static-cdn.hotjar.com^$script,domain=mercadopublico.cl
 @@||static-cdn.spot.im/production/*/*.js$domain=bizpacreview.com
 @@||static-cdn.spot.im/production/ads/tags/*/ads/ads.css
@@ -17316,6 +17340,7 @@
 @@||static.koreus.com/js/advert.js
 @@||static.lbc.co.uk/*/libs/videojs/vast/video.ads.js$domain=lbc.co.uk
 @@||static.leaddyno.com/js$script,domain=s4l.us
+@@||static.mcmod.cn^
 @@||static.media.net^$domain=sportshub.to
 @@||static.media.net^|$domain=topsporter.net
 @@||static.media.net^|$xmlhttprequest,domain=werfgt.fun
@@ -18200,6 +18225,7 @@
 @@||translator.strakertranslations.com^$generichide
 @@||travel-assets.com/ads/*/expadsblocked.js^
 @@||travel-assets.com/platform-analytics-prime/$domain=chase.com
+@@||travel.cup.com.cn^
 @@||travel.mediaalpha.com/js/serve.js$domain=goseek.com
 @@||trc.taboola.com/inncoil/log/3/available$subdocument,domain=inn.co.il
 @@||tremormedia.com/crossdomain.xml
@@ -18416,6 +18442,7 @@
 @@||ui.ads.microsoft.com^
 @@||ui.ads.microsoft.com^$~third-party
 @@||uiadmin.net^$generichide
+@@||uiam.unionpayintl.com^
 @@||uim.tifbs.net/js/$script,domain=web.de
 @@||uin-sports.pt^$extension='AdGuard Popup Blocker'|'AdGuard Popup Blocker (Beta)'
 @@||ujinbi.com/UpLoadFile/guanggao/
@@ -19274,6 +19301,8 @@
 @@||www.cloudns.net^
 @@||www.cmpassport.com^
 @@||www.crossoverchina.com^
+@@||www.cup.com.cn^
+@@||www.curseforge.com^
 @@||www.data.mistat.*xiaomi.com^
 @@||www.data.sec*.miui.com^
 @@||www.datadoghq-browser-agent.com^
@@ -19352,6 +19381,7 @@
 @@||www.mairuan.com^
 @@||www.manhuabei.com^
 @@||www.maserati.com^
+@@||www.mcmod.cn^
 @@||www.meituan.com^
 @@||www.meizu.com^
 @@||www.mercedes-benz.com.cn^
@@ -19429,6 +19459,7 @@
 @@||www.toutiao.com^
 @@||www.tudou.com^
 @@||www.twitter.com^
+@@||www.unionpayintl.com^
 @@||www.ups.com/WebTracking/processInputRequest
 @@||www.uzzf.com^
 @@||www.vmall.com^
@@ -32845,6 +32876,7 @@ falkirkherald.co.uk,northantstelegraph.co.uk##.piano-article-paywall
 falkirkherald.co.uk,scotsman.com,thestar.co.uk,shieldsgazette.com##.dmpu-ad
 fallentitans.com##.footer
 falriver.co.uk###gpdr, #GPDR, #gdpr, #GDPR
+famasocial.site,jobsheel.com,dwert.co.kr,itdmusicy.com,itdmusics.com,evspec.in,bradola.com,paradoxscans.com,hispajav.com,sub69.online,itdmusicy.com,janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
 famemingles.com,newsfront.xyz,crimejasoos.in,vacancyforjob.in###gcont
 fameplay.tv##.privacy-wrapper
 famework.io##.notifications
