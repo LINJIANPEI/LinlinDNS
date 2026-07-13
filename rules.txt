@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-14 00:34:41（北京时间）
+! Version: 2026-07-14 02:25:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69421
+! Total count: 69420
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -13104,8 +13104,6 @@
 @@||metrics.vrch.at^
 @@||metrics1-drcn.dt.dbankcloud.cn^
 @@||mettablog.com^$generichide
-@@||mexa.sh/advertisements.js
-@@||mexa.sh^$generichide
 @@||mf.advantage.as/if/imcreat.php$domain=mobilmania.cz
 @@||mf.advantage.as/if/imshow.php$domain=f1sport.autorevue.cz
 @@||mfah.org^$stealth=dpi
@@ -57326,6 +57324,7 @@ siliconera.com##iframe[width="580"][height="240"]
 siliconluxembourg.lu##.layout-ads
 siliconluxembourg.lu##a[href^="https://neon.ly/"][target="_blank"] > img
 siliconrepublic.com##.show-for-medium-up
+siliconrepublic.com##li:has(> div.sideads)
 silicophilic.com##.sidebar > #custom_html-10
 silisili.in##.play_ad
 silkengirl.com##.block_row:has(> div.spots_long)
