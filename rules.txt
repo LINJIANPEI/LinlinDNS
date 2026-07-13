@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-13 09:29:32（北京时间）
+! Version: 2026-07-13 13:23:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69396
+! Total count: 69405
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4851,6 +4851,7 @@
 @@||20minutos.es^$generichide
 @@||210.40.130.91^*/ad.css?$stylesheet
 @@||217.16.188.246^$generichide
+@@||22.do^
 @@||2345.com/images/activity/20171111/open/j/close.png
 @@||2345jsllq.dftoutiao.co
 @@||24playerhd.com^$subdocument,stealth=referrer,domain=series-days.com
@@ -8863,6 +8864,7 @@
 @@||docs.idqqimg.com^
 @@||docs.rucml.ru/e.gif?$~third-party
 @@||docs.scriptcat.org^
+@@||docs.vilinko.com^
 @@||docs.woopt.com/wgact/$image,~third-party,xmlhttprequest
 @@||doda.jp/brand/ad/img/icon_play.png
 @@||doda.jp/cmn_web/img/brand/ad/ad_text_
@@ -8937,6 +8939,7 @@
 @@||down.cc/down/js/ad.js
 @@||down.mdiaload.com^$generichide
 @@||down.sandai.net^
+@@||down1.vilinko.com^
 @@||downfile.site/fuckadblock.js
 @@||downfile.site^$generichide
 @@||download-cdn.clf.jetbrains.com.cn^
@@ -11161,7 +11164,6 @@
 @@||imasdk.googleapis.com/js/$domain=cari.com.my
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~airtelxstream.in|~danet.vn|~einthusan.tv|~sonyliv.com|~spotify.com
-@@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~airtelxstream.in|~danet.vn|~einthusan.tv|~spotify.com
 @@||imasdk.googleapis.com/js/core/dai_iframe3$domain=southpark.cc.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3$domain=rotana.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3*.js$domain=cbsnews.com
@@ -12176,6 +12178,7 @@
 @@||klientboost.com/google/
 @@||klimv*.xyz/images$stealth=referrer
 @@||klix.ba^$generichide
+@@||klpbbs.com^
 @@||knet.cn^
 @@||kobieta.wp.pl^$elemhide,badfilter
 @@||kodi-tutorials.uk^$generichide
@@ -12420,6 +12423,7 @@
 @@||lifesurance.info/-cpm-ads.js
 @@||ligainsider.de/public/desktop/js/dfp.js
 @@||ligainsider.de^$generichide
+@@||lightframe.vilinko.com^
 @@||lightning.bleacherreport.com/launch/*-source.min.js$~third-party
 @@||lightning.bleacherreport.com^*/launch-$~third-party
 @@||lightning.cnn.com^$script,domain=wfmz.com
@@ -12490,6 +12494,7 @@
 @@||lirarate.org/tardisrocinante/screx.js
 @@||liriklaguindonesia.net^$generichide
 @@||listing-search-wonen.funda.io^$domain=funda.nl,stealth=referrer
+@@||littleskin.cn^
 @@||litv.tv/ads/ads.js
 @@||litvp.com/checkStatus/$domain=emturbovid.com
 @@||litvp.com/creatDownload$domain=emturbovid.com
@@ -15395,6 +15400,7 @@
 @@||poedb.tw/js/adsbygoogle.js
 @@||poedb.tw^$generichide
 @@||poedb.tw^*ad$script,~third-party
+@@||pogget.vilinko.com^
 @@||point.rakuten.co.jp/img/crossuse/top_ad/$~third-party
 @@||poki.com/prebid/prebid*.js$domain=ninja.io
 @@||polaris.yammer.com/suite_nav.json$stealth=3p-auth
@@ -19463,6 +19469,7 @@
 @@||www.unionpayintl.com^
 @@||www.ups.com/WebTracking/processInputRequest
 @@||www.uzzf.com^
+@@||www.vilinko.com^
 @@||www.vmall.com^
 @@||www.wnacg.com^
 @@||www.xanimeporn.com^
@@ -23690,6 +23697,7 @@ bbs.wps.cn##.topic-recommend-top
 bbs.xmfish.com##.adv-760
 bbs.xmfish.com##.cmp_v
 bbs.xmfish.com##div[id^=adm_show_]
+bbys.app##.global-desktop-ad
 bca.uk.com###cookie
 bcb-online.nl##.jqibox
 bcbay.com##.ad_txt_box
@@ -53129,6 +53137,7 @@ pornhub.com,tube8.com,tube8.es,tube8.fr,xvideos.com,youjizz.com##img[src*="blob:
 pornhub.com,youporn.com###pb_template
 pornhub.com,youporn.com##:-abp-properties(float: right; margin-top: 30px; width: 50%;)
 pornhub.org##.emptyBlockSpace
+pornhub.org##.innerContainer
 pornicom.com###data > #related_videos_col + #related_videos_col
 pornicom.com###tube_ad_wrap
 pornicom.com##.advertisings
