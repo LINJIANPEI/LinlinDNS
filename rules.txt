@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-14 21:03:20（北京时间）
+! Version: 2026-07-14 23:14:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69435
+! Total count: 69428
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4203,6 +4203,7 @@
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/[a-z]?jz\/(?:[0-9a-f]\/){3,5}[0-9a-f]{42}-?(?:\d{2,3}|(?:(?:\d{3,4}-){3}h264)?\.(?:mp4-\d{1,2}|flv-\d))\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/sb\/t\/\d{6,8}\/\d\/\d\/w:300\/t\d{1,2}-enh\/(?:[0-9a-z]+-)*[0-9a-z]+\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/imgbb.zip\/ib\/[a-z0-9]{15}_[0-9]{10}\.jpg$/$image,third-party,stealth=referrer,domain=rogmovies.*|xprimehub.*|vegamovies.*|vegamovies.navy|rogmovies.cv|xprimehub.bond
+@@/^https:\/\/mshale\.com\/[a-f0-9]{8}\/[a-zA-Z0-9]+$/$match-case,stealth=referrer|searchqueries
 @@/^https:\/\/st\.pussyspace\.(?:com|net)\/upload\/cat\.image\/[_3a-z]{2,16}\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/st\.pussyspace\.(?:com|net)\/upload\/poster_img_url\/par\/c3Rhci9[%0-9A-Za-z]{16,32}&size_width\/par\/160\/l\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/www\.[a-z]{7,14}\.com\/[a-z]{1,4}\.js/$script,third-party,domain=shinden.pl,badfilter
@@ -4785,8 +4786,6 @@
 @@||10086.cn/framework/modules/sdc.js$script,~third-party
 @@||10086.cn^$generichide
 @@||10086.cn^*/ad$~third-party
-@@||100count.net/*/linko/advertisement.js
-@@||100count.net^$generichide
 @@||101soundboards.com^$generichide
 @@||107.182.131.103/cache/?q=/images/*/
 @@||109.236.92.205^*.m3u8$stealth=referrer
@@ -8140,7 +8139,6 @@
 @@||coinadster.com^$generichide
 @@||coinadster.com^$script,stylesheet,xmlhttprequest,other,image,domain=coinadster.com
 @@||coindice.win^$generichide
-@@||coingrabr.com^$generichide
 @@||coinles.com^$generichide
 @@||coinmarketcap.com/static/addetect/$script,~third-party
 @@||coinmarketcap.com^$domain=coinmarketcap.com
@@ -9729,9 +9727,6 @@
 @@||free-sms-receive.com/static/ad/ads.js$domain=free-sms-receive.com
 @@||free.sinaimg.cn^
 @@||freeapps4y.blogspot.com^$generichide
-@@||freebcc.org/assets/img/ad_468x60_*.png
-@@||freebcc.org/claim/vendor/ads/ads.js
-@@||freebcc.org/static/ads/popunder.js
 @@||freebitco.in^$generichide
 @@||freebitcoin.win/static/deliver_ads/popunder_moon_ads_*.js$~third-party
 @@||freebitcoin.win^$generichide
@@ -12799,7 +12794,6 @@
 @@||magiccandles.eu/service/adv/popunder/ads.js$domain=filext.com
 @@||magicvalley.com^$generichide
 @@||magni.itv.com/playlist/$stealth=ip
-@@||mahimeta.com/networks/ad_code.php$domain=biggboss13.io
 @@||mahimeta.com/networks/ad_code.php$domain=farescd.com
 @@||mahitimanch.in^$generichide
 @@||mai.91kami.com^
@@ -14566,7 +14560,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=oromoyo.ai
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ostrow24.tv
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ovabee.com|yourimageshare.com|magicpsd.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=oxygenu.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=paidinsurance.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=paketmu.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pansearch.me
@@ -15072,7 +15065,6 @@
 @@||passport.youdao.com^
 @@||passport.yuewen.com^
 @@||passwordsleakcheck-pa.googleapis.com$stealth=dpi
-@@||pastehub.net/assets/ads/advertisement.js$domain=searchresults.cc
 @@||pastemod.com^$generichide
 @@||pastlinkvn.com^$generichide
 @@||pastpapers.papacambridge.com^$generichide
@@ -19530,6 +19522,7 @@
 @@||x.*.tk/*/strmrdr.m3u8$stealth=referrer
 @@||x.*.xyz/*/xox_*.jpeg$stealth=referrer
 @@||x.com^$generichide
+@@||x.com^$stealth=flash|java
 @@||x.sare25.com/x.php?url=
 @@||x0.ifengimg.com^
 @@||x19.update.netease.com^
@@ -28035,6 +28028,7 @@ complex.com##.latest-stories__ad
 complex.com##.lg\:top-\[var\(--sticky-top\)\]
 complex.com##.sm\:min-h-\[100px\]:has(#catalyst_ad_top)
 complex.com##.suitcase-ad
+complex.com##div.border-b.overflow-visible:has(.mwd-inline-loaded)
 compositesworld.com##div[class^="adBlock--"]
 compoundsemiconductor.net##.mega-bar
 compoundsemiconductor.net##.popular__section-newsx
@@ -28666,7 +28660,6 @@ cryptodirectories.com##.entry-content br
 cryptodirectories.com##.rc-advert
 cryptodirectories.com##center > a[href^="https://cryptodirectories.com/"]
 cryptodirectories.com##iframe[data-src*="ads.com"]
-cryptofans.news,ad-doge.com,cryptomininggame.com,club,getdogecoins.com,100count.net,faucetcrypto.com,freebitcoin.win##ins[class^="bmadblock-"]
 cryptofans.news,ad-doge.com,cryptomininggame.com,club,getdogecoins.com,faucetcrypto.com,freebitcoin.win##ins[class^="bmadblock-"]
 cryptofeeds.news,defence-industry.eu,gamenguides.com,houstonherald.com,millennial-grind.com,survivopedia.com,teslaoracle.com##.wp-block-image
 cryptogems.info##img[alt="ad"]
@@ -44272,6 +44265,7 @@ linkpoi.in##center > a[href][target="_blank"] > img
 linksfire.co##.box-main a[href] > img
 linksfire.co##.box-main a[href][target="_blank"]
 linksfraktion-nordsachsen.de##.disclaimer
+linkshash.com##div[class^="ad-box"]
 linksvip.net##div[class^="banner-style-"]
 linkunshorten.com##.container > .features ~ div:not([class]):has(ins.adsbygoogle)
 linkvegastheme.com##.AdBlocker
@@ -49084,6 +49078,7 @@ newagebd.net##.postPageRightInTop
 newagebd.net##.postPageRightInTopIn
 newagebd.net##[style^="float:left; width:320px;"]
 newagebd.net##img[alt="ads space"]
+newarab.com##.ad-gpt-pro
 newarab.com##.block-custom-ads
 newatlas.com###desktop_article_1
 newatlas.com###desktop_article_2
@@ -58997,10 +58992,6 @@ sportshub.to##.theiaStickySidebar > div.widget:has(div[id^="HBai_"])
 sportshub.to##div[style="margin-bottom: 800px;"]
 sportsinjuryclinic.net##a[href^="https://www.upmedical.co.uk/"]
 sportsinjuryclinic.net##div[id^="sport-"]:has(> div.sport-adlabel)
-sportsinwinter.pl,ndz24.pl,przegladkoninski.pl,rzeszow.pl,esopot.pl,lowiczanin.info,gwarek.com.pl,tyna.info.pl,tusochaczew.pl,myglogow.pl,plonskwsieci.pl,spotradomsko.pl,portalsremski.pl,ekstrasierpc.pl,ki24.info,uniejow.net.pl,e-krajna.pl,gwio.pl,faktypilskie.pl,swiecie24.pl,grudziadz365.pl,mielec.pl,iszczecinek.pl,gniewkowo.eu,mojakruszwica.pl,expresskaszubski.pl,gorlice24.pl,gostyn24.pl,wpu24.pl,ddwloclawek.pl,ddtorun.pl##.baner
-sportsinwinter.pl,ndz24.pl,przegladkoninski.pl,rzeszow.pl,esopot.pl,lowiczanin.info,gwarek.com.pl,tyna.info.pl,tusochaczew.pl,myglogow.pl,plonskwsieci.pl,spotradomsko.pl,portalsremski.pl,ekstrasierpc.pl,ki24.info,uniejow.net.pl,e-krajna.pl,gwio.pl,faktypilskie.pl,swiecie24.pl,grudziadz365.pl,mielec.pl,iszczecinek.pl,gniewkowo.eu,mojakruszwica.pl,expresskaszubski.pl,gorlice24.pl,gostyn24.pl,wpu24.pl,ddwloclawek.pl,ddtorun.pl##.banner
-sportsinwinter.pl,ndz24.pl,przegladkoninski.pl,rzeszow.pl,esopot.pl,lowiczanin.info,gwarek.com.pl,tyna.info.pl,tusochaczew.pl,myglogow.pl,plonskwsieci.pl,spotradomsko.pl,portalsremski.pl,ekstrasierpc.pl,ki24.info,uniejow.net.pl,e-krajna.pl,gwio.pl,faktypilskie.pl,swiecie24.pl,grudziadz365.pl,mielec.pl,iszczecinek.pl,gniewkowo.eu,mojakruszwica.pl,expresskaszubski.pl,gorlice24.pl,gostyn24.pl,wpu24.pl,ddwloclawek.pl,ddtorun.pl##.container > .justify-beewten > .relative:has(> ins[class^="staticpubads"])
-sportsinwinter.pl,ndz24.pl,przegladkoninski.pl,rzeszow.pl,esopot.pl,lowiczanin.info,gwarek.com.pl,tyna.info.pl,tusochaczew.pl,myglogow.pl,plonskwsieci.pl,spotradomsko.pl,portalsremski.pl,ekstrasierpc.pl,ki24.info,uniejow.net.pl,e-krajna.pl,gwio.pl,faktypilskie.pl,swiecie24.pl,grudziadz365.pl,mielec.pl,iszczecinek.pl,gniewkowo.eu,mojakruszwica.pl,expresskaszubski.pl,gorlice24.pl,gostyn24.pl,wpu24.pl,ddwloclawek.pl,ddtorun.pl##.news-slot-center
 sportskeeda.com###video-player-container--
 sportskeeda.com##.consent-pop-up
 sportskeeda.com##.primis-player-container
@@ -63698,9 +63689,11 @@ twinset.com###ckInfo
 twinsyang.net,free.com.tw###custom_html-7
 twistedsifter.com###mm-player
 twistedsifter.com##.widget_sifter_ad_bigbox_widget
+twitch.tv##.online-video-ad-container
 twitch.tv##.stream-display-ad__wrapper
 twitch.tv##.video-player--stream-display-ad_lower-third {height:100% !important;}
 twitch.tv##.video-player__overlay .player-overlay-background:has(> div[class^="Layout-"] > div[class^="Layout-"] > div[class^="Layout-"] > a:is([href*="/how-to-allow-ads-browser"], [href="https://www.twitch.tv/turbo"]))
+twitch.tv##[data-a-target="outstream-ax-overlay"]
 twitch.tv##[data-test-selector="sda-wrapper"]
 twitch.tv##a[href*="store.asus.com/rog-promo/"]
 twitch.tv##a[href="https://vk.com/bust3rshop"]
