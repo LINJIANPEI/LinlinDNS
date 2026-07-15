@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-15 21:06:50（北京时间）
+! Version: 2026-07-15 23:16:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69452
+! Total count: 69446
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4417,10 +4417,8 @@
 @@/key=*/referer=none*.mp4$media,xmlhttprequest,stealth=referrer
 @@/libs/advertisement.js$domain=getfree.co.in|bagi.co.in|aztecafaucet.space|multifaucet.org|dogestar.website|claimbits.io|i-bits.io|gobits.io|faucet.shorterall.com|simplyfaucet.xyz|tv3.lv
 @@/libs/advertisement1.js$domain=faucet.shorterall.com
-@@/live/*.m3u8$xmlhttprequest,stealth=referrer,domain=weakspell.to|weakspell.org|streamocean.online|weakspell.to
 @@/live/*.m3u8$xmlhttprequest,stealth=referrer,domain=weakspell.to|weakspell.org|weakspell.to
 @@/live/*.ts|$xmlhttprequest,stealth=referrer,domain=weakspell.org
-@@/live/*.ts|$xmlhttprequest,stealth=referrer,domain=weakspell.org|streamocean.online
 @@/live/*/*jpeg|$xmlhttprequest,stealth=referrer,domain=weakspell.org|weakspell.to
 @@/log/report/*$script,domain=bilibili.com
 @@/mangakakalot/*$stealth=referrer,image,domain=mangakakalot.com
@@ -4475,7 +4473,6 @@
 @@/speedtest/upload.php$domain=speedtest.net
 @@/static/ad/main.$domain=bbmei.top|bbmen.top
 @@/static/js/video/videojs-contrib-ads.min.js$domain=telegraf.rs|telegraf.tv
-@@/static/stream*.png$stealth=referrer,xmlhttprequest,domain=streamocean.online|streambtw.com
 @@/storage/js/*.js$~third-party,domain=wowmail.app|inipulsa.my.id|anon.tools|s-nr.dk
 @@/store_ad/*$domain=pcstore.com.tw
 @@/stream$xmlhttprequest,stealth=referrer,domain=kwik.cx
@@ -6302,7 +6299,6 @@
 @@||api.vivo.com^
 @@||api.vk.com/method/statEvents.$~third-party
 @@||api.weathercn.com^
-@@||api.wingsdatabase.com/seed?mediaId=$third-party,xmlhttprequest,stealth=referrer
 @@||api.x.com^
 @@||api.ximalaya.com^
 @@||api.youku.com^
@@ -14580,7 +14576,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=plagiarismdetector.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=play.nova.bg
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=playertv.net
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pmsarkarijob.com|tallgalls.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=podu.me
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=popcrush.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=populistpress.com|canadafreepress.com|thelibertydaily.com|writerscafe.org|populist.press|welovetrump.com|grammarist.com|protrumpnews.com|gamersheroes.com|letocard.fr|100percentfedup.com|thepalmierireport.com|kresy.pl|beforeitsnews.com|thepatriotjournal.com|phoenixnewtimes.com|thepoke.co.uk|comicallyincorrect.com|thegatewaypundit.com|toptenz.net
@@ -26392,7 +26387,6 @@ celebjihad.com##a[href="https://www.celebjihad.com/widget/out/cjcams.php"]
 celebjihad.com##a[href^="https://go.admjmp.com/"]
 celebjihad.com##iframe[src^="https://go.bshrdr.com/"]
 celebmafia.com##.entry-content > div[class]:has(> div[data-fuse*="_incontent_"])
-celebmafia.com##.featured
 celebmafia.com##.wp-caption > [class]:has([width="300"])
 celebmafia.com##.wp-caption > div[class]:has(> .adsbyvli)
 celebmafia.com##body .featured:not(#style_important)
@@ -28666,6 +28660,7 @@ crypto.news##.rexas-presale
 crypto.news##.sponsored-button-group
 cryptobriefing.com##.ad-sticky-banner
 cryptobriefing.com##.na-item.item
+cryptobriefing.com,huskers.com,rule34-videos.com,gifyu.com,topperlearning.com,aap.org,bbcgoodfood.com,gardenersworld.com,historyextra.com,ndtv.com##.ad-banner
 cryptocompare.com##.front-page-info-wrapper
 cryptocompare.com##.item-special
 cryptocompare.com##.title-hero
@@ -33570,7 +33565,6 @@ filmyfocus.com##.cust-adCont
 filmyone.com###mvp-post-main a[target="_blank"] > img
 filmyone.com##div[id$="-top-scroll-shadow"][style^="position: absolute"]
 filmyplex123.blogspot.com##.sidebar > div[id^="HTML"]
-filmypoints.in##div[id][class^="popup"][class$="wrap"][style]
 filologika.gr##.sidebar > div.widget_container:has(> div.textwidget > p > a[href^="https://vivliopoleiopataki.gr/"])
 filologika.gr##.sidebar > div.widget_container:has(> div.textwidget > p > a[href^="https://ziti.gr/"])
 filologikosxoleio.gr###block-4
@@ -46796,7 +46790,6 @@ minecraftforum.net##.server-forum-after-comment-ad
 minecraftforum.net##.xt-main-med-rect
 minecraftforum.net,gamepedia.com##.xt-placement
 minecraftlist.org##.stickywrapper
-minecraftpocket-servers.com###topadspot
 minecraftservers.org##.second-banner
 minecraftskins.com##.antiblock-wrapper
 minecraftuuid.com##.ml-auto > a[href^="https://serverflex.io/"]
@@ -55456,6 +55449,9 @@ rfidworld.com.cn###placeHolderR
 rfidworld.com.cn##.indexBanner
 rfidworld.com.cn##.rfidADClass
 rfidworld.com.cn##div[style="width: 100%;position: fixed;top: 0;margin:0;"]
+rg.org###headerBanner
+rg.org##article[class^="_"] > section[class^="_"]:has(> div[class^="_"] a[href^="/en-ca/go/undefined/sportsbook-bonus/"])
+rg.org##section[class^="_"][style]:has(> div > a[href^="/en-ca/go/undefined/"] > img)
 rgbdruk.pl###message-bar
 rgs.ru##.cookie, #rgs-main-context-bar
 rgu.ac.uk###cc-modal
@@ -55955,7 +55951,6 @@ russellscanlan.com###wp-notification
 russh.com##.affix-top > #unit3
 russian-porn.ru###xxx
 russian.fansshare.com,navbharattimes.indiatimes.com,88files.net,gadgetsnow.com##.ad1
-rust-servers.net###topadspot
 rustimation.eu##body > p
 ruten.com.tw###AdRelatedTitle
 ruten.com.tw###ad-467
@@ -59521,7 +59516,6 @@ stream2watch.ws##img.fpi
 streamable.com##.top-ad-banner
 streambolt.tv##.video > div[style*="z-index:"]:not([class])
 streambolt.tv##div[style*="z-index: 2147483647;"][style*="position: fixed;"]
-streambtw.com###overlay
 streamcash.to###player-wrap > span[id][style^="position: absolute; inset: 0px; z-index:"]
 streamcash.to###seek-banner
 streamcash.to##body > div[id][style*="position: fixed; inset: 0px; z-index: 99999;"]
