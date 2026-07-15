@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-15 09:15:33（北京时间）
+! Version: 2026-07-15 12:38:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 69438
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -2494,7 +2494,6 @@
 18moe.vip##a[href^="http"]:not([href*="18moe.vip"]) > img[src*="tc.18moe.net"]
 18porn.sex,18teensex.tv,429men.com,4kporn.xxx,4wank.com,alotporn.com,amateur8.com,amateurporn.co,amateurporn.me,bigtitslust.com,camwhores.tv,danude.com,daporn.com,epicgfs.com,fapnow.xxx,fpo.xxx,freeporn8.com,fuqer.com,gayck.com,hentai-moon.com,hentai0day.com,heroero.com,hoes.tube,intporn.com,japaneseporn.xxx,javwind.com,jizzberry.com,mmshub.online,multi.xxx,onlyhentaistuff.com,porndr.com,sexjav.tv,sextubespot.com,sortporn.com,tabootube.xxx,trueamateurporn.org,vilevideos.com,watchmygf.xxx,watchporn.to,xcavy.com,xgroovy.com,xmateur.com,xxxshake.com##.table
 18porn.sex,18teensex.tv,429men.com,4kporn.xxx,4wank.com,alotporn.com,amateur8.com,amateurporn.co,amateurporn.me,bigtitslust.com,camwhores.tv,danude.com,daporn.com,epicgfs.com,fapnow.xxx,fpo.xxx,freeporn8.com,fuqer.com,gayck.com,hentai-moon.com,hentai0day.com,heroero.com,hoes.tube,intporn.com,japaneseporn.xxx,javwind.com,jizzberry.com,multi.xxx,onlyhentaistuff.com,porndr.com,sexjav.tv,sextubespot.com,sortporn.com,tabootube.xxx,trueamateurporn.org,watchmygf.xxx,xcavy.com,xgroovy.com,xmateur.com,xxxshake.com##.table
-18porn.sex,amateur8.com,anyporn.com,area51.porn,bigtitslust.com,eachporn.com,fapster.xxx,fpo.xxx,freeporn8.com,hentai-moon.com,hentai0day.com,its.porn,izlesimdiporno.com,mmshub.online,pervertslut.com,porngem.com,pornmeka.com,porntop.com,sexvid.xxx,sortporn.com,tktube.com,uiporn.com,xhamster.com##.sponsor
 18porn.sex,amateur8.com,anyporn.com,area51.porn,bigtitslust.com,eachporn.com,fapster.xxx,fpo.xxx,freeporn8.com,hentai-moon.com,hentai0day.com,its.porn,izlesimdiporno.com,pervertslut.com,porngem.com,pornmeka.com,porntop.com,sexvid.xxx,sortporn.com,tktube.com,uiporn.com,xhamster.com##.sponsor
 18porn.sex,anyporn.com,area51.porn,bigtitslust.com,eachporn.com,fapster.xxx,fpo.xxx,freeporn8.com,hentai-moon.com,hentai0day.com,its.porn,izlesimdiporno.com,mmshub.online,pervertslut.com,porngem.com,pornmeka.com,porntop.com,sexvid.xxx,sortporn.com,tktube.com,uiporn.com,xhamster.com##.sponsor
 18porno.tv##.toplist
@@ -15230,7 +15229,6 @@
 @@||pisupisu.pl/*/adsbygoogle.js
 @@||pisupisu.pl^$generichide
 @@||pitaya.bytedance.com^
-@@||pitbullofficial.com^$generichide
 @@||pixabay.com/content-partner/$stealth=3p-cache|referrer,domain=canva.com
 @@||pixel.adsafeprotected.com/services/pub$domain=reuters.com
 @@||pixel.adsafeprotected.com^$domain=tio.ch
@@ -21197,7 +21195,6 @@ amaterky.sk##body > div:not([id]):not([class])
 amateur-vids.eu,bestjavporn.com,deepfucks.com,mature.community,milf.community,milf.plus##.happy-footer
 amateur-vids.eu,camgirl-video.com,mature.community,milf.community,milf.plus##.happy-under-player
 amateur8.com###A8-Under-Video
-amateur8.com##.inp__wrapper
 amateur8.com##.is-av
 amateur8.com##.item.pignu
 amateur8.com##.pignu[style="width: 100%; max-width:800px; aspect-ratio: auto; margin:0 auto; margin-bottom: 10px;"]
@@ -24114,6 +24111,8 @@ bib-cclachatrestesevere.net###info_message
 bibgame.com##.topicContent > font[color="red"]:last-child
 biblehub.com##div[align="center"]:has(> div[id^="div-gpt-ad"])
 bibleserver.com###CybotCookiebotDialog
+biblestudytools.com##a[target="_blank"] > img
+biblestudytools.com##div:has(> a[target="_blank"]:only-child > img:only-child)
 biblestudytools.com##featuredtopicslistviewcomponent
 biblio.co.uk##.navbar-fixed-bottom
 biblio.com##.navbar-fixed-bottom
@@ -30498,6 +30497,7 @@ domaingang.com##.domai-target
 domaingang.com##.widget_execphp
 domainincite.com##div[style*="margin-bottom:"][style*="margin-left:"] > a > img
 domainnamewire.com##.after-header
+domainnamewire.com##.g-single
 domainnamewire.com##.sidebar-primary
 domainnamewire.com##div[class^="bg-ad-"]
 domainnamewire.com,douglasnow.com,goodthingsguy.com##.g-single
@@ -38505,8 +38505,6 @@ hitline.org.ua##.bantop
 hitman.com##div[class*="cookie-banner"]
 hitomi.la##.content > div[class]:not([class*="-"]) {min-height:40px !important;}
 hitomi.la##.top-content > div[class]:not([class*="-"]) {min-height:40px !important;}
-hitslink.xyz###adblock-overlay
-hitslink.xyz,ssstik.cam##.penci-content-main ~ div.widget-area
 hivecomic.com##div[class*="SimpleIconsGoogleadsense"] > div[style] > a[href="https://store.hivetoon.com/"] > img
 hivehome.com##.header-stacked-message
 hiya.com##.cookie
@@ -51793,6 +51791,7 @@ pep.ph##.c-ad__item
 pepboys.com###ccContainer
 pepco.hu##.cookies
 pepeenergy.com##.modal-cookie
+pepper.com##div[data-t="bannerAd"]
 pepper.com,pepper.pl##.listLayout-box:has(> .ad:only-child)
 pepper.pl###sidebarContentPortal .listLayout-box:has(> .slot)
 pepper.pl##.box--content > .flex:has(> .slot--bg:only-child)
@@ -59120,6 +59119,7 @@ ssr.tools##.sidebar > div.widget > div.item > a[target="_blank"] > img
 ssr.tools##.widget_custom_html:nth-child(n+2)
 ssr.tools,zhujiwiki.com##.asb-post-footer
 sss.xxx##.fel-item
+ssstik.cam##.penci-content-main ~ div.widget-area
 ssstik.cam##body > div[style^="width: 100%; position: fixed;"]
 sstv.pw##.container > a > img[style="width: 100%;"]
 ssuip.com###mask
