@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-15 17:48:01（北京时间）
+! Version: 2026-07-15 19:19:59（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69438
+! Total count: 69451
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3735,6 +3735,7 @@
 78dm.net##.container-fluid > a[href*=".taobao.com"]
 78dm.net##div[class^="couple-"]
 7days2die.info###nafikblock
+7daystodie-servers.com,rust-servers.net,minecraftpocket-servers.com###topadspot
 7down.com,newasp.net###btndowns
 7hcn.com##.pr > a[href^="http"]:not([href^="http://www.7hcn."])
 7hcn.com##.rCont
@@ -4124,6 +4125,7 @@
 @@.jpg#$domain=huhupan.com
 @@.jpg#$domain=ktmx.pro
 @@.jpg#$domain=marketmovers.it
+@@.jpg|$third-party,xmlhttprequest,stealth=referrer,domain=embdmstrplayer.com
 @@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.js?fcd=true$domain=snopes.com
 @@.m3u8$domain=rapid-cloud.co,xmlhttprequest,stealth=referrer
@@ -4141,6 +4143,7 @@
 @@.mp4$domain=crunchyroll.com,stealth=referrer
 @@.mp4$media,stealth=referrer,domain=api.animeuzayi.com
 @@.mp4$media,stealth=referrer,domain=sekai.one
+@@.mp4%3Fsign%3$third-party,media,stealth=referrer,domain=vidrock.ru
 @@.mp4?headers$media,stealth=referrer,domain=vidlink.pro
 @@.myvi.ru^$stealth
 @@.net/click-$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
@@ -4415,6 +4418,8 @@
 @@/libs/advertisement.js$domain=getfree.co.in|bagi.co.in|aztecafaucet.space|multifaucet.org|dogestar.website|claimbits.io|i-bits.io|gobits.io|faucet.shorterall.com|simplyfaucet.xyz|tv3.lv
 @@/libs/advertisement1.js$domain=faucet.shorterall.com
 @@/live/*.m3u8$xmlhttprequest,stealth=referrer,domain=weakspell.to|weakspell.org|streamocean.online|weakspell.to
+@@/live/*.m3u8$xmlhttprequest,stealth=referrer,domain=weakspell.to|weakspell.org|weakspell.to
+@@/live/*.ts|$xmlhttprequest,stealth=referrer,domain=weakspell.org
 @@/live/*.ts|$xmlhttprequest,stealth=referrer,domain=weakspell.org|streamocean.online
 @@/live/*/*jpeg|$xmlhttprequest,stealth=referrer,domain=weakspell.org|weakspell.to
 @@/log/report/*$script,domain=bilibili.com
@@ -6104,6 +6109,7 @@
 @@||api-unionid.meituan.com^
 @@||api-v*.trbo.com^|
 @@||api.*.commercetools.com^$stealth=3p-auth,domain=qt.io
+@@||api.*/seed?mediaId=$third-party,xmlhttprequest,stealth=referrer
 @@||api.1plus1.video^$stealth=referrer|ip
 @@||api.account.xiaomi.com^
 @@||api.adguard-dns.io/api/
@@ -26385,14 +26391,18 @@ celebjihad.com##.crp_related td[align="center"] > a[href^="https://www.celebjiha
 celebjihad.com##a[href="https://www.celebjihad.com/widget/out/cjcams.php"]
 celebjihad.com##a[href^="https://go.admjmp.com/"]
 celebjihad.com##iframe[src^="https://go.bshrdr.com/"]
+celebmafia.com##.entry-content > div[class]:has(> div[data-fuse*="_incontent_"])
 celebmafia.com##.featured
 celebmafia.com##.wp-caption > [class]:has([width="300"])
 celebmafia.com##.wp-caption > div[class]:has(> .adsbyvli)
+celebmafia.com##body .featured:not(#style_important)
 celebritygalls.com##.articles-container > article.card[style="border:5px solid black;"]
 celebritynakeds.com##.show-over-1000.async-reklam-placeholder
 celebsepna.com###sidebar
 celebsroulette.com###kt_player > a[target="_blank"]
 celebsroulette.com##.player + .sponsor
+celebtattler.com##.banner1
+celebtattler.com##div[style="width:300px;min-height:250px;"]
 celebwale.com##.inside-right-sidebar > #text-3
 celebwale.com##.inside-right-sidebar > #text-4
 celebwell.com##.karma_unit
@@ -27018,6 +27028,7 @@ cined.com##.affiliates-banner-container-block
 cined.com##.alternative-links
 cined.com##.recommended-course-card
 cinehd.app##section[aria-label^="Sponsored"]
+cinehub.one##.watch-sidebar > div.overflow-hidden:has(> div.shrink-0.flex)
 cinejosh.com##.col-xs-12 > div.panel:has(> div[style] > div > a[href="https://www.youtube.com/watch?v=blTLDzamx2w"])
 cinejosh.com##.googleAdPanel
 cinejosh.com##.googleAdsSponsered
@@ -37960,6 +37971,7 @@ heatmap.news##.infinite-container
 heatmap.news##.middle_leaderboard
 heatmap.news,theweek.com##.infinite-container
 heatworld.com##.sticky-ad-unit-spacer-default
+heatworld.com##div[class*="_adContainer_"]
 heavengroup.it###cookup
 heavenhr.com###fullDarkVeil, #compliAcceptCookies
 heavenmanga.org,holymanga.net##.svl_ads_right
@@ -55122,6 +55134,7 @@ redferret.net##.redfads
 redflagdeals.com###rfd-primis-wrapper
 redflagdeals.com##.inline_leaderboard
 redflagdeals.com##.sponsors_list_container
+redflix.club,redflix.co##.watch-sidebar > div.overflow-hidden:has(> div[class^="adsContainer"])
 redgifs.com##.InfoBar
 redgifs.com##.InformationBar
 redgifs.com##.OnlyFansCreatorsSidebar > *
