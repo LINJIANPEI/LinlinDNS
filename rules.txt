@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-16 17:54:10（北京时间）
+! Version: 2026-07-16 19:25:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69459
+! Total count: 69465
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4461,6 +4461,7 @@
 @@/sensorsdata.$domain=36kr.com|53zaixian.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
 @@/sensorsdata.$domain=36kr.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
 @@/sensorsdata.$domain=36kr.com|imooc.com|modian.com|shanbay.com
+@@/series/*$third-party,xmlhttprequest,stealth=referrer,domain=vidbasic.live
 @@/setCookie?$domain=ctrip.com|ctrip.com.hk|pinyin.cn
 @@/share/js/*$domain=yunpanjingling.com
 @@/show_ad_$domain=wb.qq.com
@@ -21902,6 +21903,7 @@ apkcombo.com##.calc-container
 apkcombo.com##.diseanmevrtt
 apkcombo.com##.is-main > div[style="margin-bottom: 10px; max-height: 260px; min-height: 260px; overflow: hidden"]
 apkcombo.com##[data-d-ad-id]
+apkcombo.com##[style="margin-bottom: 10px; max-height: 260px; min-height: 260px; overflow: hidden"]
 apkdom.com##.adslot_right
 apkdone.com,crazygames.com,english-hindi.net,livesoccertv.com,malaysiakini.com,sporticos.com##div[style^="height:250px"]
 apkdone.com,sporticos.com##div[style="height:250px;"]
@@ -22273,6 +22275,7 @@ artuk.org###top-notice
 artwizz.com##.aw2-nav-top-cookie
 arubanetworks.com###aruba_cookie_privacy_popup
 aruble.net###middle-adspace
+aruble.net###stickyAdZone
 arukereso.hu##.promotion-container
 arukhaza.com##body > div:not([id]):not([class])
 arx.pl##.configMessages
@@ -22325,6 +22328,7 @@ asia2tv.co###scpsec
 asia2tv.co###video-container
 asiabest.help,asiantv.fun,my18pussy.com##.aside-spots
 asiaflash.com##.cc_container
+asiaflix.*$$script[id="aclib"]
 asian-teen-sex.com##.gavtantnsx-23or
 asianage.com##div[id$="-ad-full-screen"]
 asianage.com##div[id*="_level_"].to-be-async-loaded-ad
@@ -51061,6 +51065,7 @@ oss-cn-hangzhou.aliyuncs.com##A.hm_item[href^='https://tcs-devops.aliyuncs.com/t
 ossels.ai##.widget-ap-ads
 osservatoriocalcioitaliano.it###dc-cnb-container
 oster-gewinnspiele.de###cono
+osteusfilmestuga.online##body > .modal-backdrop + div[id][class*=" "]
 ostroh.info###modal.modal-bg
 ostsee-charter-yacht.de###cookie
 ostsee.de###cookie
@@ -56328,6 +56333,7 @@ sbs.com.au##.MuiBox-root:has(> .desktop-ads)
 sbs.com.au##.css-p21i0d
 sbs.com.au##[data-testid="hbs-widget-skeleton"]
 sbs.com.au##div.css-1wbfa8
+sbs.com.au##div[class^="LeaderboardAdContainer"]
 sbs.com.au##div[id^="adcta-"]
 sbsr.fm##.bl-block[data-bl-name="CokiesWrap"]
 sbstatesman.com##div[id^="sbsta-"]
