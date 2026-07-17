@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-18 00:06:48（北京时间）
+! Version: 2026-07-18 01:56:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69492
+! Total count: 69493
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -36952,6 +36952,7 @@ greatandhra.com##.great_andhra_main_041022_
 greatandhra.com##.great_andhra_main_201223_
 greatandhra.com##.great_andhra_main_add_rotator_new2
 greatandhra.com##.great_andhra_main_local_rotator1
+greatandhra.com##.shp-layer
 greatandhra.com##.sortable-item_top_add123
 greatandhra.com##.sortable-list > li.sortable-item:has(> div > a > img[width="300"][height="50"])
 greatandhra.com##.source-image-left
@@ -47453,7 +47454,6 @@ morfars.dk##body > span[style*="transform"]
 morfose.flexxis.nl##footer
 morhipo.com###legal-alert
 morizon.pl##.banner-placeholder
-morizon.pl,prawo.pl,polski-tenis.pl,bizpolis.pl,wyniki.pl,telepolis.pl##.banner
 morningagclips.com##.mac-ad-group
 morningagclips.com##ul.logo-nav
 morningpost.com.cn###\33 60hot
@@ -50076,9 +50076,7 @@ ntp.msn.com##.cookieWallBanner-1, .ComplianceHyperlink-1
 ntpcb.com##img[width="1195"]
 ntr-games.com##.gridlove-posts > div[class^="col-"]:has(> div.category-ad)
 ntunhs.net###sidebar2
-ntv.cx###hdrStripWrap
 ntv.cx##.hdr-strip
-ntv.cx##.ntv-overlay-body
 ntv.cx##.ntvx-sheet
 ntv.st,ntvs.cx,ntv.cx###hdrStripWrap
 ntv.st,ntvs.cx,ntv.cx##.ntv-overlay-body
@@ -52363,6 +52361,8 @@ pixiv.net##.premium-lead-new-t-info-home-top
 pixiv.net##.premium-lead-t-footer
 pixiv.net##[data-gtm-recommend-zone="index"] li:has(> div > iframe[name$="rectangle"])
 pixiv.net##[style="display: block; width: 100%; height: 520px;"]
+pixiv.net##[style="display: block; width: 300px; height: 250px;"]
+pixiv.net##[style^="display: block; width: 100%; height"]:has(> iframe[data-uid])
 pixiv.net##a[target="premium_noads"]
 pixiv.net##div[class^="sc-"]:has(> [style^="display"][style*="468px;"][style*="60px"])
 pixiv.net##div[data-gtm-recommend-zone] > ul > li:has(> div > div[id^="adsdk-"])
@@ -63990,6 +63990,7 @@ uimaker.com##.newbaidu
 uimaker.com##.siteads
 uindex.org##[style*="border: 2px solid #ff4081; background: #fff0f6; padding: 14px;"]
 uindex.org##body > [class][style]:has(> a:is([href="https://MyBunny.TV"], [href="https://torrenting.com"], [href="https://scenetime.com"]))
+uindex.org##body > [id][class*=" "]:has(> a[target="_blank"])
 uindex.org##body > div[style="text-align: center; color: #cc5500; font-weight: bold;"]
 uindex.org##body > div[style^="text-align:"]:not([id]):not([class])
 uinterview.com###above-content
