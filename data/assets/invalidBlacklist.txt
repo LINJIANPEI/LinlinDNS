@@ -371,8 +371,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 106166
-! Blocked Filters: 43415
+! Blocked Filters: 102209
+! Blocked Filters: 43421
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -410,8 +410,8 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 189582
-! Blocked domains: 5062
+! Blocked domains: 188456
+! Blocked domains: 5103
 ! Blocked: 4.891 rules
 ! Blocked: 564 rules
 ! Blocked: 847 rules
@@ -438,10 +438,10 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: 8csag7BOcZS1ef6BAGH4aw
-! Checksum: SirwrYOp0dNlmfEdCxBJaw
-! Checksum: TwYm2rxOdNvgu1SzqVFPCQ
+! Checksum: Hf8YefJPuW4WeYn4uuVFdg
+! Checksum: PVAyos1vbehdj7HYhMQp2Q
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
+! Checksum: ZlRWxZkefabcgJWpvDGkJA
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
@@ -757,14 +757,14 @@
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 17 Jul 2026 14:09 UTC+7
 ! Last modified: 19 Dec 2020 03:10 UTC
-! Last modified: 19 Jul 2026 09:31 UTC
+! Last modified: 19 Jul 2026 10:51 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-06-15T14:19:40.740Z
 ! Last modified: 2026-07-19T08:50:39.629Z
 ! Last modified: 2026/03/11 09:15 +0800
-! Last modified: 2026/07/19 11:23:56
+! Last modified: 2026/07/19 17:56:30
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1221,8 +1221,8 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260715084456
-! Version: 202607190931
-! Version: 20260719112356
+! Version: 202607191051
+! Version: 20260719175630
 ! Version: 2607171409
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3493,7 +3493,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-07-19T16:52:30+08:00
+# Update time: 2026-07-19T18:51:28+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -61754,6 +61754,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=theluckygene.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=themodellingnews.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thesun.co.uk
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thesun.co.uk|the-sun.com|thesun.ie|thescottishsun.co.uk
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thizissam.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tinyppt.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tipranks.com
@@ -63651,6 +63652,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=theglobeandmail.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=thehealthsite.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=thesun.co.uk
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=thesun.co.uk|the-sun.com|thesun.ie|thescottishsun.co.uk
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tractorsupply.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tstrs.me
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tvtropes.org
@@ -120016,6 +120018,9 @@ the-sun.com,gmx.*,transfermarkt.*#%#//scriptlet("abort-on-property-read", "Objec
 the-sun.com,gmx.*,transfermarkt.*$$script[tag-content="Flags."][min-length="20000"][max-length="300000"]
 the-sun.com,thescottishsun.co.uk,thesun.co.uk,thesun.ie##.customiser-v2-layout-1-billboard
 the-sun.com,thescottishsun.co.uk,thesun.co.uk,thesun.ie##.customiser-v2-layout-three-native-ad-container
+the-sun.com,thesun.ie,thescottishsun.co.uk,thesun.co.uk#%#//scriptlet('abort-current-inline-script', 'atob', 'insertBefore(s')
+the-sun.com,thesun.ie,thescottishsun.co.uk,thesun.co.uk#%#//scriptlet('prevent-element-src-loading', 'script', 'gpt.js')
+the-sun.com,thesun.ie,thescottishsun.co.uk,thesun.co.uk#%#//scriptlet('prevent-fetch', 'adsbygoogle')
 the-sun.on.cc#@##ContentAd1
 the-village.com.ua##.infoA
 the42.ie###notify-container
@@ -120785,6 +120790,7 @@ thescore.com##body .tablet-leaderboard
 thescore.com##div[class^="Ad__bigbox--"]
 thescore.com##div[class^="PrivacyPolicyPopup"]
 thescore1260.com##.block-content > a[href*="sweetdealscumulus.com"]
+thescottishsun.co.uk,thesun.ie##.module--1-billboard
 thesenior.com.au###main-side-container
 thesenior.com.au###story-body div[id^="story"][id$="-container"]
 thesenior.com.au##div[id^="newswell-"]
