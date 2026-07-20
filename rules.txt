@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-21 01:17:33（北京时间）
+! Version: 2026-07-21 03:22:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69516
+! Total count: 69518
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5131,6 +5131,7 @@
 @@||account.xunfei.cn^
 @@||account.youku.com^
 @@||accountapi.dianping.com^
+@@||accountapi.gosplit.net/authorize/$stealth=referrer
 @@||accounts.ea.com^$stealth
 @@||accounts.ea.com^$stealth=3p-cookie
 @@||accounts.google.com^
@@ -8471,6 +8472,7 @@
 @@||cutcaptcha.com^
 @@||cutcaptcha.com^|
 @@||cuttlinks.com^$generichide
+@@||cuttty.com^$generichide
 @@||cv-h.phncdn.com^
 @@||cvs.com/shop-assets/js/VisitorAPI.js$~third-party
 @@||cvs.com/webcontent/images/weeklyad/adcontent/$~third-party
@@ -11029,6 +11031,7 @@
 @@||ib.adnxs.com/getuid?http://*.pch.com/
 @@||ib.adnxs.com/getuidj|$domain=independent.co.uk
 @@||ib.adnxs.com/opt$domain=wearemiq.com|infectiousmedia.com
+@@||ib.adnxs.com/ut/$domain=cuttty.com
 @@||ib.adnxs.com/ut/$domain=youmath.it
 @@||ib.adnxs.com/ut/v3$domain=aftonbladet.se
 @@||ib.adnxs.com/ut/v3$xmlhttprequest,domain=exeygo.com
@@ -60397,7 +60400,6 @@ taxidrivermovie.com##a[href*="mrskin.com/"]
 taxipedia.info###fpub-popup
 taxscan.in##div[class*="taxsc-ad-"]
 tayama.pl##.config-messages-background
-taycanforum.com,tacoma4g.com,4runner6g.com,f150gen14.com,mavericktruckclub.com,cotilleando.com,babia.to,anime-sharing.com,macheforum.com,cybertruckownersclub.com,tdpri.com,xbunker.nu,broncosportforum.com,jeepgladiatorforum.com,titsintops.com,nudostar.com,satelliteguys.us,forums.macrumors.com,androidrepublic.org##.samCodeUnit
 taylorandfrancis.com##.cookies
 tayyar.org###popUpModelID
 tazkranet.com###block-14
