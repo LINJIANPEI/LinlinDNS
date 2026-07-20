@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14610
+! Total count: 14615
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-07-20 11:36:38（北京时间）
+! Version: 2026-07-20 22:17:35（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1507,7 +1507,7 @@
 @@.net/click-$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@.online/premiumtv/*.php$subdocument,xmlhttprequest,stealth=referrer
 @@.pexcard.com^$jsinject,elemhide,extension
-@@.php$subdocument,stealth=referrer,domain=/dizipal\d+.com/
+@@.php$subdocument,stealth,domain=/dizipal\d+.com/
 @@.php?id=$script,domain=surirt.com
 @@.php?play_vid=$subdocument,stealth=referrer,domain=xyflv.cc
 @@.png#$domain=3dpchip.com|9zvip.net|club.tgfcer.com|coolinet.com|digit77.com|e9china.net|upxin.net
@@ -14348,6 +14348,7 @@
 @@||kh.google.com/rt/earth/PlanetoidMetadata^$stealth=searchqueries|referrer
 @@||khohieu.com^$generichide
 @@||kickass.com.se^$generichide
+@@||kickbd.org/ads/ad.js$domain=kickbd.org
 @@||kickcharm.com^$generichide
 @@||kifir2.kir.hu^$stealth=dpi
 @@||kijiji.ca/b-search.html
@@ -14656,6 +14657,7 @@
 @@||livezombymil.com/*/tghr.js$domain=manga1000.com
 @@||lk.gpnbonus.ru^$stealth=dpi
 @@||lk.rt.ru/ruxitagentjs_*.js$domain=lk.rt.ru
+@@||lkm-*.cfd^$stealth=referrer,domain=sn.dplayer82.site
 @@||ll-media.tmz.com/*-300x250.
 @@||lloydstsb.com/it/xslt/touchclarity/omtr_tc.js
 @@||lluban.by^$stealth=dpi
@@ -16222,6 +16224,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kodibeginner.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kpopflac.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=laptrinhx.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=leeapk.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=leechpremium.link
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=leechpremium.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=lightningmaps.org
@@ -16874,6 +16877,7 @@
 @@||picsearch.com/js/comscore.js$domain=dn.se
 @@||pictasty.com^$generichide
 @@||pictogo.net^$stealth=referrer,third-party
+@@||pictures.izmirgezisi.site^$stealth=referrer
 @@||pictures.spordunyasi.site^$stealth=referrer
 @@||pidlio.com^$generichide
 @@||pikabu.ru/story/*_reklama_
@@ -19953,6 +19957,7 @@
 @@||upos-sz-mirrorhw.bilivideo.com^$stealth=referrer
 @@||uppit.com^$generichide
 @@||ups.com/*/WebTracking/track&dcs
+@@||ups.com/*/fragments/tracking-widget.plain.html$~third-party
 @@||ups.com/*/tracking.cgi
 @@||ups.com/WebTracking/
 @@||ups.xplosion.de/ctx$domain=ingame.de
