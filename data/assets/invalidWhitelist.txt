@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14619
+! Total count: 14622
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-07-21 11:16:57（北京时间）
+! Version: 2026-07-21 22:03:55（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1913,8 +1913,10 @@
 @@?_adcheck=$xmlhttprequest,domain=manhuarmmtl.com
 @@?adType=$domain=taotaosou.com
 @@?m3u8=$xmlhttprequest,stealth=referrer,domain=cinesrc.st
+@@?p=$third-party,stealth=referrer,domain=nextbox.uno|next-box.su
 @@?seg=$xmlhttprequest,stealth=referrer,domain=cinesrc.st
 @@?sid=ads$domain=126.com|mail.163.com
+@@?type=*&id=$third-party,stealth=referrer,domain=nextbox.uno|next-box.su
 @@^abcheck=$domain=animeshqip.org
 @@^q=$xmlhttprequest,stealth=referrer,domain=vidcore.net
 @@^stream^$xmlhttprequest,media,stealth=referrer,domain=cinesrc.st
@@ -15558,6 +15560,7 @@
 @@||newsweek.com/prebid.js$script,domain=newsweek.com
 @@||newver.api.dedecms.com/index.php$subdocument
 @@||newz.dk^$generichide
+@@||next-box.su^$stealth=useragent
 @@||next.co.uk/static-content/gtm-sdk/gtm.js$~third-party
 @@||next.vuetifyjs.com^$content
 @@||nextbigfuture.s3.amazonaws.com/uploads$stealth=referrer

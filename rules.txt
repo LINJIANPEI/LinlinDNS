@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-21 20:17:48（北京时间）
+! Version: 2026-07-21 22:53:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69532
+! Total count: 69538
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4562,8 +4562,10 @@
 @@?_adcheck=$xmlhttprequest,domain=manhuarmmtl.com
 @@?adType=$domain=taotaosou.com
 @@?m3u8=$xmlhttprequest,stealth=referrer,domain=cinesrc.st
+@@?p=$third-party,stealth=referrer,domain=nextbox.uno|next-box.su
 @@?seg=$xmlhttprequest,stealth=referrer,domain=cinesrc.st
 @@?sid=ads$domain=126.com|mail.163.com
+@@?type=*&id=$third-party,stealth=referrer,domain=nextbox.uno|next-box.su
 @@^abcheck=$domain=animeshqip.org
 @@^q=$xmlhttprequest,stealth=referrer,domain=vidcore.net
 @@^stream^$xmlhttprequest,media,stealth=referrer,domain=cinesrc.st
@@ -13663,6 +13665,7 @@
 @@||newver.api.dedecms.com/index.php$subdocument
 @@||newvip-cdn.zhhainiao.com^
 @@||newz.dk^$generichide
+@@||next-box.su^$stealth=useragent
 @@||next.co.uk/static-content/gtm-sdk/gtm.js$~third-party
 @@||next.itellyou.cn^
 @@||next.vuetifyjs.com^$content
@@ -20928,11 +20931,14 @@ ali213.net##div[class^="GG"]
 ali213.net##div[id^="ali-ad-js-"]
 alibaba.com##.creative-dot-wrapper
 alibaba.com##.gallery-card:has(.searchx-card-e-ad)
+alibaba.com##.gallery-card[data-aplus-auto-offer*="&is_ad=true"]
 alibaba.com##.is-creative
 alibaba.com##.list-card:has([data-role="ad-area"])
 alibaba.com##.searchx-offer-item[data-aplus-auto-offer*="ad_adgroup_toprank"]
 alibaba.com##[id^="sse-fluent-wending"]:has(.creative-ad-tag)
 alibaba.com##a[campaignid][target="_blank"]
+alibaba.com##div[data-search-floor^="area=wending&"]
+alibaba.com##div[data-spm="wending-bottom"]
 alibabacloud.com###carousel-whois
 alibabacloud.com##.b-alicloud-bottom
 alibabacloud.com##.hmod-alicloud-contact-sales-support
@@ -26673,11 +26679,8 @@ cheatsheet.com##.sidebar
 cheatsheet.com##.top-ad
 cheatslips.com##div.pb-2[style^="min-height:"]
 check-host.net##.mb-2.crounded.text-sm
-check-host.net##.mb-2.rounded.text-sm
 check-host.net##.ra-elative
 check-host.net##div[class]:has(> [class^="alx"])
-check-host.net##div[class]:has(> [class^="alxb"])
-check-host.net##div[id^="amspeaytpuik"]
 check-host.net##div[id^="amstveaytpuik"]
 check-host.net##div[id^="antpeayvraea"]
 check.toys###COO
@@ -56733,6 +56736,8 @@ seekube.com###app > div:nth-child(2):not(:last-child)
 seekyoursounds.com###leaderboard-master
 seemysex.com##.inline-video-adv__inner
 seemysex.com##.rain
+seenews.com##.d-flex:has(> div > iframe[id^="google_ads_iframe_"])
+seenews.com##body > div.row:has(> div.d-flex > div > iframe[id^="google_ads_iframe_"])
 seewarte-schwerin.de###mc-consent-window
 sefaireaider.com###cookies-charter
 sega.co.uk##.cp-wrap
@@ -59331,6 +59336,7 @@ starterstory.com##.wide-sponsor
 startmail.com##footer ~ .banner
 startnext.com###toast, .toast
 startpage.com###main > div[style^="margin-bottom:"] > div:has(> div[style^="margin-bottom:"] > svg)
+startpage.com##div[data-identifier="exoclick-native-impression"]
 startpage.com##section#main > a[href][target="_blank"]:has(path[d^="m6.07067 3.14453c-.04309-.40317-.22467-.71709-.54475"])
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion###main > div:not([class], [id]):has(> div[class^="css-"] > .pa-amp)
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##.a-bg-result
