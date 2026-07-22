@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-23 00:12:46（北京时间）
+! Version: 2026-07-23 02:00:14（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69571
+! Total count: 69574
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -18886,6 +18886,7 @@
 @@||vidroll.cloud^$stealth=referrer
 @@||vidsrc.*/embed/$stealth=referrer
 @@||vidstream.to^$stealth=referrer,domain=egybest.*
+@@||vidtub.kotocdn.site^$xmlhttprequest,stealth=referrer,domain=vidtube.site
 @@||vidtube.pro/embed$subdocument,stealth=referrer
 @@||vieon.vn^$generichide
 @@||vietget.net^$generichide
@@ -34279,6 +34280,8 @@ foreignaffairs.com##div[data-once="fa-message-dismissable"]
 foreignpolicy.com##.channel-sidebar-big-box-ad
 foreignpolicy.com##.post-content--sub-prompt-in-article
 foreignpolicy.com##div[class^="home-ad-"]
+foreks.com##.homepage-ad-desktop-bant
+foreks.com##the-ads
 forestgum.de##.cookies
 forestriverforums.com##.recommended-stories
 forex-nawigator.biz##div[role="main"] > div[class][style*="height: 250px;"]:has(> center > div[id^="div-gpt-"])
@@ -47678,6 +47681,7 @@ movie76.com###btm_banner
 movie76.com##img[alt="ads"]
 movie76.com,wardhanime.net##div[id^="teaser"]
 moviebite.cc##.site-ad-banner
+moviebox.ph,movieboxapp.in,themoviebox.org,moviebox.pk,movieboxapp.in,123movienow.cc##.home-global-ad
 movieboxonline.net###detail-page > .mt-4 > .mt-4:has(> a.group.block[href^="https://gamixo.org/"])
 moviechat.org##.adc
 moviechat.org##a[href^="https://breathecup.com/?utm_source="][target="_blank"]
@@ -55599,7 +55603,6 @@ rientiestuinmachines.nl##.cookie
 rifmelody.com##ad-host
 riftherald.com###chorus_notifiations
 rigb.org##.cookie
-right.com.cn###hd > div.wp > div.hdc > h2
 right.com.cn###hd > div.wp > div.hdc > h2 img.boardlogo
 right.com.cn##.wp > .a_t:has(> table > tbody > tr > td > .adsbygoogle)
 right.com.cn##a[href^="https://jd.dangbei.com/"]

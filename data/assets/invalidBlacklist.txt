@@ -371,8 +371,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 106240
-! Blocked Filters: 43435
+! Blocked Filters: 106250
+! Blocked Filters: 43434
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -410,7 +410,7 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 191257
+! Blocked domains: 191343
 ! Blocked domains: 5088
 ! Blocked: 4.891 rules
 ! Blocked: 564 rules
@@ -438,11 +438,11 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: DnPHGirBBymh0nvVp7Rvng
-! Checksum: SAJTDdig+3CZKTx1+vyevg
+! Checksum: 9PsVDcnYAgT4ArkXkxV/7A
+! Checksum: FxTBw+r5LJjkj+WpFYnkXA
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: VhBtKnCscDqZuU7WFM6/HQ
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
+! Checksum: lcmq66jCI7nCXBXKO6/TQA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -760,11 +760,11 @@
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-07-21T07:55:06.825Z
-! Last modified: 2026-07-22T14:43:28.322Z
+! Last modified: 2026-07-22T16:34:01.254Z
 ! Last modified: 2026/03/11 09:15 +0800
-! Last modified: 2026/07/22 18:29:59
+! Last modified: 2026/07/23 01:25:24
 ! Last modified: 22 Jul 2026 14:12 UTC+7
-! Last modified: 22 Jul 2026 16:02 UTC
+! Last modified: 22 Jul 2026 17:51 UTC
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1194,7 +1194,7 @@
 ! Used with many websites to generate multiple popups
 ! Utiq :  utiq-aws.net disguised trackers
 ! VPN Affiliate Banners
-! Version:    最后同步时间: 2026-07-22 01:15:05
+! Version:    最后同步时间: 2026-07-23 01:15:05
 ! Version: 04December2020v1-Alpha
 ! Version: 06September2020v1
 ! Version: 1.0.0.43
@@ -1221,8 +1221,8 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260715084456
-! Version: 202607221602
-! Version: 20260722182959
+! Version: 202607221751
+! Version: 20260723012524
 ! Version: 2607221412
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3494,7 +3494,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-07-22T23:51:25+08:00
+# Update time: 2026-07-23T01:51:27+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -65932,6 +65932,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||vidroll.cloud^$stealth=referrer
 @@||vidsrc.*/embed/$stealth=referrer
 @@||vidstream.to^$stealth=referrer,domain=egybest.*
+@@||vidtub.kotocdn.site^$xmlhttprequest,stealth=referrer,domain=vidtube.site
 @@||vidtube.pro/embed$subdocument,stealth=referrer
 @@||vieon.vn^$generichide
 @@||vietget.net^$generichide
@@ -85476,6 +85477,8 @@ foreignpolicy.com##div[class^="home-ad-"]
 foreignpolicy.com#?#.sidebar > div.sticky-container:has(> div > div.channel-sidebar-big-box-ad)
 foreignpolicy.com#?#.sidebar > div.sticky-container:has(> div.ad-container)
 foreignpolicy.com#?#.sidebar > div.sticky-container:has(> div[id^="distroscale_ad_"])
+foreks.com##.homepage-ad-desktop-bant
+foreks.com##the-ads
 forestgum.de##.cookies
 forestriverforums.com##.recommended-stories
 forex-nawigator.biz##div[role="main"] > div[class][style*="height: 250px;"]:has(> center > div[id^="div-gpt-"])
@@ -102632,6 +102635,7 @@ moviebaztv.com,parstv24.com,suryaindosinga.co,karanpc.com,topsporter.net,iconmon
 moviebite.cc##.site-ad-banner
 moviebite.cc#?#.transition-all.overflow-hidden.w-full:contains(Advertisement)
 moviebite.cc#?#.transition-all.overflow-hidden.w-full:has-text(Advertisement)
+moviebox.ph,movieboxapp.in,themoviebox.org,moviebox.pk,movieboxapp.in,123movienow.cc##.home-global-ad
 movieboxonline.net###detail-page > .mt-4 > .mt-4:has(> a.group.block[href^="https://gamixo.org/"])
 moviechat.org##.adc
 moviechat.org##a[href^="https://breathecup.com/?utm_source="][target="_blank"]
@@ -112816,7 +112820,6 @@ riftherald.com###chorus_notifiations
 rifurl.com#%#//scriptlet("abort-on-property-read", "_cpp")
 rifurl.com#%#//scriptlet("prevent-window-open")
 rigb.org##.cookie
-right.com.cn###hd > div.wp > div.hdc > h2
 right.com.cn###hd > div.wp > div.hdc > h2 img.boardlogo
 right.com.cn##.wp > .a_t:has(> table > tbody > tr > td > .adsbygoogle)
 right.com.cn##a[href^="https://jd.dangbei.com/"]
