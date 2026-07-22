@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-22 20:20:13（北京时间）
+! Version: 2026-07-22 22:53:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69541
+! Total count: 69571
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4449,6 +4449,7 @@
 @@/premium*/tracks-*.html$xmlhttprequest,stealth=referrer
 @@/progress.php?callback=$script,domain=ytmp3.cc
 @@/proxy?data=$third-party,xmlhttprequest,stealth=referrer,domain=flixer.*
+@@/proxy?data=$third-party,xmlhttprequest,stealth=referrer,domain=hexa.su
 @@/pub/ad/*$domain=ruten.com.tw
 @@/pub1/??$domain=banggo.com
 @@/pubads*theguardian.com
@@ -4746,9 +4747,17 @@
 @@||*.bblmw.cn^
 @@||*.cdninstagram.com^
 @@||*.cup.com.cn^
+@@||*.dbankcdn.cn^
+@@||*.dbankcdn.com^
+@@||*.dbankcloud.asia^
+@@||*.dbankcloud.cn^
+@@||*.dbankcloud.com^
+@@||*.dbankcloud.eu^
+@@||*.dbankcloud.ru^
 @@||*.dlied1.cdntips.net^
 @@||*.forgecdn.net^
 @@||*.heytapdownload.com^
+@@||*.hicloud.com^
 @@||*.img.mobile.sina.cn^
 @@||*.in-addr.arpa^
 @@||*.ke.com^
@@ -5124,6 +5133,7 @@
 @@||account.microsoft.com/auth/$stealth=3p-cookie
 @@||account.oneplus.com^
 @@||account.oppo.com^
+@@||account.qzhua.net^
 @@||account.realme.com^
 @@||account.vivo.com^
 @@||account.withings.com^$stealth=ip
@@ -6065,6 +6075,7 @@
 @@||aobi.100bt.com/play/ad/ad*.swf
 @@||aod.cos.tx.xmcdn.com^
 @@||aone-soft.com/style/images/ad2.jpg
+@@||ap-*-*.agora.io^
 @@||ap.6wz.co^
 @@||ap01.records.in.treasuredata.com^
 @@||ap01.records.in.treasuredata.com^|
@@ -6138,6 +6149,7 @@
 @@||api.adinplay.com/v4/live/aip/ad-manager.js$script,domain=cuberealm.io
 @@||api.adnetmedia.lt/api/$~third-party
 @@||api.ads.tvb.com^
+@@||api.agora.io^
 @@||api.airpush.com^
 @@||api.aliagents.ai/api/v1/activity$~third-party,xmlhttprequest
 @@||api.amemv.com^
@@ -8870,6 +8882,7 @@
 @@||docodoco.jp^*/docodoco?key=$script,domain=jrtours.co.jp
 @@||docrdsfx76ssb.cloudfront.net^
 @@||docs.amd.com^$stealth=referrer,domain=docs.amd.com
+@@||docs.chmlfrp.net^
 @@||docs.doudou.fun^
 @@||docs.expo.io/*/static/*/pages/versions/latest/sdk/*.js$domain=docs.expo.io
 @@||docs.google.com/*/viewdata$~third-party
@@ -8877,6 +8890,8 @@
 @@||docs.idqqimg.com^
 @@||docs.rucml.ru/e.gif?$~third-party
 @@||docs.scriptcat.org^
+@@||docs.trae.ai^
+@@||docs.trae.cn^
 @@||docs.vilinko.com^
 @@||docs.woopt.com/wgact/$image,~third-party,xmlhttprequest
 @@||doda.jp/brand/ad/img/icon_play.png
@@ -9698,6 +9713,7 @@
 @@||forum.notebookreview.com^|
 @@||forum.release-apk.com/*#/*/ad/$image
 @@||forum.release-apk.com^$generichide
+@@||forum.trae.cn^
 @@||forum.warthunder.ru/?&identity_
 @@||forum.warthunder.ru/index.php?*&section=
 @@||forumcoin.win^$generichide
@@ -12270,6 +12286,7 @@
 @@||l36-danmu.hi.163.com^
 @@||l36.gdl.netease.com^
 @@||l36.update.netease.com^
+@@||l36.update.nieapps.com^
 @@||lab.eu.amplitude.com^$xmlhttprequest,domain=bluelightcard.co.uk
 @@||labrc.pw/advstats/$xmlhttprequest
 @@||lacoste.com^*/click-analytics.js$~third-party
@@ -14190,6 +14207,7 @@
 @@||p6-sign.douyinpic.com^
 @@||p6-webcast-sign.douyinpic.com^
 @@||p6.douyinpic.com^
+@@||p9-arcosite.byteimg.com^
 @@||p9-catpcha.byteimg.com^
 @@||p9-dcd-sign.byteimg.com^
 @@||p9-dcd.byteimg.com^
@@ -15029,6 +15047,7 @@
 @@||pandora.com/web-client-assets/ads.*.js
 @@||pandora.com/web-version/*/*.json
 @@||pandora.com^$generichide
+@@||panel.chmlfrp.net^
 @@||panel.play.hosting/js/jquery.openxtag.js
 @@||panjiachen.github.io^$generichide
 @@||pantagraph.com^$generichide
@@ -19327,6 +19346,7 @@
 @@||www.chemdraw.com.cn^
 @@||www.chinaunicom.com.cn^
 @@||www.chinaunicom.com^
+@@||www.chmlfrp.net^
 @@||www.clips4sale.com^
 @@||www.cloudflare-cn.com^
 @@||www.cloudflare.com^
@@ -19350,6 +19370,7 @@
 @@||www.douyin.com^
 @@||www.dpfile.com^
 @@||www.dxmpay.com^
+@@||www.emojiall.com^
 @@||www.enigmaprotector.cn^
 @@||www.enigmaprotector.com^
 @@||www.epicgames.com^
@@ -19414,6 +19435,7 @@
 @@||www.manhuabei.com^
 @@||www.maserati.com^
 @@||www.mcmod.cn^
+@@||www.mefrp.com^
 @@||www.meituan.com^
 @@||www.meizu.com^
 @@||www.mercedes-benz.com.cn^
@@ -51436,6 +51458,11 @@ paradisehill.cc##.banners3
 paradisehill.cc##.banners4
 paradisehill.cc##.bb-0
 paradisehill.cc##.shapka
+paradoxscans.com##body > div[id][class*="_"]
+paradoxscans.com##body > footer ~ h4[class*="_"]
+paradoxscans.com##body > footer ~ h4[class*="_"] + div[class*="_"]
+paradoxscans.com##body > footer ~ h4[class*="_"] + div[class*="_"] + div[class=""]
+paradoxscans.com##body > footer ~ h4[class*="_"] + div[class*="_"] + div[class=""] + div[class*="_"]
 parafarma.be###popup, .popup
 paragon-drivers.com##.b-psg-cookie
 parallaximag.gr###main-content > div.column:has(> div.nx-banner-wrapper)
@@ -55573,6 +55600,7 @@ rifmelody.com##ad-host
 riftherald.com###chorus_notifiations
 rigb.org##.cookie
 right.com.cn###hd > div.wp > div.hdc > h2
+right.com.cn###hd > div.wp > div.hdc > h2 img.boardlogo
 right.com.cn##.wp > .a_t:has(> table > tbody > tr > td > .adsbygoogle)
 right.com.cn##a[href^="https://jd.dangbei.com/"]
 rightmove.co.uk###interstititalSlot-0
@@ -59639,6 +59667,8 @@ streams.tv###sunGarden
 streamsport.pro###layer1
 streamsport.pro##.bannerfloat
 streamsports99.ru##a[href^="https://rocketstreams4k.com?ref="]
+streamsports99.su##a[href^="https://rocketstreams4k.com"]
+streamsports99.su##div[role="tablist"] > button[id^="radix-"][id$="-trigger-iptv"]
 streamtajm.com##.col-xs-12 > div[style^="background-color: #eee; width:"][style*="overflow: hidden;"]:not([class]):not([id])
 streamtvinsider.com##.recommended-content
 streamty.com###adbd
