@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-27 17:25:21（北京时间）
+! Version: 2026-07-27 20:48:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69606
+! Total count: 69623
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -14687,6 +14687,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=slink.bid
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=smallseotools.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=smallseotools.com,badfilter
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=smart.siendu.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sms-receive.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sms24.me|sms24.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=smsget.net
@@ -17353,6 +17354,7 @@
 @@||static.doubleclick.net/instream/ad_status.js$domain=linkneverdie.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=nasdaqfutures.org,xmlhttprequest
 @@||static.doubleclick.net/instream/ad_status.js$domain=shineads.in
+@@||static.doubleclick.net/instream/ad_status.js$domain=smart.siendu.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=sonixgvn.net
 @@||static.doubleclick.net/instream/ad_status.js$domain=stfly.biz
 @@||static.doubleclick.net/instream/ad_status.js$domain=techedubyte.com
@@ -22980,6 +22982,7 @@ awkwardzombie.com###right-space
 awkwardzombie.com###top-space
 awo.org###kekse
 awwapp.com###bottom-notification
+awwwards.com##ul.grid-cards[data-group="awards"] > li:not([class])
 axa.cz##.axa-cookies
 axar.az###ptop > div[style^="float:left; width:330px; height:90px;"]
 axar.az###ptop > div[style^="float:left; width:500px; height:100px;"]
@@ -30795,6 +30798,7 @@ douyu.com##div[class^="ChargeTask"]
 douyu.com##div[class^="code_box"]
 douyu.com##div[id^="sign_p_"]
 douyu.com,huya.com##a[href^="https://g.wan."]
+dovechannel.com,screambox.com,midnightpulp.com###v-player_ima-ad-container
 dovizborsa.com###tools > div[style*="bottom"]
 dow.com##.screenBlockOverlay
 down.ali213.net,patch.ali213.net##.picBg
@@ -34832,6 +34836,7 @@ freewebarcade.com##.pnum
 freewebarcade.com##.rsads
 freewebarcade.com##.rxads
 freewebarcade.com##.rxse
+freewebnovel.com##.slot-frame
 freex2line.online$$script:contains(/throw new Error\(\)/)
 freexcafe.com###banner-tube-single
 freexcafe.com###join
@@ -39013,6 +39018,9 @@ house365.com##.left_fudong_ad
 house365.com##.leftfixed_box
 house365.com##a[style*="1200px;"]
 house365.com##div[id^="AD-bottom"]
+housefeel.com.tw##.articleArea > .absolute[class*="right-"]
+housefeel.com.tw##.retentionModal .aspect-square
+housefeel.com.tw##a.cursor-pointer:has(img[src^="https://console.images.stockfeelgroup.com/ads/"])
 housefindeasy.com##div[style="display:inline-block; vertical-align:top; font-size:12px; margin-top:2px"]
 housefindeasy.com##div[style="display:inline-block; vertical-align:top; font-size:12px; margin-top:2px"] + div[style="display:inline-block"]
 housefindeasy.com##div[style="height:90px"]
@@ -44987,6 +44995,7 @@ luscious.net##.ad_section
 lusongsong.com###main > center
 lust-goddess.com###dialog-partner
 lustprn.com##.footer-sidebar-row
+lustreels.tube##.video-feed-inner > div[class="video-feed-item"][data-video-id=""]:has(> div.ad-slot)
 luxa.org##.MuiContainer-root:has(> ins.adsbygoogle)
 luxmeble.eu###cookie
 luxplus.dk###lp-euc
@@ -48520,6 +48529,7 @@ mypornhere.com##.list-videos > div > .item:has(> .adsbyexoclick)
 mypornhere.com##.list-videos > div > .item:not(:has(> *))
 mypornhere.com##div[style^="text-align:"] > p[align="center"]:has(> a)
 mypornstarblogs.com###live-bottom
+mypornstarblogs.com###live-pornstars
 mypornstarblogs.com###mgb-container
 mypornstarblogs.com###mpc-container
 mypornstarbook.net##div[class^="reklama"]
@@ -48790,6 +48800,7 @@ naszemma.pl##a[href^="https://naszemma.pl/go/betclic"]
 naszemma.pl##img[style^="width: 100%; max-width: 970px;"]
 naszpruszcz.pl,hej.rzeszow.pl,kolniak24.eu,petronews.pl,zyciezyrardowa.pl,zyciepabianic.pl##.baner
 natemat.pl##.art .lazyload-wrapper:has(> div[class] > div[class] > button.close + div[class] > a[href="/twoja-prywatnosc"])
+natemat.pl##.art div[class*="-"]:has(> a[data-analytics-name][target="_blank"])
 natemat.pl##div[class^="adslot"]
 natemat.pl##div[class^="optad"]
 natgeomedia.com##div[id^="AD-970x250"]
@@ -56564,6 +56575,7 @@ sciotocountydailynews.com##.content-inner > p > a[href][target="_blank"] > img
 scitanie.sk##.c-banner
 scleracontacts.com###pushwix-popover-container.slide-down
 scloud.ws##a[href="javascript:clc();"]
+scloud.ws##a[href^="javascript:"]
 scloud.ws,stagatv.com##a.download-button
 sclouddownloader.net##div[style^="min-height:"].text-center
 scmp.com###after-page-layout-container
@@ -62541,6 +62553,7 @@ tl.net###main-content > div[style^="max-width: 740px; height:108px; overflow: hi
 tl.net###main-right-sidebar > div[style="margin-top: 2px; margin-bottom: 2px; height: 250px"]
 tl.net##body > div:not([id]):not([class])
 tlanyan.me###id_ad_field
+tld-list.com##.wrapper > .mx-auto:has(> a[rel*="sponsored"])
 tld-list.com##div.row > .text-center > .ib
 tldallas.com###cookies
 tlgrm.eu##.channel-card--promoted
@@ -67126,6 +67139,7 @@ wpbeginner.com##.sidebardeals
 wpbeginner.com##.singleadthumbcontainer
 wpde.com##div[class^="HomePageContainer-module_empty"]
 wpengine.com##.opt-in-modal
+wphive.com##.widget_wphiveadvertiseflywpwidget
 wpjam.com###wpjam_blog_300x250_1
 wplift.com##.widget_bsa
 wplocker.com##[href^="//namecheap.pxf.io/"]
@@ -69077,6 +69091,8 @@ zeenews.india.com##.add-placeholder
 zeenews.india.com##.ads-box-300x250::before
 zeenews.india.com##.ads-placeholder-internal
 zeenews.india.com##[class^="ads-box"]
+zeenews.india.com##div[class*=" TopBanner-"]
+zeenews.india.com##div[class*="_ads_box_"]
 zeenews.india.com,wionews.com##div[class^="ads-box-"]
 zeenite.com,gotohole.com##.player > a
 zeewolde-actueel.nl###CARD-optin-header
@@ -69491,6 +69507,7 @@ zoomgirls.net##.wallpaper-2ads
 zoomgirls.net##.wallpaper-ads-right
 zoomin.tv###privacyoverlay
 zoomit.ir##.igiCam
+zoomit.ir##.w-full:has(> div[role="progressbar"])
 zoomit.ir##div[class^="sc-"]:has(> div[width="100%"][height="100%"])
 zoompussy.com###side_sponsor
 zoomtventertainment.com##div[class^="adCaller-"]
