@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-27 20:48:30（北京时间）
+! Version: 2026-07-27 23:35:36（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69623
+! Total count: 69626
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3827,6 +3827,7 @@
 8tracks.com##.banner_container
 8x8.vc###success > div > div:last-child
 8ziyuan.com##.deanadsside
+9-gld.net,bikyonyu-bijo-zukan.com,sumirekeiba.com###container + div[id][class*=" "]
 900.la##.banner_ad1
 900.la##.font-ad
 90bifen.com###live > table[cellspacing="0"][cellpadding="0"]
@@ -8542,6 +8543,7 @@
 @@||d2o03z2xnyxlz5.cloudfront.net^|$xmlhttprequest,domain=kbjfree.com
 @@||d2qnx6y010m4rt.cloudfront.net^|$xmlhttprequest,domain=kbjfree.com
 @@||d2r1yp2w7bby2u.cloudfront.net/js/clevertap.min.js$domain=tatacliq.com
+@@||d2rs.com^$subdocument,stealth=referrer,domain=jetfilmizle.*
 @@||d2ujtyf7wfmq6y.cloudfront.net/ads/ads.html$domain=reisefrage.net|motorradfrage.net|autofrage.net|sportlerfrage.net|gesundheitsfrage.net|finanzfrage.net|computerfrage.net|gutefrage.net
 @@||d2wy8f7a9ursnm.cloudfront.net/v8/bugsnag.min.js$script,domain=forecastapp.com
 @@||d347cldnsmtg5x.cloudfront.net/util/1x1.gif$image,domain=aplaceforeverything.co.uk
@@ -10501,6 +10503,7 @@
 @@||googletagservices.com/tag/js/gpt.js$domain=phonearena.com
 @@||googletagservices.com/tag/js/gpt.js$domain=proximus.be
 @@||googletagservices.com/tag/js/gpt.js$domain=scotsman.com,badfilter
+@@||googletagservices.com/tag/js/gpt.js$domain=smart.siendu.com
 @@||googletagservices.com/tag/js/gpt.js$domain=techrepublic.com
 @@||googletagservices.com/tag/js/gpt.js$domain=topuniversities.com
 @@||googletagservices.com/tag/js/gpt.js$domain=tvb.com|tvbs.com.tw|www.gamer.com.tw
@@ -18857,6 +18860,7 @@
 @@||videobuster.de/js/video-js/nuevo.min.js$domain=videobuster.de
 @@||videocore.tv/playlist.smil$document
 @@||videohidefree.online/embed/$stealth=referrer
+@@||videopark.top^$subdocument,stealth=referrer,domain=jetfilmizle.*
 @@||videoplayer.persgroep.be/v*/player/ad_smartads_.js
 @@||videoplaza.tv/creatives/assets*.mp4^$domain=expressen.se
 @@||videoplaza.tv/crossdomain.xml
@@ -27143,6 +27147,7 @@ cinespot.net###gsContent > b
 cinespot.net##.ad-image
 cinespot.net##td[align="center"] > b
 cinespot.net##td[width="10%"]
+cineverse.com,dovechannel.com,screambox.com,midnightpulp.com###v-player_ima-ad-container
 cinquantamila.it###privacy_advisor
 cint.com##.cint-cookiebot
 cioreview.com###footerr
@@ -28627,6 +28632,7 @@ crex24.com##div[class*="cookies_block"]
 cricbuzz.com##.cb-ad-unit
 cricbuzz.com##.cbz-leaderboard-banner
 cricbuzz.com##body div.bg-cbLightGrayish:has(> div[id*="leaderboard"])
+cricinfo.com##.ds-flex-none > div.ds-mb-4:has(> div > div.ds-w-full div.ds-flex > a[href^="https://www.bet365.com/"])
 cricinfo.com,espncricinfo.com##.ci-story-content-ad
 cricket.com.au##.w-sponsors
 cricket365.com,football365.com,golf365.com,loverugbyleague.com,planetf1.com,planetfootball.com,planetrugby.com,teamtalk.com,tennis365.com##.ps-block-a
@@ -33842,6 +33848,7 @@ firstdraftnews.org##.welcome-message
 firstforwomen.com##.article-content__sponsored_tout_ad___1iSJm
 firstforwomen.com##div[class^="article-content__www_ex_co_video_player_"]
 firstincest.com,hentaienglish.com,hentaiporno.xxx##.ays-pb-modals
+firstincest.com,hentaienglish.com,hentaiporno.xxx,hentaitk.com##.ays-pb-modals
 firstonetv.net##.sidebar > .row > .columns:first-child
 firstonetv.net##center > div[style*="max-height: 280px;"]
 firstonetv.net##center > div[style*="max-height: 90px;"]
@@ -56574,7 +56581,6 @@ scio.pw###hinweise
 sciotocountydailynews.com##.content-inner > p > a[href][target="_blank"] > img
 scitanie.sk##.c-banner
 scleracontacts.com###pushwix-popover-container.slide-down
-scloud.ws##a[href="javascript:clc();"]
 scloud.ws##a[href^="javascript:"]
 scloud.ws,stagatv.com##a.download-button
 sclouddownloader.net##div[style^="min-height:"].text-center
@@ -62876,7 +62882,6 @@ torbobit.net,trubobit.com##a[href="/ybrowser/download"] + p
 torcedores.com###navve-cookie-block
 torebrings.se##.alert-info, .alert-warning, .alert-box
 torg-pc.ru##.marketing-popup
-tori.fi##.retail-media-ad-wrapper
 tori.fi##iframe[title="Oikotie advertisement"]
 torinostar.it###footerprivacy
 torkitty.com,torrentkitty.app,torrentkitty.io,torrentkitty.lol,torrentkitty.net,torrentkitty.se,torrentkitty.tv##a[href*="/aff_"]
@@ -69506,9 +69511,7 @@ zoomgirls.net##.side-header2
 zoomgirls.net##.wallpaper-2ads
 zoomgirls.net##.wallpaper-ads-right
 zoomin.tv###privacyoverlay
-zoomit.ir##.igiCam
 zoomit.ir##.w-full:has(> div[role="progressbar"])
-zoomit.ir##div[class^="sc-"]:has(> div[width="100%"][height="100%"])
 zoompussy.com###side_sponsor
 zoomtventertainment.com##div[class^="adCaller-"]
 zoonek.com##.fullwidth-ads
