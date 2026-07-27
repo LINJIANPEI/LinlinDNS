@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-28 01:27:55（北京时间）
+! Version: 2026-07-28 03:09:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69626
+! Total count: 69629
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -24277,7 +24277,6 @@ bikeroar.com##[href^="https://www.roaradventures.com/"]
 biketech24.de##.cookies_apply
 bikroy.com##.leader-board-fixed--1ob2_
 bikroy.com##div[class^="leader-board-banner--"]
-bikyonyu-bijo-zukan.com,sumirekeiba.com###container + div[id][class*=" "]
 bild-online.dk###fixedDiv2
 bilibili.com###app > DIV.bili-header-m.report-wrap-module:first-child > DIV.nav-menu:first-child > DIV.nav-wrapper.clearfix.bili-wrapper:last-child > DIV.nav-con.fl:first-child > UL > LI.nav-item.mobile:last-child
 bilibili.com###b_app_link
@@ -30804,7 +30803,6 @@ douyu.com##div[class^="ChargeTask"]
 douyu.com##div[class^="code_box"]
 douyu.com##div[id^="sign_p_"]
 douyu.com,huya.com##a[href^="https://g.wan."]
-dovechannel.com,screambox.com,midnightpulp.com###v-player_ima-ad-container
 dovizborsa.com###tools > div[style*="bottom"]
 dow.com##.screenBlockOverlay
 down.ali213.net,patch.ali213.net##.picBg
@@ -55502,6 +55500,8 @@ resourcepack.net##.ab-rpnet-archive-infeed
 resourcepack.net##.ab-rpnet-single-bottom
 resourcepack.net##.ab-rpnet-single-header
 resourcepack.net##div[class^="ab-rpnet-"]
+respawn.outlookindia.com##.items-center:is([class*="h-["], [class*="w-["]):has(> span.font-open-sans)
+respawn.outlookindia.com##body > .min-h-screen > .justify-center:has(> .items-center:is([class*="h-["], [class*="w-["])> span.font-open-sans)
 respawn.pl##a[href*=".adsrv.eacdn.com/"]
 respawn.pl##a[href="https://pl.genesis-zone.com/"][target="_blank"] > img
 respawn.pl##a[href^="https://ewinner.pl/"] > img
@@ -62118,8 +62118,10 @@ thumbnails.porncore.net##div[id][style$="height:200px;width:800px;"]
 thumbnails.porncore.net##iframe[width="200"][height="1000"]
 thumbsnap.com##.ts-blurb-wrap
 thunderhead.com###js-thcb-banner
+thunderstore.io##.community-promo
 thunderstore.io##.main_content_middle div.card:has(> .card-body > a.dathost-link)
 thunderstore.io##.navbar-nav > li:has(> a.dathost-link)
+thunderstore.io,afrohouseking.com,chillflix.to,pixground.com,holidify.com,filexstream.sujanbotx.workers.dev,azmovies.to,34-hub.com,ogfap.com,coindesk.com,ohcar2022.co.in,dailyhindiadda.com,fifakitcreator.com,fontscompare.com,sarna.net,theproducenews.com,kaoruhana.com,marinetraffic.live,governmentjobvacancies.com,biharkhabar.co,resizepixel.com,tradingeconomics.com,netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com,link.postearn.io##.ad-container:not(#style_important)
 thurrott.com###announcement-bar-container
 thuvienhd.com##a[href^="https://bit.ly/"]
 thuvienphapluat.vn##div[class^="viewAds-"]
@@ -67666,6 +67668,7 @@ xgp.pl##div[class^="adslot_"]
 xgp.pl##div[id^="xgppl-"] > a[target="_blank"] > img
 xgrb.cn##.d_2016_ggw
 xgroovy.com###main_video_fluid_html_on_pause
+xgroovy.com###top_links
 xgroovy.com##.fluid-b
 xgroovy.com##.fluid_next_video_left
 xgroovy.com##.fluid_next_video_right
