@@ -440,12 +440,12 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: BJiQXp3eomnE4dI3JE1krw
-! Checksum: LkLfBhJbyk1JOXt+9SwlOQ
-! Checksum: QyLsJEt9MuckGSVR5D9yZQ
+! Checksum: 9YTzDi0v+oKOlhqpHIZR0Q
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
+! Checksum: dRAQSagPifB1+fs8GEBVrg
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
+! Checksum: vZcmKbAc39wIRQ6tM2+4Og
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -536,6 +536,7 @@
 ! Content Ignite : greylabeldelivery.com disguised trackers
 ! Contribute: https://github.com/durablenapkin/scamblocklist/issues
 ! Contribute: https://github.com/hoshsadiq/adblock-nocoin-list/issues
+! Copyright (c) 周木木
 ! Crashlytics is commented by @ameshkov.
 ! Criteo
 ! Criteo : dnsdelegation.io disguised trackers
@@ -544,6 +545,7 @@
 ! Croatian
 ! CustomerLabs : 1p-data.co disguised trackers
 ! Czech
+! DNS ad blocking blacklist for AdGuard Home
 ! DNS checks
 ! DOMAIN-REFRESHER: END
 ! DOMAIN-REFRESHER: START
@@ -612,6 +614,7 @@
 ! Expires: 12 hours
 ! Expires: 2 days
 ! Expires: 2 days (update frequency)
+! Expires: 20991231
 ! Expires: 3 days
 ! Expires: 3 hours (update frequency)
 ! Expires: 4 days
@@ -757,13 +760,14 @@
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-07-26T18:27:00.151Z
-! Last modified: 2026-07-28T18:33:37.049Z
+! Last modified: 2026-07-28T20:29:30.183Z
 ! Last modified: 2026/03/11 09:15 +0800
 ! Last modified: 2026/07/29 01:39:15
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 28 Jul 2026 14:31 UTC+7
-! Last modified: 28 Jul 2026 18:52 UTC
+! Last modified: 28 Jul 2026 20:41 UTC
+! Last modified: 28 Jul 2026 20:42 UTC
 ! Last modified: 30 Jan 2021
 ! Last modified: 30 Nov 2023 11:33 UTC
 ! Latvian
@@ -1144,6 +1148,7 @@
 ! Title: Scam Blocklist by DurableNapkin
 ! Title: Youtube-Adfilter-Web
 ! Title: Zhihu App 广告屏蔽
+! Title: black-list
 ! Title: hostsVN
 ! Title: hostsVN Threat
 ! Title: 乘风 小众视频过滤规则
@@ -1183,6 +1188,7 @@
 ! Unblock search url
 ! Unnecessary third-party scripts
 ! Update Time: 2026-07-15 08:44:56（北京时间）
+! Update: 20240401
 ! Used in malware exploits
 ! Used with many websites to generate multiple popups
 ! Utiq :  utiq-aws.net disguised trackers
@@ -1213,7 +1219,8 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260715084456
-! Version: 202607281852
+! Version: 202607282041
+! Version: 202607282042
 ! Version: 20260729013915
 ! Version: 2607281431
 ! Version: 350.202311301133
@@ -1389,6 +1396,7 @@
 ! https://forums.lanik.us/viewtopic.php?f=64&t=45603&p=158333
 ! https://forums.lanik.us/viewtopic.php?p=131491#p131491
 ! https://gist.github.com/tinogomes/c425aa2a56d289f16a1f4fcb8a65ea65
+! https://gitee.com/zjqz/ad-guard-home-dns
 ! https://github.com/AdguardTeam/AdGuardHome/issues/1046
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/1114
@@ -1781,7 +1789,9 @@
 ! uponit adservers
 ! url
 ! url.rw popups
+! url=https://gitee.com/zjqz/ad-guard-home-dns/raw/master/black-list
 ! various popups
+! version=20240401104730
 ! wbaltv.com/wapt.com/wdsu.com
 ! webike domains, fix broken page
 ! websocket ads
@@ -2167,6 +2177,7 @@
 !#webkaka.com
 !#wnacg.com
 !#x
+!*********************************************************
 !+ NOT_OPTIMIZED
 !+ NOT_OPTIMIZED PLATFORM(ios, ext_android_cb, ext_safari)
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
@@ -2294,6 +2305,8 @@
 !----------------Allowlists to fix broken international sites-----------------!
 !-------------白名单---------------
 !-------------黑名单--------------------
+!--------Commonly used--------
+!--------The List End--------
 !----GNU LGPL Licensed, NO WARRANTY but Best Wishes----
 !---JavBus---
 !---JavDB---
@@ -2390,7 +2403,7 @@
 !Total lines: 898
 !Total lines: 903
 !Total lines: 94124
-!Total lines: 95079
+!Total lines: 95567
 !Total lines: 99662
 !UC
 !Update content: fix  #190
@@ -2402,7 +2415,7 @@
 !Version: 1.7.6-release
 !Version: 20251223052121708468309
 !Version: 20251223132120
-!Version: 20260726034027
+!Version: 20260729035811
 !Yahoo
 !Yandex
 ![个人收集 2.0]
@@ -3484,7 +3497,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-07-29T02:51:23+08:00
+# Update time: 2026-07-29T04:51:23+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -37012,7 +37025,7 @@
 #17leyi
 #18+不良网站
 #18183
-#1RTB ===
+#1RTB
 #1o26
 #216.34.181.45   s        # slashdot.org
 #2344.com
@@ -37135,10 +37148,10 @@
 #@ >>>>>>>> https://raw.githubusercontent.com/FiltersHeroes/KAD/master/sections/szybko_wygaszajace.txt => hosts
 #@##adblocktest
 #@#.has-ad
-#ADN Plus ===
-#ADX VIP ===
-#Ad-Scope ===
-#AdBid ===
+#ADN Plus
+#ADX VIP
+#Ad-Scope
+#AdBid
 #Aggmore 聚合广告 SDK ──
 #Alimama
 #Appcpa
@@ -37148,30 +37161,30 @@
 #BlueSoleil
 #ByteDance Pangle 穿山甲广告 SDK ──
 #China Unicom
-#DigitalCloudShield ===
+#DigitalCloudShield
 #Domob 多盟广告 ──
 #Fake Fucker
-#FancyDSP ===
+#FancyDSP
 #Flash
 #Flurry
 #GDT 腾讯广点通广告 ──
-#Gameley ===
+#Gameley
 #HKsite
 #HTTPDNS拦截
 #Huawei 华为广告 SDK ──
-#HubCloud ===
+#HubCloud
 #KS 快手广告 SDK ──
-#LeadMoa ===
+#LeadMoa
 #Logolabn去广告
 #MIUI去广告
 #MIUI浏览器去广告
 #MIUI浏览器网址拦截
 #MSN
 #Mediav
-#MentaMob ===
+#MentaMob
 #MicroSoft
 #Migu | 咪咕
-#NDCJL ===
+#NDCJL
 #OPPO 广告 SDK ──
 #OpenSubtitles.org
 #Other
@@ -37179,8 +37192,8 @@
 #Pixiv
 #QQ浏览器小说广告
 #QQ相关
-#RichMob ===
-#Sigmob ===
+#RichMob
+#Sigmob
 #Smartnews
 #Taboola
 #Tanx 阿里巴巴广告 SDK ──
@@ -37188,11 +37201,11 @@
 #Topon
 #Tracking
 #Tribalfusion
-#UBiX ===
+#UBiX
 #UC浏览器 & 夸克
 #Umeng | 友盟
 #Vivo 广告 SDK ──
-#Vlion 维龙 ===
+#Vlion 维龙
 #Wifi8
 #X8沙箱
 #YouTube 去底部广告
@@ -38261,7 +38274,7 @@
 #众安贷
 #众安金融
 #优酷
-#优量汇 GDT ===
+#优量汇 GDT
 #传奇广告
 #保险专家
 #信用分
@@ -38281,8 +38294,8 @@
 #图床
 #地推/增长（非内容）---
 #夏普电视开机广告
-#多盟 Domob ===
-#大事选 ===
+#多盟 Domob
+#大事选
 #天星金融
 #天猫校园
 #夸克网盘
@@ -38295,7 +38308,8 @@
 #宜人贷
 #小小影视去广告
 #小游戏广告（如不使用可屏蔽，用则去掉）---
-#小米广告 ===
+#小米
+#小米广告
 #小米推送(mipush)
 #小米浏览器热点资讯
 #小米相关
@@ -38308,7 +38322,7 @@
 #得间
 #微信支付
 #微银信用
-#快手 ===
+#快手
 #快手平台
 #快手广告
 #快手相关
@@ -38321,7 +38335,7 @@
 #招联金融
 #拷贝漫画
 #拼多多
-#掌驭移动 ===
+#掌驭移动
 #携程金融
 #收费网络验证权限
 #放行log文件,减少重复请求造成的发热
@@ -38348,12 +38362,12 @@
 #番茄免费小说
 #百度
 #百度网盘浮动广告
-#百鹤 ===
+#百鹤
 #皮皮虾pro
 #知乎
 #福利网站去广告
 #移动广告平台
-#穿山甲/字节 ===
+#穿山甲/字节
 #笔趣阁
 #笔趣阁网页广告
 #米哈游
@@ -38366,15 +38380,16 @@
 #融逸花
 #谷歌广告服务
 #谷歌翻译，①网页，③新版APP用。
-#贝子 ===
+#贝子
 #贴吧弹窗
+#趣盟
 #速递易京东广告推广
 #酷安
 #钱多多
 #阅友去广告
 #阻止苏宁小店下载
 #阿里广告服务
-#顺昌之行 ===
+#顺昌之行
 #香哈升级包
 #马上消费
 #高德左上广告
