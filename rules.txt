@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-28 09:24:22（北京时间）
+! Version: 2026-07-28 12:52:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69630
+! Total count: 69633
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9523,6 +9523,7 @@
 @@||fastmail.com^$generichide
 @@||fastssh.com/dfp.min.js
 @@||fatcatslim.ru^$generichide
+@@||fate-go.jp/anniv_11th_sns/assets/js/services/gtm.js$~third-party
 @@||fathom.video/embed/$subdocument
 @@||faucet.dog^$generichide
 @@||faucet.gold^$generichide
@@ -10998,7 +10999,6 @@
 @@||hypercomments.com/api/comments?widget_id=$stealth=referrer
 @@||hypercomments.com/api/login?$stealth=3p-cookie
 @@||hypercomments.com/auth/$stealth=3p-cookie
-@@||hyperdebrid.net^$generichide
 @@||i*.gmx.com/image
 @@||i*.imagetwist.com^$image,domain=imagetwist.com
 @@||i-funbox.com/images/
@@ -20597,7 +20597,6 @@ africanadvice.com,pspad.com,sudantribune.com##.google
 africanews.com##.right-legend
 afro.com###block-10
 afro.com,ghacks.net,hyperallergic.com##.category-sponsored
-afrohouseking.com,chillflix.to,pixground.com,holidify.com,filexstream.sujanbotx.workers.dev,azmovies.to,34-hub.com,ogfap.com,coindesk.com,ohcar2022.co.in,dailyhindiadda.com,fifakitcreator.com,fontscompare.com,sarna.net,theproducenews.com,kaoruhana.com,marinetraffic.live,governmentjobvacancies.com,biharkhabar.co,resizepixel.com,tradingeconomics.com,netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com,link.postearn.io##.ad-container:not(#style_important)
 afrol.com##table[height="70"]
 afs.de##.afs_coi
 aftenposten.no##.advertory-aftenposten-topboard-wrapper
@@ -25274,6 +25273,10 @@ boy18tube.com,gayfuckporn.tv,gaymaletube.name,gayporno.fm,gogaytube.tv,goldgay.t
 boy18tube.com,gaymovievids.com,me-gay.com,ts-tube.net,verygayboys.com##.random-td
 boycall.com##.source_info
 boyden.ca###site-terms
+boyfriend.tv##.info-block-wrapper
+boyfriend.tv##.info-wrap > .zn-label
+boyfriend.tv##a[href^="https://go.janusaent.com/"]
+boyfriend.tv##a[href^="https://www.boyfriend.tv/link/out/"]
 boyfriend.tv,boyfriendtv.com##.adblock
 boyfriend.tv,boyfriendtv.com##.live-cam-popunder
 boyfriend.tv,boyfriendtv.com##.video-extra-wrapper
