@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-29 01:17:33（北京时间）
+! Version: 2026-07-29 03:04:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69651
+! Total count: 69648
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3762,8 +3762,6 @@
 7labs.io##.sidebar-main > #custom_html-6
 7media.md##body > section.bn-lg
 7mind.de##.cookie
-7mm003.cc,7mmtv.sx##body .set_height_250
-7mm003.cc,7mmtv.sx##div[id][style^="position: absolute;  z-index: 12345;width: 100%; height: 100%; left: 0;  top: 0;background: gold;"]
 7mmtv.sx##.a-d-block
 7mmtv.sx##.player-overlay
 7mmtv.sx##.player_tv_pop
@@ -3778,8 +3776,6 @@
 7tv066.com##.a-d-block
 7tv066.com##.player_tv_pop
 7tv066.com##body .set_height_250
-7tv081.com##.set_height_250
-7tv081.com,bitchesgirls.com##.a-d-block
 7x7n.com##.down_load_1
 7x7n.com##.down_load_2
 80.lv###__next > div:last-child:not(:only-child)
@@ -8002,6 +7998,7 @@
 @@||client-api.arkoselabs.com^
 @@||client-uc.heytapmobi.com^
 @@||client.app.coc.10086.cn^
+@@||client.aps.amazon-adsystem.com/publisher.js$script,domain=foxnews.com|newsweek.com|thestreet.com
 @@||client.aps.amazon-adsystem.com/publisher.js$script,domain=thestreet.com
 @@||client.aps.amazon-adsystem.com^$script,domain=newsweek.com
 @@||client.falixnodes.net^$generichide
@@ -11211,6 +11208,7 @@
 @@||imasdk.googleapis.com/js/$domain=cari.com.my
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~airtelxstream.in|~danet.vn|~einthusan.tv|~sonyliv.com|~spotify.com
+@@||imasdk.googleapis.com/js/core/dai_iframe*.html$xmlhttprequest,domain=vh1.com
 @@||imasdk.googleapis.com/js/core/dai_iframe3$domain=southpark.cc.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3$domain=rotana.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3*.js$domain=cbsnews.com
@@ -11565,6 +11563,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=southpark.*|southparkstudios.*|southpark.de
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=timesnownews.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vh1.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vix.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=winknews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=wsls.com
@@ -20201,8 +20200,6 @@ abtc.ng##p:has(> ins.adsbygoogle)
 abv.bg###abv-GDPR-frame
 abxxx.com##.close-play__container
 abxxx.com##.thumbs > .thumb:has(> .ad__title)
-abxxx.com##.video-page__content > div.left > section
-abxxx.com##.video__wrapper > div.wrapper.headline
 abxxx.com,aniporn.com,missav.ai,missav.ws,missav123.com,missav888.com##div[style="width: 300px; height: 250px;"]
 abydos.pl##.configMessages
 abyssplayer.com,asmrfreeplayer.fun,mov18plus.cloud,jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,abysscdn.com,player-cdn.com,nazarickol.com##body > #player ~ div[style^="position: fixed;"][style*="z-index:"]
@@ -47162,7 +47159,6 @@ mmorpg.org.pl##div[id*="_half_"]:empty
 mmorpg.org.pl##div[id*="_half_"]:empty + a[href="/premium"]
 mmorpgitalia.it###topskin_clicktag
 mmorpgitalia.it##.noticeContainer
-mmsi01.com##div[style^="position:fixed;inset:0px;"]
 mmtv.pl###policyInfo
 mn4u.net##[style^="width:336px!important;"]
 mnb.hu##.cb01-cookie-bar
@@ -63501,6 +63497,7 @@ tubepornclassic.com##.___it0h1l3u2se2lo
 tubepornclassic.com##.irvdvvi
 tubepornup.com##.video_right
 tuberel.com##.vda-link
+tuberipper.click##a[href="/r/dl"]
 tuberipper.com##div[style="margin: 0px -15px 30px; overflow: hidden;"]
 tubesex.me###banneradv
 tubesex.me,xxxadd.com##.adban1
