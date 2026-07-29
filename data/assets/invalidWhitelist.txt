@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14641
+! Total count: 14642
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-07-28 22:20:47（北京时间）
+! Version: 2026-07-29 11:12:08（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -9931,8 +9931,7 @@
 @@||click.uol.com.br^$domain=uol.com.br
 @@||clickswin.tvchoicemagazine.co.uk/assets/advertisement/ads-*.js$domain=tvchoicemagazine.co.uk
 @@||clicktale.net/wrb.js$domain=microsoft.com
-@@||client.aps.amazon-adsystem.com/publisher.js$script,domain=thestreet.com
-@@||client.aps.amazon-adsystem.com^$script,domain=newsweek.com
+@@||client.aps.amazon-adsystem.com/publisher.js$script,domain=foxnews.com|newsweek.com|thestreet.com
 @@||client.falixnodes.net^$generichide
 @@||clientlogin.cdn.skype.com^$document
 @@||clients.plex.tv/api/v2/ads/$~third-party
@@ -13466,6 +13465,7 @@
 @@||imasdk.googleapis.com$domain=video.huffingtonpost.it
 @@||imasdk.googleapis.com/js/$domain=cari.com.my
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~airtelxstream.in|~danet.vn|~einthusan.tv|~sonyliv.com|~spotify.com
+@@||imasdk.googleapis.com/js/core/dai_iframe*.html$xmlhttprequest,domain=vh1.com
 @@||imasdk.googleapis.com/js/core/dai_iframe3$domain=southpark.cc.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3$domain=rotana.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3*.js$domain=cbsnews.com
@@ -13834,6 +13834,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=southpark.*|southparkstudios.*|southpark.de
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=timesnownews.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vh1.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vix.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=winknews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=wsls.com
