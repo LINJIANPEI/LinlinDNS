@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-29 07:49:09（北京时间）
+! Version: 2026-07-29 09:24:57（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69649
+! Total count: 69652
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -47326,6 +47326,7 @@ modrinth.com##.normal-page__content [href^="https://scalacube.com/"] > img
 modrinth.com##.normal-page__content [href^="https://shockbyte.com/"][href*="/partner/"] > img
 modrinth.com##.normal-page__content [href^="https://www.akliz.net/"] > img
 modrinth.com##div[type="banner"]
+modrinth.com,nexusmods.com##.max-h-\[250px\]
 mods.to###detect-block
 mods.to##.main-download-content center:has(> small + div[id^="mods_to_"])
 mods.to,download4.cc###side-banner
@@ -49656,6 +49657,7 @@ nexusmods.com##.border-b:has(> div[data-testid^="ad-container"])
 nexusmods.com##.items-center:has(>div[data-testid^="ad-container-"])
 nexusmods.com##.next-container > div[class^="space-"] > div[data-testid^="ad-container-"]
 nexusmods.com##[data-testid="ad-container-player"]
+nexusmods.com##[data-testid]
 nexusmods.com##[data-testid^="ad-billboard-"]
 nexusmods.com##[data-testid^="ad-leaderboard-"]
 nexusmods.com##[data-testid^="ad-logged-out-leaderboard-"]
@@ -61931,6 +61933,7 @@ thestreet.com##.csw-ae-wide
 thestreet.com##.m-balloon-header
 thestreet.com##.m-detail--feature-spacer
 thestreet.com##.m-video-unit
+thestreet.com##[class^="styles_container"]:has(.OUTBRAIN)
 thestreet.com##div[class^="styles_headerAdSlot__"]
 thestreet.com,owlcation.com##.l-grid--ad-card
 thestudentroom.co.uk###postsContainer > #inpost-announcements
