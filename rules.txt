@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-31 00:26:37（北京时间）
+! Version: 2026-07-31 02:08:26（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 69729
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -5220,6 +5220,7 @@
 @@||ad-api-v01.uliza.jp^$script,xmlhttprequest,domain=golfnetwork.co.jp|tv-asahi.co.jp
 @@||ad-block.dns.adguard.com^
 @@||ad-cdn.bilgin.pro/app/ad-*.min.js$domain=medyafaresi.com
+@@||ad-creative.pstatic.net/static/$domain=m.search.naver.com,stylesheet
 @@||ad-delivery.net/px.gif?$domain=explorecams.com
 @@||ad-delivery.net/px.gif?$domain=linuxcapable.com
 @@||ad-doge.com^$generichide
@@ -13428,7 +13429,6 @@
 @@||mp.163.com^
 @@||mp.mmvideocdn.com/mini-player/$domain=clutchpoints.com
 @@||mp.mmvideocdn.com/mini-player/$domain=nypost.com
-@@||mp.mmvideocdn.com/mini-player/$domain=theplayerstribune.com
 @@||mp.mmvideocdn.com/mini-player/prod/$domain=si.com
 @@||mp.mmvideocdn.com/mini-player/prod/voltax_$domain=theplayerstribune.com
 @@||mp.mmvideocdn.com/mini-player/prod/voltax_mp.js$domain=earth.com
@@ -19013,7 +19013,6 @@
 @@||vms-videos.minutemediaservices.com^$domain=nypost.com
 @@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=fortune.com
 @@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=si.com
-@@||vms-videos.minutemediaservices.com^$xmlhttprequest,domain=theplayerstribune.com
 @@||vms-videos.minutemediaservices.com^$xmlhttprequest,media,domain=theplayerstribune.com
 @@||vmware.com^
 @@||vnecdn.net/vnexpress/video/video/$stealth=referrer,domain=vnexpress.net
@@ -21684,6 +21683,8 @@ animationmagazine.net##.single-sidebar .tdi_111
 animationmagazine.net##.tdc-zone .tdi_23
 animationsource.org###cprv
 animationxpress.com##.navbar-ad-section
+animationxpress.com,beautyvsfashion.com##div[class^="adunit-"]
+animationxpress.com,techgeekbuzz.com###block-7
 anime-fast.online##.text-center > a[target="_blank"] > img
 anime-i.com##.ads-1000-100
 anime-i.com##.ads-300-150
@@ -23075,6 +23076,7 @@ axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.
 axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##body > [id]:has(> ul[class] > li > img.icon + a[href])
 axutongxue.onrender.com,axutongxue.space,axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##div[style*="z-index: 9999999"][style*="position: absolute"]
 axway.com##div[id*="cookiePolicyWarning"]
+aylink.co##.media-panel
 ayobandung.com##.banner-top
 ayobandung.com##.sticky-banner
 az##.makerekframe
@@ -43377,7 +43379,6 @@ krediidiraportid.ee##.kred-cookiemessage
 krem.com##.article__section_type_ad
 krem.com##.grid__cell > div.grid__module:has(> div.grid__module-sizer_name_taboola)
 krem.com##.grid__main > div.grid__cell_columns_1:has(> div.grid__module > div.grid__module-sizer_name_ad)
-krem.com,khou.com##.grid__section_theme_below-article
 kremer-pigmente.com###cclayer
 kreoart.com.pl###popupContact
 kreuzwerker.de##.cookies
@@ -49549,7 +49550,6 @@ newsbomb.gr##.textlinks > div.textlink > a[rel="nofollow noopener"]
 newsbreak.com##div[style*="position:relative;width:100%;height:0;padding-bottom:"]
 newsbreak.gr##.gAdCentered
 newscaststudio.com##.top-bar div.iframe-post
-newscentermaine.com##.grid > div.grid__section_theme_below-article:has(> div.grid__content div.grid__module-sizer_name_ad)
 newscentermaine.com##.grid__main > div.grid__cell:has(> div.grid__module > div.grid__module-sizer_name_ad)
 newscientist.com##.Outbrain
 newscientist.com##.prompt--modal.section
@@ -59205,6 +59205,9 @@ sportpartner-boerse.com###DC
 sportpirate.com###lawdiv
 sportplus.live##.container__branding-img
 sportplus.live##div[class^="card-banner"]
+sportplus.watch,sportplus.tv##.page__aside-banner
+sportplus.watch,sportplus.tv##a[href^="go/"]
+sportplus.watch,sportplus.tv##main.page__main [ng-version]:not(div, section, [class]):has(a[href^="go/"])
 sportradio360.de###toast-container
 sportraw.pl##body > div[id^="tws"]:not(.toplayerSpecialClass), #topLayerBackDrop
 sportrelacje.pl##a[href^="https://online.efortuna.pl/"]
@@ -59804,9 +59807,6 @@ streams.tv###flowerInGarden
 streams.tv###sunGarden
 streamsport.pro###layer1
 streamsport.pro##.bannerfloat
-streamsports99.ru##a[href^="https://rocketstreams4k.com?ref="]
-streamsports99.su##a[href^="https://rocketstreams4k.com"]
-streamsports99.su##div[role="tablist"] > button[id^="radix-"][id$="-trigger-iptv"]
 streamtajm.com##.col-xs-12 > div[style^="background-color: #eee; width:"][style*="overflow: hidden;"]:not([class]):not([id])
 streamtvinsider.com##.recommended-content
 streamty.com###adbd
