@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14638
+! Total count: 14646
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-07-29 22:20:24（北京时间）
+! Version: 2026-07-30 10:44:37（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -8342,6 +8342,7 @@
 @@||app.sebitti.fi/maestrojukebox2/lib/Controllers/AdController.js$domain=app.sebitti.fi
 @@||app.sendgrid.com$document
 @@||app.sendgrid.com^$elemhide,jsinject
+@@||app.slickstream.com^$domain=bakerita.com|letthemeatgfcake.com
 @@||app.tirelocator.ca/static/scripts/google-analytics.js
 @@||app.titsx.com*/search$domain=porn-plus.com
 @@||app.typetopia.com/media/ad/*.mp3|
@@ -9058,6 +9059,8 @@
 @@||c.lytics.io/api/tag/$script,domain=time.com
 @@||c.mipcdn.com^$domain=prpcoin.com
 @@||c.paypal.com/da/r/fb.js$script
+@@||c.slickstream.com/app/*/app.js$domain=bakerita.com|letthemeatgfcake.com
+@@||c.slickstream.com/app/*/boot-loader.js$domain=bakerita.com|letthemeatgfcake.com
 @@||c.speedtest.net/flash/speedtest-*.swf
 @@||c.speedtest.net/flash/standard-*.swf
 @@||c.speedtest.net/flash/wave-*.swf
@@ -15236,6 +15239,7 @@
 @@||mobdisc.com^$stealth
 @@||mobil.blocket.se/newad.html
 @@||mobilanyheter.net^$generichide
+@@||mobile.de^$stealth=ip
 @@||mobile.donanimhaber.com/ads/PageBannerMobile.aspx
 @@||mobile.flypgs.com/tealeaf.js
 @@||mobilehardreset.com^$generichide
@@ -15524,6 +15528,7 @@
 @@||nensaysubs.net^$generichide
 @@||neo.btrl.ro/Scripts/services/fingerprint2.min.js$~third-party
 @@||neobux.com/css/ads.css
+@@||neoseeker.com^$generichide
 @@||nerdmaldito.com^$generichide
 @@||netcine.*^$generichide
 @@||netcoresmartech.com/smartechclient.js$domain=cgv.vn
@@ -16962,10 +16967,12 @@
 @@||play.*.com/vendor/VisitorAPI.js$domain=play.aetv.com|play.mylifetime.com
 @@||play.anghami.com^$generichide
 @@||play.dlsite.com/csr/viewer/lib/newrelic.js
+@@||play.fyi.tv/vendor/VisitorAPI.js
 @@||play.gamepix.com/player/assets/js/prebid.js$domain=play.gamepix.com
 @@||play.geforcenow.com/mall/$stealth=webrtc
 @@||play.google.com/log?$domain=meet.google.com
 @@||play.google.com/log?format=json$domain=news.google.com
+@@||play.history.com/vendor/VisitorAPI.js
 @@||play.history.com^$elemhide
 @@||play.moviehd.cfd/play/$stealth=referrer
 @@||play.nova.bg/prebid-ads.js
@@ -18583,6 +18590,7 @@
 @@||sozcu.com.tr^$generichide
 @@||sozcukbul.com^$generichide
 @@||sozi.cn/images/ad/tj
+@@||sp.auth.adobe.com/api/$stealth=3p-auth,domain=nbc.com
 @@||sp.auth.adobe.com/reggie/*/regcode$stealth=3p-auth
 @@||sp0.baidu.com/*/finance.pae.baidu.com/vapi/async$domain=baidu.com
 @@||sp1.baidu.com/*/gettts?$media
