@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-07-31 16:30:30（北京时间）
+! Version: 2026-07-31 19:16:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69731
+! Total count: 69743
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6280,6 +6280,7 @@
 @@||api.playstation.com^$stealth=3p-auth
 @@||api.pnd.gs/v*/sources/$domain=thenews.im
 @@||api.poki.com/ads/houseads/$domain=ninja.io
+@@||api.poki.com/ads/houseads/video/$domain=vectaria.io
 @@||api.prod.bunnings.com.au^$stealth=3p-auth
 @@||api.production.k8s.y3o.tv/*/video-ads/$domain=yallo.tv
 @@||api.push.apple.com^
@@ -18753,6 +18754,7 @@
 @@||v.gqyy8.com:*.php?vid=$stealth=referrer
 @@||v.l.ykimg.com
 @@||v.miguvideo.com^
+@@||v.poki-cdn.com^$domain=vectaria.io
 @@||v.shoosh.co^$media,stealth=referrer
 @@||v.uc.cn^
 @@||v.xunlei.com^
@@ -19032,6 +19034,7 @@
 @@||volces.com/*^upload$stealth=3p-auth
 @@||volces.com/*^upload$stealth=3p-cache
 @@||volvo-club.cz^$generichide
+@@||vox-xov-cdn-*.$xmlhttprequest,stealth=referrer,domain=nepu.*
 @@||vox-xov-cdn-*.$xmlhttprequest,stealth=referrer,domain=nepu.to
 @@||voxfm.pl^$generichide
 @@||voyeur-house.fun^$generichide
@@ -25254,6 +25257,7 @@ boss.az##.bnr-top
 boss.az,turbo.az##.lotriver-top-banner
 bossip.com##.fsb-desktop
 bossip.com##.fsb-toggle
+bossip.com##.ione-incontent-sticky-ad-wrapper
 bossip.com##.ione-ve__player-wrapper
 bossip.com##.player-wrapper-inner
 bostadoliv.se##.uk-notify
@@ -28506,6 +28510,11 @@ coub.com##.viewer__ads
 coub.com##.viewer__das
 coub.com##.viewer__sad
 coub.com##div[adfox-featured-banner]
+coucounews.com##.aceplanet-coupang-banner
+coucounews.com##.post-contents > div.text-left > p > div[style="display: flex; justify-content: center; overflow: hidden;"]
+coucounews.com##div[class$="continue_coupang"] div.mb-4.text-center:has(> img.inline-block[loading="lazy"][alt^="_"][src^="https://cdn.zigcou.com/"])
+coucounews.com##div[class$="continue_coupang"] div.mb-4.text-center:has(> img.inline-block[loading="lazy"][alt^="_"][src^="https://cdn.zigcou.com/"]) + div.cursor-pointer
+coucounews.com##main > div.px-2 > div:not([class]):not([style]) > div.text-left > div.grid > div:has(a[href^="https://blog.naver.com/byolla/"])
 counselheal.com,mobilenapps.com###vplayer_large
 counter.dev,lindaikejisblog.com##.da
 counterpunch.org##.header-center
@@ -43776,6 +43785,7 @@ latestleaks.co##a[href^="https://k2s.cc/pr/"]
 latestly.com###main_top_ad
 latestly.com##.lhs_adv_970x90_div
 latestly.com##div[style^="min-width: 300px; min-height: 250px;"]
+latestly.com,cryptobriefing.com,huskers.com,rule34-videos.com,gifyu.com,topperlearning.com,aap.org,bbcgoodfood.com,gardenersworld.com,historyextra.com,ndtv.com##.ad-banner
 latestpornvideo.com##iframe[src^="https://willingcease.com/"]
 latiendaencasa.es##.cookies-wrapper
 latiendahome.com##.cookie_validation
@@ -51438,6 +51448,7 @@ oxygen.com##.gdpr
 oxygen.com,syfy.com##.blog-post-section__zergnet
 oysteryachts.com##.top-header
 ozarksfirst.com###nxcms_dotbiz
+ozbargain.com.au###sticky
 ozbargain.com.au##div[id^="ozbads-"]
 ozcouponscode.com##.policy_footer
 ozon.ru##div[data-widget="cookieBubble"]
@@ -63084,6 +63095,7 @@ tovima.gr##.das-billboard
 tovima.gr##.whsk_parent__div
 tovima.gr##div[class^="das-300-"]
 towleroad.com##.towletarget
+townandcountrymag.com,menshealth.com,harpersbazaar.com,elle.com,delish.com,womenshealthmag.com,womansday.com,cosmopolitan.com,esquire.com,goodhousekeeping.com,housebeautiful.com,prevention.com,redbookmag.com,seventeen.com,autoweek.com,bestproducts.com,bicycling.com,caranddriver.com,sex.cosmopolitan.com,countryliving.com,oprahdaily.com,popularmechanics.com,roadandtrack.com,runnersworld.com###main-content > div[class^="css-"]:has(div#gpt-leaderboard-ad)
 townsmith.de##.cdk-overlay-container
 toy-people.com##.article_insertAD
 toy-people.com##.good72890
