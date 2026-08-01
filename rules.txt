@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-02 00:45:35（北京时间）
+! Version: 2026-08-02 01:50:34（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69757
+! Total count: 69758
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -59493,6 +59493,7 @@ staples.com##[role="complementary"] #observer-id-temp:has(> #SKU_FeaturedProduct
 staples.com##div[class^="sku-configurator__banner"]:has([aria-label="Sponsored Products"])
 star-history.com###app > div.relative > div.relative.justify-end + div.fixed.right-0
 star-history.com##.fixed.right-0
+star-history.com##div.lg\:block > div.w-full:has(> a[href*="?utm_source"] img)
 star-telegram.com,sacbee.com###zerg-target
 star.com.tr##div[style="height:300px;"]:has(.js-gpt-ad)
 star.ebc.net.tw##.main_content > .inline_text.has_marker:has(> span > span > a[target="_blank"])
