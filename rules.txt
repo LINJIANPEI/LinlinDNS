@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-02 20:54:47（北京时间）
+! Version: 2026-08-02 22:22:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69762
+! Total count: 69767
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -28454,6 +28454,7 @@ corriere.it###box_mkt_hp_spalla_dx
 corriere.it###ddayBox
 corriere.it###pno_manina_2024_inline
 corriere.it###youreporter
+corriere.it##.sponsor-strip
 corriere.it##a[href^="https://it.chili.tv"]
 corriere.it##div[id^="rcsad_"]
 corriere.it##div[style="min-height: 1500px;"]
@@ -59724,6 +59725,9 @@ stockwatch.pl##.cppa
 stockwatch.pl##div[class*="-"] > span[data-adsourl]:first-child + img:last-child
 stockwatch.pl##div[class*="-"]:has(> span[data-adsourl]:first-child + img:last-child)
 stockx.com###root > [style*="visible"]
+stockx.com##[data-component="brand-tile"]:has([data-testid="sponsored-tag"])
+stockx.com##[data-component="product-tile"]:has([data-testid="sponsored-tag"])
+stockx.com##[data-testid="banner-collage"] .chakra-aspect-ratio:has(a[title*="Promo"])
 stodola.pl##.toast-container
 stoeger.net##.sqs-announcement-bar
 stoertebeker.com###overlay
@@ -67852,6 +67856,7 @@ xhamster.com##.yxd-jsp-a
 xhamster.com##div[data-testid="right-banner-section"]
 xhamster.com,xhamster.one,xhamster2.com##[class^="xplayer-banner"]
 xhamster.com,xhamster2.com##.wio-xbanner
+xhamster.com,xhamster46.desi##.xplayer > div.xh-helper-hidden + div[class*="-hover-menu"]
 xhamster2.com##.wio-xspa
 xhamster46.desi##.thumb-list__item:has(> div[class*="skeleton-"])
 xhamster46.desi##.xplayer > div.xh-helper-hidden + div[class*="-hover-menu"]
