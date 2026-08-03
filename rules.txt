@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-04 03:16:13（北京时间）
+! Version: 2026-08-04 04:52:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69797
+! Total count: 69800
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1648,6 +1648,7 @@
 /track.octanemail.in/sapi/*$image
 /track/open/*$image
 /tracking.srv2.de/op/*$image
+/tracking/affiliate|$image
 /triadshow.asp$script,subdocument
 /trk.*/open?$image
 /trk2.*/open?$image
@@ -45896,6 +45897,7 @@ mangabat.com##div[style$="overflow: hidden;"] > div[style^="width: 728px; height
 mangabats.com,mangakakalot.gg,mangakakalove.com,manganato.gg,natomanga.com,nelomanga.net##a[href^="https://bit.ly/"]
 mangabats.com,mangakakalot.gg,mangakakalove.com,manganato.gg,natomanga.com,nelomanga.net##div[data-banner-ai-init]
 mangabats.com,nelomanga.net##.ads-contain
+mangabolt.com##.ad-sandbox
 mangabtt.com##div[class] > div[style*="height:"]
 mangabz.com###bb1
 mangabz.com###cc1
@@ -57478,6 +57480,7 @@ shoestring.de###privacyDisclaimer
 shogaisha-techo.com##body > .clearfix + div[id][class*=" "]
 shojoscans.com,en-thunderscans.com##.lm-adblock-notfic-container
 shooshtime.com##.primary > .plugs + .plugs
+shooshtime.com##.spot-horizontal
 shooshtime.com##.video_sponsor_anchor
 shooshtime.com##.wrap > ul > li > a:not([href*="shooshtime"])
 shooshtime.com##:is(.navbar_new, .bottomNav2) > a[target="_blank"]
