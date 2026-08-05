@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-05 09:25:20（北京时间）
+! Version: 2026-08-05 12:53:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69810
+! Total count: 69811
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9780,6 +9780,7 @@
 @@||fp.tongdun.net^
 @@||fplay.online/log_event$~third-party,xmlhttprequest
 @@||fplstatistics.com^$generichide
+@@||fpt.microsoft.com^$domain=account.microsoft.com|fpt.microsoft.com
 @@||fpyf8.com/88/tag.min.js$domain=wxredian.com
 @@||fr.register.xmpush.global.xiaomi.com^
 @@||framework.cdn-go.cn^
@@ -11236,6 +11237,7 @@
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~airtelxstream.in|~danet.vn|~einthusan.tv|~sonyliv.com|~spotify.com
 @@||imasdk.googleapis.com/js/core/dai_iframe*.html$xmlhttprequest,domain=vh1.com
+@@||imasdk.googleapis.com/js/core/dai_iframe3$domain=cc.com
 @@||imasdk.googleapis.com/js/core/dai_iframe3$domain=southpark.cc.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3$domain=rotana.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3*.js$domain=cbsnews.com
@@ -11585,7 +11587,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=mtvema.com|mtv.co.uk|mtv.de|mtv.it
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news4jax.com|gmg-wjxt-prod.cdn.arcpublishing.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news8000.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=nick.com|nickjr.com|cc.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=nick.com|nickjr.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=play.virginmediatelevision.ie
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=skai.gr
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=sonyliv.com
@@ -21452,7 +21454,6 @@ amz123.com##.two-activity-style
 anaciroma.it##.w2t-banner
 anacom.pt##div[id^="cookieDiv"]
 anagram-solver.io##[data-adbridg-ad-class]
-anagram-solver.io##div[data-adbridg-ad-class]
 anal.media##.footerBannerCreatives
 anal.media##.overlayCreatives
 anal.media##.sidebarCreative
