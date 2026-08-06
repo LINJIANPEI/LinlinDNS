@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-06 15:31:13（北京时间）
+! Version: 2026-08-06 18:25:08（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69805
+! Total count: 69808
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -45766,6 +45766,7 @@ makeitmeme.com##div[class^="_adContainer_"]
 makelaarsland.nl##.is-cookie-notice::before
 makemytrip.com##.adtech-desktop
 makemytrip.com##.hotDeals
+makemytrip.com##.hotelTileDt:has(.icSponsored)
 makemytrip.com##div[data-cy^="AdTechCard_"]
 makepolo.com##.cpc_tgs
 makepolo.com##a[href*=".rong360.com"]
@@ -50077,6 +50078,8 @@ noon.com###noon-modules:has(div[data-qa="widget_AdMultiProductSide"])
 noon.com##.PdpRecommendations-module-scss-module__e4nPqG__recosWrapper
 noon.com##.ProductDetailsDesktop-module-scss-module__AYN9Ya__topSlotWrapper
 noon.com##.visibilitySensorWrapper:has(.adBannerModule)
+noon.com##[class*="container"]:has(> [class*="adModuleWrapper"])
+noon.com##[class*="container"]:has([data-qa="widget_adBannerModule"])
 noon.com##[class*="topSection"]:has([class*="adText"])
 noon.com##[data-qa="plp-grid"] [data-qa="plp-product-box"]:has(svg[width="20"] > path[d])
 noon.com##[data-qa="plp-product-box"]:has([class^="SponsoredTag"])
