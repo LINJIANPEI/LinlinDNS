@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-07 10:02:15（北京时间）
+! Version: 2026-08-07 12:45:49（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 19673
+! Total count: 19674
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -443,6 +443,7 @@
 @@/video/*$xmlhttprequest,third-party,stealth=referrer,domain=cinejoy.to
 @@/video/*/index.m3u8?*&frame_commit=*&mw_pid=*&signature=$stealth=useragent
 @@/videos/*$domain=pornhub.com|pornhub.org|pornhub.net
+@@/videos/*$media,stealth=referrer,domain=allanime.day
 @@/viewad.$stylesheet,script,domain=adz7short.space|short.croclix.me|short.goldenfaucet.io
 @@/walla_vod/*$domain=walla.co.il
 @@/webadvert.$domain=webadv.net
