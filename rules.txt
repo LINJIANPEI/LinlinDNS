@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-07 16:04:48（北京时间）
+! Version: 2026-08-07 17:48:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69821
+! Total count: 69826
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4505,6 +4505,7 @@
 @@/storage/js/*.js$~third-party,domain=wowmail.app|inipulsa.my.id|anon.tools|s-nr.dk
 @@/store_ad/*$domain=pcstore.com.tw
 @@/stream$xmlhttprequest,stealth=referrer,domain=kwik.cx
+@@/stream/*.m3u8$stealth=referrer,domain=livosports30.live
 @@/stream/*/*.m3u8$xmlhttprequest,domain=faselhd.cafe
 @@/stream/*/*.ts$xmlhttprequest,domain=faselhd.cafe
 @@/stylesheet/*$xmlhttprequest,stealth=referrer,domain=gamingzen.xyz
@@ -15276,6 +15277,7 @@
 @@||pharmaguideline.com^$generichide
 @@||pherotruth.com/plausible.js
 @@||pherotruth.com^$generichide
+@@||phncdn.com/$media,stealth=referrer,domain=pornhub.com
 @@||phobos.apple.com^
 @@||phoenixnewtimes.com/js_cache/ads.js^
 @@||phonecallapi.micloud.xiaomi.net^
@@ -16510,7 +16512,6 @@
 @@||secure.selfwealth.com.au^$stealth=ip
 @@||securecard.jp/card_input.html$stealth=referrer
 @@||securegames.iwin.com/data/gtm.json$~third-party,xmlhttprequest
-@@||secureimage.securedataimages.com^
 @@||secureimage.securedataimages.com^|
 @@||securemetrics.apple.com^
 @@||securenetsystems.net/*/scripts/ads/prebid.js
@@ -16741,7 +16742,6 @@
 @@||securitykiss.com$document
 @@||securitytrails.com/app/api/$domain=securitytrails.com
 @@||securitytrails.com/domain/$domain=securitytrails.com
-@@||sedge.nfl.com^
 @@||sedge.nfl.com^|
 @@||seeitworks.com/advertisement.js
 @@||seg-cdn.pumpkin.care/analytics.js/$~third-party
@@ -19456,7 +19456,6 @@
 @@||www.dell.com^
 @@||www.dianping.com^
 @@||www.docker.com^
-@@||www.dogpile.com^
 @@||www.dogpile.com^|
 @@||www.door2windows.com^$stealth=referrer
 @@||www.doudou.fun^
@@ -46058,6 +46057,9 @@ map.riftkit.net##.coachify_wrapper
 mapa-turystyczna.pl##.ts-map-layout__content > .ts-com.ts-com--non-mobile
 mapal.com###ctrlck
 mapcarta.com##.consent
+mapchart.net##.ad-cont
+mapchart.net##.ad-cont-second
+mapchart.net##.map-logos > .row:has(> div > ins.adsbygoogle)
 maplestage.com##div[class*="-page-module__ad728Holder___"]
 maplestage.com##div[class*="-page-module__right"] > div > div[style="margin-bottom:20px;padding:16px 10px;box-sizing:border-box;width:100%;background-color:#eee;border:1px solid #ddd;text-align:center;"]:first-child:not([class]):not([id])
 mapquest.ca##.directions-ad
@@ -54226,6 +54228,7 @@ prorun.nl##body > div[id]:not([class])
 prosenectute.ch###cookie
 prosettings.net##.placement
 prosettings.net##.pro-placement
+proshop.dk##.site-campaignElement
 prostata-hilfe-deutschland.de###ccModal, .modal-backdrop
 prostylex.org##.wrapper > div[style="text-align:center;font-family:Tahoma;"]:not([class]):not([id])
 prostylex.org,skytorrents.to###vpnvpn
@@ -56632,6 +56635,7 @@ sbnation.com###chorus_notifiations
 sbnation.com###content > div[class]:has(> div[data-concert="desktop_leaderboard_variable"])
 sbnation.com##[data-concert="medium_rectangle_variable"]
 sbonline.net###footer.tekst
+sbs.com.au##.ArticleBodyAdContainer-module__VCvGGa__articleAdPositioning
 sbs.com.au##.MuiBox-root:has(> .desktop-ads)
 sbs.com.au##.css-p21i0d
 sbs.com.au##[data-testid="hbs-widget-skeleton"]
@@ -61403,6 +61407,7 @@ theage.com.au##header > div[class]:has(> div.container > div.ad)
 theage.com.au##iframe[name="compare_save"]
 theage.com.au##iframe[name="domain_dream_homes"]
 theanalyst.com##.ta-ad
+theargus.co.uk,eadt.co.uk,edp24.co.uk,dorsetecho.co.uk##.mar-leaderboard--top
 theartnewspaper.com###__next > div > .fixed
 theartnewspaper.com##.justify-center.flex.w-full
 theasianparent.com##.ads-open-placeholder
