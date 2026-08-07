@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-08 00:39:51（北京时间）
+! Version: 2026-08-08 01:38:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 69831
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -18902,6 +18902,7 @@
 @@||videacesky.cz^$generichide
 @@||vidembed.re/stream$stealth=referrer
 @@||video*.xhcdn.com/key=$stealth=referrer
+@@||video*.yxhhdl.com^$media,stealth=referrer,domain=video.5054399.com
 @@||video-download.online/js/advertisement.js
 @@||video.520call.me/ad.php
 @@||video.520cc.cc/ad.php|
@@ -22473,7 +22474,6 @@ asia2tv.co###scpsec
 asia2tv.co###video-container
 asiabest.help,asiantv.fun,my18pussy.com##.aside-spots
 asiaflash.com##.cc_container
-asiaflix.*$$script[id="aclib"]
 asian-teen-sex.com##.gavtantnsx-23or
 asianage.com##div[id$="-ad-full-screen"]
 asianage.com##div[id*="_level_"].to-be-async-loaded-ad
@@ -39028,7 +39028,6 @@ hostgreen.com###obal
 hostings.info##a[href^="https://hostings.info/go/banner."]
 hostingsdc.pl###informationbar
 hostkey.com###collectData
-hostzteam.com,bestensuree.com,tophostdeal.com,hostserverz.com,cloudhostingz.com##.search-popup + div[id][class*=" "]
 hot-dinners.com##.mod-custom
 hot-milf.co,milffuck.fun,hotmilfporn.site###video-id_fluid_html_on_pause
 hot-milf.co,teenfucking.org##.vid-skvares
@@ -61207,6 +61206,7 @@ tempmail.ninja##.ads-container
 tempmail.plus##.main-mob-top-horizont
 tempmail.plus##div[class^="admain"]
 tempmailaddress.com##.navbar-fixed-bottom
+tempmailhub.org##.app > div[style*="adb-fadeIn"]
 tempmaili.com##.sticky-adlobage
 tempo.co##.banner970x250
 tempo.co##.fix-bottom
