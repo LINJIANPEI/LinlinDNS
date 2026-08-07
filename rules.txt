@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-07 20:37:02（北京时间）
+! Version: 2026-08-07 22:04:09（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69827
+! Total count: 69831
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4517,6 +4517,8 @@
 @@/tracks-v1a1/*$xmlhttprequest,stealth=referrer
 @@/unadblock/adjs_$domain=bingfeng.tw
 @@/unadblock/adjs_$domain=hepan.com
+@@/upload/*.txt|$xmlhttprequest,stealth=referrer,domain=anikuro.ru|anikuro.to
+@@/upload/*/master.m3u8|$media,xmlhttprequest,stealth=referrer,domain=anikuro.ru|anikuro.to
 @@/uploads/*$image,stealth=referrer,domain=culturanimation.com|recetasmaria.com|techobras.com|babynombres.com
 @@/uploads/*.m3u8$stealth=referrer,domain=agemys.net
 @@/uploads/ads/*$domain=newauto46.ru
@@ -8763,6 +8765,7 @@
 @@||detik.com/urchin.js
 @@||detutorial.com^$generichide
 @@||deutsches-museum.de^$stealth=dpi
+@@||dev.microsofttranslator.com/apps/endpoint?api-version=$stealth=referrer
 @@||dev.miuiflash.com^
 @@||dev.virtualearth.net/REST/*/Autosuggest?query=$stealth=referrer
 @@||devcourseweb.com^$generichide
@@ -19231,6 +19234,7 @@
 @@||wenxue.iqiyi.com^
 @@||wenxuecity.com/include/editor/*/media/ad/
 @@||wenxuecity.com^$generichide
+@@||westeurope.tts.speech.microsoft.com/cognitiveservices/$stealth=3p-auth
 @@||wetransfer.net/api/v*/$stealth=3p-auth
 @@||wettercom-c1.livespotting.com/memfs/$image,xmlhttprequest,stealth=referrer
 @@||weviral.org^$generichide
@@ -31430,7 +31434,6 @@ e2mv.com##.left_advert
 e3zy.com##.jiacu
 e3zy.com##img[style="height: 80px; width: 100%;"]
 eachporn.com##body.no-touch > .top[style]
-eadt.co.uk,edp24.co.uk,dorsetecho.co.uk##.mar-leaderboard--top
 eagle.mn##a[href="https://sodon-callcenter.mn/"]
 eagle1065.com##.featureRotator
 eaglemoss.com##privacy-settings.pos-fixed, main-overlay
@@ -42368,6 +42371,7 @@ jsfiddle.net###sidebar-footer > .doSpecial
 jsjiami.com##.asd > li > a.shaky
 jsjiami.com##.banner-container li._logo ~ li > a[target="_blank"]
 json.cn###shuangshi1Modal1
+json.cn##.show-hide-adv
 json.cn##.tip[target="_blank"]
 json.cn,pianyuan.org,qixingquan.com##.modal-backdrop
 jsonquerytool.com##.navbar.fixed-bottom
@@ -57014,6 +57018,7 @@ selexion.be###splash_footer
 self.com##.promo-box
 self.com,pitchfork.com,wired.com,vanityfair.com##div[class^="StickyHeroAdWrapper"]
 selfhost.de##.cookies
+selfhostt.com,hostzteam.com,bestensuree.com,tophostdeal.com,hostserverz.com,cloudhostingz.com##.search-popup + div[id][class*=" "]
 selle-proust.fr##.elementor-popup-modal
 sellmylivestock.com###app > .fixed
 sellpy.com##div[name="footerExpander"] + div ~ div:not([style])
@@ -59600,7 +59605,6 @@ startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##.p
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##a[href^="https://ww44.affinity.net/"]
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##div.result[style="margin-bottom: 10px;"]:has(path[d^="M2.31179"])
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##div.result[style="margin-bottom: 10px;"]:has(path[d^="m6.07067"])
-startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##div[data-bvs]
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##div[data-identifier="exoclick-native-impression"]
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion##div[style="display: block; padding: 12px; margin: 0px 0px 10px; border-radius: 4px; border: 1px solid rgb(59, 67, 91);"]
 startribune.com###highImpactAd
