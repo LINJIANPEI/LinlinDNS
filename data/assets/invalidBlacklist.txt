@@ -373,8 +373,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 103824
-! Blocked Filters: 42756
+! Blocked Filters: 102818
+! Blocked Filters: 42973
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -413,8 +413,8 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 185426
-! Blocked domains: 4784
+! Blocked domains: 191630
+! Blocked domains: 4964
 ! Blocked: 4.891 rules
 ! Blocked: 564 rules
 ! Blocked: 847 rules
@@ -440,12 +440,12 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
-! Checksum: 7h5SHBCDuIndzod/L8Zz8Q
+! Checksum: 7WhPJiQ32m/TVajh6OiPwA
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
+! Checksum: VylGjM4RMfuM7vXLw77eVg
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: kwuCuhJTaR3esLr7Mglw2A
-! Checksum: sH76F/NManp5OWM+Fzz3LA
+! Checksum: saFxPPNJaunmZ7JX4F1L0w
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -757,7 +757,7 @@
 ! Last modified: 03 Feb 2014 03:50 UTC
 ! Last modified: 07 Aug 2026 14:31 UTC+7
 ! Last modified: 07 Aug 2026 14:32 UTC+7
-! Last modified: 08 Aug 2026 08:11 UTC
+! Last modified: 08 Aug 2026 09:12 UTC
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
@@ -766,7 +766,7 @@
 ! Last modified: 2026-07-26T18:27:00.151Z
 ! Last modified: 2026-08-08T06:18:31.700Z
 ! Last modified: 2026/03/11 09:15 +0800
-! Last modified: 2026/08/08 09:57:32
+! Last modified: 2026/08/08 16:49:16
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1220,8 +1220,8 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260806151311
-! Version: 202608080811
-! Version: 20260808095732
+! Version: 202608080912
+! Version: 20260808164916
 ! Version: 2608071431
 ! Version: 2608071432
 ! Version: 350.202311301133
@@ -1784,8 +1784,8 @@
 ! trackwilltrk.com : trackwilltrk.com disguised advertising networks
 ! trackwilltrk.com CNAME
 ! uBO-CNAME (Specific allowlists)
-! unBlocked domains: 14
-! unBlocked domains: 186
+! unBlocked domains: 15
+! unBlocked domains: 190
 ! under.site
 ! univresalP popup/redirect
 ! uponit adservers
@@ -3500,7 +3500,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-08-08T15:51:22+08:00
+# Update time: 2026-08-08T16:51:29+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -63644,6 +63644,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||secure.selfwealth.com.au^$stealth=ip
 @@||securecard.jp/card_input.html$stealth=referrer
 @@||securegames.iwin.com/data/gtm.json$~third-party,xmlhttprequest
+@@||secureimage.securedataimages.com^
 @@||secureimage.securedataimages.com^|
 @@||securemetrics.apple.com^
 @@||securenetsystems.net/*/scripts/ads/prebid.js
@@ -63874,6 +63875,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||securitykiss.com$document
 @@||securitytrails.com/app/api/$domain=securitytrails.com
 @@||securitytrails.com/domain/$domain=securitytrails.com
+@@||sedge.nfl.com^
 @@||sedge.nfl.com^|
 @@||seeitworks.com/advertisement.js
 @@||seg-cdn.pumpkin.care/analytics.js/$~third-party
@@ -66590,6 +66592,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||www.dell.com^
 @@||www.dianping.com^
 @@||www.docker.com^
+@@||www.dogpile.com^
 @@||www.dogpile.com^|
 @@||www.door2windows.com^$stealth=referrer
 @@||www.doudou.fun^
@@ -118432,10 +118435,15 @@ streambuddy.live#?#.elementor-widget-theme-post-content .elementor-widget-wrap:h
 streamcash.to###player-wrap > span[id][style^="position: absolute; inset: 0px; z-index:"]
 streamcash.to###seek-banner
 streamcash.to##body > div[id][style*="position: fixed; inset: 0px; z-index: 99999;"]
+streamcash.to#%#//scriptlet('abort-current-inline-script', 'atob', 'height||')
 streamcash.to#%#//scriptlet('abort-on-stack-trace', 'document.createElement', '/\.style\.setProperty|\.contentWindow\.document\.createElement/')
 streamcash.to#%#//scriptlet('abort-on-stack-trace', 'document.getElementById', 'show')
 streamcash.to#%#//scriptlet('prevent-addEventListener', 'click', '/firePop|window\.open/')
+streamcash.to#%#//scriptlet('set-constant', '__gateEl', 'null')
 streamcash.to#?#body > div[id][style*="position: fixed; inset: 0px; z-index: 99999;"]
+streamcash.to#@#.in_content_ad_container
+streamcash.to#@#.js-slide-top-ad
+streamcash.to,anime.uniquestream.net,cine.su,nepu.*,vidzy.cc,fs16.lol,dramavideo.se,porneec.com,asiaflix.in,asiaflix.*,streamtape.com,yts.bz,yts.gg,yts.*,filecrypt.co,strumyk.*,powwideo.*,hornysimp.com,futemax.at,embdmstrplayer.com,pahe.ink,foulembeds.live,smksports.*,fileditchfiles.me,strumyk.cfd,dorawatch.one,streamingworld.xyz,streami.su,streamed.pk,streamed.*,visualnewshub.com,cloudnestra.com,cloudfam.io,thepibay.*,bypass.city,eztvx.to,ext.to,vidsrc.cc,sanet.st,yifysubtitles.ch,yts.bz,vinovo.to,livesporthub.shop,dstelemundo.site,7fractals.icu,epicplayplay.cfd,goalstreamer.shop,streameast7.com,buffztreamz.shop,rippleplay.shop,shd247.click,antenasport.top,gamestrend.net,cloudnestra.com,exposestrat.com,embedsports.top,seir-sanduk.com,embedtv-5.icu,daddylive3.com,sterham.net,animeunity.*,vixcloud.*,buffsports.io,soccerstreams7.com,loadvid.com,telewizjada.top,kaa.to,ogladaj.in,istreameast.app,streamingnow.mov,watchug.to,primewire.tf,worldsports.st,filecrypt.cc,veplay.top,colegialasdeverdad.*,crackstreams.cx,anime4i.com,cuttyy.com,puffytr.com,anizm.*,anizle.*#%#//scriptlet('abort-on-property-read', 'aclib')
 streamcasthub.store##.jw-media > a[target="_blank"]
 streamcasthub.store#%#//scriptlet('json-prune', 'playerAds ads')
 streamcdn.to#%#(function(){var c=document.addEventListener;document.addEventListener=function(a,b,d,e){"click"!=a&&-1==b.toString().indexOf('"dtnoppu"')&&c(a,b,d,e)}.bind(document);})();
