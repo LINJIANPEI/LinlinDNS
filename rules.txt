@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-11 08:51:02（北京时间）
+! Version: 2026-08-11 10:58:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69863
+! Total count: 69868
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4324,7 +4324,6 @@
 @@/api/ads?$domain=nmkjxy.com
 @@/api/models?$domain=tik.porn
 @@/api/v2/models-online?$domain=tik.porn
-@@/api?url=$xmlhttprequest,media,stealth=referrer,domain=cinezo.live
 @@/assets/ads-*.js$domain=notateslaapp.com
 @@/assets/js/advertisement.js$~third-party
 @@/assets/prebid/*.js$script,xmlhttprequest,domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
@@ -4452,7 +4451,6 @@
 @@/media/*/js/adblock_detector.js$domain=eska.pl|eskarock.pl|voxfm.pl|vibefm.pl|radiosupernova.pl
 @@/mobileads.$domain=naviking.localking.com.tw
 @@/mono.m3u8$stealth=referrer
-@@/movie?id=*&mode=$xmlhttprequest,stealth=referrer,domain=cinezo.live
 @@/mp4/*$media,stealth=referrer,domain=player.videasy.*|cineby.*|cineplay.to|fmovies.*|www.fmovies.gd|vidking.net
 @@/nbc-ad*.js$domain=notebookcheck-hu.com|notebookcheck.com|notebookcheck.net|notebookcheck.org|notebookcheck.biz|notebookcheck.it|notebookcheck.nl|notebookcheck.info|notebookcheck-tr.com|notebookcheck.se|notebookcheck-ru.com
 @@/needsharebutton.min.js$domain=leetcode-cn.com
@@ -7001,7 +6999,6 @@
 @@||biters.io^$generichide
 @@||bitfly.io^$generichide
 @@||bitly.com^
-@@||bitsilver.io^$generichide
 @@||bitsumactivationserver.com^
 @@||biz.yelp.com/ads?$popup
 @@||bizpacreview.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im
@@ -7266,6 +7263,7 @@
 @@||calendars.icloud.com^
 @@||call2friends.com/*/javascripts/ads.js
 @@||callback.58.com^
+@@||callistanise.com^$stealth=referrer
 @@||calvyn.com^$generichide
 @@||cam-archive.com/js/fuckadblock.js
 @@||cam-archive.com^$generichide
@@ -11028,6 +11026,7 @@
 @@||huluxia.com^
 @@||humix.com/beardeddragon/iguana.js
 @@||humix.com/beardeddragon/wyvern.js
+@@||hunkypinoy.com^$generichide
 @@||hunter.fm^$generichide
 @@||huntington.com^$document
 @@||hutchgo.advertserve.com^$domain=hutchgo.com|hutchgo.com.cn|hutchgo.com.hk|hutchgo.com.sg|hutchgo.com.tw
@@ -11758,7 +11757,6 @@
 @@||imgur.com/desktop-assets/js/floaty_rotator.*.bundle.js
 @@||imgur.com/min/px.js$~third-party
 @@||imgview.net/js/jquery-*.min.js
-@@||imgwallet.com/advertisement.js
 @@||imgx.mediav.com^
 @@||imobiliare.ro/js/gtm.js$script,~third-party
 @@||imop.com^
@@ -12602,6 +12600,7 @@
 @@||liodonwloads.blogspot.com^$generichide
 @@||lirarate.org/tardisrocinante/screx.js
 @@||liriklaguindonesia.net^$generichide
+@@||listeamed.net^$stealth=referrer
 @@||listing-search-wonen.funda.io^$domain=funda.nl,stealth=referrer
 @@||littleskin.cn^
 @@||litv.tv/ads/ads.js
@@ -23184,6 +23183,7 @@ baan-series.org###after-player-ads
 bab.la##.info-panel
 bab.la##aside[role="complementary"]
 babanet.hu###cookie
+babastream.top##a[href^="https://omg10.com/"]
 babeimpact.com,decorativemodels.com,sexykittenporn.com##iframe[src^="/smallfr"]
 babepedia.com###gallery > center > a[href][target="_blank"] > img
 babepedia.com##.left_side > .sidebar_block > a
@@ -24488,6 +24488,7 @@ bing.com##.b_algo:has(.ad_esltitle)
 bing.com##.b_algo:has(.b_ads1line)
 bing.com##.b_algo:has(.rms_img[src*="/th?id=OADD2."][src$="21.2"])
 bing.com##.b_algo:has(.rms_img[src*="=AdsPlus"])
+bing.com##.b_algo:has(.sb_adTA_title_link_cn)
 bing.com##.b_algo:has(> .b_title > h2 > .b_ads1line)
 bing.com##.b_ans:has([class^="xm_"][class*="_ansCont"])
 bing.com##.b_bza_pole
@@ -34964,6 +34965,8 @@ freewebarcade.com##.pnum
 freewebarcade.com##.rsads
 freewebarcade.com##.rxads
 freewebarcade.com##.rxse
+freewebnovel.com##.fnw-media[data-unavailable-src]
+freewebnovel.com##.fnw-media[data-unavailable-src] ~ .fnw-source-layer
 freewebnovel.com##.slot-frame
 freex2line.online$$script:contains(/throw new Error\(\)/)
 freexcafe.com###banner-tube-single
@@ -37134,6 +37137,7 @@ graze.com###graze-cookie-message
 grazia-magazin.de##.safeSpaceForClose
 graziadaily.co.uk##.adContainer--inline
 graziadaily.co.uk,livefortheoutdoors.com##.article_adContainer__qr_Hd
+graziadaily.co.uk,livefortheoutdoors.com,puzzleshq.com##.article_adContainer__qr_Hd
 grdf.fr###ckieBnr_banner
 greasyfork.org##.ad-entry
 greatandhra.com##.AdinHedare
@@ -39378,6 +39382,7 @@ humenonline.hu##div[class$="sidebar-inner"] > #text-23 .pz_cont
 humoron.com##body > table[width="764"][height="300"][border="0"]
 hung-ya.com##.AdBottom
 hunker.com##.component-article-section-jwplayer-wrapper
+hunkypinoy.com##.a-wrap-base
 huntshowdown.com##.cookies
 hupu.com###HCFull
 hupu.com###game-center-entrance-container
@@ -40198,9 +40203,9 @@ img2go.com##.advertising-leaderboard
 img2go.com##.advertising-wrapper
 img2go.com,online-convert.com##.banner-ad-size
 img2go.com,vuejs.org##.text-ad
-imgadult.com,imgdrive.net,imgtaxi.com,imgwallet.com##.blink
-imgadult.com,imgdrive.net,imgwallet.com##.bottom_abs
-imgadult.com,imgdrive.net,imgwallet.com##.centered
+imgadult.com,imgdrive.net##.bottom_abs
+imgadult.com,imgdrive.net##.centered
+imgadult.com,imgdrive.net,imgtaxi.com##.blink
 imgadult.com,imgtaxi.com##a[href^="http://xapi.juicyads.com/"]
 imgbabes.com##div[style^="width:604px;"]
 imgbaron.com,picbaron.com##iframe[src^="//a.exosrv.com/"]
@@ -40213,7 +40218,7 @@ imgburn.com##font[face="Arial"][size="1"]
 imgdrive.net##.if > iframe
 imgdrive.net##a[href*="juicyads"]
 imgdrive.net,imgadult.com##.sidebar > h3 > a[href="#"]
-imgdrive.net,imgadult.com,imgwallet.com##iframe[src^="frame.php"]
+imgdrive.net,imgadult.com##iframe[src^="frame.php"]
 imgfrost.net,imgair.net###pbe
 imggen.ai,iplogger.org,jsonlint.com,wallhere.com,webnots.com,wikitechy.com##div[id^="bsa-zone_"]
 imggen.ai,iplogger.org,wallhere.com,webnots.com,wikitechy.com##div[id^="bsa-zone_"]
@@ -54526,6 +54531,7 @@ puzzle-minesweeper.com,puzzle-chess.com,puzzle-thermometers.com,puzzle-norinori.
 puzzlegarage.com##.banner--inside
 puzzlegarage.com##.modal--cookies
 puzzlemaster.ca##.toast
+puzzleshq.com##.advertWrapper_adContainer__RxpbP
 pv-magazine.com##.advert-block__container
 pv-magazine.com##.pvmagazine-advert-group
 pvcalc.ru##div[style^="position:fixed; top:0px; left:0px; opacity: 0.9;"]
@@ -56396,7 +56402,6 @@ safeframe.googlesyndication.com###mys-wrapper
 safeframe.googlesyndication.com##.left-container
 safelinking.net##div[class$="innerB"][style="margin-top: 20px;"]
 safelinku.net##.adsbygoogle
-safemaru.blogspot.com###unblocker
 safetydetectives.com###best_deals_widget
 safetydetectives.com###popup
 safetydetectives.com##.coupons-list
