@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-12 00:44:33（北京时间）
+! Version: 2026-08-12 01:46:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69917
+! Total count: 69926
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4526,7 +4526,6 @@
 @@/uploads/*.m3u8$stealth=referrer,domain=agemys.net
 @@/uploads/ads/*$domain=newauto46.ru
 @@/urchin.js$domain=on.cc
-@@/v/*-*/*p/*.png$stealth=referrer,media
 @@/v/*-*/*p/*.png$stealth=referrer,media,xmlhttprequest
 @@/v/*.gif$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
 @@/v/*.html$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
@@ -8685,6 +8684,8 @@
 @@||data.orders.costco.ca^|
 @@||data.orders.costco.com^
 @@||data.orders.costco.com^|
+@@||data.promo.timhortons.ca^
+@@||data.promo.timhortons.ca^|
 @@||data.reactandshare.com/api/plugin/$stealth=referrer,domain=maanmittauslaitos.fi
 @@||data.sec*.miui.com^
 @@||data.sec.miui.com^
@@ -9662,7 +9663,6 @@
 @@||fga0.market.xiaomi.com^
 @@||fgc0.market.xiaomi.com^
 @@||fharr.com^$generichide
-@@||fhd.*.xyz/v/*.png$stealth=referrer
 @@||fichub.com/plugins/adobe/lib/AppMeasurement.js$domain=natgeotv.com
 @@||fichub.com/plugins/adobe/lib/VisitorAPI.js$domain=natgeotv.com
 @@||fifakitcreator.com^$generichide
@@ -14406,6 +14406,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=adshnk.com|adshrink.it
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=adzsafe.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aeprofree.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aflamicose.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aiarticlespinner.co
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ajdown.space
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=akashio.com|1991421.cn|kantie.org|kejilion.pro|bilinovel.com|mcappx.com|yeeach.com|blog.6ziz.com|docsmall.com|uiadmin.net|4horlover.com|23qb.net|4spaces.org|aboluowang.com|assbbs.com|chaojizhibo.net|chtoen.com|daxiaamu.com|demo.ama.pub|dizhishengcheng.com|doitwell.tw|ekamus.info|eu4cn.com|ff14angler.com|freedidi.com|fsbot.xyz|haoweichi.com|it365.abctool.info|linovelib.com|logi.im|mens1069.com|monnsutogatya.com|mpyit.com|myqqjd.com|numberempire.com|ozabc.com|pansearch.me|patch.ali213.net|pc3mag.com|reh.tw|shenfendaquan.com|sistersbedroom.com|sto520.com|vaptcha.com|wandhi.com|wenxuecity.com|wuyong.fun|xbeibeix.com|xiebruce.top|xugaoxiang.com|xxxxx520.com|yodu.org|yummy.best|zaixianjisuan.com
@@ -22199,6 +22200,7 @@ appinn.com##.ads-m
 appinn.com##a[href*=".houdeyun.cn"]
 appinn.com,hexieshe.cn###media_image-2
 apple.com.cn##.adv-wrapper
+applealmond.com##.gam-frame
 applealmond.com##div[id^="applealmond_inread_"]
 applealmond.com##div[style*="height: 260px;"][style*="text-align: center;"]
 appledaily.com###ebBannerTopDiv + A[href^="http://bit.ly/"]
@@ -23973,6 +23975,7 @@ beaumontenterprise.com,chron.com,ctpost.com,expressnews.com,greenwichtime.com,ho
 beauty321.com##.pc_ads
 beautyart.pl###header-bar
 beautyass.com##.g-link
+beavertonvalleytimes.com,jav.wine,ringwitdatwixtor.com,metropolisjapan.com,hentai-sharing.net,hentaiomg.com,jav1080.com,javrookies.com,sakuravrjav.com,pridesource.com,4sysops.com,idevicecentral.com,forums.flyer.co.uk,3xplanet.com,schooldrillers.com,aceofhacking.com,linuxpip.org,kodi-tutorials.uk,yofreesamples.com,thispointer.com,stevessmarthomeguide.com,hwnews.in,collegelearners.com,watchmalcolminthemiddle.com###custom_html-3
 bebakpost.com##.tdi_29
 bebakpost.com##.tdi_31
 bebakpost.com##.tdi_45
@@ -26238,6 +26241,7 @@ cangku.moe##.slider
 canirunthegame.com##div[class^="blocker-"]
 cankaoxiaoxi.com###qihupic
 cannabishealthnews.co.uk##.mvp-side-widget img
+cannainsider.com###content-banner
 canoe.com##.ad__section-border
 canoe.com,dailykos.com##.ad__placeholder
 canonrumors.com###execphp-2
@@ -32878,6 +32882,8 @@ evolutrans.fr###cookies
 evopayments.eu###zwcc
 evowars.io##div[id^="evowars-io_"]
 evreporter.com##.widget_media_image:not(:has(a[href^="https://evreporter.com/"]))
+evros-news.gr##.adv
+evros-news.gr##.content-area > div[id^="text-"]
 evs.com##.language-switcher
 ew.com###article__primary-video-jw_1-0
 ewarszawa.pl##div[class]:has(> div[id^="div-gpt-ad"]:only-child)
@@ -61972,6 +61978,9 @@ theoutline.com##.post__body > p + div[class][data-id]
 theoutline.com##[data-campaign2]
 theoutline.com##div[data-campaign]
 theoutlinerofgiants.com###toog-cookies
+theoutlookonline.com,portlandtribune.com,beavertonvalleytimes.com##div[style="margin: 0px; height: 250px; width: 300px; overflow: hidden;"]
+theoutlookonline.com,thebeenews.com,beavertonvalleytimes.com,sportspyder.com##div[data-stn-player]
+theoutlookonline.com,thebeenews.com,portlandtribune.com,beavertonvalleytimes.com,tellows.net##.ad
 thepalmierireport.com##.z-ad-inline
 thepaper.cn###QRcode
 thepaper.cn###head_ask_app_down
