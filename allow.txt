@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-11 20:37:48（北京时间）
+! Version: 2026-08-11 22:10:39（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 19691
+! Total count: 19684
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -62,7 +62,6 @@
 @@.html$xmlhttprequest,subdocument,stealth=referrer,domain=edgedeliverynetwork.com
 @@.instantservice.com$document
 @@.jpg#$domain=huhupan.com
-@@.jpg#$domain=ktmx.pro
 @@.jpg#$domain=marketmovers.it
 @@.jpg|$third-party,xmlhttprequest,stealth=referrer,domain=embdmstrplayer.com
 @@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
@@ -439,7 +438,7 @@
 @@/uploads/*.m3u8$stealth=referrer,domain=agemys.net
 @@/uploads/ads/*$domain=newauto46.ru
 @@/urchin.js$domain=on.cc
-@@/v/*-*/*p/*.png$stealth=referrer,media
+@@/v/*-*/*p/*.png$stealth=referrer,media,xmlhttprequest
 @@/v/*.gif$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
 @@/v/*.html$stealth=referrer,xmlhttprequest,domain=player.bunny-frame.online
 @@/vast.php?idzone=$domain=jptt.tv
@@ -6427,7 +6426,6 @@
 @@||all3dp.com/gpt.min.js
 @@||all3dp.com^$generichide
 @@||allabout.co.jp/mtx_cnt.js$script,~third-party
-@@||allarewin.space/assets/ads-*.js
 @@||allfaucet.xyz^$generichide
 @@||allhomecinema.com^$generichide
 @@||allinonerebornvip.blogspot.com^$generichide
@@ -9926,7 +9924,6 @@
 @@||feyorra.top^$generichide
 @@||fforfree.net^$generichide
 @@||fharr.com^$generichide
-@@||fhd.*.xyz/v/*.png$stealth=referrer
 @@||fichub.com/plugins/adobe/lib/AppMeasurement.js$domain=natgeotv.com
 @@||fichub.com/plugins/adobe/lib/VisitorAPI.js$domain=natgeotv.com
 @@||fifa.com^*/webanalytics.js?
@@ -11398,7 +11395,6 @@
 @@||googletagmanager.com/gtm.js$domain=vogue.it
 @@||googletagmanager.com/gtm.js$domain=volksstimme.de
 @@||googletagmanager.com/gtm.js$domain=vw-sklep.pl
-@@||googletagmanager.com/gtm.js$domain=webeducate.top
 @@||googletagmanager.com/gtm.js$domain=well.pl
 @@||googletagmanager.com/gtm.js$domain=whatcar.com
 @@||googletagmanager.com/gtm.js$domain=whoer.net
@@ -13049,7 +13045,6 @@
 @@||ksstradio.com/wp-content/plugins/adrotate/library/jquery.*.js
 @@||ksv-video-publish-m3u8.cdn.bcebos.com/*.m3u8$stealth=referrer
 @@||ktm2day.com^$generichide
-@@||ktmx.pro^$generichide
 @@||kts.visitstats.com/in^$domain=txxx.com
 @@||kubadownload.com^$generichide
 @@||kuchnia-domowa.pl^$generichide
@@ -17023,7 +17018,6 @@
 @@||simpleanalyticsexternal.com^$script,domain=inleo.io
 @@||simplebits.io/ads/700/cz.html$xmlhttprequest,domain=simplebits.io
 @@||simplelogin.io^$cookie
-@@||simulatedapeminer.com^$generichide
 @@||simyo.de/b/ss/$image
 @@||sina.com.cn/litong/*/close
 @@||sina.com.hk^*_ads.cgi
@@ -17552,7 +17546,6 @@
 @@||static.surfe.pro/js/net.js$domain=freebitcoin.top
 @@||static.surfe.pro/js/net.js$domain=mcafee-com.com
 @@||static.surfe.pro/js/net.js$domain=ourcoincash.xyz
-@@||static.surfe.pro/js/net.js$domain=webeducate.top
 @@||static.surfe.pro/js/net.js^$domain=coinfola.com
 @@||static.telegraph.co.uk/telegraph-advertising/tmg-gpt.min.js$domain=telegraph.co.uk
 @@||static.tornadomovies.co/images/
