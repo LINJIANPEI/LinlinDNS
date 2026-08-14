@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-14 16:56:11（北京时间）
+! Version: 2026-08-14 17:51:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 69953
+! Total count: 69964
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9070,6 +9070,7 @@
 @@||download.hr/module/detector/adsbygoogle.js
 @@||download.inventivetalent.org/external/adfly/make.php
 @@||download.jetbrains.com^
+@@||download.liteapks.dev/*^token=$stealth=referrer
 @@||download.megaup.net/*.js$~third-party
 @@||download.mokeedev.com^$genericblock,generichide
 @@||download.pinduoduo.com^
@@ -17298,6 +17299,7 @@
 @@||ssl.p.jwpcdn.com/player/v/*/vast.js$xmlhttprequest,domain=idlixvip.asia
 @@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$domain=playmate.to
 @@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru|vindaz.shop|vidmatrixa.com|vidchampions.com|vidavaca.cc
+@@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru|vindaz.shop|vidmatrixa.com|vidchampions.com|vidavaca.cc|calyro.biz
 @@||ssl.p.jwpcdn.com^
 @@||ssl.p.jwpcdn.com^$domain=bdsmstreak.com
 @@||ssl.pstatic.net/sstatic/sdyn.js$script,domain=search.naver.com
@@ -19395,6 +19397,7 @@
 @@||workers.dev/*.txt$stealth=referrer
 @@||workers.dev/*/file2/$xmlhttprequest,stealth=referrer
 @@||workers.dev/?url=*&referer=$stealth=referrer
+@@||workers.dev/media-proxy?$xmlhttprequest,stealth=referrer,domain=cinemove.cc
 @@||workers.dev^$xmlhttprequest,third-party,stealth=referrer,domain=cinelove.live|netplayz.top
 @@||world.qpic.cn^
 @@||world4.eu/wp-content/plugins/ad-inserter-pro/images/ads.png
@@ -38229,6 +38232,8 @@ healthshots.com###storyBlockZero
 healthshots.com##.affiliateWidget
 healthshots.com##.storyBlockOne
 healthshots.com##div[class^="storyBlock"]:not(.trackWidget)
+healthtechmagazine.net##article .paragraph--type--linked-image:has(> a[target="_blank"] > img)
+healthtechmagazine.net##article > .content > div > p > a.paragraphCTA[target="_blank"]:has(> em > strong)
 healthyceleb.com##.td-header-header-full
 healthylives.tw###contentBox > div[style^="width:336px;height: 280px;"]
 healthylives.tw##div[id^="gad"]
@@ -49364,6 +49369,7 @@ netdoctor.co.uk##.policy-bar
 netdyredoktor.dk##.ct-popup
 netfilm.world,123movienow.cc###downloadBanner
 netflav.com##.ads_head_banner_container
+netflav.com##.ads_video_overlay_iframe
 netflav.com##.ads_video_overlay_mobile
 netflav.com##.video_iframe_overlay_absolute_background_container
 netflix-nederland.nl##body > div[class^="app"]
@@ -56331,7 +56337,9 @@ rule34video.com##.columns > div.panel_header:has(> a[href="https://theporndude.c
 rule34video.com##.item.thumb:has(> [title="Advertisement"])
 rule34video.com##.popup-adv
 rule34video.com##.spot-thumb
+rule34video.com##.spot_under
 rule34video.com##.thumbs > .item:has(> a[title="Advertisement"])
+rule34video.com,stileproject.com##.footer_spots
 ruler-app.soft112.com###adarea
 rulesofcheaters.net,codinghumans.xyz,rachidscience.com,electricaleasy.com###HTML4
 rulesofcheaters.net,visionias.net###HTML11
@@ -62164,6 +62172,7 @@ thestar.co.uk,sussexexpress.co.uk,portsmouth.co.uk,newsletter.co.uk,northantstel
 thestar.co.uk,sussexexpress.co.uk,portsmouth.co.uk,northantstelegraph.co.uk,newsletter.co.uk,falkirkherald.co.uk,miltonkeynes.co.uk##div[class*="AdContainer"]
 thestar.co.uk,sussexexpress.co.uk,portsmouth.co.uk,northantstelegraph.co.uk,newsletter.co.uk,falkirkherald.co.uk,scotsman.com,miltonkeynes.co.uk##.mid-outbrain
 thestar.com###sticky-ad-2
+thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com###tncms-region-article_container_bottom:has(> div[data-lpos$="-partners"])
 thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com##.adLabelWrapper
 thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com##.adLabelWrapperManual
 thestar.com,thespec.com,therecord.com,thepeterboroughexaminer.com,stcatharinesstandard.ca,niagarafallsreview.ca,wellandtribune.ca,bramptonguardian.com,caledonenterprise.com,cambridgetimes.ca,durhamregion.com,flamboroughreview.com,guelphmercury.com,hamiltonnews.com,insidehalton.com,insideottawavalley.com,mississauga.com,muskokaregion.com,mykawartha.com,newhamburgindependent.ca,niagarathisweek.com,northbaynipissing.com,northumberlandnews.com,orangeville.com,ourwindsor.ca,parrysound.com,sachem.ca,simcoe.com,theifp.ca,toronto.com,waterloochronicle.ca,yorkregion.com,legacy.com,edition.pagesuite-professional.co.uk,hub.metroland.com##.polarBlock
@@ -65922,6 +65931,7 @@ vxxx.com##a[href="/ai"]
 vxxx.com##a[href^="http://join.letsdoeit.com/"]
 vy.no###app-mount-point-for--cookie-banner
 vy.se##.page > section, #center > section
+vyla.qzz.io,vyla.cc##.promotion-container
 vytenio4.lt##.cookie-cover
 vzajemna.si###cookie
 vzdusin.cz##.euc
@@ -66260,6 +66270,7 @@ watchporn.to##.header__top-txt
 watchporn.to##.single__holder > .single__aside:has(> .table)
 watchporn4k.com,mdhstream.cc,fucking-tube.com##.happy-section
 watchpornfree.info##aside > #execphp-2
+watchpsychonline.net,watchdoctorwhoonline.com,watcheverybodylovesraymond.com###contenedor > #keeper
 watchsmallvilleonline.net,watchpsychonline.net,watchdoctorwhoonline.com,watcheverybodylovesraymond.com###contenedor > #keeper
 watchsomuch.to###VPN
 watchsomuch.to##.getVIPAds
