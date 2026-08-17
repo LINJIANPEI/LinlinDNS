@@ -271,6 +271,7 @@
 ! 3B Meteo
 ! 69games.xxx/gamcore/porcore.com
 ! 6park
+! 91porn广告
 ! :-abp-properties
 ! :has()
 ! :has-text
@@ -372,6 +373,7 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
+! Blocked Filters: 106479
 ! Blocked Filters: 43550
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
@@ -439,12 +441,12 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: 9DgyGLxRKHhwsFmQIilvfQ
+! Checksum: Pa3xd64IFvLGB085a0LhFA
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: b/Ja1aoMPPm7IKdbsXkeOg
+! Checksum: Yd/KCUA8yricA8wvB7jcrw
+! Checksum: ZRF2NYMhMew7MJeTfIHUZQ
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
-! Checksum: xQyXfQ+/r+5n2ec+eHJMrQ
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -564,6 +566,7 @@
 ! Description: 对本仓库上游规则的补充与修正, 不定期更新.
 ! Description: 移动广告过滤补充规则。
 ! Description: 移除知乎部分广告
+! Description: 适用于 AdGuard 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。
 ! Description: 适用于 AdGuard 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。Lite 版仅针对国内域名拦截。
 ! Description: 适用于 AdGuard、AdGuardHome 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。
 ! Description: 适用于 AdGuard、AdGuardHome 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。Lite 版仅针对国内域名拦截。
@@ -706,6 +709,7 @@
 ! Homepage: https://github.com/easylist/easylistchina/
 ! Homepage: https://github.com/hoshsadiq/adblock-nocoin-list/
 ! Homepage: https://github.com/loveqqzj/AdGuard
+! Homepage: https://github.com/mphin/AdGuardHomeRules
 ! Homepage: https://github.com/qq5460168/666
 ! Homepage: https://github.com/xinggsf/Adblock-Plus-Rule/issues
 ! Homepage: https://www.i-dont-care-about-cookies.eu/
@@ -753,7 +757,7 @@
 ! Last modified: 03 Feb 2014 03:50 UTC
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 10 Aug 2026 14:14 UTC+7
-! Last modified: 17 Aug 2026 15:02 UTC
+! Last modified: 17 Aug 2026 15:52 UTC
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
@@ -822,6 +826,7 @@
 ! Note, that we only put rules that block full domains here and not URL parts (there's `general_url.txt` for that). Also, it must be domains that are used in a third-party context.
 ! Note, that we only put rules that block full subdomains here and not URL parts (there's `general_url.txt` for that).
 ! Note: AdGuard *MUST* run on VPN mode
+! Note: 本规则为在 anti-AD 规则基础上的增补内容。建议与 anti-AD 主规则一同使用：https://anti-ad.net/easylist.txt
 ! Notifcation scripts
 ! Notification servers (Tracking/Fingerprinting users)
 ! Once you enable private DNS, Android 9 starts resolving random domains looking like
@@ -1016,6 +1021,7 @@
 ! Source: https://hg.adblockplus.org/easylistitaly/raw-file/tip/easylistitaly/easylistitaly_adservers.txt
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt
 ! Source: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/src/advert/adservers.txt
 ! Source: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/src/advert/thirdparty.txt
@@ -1123,6 +1129,7 @@
 ! Title: AWAvenue Ads Rule
 ! Title: AdBlock DNS
 ! Title: AdBlock DNS Lite
+! Title: AdBlock Filter
 ! Title: AdBlock Filter Lite
 ! Title: AdGuard DNS filter
 ! Title: Adblock Warning Removal List
@@ -1152,6 +1159,7 @@
 ! Title: 晴雅DNS过滤器
 ! Title: 移动广告过滤补充规则
 ! Title: 轻量广告拦截规则
+! Title: 黑名单补充
 ! Title: 🎮 Game Console Adblock List
 ! To avoid email links breakage, include email tracking lists with a modifier here:
 ! To fix the issue with the CNAME trackers, add problematic domains here:
@@ -1160,8 +1168,11 @@
 ! Top
 ! Top Right
 ! Total Count: 5888
+! Total count: 111598
+! Total count: 12833
 ! Total count: 228649
 ! Total count: 33475
+! Total lines: 111
 ! TraceDock : *.eu-central-1.elb.amazonaws.com disguised trackers
 ! Tracking
 ! Tracking on parked domains
@@ -1182,6 +1193,7 @@
 ! Used with many websites to generate multiple popups
 ! Utiq :  utiq-aws.net disguised trackers
 ! VPN Affiliate Banners
+! Version:    最后同步时间: 2026-08-17 01:15:05
 ! Version: 04December2020v1-Alpha
 ! Version: 06September2020v1
 ! Version: 1.0.0.43
@@ -1194,6 +1206,7 @@
 ! Version: 202011041719
 ! Version: 202011182
 ! Version: 202012190310
+! Version: 202406120915
 ! Version: 2025.06.07
 ! Version: 202501301400
 ! Version: 202509081
@@ -1205,7 +1218,7 @@
 ! Version: 2026-08-17 20:52:21（北京时间）
 ! Version: 202601201
 ! Version: 202603110915
-! Version: 202608171502
+! Version: 202608171552
 ! Version: 20260817164958
 ! Version: 20260817194548
 ! Version: 2608101414
@@ -2086,6 +2099,7 @@
 ! 第三方推送SDK（拦截APP推送广告）
 ! 网贷营销短信、推送追踪
 ! 网贷通用广告、催收、追踪、短信跳转兜底
+! 美团外卖AppDebug无解析的公网域名，详见https://www.blueskyxn.com/202311/6919.html
 ! 违规高炮：桔子数科全套（宜口袋/桔多多/桔小花）
 ! 风行网： fun.tv
 !! Third-party
@@ -2389,14 +2403,18 @@
 !Title: anti-AD
 !Title: anti-AD for AdGuard
 !Total lines: 898
+!Total lines: 903
 !Total lines: 94124
 !Total lines: 94911
 !Total lines: 99662
 !UC
 !Update content: fix  #190
+!Update content: 规则分类重构：拆分广告/隐私/不受欢迎三类规则源，新增Only.Ads/No.Privacy/No.Unwelcome构建变体；新增拦截校园纸条开屏广告，fix #210
 !Update time: 2025-12-21 13:53:35 UTC+8
+!Update time: 2026-07-27 01:45:52 UTC+8
 !Updated: 2025-12-23T05:21:21+00:00
 !Version: 1.6.9-release
+!Version: 1.7.6-release
 !Version: 20251223052121708468309
 !Version: 20251223132120
 !Version: 20260817025244
@@ -2725,6 +2743,8 @@
 # 0.0.0.0 www.securitymetrics.com #[affects bank login]
 # 0.0.0.0 yastatic.net #[affects Yandex Mail]
 # 2o7.net -- server side tracking
+# 9GAG End
+# 9GAG Start
 # =====================================================
 # ===============================================================
 # ===================================================================
@@ -2756,6 +2776,10 @@
 # >> Z <<
 # A hosts file that aims to get rid of ads, tracking, scams & badware on (mostly) Swedish websites
 # ADS
+# ARTE End
+# ARTE Start
+# AbeBooks End
+# AbeBooks Start
 # Acknowledgements
 # AdAway default blocklist
 # Add August 9, 2023
@@ -2954,11 +2978,41 @@
 # Added September 7, 2022
 # Added September 9, 2022
 # AdlIran scam
+# Akamai End
+# Akamai Start
+# Amazon AWS End
+# Amazon AWS Start
+# Amazon Japan End
+# Amazon Japan Start
+# Android End
+# Android Start
+# Apkmirror End
+# Apkmirror Start
+# Apkpure End
+# Apkpure Start
+# Appspot End
+# Appspot Start
+# Appspotpreview End
+# Appspotpreview Start
+# Archive End
+# Archive Start
+# Arukas End
+# Arukas Start
 # As well by specifying the ipaddress of a server, you can gain access
 # Attribution-NonCommercial-ShareAlike License.            #
+# Avira End
+# Avira Start
 # BEGIN BLOCKLIST
 # BEGIN HEADER
+# Bandwagonhost End
+# Bandwagonhost Start
 # Based on: https://github.com/FiltersHeroes/KAD
+# Bbc End
+# Bbc Start
+# Behance End
+# Behance Start
+# BigGo End
+# BigGo Start
 # Bill Allison, Harj Basi, Lance Russhing, Marshall Drew-Brook,
 # Blocked domains: 458272
 # Blocked domains: 510735
@@ -2967,28 +3021,71 @@
 # Blocking mobile ad providers and some analytics providers
 # Blocklist for use with hosts files to block ads, trackers, and other nasty things
 # Blogspot
+# Box End
+# Box Start
+# Bussiness Insider End
+# Bussiness Insider Start
+# Buzzfeed End
+# Buzzfeed Start
 # By entering domains here, it will prevent certain companies from
 # C:\windows\system32\drivers\etc\hosts
 # CC Attribution 3.0 (http://creativecommons.org/licenses/by/3.0/)
+# CD Universe End
+# CD Universe Start
+# CNA End
+# CNA Start
+# Change.org End
+# Change.org Start
 # Chase Bank Scam. See #1699
+# Cloudfront End
+# Cloudfront Start
+# Clyp End
+# Clyp Start
+# Conoha End
+# Conoha Start
 # Contribute:
 # Contribute: https://github.com/durablenapkin/scamblocklist/issues
 # Contributions by:
+# Copyright (c) 2017-2020, googlehosts members.
 # Copyright (c), Neko Dev Team & neoHosts Team.
 # Copyright: https://github.com/mitchellkrogza
 # Create an issue at https://github.com/AdAway/adaway.github.io/issues
 # Creator: azet12
+# Ctext End
+# Ctext Start
+# Culturalspot End
+# Culturalspot Start
 # Custom host records are listed here.
+# DMHY End
+# DMHY Start
+# DailyView End
+# DailyView Start
 # Date: 14 August 2026 00:45:10 (UTC)
 # Date: 19 December 2025 21:22:56 (UTC)
 # Date: Sun Aug 16 01:37:16 UTC 2026
 # Description: Filtry chroniace przed roznego rodzaju przekretami i oszustwami, takimi jak np. subskrypcje SMS, wirusy i falszywe sklepy internetowe. Oprocz wlasnego zestawu, zawieraja one rowniez wpisy z list stworzonych przez takie zespoly jak np. CERT Polska, legalniewsieci.pl i KNF.
+# DeviantArt End
+# DeviantArt Start
 # Disclaimer: this file is free to use for personal use    #
+# Discord End
+# Discord Start
+# Discuss.com.hk End
+# Discuss.com.hk Start
 # Discussion?
+# Disqus End
+# Disqus Start
 # Dodatki hosts
 # Domain count: 42,531
 # Domains: 3852
+# Doubi End
+# Doubi Start
 # Download: https://github.com/bigdargon/hostsVN/raw/master/option/hosts-VN
+# Dropbox End
+# Dropbox Start
+# DuckDuckGo End
+# DuckDuckGo Start
+# Dynu End
+# Dynu Start
 # END BLOCKLIST
 # END HEADER
 # END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###
@@ -3009,6 +3106,8 @@
 # End someonewhocares.org
 # End tiuxo
 # End yoyo.org
+# Euronews End
+# Euronews Start
 # European network of tracking sites
 # Example: anaj.ir
 # Example: androidha.com
@@ -3020,8 +3119,16 @@
 # Example: uploadgoogle.com
 # Expires: 1 days
 # Expires: 2 days
+# Facebook End
+# Facebook Start
+# Fastly End
+# Fastly Start
+# Feedly End
+# Feedly Start
 # Fetch the latest version of this file:
 # Fetch the latest version of this file: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# FlipBoard End
+# FlipBoard Start
 # For Android place the file at "/system/etc/hosts". You will need root
 # For BeOS place it at "/boot/beos/etc/hosts"
 # For Linux based Operating systems place this file at "/etc/hosts"
@@ -3037,31 +3144,163 @@
 # For more information about this list, see: https://pgl.yoyo.org/adservers/
 # For questions please contact urlhaus [at] abuse.ch           #
 # For use, simply copy paste this into your computers' HOSTS file. See https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system
+# Foreign Policy End
+# Foreign Policy Start
 # Further changes and contributors maintained in the commit history at
 # Generated with hBlock 3.5.1 (https://github.com/hectorm/hblock)
 # Generated with:  https://github.com/hectorm/hblock
+# GitHub End
+# GitHub Start
 # GitHub520 Host End
 # GitHub520 Host Start
 # GitHub: https://github.com/bigdargon/hostsVN
+# Gmail End
+# Gmail Start
+# Gmx End
+# Gmx Start
+# Goodreads End
+# Goodreads Start
+# Google 1e100 End
+# Google 1e100 Start
+# Google 2mdn End
+# Google 2mdn Start
+# Google Apis End
+# Google Apis Start
+# Google Blogger End
+# Google Blogger Start
+# Google Chat End
+# Google Chat Start
+# Google Chrome/Chromium End
+# Google Chrome/Chromium Start
+# Google Code End
+# Google Code Start
+# Google Country End
+# Google Country Start
+# Google Docs End
+# Google Docs Start
+# Google Drive End
+# Google Drive Start
+# Google GoLang End
+# Google GoLang Start
+# Google Inbox End
+# Google Inbox Start
+# Google Mail End
+# Google Mail Start
+# Google Map offline End
+# Google Map offline Start
+# Google Mashups End
+# Google Mashups Start
+# Google Misc End
+# Google Misc Start
+# Google Pack End
+# Google Pack Start
+# Google Play End
+# Google Play Start
+# Google Search Country End
+# Google Search Country Start
+# Google Search Home End
+# Google Search Home Start
+# Google Service End
+# Google Service Start
+# Google Service:China Hongkong End
+# Google Service:China Hongkong Start
+# Google Service:China Taiwan End
+# Google Service:China Taiwan Start
+# Google Service:Docs End
+# Google Service:Docs Start
+# Google Service:Google Play End
+# Google Service:Google Play Start
+# Google Service:Ncr End
+# Google Service:Ncr Start
+# Google TLDs End
+# Google TLDs Start
+# Google Usercontent Doc End
+# Google Usercontent Doc Start
+# Google Video End
+# Google Video Start
+# Google Voice End
+# Google Voice Start
+# Google XN End
+# Google XN Start
+# Google Zip End
+# Google Zip Start
 # Google | 谷歌
+# Google:A-GPS End
+# Google:A-GPS Start
+# Google:Made the code for girls Start End
+# Google:Made the code for girls Start Start
+# Google:gcm/fcm End
+# Google:gcm/fcm Start
+# Google:ghs End
+# Google:ghs Start
+# Google:npf base End
+# Google:npf base Start
+# Google:stun Server End
+# Google:stun Server Start
+# Google:thinkwithgoogle End
+# Google:thinkwithgoogle Start
+# GoogleHosts End
+# GoogleHosts Start
+# Googleapis bigcache End
+# Googleapis bigcache Start
+# Googleapis:storage End
+# Googleapis:storage Start
+# Googleusercontent End
+# Googleusercontent Start
+# GreatFire End
+# GreatFire Start
+# Gstatic End
+# Gstatic Start
+# HKGalden End
+# HKGalden Start
+# HKGolden End
+# HKGolden Start
+# Hacker News End
+# Hacker News Start
+# Heroku End
+# Heroku Start
+# Hinet End
+# Hinet Start
+# Hkjc End
+# Hkjc Start
 # Home: https://github.com/durablenapkin/scamblocklist
 # Homepage: https://bigdargon.github.io/hostsVN/
 # Homepage: https://github.com/anudeepND/blacklist
 # Homepage: https://github.com/yous/YousList
 # Host file to block ads, tracking and more! Updated daily
 # Hosts contributed by Anudeep <anudeep@protonmail.com>
+# HumbleBundle End
+# HumbleBundle Start
 # I'd like to thank the following people for submitting sites, and
 # If there is a domain name you would rather never see, simply add a line
 # If you have trouble with Yahoo email, you may need to comment out these lines
+# Ingress End
+# Ingress Start
+# Instagram End
+# Instagram Start
 # It is perhaps a better solution to use Favourites/Bookmarks instead.
 # Jesse Baird for the Cisco IOS script
 # John Mueller and Lawrence H Smith for Mac Pre-OSX information
+# Kadokawa End
+# Kadokawa Start
+# Kakao End
+# Kakao Start
+# Kakao:Daum End
+# Kakao:Daum Start
 # Kicelo, Dominik Schuermann.
+# Kik End
+# Kik Start
+# Kinokuniya End
+# Kinokuniya Start
+# Kobo End
+# Kobo Start
 # Kugou | 酷狗音乐
 # Last modified: 10 Aug 2026 14:14 UTC+7
 # Last modified: 16 Dec 2025 16:23 UTC+7
 # Last modified: Fri, 19 Dec 2025, 21:01 UTC+01:00
 # Last modified: Thu, 13 Aug 2026, 22:27 UTC+02:00
+# Last update: 2026-08-17
+# Last updated: 2020-06-19
 # Last updated: 2025-12-19 21:17:15 (UTC)                      #
 # Last updated: 2026-08-14 00:36:26 (UTC)                      #
 # Last updated: Mon, 14 Dec 2020 at 06:39:20 GMT
@@ -3075,40 +3314,108 @@
 # License: CC0
 # License: MIT (https://mit-license.org/)
 # License: https://github.com/yous/YousList#license
+# Lihkg End
+# Lihkg Start
+# Line End
+# Line Start
 # Localhost (DO NOT REMOVE) End
 # Localhost (DO NOT REMOVE) Start
+# Logmein End
+# Logmein Start
+# MEGA End
+# MEGA Start
 # Maintainer: Filters Heroes
+# Matters.news End
+# Matters.news Start
 # May break iOS Game Center.
+# Medium End
+# Medium Start
 # Mirror: https://hosts.anudeep.me/mirror/
+# Modified Hosts End
+# Modified Hosts Start
 # Notes: The Operating System does not read the "#" symbol #
+# Number of domains: 112170
 # Number of entries: 365
 # Number of entries: 807
 # Number of unique domains: 88,503
 # Number of unique domains: 98,949
+# Nytimes End
+# Nytimes Start
 # OISD maintainer: If a domain is used for ads, but also is required for "wanted content" (like video playback) it should not be blocked by domain/hosts lists. But rather left to handle by content blockers instead. (uBlock Origin, etc).
 # On a Netware system, the location is System\etc\hosts"
 # On some machines the zero version may run minutely faster, however it
 # On some machines this may run minutely faster, however the zero version
 # On zarebin.ir
+# OneDrive End
+# OneDrive Start
 # Only include advertisers in Vietnam
 # Patreon:        https://patreon.com/blocklist
+# Pcloud End
+# Pcloud Start
 # Pegasus spyware sites.
+# Pending fix
+# Pepitastore End
+# Pepitastore Start
+# Periscope End
+# Periscope Start
+# Pincong End
+# Pincong Start
+# Pinterest End
+# Pinterest Start
+# Pixiv End
+# Pixiv Start
 # Please forward any additions, corrections or comments by email to
 # Please forward any additions, corrections or comments by logging an issue at
 # Podejrzane i/lub strony polaczone z innymi oszustwami
+# Potplayer End
+# Potplayer Start
+# Power By NEO DEV Team
 # Project home page:
 # Project home page: https://github.com/StevenBlack/hosts
+# Project home page: https://github.com/neodevpro/neodevhost
 # Project releases: https://github.com/StevenBlack/hosts/releases
+# ProjectV End
+# ProjectV Start
 # Przekierowuja do innych stron z przekretami
 # Przekrety
+# Psiphon End
+# Psiphon Start
+# Ptt End
+# Ptt Start
+# Pubu End
+# Pubu Start
+# QQ   630814741
+# Quora End
+# Quora Start
+# Rakuten End
+# Rakuten Start
+# RawGit End
+# RawGit Start
 # Red Sheriff and imrworldwide.com  -- server side tracking
 # Referral links disguised as movie download links
 # Release: https://github.com/anudeepND/blacklist/releases
 # Report issues: https://github.com/bigdargon/hostsVN/issues
+# Resilio Sync End
+# Resilio Sync Start
+# Reuters End
+# Reuters Start
+# Rules link address
 # Russell O'Connor for OS/2 information
+# SCMP End
+# SCMP Start
 # START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###
+# SWI End
+# SWI Start
 # Scam Blocklist by DurableNapkin
 # See below for acknowledgements.
+# Shadowsocks End
+# Shadowsocks Start
+# Slideshare End
+# Slideshare Start
+# Smartdnsproxy End
+# Smartdnsproxy Start
+# Soundcloud End
+# Soundcloud Start
 # Source: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
 # Source: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt
 # Spyware and user tracking
@@ -3129,14 +3436,30 @@
 # Start someonewhocares.org
 # Start tiuxo
 # Start yoyo.org
+# Startpage & Ixquick End
+# Startpage & Ixquick Start
+# Steam End
+# Steam Start
+# SupChina End
+# SupChina Start
 # Szybko wygaszajace
 # TODO: Investigate
 # TODO: Remove it, Used by marzfun.com
+# Telegram End
+# Telegram Start
 # Terms Of Use: https://urlhaus.abuse.ch/api/                  #
+# The Economist End
+# The Economist Start
+# The Nation End
+# The Nation Start
 # The Nginx Ultimate Bad Bot Blocker at:
 # The contents of this file (containing a listing of additional domains in
 # The file should be named "hosts" NOT "hosts.txt"
 # The sites ads234.com and ads345.com -- These sites hijack internet explorer
+# TheTVDB End
+# TheTVDB Start
+# Theinitium End
+# Theinitium Start
 # There is a version of this file that uses 127.0.0.1 instead of 0.0.0.0
 # This *must* be the first line: 127.0.0.1     localhost   #
 # This MVPS HOSTS file is a free download from:            #
@@ -3147,17 +3470,37 @@
 # This hosts file is proudly sponsored by adguard.com.
 # This list of hosts is compiled from server logs on my own servers
 # This lists only contains domains which are used for ads, tracking or popups. it does not block in-HTML elements.
+# This rule does not regularly updated
+# This rules ad blocking, ad blocking only
 # This work is licensed under a MIT License.
+# This work is licensed under a modified HOSTS License.
 # This work is licensed under the Creative Commons         #
 # Title: Anudeep's Blacklist
 # Title: Hosts contributed by Steven Black
 # Title: KADhosts
+# Title: NEO DEV HOST
 # Title: StevenBlack/hosts
 # Title: hostsVN
 # To convert the hosts file to a set of Cisco IOS commands for Cisco routers
+# TopickHK End
+# TopickHK Start
+# Tor End
+# Tor Start
+# Tumblr End
+# Tumblr Start
+# Tutanota End
+# Tutanota Start
+# Twitch End
+# Twitch Start
+# Twitter End
+# Twitter Start
 # URLs to their site.
 # Uncomment (remove the #) the lines that you wish to block, as some
-# Update time: 2026-08-17T22:52:35+08:00
+# Uncyclopedia End
+# Uncyclopedia Start
+# Up Media End
+# Up Media Start
+# Update time: 2026-08-17T23:52:14+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -3166,12 +3509,38 @@
 # Version: 2026.8.13.3
 # Version: 2512161623
 # Version: 2608101414
+# Vimeo End
+# Vimeo Start
+# Vnet End
+# Vnet Start
+# Voa End
+# Voa Start
+# W3schools End
+# W3schools Start
+# Web.de End
+# Web.de Start
 # Website: https://kadantiscam.netlify.app/
+# Webtype End
+# Webtype Start
 # What domain?
+# Whatsapp End
+# Whatsapp Start
+# WikiLeaks End
+# WikiLeaks Start
+# Wikinews End
+# Wikinews Start
+# Wikipedia End
+# Wikipedia Start
 # Windows 10 reporting domains.
+# Yahoo End
+# Yahoo Start
 # You are free to copy and distribute this file for non-commercial uses,
 # You may have to use Notepad and "Run as Administrator"
+# You-get End
+# You-get Start
 # YousList
+# Youtube End
+# Youtube Start
 # [1&1 Internet][AS8560][195.20.243.0 - 195.20.255.255]
 # [1&1 Internet][AS8560][212.227.36.0 - 212.227.60.255]
 # [1&1 Internet][AS8560][217.72.192.0 - 217.72.204.255]
@@ -7019,6 +7388,8 @@
 # https://github.com/Webamoozcom/warning-list/discussions/90
 # https://github.com/Webamoozcom/warning-list/discussions/92
 # https://github.com/Webamoozcom/warning-list/discussions/94
+# https://github.com/googlehosts/hosts
+# https://github.com/googlehosts/hosts/raw/master/LICENSE
 # https://github.com/mitchellkrogza/Badd-Boyz-Hosts/issues
 # https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker
 # https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
@@ -7032,8 +7403,12 @@
 # https://twitter.com/Nikolaona/status/1699167838697652322
 # https://webamooz.com/1402/06/25/%D9%84%D8%A7%DA%A9%D8%B3%D9%88%D9%86-laxxson-%DA%A9%D9%84%D8%A7%D9%87%D8%A8%D8%B1%D8%AF%D8%A7%D8%B1%DB%8C-%D9%BE%D8%A7%D9%86%D8%B2%DB%8C-%D8%A7%D8%B3%D8%AA/
 # https://webamoozcom.github.io/warning-list/
+# imgur End
+# imgur Start
 # internet hosts. This is an easy and effective way to protect you from
 # internet.
+# issuu End
+# issuu Start
 # kwadronaut for Windows 7 and Vista information
 # last updated:   2026-07-31 05:19:53 CEST
 # last updated:   Sat, 10 May 2025 16:19:19 GMT
@@ -7057,6 +7432,7 @@
 # only. Furthermore it is NOT permitted to copy any of the #
 # or C:\Windows\System32\drivers\etc\hosts
 # or anything after the # symbol on the same line          #
+# other
 # other formats:  https://pgl.yoyo.org/adservers/formats.php
 # policy:         https://pgl.yoyo.org/adservers/policy.php
 # popup traps -- sites that bounce you around or won't let you leave
@@ -7066,6 +7442,8 @@
 # realmedia.com's Open Ad Stream
 # redirecting any requests to that host to your own computer. For example
 # removal programs such as SpyBotS&amp;D, AdAware or HijackThis to remove this
+# rixCloud End
+# rixCloud Start
 # sheypoor.com
 # sites with known trojans, phishing, or other malware
 # start date:    Fri, 06 Jun 2003 00:00:00
@@ -7079,19 +7457,28 @@
 # traps, prevents user tracking by way of "web bugs" embedded in spam,
 # up CSS on livejournal
 # update process. For example, uncomment the following line to block
+# urbandictionary End
+# urbandictionary Start
 # video on sites such as cbc.ca
 # with a dash of crowd sourcing via GitHub
 # www.extreme-dm.com tracking
 # yahoo banner ads
 # your information back to a company.
 # آمیتیس?
+# 作者：海哥
+# 全由海哥自己制作
 # 头条相关
 # 屏蔽iOS/iPadOS OTA更新
+# 影视网站广告 yhdm04.com
 # 拦截Twitter广告
 # 拦截广告布局接口
 # 拦截蓝狐视频APP广告API
+# 此规则不定时更新
+# 流氓下载器
 # 绕过企业证书过期
 # 美团
+# 色情广告图片服务器
+# 规则链接地址
 # 避免迅雷版权问题
 #!akadns.net
 #!microsft
@@ -36801,6 +37188,7 @@
 #MIUI去广告
 #MIUI浏览器去广告
 #MIUI浏览器网址拦截
+#MSN
 #Mediav
 #MentaMob
 #MicroSoft
@@ -37136,6 +37524,7 @@
 #biddingx
 #bidvertiser.com
 #bing
+#block recusive list local ip
 #bloggerads
 #blueidea.com
 #bluekai.com
@@ -37232,11 +37621,13 @@
 #emui-MusicVideoADs
 #emui-appstore-splash
 #enet.com.cn
+#espn
 #evolife.cn
 #exdynsrv.com
 #exoclick.com
 #expedia
 #exview
+#fanbase wikia sites
 #faronicslabs-deepfreeze
 #fastapi
 #fe80::1%lo0	localhost
@@ -37702,6 +38093,7 @@
 #testplus.cn
 #tgbus.com
 #themoviedb
+#tiktok
 #time.com
 #totalfinder
 #touclick
@@ -37740,6 +38132,7 @@
 #waps.cn
 #wapx.cn
 #wauee.com
+#weather
 #webterren.com
 #weddingeeos
 #weibo.com
@@ -37853,6 +38246,7 @@
 #youku
 #youku-area
 #youmi
+#youtube - found thi on other places for plugins to use with
 #youxiaoad.com
 #yoyi
 #yu-cqnews.net
@@ -37873,6 +38267,7 @@
 #zhiziyun.com
 #zol.com.cn
 #zuoyebang
+#||msn.com###onetrust-banner-sdk > div.ot-sdk-container > div.ot-sdk-row
 #一加官方ROM下载
 #七猫免费小说
 #个推
@@ -131285,6 +131680,7 @@ zzztube.com,videoporn.tube##.b-random-column
 zzzyk.com###Tinfo
 {"msg":{"user_not_login":"用户未登录"},"data":{"account_type":"0"},"code":1000}
 |/nbsys3/fsyspp.js
+||/7gq78s4ltrea/^
 ||/js/0x1a2b3c4d.js
 ||[240e:ff:f100:1009::10f]:443^
 ||[::]^$third-party,domain=~0.0.0.0|~127.0.0.1|~[::1]|~[::]|~local|~localhost
