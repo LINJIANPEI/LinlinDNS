@@ -79,12 +79,13 @@
 ! Apple addendum
 ! CDN/资源/下载/流媒体
 ! CN - Perfect World: https://help.steamchina.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
+! Copyright (c) Digac.cc
 ! Copyright (c) 周木木
 ! DNS ad blocking whitelist for AdGuard Home
-! Description: Is it my Whitelist [use at your own risk no support or help will be done]
 ! Description: Whitelist to resolve false positives introduced by filters.txt
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Epic Games
+! Expires: 1 days
 ! Expires: 12 Hours
 ! Expires: 20991231
 ! Global: https: //help.steampowered.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB
@@ -99,10 +100,9 @@
 ! MicroSoft addendum
 ! Netflix
 ! Note: 本规则相对于广告隐私保护更注重功能性、便捷性和效率。建议与 anti-AD 主规则一同使用：https://anti-ad.net/easylist.txt
-! Sources: https://raw.githubusercontent.com/Aveelo/Aveelo-adguard-home-Adlist-Whitelist/master/WhitelistAdGuardHome
 ! Steam
 ! Title: AdGuardHome白名单
-! Title: Aveelo Filter - Whitelist AdGuardHome
+! Title: DNS-Pass-List
 ! Title: GOODBYEADS
 ! Title: LWJ's white list
 ! Title: MMotti AdguardHome - whitelist.txt
@@ -119,6 +119,7 @@
 ! Xiaomi Xiaoai
 ! ads.raidrive.com^
 ! https://gitee.com/zjqz/ad-guard-home-dns
+! https://github.com/etotakeo/AdGuardDNSPassList
 ! https://github.com/unknownFalleN/xiaomi-dns-blocklist
 ! https://learn.microsoft.com/zh-cn/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide
 ! https://support.apple.com/zh-cn/101555
@@ -128,6 +129,8 @@
 ! iCloud 云服务/同步/备份/照片/文件
 ! realme 真我手机 系统白名单（AdGuard Home 格式）
 ! url=https://gitee.com/zjqz/ad-guard-home-dns/raw/master/white-list
+! url=https://raw.githubusercontent.com/etotakeo/AdGuardDNSPassList/master/DNS-Pass-List
+! version=2021031702
 ! version=20250612092442
 ! ⠄⠄⠃⢰⣿⣿⣿⣿⣿⣿⡿⣿⣿⠴⠋⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⡟⢀⣾⠄⠄
 ! ⠄⠄⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⢁⣴⣿⣿⣿⣿⠗⠄⠄⣿⣿⠄⠄
@@ -198,8 +201,12 @@
 !*********************************************************
 !--------2345-------
 !--------360--------
+!--------Adult (Gay) used--------
+!--------BT/PT--------
 !--------Commonly used--------
 !--------The List End--------
+!--------WeChat public account platform--------
+!--------customize--------
 !--------vivo-------
 !--------个推--------
 !--------乐播投屏-------
@@ -649,7 +656,6 @@
 #360杀毒官网
 #360清理大师
 #360热点
-#360网站卫士
 #360翻译
 #4399小游戏
 #555影视
@@ -736,7 +742,6 @@
 #B站APP关注列表
 #CC字幕加载
 #CC直播域名
-#CDN联盟
 #EDGE浏览器网页翻译
 #HeyTap（欢太）
 #ICP/IP地址/域名信息备案管理系统
@@ -797,7 +802,6 @@
 #UC浏览器
 #UC浏览器网盘
 #UP主主页商品页面加载
-#Webluker
 #X5内核文档插件下载
 #adobe
 #alampy
@@ -847,7 +851,6 @@
 #一加相册插件
 #一号店优惠券
 #一甜相机＆快影图片接口
-#七牛
 #七猫免费小说获取章节失败
 #七猫小说
 #七猫小说听书
@@ -931,11 +934,9 @@
 #华风爱科气象
 #卡片加载
 #参考：https://h5.jd.com/article/247.html
-#又拍云
 #反向DNS查找
 #右上角登录布局
 #合集封面
-#同兴万点CDN
 #同时也是官网的商品加载接口
 #同时也是懂车帝手机页面端文章顶部内容推荐＆热门推荐＆精彩推荐接口
 #同时也是美团App内消息页面布局
@@ -1036,7 +1037,6 @@
 #快手评论区图片、快手少部分评论图
 #快手评论图片
 #快手送礼物
-#快网
 #懂车帝
 #手机号查询
 #手机号码登陆接口＆网页端扫描登陆接口
@@ -1127,7 +1127,6 @@
 #有道翻译官网页翻译
 #朋友圈图片
 #服务支持
-#未知
 #来自酷安，暂时发现的有问题界面，添加到自定义过滤界面立刻
 #极光推送
 #极弧
@@ -1200,11 +1199,8 @@
 #登录接口
 #登录页面跳转
 #登陆域名
-#白山云
 #百家号图片
 #百度
-#百度云CDN
-#百度云加速
 #百度地图接口
 #百度地图离线导航无法下载
 #百度地图街景
@@ -1260,7 +1256,6 @@
 #米游社图标
 #系统判断联网
 #系统通知页面及其活动加载组件
-#网宿
 #网易
 #网易云api
 #网易云邮箱大师
@@ -1296,7 +1291,6 @@
 #老黄历查询
 #联通云盘…福利中心
 #脚本之家
-#腾讯CDN
 #腾讯TPNS/离线推送日志
 #腾讯X5内核
 #腾讯云实时音视频
@@ -1319,7 +1313,6 @@
 #荣誉周报加载排版
 #菜鸟包裹侠
 #葫芦侠
-#蓝汛
 #表情消息
 #西瓜视频图片
 #视频app
@@ -1382,7 +1375,6 @@
 #阅文集团官网
 #阿里 CDN 橙色资源站
 #阿里云 CDN 加速用域名
-#阿里云CDN
 #阿里图片
 #阿里巴巴购物
 #阿里推送(未知用途)
