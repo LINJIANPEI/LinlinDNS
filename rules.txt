@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-18 08:33:50（北京时间）
+! Version: 2026-08-18 10:08:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70007
+! Total count: 70008
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -34382,7 +34382,6 @@ foodora.fi##.top-banner-container
 foodora.no##.top-banner-container
 foodora.se##.top-banner-container
 foodrenegade.com##.top-cta
-foodrepublic.com##.raptive-video-player
 foodrepublic.com,islands.com##.article > .under-art:has(> .zergnet-widget)
 foodsforbetterhealth.com###text-46
 foodtribe.com###root > div[class]:last-child:not(:only-child)
@@ -55023,6 +55022,7 @@ qz.com##div[class*="my-"]:has(> .ay-ad-slot)
 qz.com##div[class="hidden md:block"]
 qz.com##div[class^="sc-"]:has(> div[class="ad-unit"])
 qz.com##div[class^="sc-"]:has(> div[is="bulbs-dfp"])
+qz.com##div[style="min-height:280px"]
 qz.com,theinventory.com##.ay-ad-slot
 qz828.com##.topadv
 qzone.qq.com###QM_Container_100005
@@ -58179,7 +58179,6 @@ slashdot.org,sourceforge.net###floating-content
 slashdot.org,sourceforge.net##[id*="mongo-"]
 slashdot.org,sourceforge.net##div[id*="vibe"]
 slashfilm.com###primis-container
-slashfilm.com##.under-art
 slashfilm.com,healthdigest.com###primis-container
 slashfilm.com,nickiswift.com,grunge.com##.google-ad-placeholder
 slashfilm.com,tastingtable.com,islands.com,grunge.com,slashgear.com,grunge.com,svg.com##.before-ad
@@ -62263,6 +62262,8 @@ thesurfersview.com##.mid-section > .right-part
 thesurfersview.com##div[class^="ad"]
 theswagsports.com##div[id^="AS_O_TP"][name="Articleshow-Organic-TOP-2"]
 theswagsports.com,cinereporters.com##div[id^="HP_P_"][name="Homepage-Paid-Top-1-Desktop"]
+thetakeout.com,foodrepublic.com##.raptive-video-player
+thetakeout.com,slashfilm.com##.under-art
 thetechbasket.com##.thete-manual-placement
 theteche.com###custom_html-8
 thetechedvocate.org,embetronicx.com,quillette.com##.AdWidget_HTMLWidget
