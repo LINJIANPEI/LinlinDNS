@@ -374,6 +374,7 @@
 ! Block xj8 request
 ! Block zhihu recommends
 ! Blocked Filters: 103243
+! Blocked Filters: 43599
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -440,13 +441,13 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
+! Checksum: 3FNNUiWnUrOWp1a0vRG0qw
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: Co6KwyGIyYAOb6fiCfLiiQ
+! Checksum: QwhJbBaqYq10jflXn3LPUQ
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
+! Checksum: ZvjV+ADnS1CBznz/EiBFSw
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: guzgltwbVaIKSIyvXHS8CA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
-! Checksum: y2qin4Kl+uchp7XEfegDtg
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -567,6 +568,7 @@
 ! Description: 移动广告过滤补充规则。
 ! Description: 移除知乎部分广告
 ! Description: 适用于 AdGuard 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。
+! Description: 适用于 AdGuard 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。Lite 版仅针对国内域名拦截。
 ! Description: 适用于 AdGuard、AdGuardHome 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。
 ! Description: 适用于 AdGuard、AdGuardHome 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists Light、OISD Basic、StevenBlack hosts、Pollock hosts。Lite 版仅针对国内域名拦截。
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
@@ -757,12 +759,12 @@
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 18 Aug 2026 13:56 UTC+7
 ! Last modified: 19 Dec 2020 03:10 UTC
-! Last modified: 20 Aug 2026 17:02 UTC
+! Last modified: 20 Aug 2026 18:03 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-08-20T04:17:08.555Z
-! Last modified: 2026-08-20T16:10:17.323Z
+! Last modified: 2026-08-20T18:10:43.617Z
 ! Last modified: 2026/03/11 09:15 +0800
 ! Last modified: 2026/08/21 00:40:26
 ! Last modified: 23 Dec 2025 09:21 UTC
@@ -1021,6 +1023,7 @@
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt
+! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilterslite.txt
 ! Source: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/src/advert/adservers.txt
 ! Source: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/src/advert/thirdparty.txt
 ! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers.txt
@@ -1128,6 +1131,7 @@
 ! Title: AdBlock DNS
 ! Title: AdBlock DNS Lite
 ! Title: AdBlock Filter
+! Title: AdBlock Filter Lite
 ! Title: AdGuard DNS filter
 ! Title: Adblock Warning Removal List
 ! Title: CJX's Annoyance List
@@ -1216,7 +1220,7 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260817194548
-! Version: 202608201702
+! Version: 202608201803
 ! Version: 20260821004026
 ! Version: 2608181356
 ! Version: 350.202311301133
@@ -2077,7 +2081,9 @@
 ! 以下二条规则禁用P2P
 ! 低端影视
 ! 低端影视 ddys.site .pro
+! 去除首页还有什么值得买推广
 ! 双协议拦截，防止IPv4/IPv6绕过过滤
+! 发现页去除酷品
 ! 同时拦截IPv4 A记录、IPv6 AAAA解析，防止双协议绕过
 ! 均为视频网站、小说网站、漫画网站抓取
 ! 壁纸图片资源域名（qhimg是360公共图床，谨慎！屏蔽后所有360图片失效）
@@ -2085,7 +2091,9 @@
 ! 宜口袋主站拦截
 ! 屏蔽第三方资源
 ! 帖子详情好物推荐
+! 帖子详情赞助内容
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
+! 应用游戏页去除推广视频
 ! 心魔听书网
 ! 本规则合并自乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance
 ! 电信截持弹窗 3行
@@ -2097,6 +2105,7 @@
 ! 违规高炮：桔子数科全套（宜口袋/桔多多/桔小花）
 ! 风行网： fun.tv
 !! Third-party
+!! Title: 去广告规则，酷安反馈反馈
 !! https://a.bestcontentitem.top/warp/*?r=
 !!! 127.0.0.1 aauth-lp1.ndas.srv.nintendo.net
 !!! 127.0.0.1 receive-lp1.er.srv.nintendo.net
@@ -2413,6 +2422,7 @@
 !Version: 20260820030019
 !Yahoo
 !Yandex
+![个人收集 2.0]
 !ad-survey.com
 !amazon.*##div[data-ad-id]
 !api-global.netflix.com
@@ -3492,7 +3502,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-08-21T00:51:31+08:00
+# Update time: 2026-08-21T01:51:29+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -36853,6 +36863,7 @@
 ##vg-pause-f
 ##video[class^="img_"][playsinline]
 ##video[poster*="html-load.com/"]
+##vivo浏览器
 ##vls-cookie-banner.ng-star-inserted
 ##voc-cookie-warning
 ##vue-cookie-bar
@@ -37158,11 +37169,13 @@
 #Appcpa
 #Baidu 百度广告 SDK ──
 #Bayescom
+#Block Anti-Fraud Center Tracking
 #BlueSoleil
 #ByteDance Pangle 穿山甲广告 SDK ──
 #China Unicom
 #DigitalCloudShield
 #Domob 多盟广告 ──
+#Fake Fucker
 #FancyDSP
 #Flash
 #Flurry
@@ -37175,6 +37188,9 @@
 #KS 快手广告 SDK ──
 #LeadMoa
 #Logolabn去广告
+#MIUI去广告
+#MIUI浏览器去广告
+#MIUI浏览器网址拦截
 #MSN
 #Mediav
 #MentaMob
@@ -38079,6 +38095,7 @@
 #telemetry
 #testplus.cn
 #tgbus.com
+#themoviedb
 #tiktok
 #time.com
 #totalfinder
@@ -38255,9 +38272,13 @@
 #zuoyebang
 #||msn.com###onetrust-banner-sdk > div.ot-sdk-container > div.ot-sdk-row
 #↑临时解开，网站的预览图#
+#一加官方ROM下载
 #七猫免费小说
 #个推
+#中国广电
+#中国联通--会手机管家不可用
 #乐享借
+#乔安智联
 #书旗
 #京东
 #京东存储和图片提供
@@ -38275,9 +38296,12 @@
 #其他↓
 #分子借钱
 #分期乐
+#去除oneplus云控
 #去除丰巢新版取件码页面广告
+#友盟平台
 #可可影视
 #吉用花
+#向日葵
 #喜马拉雅
 #国美金融
 #图床
@@ -38316,6 +38340,7 @@
 #微信支付
 #微银信用
 #快手
+#快手平台
 #快手广告
 #快手相关
 #快活
@@ -38367,11 +38392,14 @@
 #笔趣阁网页广告
 #米哈游
 #网络播放去广告
+#腾讯广告服务
 #菜鸟
 #薇钱包
 #虎牙直播
 #蜻蜓FM
 #融逸花
+#谷歌广告服务
+#谷歌翻译，①网页，③新版APP用。
 #贝子
 #贴吧弹窗
 #趣盟
@@ -38380,10 +38408,12 @@
 #钱多多
 #阅友去广告
 #阻止苏宁小店下载
+#阿里广告服务
 #顺昌之行
 #香哈升级包
 #马上消费
 #高德左上广告
+#魅族
 #黄历通胜
 #龙享花
 $$div[style="display: none !important;"]:contains(!function(){function a(a){var _idx=)
@@ -131761,7 +131791,6 @@ zzup.com##iframe[src^="/ad"][src$=".php"]
 zzztube.com,me-gay.com,gaysuperman.com##.mobile-random
 zzztube.com,videoporn.tube##.b-random-column
 zzzyk.com###Tinfo
-{"msg":{"user_not_login":"用户未登录"},"data":{"account_type":"0"},"code":1000}
 |/nbsys3/fsyspp.js
 ||/7gq78s4ltrea/^
 ||/js/0x1a2b3c4d.js
@@ -132328,3 +132357,5 @@ zzzyk.com###Tinfo
 ~zoxs.de,~buyzoxs.de##.gdpr-modal-dialog:not(body):not(html)
 ~zurueckzumursprung.at##.cookies-info-box:not(body):not(html)
 ‖*.chat.bilibili.com
+！腾讯乘车码小程序
+！酷安
