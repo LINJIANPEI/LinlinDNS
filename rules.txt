@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-20 16:23:16（北京时间）
+! Version: 2026-08-20 17:22:21（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70044
+! Total count: 70053
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2358,6 +2358,7 @@
 17173.com##.mod-tg1
 17173.com##.pic[href*="Room"]
 17173.com##.slide-list > li[style]:has(> a[href*="&ad_code="])
+17173.com##.webgame .pn-bd
 17173.com##a[href*="&ad_code="]
 17173.com##a[href^="https://gtv."]
 17173.com##div[class^="ad-pn"],div.top-background-adv,div.middel_advers,.win17173,div[class^="banner"][class$="0"]
@@ -6959,6 +6960,7 @@
 @@||bigbrothercanada.ca^$generichide
 @@||bigbtc.win/js/ads-prebid.js
 @@||bigbtc.win^$generichide
+@@||bigcommerce.com^$domain=plazajapan.com
 @@||bigcrunch.com^$script,domain=snopes.com
 @@||bigfishaudio.com/banners/$image,~third-party
 @@||biggestplayer.cachefly.net/ad300.html
@@ -34221,6 +34223,7 @@ flinkscykel.se##.notification
 flintbek.de###note
 flintshire.gov.uk##.fcc-cookie-consent
 flip.pt###access
+flipkart.com##div[data-id]:has(a > [data-tkid^="ADVIEW"])
 flipkart.com##div[data-id][style]:has([width][height][fill])
 flipkart.com##div[style="max-width:1200px;width:100%"]:has(source[srcset^="https://rukminim1.flixcart.com/fk-p-flap/1570/520/image/eb2033142a4a8eab.png"])
 flipline.com##.box_grey
@@ -40401,6 +40404,8 @@ importantclass.com##.modal:not(#style_important)
 impress.co.jp###ipc_cookie_confirmation
 impressivetimes.com##[class$="-ads"]
 improbable.io##div[class*="CookieBarstyled"]
+impulsegamer.com###omc-sidebar > ul > li.omc-widget:has(> .textwidget > a[target="_blank"] > img)
+impulsegamer.com###omc-top-banner
 imresizer.com##.ad-slot-1-fixed-ad
 imresizer.com##.ad-slot-2-fixed-ad
 imresizer.com##.ad-slot-3-fixed-ad
@@ -58201,6 +58206,7 @@ slant.co##._SummaryPageSponsoredOptionView
 slantastoffe.de##.overlay
 slashdot.org###aistdo-coding-bar
 slashdot.org###announcement
+slashdot.org###auth0-sd
 slashdot.org###cloud
 slashdot.org###main-nav-badge-link
 slashdot.org###slashdot_deals
@@ -59327,6 +59333,7 @@ spoonflower.com##.b-text-box.x-global-dialog
 spoonuniversity.com###leaderboard_fixed
 spor.dk###cookies
 sporcle.com###go-orange
+sporcle.com###homepage-container > div.row-unit-container
 sporcle.com###quiz-right-rail-unit
 sporcle.com###quiz-right-rail-unit-2
 sporcle.com###quiz-scoreboard-unit
@@ -59928,8 +59935,10 @@ stockstar.com##.siteAd_r
 stockstar.com##.ss-ad-icon2
 stocktwits.com###bottom-nav-content
 stocktwits.com##.Primis_container__OlMHR
+stocktwits.com##.\!min-h-\[250px\]
 stocktwits.com##.leading-\[16px\]:has-text(Advertisement)
 stocktwits.com##.leading-none
+stocktwits.com##.min-h-\[320px\]
 stocktwits.com##.sticky-inner-wrapper
 stocktwits.com##div[class*="_adClass_"]
 stocktwits.com##div[class*="_adClass_"] + p[class*="Disclosure_disclosure"]:has(> span > a[class*="_removeAdsLink_"])

@@ -373,8 +373,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 106602
-! Blocked Filters: 43596
+! Blocked Filters: 103228
+! Blocked Filters: 43602
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -413,8 +413,8 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 215439
-! Blocked domains: 4982
+! Blocked domains: 215563
+! Blocked domains: 4990
 ! Blocked: 4.891 rules
 ! Blocked: 564 rules
 ! Blocked: 847 rules
@@ -440,12 +440,12 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
-! Checksum: 6VB5Vg07IrGxBugjRFwrbQ
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: eABVioYLYGKvPawoFZXqAw
+! Checksum: Vnnu93oavVF2LVHjEHEyDA
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: i3w0DpYwyz0BgmVLK02LbQ
+! Checksum: jXp+aozmtAAC/7bpEYxl6Q
+! Checksum: mPSq3hZYph18HJH1od1f/w
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -758,14 +758,15 @@
 ! Last modified: 09 Dec 2020 10:42 UTC+7
 ! Last modified: 18 Aug 2026 13:56 UTC+7
 ! Last modified: 19 Dec 2020 03:10 UTC
-! Last modified: 20 Aug 2026 08:11 UTC
+! Last modified: 20 Aug 2026 09:02 UTC
+! Last modified: 20 Aug 2026 09:12 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-08-20T04:17:08.555Z
 ! Last modified: 2026-08-20T08:14:46.460Z
 ! Last modified: 2026/03/11 09:15 +0800
-! Last modified: 2026/08/20 09:35:02
+! Last modified: 2026/08/20 16:45:16
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1219,8 +1220,9 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260817194548
-! Version: 202608200811
-! Version: 20260820093502
+! Version: 202608200902
+! Version: 202608200912
+! Version: 20260820164516
 ! Version: 2608181356
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3500,7 +3502,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-08-20T15:51:33+08:00
+# Update time: 2026-08-20T16:51:23+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -48776,6 +48778,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 17173.com##.mod-tg1
 17173.com##.pic[href*="Room"]
 17173.com##.slide-list > li[style]:has(> a[href*="&ad_code="])
+17173.com##.webgame .pn-bd
 17173.com##a[href*="&ad_code="]
 17173.com##a[href^="https://gtv."]
 17173.com##div[class^="ad-pn"],div.top-background-adv,div.middel_advers,.win17173,div[class^="banner"][class$="0"]
@@ -54109,6 +54112,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||bigbrothercanada.ca^$generichide
 @@||bigbtc.win/js/ads-prebid.js
 @@||bigbtc.win^$generichide
+@@||bigcommerce.com^$domain=plazajapan.com
 @@||bigcrunch.com^$script,domain=snopes.com
 @@||bigfishaudio.com/banners/$image,~third-party
 @@||biggestplayer.cachefly.net/ad300.html
@@ -84532,6 +84536,7 @@ fbol.top,mrfreemium.blogspot.com#%#//scriptlet('abort-current-inline-script', 'E
 fbref.com,basketball-reference.com,onmsft.com,softperfect.com##.adblock
 fbstreams.pm,cracksports.me##.btn-danger
 fbstreams.pm,cracksports.me##.ratio > iframe ~ div[class*=" bg-opacity-"]
+fbstreams.pm,socceronline.me,vipbox.*,strikeout.*##button[data-open="_blank"]
 fbstreams.pm,socceronline.me,vipleague.*,vipbox.*,strikeout.*##button[data-open="_blank"]
 fbsub.de,freer.in#@#.advertiser
 fc-hansa.de##body > div:not([id]):not([class])
@@ -85494,6 +85499,7 @@ flinkscykel.se##.notification
 flintbek.de###note
 flintshire.gov.uk##.fcc-cookie-consent
 flip.pt###access
+flipkart.com##div[data-id]:has(a > [data-tkid^="ADVIEW"])
 flipkart.com##div[data-id][style]:has([width][height][fill])
 flipkart.com##div[style="max-width:1200px;width:100%"]:has(source[srcset^="https://rukminim1.flixcart.com/fk-p-flap/1570/520/image/eb2033142a4a8eab.png"])
 flipkart.com#?#.fWi7J_:contains(Brands In Spotlight)
@@ -93397,6 +93403,8 @@ importantclass.com##.modal:not(#style_important)
 impress.co.jp###ipc_cookie_confirmation
 impressivetimes.com##[class$="-ads"]
 improbable.io##div[class*="CookieBarstyled"]
+impulsegamer.com###omc-sidebar > ul > li.omc-widget:has(> .textwidget > a[target="_blank"] > img)
+impulsegamer.com###omc-top-banner
 imresizer.com##.ad-slot-1-fixed-ad
 imresizer.com##.ad-slot-2-fixed-ad
 imresizer.com##.ad-slot-3-fixed-ad
@@ -109416,6 +109424,7 @@ play.esea.net###module-ads-home-bottom
 play.geforcenow.com#$?##preStreamContainer { remove: true; }
 play.google.com###gb iframe[src*="ogs.google."][src*="widget/callout"]
 play.google.com#@#div[aria-label="Ads"]
+play.hbomax.com#%#//scriptlet('prevent-xhr', 'brightline.tv')
 play.iporngay.com#%#//scriptlet('prevent-setTimeout', 'hasPopupBlocker')
 play.iporngay.com#%#//scriptlet('prevent-window-open', '!download')
 play.mylifetime.com,play.fyi.tv,play.history.com,play.aetv.com#%#//scriptlet('prevent-element-src-loading', 'script', 'imasdk.googleapis.com/js/sdkloader/ima3_dai.js')
@@ -116368,6 +116377,7 @@ slant.co##._SummaryPageSponsoredOptionView
 slantastoffe.de##.overlay
 slashdot.org###aistdo-coding-bar
 slashdot.org###announcement
+slashdot.org###auth0-sd
 slashdot.org###cloud
 slashdot.org###main-nav-badge-link
 slashdot.org###slashdot_deals
@@ -117789,6 +117799,7 @@ spoonuniversity.com###leaderboard_fixed
 spoonuniversity.com#$#body[style^="margin-top: 90px;"] { margin-top: 0!important; }
 spor.dk###cookies
 sporcle.com###go-orange
+sporcle.com###homepage-container > div.row-unit-container
 sporcle.com###quiz-right-rail-unit
 sporcle.com###quiz-right-rail-unit-2
 sporcle.com###quiz-scoreboard-unit
@@ -118561,8 +118572,10 @@ stockstar.com##.ss-ad-icon2
 stockstracker.com#@##googleAds
 stocktwits.com###bottom-nav-content
 stocktwits.com##.Primis_container__OlMHR
+stocktwits.com##.\!min-h-\[250px\]
 stocktwits.com##.leading-\[16px\]:has-text(Advertisement)
 stocktwits.com##.leading-none
+stocktwits.com##.min-h-\[320px\]
 stocktwits.com##.sticky-inner-wrapper
 stocktwits.com##div[class*="_adClass_"]
 stocktwits.com##div[class*="_adClass_"] + p[class*="Disclosure_disclosure"]:has(> span > a[class*="_removeAdsLink_"])
@@ -126079,6 +126092,7 @@ vipleague.tv###warningdiv + div[id][style]
 vipleague.tv##iframe[name="player_iframe"] + #overlay
 vipleague.tv#@#.adContent
 vipleague.tv#@#.adSense
+vipleague.vg,vipleague.*##.card-body > [data-open="_blank"]
 vipr.im#%#//scriptlet("abort-current-inline-script", "document.attachEvent", "initBCPopunder")
 viprow.me##.embed-responsive > .position-absolute
 viprow.net##button.btn[data-open="_blank"]
