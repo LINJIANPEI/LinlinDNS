@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-21 00:20:31（北京时间）
+! Version: 2026-08-21 01:18:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70064
+! Total count: 70069
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6219,6 +6219,7 @@
 @@||api.asmr-*.com/api/$stealth=3p-auth
 @@||api.athom.com^$domain=my.homey.app,stealth=3p-auth
 @@||api.auth.adobe.com/api/v2/sparkmedia/$stealth=3p-auth,domain=cnbc.com
+@@||api.authsignal.com^$stealth=3p-auth
 @@||api.babbel.io/gamma/v1/$ping,domain=babbel.com
 @@||api.babbel.io^$stealth=referrer
 @@||api.bbc.com/bbcdotcom/assets/*/script/av/emp/adverts.js
@@ -8182,6 +8183,7 @@
 @@||cmp.inmobi.com^
 @@||cmp.inmobi.com^$domain=glasgowlive.co.uk
 @@||cmp.inmobi.com^|
+@@||cmp.osano.com^
 @@||cmp.osano.com^|
 @@||cmp.sky.it/wrapperMessagingWithoutDetection.js$domain=tv8.it
 @@||cmp.telerama.fr/js/telerama.min.js$~third-party
@@ -24574,6 +24576,7 @@ bing.com##.sb_form_placeholder:has(>.ad-ghost-slug)
 bing.com##.shop_page .br-poleoffcarousel
 bing.com##.slide:has(.rtb_ad_caritem_mvtr)
 bing.com##.text-ads-container
+bing.com##.top-ads-separator-enabled
 bing.com##[id$="adsMvCarousel"]
 bing.com##a.sb_meta[href^="http://advertise.bingads.microsoft.com"]
 bing.com##a[href*="/aclick?ld="]
@@ -31896,6 +31899,7 @@ egame.qq.com##.pop-widget
 egame.qq.com##.widget-box
 egame.qq.com##div.live-review:nth-of-type(6)
 egame.qq.com##li.interactive-redenvelope:nth-of-type(2)
+egamersworld.com###w_banner
 egamersworld.com##.styles_bb__hb10X
 egamersworld.com##.styles_sidebar__m6yLy
 egamersworld.com##[class^="styles_tb__"]
@@ -33089,7 +33093,6 @@ ezyzip.com###right-column div[style*="width:"][style*=":center"]:not([class], [i
 ezyzip.com##div[style="margin-bottom:5px;float:right;width:300px;height:600px;background:#20364c"]
 f-secure.com##.fs-consent
 f150lightningforum.com##.customizedBox
-f1box.me,golfstreams.me,mlbbox.me,mmastreams.me,motogpstream.me,nbabox.me,nflbox.me,nhlbox.me,rugbystreams.me,socceronline.me,tennisonline.me,cricstreams.re##.position-absolute.bg-opacity-50
 f1gamesetup.com##.supp-footer-banner
 f1gamesetup.com##.supp-header-banner
 f1gamesetup.com##.supp-sense-desk-large
@@ -50427,6 +50430,7 @@ nowtv.it##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]
 nowwatchtvlive.com##div[id="4c1dba77d15"]
 nowystylgroup.com##.nsg--notification.nsg--cookies
 nox-xtreme.com###root > div > div[class]:not([data-reactid])
+noxx.to$$script:contains(_0xmax)
 noypigeeks.com##div[align="center"] > a[href][target="_blank"][rel] > img
 nperf.com###consent
 npl.co.uk##.cookie
@@ -53902,6 +53906,7 @@ pornzona.com##.desktop-underplayer
 pornzona.com##.ntv
 pornzona.com##.suggestions
 pornzona.com,javseen.com,neowin.net##.footer-banner
+poro.gg##main > div[class]:has(div.ad-wrapper)
 porofessor.gg##div[class^="vertical-ad-"]
 porsche-toledo.com###popupbox
 porsche.com##.pocs-legal-disclaimer
@@ -55949,6 +55954,7 @@ rfidworld.com.cn###placeHolderR
 rfidworld.com.cn##.indexBanner
 rfidworld.com.cn##.rfidADClass
 rfidworld.com.cn##div[style="width: 100%;position: fixed;top: 0;margin:0;"]
+rft.gg##.pointer-events-auto:has(> a[target="_blank"] > img)
 rg.org###headerBanner
 rg.org##article[class^="_"] > section[class^="_"]:has(> div[class^="_"] a[href^="/en-ca/go/undefined/sportsbook-bonus/"])
 rg.org##section[class^="_"][style]:has(> div > a[href^="/en-ca/go/undefined/"] > img)
@@ -61943,8 +61949,6 @@ thehun.net###dyk_right
 thehun.net##.leaderboard
 thehustle.co##.c-layout--trends
 thehustle.co##.sidebar-feed-trends
-theifp.ca,simcoe.com,toronto.com,northumberlandnews.com##div[data-lpos^="more-from-"][data-lpos*="-partners"]
-theifp.ca,simcoe.com,toronto.com,northumberlandnews.com##div[id^="primis"]
 theindex.moe,piracy.moe##div[class^="SupportBanner_"]
 theinertia.com##.asc-ad
 theinertia.com##.below-post-ad
@@ -65227,7 +65231,6 @@ vaughn.live##div[id^="div-insticator-ad-"]
 vax-before-travel.com##.footerboard
 vbaexpress.com##img[width="728"]
 vbmovies.com##.ad-float-bottom
-vbnmx.online##.floating-ads-container
 vbnmx.online,metavise.in,viralxns.com,obitspublishers.com,nayisahara.com,infinityskull.com,drinkspartner.com,atleticalive.it,amritadrino.com##.mh-container + div[id][class*=" "]
 vbox7.com##.vbox-cap-adw
 vboxxcloud.nl###cookie
@@ -69080,6 +69083,8 @@ yomoni.fr##.header__cook
 yonos.pt##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 yopmail.com,yopmail.fr,yopmail.net##.pindexhautctn
 yorkbbs.ca##.textNewsBorder
+yorkregion.com,waterloochronicle.ca,theifp.ca,simcoe.com,toronto.com,northumberlandnews.com##div[data-lpos^="more-from-"][data-lpos*="-partners"]
+yorkregion.com,waterloochronicle.ca,theifp.ca,simcoe.com,toronto.com,northumberlandnews.com##div[id^="primis"]
 yorkshireeveningpost.co.uk##.exco-video-player
 yorkshirepost.co.uk##div[class^="helper__AdContainer"]
 yorkshirepost.co.uk##div[data-type^="AdRow"]
