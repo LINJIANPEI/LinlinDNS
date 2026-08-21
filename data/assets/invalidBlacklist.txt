@@ -441,12 +441,12 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
-! Checksum: 1eaMTmJPl8xTraZUrPcXzA
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: JiEgI3CWJ8RszJ2pPv4ahQ
+! Checksum: 8ex4F33b+IxI8zdf+Dmfjw
+! Checksum: TLvqVvoTJp+zobuLPzND1Q
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: hhOzFvwS29K8Xk3wcoh3xg
+! Checksum: kLzHCsK9cCBYul44ejKAKA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -766,7 +766,7 @@
 ! Last modified: 2026-08-21T10:10:28.729Z
 ! Last modified: 2026/03/11 09:15 +0800
 ! Last modified: 2026/08/21 16:47:33
-! Last modified: 21 Aug 2026 11:02 UTC
+! Last modified: 21 Aug 2026 12:03 UTC
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1220,7 +1220,7 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260817194548
-! Version: 202608211102
+! Version: 202608211203
 ! Version: 20260821164733
 ! Version: 2608181356
 ! Version: 350.202311301133
@@ -3502,7 +3502,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-08-21T18:51:31+08:00
+# Update time: 2026-08-21T19:51:26+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -75983,6 +75983,7 @@ chatgpt.com#%#//scriptlet('json-prune', 'messages.*.ads messages.*.renderedAdsHt
 chatgpt.com#%#//scriptlet('trusted-json-set', 'WeakMap.prototype.set', '$[?(@.ads_response_id)].*', '$remove$', '', 'arg:1')
 chatgpt.com#%#//scriptlet('trusted-replace-outbound-text', 'TextDecoder.prototype.decode', '/<template data-assistant-ads-html=""><aside aria-label.+?<\/aside><\/template>/', '')
 chatgpt.com#%#//scriptlet('trusted-replace-outbound-text', 'TextDecoder.prototype.decode', '/^{"type":\s*"ads",\s*"content":\s*{"ads_request_id":.*?"ads_response_id":.*}$|^{"type":\s*"ads",.*"ads_response_id":.*"ads_request_id":.*}$/', '{}')
+chatgpt.com#?##thread [class^="border-"]:has-text(/Ad|Sponsored/):not([class*="sidebar"])
 chatgpt.com#?##thread [class^="border-"]:not([class*="sidebar"]):contains(/Ad|Sponsored/)
 chatgpt.com#?##thread [class^="border-"]:not([class*="sidebar"]):has-text(/Ad|Sponsored/)
 chatgpt.com#?#.opacity-100.transition-opacity.ease-out:contains(Sponsored options)
@@ -108620,6 +108621,7 @@ pepper.pl##.listLayout-side > .flex:has(> div[id$="AdSlotPortal"])
 pepper.pl##.slot:has(div[id^="ad-"])
 pepper.pl##div[id$="AdSlotPortal"]
 pepperworldhotshop.com###OM-popups-container
+percentagecalculator.net##.pc-incontent
 perchance.org###adCtn
 perchance.org##[style^="position: fixed;"]
 perchance.org##div[style*="height: 90px; overflow: hidden; text-align: center;"]
