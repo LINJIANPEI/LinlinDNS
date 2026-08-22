@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-22 07:12:36（北京时间）
+! Version: 2026-08-22 08:33:54（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70083
+! Total count: 70086
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3341,6 +3341,7 @@
 4shared.com##.sideRekl
 4shared.com##div[class^="rekl"]
 4spaces.org,fuliba.net,fuliba2023.net,fuliba2025.net,uliba.net,ypojie.com##.widget_ui_orbui
+4spaces.org,fuliba.net,fuliba2023.net,fuliba2025.net,ypojie.com##.widget_ui_orbui
 4sysops.com##.article-content > div[id^="div-test-"][style="margin-bottom:21px; -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; "]
 4sysops.com##.article-content > div[style="text-align:center;"]
 4sysops.com##div[id] > div[style^="min-height: 50px; width: 100%;"]
@@ -35224,6 +35225,7 @@ fuliba.net##.entry-content > div[style^="float:right"]
 fuliba.net##.right-banner
 fuliba.net##.tool_news1
 fuliba.net##.widget_custom_html:first-child
+fuliba.net,fuliba2023.net###focusslide
 fuliba.net,fuliba2023.net,uliba.net###focusslide
 fuliba.net,uliba.net###focusslide
 fuliba.net,uliba.net##.widget_custom_html:nth-child(2)
@@ -35240,6 +35242,7 @@ fuliba2023.net##.post-actions
 fuliba2023.net##.relates-imagetext
 fuliba2023.net##.sidebar
 fuliba2023.net##blockquote
+fuliba2023.net,fuliba2025.net,fuliba.net##.article-topbanner
 fuliba2025.net##.content > a[href][target="_blank"]
 fuliba2025.net##a[href^="https://www.kezyw.com/"] > img
 fulibac.com##.ad_two
