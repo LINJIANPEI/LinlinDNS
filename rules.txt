@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-24 20:22:54（北京时间）
+! Version: 2026-08-24 22:30:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70123
+! Total count: 70138
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10324,6 +10324,7 @@
 @@||gogodl.com/*/js/advertisement.js
 @@||goha.ru/app/video/adblock.teaser.js|$script,domain=goha.ru
 @@||golangnote.com^$generichide
+@@||gold.cdx-*.website/embed/$stealth=referrer,domain=foxtrend.gd
 @@||goldenergy.pt^$stealth=dpi
 @@||gomaainfo.com^$generichide
 @@||gomein.net.cn^*,
@@ -12220,6 +12221,7 @@
 @@||justmyshop.com/gate/criteo/product-id.js$~third-party
 @@||justnerd.it^$generichide
 @@||jvod.300hu.com^
+@@||jwpcdn.com/player/*/googima.js$domain=weekendletters.store|xcandid.vip|xcandid.top
 @@||jwpcdn.com/player/plugins/googima/$script,domain=iheart.com|video.vice.com
 @@||jwpcdn.com/player/plugins/googima/*/googima.js$domain=viu.tv
 @@||jwpcdn.com^
@@ -18603,6 +18605,7 @@
 @@||twitch.tv^$generichide
 @@||twitch.tv^$websocket,permissions
 @@||twitchadvertising.tv/wp-content/uploads/2014/06/header_logo_advertising.png
+@@||twitchcdn.net^$stealth=useragent
 @@||twitter.com$domain=bleacherreport.com
 @@||twitter.com/adlink_tech
 @@||twitter.com/i/videos/tweet/*?embed_$document
@@ -19152,6 +19155,7 @@
 @@||volcengine-kdocs-cache.wpscdn.cn^
 @@||volces.com/*^upload$stealth=3p-auth
 @@||volces.com/*^upload$stealth=3p-cache
+@@||volder.timst.cfd/*.m3u8$stealth=referrer
 @@||volvo-club.cz^$generichide
 @@||vox-xov-cdn-*.$xmlhttprequest,stealth=referrer,domain=nepu.*|4k.beer
 @@||voxfm.pl^$generichide
@@ -33144,7 +33148,12 @@ f2dsex1.com##a[href="https://kf2828.com/"]
 f2dsex1.com##div.link
 f2movies.to,cineb.rs,himovies.bz##.block_area > div[class][style="width: 100%; padding-bottom: 320px; position: relative;"]:empty
 f2movies.to,moviesjoy.to##.news-iframe
+f95zone.to###bisnre09
 f95zone.to###topNotice
+f95zone.to##.node--link:has([href^="/explore/"])
+f95zone.to##.node--link:has([href^="/link-forums/build-your-dream-fucktoy"])
+f95zone.to##.node--link:has([href^="/link-forums/camsoda-ai"])
+f95zone.to##.node--link:has([href^="/link-forums/more-than-just-a-flirt"])
 f95zone.to##.node:has(> .node-body > .node-main > .node-title > a[href^="/link-forums/"][href*="-slut."])
 f95zone.to##.offCanvasMenu-linkHolder > .offCanvasMenu-link[target="_blank"]
 f95zone.to##.p-nav-list .p-navEl-link[target="_blank"]
@@ -35235,7 +35244,6 @@ fuliba.net###content > ul[style="list-style-type: none;"]
 fuliba.net###menu-nav > .menu-item:nth-child(n+4):not(:last-child)
 fuliba.net###sidebar > div:first-child
 fuliba.net###sidebar > div:last-child
-fuliba.net##.article-topbanner
 fuliba.net##.entry-content > div[style^="float:right"]
 fuliba.net##.right-banner
 fuliba.net##.tool_news1
@@ -38972,6 +38980,7 @@ hlgnet.com,sina.com##.tad
 hlsloader.com##.text-center > span[style="opacity:0.7;font-size:x-small"]
 hltv.org###betting
 hltv.org##.centered-placement
+hltv.org##.colCon > div > aside > a[href^="/out2/"]
 hltv.org##.gen-firstcol-box
 hltv.org##.kgN8P9bvyb2EqDJR
 hltv.org##.logoCon > div.center-container
@@ -47918,7 +47927,6 @@ motherless.com##div[data-action="OurFriends"]
 motherless.com##div[style^="width:915px;height:250px;"]
 motherless.com##table[style*="max-width:"]
 motherless.com$$script[tag-content="_ml_ads_ns"][min-length="4000"][max-length="5000"]
-motherless.xxx###topsites
 mothership.sg###block-imu1
 mothership.sg###block-imu2
 mothership.sg###block-outstream1
@@ -50490,6 +50498,7 @@ nrj-games.fr###cookies
 nrjmobile.fr###ei_cookie
 nrk.no##.nrk-masthead__info-banner--cookie
 nrl.com##.card-content__sponsor
+nrl.com##.ladder__item--sportsbet-cell
 nrl.com##.partner-groups
 nsfw247.to###network-banner
 nsfw247.to##a[href^="https://go.mavrtracktor.com/"]
@@ -59269,6 +59278,7 @@ speedof.me##.ftl-zone
 speedof.me##.mezgopv-zone
 speedof.me##.test-ad-container
 speedof.me##body > [class]:has(> a[rel="sponsored noopener nofollow"])
+speedof.me##body > [class]:not(.background-container):has(> div[class] > a[rel~="sponsored"])
 speedof.me##body > div.background-container ~ div.history_tooltip ~ [class]
 speedpan.com###float-window
 speedporn.net##.sbox + #uwee
@@ -60105,6 +60115,7 @@ streamcraft.com##.privacy-wraper
 streameast.app###stream-info > .flex > div[target="_blank"]
 streameast.to##.google-auto-placed
 streamed.pk##.py-0 > .border.p-4:has(> button + a[target="_blank"])
+streamed.pk,streamed.st##body > div[style] > div[data-sveltekit-reload] > header + div.w-full
 streamed.pk,streamed.st,streami.su##div[role="alert"]
 streamfree.to##.left-sidebar-spinner
 streamfree.to##.sponsor-column-player
@@ -64891,6 +64902,7 @@ uploadnow.io##div[class^="file_browser_alt_ad_wrap__"]
 uploadrar.com###commonId > a > img
 uploadrar.com###news_last
 uploadrar.com##.card.border-warning
+uploadrar.com##.container > form + .text-center:not(:has(>*))
 uploadrar.com##.my-4 > form[method="POST"] > center
 uploadrar.com##a[href*="?"][target="_blank"]
 uploadrar.com##a[role="button"][href^="http://"]
@@ -65424,6 +65436,8 @@ vesti.lv##.banner
 veteranstoday.com##a[href="http://journal-neo.org"]
 veteranstoday.com##a[href="http://www.hireveterans.com"]
 vexfile.com##.title-box > a[href^="https://tracker.vexfile.com/"] > img
+vexfile.com##div[id*="_billboard_"]
+vexfile.com##div[id^="double_banner_container_"]
 vexmovies.org##a[href^="http://bit.ly"] > img
 vezess.hu##.banner-container
 vfl.dk###vcc_container
@@ -67926,6 +67940,7 @@ www.wp.pl##.relative > :is(div[class^="sc"], .wp-bg-transparent) > div[class^="s
 www.wp.pl##.relative >.relative > .items-center[style]:has(> img[src^="https://v.wpimg.pl/"][alt]:first-child + img[src^="https://v.wpimg.pl/"][alt] + div[class]:last-child)
 www.wp.pl##.wp-live-main > .wp-inner-content > div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:first-child + div + script:last-child)
 www.wp.pl##.wp-placeholder
+www.wp.pl##.wp-section-placeholder-container
 www.wp.pl##a[href^="https://direct.money.pl/landing-page/callcenter/"]
 www.wp.pl##aside > div[data-st-area="Pogoda"] + div[class^="sc-"]:has(a[href^="https://koszykrd.wp.pl?product_url="])
 www.wp.pl##div[class*=" "]:not(.wp-image-placeholder):has(> img[src^="https://v.wpimg.pl/"]:first-child + div:last-child:empty:not(.wp-badge-wrapper))
