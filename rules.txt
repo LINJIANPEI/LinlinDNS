@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-25 16:29:21（北京时间）
+! Version: 2026-08-25 17:23:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70149
+! Total count: 70154
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1020,12 +1020,14 @@
 /ane-popup-1/ane-popup.js$script
 /ane-popup-banner.js$script
 /anti-adblock/*$~stylesheet
+/api/ad-track$ping
 /api/ad.$script
 /api/adtracking$xmlhttprequest
 /api/collect|$ping,xmlhttprequest
 /api/direct/*?s1=$script
 /api/front/v2/observability$ping
 /api/ipv4check?$xmlhttprequest
+/api/notify-track$ping
 /api/pageview/*$ping
 /api/ping?$~xmlhttprequest
 /api/sentry/tunnel$xmlhttprequest
@@ -52438,6 +52440,7 @@ pexels.com##div[data-testid="column"] > div[data-testid="item"]:has(> div[class^
 pexels.com##div[data-testid="item"]:has(> a[class^="CanvaAd"])
 pexels.com##div[data-testid="item"]:has(a[href^="https://www.pexels.com/g/"])
 pexels.com##div[data-testid="item"]:has(h4[data-heading][class*="inlineTitleText"])
+pexels.com##div[data-testid="item"]:has(h4[data-heading^="S\00200cp\00200co\00200cn\00200cs\00200co\00200cr\00200ce\00200cd"])
 pexels.com##header > a[href^="https://www.canva.com/"]
 pfarrverband-koenigslutter.de###hinweis
 pfefferhaus.de###disclaimer
@@ -52812,6 +52815,7 @@ pixabay.com##[class^="adsSection"]
 pixabay.com##[class^="gettySponsored"]
 pixabay.com##div[class*="sponsoredWithResults"]
 pixabay.com##div[class]:has(> [class^="title--"] a[href*="sponsored"])
+pixabay.com##div[class]:has(> div > span + a + button[aria-label="About this advertiser"])
 pixabay.com##div[class^="adPlacement"]
 pixabay.com##div[class^="adSponsoredMediaContainer-"]
 pixabay.com##div[class^="cell--"]:has(button[aria-label="About this advertiser"])
@@ -60397,6 +60401,7 @@ super.sina.cn##.call_up_banner
 superbexperience.com###root > div > .container-style
 supercanemagic.com###SE-disclaimer
 supercarblondie.com##.h-\[660px\]
+supercarblondie.com##.inarticle-ad
 supercars.com##.footer-promo
 supercell.com##.bs-site-alert
 supercheats.com##.cboth_sm
