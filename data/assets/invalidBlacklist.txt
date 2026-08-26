@@ -373,8 +373,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 105014
-! Blocked Filters: 43383
+! Blocked Filters: 101944
+! Blocked Filters: 43384
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -414,8 +414,8 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 287621
-! Blocked domains: 7538
+! Blocked domains: 293060
+! Blocked domains: 7751
 ! Blocked: 4.894 rules
 ! Blocked: 564 rules
 ! Blocked: 847 rules
@@ -442,11 +442,11 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: Iyqvpa0H14OA8xhXYmXdCw
-! Checksum: N8M5KTxa7nyflb95yFyQSg
+! Checksum: SznWFzumKgLuI41/4VHi1A
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: e5VI/l/woYCWs1VZIWKDow
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
+! Checksum: igCxE8/YgUUvcPw6EBTd1Q
+! Checksum: pTcVbJD/gSIbwlXR+fgjsA
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -764,12 +764,11 @@
 ! Last modified: 2026-08-20T04:17:08.555Z
 ! Last modified: 2026-08-26T06:14:16.668Z
 ! Last modified: 2026/03/11 09:15 +0800
-! Last modified: 2026/08/26 13:35:55
-! Last modified: 2026/08/26 13:35:56
+! Last modified: 2026/08/26 14:59:55
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 24 Aug 2026 13:45 UTC+7
-! Last modified: 26 Aug 2026 06:11 UTC
+! Last modified: 26 Aug 2026 07:21 UTC
 ! Last modified: 30 Jan 2021
 ! Last modified: 30 Nov 2023 11:33 UTC
 ! Latvian
@@ -1221,9 +1220,8 @@
 ! Version: 202601201
 ! Version: 202603110915
 ! Version: 20260817194548
-! Version: 202608260611
-! Version: 20260826133555
-! Version: 20260826133556
+! Version: 202608260721
+! Version: 20260826145955
 ! Version: 2608241345
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3504,7 +3502,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-08-26T13:51:26+08:00
+# Update time: 2026-08-26T14:51:32+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -41179,6 +41177,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$script,third-party,match-case,header=popads-node
 /^https:\/\/www\.[a-z]{8,9}\.com\/[a-z]+\.js$/$domain=pornhoarder.net
 /^https:\/\/www\.gayxnow\.com\/[a-z][a-z][a-z][a-z][a-z][a-z]?\.js$/$script
+/^https:\/\/www\.locopelis\.com\/[a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9]\.js$/$script,match-case
 /^https:\/\/www\.natomanga\.com\/js\/[a-f0-9]{32}\.js$/$script,domain=natomanga.com
 /^https:\/\/www\.sextu\.com\/([a-z]{9,12})\/([a-z]{9,12})\.js$/$domain=sextu.com
 /^https:\/\/www\.xiguashuwu\.com\/[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?\/[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?\.js\?v=/$script,domain=xiguashuwu.com
@@ -54974,7 +54973,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls^
 @@||cdnjs.cloudflare.com^
 @@||cdnjs.com^
-@@||cdnlivetv.is/api/v1/channels/player/?name=$third-party,subdocument,stealth=referrer
 @@||cdnqq.net/ad/api/popunder.js$script
 @@||cdns.*.gigya.com/gs/webSdk/Api.aspx$stealth=referrer
 @@||cdns.*.gigya.com/js/Api.htm?$stealth=referrer
