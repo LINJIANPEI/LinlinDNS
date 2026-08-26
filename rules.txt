@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-26 13:22:29（北京时间）
+! Version: 2026-08-26 14:27:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70151
+! Total count: 70154
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -7812,6 +7812,7 @@
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls^
 @@||cdnjs.cloudflare.com^
 @@||cdnjs.com^
+@@||cdnlivetv.is/api/v1/channels/player/?name=$third-party,subdocument,stealth=referrer
 @@||cdnqq.net/ad/api/popunder.js$script
 @@||cdns.*.gigya.com/gs/webSdk/Api.aspx$stealth=referrer
 @@||cdns.*.gigya.com/js/Api.htm?$stealth=referrer
@@ -61217,6 +61218,7 @@ techrepublic.com###mantle_skin > div > .ad-active + div[style="width:100%"]
 techrepublic.com###nav-ad
 techrepublic.com##.ad-active + div[style="width:100%"]:not([class]):not([id])
 techrepublic.com##.ad-container
+techrepublic.com##.jwplayer-wrapper
 techrepublic.com##.prose > div.has-data-empty\:hidden
 techrepublic.com##[data-ad-slot]
 techrepublic.com##div[data-ad-slot]
@@ -63002,6 +63004,7 @@ titantv.com##td[id^="menutablelogocell"]
 titantv.com##td[style="vertical-align:top; position:relative; min-width:160px;"]
 titantv.com##tr.gridRow > td > [id] > div:first-child
 titantv.com##tr:has(> td[align="center"][valign="middle"][colspan="2"][class="gC"])
+titulky.com###brds
 titulky.com##.bnx
 titulky.com##a[href="/internetova-reklama/"]
 titulky.com##div[id^="bny"]
