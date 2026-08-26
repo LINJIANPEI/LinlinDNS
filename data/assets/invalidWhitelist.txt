@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14720
+! Total count: 14726
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-08-26 09:39:30（北京时间）
+! Version: 2026-08-26 21:00:38（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1511,6 +1511,7 @@
 @@.pexcard.com^$jsinject,elemhide,extension
 @@.php$subdocument,stealth,domain=/dizipal\d+.com/
 @@.php?id=$script,domain=surirt.com
+@@.php?id=$third-party,subdocument,stealth=referrer,domain=dlstreams.st
 @@.php?play_vid=$subdocument,stealth=referrer,domain=xyflv.cc
 @@.png#$domain=3dpchip.com|9zvip.net|club.tgfcer.com|coolinet.com|digit77.com|e9china.net|upxin.net
 @@.png#$domain=almezoryae.com
@@ -1691,6 +1692,7 @@
 @@/dh-anti-adblocker/public/js/adex.js
 @@/dh-anti-adblocker/public/js/prebid-ads.js
 @@/dh-new-anti-adblocker-lite/public/js/prebid-ads.js
+@@/e/*$third-party,subdocument,stealth=referrer,domain=dlstreams.st
 @@/email-decode.min.js$domain=linkneverdie.net
 @@/embed/*$stealth=referrer,subdocument,domain=ldcstreaming.info|sportsonline.*|elixx.xyz|primefoot.ru|lavents.la
 @@/embed/*$subdocument,stealth=referrer,domain=strims.*|daddyhd.com|daddylive.*
@@ -1875,6 +1877,7 @@
 @@/webadvert.$domain=webadv.net
 @@/weborama.js$~third-party,domain=zertalious.xyz|digworm.io
 @@/webtracking/*$domain=pasts.lv
+@@/wiki.php?player=$third-party,subdocument,stealth=referrer,domain=wikisport.info
 @@/wp-banners.js$domain=azsoft.*|downfile.site
 @@/wp-content/*/social_$domain=servercat.me
 @@/wp-content/img/*$stealth=referrer,domain=komikcast.*
@@ -9779,6 +9782,7 @@
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/*/videojs.ads.min.js$domain=streamx.live
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads^$domain=in.gr
 @@||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls^
+@@||cdnlivetv.is/api/v1/channels/player/?name=$third-party,subdocument,stealth=referrer
 @@||cdnqq.net/ad/api/popunder.js$script
 @@||cdns.*.gigya.com/gs/webSdk/Api.aspx$stealth=referrer
 @@||cdns.*.gigya.com/js/Api.htm?$stealth=referrer
@@ -10830,7 +10834,9 @@
 @@||downfile.site/fuckadblock.js
 @@||downfile.site^$generichide
 @@||download.3dzip.org^$generichide
+@@||download.amd.com/js/analytics/analyticscore-min.js$domain=amdgaming.com
 @@||download.amd.com/js/analytics/analyticscore.js
+@@||download.amd.com/js/analytics/analyticsinit.js$domain=amdgaming.com
 @@||download.com/ad-
 @@||download.hr/module/detector/adsbygoogle.js
 @@||download.inventivetalent.org/external/adfly/make.php
