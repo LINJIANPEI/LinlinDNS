@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-27 10:22:18（北京时间）
+! Version: 2026-08-27 21:16:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70168
+! Total count: 70158
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4149,10 +4149,10 @@
 @@.instantservice.com$document
 @@.jpg#$domain=huhupan.com
 @@.jpg#$domain=marketmovers.it
+@@.jpg$stealth=referrer,domain=streamingnow.mov
 @@.jpg|$third-party,xmlhttprequest,stealth=referrer,domain=embdmstrplayer.com
 @@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.js?fcd=true$domain=snopes.com
-@@.m3u8$domain=rapid-cloud.co,xmlhttprequest,stealth=referrer
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$stealth=referrer,domain=edgedeliverynetwork.com
 @@.m3u8$stealth=referrer,domain=iyf.tv
@@ -4362,10 +4362,13 @@
 @@/dh-anti-adblocker/public/js/adex.js
 @@/dh-anti-adblocker/public/js/prebid-ads.js
 @@/dh-new-anti-adblocker-lite/public/js/prebid-ads.js
+@@/e/*$subdocument,stealth=referrer,domain=sportsonlinee.*|sportsonline.*|wikisport.info
 @@/e/*$third-party,subdocument,stealth=referrer,domain=dlstreams.st
 @@/email-decode.min.js$domain=linkneverdie.net
 @@/embed/*$stealth=referrer,subdocument,domain=ldcstreaming.info|sportsonline.*|elixx.xyz|primefoot.ru|lavents.la
 @@/embed/*$subdocument,stealth=referrer,domain=strims.*|daddyhd.com|daddylive.*
+@@/embed/*$third-party,subdocument,stealth=referrer,domain=sportsbite.*
+@@/embed/*.jpg$subdocument,stealth=referrer,domain=hollymoviehd.cc
 @@/favicon.ico$domain=cricket365.com|football365.com|golf365.com|loverugbyleague.com|planetf1.com|planetfootball.com|planetrugby.com|teamtalk.com|tennis365.com
 @@/favicon.ico$domain=lubetube.com
 @@/favicon.ico$third-party,domain=thehouseofportable.com
@@ -4435,7 +4438,6 @@
 @@/js/advertisement.$domain=blogs.sapib.ca
 @@/js/adview_*.adsbygoogle.js$~third-party,domain=letv8.cc|zhibo1.cc
 @@/js/countd.js?rand=$script,stealth=referrer,domain=financemonk.net
-@@/js/fuckadb.js$~third-party,domain=megaurl.in
 @@/js/prebid-$domain=huruwo.top
 @@/js/prebid-ads.js$~third-party,domain=sharetext.me|getpaste.link
 @@/js/prebid/*/others.$script,domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
@@ -4493,6 +4495,7 @@
 @@/scripts/*m3u8$xmlhttprequest,stealth=referrer,domain=1stream.eu|streameast.app|thecrackstreams.live
 @@/scripts/adv.js$domain=securenetsystems.net
 @@/sd0embed/*$subdocument,stealth=referrer
+@@/seg/*.m4s|$xmlhttprequest,stealth=referrer,domain=cinezo.live
 @@/sensorsdata-$domain=aixiaoyuan.cn|zkh.com
 @@/sensorsdata.$domain=36kr.com|53zaixian.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
 @@/sensorsdata.$domain=36kr.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
@@ -4659,7 +4662,6 @@
 @@q=$xmlhttprequest,stealth=referrer,domain=player.videasy.*|cineby.*|cineplay.to|fmovies.*|vidup.to|vidfast.vc|vidking.net
 @@safari-extension://com.adguard.safari-$document
 @@safari-extension://com.adguard.safaridev-$document
-@@seg-*.*$domain=rapid-cloud.co,xmlhttprequest,stealth=referrer
 @@style/*/*jpeg$xmlhttprequest,stealth=referrer,domain=weakspell.to
 @@thalia.de/shop/*.html?pid=*&group_id=0&banner_id=
 @@truyen$stealth=referrer,image,domain=blogtruyen.vn
@@ -6786,7 +6788,6 @@
 @@||bagehd.com/iplookup.
 @@||bagi.co.in/*/js/advertisement.js
 @@||bagi.co.in^$generichide
-@@||bagusdl.pro^$generichide
 @@||bahn.de/*/*/suche$stealth=referrer
 @@||baidu-taobao-av.com/js/home.js
 @@||baidu-taobao-av.com/js/jquery.
@@ -9221,7 +9222,6 @@
 @@||dy-pic0.iqiyipic.com^
 @@||dydog.org/*/DPlayer.min.css
 @@||dydog.org/*/DPlayer.min.js
-@@||dynaccent.net^$subdocument,stealth=referrer,domain=sportsonlinee.*|sportsonline.*
 @@||dynamic-images-picturehappy.*.amazonaws.com^$stealth=referrer,domain=picturehappy.lv
 @@||dynamicpapers.com^$generichide
 @@||dynamicyield.com/scripts/*/dy-coll-nojq-min.js$domain=gigasport.at|gigasport.ch|gigasport.de
@@ -13239,8 +13239,6 @@
 @@||megatv.com^$generichide
 @@||megaup.net/ads.js
 @@||megaup.net^$generichide
-@@||megaurl.in/adi/advertisement.js
-@@||megaurl.in^$generichide
 @@||megawypas.com^$generichide
 @@||megaxh.com^$script,~third-party
 @@||mein.mobile.de/*/*id=
@@ -18472,7 +18470,6 @@
 @@||trinitymedia.ai/player/$stealth=referrer
 @@||trip-jam.com/resources/js/adsense.js
 @@||trip.cmbchina.com^$generichide
-@@||trip.com^$extension='AdGuard Popup Blocker'|'AdGuard Popup Blocker (Beta)'
 @@||tripcentral.ca^$stealth=dpi
 @@||tripo-data.s*-accelerate.amazonaws.com^$stealth=3p-auth,domain=tripo3d.ai
 @@||tritinia.com^$generichide
@@ -19456,7 +19453,7 @@
 @@||workers.dev/media-proxy?$xmlhttprequest,stealth=referrer,domain=cinemove.cc
 @@||workers.dev/p/$xmlhttprequest,stealth=referrer,domain=embedindia.st
 @@||workers.dev^$xmlhttprequest,stealth=referrer,domain=embed.st
-@@||workers.dev^$xmlhttprequest,third-party,stealth=referrer,domain=cinelove.live|netplayz.top
+@@||workers.dev^$xmlhttprequest,third-party,stealth=referrer,domain=cinelove.live|netplayz.*
 @@||world.qpic.cn^
 @@||world4.eu/wp-content/plugins/ad-inserter-pro/images/ads.png
 @@||world4.eu/wp-content/uploads/ad-inserter/*/*.js
@@ -30834,6 +30831,7 @@ doku5.com###msgWindowX
 dokumentyzastrzezone.pl###gkTopBar
 dolarhoje.com###privacy-warning
 dolciveloci.it###detect ~ div[style^="display: flex; align-items: center; justify-content: center; position: fixed;"]
+dollardescent.net,123chill.to##div[style*="position: absolute"][style$="z-index: 2147483647;"]
 dollargeneral.com###myModal
 dollargeneral.com##.dg-product-card:has(.dg-product-card__sponsored[style="display: block;"])
 dollargeneral.com##.dgsponsoredcarousel
@@ -31472,7 +31470,6 @@ dyhjw.com##.nn_link
 dyktanda.pl##a[href^="https://bit.ly/"].highlight
 dyktanda.pl##div[style="width: 100%; display: flex; justify-content: center;"]
 dyktanda.pl##footer + aside[class="modal-container modal-container-loaded"]#modal
-dynaccent.net,123chill.to##div[style*="position: absolute"][style$="z-index: 2147483647;"]
 dynamicwallpaper.club##.affiliate
 dynavap.com###cookie
 dynos.es###cuerpo > div:not([id]):not([class])
@@ -35310,8 +35307,6 @@ fullporno.site,gay-streaming.com,gayvideo.me##.sgpb-popup-overlay
 fullscreen.com##body > .banner
 fullscreenmedia.co##.banner, #banner
 fulltaboo.tv###content > aside.widget-area
-fulltime-predict.com##div[class^="prediction_homeImgDiv"]
-fulltime-predict.com##div[style^="overflow: hidden; min-width:"]
 fulltv.com.ar###canales-derecha > div[class]:has(iframe[src*="ver.gratis/"])
 fulltv.com.ar###content > div[class]:has(> iframe[src*="ver.gratis/"])
 fulltv.com.ar###wrap > div[class]:has(> div > iframe[src*="ver.gratis/"])
@@ -41248,8 +41243,8 @@ ipn.pt###cookie-law-panel
 ipodnikatel.cz##.footer-banner-container
 ipolitics.ca,qpbriefing.com##.big-box
 ipolska24.pl,benchmark.pl##.wp-billboard
+ipolska24.pl,benchmark.pl,dobreprogramy.pl,so-magazyn.pl,parenting.pl,fotoblogia.pl,kafeteria.pl,pudelek.pl,genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img:is([src^="https://v.wpimg.pl/"], [src*="/images/adv/placeholder"]):first-child + div:is([class*=" "], [class*="-"]) + script:last-child)
 ipolska24.pl,benchmark.pl,dobreprogramy.pl,so-magazyn.pl,parenting.pl,fotoblogia.pl,kafeteria.pl,pudelek.pl,genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img:is([src^="https://v.wpimg.pl/"], [src*="/images/adv/placeholder"]):first-child + div[class*=" "] + div[class*=" "] + script:last-child)
-ipolska24.pl,benchmark.pl,dobreprogramy.pl,so-magazyn.pl,parenting.pl,fotoblogia.pl,kafeteria.pl,pudelek.pl,genialne.pl,money.pl,abczdrowie.pl,autokult.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,polygamia.pl,pysznosci.pl,o2.pl,wp.pl##div[class*=" "]:has(> img:is([src^="https://v.wpimg.pl/"], [src*="/images/adv/placeholder"]):first-child + div[class*=" "] + script:last-child)
 ipolska24.pl,jastrzabpost.pl,money.pl,o2.pl,wp.pl##article aside > .flex-none > div[class*=" "]:has(> div[class*=" "]:first-child + script:last-child)
 ipon.hu##div[x-data="cookiePolicy"]
 ipornia.com##.tcats > ul > li.fel-vd
@@ -46804,9 +46799,6 @@ megatube.xxx##a[href="https://www.megatube.xxx/go/my-tiny-wish/"]
 megatube.xxx##a[href^="https://www.megatube.xxx/go/"] > img
 megatube.xxx##iframe[id^="inp_iframe"]
 megatube.xxx,gay0day.com##.video-holder > a[target="_blank"]
-megaurl.in###link-view > .form-group + center
-megaurl.in###myModal
-megaurl.in##.modal-backdrop
 megawrzuta.pl##.slickModal.isActive, .notification
 megaxh.com##.xplayer-banner-bottom
 megayoungsex.com###divExoLayerWrapper
@@ -51451,6 +51443,7 @@ oppai.stream##.rm-c
 opportunitydesk.info##a[href^="https://www.iu.org/"]
 opposhop.cn##.oc-hairline--bottom.welcome-wrapper
 ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##.top-billboard
+opstream.fun##aside.sticky:has(> a[href="/advertise#placements"])
 opswat.com###cookie-ntc
 opti-wohnwelt.de##.accContentWrapper div[class*="gdprBar"]
 optical-center.fr###cookieOk
@@ -55389,9 +55382,6 @@ rapidtables.com##.banner, #banner
 rapnews.pl###sgpb-popup-dialog-main-div-wrapper
 rapnews.pl##.sgpb-popup-overlay
 raportkolejowy.pl##.footbottombar
-raportwarszawski.pl,nowinypolnocne.pl,cozadzien.pl,telewizjagorzow.pl,krosno112.pl,tvswietokrzyska.pl,przegladpiaseczynski.pl###main-content > .text-center:has(> [class*="d-inline-block"] > .tipad_tag)
-raportwarszawski.pl,nowinypolnocne.pl,cozadzien.pl,telewizjagorzow.pl,krosno112.pl,tvswietokrzyska.pl,przegladpiaseczynski.pl##.tipad_tag
-raportwarszawski.pl,nowinypolnocne.pl,cozadzien.pl,telewizjagorzow.pl,krosno112.pl,tvswietokrzyska.pl,przegladpiaseczynski.pl##div[class*="widget-advert_"]
 rappler.com###rappler3-common-desktop-top-ad
 rappler.com##.rappler-ad-container
 rappler.com##.rappler-light-gray  .mm-circle-container > .mm-preloader > #Rappler_Moods
@@ -57446,7 +57436,7 @@ setopati.com###modalbox-banner
 setopati.com##.top-main-ads > .mast-head
 settrade.com###pdpa-policy
 seulink.net##a[href^="https://ads."]
-seulink.online,bitfly.io,shrinkme.in,streamsport.pro,fir3.net,dz4link.com,megaurl.in,aii.sh,ckk.ai##a[href][target="_blank"] > img
+seulink.online,bitfly.io,shrinkme.in,streamsport.pro,fir3.net,dz4link.com,aii.sh,ckk.ai##a[href][target="_blank"] > img
 seura.fi##.nativead:not(.list)
 sevenforums.com##.chillad
 sevenforums.com##.infeed1
