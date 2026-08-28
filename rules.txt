@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-28 15:28:36（北京时间）
+! Version: 2026-08-29 03:44:07（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70168
+! Total count: 70176
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -10252,6 +10252,7 @@
 @@||github.io^$generichide,badfilter
 @@||github.site^
 @@||github.store^
+@@||githubusercontent.com^$stealth=referrer,domain=github.com
 @@||gitlab.cn^
 @@||gitlab.com/api/v4/projects/$~third-party
 @@||gitlab.com^
@@ -36118,6 +36119,10 @@ gcore.com##gcore-cookies-settings
 gcorelabs.com##.confirmed_cookie
 gcpat.com##.ms-dlgOverlay, .ms-dlgContent
 gcxa.cn###edu_ad63
+gd.games##div[style="position: relative; display: flex; flex-direction: column; gap: 2px; justify-content: center; align-items: center; padding: 8px;"]
+gd.games##div[style="position: relative; display: flex; flex-direction: column; gap: 2px; justify-content: center; align-items: center;"]
+gd.games##div[style="position:relative;display:flex;flex-direction:column;gap:2px;justify-content:center;align-items:center"]
+gd.games##div[style="position:relative;display:flex;flex-direction:column;gap:2px;justify-content:center;align-items:center;padding:8px"]
 gd.qq.com###r_ad
 gd163.cn##.bbs_ad
 gd163.cn,itavcn.com,jmnews.com.cn###msg_win
@@ -59387,6 +59392,7 @@ spidersweb.pl##.columns > .row > .show-for-large > aside.sidebar.margin-bottom40
 spidersweb.pl##.hasSlotAd
 spidersweb.pl##.main > #SpidersWeb_SW__HDH1_HTH1_HMH1
 spidersweb.pl##.newAd
+spidersweb.pl##.onnetwork-video-player
 spidersweb.pl##.slot1
 spidersweb.pl##a[href^="http://clk.tradedoubler.com/click?"] > img
 spidersweb.pl##a[href^="https://www.playstation.com/"] > img
@@ -61071,6 +61077,8 @@ techbang.com##.techbang_i_m_970x250_1
 techbang.com##div[class^="techbang_inline_"]
 techbeacon.com##a[href="https://events.vertica.com/unify"]
 techbii.com##.herald-ad
+techbixby.com,holyscans.com.tr,ketubanjiwa.com,liddread.com,gkbooks.in,sayphotobooth.com,headlinerpost.com,dinheirocursosdownload.com,santhoshrcf.com,tnstudycorner.in,trucosonline.com,seriu.jp,notesformsc.org,viewmyknowledge.com,starxinvestor.com,postazap.com,lovendal.ro,rabo.no,edivaldobrito.com.br,nsfwr34.com,kits4beats.com##body > .site-footer + div[id][class*=" "]
+techbixby.com,ssdhostting.com,tob.news,fitpractise.com,techdirectarchive.com,secnews.gr,magcourse.site,supjav.ru,umatechnology.org,3dvf.com,aimhaven.com,comicsuniverse.it,macmagazine.com.br,ubunlog.com,thesportsgrail.com,downtownbellevue.com,androidsis.com,voiceofmotown.com,thethaiger.com,unseki.co.jp,wikibio.us,nexus-games.net,freecoursesite.com,formu1a.uno,toolsai.net,rightrasta.com,kaystls.site,gamertweak.com,mrinformatico.it,pianetacellulare.it,inwepo.co,updoc.site,oliveoiltimes.com,cgmagonline.com,happymag.tv,cpophome.com##.code-block
 techbloat.com###rk-exit-modal-bg
 techbloat.com###rk-sidebar-cta
 techbloat.com##.rk-inline-banner
