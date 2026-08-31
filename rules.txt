@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-08-31 09:06:09（北京时间）
+! Version: 2026-08-31 15:50:03（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70190
+! Total count: 70197
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -3783,6 +3783,7 @@
 7news.az##iframe#disableIframeBanner
 7news.az,ann.az##.sidebarbanner
 7plus.com.au###app > [class*="cookieContainer"]
+7reels.cc##.my-3:has(> div.mx-auto > div.rounded-md > button[aria-label="Sponsored"])
 7sim.net##div[class^="ads"]
 7sim.net##html > body ~ div
 7tv066.com##.a-d-block
@@ -4368,6 +4369,7 @@
 @@/email-decode.min.js$domain=linkneverdie.net
 @@/embed/*$stealth=referrer,subdocument,domain=ldcstreaming.info|sportsonline.*|elixx.xyz|primefoot.ru|lavents.la
 @@/embed/*$subdocument,stealth=referrer,domain=strims.*|daddyhd.com|daddylive.*
+@@/embed/*$subdocument,stealth=referrer,domain=trend48.st
 @@/embed/*$third-party,subdocument,stealth=referrer,domain=sportsbite.*
 @@/embed/*.jpg$subdocument,stealth=referrer,domain=hollymoviehd.cc
 @@/favicon.ico$domain=cricket365.com|football365.com|golf365.com|loverugbyleague.com|planetf1.com|planetfootball.com|planetrugby.com|teamtalk.com|tennis365.com
@@ -4496,6 +4498,7 @@
 @@/scripts/*m3u8$xmlhttprequest,stealth=referrer,domain=1stream.eu|streameast.app|thecrackstreams.live
 @@/scripts/adv.js$domain=securenetsystems.net
 @@/sd0embed/*$subdocument,stealth=referrer
+@@/seg-$xmlhttprequest,stealth=referrer,domain=flixcloud.cc
 @@/seg/*.m4s|$xmlhttprequest,stealth=referrer,domain=cinezo.live
 @@/sensorsdata-$domain=aixiaoyuan.cn|zkh.com
 @@/sensorsdata.$domain=36kr.com|53zaixian.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
@@ -9443,6 +9446,7 @@
 @@||envato.market^|
 @@||eolinker.com^$generichide
 @@||ephoto360.com/js/blockadblock.js
+@@||epiembeds.online^$subdocument,stealth=referrer,domain=trendy48.site
 @@||epikplayer.xyz/embed/$stealth=referrer
 @@||episode.pmcontent.com^$stealth=referrer
 @@||epnt.ebay.com/static/epn-smart-tools.js$xmlhttprequest,domain=theshedend.com
@@ -21890,6 +21894,7 @@ animekimi.com###animekimiads1
 animekimi.com##.animekimi-banner
 animelab.com##.progress-bar > div[class="aip"]
 animeland.su,itcats.ru,nekto.me,noadsradio.ru,sharkgame.ru,studies.in.ua,w10.jeanzzz.ru##.no-adb
+animelok.live##button[aria-label="Play video and view sponsor"]
 animemotivation.com##img[width="1000"][height="250"]
 animenewsnetwork.com##.gutter
 animenewsnetwork.com##.herald-boxes > div[class="box"]:first-child
@@ -55368,6 +55373,7 @@ randomsatoshi.win##.RS-Header-banner-xlg
 randomwordgenerator.com###RWG_Bottom_Banner_Desktop_970px
 randomwordgenerator.com###RWG_Sidebar_Banner_Desktop_970px
 randomwordgenerator.com###RWG_Under_Video_Player
+rank1st.in##footer#colophon + div[id][class*=" "]
 rankedboost.com##.Article-A-Align
 rankedboost.com##.ArticleTopInsert
 rankedboost.com##.ArticleTopInsert-Updated
@@ -59321,6 +59327,7 @@ speedcheck.org##.isg-container
 speedguide.net##body > div[style="position:relative; margin:auto; padding: 0px; width:728px; height:100px; text-align:center;"]
 speedguide.net##body > div[style="position:relative; margin:auto; padding: 0px; width:728px; height:95px; text-align:center;"]
 speedmeter.sk###w_notice
+speedof.me##.background-container > :is(div,section)[class]:not([class*="-"],[class*="progress"],[class*="cookie"],[class*="footer"])
 speedof.me##.ftl-zone
 speedof.me##.mezgopv-zone
 speedof.me##.test-ad-container
