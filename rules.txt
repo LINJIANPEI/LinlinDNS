@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-04 02:12:29（北京时间）
+! Version: 2026-09-04 05:28:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70261
+! Total count: 70265
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -33572,6 +33572,9 @@ fastadmin.net##a[href^="https://www.fastadmin.net/go/"]
 fastadmin.net##body > a[target="_blank"]
 fastalp.biz##.policy, #policy, .cpolicy
 fastbikesmag.com##.main-sidebar > aside[id^="custom_html-"]
+fastcars1.com###adblock-modal
+fastcars1.com###lm-slideup
+fastcars1.com###popup
 fastcompany.co.za##div[class^="google-ad_"]
 fastcompany.com##.adhesive-banner
 fastcompany.com##.article-container > div.py-8
@@ -57521,6 +57524,7 @@ setn.com##.rightFloat
 setopati.com###modalbox-banner
 setopati.com##.top-main-ads > .mast-head
 settrade.com###pdpa-policy
+seturl.in###blocker-overlay
 seulink.net##a[href^="https://ads."]
 seulink.online,bitfly.io,shrinkme.in,streamsport.pro,fir3.net,dz4link.com,aii.sh,ckk.ai##a[href][target="_blank"] > img
 seura.fi##.nativead:not(.list)
