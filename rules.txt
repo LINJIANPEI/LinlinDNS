@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-03 18:17:48（北京时间）
+! Version: 2026-09-03 22:47:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70241
+! Total count: 70272
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -2842,6 +2842,7 @@
 265g.com##a[href^="http://union-click.jd.com/"]
 265g.com##div[class^="ban"]
 27ka.cn##a[href*="/go/"]
+27ka.cn,sunnylife.tw###custom_html-5
 28188.com,28188.net,yxad.com###nav
 28hse.com###floating_left_div
 28xl.com##table[style^="width:678px; height:280px;"]
@@ -4157,6 +4158,7 @@
 @@.jpg|$third-party,xmlhttprequest,stealth=referrer,domain=embdmstrplayer.com
 @@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.js?fcd=true$domain=snopes.com
+@@.js|$xmlhttprequest,domain=pahe.plus|aii.sh
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$stealth=referrer,domain=edgedeliverynetwork.com
 @@.m3u8$stealth=referrer,domain=iyf.tv
@@ -5773,6 +5775,7 @@
 @@||aftonbladet.se^$generichide
 @@||ag.innovid.com/dv/sync$domain=mylifetime.com
 @@||agazeta.com.br^$generichide
+@@||agoda.net/cdn-supply-iam/static/js/webanalytics.$domain=agoda.com
 @@||ah-me.com^$generichide
 @@||ahcdn.com/*.mp4$domain=xhamster.com
 @@||ahcdn.com/key=$stealth=referrer
@@ -15214,6 +15217,7 @@
 @@||pagerank.fr/js*/advert.js?$script
 @@||pages.dev^$stealth=referrer
 @@||pages.github.com^
+@@||pahe.plus^$generichide
 @@||pakkotoisto.com/js/siropu/am/ads.min.js$domain=pakkotoisto.com
 @@||palcurr.com^$generichide
 @@||pallok.com^$generichide
@@ -19012,6 +19016,7 @@
 @@||vidabytes.com^$generichide
 @@||vidcache.net:*/*/*.mp4$stealth=referrer
 @@||vidcdn.co/iframe/$stealth=referrer
+@@||vide.karavid.top^$stealth=referrer
 @@||vide0.net^$generichide
 @@||videacesky.cz^$generichide
 @@||vidembed.re/stream$stealth=referrer
@@ -21148,7 +21153,9 @@ alfabank.ru###alfa > .platform > noindex, #agreement-popup
 alfajertv.com##div._ads
 alfakan.si##.jquery-bar
 alfakassan.se###cookies
+alfavita.gr###ocm_inread
 alfavita.gr##.main__top
+alfavita.gr##.ocm-outbrain-wrapper
 alfred.camera##.noty_layout
 alfred.com##.privacy-policy.content
 alfredflechtheim.com##.SetNewMessageForUser
@@ -22970,6 +22977,7 @@ autocarpro.in##.skinad
 autocarpro.in##body div[class^="ad-section-"]
 autocentrum.pl##.saplConfigurator
 autocentrum.pl##body > div[class]:empty
+autocentrum.pl##style + div[class]:has(> script:first-child + img[src^="https://v.wpimg.pl/"][alt] + div:last-child)
 autodoc.co.uk###traffic_banner_wrapper_interstitial
 autodoc.de##.gdpr-panel
 autoevolution.com###swipebox-right::before
@@ -25837,6 +25845,7 @@ buffsports.stream,sportcast.life###pr
 bug.hr##.cookie
 bug.hr##.main-content > div[class^="block  "] > div[class=""] > div.block__content:has(span.heading-section__logo > img[alt*=" preporu"])
 bugmenot.com###color-names
+buildcores.com##li.group\/menu-item:has(a[href="/sponsored"])
 builds.gg##.consent, #consent
 buildsometech.com,fulllengthaudiobook.com,audiobooklabs.com,bestjoblive.com,profitableventure.com###ai_widget-2
 builtbybit.com##.resourceSidebar-belowContent > div > .block:has(.block-container a[href="https://tebex.io/"])
@@ -29930,6 +29939,9 @@ deavita.net##center > span[style="margin: 10px 0;"]
 debenhams.com##div[data-test-id^="sponsored-product-card"]
 debex-potsdam.de###cookie
 debgen.fr##cloudflare-app[app="welcome-bar"]
+debica24.pl##.page > .grid > .grid__container > .grid__row:has(> .grid__col > .adv)
+debica24.pl,wawa.info,goral24.pl,katowice24.info,gazetaolsztynska.pl##.adv
+debica24.pl,wawa.info,goral24.pl,katowice24.info,gazetaolsztynska.pl##.grid__ad
 debka.com##.top-full-width-sidebar
 decalgirl.com##.cookieBubble
 decathlon.com.br##.cookie-policies
@@ -31527,6 +31539,7 @@ dziennikwschodni.pl##.l-content > div[style="display: flex; justify-content: cen
 dziennikwschodni.pl##.rodo-modal
 dziennikzachodni.pl##.atomsCell
 dziennikzachodni.pl##div[id^="atomsAds"]
+dziennikzwiazkowy.com,radiozamosc.pl,dziennikwschodni.pl##.tipad_tag
 dziwneobrazki.pl##.adsbygoogle
 dzone.com##.partner-resources-block
 dzone.com##body > div[id^="om-"]
@@ -35339,6 +35352,9 @@ fulltv.com.mx,fulltv.tv##.social > div[class]:has(iframe[src*="fulltv.video/"])
 fulltv.tv###canales-derecha > div[class]:has(iframe[src*="fulltv.video/"])
 fulltv.tv###content > div[class]:has(> iframe[src*="fulltv.video/"])
 fulltv.tv###wrap > div[class]:has(> div > iframe[src*="fulltv.video/"])
+fullvideos.tv##.adb-small
+fullvideos.tv##.adb-wrapper
+fullvideos.tv##.u-ad-unit
 fullvideosporn.com###s-suggesters
 fullvideosporn.com###underplayer_direct
 fullvideosporn.com##.info-holder > div.da-text
@@ -35471,8 +35487,11 @@ fxempire.com##span[style="user-select:none"]
 fxhome.com##.elementor-location-footer[data-elementor-type="section"], section[class*="cookiesContainer"]
 fxleaders.com###fxl-popup-banner
 fxmag.pl##div[class*="Container_header_ad_"] > div[style^="min-height:90px;min-width:1px"]
+fxmag.pl##div[class*="_header_ad"]
 fxmag.pl##div[class^="AdBlockDetect_container"]
 fxmag.pl##div[class^="Ad_bottom_"]
+fxmag.pl##div[class^="SidebarWithAds-"][class*="__ad_"]
+fxmag.pl##text[class^="Ad-module-"]
 fxmag.pl##text[class^="Ad_"]
 fxp.co.il##div[style^="position: fixed;width: 162px; height: 600px;"]
 fxsforexsrbijaforum.com###pun-announcement
@@ -47435,6 +47454,7 @@ mistressdestiny.com##table[width="775"]
 mistrzowie.org###skyRightWrapper
 mistrzowie.org##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 mistrzowie.org,joemonster.org##.video-js[data-attr-player="mcnPlayer2"]
+mistrzowie.org,kwejk.pl##.ads
 mitaku.net###block-28
 mitaku.net###secondary > .widget_media_image > .wp-block-image > a:not([href*="mitaku.net"]) > img
 mitbbs.ca,mitbbs.com##.index_add
@@ -47743,6 +47763,9 @@ mogewu.com##.download > a[href*="@"]
 mogewu.com##.zfb_icon
 moises.ai##.floating-banner
 moja-ostroleka.pl###otwarty_artykul > div[style]:has(> div#taboola-below-article-thumbnails)
+moja-ostroleka.pl##.recomended-news__list > div[id^="inside_"]
+moja-ostroleka.pl##div[class]:has(> div:first-child:not([class]) + div:last-child > div[data-id])
+moja-ostroleka.pl##div[class]:has(> div:first-child:not([class]) + div:last-child:is([id*="inside_"],[id^="bottom_"]))
 moja-ostroleka.pl##div[style="width:730px;height:75px;display:block;margin:0 auto;"]
 mojagazetka.com##div[data-cy="AdsWrapper"]
 mojagazetka.com##div[data-testid="AdsWrapper"]
@@ -55315,6 +55338,9 @@ radiogdansk.pl###rodoModal
 radioinsight.com##div[id^="radio-"]
 radiojura.pl##.sec-promo
 radiolab.org##.membership-promo
+radiolodz.pl##.elementor-element > div > figure:has(> a[target="_blank"] ~ figcaption)
+radiolodz.pl##.elementor-widget-premium-carousel-widget
+radiolodz.pl##.elementor-widget-wrap > div.elementor-element:has(> div.elementor-widget-container > h6)
 radiologie-dachau.de###zcookie
 radiologie-mannheim.de###cookie_bar_v2
 radioluisteren.fm###cbar
@@ -56192,6 +56218,7 @@ rkanr.com##.bill
 rkw-kompetenzzentrum.de###rkw-infolayer
 rlsbb.cc##[href^="https://rlsbb.cc/link.php"]
 rlsbb.ru##[href^="https://rlsbb.ru/link.php"]
+rlyj.net.cn,taotu.org,catchv.fooish.com###ad
 rmastri.it###cokadv
 rmdown.com###foo1ter
 rmf.fm###RMF_FM_sg_bill
@@ -58270,6 +58297,7 @@ skagerak.dk##.popup-msg
 skai.gr##.taboola
 skanetrafiken.se###cookie
 skapiec.pl##.cookies-rwd
+skarbiec.biz##.side-right > .widget:has(> .ad)
 skardu.pk,iumkit.net,latinluchas.com,zegtrends.com,sysguides.com##body > .wrapper + div[id][class*=" "]
 skargards.com###cc_dialog
 skat-spielen.de###cookieTest
@@ -60637,6 +60665,8 @@ swfchan.com###aaaa
 swgoh.gg##.ad-item
 swgoh.gg##.sw-ad-mrec
 swgoh.gg##.sw-ad-row
+swiadomaoc.org##.cs-banner-entry
+swiadomaoc.org##div[data-element_type="container"]:has(> div[data-widget_type="cs-banner.default"])
 swiat-agd.com.pl##body > div:not([id]):not([class])
 swiat-laptopow.pl##body > div:not([id]):not([class])[style*="fixed"], body > div:not([id]):not([class])[style*="absolute"]
 swiat-sypialni.pl###box_alert
@@ -64541,6 +64571,7 @@ typing-speed.net##div[class^="avt_"]
 typingme.com##.ad970x250
 typingtest.com##.result #middle-banner-unit
 typingtestnow.com##a[href$=".clickbank.net/"] > img
+typosthes.gr,alfavita.gr,evros-news.gr##.adv
 tyran.io###ad_970x250
 tyran.io###middle-wrap #left_box_div[style^="display:inline-block;"]
 tyran.io##div[id^="scoreboard_ad_"]
