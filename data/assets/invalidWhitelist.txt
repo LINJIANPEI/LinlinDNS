@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14742
+! Total count: 14746
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-09-03 11:51:01（北京时间）
+! Version: 2026-09-04 00:09:47（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -1488,6 +1488,7 @@
 @@.jpg|$third-party,xmlhttprequest,stealth=referrer,domain=embdmstrplayer.com
 @@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.js?fcd=true$domain=snopes.com
+@@.js|$xmlhttprequest,domain=pahe.plus|aii.sh
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$stealth=referrer,domain=edgedeliverynetwork.com
 @@.m3u8$stealth=referrer,domain=iyf.tv
@@ -7751,6 +7752,7 @@
 @@||aftonbladet.se^$generichide
 @@||ag.innovid.com/dv/sync$domain=mylifetime.com
 @@||agazeta.com.br^$generichide
+@@||agoda.net/cdn-supply-iam/static/js/webanalytics.$domain=agoda.com
 @@||ah-me.com^$generichide
 @@||ahcdn.com/*.mp4$domain=xhamster.com
 @@||ahcdn.com/key=$stealth=referrer
@@ -16828,6 +16830,7 @@
 @@||pagead2.googlesyndication.com^$domain=fplstatistics.com
 @@||pagead2.googlesyndication.com^$domain=ytlarge.com
 @@||pages.dev^$stealth=referrer
+@@||pahe.plus^$generichide
 @@||pakkotoisto.com/js/siropu/am/ads.min.js$domain=pakkotoisto.com
 @@||palcurr.com^$generichide
 @@||pallok.com^$generichide
@@ -20241,6 +20244,7 @@
 @@||vidabytes.com^$generichide
 @@||vidcache.net:*/*/*.mp4$stealth=referrer
 @@||vidcdn.co/iframe/$stealth=referrer
+@@||vide.karavid.top^$stealth=referrer
 @@||vide0.net^$generichide
 @@||videacesky.cz^$generichide
 @@||vidembed.re/stream$stealth=referrer

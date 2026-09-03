@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-03 22:47:01（北京时间）
+! Version: 2026-09-04 02:12:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70272
+! Total count: 70261
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -20340,6 +20340,7 @@ abcnews.go.com##.navigation__hulu
 abcnews.go.com##[data-testid="prism-sticky-ad"]
 abcnews.go.com##div[data-container="band"]:has(> div > div[data-box-type="fitt-adbox-thinbannerhome"])
 abcnews.go.com,edarabia.com##.leaderboard-970
+abcnews4.com,wach.com##div[class*="MidArticleAdUnit_"]
 abconcerts.be##.cookie-consent
 abcya.com##.a-leader
 abcya.com##.a-skyscraper
@@ -33026,7 +33027,6 @@ evolutrans.fr###cookies
 evopayments.eu###zwcc
 evowars.io##div[id^="evowars-io_"]
 evreporter.com##.widget_media_image:not(:has(a[href^="https://evreporter.com/"]))
-evros-news.gr##.adv
 evros-news.gr##.content-area > div[id^="text-"]
 evs.com##.language-switcher
 evtech.news##.article-ad-widget
@@ -36093,8 +36093,6 @@ gazeta.pl##.o-section__adform
 gazeta.pl##.offers__wrapper > .sliderr--offers
 gazeta.pl##.serviceLogo__additionalElements:has(> .serviceLogo__partner)
 gazeta.pl##section ~ .newspapers
-gazetaolsztynska.pl##.adv
-gazetaolsztynska.pl##.grid__ad
 gazetapraca.pl###overlayJS
 gazetaprawna.pl##.contentStreamFactory
 gazetaprawna.pl##.infor-ad
@@ -37117,8 +37115,6 @@ goosedaily.com##div[class^="ad-area-"]
 goout.net##.goout-cookie-overlay
 gophersports.com###global-top-ad
 goplextor.com###notebox2
-goral24.pl##.adv
-goral24.pl##.grid__ad
 goral24.pl##.grid__col > div.card:has(> div.custom-html-box)
 gordonua.com##.cookie-label
 gorecenter.com,guruhitech.com##body > div[id][class^="popup"][class$="wrap"][style]
@@ -43030,8 +43026,6 @@ katitube.com##li > a[href][target="_blank"]
 katitube.com$$script:contains(ltvClicksCurrent)
 katorishintoryu.it###SITE_ROOT ~ div[data-reactid*="siteAspectsContainer"]
 katowice-airport.com##body > div:not([id]):not([class])
-katowice24.info##.adv
-katowice24.info##.grid__ad
 katowice24.info##.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div[id^="bills_in_rotation_"] > a[href^="https://www.sdsm.pl/"])
 katsbotanicals.com##.conv_type_bar
 katu.com##div[class^="DisplayAdvert"]
@@ -52810,12 +52804,10 @@ ping-test.net##.rek970x90
 ping-test.net##div[style^="width: 336px; height: 280px;"]
 ping.chinaz.com##.sth > .col-red
 ping.eu##td > center[style="margin-bottom: 2px;"]
-ping0.cc###adhright
 ping0.cc###adiright
 ping0.cc###websites-wrap:has([rel$="sponsored"])
 ping0.cc##.adeles
 ping0.cc##.aditems
-ping0.cc##.xceles
 ping0.cc##.xdeles
 ping0.cc##a[rel="noopener nofollow"][target="_blank"]:has(> [class^="close"])
 pingback.com##.cookies-modal
@@ -60973,7 +60965,6 @@ taoguba.com.cn##.ct_app
 taoguba.com.cn##.wz_ad
 taohuayun.cn##img[width="150"][height="60"]
 taotu.org##a[href="/jbb"]
-taotu.org,catchv.fooish.com###ad
 taoziba.cc##.vddb2 + a
 tap-coin.de##.dracoinbox
 tap.az###js-lotriver-top-banner
@@ -66597,9 +66588,7 @@ waw4free.pl##.zlokonieczne
 waw4free.pl$$script:contains(Wykryliśmy adblocka)
 waw4free.pl$$script:contains(adbinfo)
 waw4free.pl$$style:contains(document.documentElement.scrollTop?document.documentElement.scrollTop:document)
-wawa.info##.adv
 wawa.info##.custom-html-box
-wawa.info##.grid__ad
 wawa.info##.grid__col > .card:has(> .box > .box__container > div[id^="bills_in_"])
 wawa.info##.grid__row > .grid__col > .card--box:has(> .custom-html-box > .podawacz-spots)
 waybig.com##.ad-above-comments

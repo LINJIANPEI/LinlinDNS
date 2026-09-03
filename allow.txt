@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-03 22:47:01（北京时间）
+! Version: 2026-09-04 02:12:29（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 19748
+! Total count: 19752
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=androidpolice.com|babygaga.com|backyardboss.net|carbuzz.com|cbr.com|collider.com|dualshockers.com|footballfancast.com|footballleagueworld.co.uk|gamerant.com|givemesport.com|hardcoregamer.com|hotcars.com|howtogeek.com|makeuseof.com|moms.com|movieweb.com|pocket-lint.com|pocketnow.com|screenrant.com|simpleflying.com|thegamer.com|therichest.com|thesportster.com|thethings.com|thetravel.com|topspeed.com|xda-developers.com
@@ -70,6 +70,7 @@
 @@.jpg|$third-party,xmlhttprequest,stealth=referrer,domain=embdmstrplayer.com
 @@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.js?fcd=true$domain=snopes.com
+@@.js|$xmlhttprequest,domain=pahe.plus|aii.sh
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$stealth=referrer,domain=edgedeliverynetwork.com
 @@.m3u8$stealth=referrer,domain=iyf.tv
@@ -6333,6 +6334,7 @@
 @@||aftonbladet.se^$generichide
 @@||ag.innovid.com/dv/sync$domain=mylifetime.com
 @@||agazeta.com.br^$generichide
+@@||agoda.net/cdn-supply-iam/static/js/webanalytics.$domain=agoda.com
 @@||ah-me.com^$generichide
 @@||ahcdn.com/*.mp4$domain=xhamster.com
 @@||ahcdn.com/key=$stealth=referrer
@@ -15410,6 +15412,7 @@
 @@||pagead2.googlesyndication.com^$domain=fplstatistics.com
 @@||pagead2.googlesyndication.com^$domain=ytlarge.com
 @@||pages.dev^$stealth=referrer
+@@||pahe.plus^$generichide
 @@||pakkotoisto.com/js/siropu/am/ads.min.js$domain=pakkotoisto.com
 @@||palcurr.com^$generichide
 @@||pallok.com^$generichide
@@ -18823,6 +18826,7 @@
 @@||vidabytes.com^$generichide
 @@||vidcache.net:*/*/*.mp4$stealth=referrer
 @@||vidcdn.co/iframe/$stealth=referrer
+@@||vide.karavid.top^$stealth=referrer
 @@||vide0.net^$generichide
 @@||videacesky.cz^$generichide
 @@||vidembed.re/stream$stealth=referrer
