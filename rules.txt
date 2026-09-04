@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-04 19:57:17（北京时间）
+! Version: 2026-09-04 23:20:50（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70273
+! Total count: 70285
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4159,6 +4159,7 @@
 @@.js$xmlhttprequest,stealth=referrer,domain=roxiestreams.*
 @@.js?fcd=true$domain=snopes.com
 @@.js|$xmlhttprequest,domain=pahe.plus|aii.sh
+@@.js|$xmlhttprequest,domain=pahe.plus|aii.sh|intercelestial.com|tpi.li
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$stealth=referrer,domain=edgedeliverynetwork.com
 @@.m3u8$stealth=referrer,domain=iyf.tv
@@ -9548,6 +9549,7 @@
 @@||expresswords.xyz^$generichide
 @@||exsite24.pl/cdn-cgi/challenge-platform/$stealth=ip
 @@||external.productinformation.abb.com/PisWebApi/$stealth=3p-auth
+@@||extractpics.com^$generichide
 @@||extraimage.co^$generichide
 @@||extreme-down.plus^$popup,domain=extreme-down.plus
 @@||extreme-ip-lookup.com/json/$xmlhttprequest,domain=skaitv.gr
@@ -10471,6 +10473,7 @@
 @@||googleads.g.doubleclick.net/pagead/id$domain=rscripts.net
 @@||googleads.g.doubleclick.net/pagead/id$xmlhttprequest,domain=gamemag.ru
 @@||googleads.g.doubleclick.net/pagead/id$xmlhttprequest,domain=resulthubdtu.com
+@@||googleads.g.doubleclick.net/pagead/id?r=$domain=leeapk.com
 @@||googleads.g.doubleclick.net/pagead/images/abg$domain=lolalytics.com
 @@||googleads.g.doubleclick.net/pagead/imgad$domain=zeroupload.com
 @@||googleads.g.doubleclick.net/pagead/interaction/$domain=hotels.historyofyesterday.com
@@ -11940,6 +11943,7 @@
 @@||integration.plarium.com^$stealth=java
 @@||intelcorporationproductione*.org.coveo.com/rest/search/$stealth=3p-auth
 @@||intelyvale.com.mx/ads/images/$domain=valesdegasolina.mx
+@@||intercelestial.com^$generichide
 @@||intercom-clicks.com^
 @@||interest.mix.sina.com.cn^
 @@||interface.music.163.com.163jiasu.com^
@@ -12507,6 +12511,7 @@
 @@||lecteurvideo.com/embed.php?id=$stealth=referrer
 @@||lecturel.com^$generichide
 @@||ledevoir.com^$stealth=ip
+@@||leeapk.com^$generichide
 @@||leechall.com^$generichide
 @@||leechers-paradise.org^
 @@||leechers-paradise.org^|
@@ -18407,6 +18412,7 @@
 @@||tpc.googlesyndication.com^$domain=edition.cnn.com
 @@||tpc.googlesyndication.com^$domain=hoyts.com.au
 @@||tpc.googlesyndication.com^$domain=ytlarge.com
+@@||tpi.li^$generichide
 @@||tpstelemetry.tencent.com^
 @@||tq121.com.cn/j/ad/caoyu-min.js$domain=products.weather.com.cn
 @@||tr.rdrtr.com^
@@ -50204,6 +50210,8 @@ niedziela.pl##.cookies
 nieruchomosci.interia.pl##.hero-banner-wrapper
 nieuwsmotor.nl##.uk-position-bottom
 niezalezna.pl##.wtg
+niezalezna.pl##div[data-gpt-slot-wrapper]
+niezalezna.pl##div[data-onnetwork-player]
 niezalezna.pl##div[style="min-height: 300px;"]
 nieznany-numer.pl##.content div[style="height:280px"]
 niftytrader.in##.top_six_brokers
@@ -58589,6 +58597,7 @@ smalldev.tools##a[href="https://sendit.arcana.network"]
 smallnetbuilder.com##div[id^="snb-"]
 smallnetbuilder.com##iframe[src^="//ws-na.amazon-adsystem.com/"]
 smallpopo.com##.fabox
+smallseotools.co.uk###adBlockerOverlay
 smallseotools.com##.mx-auto.d-block
 smallseotools.com##body .sticki_ssb
 smallseotools.com##div[style="height:90px"]
@@ -63507,6 +63516,7 @@ torrentdownloads.net##.advert_img
 torrentdownloads.pro###links_friends
 torrentdownloads.pro##.download > li > a[href^="/td/"] > img
 torrentdownloads.pro##img[src="/templates/new/images/titl_tag2.jpg"]
+torrentfreak.com##.side-sponsors
 torrentfreak.com##.widget-1.widget_custom_html
 torrentfreak.com##section > div.o-widget:has(> p > a[rel*="sponsored"])
 torrentfunk.com##.content td[align="center"] > a[href*=".html"] > picture
@@ -63519,6 +63529,7 @@ torrentgalaxy.unblockninja.com###blockalert
 torrentgalaxy.unblockninja.com###stopad
 torrenthound.com##.whitebg td
 torrentino.me##div[class^="banner-"]
+torrentinvites.net##.focus-ad
 torrentleech.org###disableAdPic > a > img
 torrentleech.org##.login-banner
 torrentleech.org##div[style="height:640px; width:160px;"]
@@ -64879,6 +64890,7 @@ unibilgi.net,watchfreejavonline.co,bollyflix.lol,artificialintelligencestechnolo
 unicajabanco.es##.CC05:not(.cc05-privada) #cookieModalStart
 unicode-table.com##.content-inside-banner
 unicode-table.com##.main__top-updated-ad
+unicodeplus.com##.g-top
 unicorn.asso.eu.org##.bg-amber-900\/20
 unicorn.asso.eu.org##a[href^="https://www.effectivegatecpm.com/"]
 unicreditbank.cz###pop-down
