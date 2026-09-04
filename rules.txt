@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-04 09:52:06（北京时间）
+! Version: 2026-09-04 14:43:36（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70265
+! Total count: 70267
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4183,7 +4183,7 @@
 @@.pexcard.com^$jsinject,elemhide,extension
 @@.php$subdocument,stealth,domain=/dizipal\d+.com/
 @@.php?id=$script,domain=surirt.com
-@@.php?id=$third-party,subdocument,stealth=referrer,domain=dlstreams.st
+@@.php?id=$third-party,subdocument,stealth=referrer,domain=dlive.sx
 @@.php?play_vid=$subdocument,stealth=referrer,domain=xyflv.cc
 @@.png#$domain=3dpchip.com|9zvip.net|club.tgfcer.com|coolinet.com|d1-dm.com|digit77.com|e9china.net|upxin.net
 @@.png#$domain=3dpchip.com|9zvip.net|club.tgfcer.com|coolinet.com|digit77.com|e9china.net|upxin.net
@@ -4369,7 +4369,7 @@
 @@/dh-anti-adblocker/public/js/prebid-ads.js
 @@/dh-new-anti-adblocker-lite/public/js/prebid-ads.js
 @@/e/*$subdocument,stealth=referrer,domain=sportsonlinee.*|sportsonline.*|wikisport.info
-@@/e/*$third-party,subdocument,stealth=referrer,domain=dlstreams.st
+@@/e/*$third-party,subdocument,stealth=referrer,domain=dlive.sx
 @@/email-decode.min.js$domain=linkneverdie.net
 @@/embed/*$stealth=referrer,subdocument,domain=ldcstreaming.info|sportsonline.*|elixx.xyz|primefoot.ru|lavents.la
 @@/embed/*$subdocument,stealth=referrer,domain=strims.*|daddyhd.com|daddylive.*
@@ -34515,6 +34515,7 @@ foodora.fi##.top-banner-container
 foodora.no##.top-banner-container
 foodora.se##.top-banner-container
 foodrenegade.com##.top-cta
+foodrepublic.com,hunker.com,islands.com,mashed.com,nickiswift.com,thelist.com##.raptive-video-player
 foodrepublic.com,islands.com##.article > .under-art:has(> .zergnet-widget)
 foodsforbetterhealth.com###text-46
 foodtribe.com###root > div[class]:last-child:not(:only-child)
@@ -60330,6 +60331,7 @@ stuff.co.nz###fisher-funds-banner
 stuff.co.nz###stuff-to-solve-no-sponsor
 stuff.co.nz###suzuki-sport-section-banner
 stuff.co.nz##.between-ad-slot
+stuff.co.nz##.cw-hp-top-banner-container
 stuff.co.nz##.header-container
 stuff.co.nz##.horizontal-ad-slot
 stuff.co.nz##.min-h-\[133px\]
