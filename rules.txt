@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-10 02:07:01（北京时间）
+! Version: 2026-09-10 05:20:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70365
+! Total count: 70370
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -6538,6 +6538,7 @@
 @@||apps2app.com^$generichide
 @@||appsec-mobile.meituan.com^
 @@||appsha-pnd.ctengine.io/js/script.js$domain=faucetcrypto.com
+@@||appspot.com^$stealth=referrer,domain=stitch.withgoogle.com
 @@||appstore.pandora.xiaomi.com^
 @@||appstore.vivo.com^
 @@||appsupport.qq.com^
@@ -54559,6 +54560,7 @@ proglib.io###cookie
 programiz.com##.privacy-policy
 programiz.com##.pub-ad
 programme-tv.net##.gridRow-cards + div[class^="img_"]
+programme.tvb.com##.tvb-ads--empty
 programmer-club.com.tw##A[href*="/ADRedirect."]
 programmerhumor.io###product-widget
 programmerhumor.io##.programmer-essentials-widget
@@ -68814,6 +68816,10 @@ xvideos.com$$div[class="remove-ads"]
 xvideos.com,xvideos.es##.player-video.xv-cams-block
 xvideos.es,xvideos.com,xv-ru.com##.top-top
 xvideos.name###publicidad-video
+xvideos2.com###content > div.exo-ad-ins-container + div[class]:has(> a[href^="https://s.zline0.com/"][target="_blank"])
+xvideos2.com,xvideos.com###ad-footer
+xvideos2.com,xvideos.com##.remove-ads > *
+xvideos2.com,xvideos.es,xvideos.com,xv-ru.com##.top-top
 xvna.com##.articleAD
 xvna.com##.rctad
 xw.qq.com###opeApp
@@ -69856,7 +69862,6 @@ zentia.com##.enigmaint_cookie-notice
 zentica-global.com##.gdpr-settings
 zeny.tiscali.cz##.exchange-box
 zeoob.com##div[style^="min-height:"].col-xs-12
-zeoob.com,nasdaq.com##div[class^="ads_"]
 zepass.com##.bloc-notifications
 zeperfs.com###alertemsg
 zeperfs.com##iframe[src^="iframe-tm.php?tag=16&page="]

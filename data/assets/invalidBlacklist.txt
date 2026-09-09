@@ -373,8 +373,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 106417
-! Blocked Filters: 43545
+! Blocked Filters: 106428
+! Blocked Filters: 43551
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -414,7 +414,7 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 214677
+! Blocked domains: 214784
 ! Blocked domains: 5311
 ! Blocked: 4.894 rules
 ! Blocked: 564 rules
@@ -441,12 +441,12 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
+! Checksum: 2s1rRlalyu+W3AAbqdLM9g
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: Rpa0t+901GrBsS8ybLZfIw
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: bd6jArfwCHSpzNzYg2MSTw
+! Checksum: WouOZL5jUK6asykJqzQFsw
+! Checksum: bSwFPzMFGgOyElYXoSIpQA
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: nD1JcBcKj34nx8DwsEhpGQ
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -758,15 +758,15 @@
 ! Last modified: 03 Feb 2014 03:50 UTC
 ! Last modified: 08 Sep 2026 15:55 UTC+7
 ! Last modified: 09 Dec 2020 10:42 UTC+7
-! Last modified: 09 Sep 2026 17:52 UTC
+! Last modified: 09 Sep 2026 21:11 UTC
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
-! Last modified: 2026-09-09T16:16:19.859Z
 ! Last modified: 2026-09-09T16:19:23.371Z
+! Last modified: 2026-09-09T20:14:20.897Z
 ! Last modified: 2026/09/08 06:47 +0800
-! Last modified: 2026/09/09 20:51:35
+! Last modified: 2026/09/10 03:11:13
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1220,8 +1220,8 @@
 ! Version: 202601201
 ! Version: 202609080647
 ! Version: 20260909081133
-! Version: 202609091752
-! Version: 20260909205135
+! Version: 202609092111
+! Version: 20260910031113
 ! Version: 2609081555
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3505,7 +3505,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-09-10T01:52:31+08:00
+# Update time: 2026-09-10T04:52:34+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -53748,6 +53748,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||apps2app.com^$generichide
 @@||appsec-mobile.meituan.com^
 @@||appsha-pnd.ctengine.io/js/script.js$domain=faucetcrypto.com
+@@||appspot.com^$stealth=referrer,domain=stitch.withgoogle.com
 @@||appstore.pandora.xiaomi.com^
 @@||appstore.vivo.com^
 @@||appsupport.qq.com^
@@ -111665,6 +111666,7 @@ proglib.io###cookie
 programiz.com##.privacy-policy
 programiz.com##.pub-ad
 programme-tv.net##.gridRow-cards + div[class^="img_"]
+programme.tvb.com##.tvb-ads--empty
 programmer-club.com.tw##A[href*="/ADRedirect."]
 programmerhumor.io###product-widget
 programmerhumor.io##.programmer-essentials-widget
@@ -130287,6 +130289,16 @@ xvideos.com,xvideos.es##.player-video.xv-cams-block
 xvideos.es,xvideos.com,xnxx.*,xv-ru.com,xnxx-ru.com##.e-banner-game
 xvideos.es,xvideos.com,xv-ru.com##.top-top
 xvideos.name###publicidad-video
+xvideos2.com###content > div.exo-ad-ins-container + div[class]:has(> a[href^="https://s.zline0.com/"][target="_blank"])
+xvideos2.com,xpxp.eu,mashentai.com,xfeed.com,hqfap.com,telugusexkathalu.com,pornjav.tv,xv-ru.com,xvideos.com,xnxx.com,pmvhaven.com#%#//scriptlet('abort-on-property-read', 'exoJsPop101')
+xvideos2.com,xvideos.com###ad-footer
+xvideos2.com,xvideos.com##.remove-ads > *
+xvideos2.com,xvideos.com#%#//scriptlet('remove-class', 'has-banner', '#page > #main > #profile-title')
+xvideos2.com,xvideos.com#@##video-right
+xvideos2.com,xvideos.com#@#.remove-ads
+xvideos2.com,xvideos.com$$div[class="remove-ads"]
+xvideos2.com,xvideos.es,xvideos.com,xnxx.*,xv-ru.com,xnxx-ru.com##.e-banner-game
+xvideos2.com,xvideos.es,xvideos.com,xv-ru.com##.top-top
 xvna.com##.articleAD
 xvna.com##.rctad
 xw.qq.com###opeApp
@@ -131638,7 +131650,6 @@ zentica-global.com##.gdpr-settings
 zeny.tiscali.cz##.exchange-box
 zeoob.com##div[style^="min-height:"].col-xs-12
 zeoob.com#@#.ads_div
-zeoob.com,nasdaq.com##div[class^="ads_"]
 zepass.com##.bloc-notifications
 zeperfs.com###alertemsg
 zeperfs.com##iframe[src^="iframe-tm.php?tag=16&page="]
