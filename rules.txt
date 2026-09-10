@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-11 02:47:32（北京时间）
+! Version: 2026-09-11 05:17:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70374
+! Total count: 70378
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -5547,6 +5547,7 @@
 @@||ads.colombiaonline.com/ad/$domain=colombiaonline.com
 @@||ads.console.aliyun.com^
 @@||ads.creative-serving.com/yoc^$domain=youronlinechoices.com
+@@||ads.cs.washington.edu^
 @@||ads.cs.washington.edu^$popup
 @@||ads.dainikbhaskar.com/AdTech/ads/ads.js
 @@||ads.dblink.us$~image,~third-party
@@ -5558,6 +5559,7 @@
 @@||ads.emarketer.com/redirect.spark?$popup,domain=emarketer.com
 @@||ads.exoclick.com/ads.js$domain=sss.xxx|hdzog.com|hclips.com
 @@||ads.farakav.com/group/*?uid=$domain=video.varzesh3.com
+@@||ads.finance^
 @@||ads.finance^$popup
 @@||ads.freewheel.tv/|$media,domain=cnbc.com|fxnetworks.com|my.xfinity.com|nbc.com|nbcsports.com
 @@||ads.google.com^
@@ -53542,6 +53544,7 @@ pons.com###pons-ad-leaderboard__container
 pons.com##.parallax-container
 pons.com##body div[id^="ad_contentslot"]:not(#style_important)
 pons.com##div[class^="idm_topslot_"]
+pons.com##div[data-slot="mpu"]
 ponte.hu##.gdpr
 poolandspacentre.co.uk##.alert-dismissible
 poool.fr###app > .fade-in-enter-done
@@ -60499,6 +60502,7 @@ subyshare.com##a[href*="&utm_medium=banner"][target="_blank"]
 subzero-wolf.com##.footer-announcement
 succesagenda.com##.notification-wrapper
 success.ivanti.com##.cookies
+successcds.net##a[href^="https://superprofile.bio/vp/Class-10-combo-offer"]
 sucha24.pl##.grid__container > div.grid__row > div.grid__col:has(> div.card > div.box > div.box__container > div a[href^="https://intermarche.pl/"])
 sucha24.pl##.grid__container > div.grid__row:has(> div.grid__col > div.card > div.box > div.box__container > div > center a[href]):not(:has(div[id^="calendar_"]))
 sucredorge.com###cnil, .cnil, #CNIL
