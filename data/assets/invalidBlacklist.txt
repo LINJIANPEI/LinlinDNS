@@ -373,8 +373,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 106460
-! Blocked Filters: 43557
+! Blocked Filters: 106475
+! Blocked Filters: 43562
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -414,7 +414,7 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 214927
+! Blocked domains: 215037
 ! Blocked domains: 5331
 ! Blocked: 4.894 rules
 ! Blocked: 564 rules
@@ -442,12 +442,12 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
+! Checksum: BP5OM1UUEJx7gVJ/KySTWg
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
-! Checksum: UTQZ0wkiT/zTJ178obAP0w
-! Checksum: UrtGJ7aXzP2Okt8ubr3ehQ
+! Checksum: V+GQDM6VEGhP33ai/4tGEw
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
+! Checksum: gQfnNt4Z/tgsEgM8gD9i4g
 ! Checksum: vXO2skD37egAcrKzRVhe1A
-! Checksum: vpPOg1My26vAzwf9ch/1DA
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -758,15 +758,15 @@
 ! Last modified: 03 Feb 2014 03:50 UTC
 ! Last modified: 08 Sep 2026 15:55 UTC+7
 ! Last modified: 09 Dec 2020 10:42 UTC+7
-! Last modified: 11 Sep 2026 18:42 UTC
+! Last modified: 11 Sep 2026 21:12 UTC
 ! Last modified: 19 Dec 2020 03:10 UTC
 ! Last modified: 2020-12-19T00:07:53.876Z
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-09-09T16:19:23.371Z
-! Last modified: 2026-09-11T18:17:30.137Z
+! Last modified: 2026-09-11T20:14:29.134Z
 ! Last modified: 2026/09/08 06:47 +0800
-! Last modified: 2026/09/11 20:43:58
+! Last modified: 2026/09/12 03:04:42
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 30 Jan 2021
@@ -1220,8 +1220,8 @@
 ! Version: 202601201
 ! Version: 202609080647
 ! Version: 20260909081133
-! Version: 202609111842
-! Version: 20260911204358
+! Version: 202609112112
+! Version: 20260912030442
 ! Version: 2609081555
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3506,7 +3506,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-09-12T01:51:39+08:00
+# Update time: 2026-09-12T04:51:29+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -51340,6 +51340,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@.adserver.$domain=litv.tv
 @@.amazon.*/sample/$stealth=referrer
 @@.b-cdn.net/*.m3u8?$xmlhttprequest,stealth=referrer
+@@.cfd/hls/*.jpg$stealth=referrer
 @@.cn:8005/$domain=www.ntdm9.com|www.mxdm9.com|mxdm6.com|ntdm6.com
 @@.co.uk/wp-banners.js$domain=advertiserandtimes.co.uk|northern-scot.co.uk|suffolknews.co.uk|kentonline.co.uk|cambridgeindependent.co.uk|fenlandcitizen.co.uk|granthamjournal.co.uk|stratford-herald.com|spaldingtoday.co.uk
 @@.com/*/*.avif$image,stealth=referrer,domain=bilimanga.net
@@ -51816,6 +51817,8 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@://html-load.com/loader.min.js$domain=dogdrip.net|smsonline.cloud
 @@://localhost/$generichide
 @@://localhost:$generichide
+@@://m1.*.*/v/*/*.css$xmlhttprequest,stealth=referrer
+@@://m1.*.*/v/*/*/*-*.$xmlhttprequest,stealth=referrer
 @@://streamcdn.xyz/hls/$stealth=referrer
 @@://www.bet365.com/|$jsinject,elemhide,extension
 @@://www.coinbase.com^$stealth=webrtc
@@ -126342,7 +126345,6 @@ videos.tybito.com,videos.pornototale.com,videos.eispop.com,videos.porndig.com#$#
 videos.tybito.com,videos.pornototale.com,videos.eispop.com,videos.porndig.com#%#//scriptlet('abort-on-stack-trace', 'document.querySelector', 'checkVisibility')
 videosalon.jp#@#.adwidget
 videosdemadurasx.com##.link
-videosdemadurasx.com,an1.com,getsetclean.in,sexgames.cc##a[rel^="sponsored"]
 videosection.com##.faphouse-adv
 videosection.com##.header__nav-item--adv-link
 videosection.com##.iframe-adv
