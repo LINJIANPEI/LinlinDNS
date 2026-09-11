@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-11 19:55:28（北京时间）
+! Version: 2026-09-11 23:26:18（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70382
+! Total count: 70397
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -15286,7 +15286,6 @@
 @@||partner.googleadservices.com^$domain=popsugar.com
 @@||partner.ipla.tv/embed/$stealth=referrer
 @@||partner.market.yandex.ru^$stealth=referrer
-@@||partner.o2online.de^
 @@||partner.o2online.de^|
 @@||partner.speedtestcustom.com^$stealth=referrer
 @@||partnerads.ysm.yahoo.com/favicon1.ico
@@ -20538,9 +20537,11 @@ acquire.io##.home-announcement
 acronymfinder.com###anchorad
 acronymfinder.com##.sc
 acronymfinder.com##.search-results > .tab-content > .result-list > tbody > tr > td[colspan="3"]:not([id]):not([class])
+acronymfinder.com##.ts
 acronymfinder.com##body > div:not([id]):not([class])
 acronymfinder.com##div[style="display:inline-block;width:320px;height:265px"]
 acronymfinder.com##img[style="max-width:728px;width:100%"]
+acronymfinder.com##tr:has(.ts)
 act-store.com###POPUPS_WRAPPER
 actievandedag.nl###__next > div > .fixed.bottom-0
 action.com##.cookieModal
@@ -22812,6 +22813,7 @@ atleti.pl##.jl_ads_section
 atleti.pl##a[href="/go/fortuna-tv"] > img
 atleti.pl##a[href="/go/fuksiarz"] > img
 atleti.pl##header ~ div[style="margin: 20px auto; float: left; width: 100%;"]
+atleticalive.it###zdn-adblock-overlay
 atleticodemadrid.com###cookies
 atlpresscollective.com,luzmedia.co,therover.ca##.iam-ad
 atlpresscollective.com,luzmedia.co,therover.ca,thestraight.com.au##.iam-ad
@@ -32493,6 +32495,9 @@ eni.com##c-ecp-cookies-banner
 enikom-m.com###cookies
 enikonomia.gr##.inner-sidebar-ad-widget
 enikos.gr##.billboard-wrap
+enikos.gr##.flex-col.h-full:has(> h4.font-bold)
+enikos.gr##.flex-col.h-full:has(> p.font-medium)
+enikos.gr##.sticky:has(> p.font-medium)
 enikos.gr,real.gr##.advertisement
 enimerosi.com##.aritle-detail-description > div.row:has(> div > picture > img.banner_desktop)
 enimerosi.com##.detail-right-sd > div.d-sm-block:has(picture > img.banner_desktop)
@@ -40488,6 +40493,8 @@ imagetwist.com###grip
 imagetwist.com##.text-center > a[href][target="_blank"] > video
 imagetwist.com##[href^="https://imagetwist.com/pxt/"]
 imagetwist.com##a[href*="/par/"]
+imagetwist.com##a[href*="/track?v="]
+imagetwist.com##a[href^="https://landing.candynetwork.ai/"]
 imageweb.ws##a[href^="http://reallygoodlink.freehookupaffair.com"]
 imagexport.com##.top-menu > li > b > a[class]
 imagexport.com##p[style="display: block; text-align:center;"] ~ br + div[class="text-center"]
@@ -43593,6 +43600,8 @@ kolagames.com##.slot
 kolarzyk.pl###cookie_info_kl
 kolbi.pl##body > div:not([id]):not([class])
 kolding.dk###jGrowl
+kolekcjonerki.com##.sidebar > .mb-3:has(> .small + div > .adsbygoogle)
+kolekcjonerki.com##.sidebar > .small:has(+ div[id^="ceneoaffcontainer"])
 kollelbudget.com###text-43
 kollelbudget.com###text-70
 kollelbudget.com###text-78
@@ -60737,6 +60746,8 @@ svetmobilne.cz##.content > center > div[style="height:270px;"]:only-child
 svetmobilne.cz##.desktop
 svetmobilne.cz,svethardware.cz###header > #topbar > .box > a[target="_blank"] > img
 svetmobilne.cz,svethardware.cz###sidebar > .box > a[target="_blank"] > img
+svetserialu.to##.alert_premiumExpired
+svetserialu.to##body > div[class][style^="z-index:"]
 svgrepo.com##[class^="style_native"]:has([href*="buysellads.com"])
 svgrepo.com##div[id^="native-"][class^="style_native__"]
 svitla.com##.agree-popup
@@ -61284,6 +61295,7 @@ techcrunch.com##.marfeel-experience-event-cta
 techcult.com###block-37
 techdirectarchive.com,medeberiya.net##.block-widget
 techdirt.com##.top-promo
+techdoctoruk.com##div[data-testid="vpn-banner"]
 techedubyte.com###ckWrap
 techedubyte.com###superadblocker
 techedubyte.com##.gmr-banner-insidecontent
@@ -61577,6 +61589,7 @@ telecomasia.net,meta.reviews##.ratings-bo
 telecomasia.net,meta.reviews##.seo-link
 telecomasia.net,meta.reviews##.users-preferences
 telecomtalk.info##.second_post_adv_main
+telecomtalk.info##.tt-ad
 telefonguru.hu##div[style] > a[href^="https://www.arukereso.hu/mobiltelefon-"]
 telefonino.forumfree.it##div[style]:has(> div.OUTBRAIN)
 telegraf.tv,telegraf.rs##.banner-placeholder-text
@@ -65715,6 +65728,7 @@ vibefm.pl,voxfm.pl,eska.pl,se.pl,urzadzamy.pl##.zpr_box_topboard
 vibefm.pl,voxfm.pl,eskarock.pl##.zpr_top_1
 viber.com##.policy, #policy, .cpolicy
 vibez.pl##div[suppresshydrationwarning]
+vibez.pl##style + div[class]:has(> img[src^="https://v.wpimg.pl/"][alt]:first-child + div:last-child)
 vibilagare.se##.banner
 vibus.de###cw
 vice.com##.adph
@@ -67878,6 +67892,7 @@ wp.pl##[class^="_"]:has(> img[src*=".wp.pl"])
 wp.pl##a[href*="adv.wp.pl/"]
 wp.pl##body > b
 wp.pl$$script:contains(/var wp_gaf_rv[\s\S]*?\n.*"spin".*"dfpConfig".*"slots?"/)
+wp.pl,o2.pl##div[class*=" "]:has(> img[src^="https://v.wpimg.pl/"]:is(.wp-placeholder-img, .absolute):first-child + div:last-child)
 wpbakery.com##.top-message
 wpbeginner.com##.sidebardeals
 wpbeginner.com##.singleadthumbcontainer
