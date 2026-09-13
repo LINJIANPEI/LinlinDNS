@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-13 09:51:41（北京时间）
+! Version: 2026-09-13 14:56:13（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70394
+! Total count: 70396
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -21979,6 +21979,8 @@ anisearch.com###rrightX
 anisearch.com##.rect_sidebar
 anitrendz.com##div[style]:has(> div[style]:only-child > div[style]:only-child > .adsbygoogle)
 anitrendz.net###at-ads-back
+aniwixi.xyz###wixi-single-ad-overlay
+aniwixi.xyz##body > [style^="position: fixed; top: 0; left: 0;"][style*="z-index: 999999;"][target="_blank"]
 anjian.com##.ImgTop
 anjian.com,qq.com###advertisement
 anjuke.com###xajk_down_new
