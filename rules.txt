@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-15 09:10:28（北京时间）
+! Version: 2026-09-15 14:55:01（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70426
+! Total count: 70443
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4804,6 +4804,10 @@
 @@||*-verify.captcha-open-southeast.aliyuncs.com^
 @@||*-verify.captcha-open.aliyuncs.com^
 @@||*.*.szbdyd.com^
+@@||*.4399.com^
+@@||*.5054399.com^
+@@||*.7k7k.com^
+@@||*.7k7kimg.cn^
 @@||*.95516.com^
 @@||*.a.yximgs.com^
 @@||*.akamai-cdn-content.com^
@@ -4834,6 +4838,7 @@
 @@||*.heytapdownload.com^
 @@||*.hicloud.com^
 @@||*.img.mobile.sina.cn^
+@@||*.img4399.com^
 @@||*.in-addr.arpa^
 @@||*.ke.com^
 @@||*.lianjia.com^
@@ -11845,6 +11850,7 @@
 @@||img30.360buyimg.com^
 @@||img4.qy0.ru^
 @@||img4399.com/static/huodong/daily/fpv2.js
+@@||imga*.5054399.com^
 @@||imgadult.com/anex/alt2.js
 @@||imgadult.com/css/$domain=imgadult.com
 @@||imgadult.com/images/$domain=imgadult.com
@@ -15862,6 +15868,7 @@
 @@||pt.afl.rakuten.co.jp^
 @@||pt.afl.rakuten.co.jp^|
 @@||ptitchef.com/js/ads.js
+@@||ptlogin.4399.com^
 @@||ptlogin.yuewen.com^
 @@||pttcell.com.tr^$stealth=dpi
 @@||pttn.m3pd.com^
@@ -16466,6 +16473,7 @@
 @@||s1-static.msstatic.com/mfe/huya_main/*.html$xmlhttprequest,elemhide,jsinject,content,extension,domain=huya.com
 @@||s1.adform.net/banners/scripts/adx.js$domain=delfi.lt
 @@||s1.hdslb.com^
+@@||s1.img4399.com^
 @@||s1.kskwai.com^
 @@||s1.meituan.net^
 @@||s1.voicecloud.cn^
@@ -19529,7 +19537,6 @@
 @@||wp.youtube-anime.com^$image,stealth=referrer,domain=allmanga.to|mkissa.to
 @@||wpb.shueisha.co.jp^$generichide
 @@||wpfc.ml/b.gif$image,domain=holybooks.com
-@@||wplocker.com/advertisement.js
 @@||wpnrtnmrewunrtok.xyz/*preview/*/preview.jpg$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz/main/$image,domain=camwhores.tv
 @@||wpnrtnmrewunrtok.xyz^$domain=camwhores.ru.com|camvideos.org
@@ -19577,7 +19584,12 @@
 @@||www.360.cn^
 @@||www.360kuai.com^
 @@||www.360simg.com^
+@@||www.4399.cn^
+@@||www.4399.com^
+@@||www.5054399.com^
 @@||www.54647.io^
+@@||www.7k7k.com^
+@@||www.7k7kjs.cn^
 @@||www.9game.cn^
 @@||www.agiso.com^
 @@||www.airport.us^
@@ -41641,6 +41653,11 @@ ishuhui.com##.a_xx_d
 isidewith.com##.overlayBG
 isidewith.com##.overlayBG, .overlayContent
 isidewith.com##.overlayContent
+isitcracked.com##.ad-banner
+isitcracked.com##a[rel^="nofollow sponsored"]
+isitcracked.com##aside.hidden > div.sticky > div.rounded-xl:has(> p.tracking-widest)
+isitcracked.com##div.flex.justify-center:has(> div[class] > p.tracking-widest)
+isitcracked.com##div.min-h-screen > div.mx-auto:has(div.ad-banner)
 isitdownorjustme.net##.aioc_advertise_box
 isitdownorjustme.net##img[width="970"][height="250"]
 isitdownrightnow.com###commentstop
