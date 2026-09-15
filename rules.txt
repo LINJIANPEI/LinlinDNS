@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-15 20:20:00（北京时间）
+! Version: 2026-09-16 01:23:15（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70443
+! Total count: 70447
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4372,6 +4372,7 @@
 @@/dh-new-anti-adblocker-lite/public/js/prebid-ads.js
 @@/e/*$subdocument,stealth=referrer,domain=sportsonlinee.*|sportsonline.*|wikisport.info
 @@/e/*$third-party,subdocument,stealth=referrer,domain=dlive.sx
+@@/e/*?sub.info=https://svetserialu.to$stealth=referrer
 @@/email-decode.min.js$domain=linkneverdie.net
 @@/embed/*$stealth=referrer,subdocument,domain=ldcstreaming.info|sportsonline.*|elixx.xyz|primefoot.ru|lavents.la
 @@/embed/*$subdocument,stealth=referrer,domain=strims.*|daddyhd.com|daddylive.*
@@ -4381,6 +4382,7 @@
 @@/favicon.ico$domain=cricket365.com|football365.com|golf365.com|loverugbyleague.com|planetf1.com|planetfootball.com|planetrugby.com|teamtalk.com|tennis365.com
 @@/favicon.ico$domain=lubetube.com
 @@/favicon.ico$third-party,domain=thehouseofportable.com
+@@/favicon.ico^$domain=cinefreak.nl
 @@/file$xmlhttprequest,stealth=referrer,domain=streameeeeee.site|videostr.net
 @@/file2/*$xmlhttprequest,stealth=referrer,domain=vidora.stream
 @@/file2/*==/*$xmlhttprequest,stealth=referrer,domain=megacloud.*
@@ -8896,7 +8898,6 @@
 @@||dianfeijisuanqi.bmcx.com^
 @@||diariodopeixe.com.br^$generichide
 @@||dicasvalores.com^$stealth=referrer
-@@||dickpritchettrealestate.com^$generichide
 @@||dict.rambler.ru/fcgi-bin/$xmlhttprequest,domain=rambler.ru
 @@||dictionary.search.yahoo.com/beacon/sc?&ajaxdd=tabsCard&
 @@||dictionnaire-medical.net^$generichide
@@ -10897,7 +10898,6 @@
 @@||hctn.nv7s.com^
 @@||hd-tch.com^$generichide
 @@||hdbkell.com/xv8ip.js$domain=hmanga.world
-@@||hdbox.ws^$generichide
 @@||hdfree.tv/live^$stealth=referrer
 @@||hdliveextra-a.akamaihd.net/*/config/ads.js$domain=nbcsports.com
 @@||hdliveextra-a.akamaihd.net/*/showads*.js
@@ -13398,7 +13398,6 @@
 @@||mimaletamusical.blogspot.com^$generichide
 @@||mime.baidu.com^
 @@||mimg.127.net^
-@@||minecraft-forum.net/v/adblock-detection-master/advert.js
 @@||minecraftbuildinginc.com/wp-content/themes/*/js/advertisement.js
 @@||minhaoperadora.com.br^$generichide
 @@||mini-game-gl.heytapmobile.com^
@@ -15569,7 +15568,6 @@
 @@||playep.pro/log_event$~third-party,xmlhttprequest
 @@||player*.cinestream.bid^$stealth=referrer
 @@||player-smotri.mail.ru^$stealth=referrer
-@@||player.9cartoon.me/static/ads.js^
 @@||player.adcdn.tv^$stealth=webrtc
 @@||player.aniview.com/script/$script,domain=odysee.com|pogo.com
 @@||player.aniview.com/script/*/AVmanager.js$domain=adnkronos.com
@@ -19065,7 +19063,6 @@
 @@||vidembed.re/stream$stealth=referrer
 @@||video*.xhcdn.com/key=$stealth=referrer
 @@||video*.yxhhdl.com^$media,stealth=referrer,domain=video.5054399.com
-@@||video-download.online/js/advertisement.js
 @@||video.520call.me/ad.php
 @@||video.520cc.cc/ad.php|
 @@||video.520cc.cc^$generichide
@@ -22966,6 +22963,7 @@ aura.ge##a[href="https://talizi.ge/ka/"]
 aura.ge##a[href="https://trinx.ge/"]
 ausschreibungen-deutschland.de###am_pop-up
 ausschreibungen-oesterreich.at###am_pop-up
+aussieaudiomart.com##.precontent
 aussieaudiomart.com##.section-vu
 austinchronicle.com,carmag.co.za,fleetnews.co.uk,shawlocal.com,the-scientist.com,thegazette.com,vodacomsoccer.com###top-leaderboard
 austinchronicle.com,carmag.co.za,fleetnews.co.uk,shawlocal.com,thegazette.com,vodacomsoccer.com###top-leaderboard
@@ -27013,6 +27011,7 @@ chatgpt.com##div.opacity-100.transition-opacity.ease-out:has(button[aria-label="
 chatgpt.com##div[class]:has(> button[class] > span.text-nowrap > svg.icon-sm > use[href="/cdn/assets/sprites-core-fxfgsfqf.svg#d3876b"])
 chatgpt.com##div[class]:has(> div.flex > button[aria-label="Ad options"])
 chatgpt.com##div[data-assistant-ads]
+chatgpt.com##div[data-conversation-screenshot-content] > div.pointer-events-none.-mb-px.h-px.w-full.opacity-0 + div.transition-opacity.duration-300.ease-out.motion-reduce\:transition-none.starting\:opacity-0 > span + div[class*="_"]
 chatgpt.com##div[data-message-supplement]:has(aside[data-partial-island="assistant-ads"])
 chatgpt.com##div[data-testid="bazaar-single-card-container"]
 chatgpt.com##div[data-testid] div[class^="max-"] > div[data-ad-card-root]
@@ -39476,6 +39475,7 @@ hotstar.com##div[data-testid="bbtype-video"]
 hotstar.com##div[data-testid^="ad-"]
 hotstash.net##.cash-list-top
 hotter.com##.enhanced-cookies__modal
+hotukdeals.com###eventBannerPortal
 hotukdeals.com##.ad
 hotukdeals.com##.listLayout-box:has(> .bRad--a)
 hotukdeals.com##div[id$="AdSlotPortal"]
@@ -41999,6 +41999,7 @@ jacob.de###jcc-consent
 jacobin.de###__next > .bottom-0
 jacobinmag.com##.bn-at
 jadlonomia.com##.cbar-container
+jadwal-xys2-s1.pages.dev###__next > div[id][class*=" "]
 jagonews24.com##.adv-img
 jagonews24.com##.advertisement
 jagonews24.com##.featured-inImage-ad-unit
@@ -49927,6 +49928,7 @@ news.pchome.com.tw##div[style="width:300px;height:450px"]
 news.pchome.com.tw##div[style="width:300px;height:600px"]
 news.pchome.com.tw##div[style="width:687px;height:145px"]
 news.pchome.com.tw##div[style="width:970px;height:250px"]
+news.qq.com###article-promotion
 news.qq.com###content-right div[class][style*='background-image: url("https://inews.gtimg.com/newsapp_bt/']:has(img[alt^="QQ"])
 news.qq.com###focus-bar
 news.qq.com##+js(set, SSPAd.prototype.loadAd, noopFunc)
@@ -49936,6 +49938,7 @@ news.qq.com##.godown.qqcom_fb-item
 news.qq.com##.qqcom-modal-mask
 news.qq.com##.slider-list.swiper-horizontal.swiper-initialized.swiper
 news.qq.com##.time > a[style="position: absolute;top: -8px;left: 296px;"]
+news.qq.com##div[dt-params="e_type=download_banner"]
 news.qq.com##div[id="download-btn-wrapid"]
 news.sina.com.cn##.news_weixin_ercode
 news.sky.com##.mpu-1
@@ -51209,6 +51212,7 @@ olke.az##.modal.in
 olke.az##div[style$="height: 90px; text-align: center"]
 olke.az##iframe.mom_visibility_desktop
 olkem.az##.k192.fl.aciksari > .bar.bosluk > .baslik.yesil
+oloygeia.gr,thecars.gr,enikos.gr,real.gr##.advertisement
 olsztyn.com.pl###boxB
 olsztyn.com.pl##.rodoaccept
 olsztynnews.com.pl##.a-wrap
@@ -62026,7 +62030,6 @@ thecambabes.com##.navigation > ul.primary > li > a:not([href*="thecambabes.com/"
 thecambabes.com,celebsroulette.com,heroero.com,thebestshemalevideos.com##.block-video > .table > .opt
 thecanary.co###canaryInTextAd1
 thecanary.co##.in-content-ad
-thecars.gr,enikos.gr,real.gr##.advertisement
 thecatcity.com##.article-page__ad-block
 thecatholictravelguide.com##a[href^="https://www.squaremouth.com/"]
 thecellguide.com##.thece-in-content-ad
@@ -67196,6 +67199,7 @@ westword.com##.hil28zhf1wyd
 westword.com##div[inline-content-billboard]
 weszlo.com##.ad-placeholder-bg
 weszlo.com##.ad-placeholder-bg + p[style="text-align: center;"] > a[href^="https://record.fuksiarzaffiliates.pl/"]
+weszlo.com##.btn-adclose
 weszlo.com##.fuksiarz-logo
 weszlo.com##.post-content-wrap a[href*="fuksiarz.pl"][href*="utm_"] > img
 weszlo.com##.post-content-wrap a[href^="https://bit.ly/"] > img
