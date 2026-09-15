@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-16 01:23:15（北京时间）
+! Version: 2026-09-16 04:35:06（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70447
+! Total count: 70481
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4237,16 +4237,24 @@
 @@/\/\d{5,7}$/$domain=mylink.*|my1ink.*|myl1nk.*|myli3k.*
 @@/\/cdn\/(files|zone)\d?\//$media,third-party,match-case,stealth=referrer,domain=kimoitv.com
 @@/^https:\/\/127\.0\.0\.1:10039\/\?callback=jQuery[0-9]{20,}_[0-9]{13}&HW&[A-z0-9]{22}==&&0&0&/$stealth=referrer
+@@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/20\d{4}\/\d{2}\/\d{9}\/(?:original|thumbs_\d{2})\/\d{0,2}(?:\(m=e[0-9A-Za-z]{5,7}(?:aaaa)?\)\(mh=[-_0-9A-Za-z]{16}\))?\d{0,2}\.jpg$/$image,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/20\d{4}\/\d{2}\/\d{9}\/(?:original|thumbs_\d{2})\/\d{0,2}(?:\(m=e[0-9A-Za-z]{5,7}(?:aaaa)?\)\(mh=[-_0-9A-Za-z]{16}\))?\d{0,2}\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
+@@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/thumbs169l\/[0-9a-f]{2}\/[0-9a-f]{2}\/[0-9a-f]{2}\/[0-9a-f]{32}(?:-\d)?\/[0-9a-f]{32}\.\d{1,2}\.jpg$/$image,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/thumbs169l\/[0-9a-f]{2}\/[0-9a-f]{2}\/[0-9a-f]{2}\/[0-9a-f]{32}(?:-\d)?\/[0-9a-f]{32}\.\d{1,2}\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
+@@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/thumbs_5\/\d{1,2}(?:\(m=e[0-9A-Za-z]{5,7}aaaa\)\(mh=[-_0-9A-Za-z]{16}\))?\.jpg$/$image,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/(?:yip?|xvs)\/videos\/thumbs_5\/\d{1,2}(?:\(m=e[0-9A-Za-z]{5,7}aaaa\)\(mh=[-_0-9A-Za-z]{16}\))?\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
+@@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/[a-z]?jz\/(?:[0-9a-f]\/){3,5}[0-9a-f]{42}-?(?:\d{2,3}|(?:(?:\d{3,4}-){3}h264)?\.(?:mp4-\d{1,2}|flv-\d))\.jpg$/$image,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/[a-z]?jz\/(?:[0-9a-f]\/){3,5}[0-9a-f]{42}-?(?:\d{2,3}|(?:(?:\d{3,4}-){3}h264)?\.(?:mp4-\d{1,2}|flv-\d))\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
+@@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/sb\/t\/\d{6,8}\/(?:\d|[0-9a-f]{2})\/(?:\d|[0-9a-f]{2})\/w:300\/t\d{1,2}-enh\/(?:[0-9a-z]+-)*[0-9a-z]+\.jpg$/$image,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/sb\/t\/\d{6,8}\/\d\/\d\/w:300\/t\d{1,2}-enh\/(?:[0-9a-z]+-)*[0-9a-z]+\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
+@@/^https:\/\/[a-z]\.pussyspace\.(?:com|net)\/xv7\/[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}\/\d\/xv_\d{1,2}_t\.jpg$/$image,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/imgbb.zip\/ib\/[a-z0-9]{15}_[0-9]{10}\.jpg$/$image,third-party,stealth=referrer,domain=rogmovies.*|xprimehub.*|vegamovies.*|new2.vegamovies.futbol|rogmovies.cv|xprimehub.bond
 @@/^https:\/\/mshale\.com\/[a-f0-9]{8}\/[a-zA-Z0-9]+$/$match-case,stealth=referrer|searchqueries
 @@/^https:\/\/st\.pussyspace\.(?:com|net)\/upload\/cat\.image\/[_3a-z]{2,16}\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/st\.pussyspace\.(?:com|net)\/upload\/poster_img_url\/par\/c3Rhci9[%0-9A-Za-z]{16,32}&size_width\/par\/160\/l\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
 @@/^https:\/\/www\.[a-z]{7,14}\.com\/[a-z]{1,4}\.js/$script,third-party,domain=shinden.pl,badfilter
+@@/^https:\/\/www\.pussyspace\.(?:com|net)\/upload\/cat\.image\/[_3a-z]{2,16}\.jpg$/$image,~third-party,domain=pussyspace.com|pussyspace.net
+@@/^https:\/\/www\.pussyspace\.(?:com|net)\/upload\/poster_img_url\/par\/c3Rhci9[%0-9A-Za-z]{16,32}&size_width\/par\/160\/l\.jpg$/$image,domain=pussyspace.com|pussyspace.net
 @@/^https?.*\..*\.ch\/.*\/(ad|adtech|pubblicita|adverts|ad-random|adSponsors|banner-ad|banman|native-ad|advertise|advert1|bg_ads|adengine|adspot|baseAd|coread)\/.*\/.*=.*&/$xmlhttprequest,other,script,domain=tio.ch
 @@/^https?:\/\/[0-9a-z]+\.cloudfront\.net\/\?[a-z]+=[0-9]+$/$domain=workink.click,xmlhttprequest
 @@/_js/pubfig.min.js$~third-party,domain=svethardware.cz|relaxuj.cz|svetmobilne.cz|digimanie.cz
@@ -17623,6 +17631,7 @@
 @@||static.jfrft.com/js/main_list.js^$domain=dilidili.wang
 @@||static.jfrft.com/js/main_video.js^$domain=dilidili.wang
 @@||static.kendam.com/js/prebid-ads.js
+@@||static.klaviyo.com/onsite/js/event_adapter.$domain=gear.blizzard.com
 @@||static.knowledgehub.com/global/images/ping.gif?$~third-party
 @@||static.koreus.com/js/advert.js
 @@||static.lbc.co.uk/*/libs/videojs/vast/video.ads.js$domain=lbc.co.uk
@@ -19750,16 +19759,39 @@
 @@||www.pussyspace.com/class/captcha/captcha.php|
 @@||www.pussyspace.com/favicon.ico|
 @@||www.pussyspace.com/player/loading.gif|
+@@||www.pussyspace.com/player/playBTN.png|
+@@||www.pussyspace.com/style/03/img/bg.png|
+@@||www.pussyspace.com/style/03/img/dropmenudownarrow.png|
+@@||www.pussyspace.com/style/03/img/navbg.hover.png|
+@@||www.pussyspace.com/style/03/img/navbg.png|
+@@||www.pussyspace.com/style/03/img/pinkbg.gif|
+@@||www.pussyspace.com/style/03/img/speed-dials.png|
+@@||www.pussyspace.com/style/03/img/x-sprite.png|
+@@||www.pussyspace.com/style/05/img/JhsdsSD221.svg|
+@@||www.pussyspace.com/style/10/img/logo.png|
+@@||www.pussyspace.com/style/10/img/logo_mobile.png|
 @@||www.pussyspace.com/style/img/abuse.email.png#|
 @@||www.pussyspace.com/style/img/navbg.hover.png|
+@@||www.pussyspace.com/style/webcam.jpg|
 @@||www.pussyspace.com/upload/no_img.jpg|
 @@||www.pussyspace.net/ajax/contact/exo-logo.png|
 @@||www.pussyspace.net/class/captcha/arrow.png|
 @@||www.pussyspace.net/class/captcha/captcha.php|
 @@||www.pussyspace.net/favicon.ico|
 @@||www.pussyspace.net/player/loading.gif|
+@@||www.pussyspace.net/player/playBTN.png|
+@@||www.pussyspace.net/style/03/img/bg.png|
+@@||www.pussyspace.net/style/03/img/dropmenudownarrow.png|
+@@||www.pussyspace.net/style/03/img/navbg.hover.png|
+@@||www.pussyspace.net/style/03/img/navbg.png|
+@@||www.pussyspace.net/style/03/img/pinkbg.gif|
+@@||www.pussyspace.net/style/03/img/speed-dials.png|
+@@||www.pussyspace.net/style/03/img/x-sprite.png|
+@@||www.pussyspace.net/style/10/img/logo.png|
+@@||www.pussyspace.net/style/10/img/logo_mobile.png|
 @@||www.pussyspace.net/style/img/abuse.email.png#|
 @@||www.pussyspace.net/style/img/navbg.hover.png|
+@@||www.pussyspace.net/style/webcam.jpg|
 @@||www.pussyspace.net/upload/no_img.jpg|
 @@||www.pxb7.com^
 @@||www.pzds.com^
@@ -46083,6 +46115,7 @@ magiogo.sk##.headerMessages
 magix.info##.mgxCookieConsent
 magma.com##.partnership-content-controls > button
 magma.com##.partnership-content-wrapper
+magma.com##div.ng-star-inserted[style="padding-top: 0px;"]
 magma.com##div[style="width: 728px; height: 90px;"]
 magma.com##partnership-content
 magnetdl.uproxy.to##a[href="/b/?/site/vpn/"]
@@ -54959,6 +54992,7 @@ pussysexgames.com##a[href*=".php?t="][rel="nofollow"]
 pussyspace.com###bhcr
 pussyspace.com,pussyspace.net##.mainBox div[id] img:not(a img)
 pussyspace.com,pussyspace.net##a[href$="/live/meet-and-fuck/"]
+pussyspace.com,pussyspace.net##a[href$="/watch/tiktok/"]
 pussyspace.com,pussyspace.net##img[src^="data:image"]:not(a.cam_img > [id]):not(a.cat_img > span > [data-src*="/upload/"]):not(a.video_img > span > [id])
 pussyspot.net##a[href="https://nudegirlsoncam.com/"]
 pussyspot.net##div[class^="content"] > div[align="center"]
