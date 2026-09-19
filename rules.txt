@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-19 21:32:30（北京时间）
+! Version: 2026-09-20 00:52:22（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 70506
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -19850,7 +19850,6 @@
 @@||wykop.pl/api/v3/ads/redirect?data=$xmlhttprequest,domain=wykop.pl
 @@||wykop.pl/api/v3/tags/reklama/$xmlhttprequest,~third-party
 @@||wyniki.diag.pl^$stealth=ip
-@@||wzzqlm.erbaiwulaoge.com^
 @@||x.*.tk/*/caxi.m3u8$stealth=referrer
 @@||x.*.tk/*/strmrdr.m3u8$stealth=referrer
 @@||x.*.xyz/*/xox_*.jpeg$stealth=referrer
@@ -48168,6 +48167,7 @@ motaclarity.co.uk###cookie
 motaen.com,adultgamestop.com##.baner
 motchill.biz###catfish
 motchill.biz##.popUpBannerBox
+motchille.ws##div.fixed.inset-0
 motek.no##.js-gdpr
 motherjones.com##.incontent-promo
 motherjones.com##.mj-incontent-ad-widget
