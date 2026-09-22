@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-22 08:21:12（北京时间）
+! Version: 2026-09-22 13:33:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70545
+! Total count: 70544
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -4424,6 +4424,7 @@
 @@/fuckadblock.js$domain=camiris.com
 @@/fuckadblock.js$domain=meucdn.vip|yandexcdn.com|hqq.tv|waaw.tv
 @@/fuckadblock.js|$script,domain=cc-fan.tv|cn-fan.tv|fox-fan.tv|nf-fan.tv
+@@/ga-tracking.min.js$script,domain=boots.no|checkout.platekompaniet.no
 @@/gen.php?playerid$subdocument,stealth=referrer,domain=fastreams.live|fastreams.com|ftmstreams.com
 @@/gettoken.php?$xmlhttprequest,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in
 @@/ggjs/*$domain=tingfm.com
@@ -27034,7 +27035,6 @@ chatgpt.com##.border-token-border-default.mt-2.border-t:has(button[aria-label="A
 chatgpt.com##.wm-app-threadContent aside[aria-label^="Sponsored"]
 chatgpt.com##[class*="_assistantAds"]
 chatgpt.com##[data-message-role="assistant"] > section[class]:has(> [aria-label] > div[role="list"] a[rel][target="_blank"][href*="&oppref="])
-chatgpt.com##[data-message-role="assistant"] > section[class]:has(> aside[aria-label] > div[role="list"] a[rel][target="_blank"][href*="&oppref="])
 chatgpt.com##[data-testid="bazaar-v2-elevated-box"]
 chatgpt.com##a[rel][target="_blank"][href*="?utm_"][href*="&oppref="]
 chatgpt.com##aside[data-assistant-ads-unit]
@@ -63102,7 +63102,6 @@ tikmate.app##.res-ad
 tikpornk.com##.mr-1
 tiktits.com##.callback-bt
 tiktok.com##[class*="ArticleItemContainer"]:has([data-e2e="ad-tag"])
-tiktok.com##[class*="DivCardWrapper"]:has([data-e2e="ad-tag"])
 tiktok.com##tiktok-cookie-banner
 tiku.baidu.com##.to-app
 tiku.baidu.com##.wap-bottom-op
