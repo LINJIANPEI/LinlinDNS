@@ -2,7 +2,7 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-23 03:20:37（北京时间）
+! Version: 2026-09-23 06:28:58（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 70574
 %3C?php%20echo%20substr(md5(microtime())$popup
@@ -17117,7 +17117,6 @@
 @@||shrink-service.it/api-extension/$stealth=referrer,domain=adshrink.it
 @@||shrink.icu^$generichide
 @@||shrinke.me^$stealth=referrer
-@@||shrtfly.com^$generichide
 @@||shuajota.com^$generichide
 @@||shumafen.cn/api/$stealth=referrer
 @@||shumafen.cn/api/file_u/$extension
@@ -47943,6 +47942,7 @@ mods.to###detect-block
 mods.to##.main-download-content center:has(> small + div[id^="mods_to_"])
 mods.to,download4.cc###side-banner
 modsfire.com##a[href^="https://offergate-software"]
+modsfire.com##mf-offer
 modshost.net##.sense_horizontal_1
 modthesims.info##.browse-content > div[style="padding: 0.5em;"]:not([class])
 moduri.ro##.xoxo > li[id^="text-"]
