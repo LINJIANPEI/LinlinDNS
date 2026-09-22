@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-22 23:13:23（北京时间）
+! Version: 2026-09-23 03:20:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70575
+! Total count: 70574
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1745,7 +1745,6 @@
 01tube.com,boobse.com##.wrapper > div[class]:has(div[id^="suggestion"])
 01tube.com,gfthai.com,boobse.com,keporn.com,peporn.com,teen21.com,ourgay.tube,pornuse.com,uanal.com,pornl.tube,xshemale.tube,keporn.vip,fuxxx.com,pornl.com##.video-ntv-wrapper
 01tube.com,gfthai.com,boobse.com,keporn.vip,fuxxx.com,keporn.com,peporn.com,teen21.com,ourgay.tube,pornuse.com,uanal.com,pornl.tube,xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
-01tube.com,onlyporn.tube,picazor.com,fapnado.com,sexy-youtubers.com##a[href="https://theporndude.com/"]
 020job.com##A[href^="/Click.aspx?AdPageID="]
 034portal.hr###footer.tekst
 035portal.hr##.privatnost
@@ -14946,6 +14945,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=srvy.ninja
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=starcima.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stfly.biz|stfly.cc|airevue.net|veroan.com|amalot.net|carribo.net
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stly.link
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stockstracker.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=streamelements.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=streetdir.com|roaddir.com
@@ -17595,6 +17595,7 @@
 @@||static.doubleclick.net/instream/ad_status.js$domain=smart.siendu.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=sonixgvn.net
 @@||static.doubleclick.net/instream/ad_status.js$domain=stfly.biz
+@@||static.doubleclick.net/instream/ad_status.js$domain=stly.link
 @@||static.doubleclick.net/instream/ad_status.js$domain=techedubyte.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=techypopat.in
 @@||static.doubleclick.net/instream/ad_status.js$domain=thesciencetoday.com
@@ -17751,6 +17752,7 @@
 @@||stfly.me^$stealth=referrer
 @@||stjscn.s-msn.com/portal/hp/2011/udctrack.
 @@||stltoday.com^$generichide
+@@||stly.link^$generichide
 @@||stmruby.com/js/ads_adverts.js
 @@||sto*.igstatic.com/js/seo-ads.js$domain=igraal.com
 @@||sto-caas-api.e-spirit.cloud/*/content/$domain=sto.de,stealth=3p-auth
@@ -35895,6 +35897,7 @@ gamemonetize.video###promo
 gamenguide.com##.mleft > div > div.product-box1
 gamenora.com##.widget-sidebar > .kare
 gamepadla.com###sliderBlock:has(> .relative > .sliderBlock > .ads)
+gamepadla.com##.pMain:has(a[href^="/go/"])
 gamepadla.com##.pMain:has(div[class^="asd_"])
 gamepadla.com##.pMain:has(div[title="Partner placement"])
 gamepadla.com##a[href^="https://www.amazon.com/"] + div + picture
@@ -43218,6 +43221,7 @@ kauf-unique.at###vu_consent
 kauf-unique.de###vu_consent
 kava.ee##.kava_ad_chilli
 kawai-jav.com##.ads-here-right
+kawai-jav.com##.box-header:has(> ins[data-zoneid])
 kawowo.com##.g-single > a[href][target="_blank"] > img
 kayak.com##[role="button"]:has([class*="ad-marking"])
 kayak.com##[role="tab"]:has([class*="sponsored"])
@@ -43938,7 +43942,9 @@ ksbbs.com,kshot.com##div[id^="read_ad_"]
 ksbw.com,kmbc.com,mynbc5.com,koat.com##.article-sidelist-wrapper > div.ad-track
 kshot.com##div[id^="read_m_yytf"]
 kshow123.tv###ab-sider-bar
+kshow123.tv###ads-top-player
 kshow123.tv###sidebar > div.sound[style="margin-bottom: 10px;"]
+kshow123.tv##.ads-middle-fix
 kshowsubindo.org###popup
 kshowsubindo.org##.jquery-modal
 ksiegaimion.com###euci
@@ -45548,7 +45554,6 @@ lubiehrubie.pl##.row > div.box-margin:has(> div.baner)
 lubiehrubie.pl##.theiaStickySidebar > aside.lubie-widget:has(a:not([href*="youtube.com"]) > img)
 lubimyczytac.pl##.top-sponsorship-banner__preload
 lubin.pl##.textwidget > div.addblock
-lubin.pl##a.gofollow[data-track]
 lublin112.pl###sidebar > .ad ~ hr
 lublin112.pl##.boxa
 lublin112.pl##.page_wrap > .container[style^="min-height:"]:has(> ins[data-revive-zoneid])
@@ -46036,7 +46041,6 @@ mabanqueprivee.bnpparibas##.cookies
 mabiji.com##.celan
 mabiji.com,xinshouzhanzhang.com##.celan
 macanevowners.com##div[data-insertion-no-dbg]
-macanevowners.com,taycanforum.com,tacoma4g.com,4runner6g.com,f150gen14.com,mavericktruckclub.com,cotilleando.com,babia.to,anime-sharing.com,macheforum.com,cybertruckownersclub.com,tdpri.com,xbunker.nu,broncosportforum.com,jeepgladiatorforum.com,titsintops.com,nudostar.com,satelliteguys.us,forums.macrumors.com,androidrepublic.org##.samCodeUnit
 macbooster.net##.itop-pop
 macbooster.net##.itop-popout
 maccosmetics.be###bt_notification
@@ -47418,9 +47422,6 @@ midi.pl###cb-cookie
 midifan.com##.mid-aaa
 midifan.com##.top-aaa
 midlandstraveller.com##.overlay-effect + div[id][class*=" "]
-midnorthmonitor.com,4runner6g.com,fortmcmurraytoday.com,airdrieecho.com,calgaryherald.com,calgarysun.com,canoe.com,chathamdailynews.ca,clintonnewsrecord.com,cochranetimes.com,coldlakesun.com,communitypress.ca,countymarket.ca,countyweeklynews.ca,dailyheraldtribune.com,devondispatch.ca,draytonvalleywesternreview.com,driving.ca,edmontonexaminer.com,edmontonjournal.com,edmontonsun.com,elliotlakestandard.ca,fairviewpost.com,financialpost.com,fortmcmurraytoday.com,fortsaskatchewanrecord.com,gananoquereporter.com,goderichsignalstar.com,highrivertimes.com,kincardinenews.com,lakeshoreadvance.com,leaderpost.com,leducrep.com,lfpress.com,lucknowsentinel.com,mayerthorpefreelancer.com,melfortjournal.com,mitchelladvocate.com,napaneeguide.com,nationalpost.com,norfolkandtillsonburgnews.com,northernnews.ca,nugget.ca,ontariofarmer.com,ottawacitizen.com,ottawasun.com,parisstaronline.com,peacecountrysun.com,pembrokeobserver.com,pinchercreekecho.com,princegeorgepost.com,prrecordgazette.com,recorder.ca,saltwire.com,saultstar.com,saultthisweek.com,seaforthhuronexpositor.com,sherwoodparknews.com,shorelinebeacon.com,simcoereformer.ca,sprucegroveexaminer.com,stonyplainreporter.com,stratfordbeaconherald.com,thebeaumontnews.ca,thechronicle-online.com,thecragandcanyon.ca,theobserver.ca,theprovince.com,thestarphoenix.com,thewhig.com,tj.news,todaysfarmer.ca,vulcanadvocate.com,wallaceburgcourierpress.com,wetaskiwintimes.com,whitecourtstar.com,wiartonecho.com,woodstocksentinelreview.com##section[aria-describedby^="advertisment"]
-midnorthmonitor.com,timminspress.com,stthomastimesjournal.com,thepost.on.ca,thesudburystar.com,windsorstar.com,vermilionstandard.com,nantonnews.com,vancouversun.com,hannaherald.com,4runner6g.com,fortmcmurraytoday.com,airdrieecho.com,calgaryherald.com,calgarysun.com,canoe.com,chathamdailynews.ca,clintonnewsrecord.com,cochranetimes.com,coldlakesun.com,communitypress.ca,countymarket.ca,countyweeklynews.ca,dailyheraldtribune.com,devondispatch.ca,draytonvalleywesternreview.com,driving.ca,edmontonexaminer.com,edmontonjournal.com,edmontonsun.com,elliotlakestandard.ca,fairviewpost.com,financialpost.com,fortmcmurraytoday.com,fortsaskatchewanrecord.com,gananoquereporter.com,goderichsignalstar.com,highrivertimes.com,kincardinenews.com,lakeshoreadvance.com,leaderpost.com,leducrep.com,lfpress.com,lucknowsentinel.com,mayerthorpefreelancer.com,melfortjournal.com,mitchelladvocate.com,napaneeguide.com,nationalpost.com,norfolkandtillsonburgnews.com,northernnews.ca,nugget.ca,ontariofarmer.com,ottawacitizen.com,ottawasun.com,parisstaronline.com,peacecountrysun.com,pembrokeobserver.com,pinchercreekecho.com,princegeorgepost.com,prrecordgazette.com,recorder.ca,saltwire.com,saultstar.com,saultthisweek.com,seaforthhuronexpositor.com,sherwoodparknews.com,shorelinebeacon.com,simcoereformer.ca,sprucegroveexaminer.com,stonyplainreporter.com,stratfordbeaconherald.com,thebeaumontnews.ca,thechronicle-online.com,thecragandcanyon.ca,theobserver.ca,theprovince.com,thestarphoenix.com,thewhig.com,tj.news,todaysfarmer.ca,vulcanadvocate.com,wallaceburgcourierpress.com,wetaskiwintimes.com,whitecourtstar.com,wiartonecho.com,woodstocksentinelreview.com##.widget--local-business
-midnorthmonitor.com,timminspress.com,stthomastimesjournal.com,thepost.on.ca,thesudburystar.com,windsorstar.com,vermilionstandard.com,nantonnews.com,vancouversun.com,hannaherald.com,4runner6g.com,fortmcmurraytoday.com,airdrieecho.com,calgaryherald.com,calgarysun.com,canoe.com,chathamdailynews.ca,clintonnewsrecord.com,cochranetimes.com,coldlakesun.com,communitypress.ca,countymarket.ca,countyweeklynews.ca,dailyheraldtribune.com,devondispatch.ca,draytonvalleywesternreview.com,driving.ca,edmontonexaminer.com,edmontonjournal.com,edmontonsun.com,elliotlakestandard.ca,fairviewpost.com,financialpost.com,fortmcmurraytoday.com,fortsaskatchewanrecord.com,gananoquereporter.com,goderichsignalstar.com,highrivertimes.com,kincardinenews.com,lakeshoreadvance.com,leaderpost.com,leducrep.com,lfpress.com,lucknowsentinel.com,mayerthorpefreelancer.com,melfortjournal.com,mitchelladvocate.com,napaneeguide.com,nationalpost.com,norfolkandtillsonburgnews.com,northernnews.ca,nugget.ca,ontariofarmer.com,ottawacitizen.com,ottawasun.com,parisstaronline.com,peacecountrysun.com,pembrokeobserver.com,pinchercreekecho.com,princegeorgepost.com,prrecordgazette.com,recorder.ca,saltwire.com,saultstar.com,saultthisweek.com,seaforthhuronexpositor.com,sherwoodparknews.com,shorelinebeacon.com,simcoereformer.ca,sprucegroveexaminer.com,stonyplainreporter.com,stratfordbeaconherald.com,thebeaumontnews.ca,thechronicle-online.com,thecragandcanyon.ca,theobserver.ca,theprovince.com,thestarphoenix.com,thewhig.com,tj.news,todaysfarmer.ca,vulcanadvocate.com,wallaceburgcourierpress.com,wetaskiwintimes.com,whitecourtstar.com,wiartonecho.com,woodstocksentinelreview.com,brantfordexpositor.ca##.epaper-widget
 midparts.com.pl###simple-modal, #simple-modal-overlay
 midwestgunworks.com###privBanner
 miejscawewroclawiu.pl##.miejs-widget
@@ -51326,7 +51327,6 @@ omegleapp.me##.promotions
 omg.blog###sidebar-wrapper > div[id^="enhancedtextwidget-"]:has(> .textwidget > div[id^="bsa-zone_"])
 omg.blog##.ad-async
 omg.blog##.ad-tag + p[align="center"]
-omg.blog,uxwing.com,fontesk.com,iplocation.net,pureinfotech.com,insurance-space.xyz,igeeksblog.com##div[id^="bsa-zone_"]
 omg.de###CookiePlus, .modal-backdrop
 omgchrome.com##.menu-banners-container
 omgjav.com##div[data-region="content"] div.flex.justify-center.items-center:has(> script)
@@ -51659,8 +51659,10 @@ openalternative.co##.relative.rounded-lg:has(a[href^="/advertise"])
 openalternative.co##.relative.rounded-lg:has(img[src*="cdn.revinel.com"])
 openalternative.co##a.ease-out[href^="https://trycomp.ai?"]
 openalternative.co##body > div.min-h-dvh > div.relative:has(> a[href^="https://trycomp.ai"])
+openalternative.co##div.fixed.z-49.bottom-4
 openalternative.co##div[class="relative flex max-md:order-3"]:has(a[href="/advertise"])
 openalternative.co##div[class="relative flex"]:has(a[href="/advertise"])
+openalternative.co##div[style*="--brand-tint"]
 openbase.com###__next [class*="GdprCookieFooter"]
 openbookpublishers.com##.menu-header
 opencart.com##.promotion-banner
@@ -54662,6 +54664,8 @@ prodir.com##.cookie
 producthunt.com###content > div:has(> div:only-child > img + div > div > a[href^="/sponsor"])
 producthunt.com##.cursor-pointer:has(img[alt="Promoted"])
 producthunt.com##.styles_item__hNPI1
+producthunt.com##article:has(> div.cursor-pointer > img)
+producthunt.com##article:has(img[alt="Promoted"])
 producthunt.com##div[class="my-2 flex cursor-pointer flex-row items-center gap-4 rounded-lg bg-gray-50 p-3"]:has(a[href="/sponsor"])
 producthunt.com##div[class="my-2 flex cursor-pointer flex-row items-center gap-4 rounded-lg bg-gray-50 p-3"]:has(img[src="/i/33b26ee8f2668842e38841253cfde42aa203585e395ff731f21aebffbb38c8e5"])
 producthunt.com##div[class="my-2 flex cursor-pointer flex-row items-center gap-4 rounded-lg bg-gray-50 p-3"]:has(img[src^="/i/"])
@@ -58070,7 +58074,6 @@ sherg.az##.orta_banner
 sherg.az##img[width="500"][height="94"]
 sherwin-williams.com###termsModal
 shesfreaky.com###im-slider-outer
-shesfreaky.com##.player-ad-container
 shesfreaky.com,erome.com##.adn-posty__top
 sheshaft.com###yotam
 sheshaft.com##.after_adv
@@ -58191,7 +58194,6 @@ shrm.org##.row-shrm-sponsors
 shrm.org##.shrm-gdpr
 shroomery.org##[href^="https://www.shroomery.org/ads/"]
 shrtco.de##.aarea
-shrtfly.com##.adsbygoogle
 shrtslug.biz##a[href^="https://adtrack2.click/"]
 shrtz.me##div[style*="padding-top:10px;"][style*="width:300px;"]
 shsu.blackboard.com##.lb-overlay, .lb-wrapper-absolute
@@ -59120,6 +59122,7 @@ socialblade.com##.content-container > div[style^="width: 840px; height: 90px; pa
 socialblade.com##.section-long-vert-container
 socialblade.com##.section-square-vert
 socialblade.com##.sidebar-container > div.sidebar-module[style="height: 250px;"]
+socialblade.com##[class*="container/ads"]
 socialblade.com##div[style^="width: 860px; height: 90px;"]
 socialcounts.org##.home_sticky-ad__Aa_yD
 socialcounts.org##div[class^="home_sticky-ad__"]
@@ -60212,6 +60215,7 @@ startmail.com##footer ~ .banner
 startnext.com###toast, .toast
 startpage.com###main > div[data-bvs][data-identifier]
 startpage.com###main > div[style^="margin-bottom:"] > div:has(> div[style^="margin-bottom:"] > svg)
+startpage.com##.pa-amp
 startpage.com##div[data-identifier="exoclick-native-impression"]
 startpage.com##section#main > a[href][target="_blank"]:has(path[d^="m6.07067 3.14453c-.04309-.40317-.22467-.71709-.54475"])
 startpage.com,startpagel6srwcjlue4zgq3zevrujfaow726kjytqbbjyrswwmjzcqd.onion###main > div:not([class], [id]):has(> div[class^="css-"] > .pa-amp)
@@ -62853,7 +62857,6 @@ theweek.co.uk##.polaris__subscription.-standalone.-content.-article
 theweek.com##.right-hand-adunit
 theweek.in##.advertising-area
 theweek.in##.pay-ad-box-wrapper
-thewhig.com##.pmd-ad-container
 thewikihow.com##div[class^="col-lg"] > div[class]:has(> div[id^="yandex_rtb"])
 thewindowsclub.blog##.position-sticky > .section  > a[target="_blank"] > img
 thewindowsclub.com###text-422067538
@@ -64182,11 +64185,6 @@ truckinginfo.com##.incontent02Ad
 truckinginfo.com##.lazy-ad-slot-wrapper
 trucknetuk.com###sidebarright
 trucoswindows.com##.modalCookies
-trucs-et-astuces.co##.advertisement-component
-trucs-et-astuces.co##.advertisement-line
-trucs-et-astuces.co##.advertising-label
-trucs-et-astuces.co##.sticky-footer-ad-box
-trucs-et-astuces.co##[data-ad-key^="wp_ad_camp"]
 trueachievements.com###sidebar > .side-unit
 trueachievements.com###topad-wrap
 trueachievements.com##.dyn-lb
@@ -67687,6 +67685,7 @@ windowszj.com###system_type
 windowszj.net##.g_slide_title > .feedback
 windtre.it###cookies
 winemag.com###wmg-cookie-consent
+wineverygame.com##.weg-ac--amazon
 winflector.com##body > div:not([id]):not([class])
 winfuture.mobi###message_id
 wings.io###mpu-top
