@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-24 01:32:30（北京时间）
+! Version: 2026-09-24 04:47:31（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70606
+! Total count: 70609
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -1864,6 +1864,8 @@
 1024gu.com,1024ya.com,33235.net###header > center
 1024gu.com,99syy1.com##div[class^="ps_"]
 1024terabox.com##.video-wrap > div.loading-carousel-box
+1024teradl.com##.tracking-wider
+1024teradl.com##div.w-full > div.shrink-0:has(> div.sticky > .tracking-wider)
 103.224.182.210$network
 104.155.51.226:443$network
 104.com.tw###aidma-job
@@ -5202,6 +5204,7 @@
 @@||a8.mzstatic.com^
 @@||aachener-nachrichten.de/advertorials/
 @@||aax-eu.amazon-adsystem.com/s/yoc^$domain=youronlinechoices.com
+@@||aax-fe.amazon.co.jp^
 @@||aax-fe.amazon.co.jp^|
 @@||aax-us-east.amazon-adsystem.com/x/getad?src=$domain=pipeflare.io
 @@||aax.amazon-adsystem.com^$domain=mylifetime.com
@@ -17445,7 +17448,6 @@
 @@||ssl.p.jwpcdn.com/player/v/*/vast.js$xmlhttprequest,domain=idlixvip.asia
 @@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$domain=kavero.biz
 @@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$domain=playmate.to
-@@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru|vindaz.shop|vidmatrixa.com|vidchampions.com|vidavaca.cc|calyro.biz|vidarae.live|vidwara.cc|vidwara.fit
 @@||ssl.p.jwpcdn.com/player/v/8.36.2/googima.js$script,domain=vidara.to|vidara.so|xca.cymru|vindaz.shop|vidmatrixa.com|vidchampions.com|vidavaca.cc|calyro.biz|vidarae.live|vidwara.cc|vidwara.fit|viderea.site
 @@||ssl.p.jwpcdn.com^
 @@||ssl.p.jwpcdn.com^$domain=bdsmstreak.com
@@ -66652,6 +66654,7 @@ wallpaperhub.app##body > div > div > .dropshadow > p
 wallpapermania.eu##.uk-alert
 wallpapers.com##.ads-unit-fts
 wallpapers.com##.ads2-container
+wallpapers.com##.cd-top-ad
 wallpapers.com##.head-banner
 wallpapers.com##.keyword-box > div > div[style*="height: 250px; display: flex;"]:has(> #pwMobiMedRectAtf)
 wallpapers.ispazio.net##.box-apples_single_reclame
