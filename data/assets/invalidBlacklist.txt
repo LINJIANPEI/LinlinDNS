@@ -442,12 +442,12 @@
 ! Chameleon Advertising Technologies
 ! Chaturbate
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
-! Checksum: 9xu9WITfRIluMMLyDt9Sgg
-! Checksum: JHL2VmP9ACt4YKy2Ry8lPQ
+! Checksum: Ap420/5wKUatEeEwSWWLVA
+! Checksum: T/eYQYWLMs+R+mJ7jMJyZQ
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: hg64RkOESnEm5RNXD8/OiQ
 ! Checksum: vXO2skD37egAcrKzRVhe1A
+! Checksum: wmgziDABPAsv707VTlx3BQ
 ! ChinaList and EasyList combination subscription
 ! Chinese
 ! Chinese google (https://github.com/easylist/easylist/issues/15643)
@@ -762,14 +762,14 @@
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-09-21T14:20:12.875Z
-! Last modified: 2026-09-23T06:26:30.179Z
+! Last modified: 2026-09-23T12:22:28.978Z
 ! Last modified: 2026/09/08 06:47 +0800
 ! Last modified: 2026/09/23 12:12:33
 ! Last modified: 2026/09/23 12:12:34
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
-! Last modified: 23 Sep 2026 06:42 UTC
 ! Last modified: 23 Sep 2026 11:05 UTC+7
+! Last modified: 23 Sep 2026 12:13 UTC
 ! Last modified: 30 Jan 2021
 ! Last modified: 30 Nov 2023 11:33 UTC
 ! Latvian
@@ -1220,9 +1220,9 @@
 ! Version: 202601201
 ! Version: 202609080647
 ! Version: 20260914100534
-! Version: 202609230642
 ! Version: 20260923121233
 ! Version: 20260923121234
+! Version: 202609231213
 ! Version: 2609231105
 ! Version: 350.202311301133
 ! Vietnamese
@@ -1599,6 +1599,7 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237216
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23929
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240956
+! https://github.com/AdguardTeam/AdguardFilters/issues/241869
 ! https://github.com/AdguardTeam/AdguardFilters/issues/25467
 ! https://github.com/AdguardTeam/AdguardFilters/issues/26607
 ! https://github.com/AdguardTeam/AdguardFilters/issues/27196
@@ -3508,7 +3509,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-09-23T13:52:31+08:00
+# Update time: 2026-09-23T19:51:58+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -65147,6 +65148,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||swap.qth.com/include/adblockdetection/adblockDetector.js
 @@||swap.stu.126.net^
 @@||swapsmut.com/video/$stealth=referrer
+@@||swasc.homedepot.com^|
 @@||swedbank.ee^$document
 @@||swhoi.com/e/$subdocument,stealth=referrer
 @@||swift4claim.com^$generichide
@@ -68865,6 +68867,7 @@ alibaba.com##.list-card:has([data-role="ad-area"])
 alibaba.com##.searchx-offer-item[data-aplus-auto-offer*="ad_adgroup_toprank"]
 alibaba.com##[id^="sse-fluent-wending"]:has(.creative-ad-tag)
 alibaba.com##a[campaignid][target="_blank"]
+alibaba.com##div[class] > .fy26-product-card:has(> div > span:only-child)
 alibaba.com##div[data-search-floor^="area=wending&"]
 alibaba.com##div[data-spm="wending-bottom"]
 alibaba.com#?#.J-offer-wrapper:-abp-contains(Top sponsor listing)
@@ -69273,11 +69276,13 @@ amazon.*###sponsoredProducts2_feature_div
 amazon.*###sponsoredProducts_feature_div
 amazon.*###typ-recommendations-stripe-1
 amazon.*###typ-recommendations-stripe-2
+amazon.*##.AdHolder
 amazon.*##.AdsCard_container__K6vmo
 amazon.*##.a-cardui[class*="_new-detail-faceout-box_"]:has(.dynamicSponsoredLabelClass)
 amazon.*##.a-section:has(> div[cel_widget_id^="adplacements:"]:last-child)
 amazon.*##.ad-center
 amazon.*##.amzn-safe-frame-container
+amazon.*##.ape-placement
 amazon.*##.celwidget[data-ref_$="displayAds"]
 amazon.*##.dp-widget-card-deck:has([data-ad-placement-metadata])
 amazon.*##.s-main-slot > div.s-result-item:has(> .sg-col-inner:only-child > div[class*="widget=loom-"][class*="FEATURED"])
@@ -85815,6 +85820,8 @@ flickr.com##.getty-widget-view
 flickr.com##.moola-default-banner-view
 flickr.com##.moola-search-div
 flickr.com##.moola-search-div.main
+flickr.com##.moola-wrapper
+flickr.com##.photo-list-revenue-item-view
 flickr.com##div[class^="main view"]:has(a[href$="&ref=sponsored"])
 flickr.com#%#//scriptlet('adjust-setTimeout', 'adTimerStartCount', '1000')
 flickr.com#?#.photo-list-view > div.photo-list-getty-item-view:has(> div.photo-list-static-item-container a[href^="/account/upgrade/pro?"])
