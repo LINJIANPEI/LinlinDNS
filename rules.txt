@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-09-28 09:16:15（北京时间）
+! Version: 2026-09-28 15:52:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70627
+! Total count: 70633
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -9464,6 +9464,8 @@
 @@||email.procook.co.uk^|
 @@||emailnator.com^$generichide
 @@||emailregex.com^$generichide
+@@||emails.educause.edu^
+@@||emails.educause.edu^|
 @@||emas-link-service.aliyuncs.com^
 @@||emathhelp.net^$csp
 @@||embed.animeflv.ru/player.php?
@@ -11662,6 +11664,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=soonersports.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=southpark.*|southparkstudios.*
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sporteurope.tv
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sportitalialive.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=spox.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=stack.com
@@ -13737,6 +13740,8 @@
 @@||musician.kugou.com^
 @@||musicradar.com^$generichide
 @@||musictrack.jp/a/ad/banner_member.jpg
+@@||mux.com/*.m3u8$stealth=referrer
+@@||mux.com/*.ts?$stealth=referrer
 @@||mux.com^$xmlhttprequest,stealth=referrer,domain=patreon.com
 @@||muzlan.top/ads/banner.png
 @@||muzlan.top^$generichide
@@ -27130,6 +27135,7 @@ cheater.ninja###AdvallyAdhesion
 cheatsheet.com##.sidebar
 cheatsheet.com##.top-ad
 cheatslips.com##div.pb-2[style^="min-height:"]
+check-host.net##.article > div[class="mt-4 mb-4"]:has(> div.vrounded > div.cursor-pointer > a[href] > img)
 check-host.net##.ra-elative
 check-host.net##div[class]:has(> [class^="alc"])
 check-host.net##div[class]:has(> a[href$="?utm=checkhost"])
@@ -49122,6 +49128,7 @@ myguidecyprus.com##div[class^="mdAd"]
 myhack58.com##.CMBox>.adv32
 myhack58.com##.adv32
 myhentai.us##.tracking-btn
+myhentaicomics.com###Slider
 myhentaicomics.com##.featured-manga, .header-spot, .pagination-image {min-height:0 !important;}
 myhentaicomics.com##.item.image-block
 myhentaicomics.com##.outstrea
@@ -55588,6 +55595,7 @@ rademacher.de##.widget-Container ~ .widget-EyeCatcher
 radio-canada.ca###react-app > div:first-child:not(:only-child)[class]
 radio-internetowe.com##div[class^="ad_mobil"]
 radio-new-zealand.co.nz,fmradiofree.com,canli-radyo-dinle.com,emisoras-puertorico.com,emisorascolombianas.co,internetradio-horen.de,internetradio-schweiz.ch,mytuner-radio.com,radio-ao-vivo.com,radio-australia.org,radio-belgie.be,radio-canada-online.com,radio-danmark.dk,radio-dominicana.com,radio-ecuador.org,radio-en-ligne.fr,radio-en-vivo.mx,radio-espana.es,radio-hk.com,radio-hrvatska.com,radio-italiane.it,radio-korea.com,radio-maroc.org,radio-nederland.nl,radio-norge.org,radio-osterreich.at,radio-philippines.com,radio-polska.pl,radio-singapore.com,radio-south-africa.co.za,radio-suomi.com,radio-sveriges.se,radio-thai.com,radio-ua.com,radio-uk.co.uk,radioindia.in,radioindonesia.org,radiojapan.org,radiomalaysia.org,radios-argentinas.org,radios-bolivia.com,radios-chilenas.com,radios-guatemala.com,radios-online.pt,radios-uruguay.com,radios-venezuela.com,radiosdelperu.pe,radiotaiwan.tw###team_ad
+radio-osterreich.at,radio-australia.org,radio-hrvatska.com,radio-danmark.dk,radio-norge.org,internetradio-horen.de,fmradiofree.com##.right-sidebar
 radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.pt,radio.se###headerTopBar ~ div > div:has(div#RAD_D_station_top)
 radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.pt,radio.se##.mx-auto > .relative > .flex-wrap.justify-between:has(> .w-full div[id^="RAD_D_"])
 radio.at,radio.de,radio.dk,radio.es,radio.fr,radio.it,radio.net,radio.pl,radio.pt,radio.se##.my-\[5px\].mx-auto.w-full.hidden.md\:flex.md\:min-h-\[90px\].lg\:min-h-\[250px\].items-center.justify-center
@@ -57728,7 +57736,6 @@ sendvid.com###video-js-video > a[href="javascript:void(0)"][style*="z-index: 999
 sendvid.com##a[target="_blank"][style*="position: fixed"][style*="z-index:"]
 senest.dk##.generic-widget > .group[class*="d-none-"]:has(> .code-element:only-child > div[data-ad-unit-id])
 senfun.net##.player-recommend
-seniorsdiscountclub.com.au,fiba.basketball,theparking.eu,miniwebtool.com,airhint.com,pokemon-project.com,reneweconomy.com.au,tenforums.com##div[data-fuse]
 sense.org.uk##.cookie
 sensorsmag.com##body > div[id*="pronto"]
 sensorstechforum.com##.main_post_table a[href^="https://sensorstechforum.com/spyhunter-for-mac-download-install/"]
@@ -67077,11 +67084,10 @@ weatherpro.com##.billboard-wrapper
 weatherpro.com##.large-leaderboard
 weatherpro.com##.list-city-ad
 weatherpro.com##.medium-rectangle-wrapper-2
+weatherzone.com##div[class*=" "][height="270px"]
+weatherzone.com##div[class*=" "][height="74px"]
+weatherzone.com,seniorsdiscountclub.com.au,fiba.basketball,theparking.eu,miniwebtool.com,airhint.com,pokemon-project.com,reneweconomy.com.au,tenforums.com##div[data-fuse]
 weatherzone.com.au##.publift-ad-wrapper
-weatherzone.com.au##div[class*=" "][height="270px"]
-weatherzone.com.au##div[class*=" "][height="74px"]
-weatherzone.com.au##main > div[class*=" "]:has(> div[class*="img_"])
-weatherzone.com.au##section[class*=" "]:has(> div[class*="img_"])
 web-axioma.ru##.confform
 web-capture.net,cryptoslate.com##.partner
 web-dev-qa-db-fra.com##.adn-ar

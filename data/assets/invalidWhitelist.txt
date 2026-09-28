@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14828
+! Total count: 14832
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-09-28 00:43:49（北京时间）
+! Version: 2026-09-28 12:43:09（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -9638,6 +9638,7 @@
 @@||cdn.permutive.app/*-web.js$domain=theglobeandmail.com
 @@||cdn.permutive.com/*-web.js$domain=independent.co.uk
 @@||cdn.petametrics.com/*-nbc.js$script,domain=bringmethenews.com
+@@||cdn.petametrics.com/*-nbc.js?ts=$domain=bringmethenews.com|athlonsports.com|paulickreport.com|mmaweekly.com
 @@||cdn.petametrics.com/*.js$domain=thestreet.com
 @@||cdn.petametrics.com^$script,domain=mechacomic.jp
 @@||cdn.petametrics.com^$script,domain=meidasnews.com
@@ -13859,6 +13860,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=soonersports.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=southpark.*|southparkstudios.*
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sporteurope.tv
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sportitalialive.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=spox.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=stack.com
@@ -15542,6 +15544,8 @@
 @@||musictrack.jp/a/ad/banner_member.jpg
 @@||musicvideogenome.com/javascripts/stats.js
 @@||muumuu-domain.com/common/js/ga_social_tracking.js
+@@||mux.com/*.m3u8$stealth=referrer
+@@||mux.com/*.ts?$stealth=referrer
 @@||mux.com^$xmlhttprequest,stealth=referrer,domain=patreon.com
 @@||muzlan.top/ads/banner.png
 @@||muzlan.top^$generichide
