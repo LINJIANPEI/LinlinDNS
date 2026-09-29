@@ -111,12 +111,12 @@
 ! Title: MMotti AdguardHome - whitelist.txt
 ! Title: white-list（白名单）
 ! Title: 广告白名单规则，反馈🐧群
-! Total count: 14832
+! Total count: 14833
 ! Total lines: 137
 ! Update date: 2025-08-19
 ! Update: 20250612
 ! Version: 202407191352
-! Version: 2026-09-29 13:09:38（北京时间）
+! Version: 2026-09-30 01:55:19（北京时间）
 ! Xiaomi
 ! Xiaomi Home
 ! Xiaomi Xiaoai
@@ -2031,7 +2031,7 @@
 @@mp4.ts
 @@nileapi.market.xiaomi.com
 @@playlist/*/load-playlist$xmlhttprequest,stealth=referrer,domain=crackstreamer.net|1stream.eu|streameast.app|thecrackstreams.live|buffstreams.app|gooz.aapmains.net
-@@q=$xmlhttprequest,stealth=referrer,domain=player.videasy.*|vidup.to|vidfast.vc|vidking.net
+@@q=$xmlhttprequest,stealth=referrer,domain=player.videasy.*|vidup.to|vidfast.vc|vidking.net|movy.sx
 @@s.click.taobao.com
 @@s.click.tmall.com
 @@safari-extension://com.adguard.safari-$document
@@ -11478,6 +11478,7 @@
 @@||filemoon.sx/e/$stealth=referrer
 @@||fileone.tv/file/$domain=fileone.tv
 @@||files*.lynda.com/secure/courses/*.mp4$media,domain=linkedin.com|lynda.com
+@@||files.an1.net^$stealth=referrer,domain=an1.com
 @@||files.fm/f/$stealth=webrtc
 @@||files.fm/js/analytics_events.js$~third-party
 @@||files.mycloud.com/js/analytics/google_analytics.js$domain=files.mycloud.com
