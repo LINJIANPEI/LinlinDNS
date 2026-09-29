@@ -373,8 +373,8 @@
 ! Block vip prompt in self-page
 ! Block xj8 request
 ! Block zhihu recommends
-! Blocked Filters: 103226
-! Blocked Filters: 43595
+! Blocked Filters: 106579
+! Blocked Filters: 43599
 ! Blocked by CNAME adperfect.com
 ! Blocked by CNAME ads.viralize.tv
 ! Blocked by CNAME affex.org
@@ -416,8 +416,8 @@
 ! Blocked by exacttarget.com alias
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 ! Blocked by ||relevant-digital.com^
-! Blocked domains: 213390
-! Blocked domains: 5381
+! Blocked domains: 214723
+! Blocked domains: 5355
 ! Blocked: 4.898 rules
 ! Blocked: 564 rules
 ! Blocked: 847 rules
@@ -443,12 +443,12 @@
 ! Central
 ! Chameleon Advertising Technologies
 ! Chaturbate
-! Checksum: 5Fr0MM4VYpbXyoGSzhukzA
+! Checksum: 2+apd0NreggLzva67NtLpg
 ! Checksum: 8BZGCtexC3gdaGkfO/i08Q
+! Checksum: Bxd6f5LYHqpnzl0KJvQcTw
+! Checksum: EhZ6CY4jp2whxk5DoXZtOA
 ! Checksum: U+Zbd5ej8TT62cVyz3Z0ww
 ! Checksum: g/p/pgKFGTOOfgZR208zMA
-! Checksum: sqjWfsiFjIEhydP1x4n53g
-! Checksum: uiSvxqohr++Q5NjKOHtzWQ
 ! Checksum: vXO2skD37egAcrKzRVhe1A
 ! ChinaList and EasyList combination subscription
 ! Chinese
@@ -765,13 +765,13 @@
 ! Last modified: 2024-8-27 09:05
 ! Last modified: 2025/11/03 16:06 +0800
 ! Last modified: 2026-09-21T14:20:12.875Z
-! Last modified: 2026-09-29T08:21:46.387Z
+! Last modified: 2026-09-29T14:17:11.843Z
 ! Last modified: 2026/09/08 06:47 +0800
-! Last modified: 2026/09/29 13:11:22
+! Last modified: 2026/09/29 22:45:02
 ! Last modified: 23 Dec 2025 09:21 UTC
 ! Last modified: 23 Dec 2025 09:25 UTC
 ! Last modified: 23 Sep 2026 11:05 UTC+7
-! Last modified: 29 Sep 2026 09:03 UTC
+! Last modified: 29 Sep 2026 16:03 UTC
 ! Last modified: 30 Jan 2021
 ! Last modified: 30 Nov 2023 11:33 UTC
 ! Latvian
@@ -1231,8 +1231,8 @@
 ! Version: 202601201
 ! Version: 202609080647
 ! Version: 20260928092444
-! Version: 202609290903
-! Version: 20260929131122
+! Version: 202609291603
+! Version: 20260929224502
 ! Version: 2609231105
 ! Version: 350.202311301133
 ! Vietnamese
@@ -3318,7 +3318,7 @@
 # Last modified: 23 Sep 2026 11:05 UTC+7
 # Last modified: Fri, 19 Dec 2025, 21:01 UTC+01:00
 # Last modified: Sun, 27 Sep 2026, 00:14 UTC+02:00
-# Last update: 2026-09-28
+# Last update: 2026-09-29
 # Last updated: 2020-06-19
 # Last updated: 2025-12-19 21:17:15 (UTC)                      #
 # Last updated: 2026-09-27 02:02:12 (UTC)                      #
@@ -3353,7 +3353,7 @@
 # Modified Hosts End
 # Modified Hosts Start
 # Notes: The Operating System does not read the "#" symbol #
-# Number of domains: 113402
+# Number of domains: 110572
 # Number of entries: 381
 # Number of entries: 807
 # Number of unique domains: 74,760
@@ -3519,7 +3519,7 @@
 # Uncyclopedia Start
 # Up Media End
 # Up Media Start
-# Update time: 2026-09-29T16:54:39+08:00
+# Update time: 2026-09-29T23:53:33+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Use this file to prevent your computer from connecting to selected
 # Use this file to prevent your computer or server from connecting to selected
@@ -38729,6 +38729,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 *$script,third-party,domain=huanggua22.com
 *$script,third-party,domain=m.roushuwu.vip|xiaoaimh.com
 *$script,third-party,domain=primewire.mov
+*$script,third-party,domain=scnlog.me
 *$script,third-party,domain=ziperto.com
 *$script,third-party,xmlhttprequest,domain=m.biquge700.com|biquge001.com
 *$script,xmlhttprequest,image,third-party,domain=360lele.cc|fxshu.top
@@ -68686,6 +68687,9 @@ airlinegeeks.com##.ag-ads-target
 airlinegeeks.com,avweb.com,flyingmag.com,planeandpilotmag.com##.flyin-article-above-headline
 airlive.net#$##rb-checktag > .adsbygoogle { display: block !important; }
 airlive.net#%#//scriptlet('prevent-setTimeout', '/siteAccessNotification|AdBlockDetector/')
+airlive.net#@#.ad-slot
+airlive.net#@#.ads-banner
+airlive.net#@#[id^="google_ads_iframe_"]
 airmail.news##am-display[fetched="fetched"]
 airmail.news,govevents.com,protipster.com##.display
 airmore.com##.thead
@@ -69331,6 +69335,7 @@ amazon.*##.amzn-safe-frame-container
 amazon.*##.ape-placement
 amazon.*##.celwidget[data-ref_$="displayAds"]
 amazon.*##.dp-widget-card-deck:has([data-ad-placement-metadata])
+amazon.*##.gwm-window-wrapper:has(> [data-ref_$="_displayAds"])
 amazon.*##.s-main-slot > div.s-result-item:has(> .sg-col-inner:only-child > div[class*="widget=loom-"][class*="FEATURED"])
 amazon.*##.s-result-item:has(.puis-sponsored-label-text)
 amazon.*##.s-result-item:has([data-ad-feedback-label-id])
@@ -71657,6 +71662,8 @@ avple.tv##.MuiSkeleton-root
 avple.tv##.jss13
 avple.tv##.jss20
 avrebo.com#%#//scriptlet('json-prune', 'data.[-].ad_url')
+avscan.cc###sponsor-ad
+avscan.cc##.sp-rail
 avsubthai.me###page > center
 avsubthai.me##.ad
 avsuggest.com,qiaobutang.com##.overlay
@@ -72947,6 +72954,7 @@ best4you.sk##a[href*="tipsport.sk"]
 best4you.sk##img[src="/images/multisharesk.gif"]
 best4you.sk##img[width="560"][height="90"]
 best4you.sk##img[width="690"][height="90"]
+bestblackhatforum.com##img[title="Advertisement"]
 bestbuy.ca##.pencilAd_EE9DV
 bestbuy.ca##.x-productListItem:has([data-automation="sponsoredProductLabel"])
 bestbuy.ca##[class^="sponsoredProdBoxGridArea"]
@@ -98860,6 +98868,7 @@ letmejerk.net#?##videos > div.th:has(> span.th-ad)
 letmeread.net#@##google-ad
 letour.fr##.r-rentraps
 letras.com##.ad-full
+letras.com##.an
 letras.com##.an-pub
 letras.com##.anSpaceTop
 letras.com##.cnt-space-top
@@ -99924,6 +99933,7 @@ loukoala.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.cre
 love.dk###scw
 love.ru###gdpr_popup
 love4porn.com##.block-video > div.top
+love4porn.com##.top-links
 love4u.net#%#//scriptlet("prevent-window-open")
 loveawake.com###main_ad
 loveholidays.com##.c-o--
@@ -104795,6 +104805,7 @@ myshared.ru,slideplayer.biz,slideplayer.biz.tr,slideplayer.com,slideplayer.com.b
 myshiptracking.com##.alert_bar
 myshopify.com###shopillaxcookielaw-wrapper
 myshorturls.blogspot.com##.adsbygoogle
+myshows.me##.adblock
 myshows.me##.adsbygoogle
 myshows.me##.kinopoiskBanner
 myshows.me##.wrapper > div.branding
@@ -111156,6 +111167,8 @@ pornobae.com##.promo-cabecera
 pornoeggs.com##.mediaPlayerBanner
 pornoeggs.com##div[class^="ib-"]
 pornoeggs.com#?#.col > .card-deck:has(> .card > .card-img > div[class^="ib-"])
+pornoeggs.com,pornflip.com#%#//scriptlet('set-constant', 'pop_clicked', '1')
+pornoeggs.com,pornflip.com,peekvids.com##.add_href_jsclick
 pornofan.pl###inplayerADS
 pornofan.pl##.PublicitaDestra
 pornoflix.com###onPauseAdContainer
@@ -118911,6 +118924,10 @@ stackoverflow.com##.js-sidebar-zone
 stackshare.io##.css-2wkyhw
 stackshare.io##div[data-testid="Squib"] > a[rel="nofollow"] img
 stackshare.io#?##navbar_wrap ~ div[id] > div[class^="css-"]:has(> div[data-testid="Squib"] > a[rel="nofollow"] img)
+stacktv.ca,globaltv.com#$#body .topAds { display: block !important; }
+stacktv.ca,globaltv.com#%#//scriptlet('set-constant', 'abTest', 'emptyObj')
+stacktv.ca,globaltv.com#%#//scriptlet('set-constant', 'abTest.blockAdBlocker', 'false')
+stacktv.ca,globaltv.com#@#.topAds
 stadiblidene.lv###mrcoockie
 stadiumgaming.gg#?#.wrapper > div.container > div.row > div[class^="col-"]:has(> div.vm-placement)
 stadiumtalk.com##.story-section-inStory-inline
