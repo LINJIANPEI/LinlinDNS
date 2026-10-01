@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-10-01 15:56:33（北京时间）
+! Version: 2026-10-01 22:56:55（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 70701
+! Total count: 70706
 %3C?php%20echo%20substr(md5(microtime())$popup
 %3Faf_prt%3D*%26af_siteid%3D1*%26clickid%3D$all
 &adb=y&adb=y^$popup
@@ -33560,6 +33560,7 @@ fandom.com##.aff-unit__wrapper
 fandom.com##.featured-video-player-container
 fandom.com##.main-container > .top_leaderboard-odyssey-wrapper:has(> .top-ads-container)
 fandom.com##.marketplace
+fandom.com##.sticky-placement-top
 fandom.com##.sticky-placement-top:has(> div[class] > div[data-key="advertisement"])
 fandom.com##.top-ads-container
 fandom.com##.top_leaderboard-odyssey-wrapper
@@ -36557,6 +36558,7 @@ genius.com##.InreadContainer-sc-b078f8b1-0
 genius.com##.Leaderboard-sc-78e1105d-0
 genius.com##.SectionLeaderboard-sc-dbc68f4-0
 genius.com##.SectionLeaderboard__Center-sc-1f7f30cc-1
+genius.com##.SectionLeaderboard__Center-sc-4496dd88-1
 genius.com##.bCLuZv
 genius.com##.bIZLkL
 genius.com##.cujBpY
@@ -36574,6 +36576,7 @@ genius.com##div[class^="SectionScrollSentinel_"] > div[class^="SectionLeaderboar
 genius.com##div[class^="SidebarAd-"]
 genius.com##div[class^="SidebarAd_"]
 genius.com##div[class^="StubhubLink"]
+genius.com##div[data-testid="sticky-leaderboard"]
 geniuskitchen.com##.smart-card-wrap > div.smart-aside
 genmirror.com##.container div[style="height:200px;width:100%;"]
 genmirror.com##.container div[style="height:280px;width:100%;"]
@@ -36641,6 +36644,7 @@ getcomics.org##.getco-content
 getcomics.org##.getco-content_2
 getcomics.org##.gjqry
 getcomics.org##.menu > li:has(> a[href^="https://craveu.ai/"])
+getcomics.org##[href^="https://aichattings.com"]
 getcomics.org##[id^="getco-"]
 getcomics.org##a[href*="utm_campaign"] > img
 getcomics.org##a[target="_blank"][class="center"] > img
@@ -47324,6 +47328,7 @@ metacritic.com##.c-adMpu
 metacritic.com##.c-adsGallerySlot
 metacritic.com##.c-expressvpn
 metacritic.com##.fandom-ad-placeholder
+metacritic.com,tvguide.com##.fandom-ad-placeholder
 metademolab.com###root > div[style*="fixed"]
 metager.org##.result:has(a[href^="https://metager.org"][href*="/partner/r?"])
 metager.org##.result:has(a[href^="https://r.search.yahoo.com/"])
