@@ -19,6 +19,7 @@
 <details open>
 <summary>规则列表</summary>
 <ul>
+
 - **[黑名单规则数量](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/rules.txt)**
 - **[白名单规则数量](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/allow.txt)**
 </ul>
