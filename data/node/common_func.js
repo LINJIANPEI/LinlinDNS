@@ -154,86 +154,93 @@ const removeSubdomainDuplicates = (rules) => {
 
 // ----------------------------------------
 
-// 校验单条规则是否符合 AdGuard Home 常见格式（注释视为无效）
-function isValidAdGuardRule(rule) {
-  if (typeof rule !== "string") return false;
+/**
+ * 严格针对 AdGuard Home 的规则校验函数
+ * @param {string} rule - 原始规则字符串
+ * @returns {boolean} - 是否为合法的 AdGuard Home 规则
+ */
+function isAdGuardHomeRule(rule) {
+  if (typeof rule !== 'string') return false;
   const trimmed = rule.trim();
-  if (!trimmed) return false; // 空行无效
+  if (!trimmed) return false;
 
-  // 1. 注释（! 或 # 开头）直接过滤掉
-  if (trimmed.startsWith("!") || trimmed.startsWith("#")) return false;
+  // 1. 过滤注释（! 或 # 开头）
+  if (trimmed.startsWith('!') || trimmed.startsWith('#')) return false;
 
-  // 2. 上游 DNS 规则：[/example.local/]94.140.14.140
-  if (/^\[\/.*?\/\][^\s]+$/.test(trimmed)) return true;
+  // 2. 过滤不支持的浏览器专属修饰符
+  const unsupportedModifiers = [
+    '$third-party', '$script', '$image', '$stylesheet', 
+    '$media', '$object', '$subdocument', '$xmlhttprequest', 
+    '$popup', '$document', '$elemhide', '$generichide'
+  ];
+  const lowerRule = trimmed.toLowerCase();
+  if (unsupportedModifiers.some(mod => lowerRule.includes(mod))) return false;
 
-  // 3. 正则规则：/regex/ 或 @@/regex/
-  if (/^(@@)?\/.*\/\$?[^\s]*$/.test(trimmed)) return true;
+  // 3. 过滤 URL 路径与查询参数（包含 / ? =）
+  // 例外：AdGuard Home 的上游 DNS 规则格式 [/example.local/]94.140.14.140 允许包含 /
+  if (/[?=&]/.test(trimmed) && !trimmed.startsWith('[/')) return false;
+  if (trimmed.includes('/') && !trimmed.startsWith('[/')) return false;
 
-  // 4. 分离修饰符（$ 后面的部分）
+  // 4. 过滤明显无效的伪域名（以 - 开头或形如 1325890192.cos）
+  if (trimmed.startsWith('-') || /^[0-9]+\.cos$/.test(trimmed)) return false;
+
+  // 5. 分离修饰符（$ 后面的部分）
   let pattern = trimmed;
-  const dollarIdx = trimmed.indexOf("$");
+  const dollarIdx = trimmed.indexOf('$');
   if (dollarIdx !== -1) {
     pattern = trimmed.slice(0, dollarIdx);
     const modifiers = trimmed.slice(dollarIdx + 1);
     if (!modifiers || /\s/.test(modifiers)) return false;
   }
 
-  // 5. 去掉例外前缀 @@
-  if (pattern.startsWith("@@")) pattern = pattern.slice(2);
+  // 6. 剥离白名单前缀 @@
+  if (pattern.startsWith('@@')) {
+    pattern = pattern.slice(2);
+  }
   if (!pattern) return false;
 
-  // 6. || 开头的域名规则，如 ||example.org^
-  if (pattern.startsWith("||")) {
+  // 7. 校验上游 DNS 规则
+  if (/^\[\/.*?\/\][^\s]+$/.test(trimmed)) return true;
+
+  // 8. 校验 || 开头的域名规则
+  if (pattern.startsWith('||')) {
     const domainPart = pattern.slice(2);
     return /^[A-Za-z0-9\u00a1-\uffff.*?^|_-]+$/.test(domainPart);
   }
 
-  // 7. | 开头的规则，如 |http://example.com
-  if (pattern.startsWith("|")) {
-    return (
-      /^\|(https?|ftp|ws|wss):\/\/[^\s]+$/.test(pattern) ||
-      /^\|[A-Za-z0-9.-]+\^?$/.test(pattern)
-    );
-  }
-
-  // 8. hosts 格式：IP 域名 [域名...]
-  if (
-    /^(?:\d{1,3}\.){3}\d{1,3}\s+/.test(pattern) ||
-    /^[0-9a-fA-F:]+\s+/.test(pattern)
-  ) {
+  // 9. 校验 hosts 格式
+  if (/^(?:\d{1,3}\.){3}\d{1,3}\s+/.test(pattern) || /^[0-9a-fA-F:]+\s+/.test(pattern)) {
     const parts = pattern.split(/\s+/);
     if (parts.length < 2) return false;
     const ip = parts[0];
     const domains = parts.slice(1);
-    return (
-      isValidIP(ip) &&
-      domains.every((d) => /^[A-Za-z0-9\u00a1-\uffff.*?_-]+$/.test(d))
-    );
+    return isValidIP(ip) && domains.every(d => /^[A-Za-z0-9\u00a1-\uffff.*?_-]+$/.test(d));
   }
 
-  // 9. 普通域名或通配符，如 example.com、*.example.com、localhost
+  // 10. 校验普通域名或通配符域名
   if (/^[A-Za-z0-9\u00a1-\uffff*?^|._-]+$/.test(pattern)) {
-    return (
-      pattern.includes(".") || pattern.includes("*") || pattern === "localhost"
-    );
+    return pattern.includes('.') || pattern.includes('*') || pattern === 'localhost';
   }
 
   return false;
 }
 
-// 简单的 IP 校验
+/**
+ * 校验 IP 地址（支持 IPv4 和 IPv6）
+ * @param {string} ip 
+ * @returns {boolean}
+ */
 function isValidIP(ip) {
-  // IPv4
   if (/^(?:\d{1,3}\.){3}\d{1,3}$/.test(ip)) {
-    return ip.split(".").every((n) => {
+    return ip.split('.').every(n => {
       const num = Number(n);
       return num >= 0 && num <= 255 && String(num) === n;
     });
   }
-  // IPv6 简单校验
-  if (/^[0-9a-fA-F:]+$/.test(ip) && ip.includes(":")) return true;
+  if (/^[0-9a-fA-F:]+$/.test(ip) && ip.includes(':')) return true;
   return false;
 }
+
 
 /**
  * 过滤无效字符。
