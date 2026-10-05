@@ -62,7 +62,7 @@ const writeFileWithSizeCheck = async (filePath, data, sizeLimit = 100) => {
       // 写入当前块
       const chunkFilePath = path.join(
         directory,
-        `${fileName}-part-${chunkIndex}${fileExtension}`
+        `${fileName}-part-${chunkIndex}${fileExtension}`,
       );
       await writeFileContent(chunkFilePath, chunk, "utf8");
       console.log(`块文件写入成功: ${chunkFilePath}`);
@@ -88,7 +88,7 @@ const getFileNamesWithSuffixAsync = async (folderPath, paths = "") => {
         const itemPath = path.join(folderPath, item);
         const stats = await stat(itemPath);
         return stats.isFile() ? item : null;
-      })
+      }),
     );
     return fileNames
       .filter((fileName) => fileName !== null)
@@ -154,6 +154,87 @@ const removeSubdomainDuplicates = (rules) => {
 
 // ----------------------------------------
 
+// 校验单条规则是否符合 AdGuard Home 常见格式（注释视为无效）
+function isValidAdGuardRule(rule) {
+  if (typeof rule !== "string") return false;
+  const trimmed = rule.trim();
+  if (!trimmed) return false; // 空行无效
+
+  // 1. 注释（! 或 # 开头）直接过滤掉
+  if (trimmed.startsWith("!") || trimmed.startsWith("#")) return false;
+
+  // 2. 上游 DNS 规则：[/example.local/]94.140.14.140
+  if (/^\[\/.*?\/\][^\s]+$/.test(trimmed)) return true;
+
+  // 3. 正则规则：/regex/ 或 @@/regex/
+  if (/^(@@)?\/.*\/\$?[^\s]*$/.test(trimmed)) return true;
+
+  // 4. 分离修饰符（$ 后面的部分）
+  let pattern = trimmed;
+  const dollarIdx = trimmed.indexOf("$");
+  if (dollarIdx !== -1) {
+    pattern = trimmed.slice(0, dollarIdx);
+    const modifiers = trimmed.slice(dollarIdx + 1);
+    if (!modifiers || /\s/.test(modifiers)) return false;
+  }
+
+  // 5. 去掉例外前缀 @@
+  if (pattern.startsWith("@@")) pattern = pattern.slice(2);
+  if (!pattern) return false;
+
+  // 6. || 开头的域名规则，如 ||example.org^
+  if (pattern.startsWith("||")) {
+    const domainPart = pattern.slice(2);
+    return /^[A-Za-z0-9\u00a1-\uffff.*?^|_-]+$/.test(domainPart);
+  }
+
+  // 7. | 开头的规则，如 |http://example.com
+  if (pattern.startsWith("|")) {
+    return (
+      /^\|(https?|ftp|ws|wss):\/\/[^\s]+$/.test(pattern) ||
+      /^\|[A-Za-z0-9.-]+\^?$/.test(pattern)
+    );
+  }
+
+  // 8. hosts 格式：IP 域名 [域名...]
+  if (
+    /^(?:\d{1,3}\.){3}\d{1,3}\s+/.test(pattern) ||
+    /^[0-9a-fA-F:]+\s+/.test(pattern)
+  ) {
+    const parts = pattern.split(/\s+/);
+    if (parts.length < 2) return false;
+    const ip = parts[0];
+    const domains = parts.slice(1);
+    return (
+      isValidIP(ip) &&
+      domains.every((d) => /^[A-Za-z0-9\u00a1-\uffff.*?_-]+$/.test(d))
+    );
+  }
+
+  // 9. 普通域名或通配符，如 example.com、*.example.com、localhost
+  if (/^[A-Za-z0-9\u00a1-\uffff*?^|._-]+$/.test(pattern)) {
+    return (
+      pattern.includes(".") || pattern.includes("*") || pattern === "localhost"
+    );
+  }
+
+  return false;
+}
+
+// 简单的 IP 校验
+function isValidIP(ip) {
+  // IPv4
+  if (/^(?:\d{1,3}\.){3}\d{1,3}$/.test(ip)) {
+    return ip.split(".").every((n) => {
+      const num = Number(n);
+      return num >= 0 && num <= 255 && String(num) === n;
+    });
+  }
+  // IPv6 简单校验
+  if (/^[0-9a-fA-F:]+$/.test(ip) && ip.includes(":")) return true;
+  return false;
+}
+
 /**
  * 过滤无效字符。
  * @param {array} arr - 要过滤的数据。
@@ -166,6 +247,7 @@ const filters = (arr) => {
       .filter(Boolean)
       .map((line) => line.trim()) // 修剪每行的空白
       .filter((line) => line !== "") // 过滤掉空行
+      .filter(isValidAdGuardRule)
       .sort();
     console.log("过滤无效字符成功");
     return arrs;
@@ -229,7 +311,7 @@ const getFilenameWithoutExtension = (filepath) => {
 const copyFiles = async (...fileList) => {
   if (
     !fileList.every(
-      (filePair) => Array.isArray(filePair) && filePair.length === 2
+      (filePair) => Array.isArray(filePair) && filePair.length === 2,
     )
   ) {
     throw new Error("所有参数必须是包含 [旧路径, 新路径] 的数组。");
