@@ -67,7 +67,6 @@ async function main() {
       `${newDirectory}/allow.txt`,
       `${newDirectory}/dns.txt`,
       `${newDirectory}/dnsallow.txt`,
-      `${newDirectory}/DnsConfiguration.txt`,
       `${newDirectory}/rules.txt`,
     );
 
