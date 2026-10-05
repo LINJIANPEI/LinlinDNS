@@ -22,7 +22,6 @@ const cleanReadme = async () => {
     const numDns = await extractCount("dns.txt");
     const numAllow = await extractCount("allow.txt");
     const numdnsAllow = await extractCount("dnsallow.txt");
-    const numDnsConfiguration = await extractCount("DnsConfiguration.txt");
     // 获取当前时间并转换为北京时间
     const beijingTime = moment()
       .tz("Asia/Shanghai")
@@ -34,7 +33,6 @@ const cleanReadme = async () => {
       [/^DNS拦截规则数量.*/, `DNS拦截规则数量: ${numDns}`],
       [/^DNS白名单规则数量.*/, `DNS白名单规则数量: ${numdnsAllow}`],
       [/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`],
-      [/^DNS配置数量.*/, `DNS配置数量: ${numDnsConfiguration}`],
     ];
     readmeContentData = readmeContent
       .split("\n")
