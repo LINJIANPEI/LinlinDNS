@@ -254,7 +254,7 @@ const filters = (arr) => {
       .filter(Boolean)
       .map((line) => line.trim()) // 修剪每行的空白
       .filter((line) => line !== "") // 过滤掉空行
-      .filter(isValidAdGuardRule)
+      .filter(isAdGuardRules)
       .sort();
     console.log("过滤无效字符成功");
     return arrs;
