@@ -13,8 +13,8 @@ on:
       - published
 
 permissions:
-  actions: write # 列出和删除工作流运行
-  contents: read # 读取仓库内容（action 必需）
+  contents: write # push 用
+  actions: write # 删除 workflow runs 用
 
 jobs:
   update:
