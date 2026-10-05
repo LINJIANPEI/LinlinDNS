@@ -11,30 +11,17 @@
 
 ```
 =======
-<<<<<<< HEAD
-更新时间: 2026-10-06 01:54:04 （北京时间）
-=======
-<<<<<<< HEAD
-更新时间: 2026-10-06 01:54:04 （北京时间）
->>>>>>> fd2f4bd7d54acfd8c7d55390afd529b2838326f0
-黑名单规则数量: 3717
-白名单规则数量: 1
-=======
-<<<<<<< HEAD
-=======
 更新时间: 2026-10-06 01:54:04 （北京时间）
 拦截规则数量: 3717
 DNS拦截规则数量: 240855
 白名单规则数量: 1
 DNS白名单规则数量: 1
->>>>>>> 53563c2dcf4d77b8aca8329beb67cb2ee7c151c4
 =======
->>>>>>> fd2f4bd7d54acfd8c7d55390afd529b2838326f0
+
 ``` 
 <details open>
 <summary>规则列表</summary>
 <ul>
-
 - **[黑名单规则数量](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/rules.txt)**
 - **[白名单规则数量](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/allow.txt)**
 </ul>
