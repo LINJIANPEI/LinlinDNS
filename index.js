@@ -15,10 +15,6 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
-const { optimizeProcessing } = require("./data/node/optimizeProcessing"); // optimizeProcessing.js 模块
-
-const { AdGuardConverters } = require("./data/node/AdGuardConverters"); // AdGuardConverters.js 模块
-
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
 // 处理md文件
@@ -55,31 +51,14 @@ async function main() {
 
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    // 使用示例
-    const optimizedResult = await optimizeProcessing(blacklists1, whitelists1);
-
     // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
     //有效规则
 
-    await writeFile(
-      `${newDirectory}/rules.txt`,
-      [
-        ...(await AdGuardConverters(
-          optimizedResult.excluded.blacklist.invalid,
-        )),
-      ].join("\n"),
-    );
+    await writeFile(`${newDirectory}/rules.txt`, [...blacklists1].join("\n"));
 
-    await writeFile(
-      `${newDirectory}/allow.txt`,
-      [
-        ...(await AdGuardConverters(
-          optimizedResult.excluded.whitelist.invalid,
-        )),
-      ].join("\n"),
-    );
+    await writeFile(`${newDirectory}/allow.txt`, [...whitelists1].join("\n"));
 
     // 处理title
     await title();
