@@ -13,7 +13,8 @@ on:
       - published
 
 permissions:
-  contents: write
+  actions: write # 列出和删除工作流运行
+  contents: read # 读取仓库内容（action 必需）
 
 jobs:
   update:
