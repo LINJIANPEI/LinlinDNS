@@ -12,20 +12,15 @@
 ```
 =======
 更新时间: 2026-10-06 01:39:11 （北京时间）
-拦截规则数量: 3717
-DNS拦截规则数量: 240855
-白名单规则数量: 1
-DNS白名单规则数量: 1
+黑名单规则数量: 3717
+白名单规则数量: 240855
 =======
 ``` 
 <details open>
 <summary>规则列表</summary>
 <ul>
 
-- **[拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/rules.txt)**
-- **[DNS拦截规则](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/dns.txt)**
-- **[白名单](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/allow.txt)**
-- **[DNS白名单](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/dnsallow.txt)**
-- **[DNS配置](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/DnsConfiguration.txt)**
+- **[黑名单规则数量](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/rules.txt)**
+- **[白名单规则数量](https://raw.githubusercontent.com/LINJIANPEI/LinlinDNS/main/allow.txt)**
 </ul>
 </details>

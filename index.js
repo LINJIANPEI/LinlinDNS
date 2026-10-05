@@ -4,8 +4,6 @@ const {
   deleteDir,
   deleteFiles,
   writeFile,
-  getFileNamesWithSuffixAsync,
-  writeFileWithSizeCheck,
 } = require("./data/node/common_func"); // common_func.js 模块
 
 //规则下载
@@ -39,8 +37,6 @@ const oldDirectory = "./tmp";
 // 新地址
 const newDirectory = "./";
 
-const assets = "./data/assets";
-
 async function main() {
   try {
     // 创建临时文件夹
@@ -63,27 +59,9 @@ async function main() {
     const optimizedResult = await optimizeProcessing(blacklists1, whitelists1);
 
     // 删除文件
-    await deleteFiles(
-      `${newDirectory}/allow.txt`,
-      `${newDirectory}/dns.txt`,
-      `${newDirectory}/dnsallow.txt`,
-      `${newDirectory}/rules.txt`,
-    );
-
-    await deleteFiles(
-      ...(await getFileNamesWithSuffixAsync(`${assets}`, `${assets}/`)),
-    );
+    await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
     //有效规则
-    await writeFile(
-      `${newDirectory}/dns.txt`,
-      optimizedResult.effective.blacklist.join("\n"),
-    );
-
-    await writeFile(
-      `${newDirectory}/dnsallow.txt`,
-      optimizedResult.effective.whitelist.join("\n"),
-    );
 
     await writeFile(
       `${newDirectory}/rules.txt`,
@@ -101,52 +79,6 @@ async function main() {
           optimizedResult.excluded.whitelist.invalid,
         )),
       ].join("\n"),
-    );
-
-    // 冲突规则
-    await writeFileWithSizeCheck(
-      `${assets}/conflictsBlacklist.txt`,
-      optimizedResult.excluded.blacklist.conflicts
-        .map((obj) => JSON.stringify(obj))
-        .join("\n"),
-      50,
-    );
-    await writeFileWithSizeCheck(
-      `${assets}/conflictsWhitelist.txt`,
-      optimizedResult.excluded.whitelist.conflicts
-        .map((obj) => JSON.stringify(obj))
-        .join("\n"),
-      50,
-    );
-
-    // 重复规则
-    await writeFileWithSizeCheck(
-      `${assets}/duplicatesBlacklist.txt`,
-      optimizedResult.excluded.blacklist.duplicates
-        .map((obj) => JSON.stringify(obj))
-        .join("\n"),
-      50,
-    );
-
-    await writeFileWithSizeCheck(
-      `${assets}/duplicatesWhitelist.txt`,
-      optimizedResult.excluded.whitelist.duplicates
-        .map((obj) => JSON.stringify(obj))
-        .join("\n"),
-      50,
-    );
-
-    // 无效规则
-    await writeFileWithSizeCheck(
-      `${assets}/invalidBlacklist.txt`,
-      optimizedResult.excluded.blacklist.invalid.join("\n"),
-      50,
-    );
-
-    await writeFileWithSizeCheck(
-      `${assets}/invalidWhitelist.txt`,
-      optimizedResult.excluded.whitelist.invalid.join("\n"),
-      50,
     );
 
     // 处理title
