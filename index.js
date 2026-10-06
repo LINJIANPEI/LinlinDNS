@@ -24,9 +24,9 @@ const { title } = require("./data/node/title"); // title.js 模块
 const { cleanReadme } = require("./data/node/cleanReadme"); // cleanReadme.js 模块
 
 //黑名单规则
-const rules = readListFile("./data/configs/rules.txt");
+const rules = await readListFile("./data/configs/rules.txt");
 //白名单规则
-const allow = readListFile("./data/configs/allow.txt");
+const allow = await readListFile("./data/configs/allow.txt");
 
 // 旧地址
 const oldDirectory = "./tmp";
