@@ -294,12 +294,6 @@ const filters = (arr) => {
   }
 };
 
-module.exports = {
-  isValidIP,
-  isAdGuardHomeRule,
-  filters,
-};
-
 // ----------------------------------------
 
 /**
