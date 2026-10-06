@@ -6,6 +6,9 @@ const {
   writeFile,
 } = require("./data/node/common_func"); // common_func.js 模块
 
+// 读取规则源
+const { readListFile } = require("./data/node/readListFile"); // readListFile.js 模块
+
 //规则下载
 const { downloadRules } = require("./data/node/downloadRules"); // downloadRules.js 模块
 
@@ -21,12 +24,9 @@ const { title } = require("./data/node/title"); // title.js 模块
 const { cleanReadme } = require("./data/node/cleanReadme"); // cleanReadme.js 模块
 
 //黑名单规则
-const rules = [
-  "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt", //217heidai
-  "https://raw.githubusercontent.com/Thelongdarkorg/ad-rules-merged/main/merged.txt", //浮风
-];
+const rules = readListFile("./data/configs/rules.txt");
 //白名单规则
-const allow = [];
+const allow = readListFile("./data/configs/allow.txt");
 
 // 旧地址
 const oldDirectory = "./tmp";
