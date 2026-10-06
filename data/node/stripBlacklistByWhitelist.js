@@ -59,12 +59,12 @@ const stripBlacklistByWhitelist = async (
     const remainingWhitelist = filters(normalizedWhitelist);
 
     console.log(
-      `归类剥离黑白名单完成，白名单规则${remainingBlacklist.length}条，白名单规则${remainingWhitelist.length}条`,
+      `归类剥离黑白名单完成，黑名单规则${remainingBlacklist.length}条，白名单规则${remainingWhitelist.length}条`,
     );
 
     return {
-      blacklist: remainingBlacklist,
-      whitelist: remainingWhitelist,
+      blacklists: remainingBlacklist,
+      whitelists: remainingWhitelist,
       toWhitelist,
       toBlacklist,
     };

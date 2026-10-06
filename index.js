@@ -57,7 +57,7 @@ async function main() {
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
     // 归类剥离黑白名单
-    const { blacklist, whitelist } = await stripBlacklistByWhitelist(
+    const { blacklists, whitelists } = await stripBlacklistByWhitelist(
       blacklists1,
       whitelists1,
     );
@@ -66,8 +66,8 @@ async function main() {
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
     //有效规则
-    await writeFile(`${newDirectory}/rules.txt`, [...blacklist].join("\n"));
-    await writeFile(`${newDirectory}/allow.txt`, [...whitelist].join("\n"));
+    await writeFile(`${newDirectory}/rules.txt`, [...blacklists].join("\n"));
+    await writeFile(`${newDirectory}/allow.txt`, [...whitelists].join("\n"));
 
     // 处理title
     await title();
