@@ -183,7 +183,22 @@ const isAdGuardHomeRule = (rule) => {
   // 1. 过滤注释（! 或 # 开头）
   if (trimmed.startsWith("!") || trimmed.startsWith("#")) return false;
 
-  // 2. 过滤不支持的浏览器专属修饰符
+  // 2. 正则规则快速放行（支持 /.../ 和 @@/.../ 两种形式）
+  const regexCandidate = trimmed.startsWith("@@") ? trimmed.slice(2) : trimmed;
+  if (
+    regexCandidate.length >= 3 &&
+    regexCandidate.startsWith("/") &&
+    regexCandidate.endsWith("/")
+  ) {
+    try {
+      new RegExp(regexCandidate.slice(1, -1)); // 编译验证
+      return true;
+    } catch {
+      return false; // 非法正则，过滤掉
+    }
+  }
+
+  // 3. 过滤不支持的浏览器专属修饰符
   const unsupportedModifiers = [
     "$third-party",
     "$script",
@@ -201,15 +216,15 @@ const isAdGuardHomeRule = (rule) => {
   const lowerRule = trimmed.toLowerCase();
   if (unsupportedModifiers.some((mod) => lowerRule.includes(mod))) return false;
 
-  // 3. 过滤 URL 路径与查询参数（包含 / ? =）
+  // 4. 过滤 URL 路径与查询参数（包含 / ? =）
   // 例外：AdGuard Home 的上游 DNS 规则格式 [/example.local/]94.140.14.140 允许包含 /
   if (/[?=&]/.test(trimmed) && !trimmed.startsWith("[/")) return false;
   if (trimmed.includes("/") && !trimmed.startsWith("[/")) return false;
 
-  // 4. 过滤明显无效的伪域名（以 - 开头或形如 1325890192.cos）
+  // 5. 过滤明显无效的伪域名（以 - 开头或形如 1325890192.cos）
   if (trimmed.startsWith("-") || /^[0-9]+\.cos$/.test(trimmed)) return false;
 
-  // 5. 分离修饰符（$ 后面的部分）
+  // 6. 分离修饰符（$ 后面的部分）
   let pattern = trimmed;
   const dollarIdx = trimmed.indexOf("$");
   if (dollarIdx !== -1) {
@@ -218,22 +233,22 @@ const isAdGuardHomeRule = (rule) => {
     if (!modifiers || /\s/.test(modifiers)) return false;
   }
 
-  // 6. 剥离白名单前缀 @@
+  // 7. 剥离白名单前缀 @@
   if (pattern.startsWith("@@")) {
     pattern = pattern.slice(2);
   }
   if (!pattern) return false;
 
-  // 7. 校验上游 DNS 规则
+  // 8. 校验上游 DNS 规则
   if (/^\[\/.*?\/\][^\s]+$/.test(trimmed)) return true;
 
-  // 8. 校验 || 开头的域名规则
+  // 9. 校验 || 开头的域名规则
   if (pattern.startsWith("||")) {
     const domainPart = pattern.slice(2);
     return /^[A-Za-z0-9\u00a1-\uffff.*?^|_-]+$/.test(domainPart);
   }
 
-  // 9. 校验 hosts 格式
+  // 10. 校验 hosts 格式
   if (
     /^(?:\d{1,3}\.){3}\d{1,3}\s+/.test(pattern) ||
     /^[0-9a-fA-F:]+\s+/.test(pattern)
@@ -248,7 +263,7 @@ const isAdGuardHomeRule = (rule) => {
     );
   }
 
-  // 10. 校验普通域名或通配符域名
+  // 11. 校验普通域名或通配符域名
   if (/^[A-Za-z0-9\u00a1-\uffff*?^|._-]+$/.test(pattern)) {
     return (
       pattern.includes(".") || pattern.includes("*") || pattern === "localhost"
@@ -275,8 +290,14 @@ const filters = (arr) => {
     console.log("过滤无效字符成功");
     return arrs;
   } catch (error) {
-    throw new Error(`过滤无效字符失败: ${error}`);
+    throw new Error(`过滤无效字符失败: ${error.message}`);
   }
+};
+
+module.exports = {
+  isValidIP,
+  isAdGuardHomeRule,
+  filters,
 };
 
 // ----------------------------------------
