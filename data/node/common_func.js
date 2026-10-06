@@ -233,11 +233,14 @@ const isAdGuardHomeRule = (rule) => {
     if (!modifiers || /\s/.test(modifiers)) return false;
   }
 
-  // 7. 剥离白名单前缀 @@
+  /// 7. 剥离白名单前缀 @@
   if (pattern.startsWith("@@")) {
     pattern = pattern.slice(2);
   }
   if (!pattern) return false;
+
+  // 过滤单 | 开头的规则，只保留 ||
+  if (pattern.startsWith("|") && !pattern.startsWith("||")) return false;
 
   // 8. 校验上游 DNS 规则
   if (/^\[\/.*?\/\][^\s]+$/.test(trimmed)) return true;
