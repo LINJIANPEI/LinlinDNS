@@ -11,7 +11,7 @@ const { readFile } = require("./common_func");
 const readListFile = async (filePath, title) => {
   console.log(`开始读取${title}规则源`);
   try {
-    const con = await readFile(filePath)
+    const con = readFile(filePath)
       .split(/\r?\n/)
       .map((line) => line.split("#")[0].trim()) // 支持行尾注释
       .filter((line) => line && !line.startsWith("#"));
