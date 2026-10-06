@@ -49,8 +49,8 @@ const stripBlacklistByWhitelist = async (blacklist, whitelist) => {
     );
 
     return {
-      blacklist: remainingBlacklist,
-      whitelist: remainingWhitelist,
+      blacklists: remainingBlacklist,
+      whitelists: remainingWhitelist,
       toWhitelist,
     };
   } catch (error) {
