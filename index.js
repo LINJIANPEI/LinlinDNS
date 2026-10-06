@@ -23,11 +23,6 @@ const { title } = require("./data/node/title"); // title.js 模块
 // 处理md文件
 const { cleanReadme } = require("./data/node/cleanReadme"); // cleanReadme.js 模块
 
-//黑名单规则
-const rules = await readListFile("./data/configs/rules.txt");
-//白名单规则
-const allow = await readListFile("./data/configs/allow.txt");
-
 // 旧地址
 const oldDirectory = "./tmp";
 // 新地址
@@ -37,6 +32,12 @@ async function main() {
   try {
     // 创建临时文件夹
     await createDir(oldDirectory);
+
+    //黑名单规则
+    const rules = await readListFile("./data/configs/rules.txt");
+    //白名单规则
+    const allow = await readListFile("./data/configs/allow.txt");
+
     //规则下载
     await downloadRules(rules, allow, oldDirectory);
 
