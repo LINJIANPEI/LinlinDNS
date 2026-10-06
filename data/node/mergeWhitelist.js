@@ -1,4 +1,4 @@
-const { filters, readFile, readDir } = require("./common_func");
+const { readFile, readDir } = require("./common_func");
 
 // 合并规则
 const mergeWhitelist = async (directory) => {
@@ -8,7 +8,7 @@ const mergeWhitelist = async (directory) => {
     const fileList = await readDir(directory);
     // 过滤出以"allow"开头且以".txt"结尾的文件
     const allowFiles = fileList.filter(
-      (file) => file.startsWith("allow") && file.endsWith(".txt")
+      (file) => file.startsWith("allow") && file.endsWith(".txt"),
     );
     // 如果没有找到符合条件的文件，提前返回
     if (allowFiles.length === 0) {
@@ -17,14 +17,14 @@ const mergeWhitelist = async (directory) => {
     }
     // 读取所有符合条件的文件内容
     const allFileData = await Promise.all(
-      allowFiles.map((file) => readFile(`${directory}/${file}`))
+      allowFiles.map((file) => readFile(`${directory}/${file}`)),
     );
 
     // 处理文件规则
-    let allFileDatas = filters(allFileData.join("\n").split("\n"));
+    let allFileDatas = allFileData.join("\n").split("\n");
 
     console.log(
-      `合并白名单规则完成，共处理了${allowFiles.length}个文件，合并规则${allFileDatas.length}条`
+      `合并白名单规则完成，共处理了${allowFiles.length}个文件，合并规则${allFileDatas.length}条`,
     );
 
     return allFileDatas;

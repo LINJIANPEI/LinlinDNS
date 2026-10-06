@@ -4,7 +4,6 @@ const {
   deleteDir,
   deleteFiles,
   writeFile,
-  normalizeBlackWhite,
 } = require("./data/node/common_func"); // common_func.js 模块
 
 // 读取规则源
@@ -19,10 +18,8 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
-// 归类剥离黑白名单
-const {
-  stripBlacklistByWhitelist,
-} = require("./data/node/stripBlacklistByWhitelist"); // stripBlacklistByWhitelist.js 模块
+// 精确去重和域名标准化去重，并处理黑白名单冲突
+const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists"); // buildAdGuardHomeLists.js 模块
 
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
@@ -53,18 +50,15 @@ async function main() {
       ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`],
     );
 
-    // 合并规则并去重
+    // 合并规则
     const blacklists1 = await mergeBlacklists(oldDirectory);
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    // 归类剥离黑白名单
-    const { blacklists, whitelists } = await stripBlacklistByWhitelist(
-      blacklists1,
-      whitelists1,
-    );
-
-    const blacklist = normalizeBlackWhite(blacklists, "black");
-    const whitelist = normalizeBlackWhite(whitelists, "white");
+    // 精确去重和域名标准化去重，并处理黑白名单冲突
+    const { blacklist, whitelist } = buildAdGuardHomeLists([
+      ...blacklists1,
+      ...whitelists1,
+    ]);
 
     // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
