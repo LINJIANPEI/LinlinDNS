@@ -18,6 +18,9 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
+// 去除死域名
+const { removeDeadRules } = require("./data/node/removeDeadRules"); // removeDeadRules.js 模块
+
 // 精确去重和域名标准化去重，并处理黑白名单冲突
 const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists"); // buildAdGuardHomeLists.js 模块
 
@@ -54,11 +57,13 @@ async function main() {
     const blacklists1 = await mergeBlacklists(oldDirectory);
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
+    const cleaned = await removeDeadRules([...blacklists1, ...whitelists1], {
+      nameservers: ["8.8.8.8", "1.1.1.1", "114.114.114.114", "223.5.5.5"],
+      port: 53,
+    });
+
     // 精确去重和域名标准化去重，并处理黑白名单冲突
-    const { blacklist, whitelist } = buildAdGuardHomeLists([
-      ...blacklists1,
-      ...whitelists1,
-    ]);
+    const { blacklist, whitelist } = buildAdGuardHomeLists(cleaned);
 
     // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);

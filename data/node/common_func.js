@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const { promisify } = require("util");
-const compile = require("@adguard/hostlist-compiler");
 const deleteFile = promisify(fs.unlink);
 const mkdir = promisify(fs.mkdir);
 const copyFile = promisify(fs.copyFile);
