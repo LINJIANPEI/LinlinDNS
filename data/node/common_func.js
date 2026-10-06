@@ -310,27 +310,25 @@ const filters = (arr) => {
 // ----------------------------------------
 
 /**
- * 归一化 + 去重 + 按格式归类（单数组）
+ * 归一化 + 去重（单数组）
  *
- * 归属判定：
- *   - @@ 开头      → 白名单
- *   - || 开头      → 黑名单
- *   - 裸域名        → 按 bareDomainAs 补格式
- *   - /REGEX/      → 黑名单
- *   - @@/REGEX/    → 白名单
+ * - @@ 开头      → 白名单格式，保留
+ * - || 开头      → 黑名单格式，保留
+ * - 裸域名        → 按 bareDomainAs 补格式
+ * - /REGEX/      → 保留
+ * - @@/REGEX/    → 保留
  *
  * @param {string[]} rules - 所有规则混在一起的数组
  * @param {"black"|"white"|"keep"} [bareDomainAs="black"] - 裸域名补成哪种格式
- * @returns {[string[], string[]]} - [blacklist, whitelist]
+ * @returns {string[]} - 处理后的规则数组
  */
 const normalizeBlackWhite = (rules, bareDomainAs = "black") => {
   const normalizeRule = (rule) => {
     let r = rule.trim();
     if (!r) return null;
 
-    // 正则规则：@@/xxx/ 白，/xxx/ 黑
-    if (r.startsWith("@@/")) return [r, "white"];
-    if (r.startsWith("/")) return [r, "black"];
+    // 正则规则不动
+    if (r.startsWith("@@/") || r.startsWith("/")) return r;
 
     let isWhite = false;
     if (r.startsWith("@@")) {
@@ -359,41 +357,31 @@ const normalizeBlackWhite = (rules, bareDomainAs = "black") => {
         isWhite = true;
         r = `||${r}^`;
       }
-      // keep：保持裸域名原样，归属按原 @@ 判断
+      // keep：保持裸域名原样
     } else if (isAnchor) {
       r = `||${r}^`;
     }
 
-    const final = isWhite ? `@@${r}` : r;
-    return [final, isWhite ? "white" : "black"];
+    return isWhite ? `@@${r}` : r;
   };
 
-  const blacklist = [];
-  const whitelist = [];
-  const seenBlack = new Set();
-  const seenWhite = new Set();
+  const seen = new Set();
+  const result = [];
 
   for (const raw of rules) {
     if (raw == null) continue;
-    const parsed = normalizeRule(String(raw));
-    if (!parsed) continue;
-
-    const [final, side] = parsed;
-    if (side === "white") {
-      if (seenWhite.has(final)) continue;
-      seenWhite.add(final);
-      whitelist.push(final);
-    } else {
-      if (seenBlack.has(final)) continue;
-      seenBlack.add(final);
-      blacklist.push(final);
-    }
+    const n = normalizeRule(String(raw));
+    if (!n) continue;
+    if (seen.has(n)) continue; // 大小写敏感去重
+    seen.add(n);
+    result.push(n);
   }
 
-  blacklist.sort();
-  whitelist.sort();
-  return [blacklist, whitelist];
+  result.sort();
+  return result;
 };
+
+module.exports = { normalizeBlackWhite };
 
 // ----------------------------------------
 
