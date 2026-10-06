@@ -57,14 +57,14 @@ async function main() {
     const blacklists1 = await mergeBlacklists(oldDirectory);
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    // // 归类剥离黑白名单
-    // const { blacklists, whitelists } = await stripBlacklistByWhitelist(
-    //   blacklists1,
-    //   whitelists1,
-    // );
+    // 归类剥离黑白名单
+    const { blacklists, whitelists } = await stripBlacklistByWhitelist(
+      blacklists1,
+      whitelists1,
+    );
 
-    // const blacklist = normalizeBlackWhite(blacklists, "black");
-    // const whitelist = normalizeBlackWhite(whitelists, "white");
+    const blacklist = normalizeBlackWhite(blacklists, "black");
+    const whitelist = normalizeBlackWhite(whitelists, "white");
 
     // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
