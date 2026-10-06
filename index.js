@@ -18,6 +18,9 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
+// 归类剥离黑白名单
+const { stripBlacklistByWhitelist } = require("./data/node/stripBlacklist"); // stripBlacklist.js 模块
+
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
 // 处理md文件
@@ -49,17 +52,20 @@ async function main() {
 
     // 合并规则并去重
     const blacklists1 = await mergeBlacklists(oldDirectory);
-
     const whitelists1 = await mergeWhitelist(oldDirectory);
+
+    // 归类剥离黑白名单
+    const { blacklist, whitelist } = await stripBlacklistByWhitelist(
+      blacklists1,
+      whitelists1,
+    );
 
     // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
     //有效规则
-
-    await writeFile(`${newDirectory}/rules.txt`, [...blacklists1].join("\n"));
-
-    await writeFile(`${newDirectory}/allow.txt`, [...whitelists1].join("\n"));
+    await writeFile(`${newDirectory}/rules.txt`, [...blacklist].join("\n"));
+    await writeFile(`${newDirectory}/allow.txt`, [...whitelist].join("\n"));
 
     // 处理title
     await title();
