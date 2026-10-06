@@ -281,14 +281,27 @@ const isAdGuardHomeRule = (rule) => {
 const filters = (arr) => {
   try {
     console.log("开始过滤无效字符");
-    const arrs = [...new Set(arr)]
-      .filter(Boolean)
-      .map((line) => line.trim()) // 修剪每行的空白
-      .filter((line) => line !== "") // 过滤掉空行
-      .filter(isAdGuardHomeRule)
-      .sort();
-    console.log("过滤无效字符成功");
-    return arrs;
+
+    const seen = new Set();
+    const result = [];
+
+    for (const raw of arr) {
+      if (raw == null) continue;
+
+      const line = String(raw).trim();
+      if (!line) continue;
+
+      if (seen.has(line)) continue; // 大小写敏感去重
+      seen.add(line);
+
+      if (isAdGuardHomeRule(line)) {
+        result.push(line);
+      }
+    }
+
+    result.sort();
+    console.log(`过滤无效字符成功，保留 ${result.length} 条`);
+    return result;
   } catch (error) {
     throw new Error(`过滤无效字符失败: ${error.message}`);
   }
