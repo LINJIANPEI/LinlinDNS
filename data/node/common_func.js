@@ -310,6 +310,94 @@ const filters = (arr) => {
 // ----------------------------------------
 
 /**
+ * 归一化 + 去重 + 按格式归类（单数组）
+ *
+ * 归属判定：
+ *   - @@ 开头      → 白名单
+ *   - || 开头      → 黑名单
+ *   - 裸域名        → 按 bareDomainAs 补格式
+ *   - /REGEX/      → 黑名单
+ *   - @@/REGEX/    → 白名单
+ *
+ * @param {string[]} rules - 所有规则混在一起的数组
+ * @param {"black"|"white"|"keep"} [bareDomainAs="black"] - 裸域名补成哪种格式
+ * @returns {[string[], string[]]} - [blacklist, whitelist]
+ */
+const normalizeBlackWhite = (rules, bareDomainAs = "black") => {
+  const normalizeRule = (rule) => {
+    let r = rule.trim();
+    if (!r) return null;
+
+    // 正则规则：@@/xxx/ 白，/xxx/ 黑
+    if (r.startsWith("@@/")) return [r, "white"];
+    if (r.startsWith("/")) return [r, "black"];
+
+    let isWhite = false;
+    if (r.startsWith("@@")) {
+      isWhite = true;
+      r = r.slice(2);
+    }
+
+    let isAnchor = false;
+    if (r.startsWith("||")) {
+      isAnchor = true;
+      r = r.slice(2);
+    }
+
+    if (r.endsWith("^")) r = r.slice(0, -1);
+
+    const isBareDomain =
+      !isAnchor &&
+      /^[A-Za-z0-9\u00a1-\uffff.*_-]+$/.test(r) &&
+      (r.includes(".") || r.includes("*"));
+
+    if (isBareDomain) {
+      if (bareDomainAs === "black") {
+        isWhite = false;
+        r = `||${r}^`;
+      } else if (bareDomainAs === "white") {
+        isWhite = true;
+        r = `||${r}^`;
+      }
+      // keep：保持裸域名原样，归属按原 @@ 判断
+    } else if (isAnchor) {
+      r = `||${r}^`;
+    }
+
+    const final = isWhite ? `@@${r}` : r;
+    return [final, isWhite ? "white" : "black"];
+  };
+
+  const blacklist = [];
+  const whitelist = [];
+  const seenBlack = new Set();
+  const seenWhite = new Set();
+
+  for (const raw of rules) {
+    if (raw == null) continue;
+    const parsed = normalizeRule(String(raw));
+    if (!parsed) continue;
+
+    const [final, side] = parsed;
+    if (side === "white") {
+      if (seenWhite.has(final)) continue;
+      seenWhite.add(final);
+      whitelist.push(final);
+    } else {
+      if (seenBlack.has(final)) continue;
+      seenBlack.add(final);
+      blacklist.push(final);
+    }
+  }
+
+  blacklist.sort();
+  whitelist.sort();
+  return [blacklist, whitelist];
+};
+
+// ----------------------------------------
+
+/**
  * 检查文件是否存在。
  * @param {string} filepath - 检查文件是否存在的文件名路径。
  * @return {boolean} 存在返回true，不存在返回false。
@@ -569,4 +657,5 @@ module.exports = {
   readDir,
   getFileNamesWithSuffixAsync,
   writeFileWithSizeCheck,
+  normalizeBlackWhite,
 };

@@ -4,6 +4,7 @@ const {
   deleteDir,
   deleteFiles,
   writeFile,
+  normalizeBlackWhite,
 } = require("./data/node/common_func"); // common_func.js 模块
 
 // 读取规则源
@@ -62,12 +63,15 @@ async function main() {
       whitelists1,
     );
 
+    const blacklist = normalizeBlackWhite(blacklists, black);
+    const whitelist = normalizeBlackWhite(whitelists, white);
+
     // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
     //有效规则
-    await writeFile(`${newDirectory}/rules.txt`, [...blacklists].join("\n"));
-    await writeFile(`${newDirectory}/allow.txt`, [...whitelists].join("\n"));
+    await writeFile(`${newDirectory}/rules.txt`, [...blacklist].join("\n"));
+    await writeFile(`${newDirectory}/allow.txt`, [...whitelist].join("\n"));
 
     // 处理title
     await title();
