@@ -34,9 +34,9 @@ async function main() {
     await createDir(oldDirectory);
 
     //黑名单规则
-    const rules = await readListFile("./data/configs/rules.txt");
+    const rules = await readListFile("./data/configs/rules.txt", "黑名单");
     //白名单规则
-    const allow = await readListFile("./data/configs/allow.txt");
+    const allow = await readListFile("./data/configs/allow.txt", "白名单");
 
     //规则下载
     await downloadRules(rules, allow, oldDirectory);
