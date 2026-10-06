@@ -63,8 +63,8 @@ async function main() {
       whitelists1,
     );
 
-    const blacklist = normalizeBlackWhite(blacklists, black);
-    const whitelist = normalizeBlackWhite(whitelists, white);
+    const blacklist = normalizeBlackWhite(blacklists, "black");
+    const whitelist = normalizeBlackWhite(whitelists, "white");
 
     // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);

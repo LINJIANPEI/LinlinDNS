@@ -33,10 +33,10 @@ const downloadRules = async (rules, allow, directory) => {
   console.log("开始下载规则");
   const downloadTasks = [
     ...rules.map((url, index) =>
-      downloadFile(url, `${directory}/rules${index + 1}.txt`)
+      downloadFile(url, `${directory}/rules${index + 1}.txt`),
     ),
     ...allow.map((url, index) =>
-      downloadFile(url, `${directory}/allow${index + 1}.txt`)
+      downloadFile(url, `${directory}/allow${index + 1}.txt`),
     ),
   ];
   try {
