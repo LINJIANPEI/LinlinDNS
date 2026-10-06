@@ -57,10 +57,10 @@ async function main() {
     const blacklists1 = await mergeBlacklists(oldDirectory);
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    //const cleaned = await removeDeadRules([...blacklists1, ...whitelists1], {
-      nameservers: ["8.8.8.8", "1.1.1.1", "114.114.114.114", "223.5.5.5"],
-      port: 53,
-    });
+    // const cleaned = await removeDeadRules([...blacklists1, ...whitelists1], {
+     // nameservers: ["8.8.8.8", "1.1.1.1", "114.114.114.114", "223.5.5.5"],
+     // port: 53,
+   // });
 
     const cleaned = [...blacklists1, ...whitelists1]
 
