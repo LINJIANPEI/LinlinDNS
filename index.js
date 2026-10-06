@@ -70,8 +70,8 @@ async function main() {
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
     //有效规则
-    await writeFile(`${newDirectory}/rules.txt`, [...blacklists1].join("\n"));
-    await writeFile(`${newDirectory}/allow.txt`, [...whitelists1].join("\n"));
+    await writeFile(`${newDirectory}/rules.txt`, [...blacklist].join("\n"));
+    await writeFile(`${newDirectory}/allow.txt`, [...whitelist].join("\n"));
 
     // 处理title
     await title();
