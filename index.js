@@ -19,7 +19,9 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
 // 归类剥离黑白名单
-const { stripBlacklistByWhitelist } = require("./data/node/stripBlacklist"); // stripBlacklist.js 模块
+const {
+  stripBlacklistByWhitelist,
+} = require("./data/node/stripBlacklistByWhitelist"); // stripBlacklistByWhitelist.js 模块
 
 // 处理title
 const { title } = require("./data/node/title"); // title.js 模块
