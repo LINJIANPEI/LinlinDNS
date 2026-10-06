@@ -3,39 +3,30 @@ const { filters } = require("./common_func");
 /**
  * 归类并分离黑/白名单（异步版）
  *
- * 步骤：
- *   1. 黑名单里混入的白名单规则（以 @@ 开头）→ 移到白名单
- *   2. 白名单里混入的黑名单规则（不以 @@ 开头）→ 移到黑名单
+ * 归类规则：
+ *   1. 有 @@ 前缀的规则 → 归到白名单
+ *   2. 无 @@ 前缀的规则 → 留在原数组中，不移动
  *
- * @param {string[]} blacklist - 黑名单规则数组（可能混有 @@ 白名单）
- * @param {string[]} whitelist - 白名单规则数组（可能混有非 @@ 黑名单）
- * @param {Object} [options]
- * @param {string} [options.whitelistPrefix="@@"] - 白名单前缀标识
+ * @param {string[]} blacklist
+ * @param {string[]} whitelist
  * @returns {Promise<{
  *   blacklist: string[],
  *   whitelist: string[],
- *   toWhitelist: string[],
- *   toBlacklist: string[]
+ *   toWhitelist: string[]
  * }>}
  */
-const stripBlacklistByWhitelist = async (
-  blacklist,
-  whitelist,
-  options = {},
-) => {
-  const { whitelistPrefix = "@@" } = options;
+const stripBlacklistByWhitelist = async (blacklist, whitelist) => {
   console.log("开始归类剥离黑白名单");
 
   try {
-    // ---------- 归类 ----------
-    const isWhitelistRule = (rule) => rule.startsWith(whitelistPrefix);
+    const WHITELIST_PREFIX = "@@";
+    const isWhitelistRule = (rule) => rule.startsWith(WHITELIST_PREFIX);
 
     const normalizedBlacklist = [];
     const normalizedWhitelist = [];
     const toWhitelist = [];
-    const toBlacklist = [];
 
-    // 黑名单里混入的白名单规则 → 移到白名单
+    // ---------- 1. 黑名单数组：有 @@ 的移到白名单，其余留在黑名单 ----------
     for (const rule of blacklist) {
       if (isWhitelistRule(rule)) {
         normalizedWhitelist.push(rule);
@@ -45,14 +36,9 @@ const stripBlacklistByWhitelist = async (
       }
     }
 
-    // 白名单里混入的黑名单规则 → 移到黑名单
+    // ---------- 2. 白名单数组：全部留在白名单，无 @@ 也不移动 ----------
     for (const rule of whitelist) {
-      if (isWhitelistRule(rule)) {
-        normalizedWhitelist.push(rule);
-      } else {
-        normalizedBlacklist.push(rule);
-        toBlacklist.push(rule);
-      }
+      normalizedWhitelist.push(rule);
     }
 
     const remainingBlacklist = filters(normalizedBlacklist);
@@ -63,10 +49,9 @@ const stripBlacklistByWhitelist = async (
     );
 
     return {
-      blacklists: remainingBlacklist,
-      whitelists: remainingWhitelist,
+      blacklist: remainingBlacklist,
+      whitelist: remainingWhitelist,
       toWhitelist,
-      toBlacklist,
     };
   } catch (error) {
     throw new Error(`归类剥离黑白名单失败: ${error.message}`);
