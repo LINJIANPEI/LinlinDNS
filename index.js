@@ -57,10 +57,12 @@ async function main() {
     const blacklists1 = await mergeBlacklists(oldDirectory);
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    const cleaned = await removeDeadRules([...blacklists1, ...whitelists1], {
+    //const cleaned = await removeDeadRules([...blacklists1, ...whitelists1], {
       nameservers: ["8.8.8.8", "1.1.1.1", "114.114.114.114", "223.5.5.5"],
       port: 53,
     });
+
+    const cleaned = [...blacklists1, ...whitelists1]
 
     // 精确去重和域名标准化去重，并处理黑白名单冲突
     const { blacklist, whitelist } = buildAdGuardHomeLists(cleaned);
