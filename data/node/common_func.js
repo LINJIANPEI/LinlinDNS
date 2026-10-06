@@ -381,8 +381,6 @@ const normalizeBlackWhite = (rules, bareDomainAs = "black") => {
   return result;
 };
 
-module.exports = { normalizeBlackWhite };
-
 // ----------------------------------------
 
 /**
