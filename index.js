@@ -77,7 +77,7 @@ async function main() {
     await writeFile(`${newDirectory}/allow.txt`, [...whitelist].join("\n"));
 
     // 死域名清单
-    await writeFile(`${newDirectory}/dead.txt`, deadDomains.join("\n"));
+    await writeFile(`${newDirectory}/dead.txt`, nocleaned.join("\n"));
 
     // 处理title
     await title();
