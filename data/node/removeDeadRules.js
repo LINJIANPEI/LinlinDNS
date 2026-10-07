@@ -1,3 +1,200 @@
+const { Resolver } = require("node:dns/promises");
+const net = require("node:net");
+const fs = require("node:fs");
+const path = require("node:path");
+
+const CACHE_TTL = 3110400; // 36 天
+const DEFAULT_CONCURRENCY = 200;
+const DEFAULT_NAMESERVERS = ["127.0.0.1"];
+const DEFAULT_PORT = 5053;
+const DNS_TIMEOUT = 2000;
+const CONNECT_TIMEOUT = 2000;
+const DEFAULT_CACHE_FILE = "./dns-cache.json";
+const DEFAULT_PROGRESS_STEP = 1000;
+
+const DOMAIN_RE =
+  /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
+const IPV4_RE = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
+
+// ============================================================
+// Resolver 复用池
+// ============================================================
+const resolverCache = new Map();
+
+const getResolver = (nameservers, port) => {
+  const key = `${nameservers.join(",")}:${port}`;
+  if (!resolverCache.has(key)) {
+    const resolver = new Resolver();
+    resolver.setServers(nameservers.map((ns) => `${ns}:${port}`));
+    resolverCache.set(key, resolver);
+  }
+  return resolverCache.get(key);
+};
+
+// ============================================================
+// 工具函数
+// ============================================================
+const isIPv4 = (s) => {
+  const m = IPV4_RE.exec(s);
+  if (!m) return false;
+  return m.slice(1).every((p) => {
+    const n = Number(p);
+    return n >= 0 && n <= 255;
+  });
+};
+
+const pLimit = (concurrency) => {
+  let active = 0;
+  const queue = [];
+  const next = () => {
+    active--;
+    if (queue.length) queue.shift()();
+  };
+  return (fn) =>
+    new Promise((resolve, reject) => {
+      const run = () => {
+        active++;
+        Promise.resolve().then(fn).then(resolve, reject).finally(next);
+      };
+      if (active < concurrency) run();
+      else queue.push(run);
+    });
+};
+
+const normalizeDomain = (value) => {
+  const domain = value
+    .trim()
+    .toLowerCase()
+    .replace(/\.+$/, "")
+    .replace(/^\.+/, "");
+  if (!domain) return null;
+  if (domain === "localhost" || domain === "localhost.localdomain") return null;
+  if (isIPv4(domain)) return null;
+  return DOMAIN_RE.test(domain) ? domain : null;
+};
+
+const parseRule = (line) => {
+  if (typeof line !== "string") return null;
+  const trimmed = line.trim();
+  if (!trimmed) return null;
+
+  if (trimmed.startsWith("!")) return null;
+  if (trimmed.startsWith("#")) {
+    const extMarkers = [
+      "##",
+      "#@#",
+      "#$#",
+      "#@$#",
+      "#%#",
+      "#@%#",
+      "#?#",
+      "#@?#",
+    ];
+    if (!extMarkers.some((m) => trimmed.startsWith(m))) return null;
+  }
+
+  const parts = trimmed.split(/\s+/);
+  if (parts.length === 2 && isIPv4(parts[0])) {
+    const domain = normalizeDomain(parts[1]);
+    if (domain) {
+      const isWhite = !(parts[0] === "0.0.0.0" || parts[0].startsWith("127."));
+      return { domain, isWhite, original: line };
+    }
+    return null;
+  }
+
+  const isWhite = trimmed.startsWith("@@");
+  const body = isWhite ? trimmed.slice(2) : trimmed;
+
+  if (body.startsWith("||")) {
+    const domain = normalizeDomain(body.slice(2).split("^")[0]);
+    return domain ? { domain, isWhite, original: line } : null;
+  }
+
+  const domain = normalizeDomain(trimmed.replace(/\^+$/, ""));
+  return domain ? { domain, isWhite: false, original: line } : null;
+};
+
+// ============================================================
+// DNS 查询
+// ============================================================
+const resolveA = async (domain, nameservers, port) => {
+  const resolver = getResolver(nameservers, port);
+  try {
+    const records = await Promise.race([
+      resolver.resolve4(domain),
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("DNS timeout")), DNS_TIMEOUT),
+      ),
+    ]);
+    return records.filter((ip) => ip !== "0.0.0.0");
+  } catch {
+    return [];
+  }
+};
+
+const connectWithTimeout = (ip, port, timeout = CONNECT_TIMEOUT) => {
+  return new Promise((resolve) => {
+    const socket = new net.Socket();
+    const done = (r) => {
+      socket.destroy();
+      resolve(r);
+    };
+    socket.setTimeout(timeout);
+    socket.once("connect", () => done(true));
+    socket.once("timeout", () => done(false));
+    socket.once("error", () => done(false));
+    socket.connect(port, ip);
+  });
+};
+
+const checkDomain = async (domain, { nameservers, port }) => {
+  if (isIPv4(domain)) {
+    for (const p of [80, 443, 80, 443, 80, 443]) {
+      if (await connectWithTimeout(domain, p)) return [domain];
+    }
+    return [];
+  }
+  return resolveA(domain, nameservers, port);
+};
+
+// ============================================================
+// 文件缓存
+// ============================================================
+const createFileCache = (filePath) => {
+  let store = new Map();
+
+  if (filePath && fs.existsSync(filePath)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      store = new Map(Object.entries(data));
+    } catch {
+      store = new Map();
+    }
+  }
+
+  return {
+    get(domain) {
+      return store.get(domain);
+    },
+    set(domain, value) {
+      store.set(domain, value);
+    },
+    save() {
+      if (!filePath) return;
+      const dir = path.dirname(filePath);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(filePath, JSON.stringify(Object.fromEntries(store)));
+    },
+    size() {
+      return store.size;
+    },
+  };
+};
+
+// ============================================================
+// 主函数
+// ============================================================
 const removeDeadRules = async (
   rules,
   {
@@ -169,4 +366,9 @@ const removeDeadRules = async (
   } catch (error) {
     throw new Error(`剔除死域名规则失败: ${error.message}`);
   }
+};
+
+module.exports = {
+  removeDeadRules,
+  createFileCache,
 };
