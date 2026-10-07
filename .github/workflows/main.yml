@@ -3,18 +3,16 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 */1 * * *"
-
   push:
     branches:
-      - main #2020年10月后github新建仓库默认分支改为main，注意更改
-
+      - main
   release:
     types:
       - published
 
 permissions:
-  contents: write # push 用
-  actions: write # 删除 workflow runs 用
+  contents: write
+  actions: write
 
 jobs:
   update:
@@ -32,15 +30,57 @@ jobs:
           git pull
           git branch -m main
 
+      - name: 恢复 DNS 缓存
+        uses: actions/cache@v4
+        with:
+          path: |
+            dns-cache.json
+            smartdns.cache
+          key: dns-cache-${{ github.run_id }}
+          restore-keys: |
+            dns-cache-
+
+      - name: 启动 SmartDNS
+        run: |
+          mkdir -p smartdns-cache
+          docker run -d --name smartdns \
+            -p 5053:5053/udp -p 5053:5053/tcp \
+            -v ${{ github.workspace }}/data/configs/smartdns.conf:/etc/smartdns/smartdns.conf \
+            -v ${{ github.workspace }}/smartdns-cache:/var/cache/smartdns \
+            pymumu/smartdns:latest -c /etc/smartdns/smartdns.conf
+          sleep 5
+
+      - name: 等待 SmartDNS 就绪
+        run: |
+          for i in {1..10}; do
+            if nslookup github.com 127.0.0.1 -port=5053 > /dev/null 2>&1; then
+              echo "SmartDNS 就绪"
+              exit 0
+            fi
+            echo "等待 SmartDNS... ($i)"
+            sleep 2
+          done
+          docker logs smartdns
+          exit 1
+
       - name: 运行
         run: |
           npm install
           node index
 
+      - name: 保存 DNS 缓存
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: |
+            dns-cache.json
+            smartdns-cache
+          key: dns-cache-${{ github.run_id }}
+
       - name: 更新文件
         run: |
           git add --all
-          git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')（北京时间）"
+          git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')（北京时间）" || echo "无变更"
           git push -u origin -f
 
       - name: 删除 workflow 运行记录
