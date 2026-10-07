@@ -72,6 +72,14 @@ jobs:
           npm install
           node index
 
+      # ============ 新增：修复权限 ============
+      - name: 修复缓存目录权限
+        if: always()
+        run: |
+          sudo chown -R $USER:$USER smartdns-cache || true
+          sudo chown -R $USER:$USER dns-cache.json || true
+          ls -la smartdns-cache || echo "smartdns-cache 不存在"
+
       - name: 保存 DNS 缓存
         uses: actions/cache/save@v4
         if: always()
