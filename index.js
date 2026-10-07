@@ -57,17 +57,27 @@ async function main() {
     const blacklists1 = await mergeBlacklists(oldDirectory);
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
-    const cleaned = await removeDeadRules([...blacklists1, ...whitelists1]);
+    const { cleaned, nocleaned } = await removeDeadRules([
+      ...blacklists1,
+      ...whitelists1,
+    ]);
 
     // 精确去重和域名标准化去重，并处理黑白名单冲突
     const { blacklist, whitelist } = buildAdGuardHomeLists(cleaned);
 
     // 删除文件
-    await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
+    await deleteFiles(
+      `${newDirectory}/allow.txt`,
+      `${newDirectory}/rules.txt`,
+      `${newDirectory}/dead.txt`,
+    );
 
     //有效规则
     await writeFile(`${newDirectory}/rules.txt`, [...blacklist].join("\n"));
     await writeFile(`${newDirectory}/allow.txt`, [...whitelist].join("\n"));
+
+    // 死域名清单
+    await writeFile(`${newDirectory}/dead.txt`, deadDomains.join("\n"));
 
     // 处理title
     await title();
