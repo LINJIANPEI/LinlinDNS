@@ -1,4 +1,3 @@
-// removeDeadRules.js
 const { Resolver } = require("node:dns/promises");
 const net = require("node:net");
 const fs = require("node:fs");
@@ -11,6 +10,7 @@ const DEFAULT_PORT = 5053;
 const DNS_TIMEOUT = 2000;
 const CONNECT_TIMEOUT = 2000;
 const DEFAULT_CACHE_FILE = "./dns-cache.json";
+const DEFAULT_PROGRESS_STEP = 1000;
 
 const DOMAIN_RE =
   /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
@@ -155,7 +155,6 @@ const checkDomain = async (domain, { nameservers, port }) => {
     }
     return [];
   }
-  // SmartDNS 已有多组上游 + 缓存，这里只查一次
   return resolveA(domain, nameservers, port);
 };
 
@@ -207,6 +206,8 @@ const removeDeadRules = async (
     cacheFile = DEFAULT_CACHE_FILE,
     keepWhiteRules = true,
     autoSaveCache = true,
+    onProgress,
+    progressStep = DEFAULT_PROGRESS_STEP,
   } = {},
 ) => {
   console.log("开始剔除死域名规则");
@@ -215,7 +216,6 @@ const removeDeadRules = async (
       throw new TypeError("rules 必须是字符串数组");
     }
 
-    // 调用方没传 cache 时，自动用文件缓存
     const cacheStore = cache || createFileCache(cacheFile);
 
     // 1. 解析规则
@@ -238,15 +238,37 @@ const removeDeadRules = async (
     }
 
     const domains = [...domainMap.keys()];
-    console.log(
-      `规则解析完成，共${rules.length}条规则，提取${domains.length}个域名`,
-    );
+    const total = domains.length;
+    console.log(`规则解析完成，共${rules.length}条规则，提取${total}个域名`);
 
-    // 2. 并发检测
+    // 2. 并发检测（带进度）
     const limit = pLimit(concurrency);
     const results = new Map();
     const now = Math.floor(Date.now() / 1000);
     let cacheHits = 0;
+    let completed = 0;
+    const startTime = Date.now();
+
+    const report = (force = false) => {
+      if (!force && completed % progressStep !== 0) return;
+      const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+      const percent = ((completed / total) * 100).toFixed(1);
+      const speed = completed / Math.max(elapsed, 0.001);
+      const remain = speed > 0 ? ((total - completed) / speed).toFixed(0) : "?";
+      console.log(
+        `进度: ${completed}/${total} (${percent}%) | 缓存命中: ${cacheHits} | 已用: ${elapsed}s | 预计剩余: ${remain}s`,
+      );
+      if (typeof onProgress === "function") {
+        onProgress({
+          completed,
+          total,
+          cacheHits,
+          elapsed: Number(elapsed),
+          remain: Number(remain) || 0,
+          percent: Number(percent),
+        });
+      }
+    };
 
     await Promise.all(
       domains.map((domain) =>
@@ -255,14 +277,17 @@ const removeDeadRules = async (
           if (cached && now - cached.timeStamp <= CACHE_TTL) {
             results.set(domain, cached.ipList);
             cacheHits++;
-            return;
+          } else {
+            const ipList = await checkDomain(domain, { nameservers, port });
+            cacheStore.set(domain, { ipList, timeStamp: now });
+            results.set(domain, ipList);
           }
-          const ipList = await checkDomain(domain, { nameservers, port });
-          cacheStore.set(domain, { ipList, timeStamp: now });
-          results.set(domain, ipList);
+          completed++;
+          report();
         }),
       ),
     );
+    report(true);
 
     // 3. 分类
     const deadSet = new Set();
@@ -290,7 +315,6 @@ const removeDeadRules = async (
         continue;
       }
 
-      // 父域名存活则保留子域名规则
       const labels = domain.split(".");
       let parentAlive = false;
       for (let i = 1; i < labels.length; i++) {
@@ -316,7 +340,7 @@ const removeDeadRules = async (
       stats: {
         value: {
           totalRules: rules.length,
-          totalDomains: domains.length,
+          totalDomains: total,
           aliveDomains: aliveDomains.length,
           deadDomains: deadDomains.length,
           aliveRules: alive.length,
@@ -329,7 +353,6 @@ const removeDeadRules = async (
       },
     });
 
-    // 6. 保存缓存
     if (autoSaveCache && typeof cacheStore.save === "function") {
       cacheStore.save();
     }
