@@ -47,7 +47,7 @@ jobs:
             --network host \
             -v ${{ github.workspace }}/data/configs/smartdns.conf:/etc/smartdns/smartdns.conf \
             -v ${{ github.workspace }}/smartdns-cache:/var/cache/smartdns \
-            pymumu/smartdns:latest smartdns -c /etc/smartdns/smartdns.conf
+            pymumu/smartdns:latest smartdns -f -c /etc/smartdns/smartdns.conf
           sleep 5
 
       - name: 等待 SmartDNS 就绪
