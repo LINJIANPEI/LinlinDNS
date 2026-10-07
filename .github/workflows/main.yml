@@ -44,7 +44,7 @@ jobs:
         run: |
           mkdir -p smartdns-cache
           docker run -d --name smartdns \
-            -p 5053:5053/udp -p 5053:5053/tcp \
+            --network host \
             -v ${{ github.workspace }}/data/configs/smartdns.conf:/etc/smartdns/smartdns.conf \
             -v ${{ github.workspace }}/smartdns-cache:/var/cache/smartdns \
             pymumu/smartdns:latest smartdns -c /etc/smartdns/smartdns.conf
@@ -52,16 +52,19 @@ jobs:
 
       - name: 等待 SmartDNS 就绪
         run: |
-          for i in {1..10}; do
-            if nslookup github.com 127.0.0.1 -port=5053 > /dev/null 2>&1; then
+          for i in {1..15}; do
+            if dig @127.0.0.1 -p 5053 github.com +short +time=2 +tries=1 > /dev/null 2>&1; then
               echo "SmartDNS 就绪"
               exit 0
             fi
             echo "等待 SmartDNS... ($i)"
             sleep 2
           done
-          echo "SmartDNS 启动超时"
+          echo "=== 启动超时，排查信息 ==="
+          docker ps -a
           docker logs smartdns
+          ss -tulnp | grep 5053 || echo "5053 未监听"
+          cat data/configs/smartdns.conf
           exit 1
 
       - name: 运行
