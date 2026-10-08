@@ -4,11 +4,11 @@ const path = require("node:path");
 const { finished } = require("node:stream/promises");
 const { readLines, LineWriter } = require("./stream_utils");
 
-const CACHE_TTL = 3110400;
-const DEFAULT_CONCURRENCY = 200;
+const CACHE_TTL = 3110400; // 36 天
+const DEFAULT_CONCURRENCY = 500;
 const DEFAULT_NAMESERVERS = ["127.0.0.1"];
 const DEFAULT_PORT = 5053;
-const DNS_TIMEOUT = 800; // ★ 从 2000 降到 800
+const DNS_TIMEOUT = 800;
 const DEFAULT_CACHE_FILE = "./dns-cache.json";
 const DEFAULT_PROGRESS_STEP = 1000;
 
@@ -16,7 +16,11 @@ const DOMAIN_RE =
   /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
 const IPV4_RE = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
 
+// ============================================================
+// Resolver 复用池
+// ============================================================
 const resolverCache = new Map();
+
 const getResolver = (nameservers, port) => {
   const key = `${nameservers.join(",")}:${port}`;
   if (!resolverCache.has(key)) {
@@ -27,6 +31,9 @@ const getResolver = (nameservers, port) => {
   return resolverCache.get(key);
 };
 
+// ============================================================
+// 工具函数
+// ============================================================
 const isIPv4 = (s) => {
   const m = IPV4_RE.exec(s);
   if (!m) return false;
@@ -81,7 +88,7 @@ const parseRule = (line) => {
   if (t.startsWith("#") && !EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m)))
     return null;
 
-  // 只在可能为 "IP 域名" 时 split
+  // 只在首字符是数字（可能是 "IP 域名"）时才 split
   const c0 = t.charCodeAt(0);
   if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
     const parts = t.split(/\s+/);
@@ -99,14 +106,19 @@ const parseRule = (line) => {
 
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
+
   if (body.startsWith("||")) {
     const domain = normalizeDomain(body.slice(2).split("^")[0]);
     return domain ? { domain, isWhite } : null;
   }
+
   const domain = normalizeDomain(t.replace(/\^+$/, ""));
   return domain ? { domain, isWhite: false } : null;
 };
 
+// ============================================================
+// DNS 查询
+// ============================================================
 const resolveA = async (domain, nameservers, port) => {
   const resolver = getResolver(nameservers, port);
   let timer;
@@ -114,7 +126,7 @@ const resolveA = async (domain, nameservers, port) => {
     const records = await Promise.race([
       resolver.resolve4(domain),
       new Promise((_, reject) => {
-        timer = setTimeout(() => reject(new Error("timeout")), DNS_TIMEOUT);
+        timer = setTimeout(() => reject(new Error("DNS timeout")), DNS_TIMEOUT);
       }),
     ]);
     return records.filter((ip) => ip !== "0.0.0.0");
@@ -125,9 +137,17 @@ const resolveA = async (domain, nameservers, port) => {
   }
 };
 
-// ---------- 缓存：NDJSON 流式 ----------
+const checkDomain = async (domain, { nameservers, port }) => {
+  return resolveA(domain, nameservers, port);
+};
+
+// ============================================================
+// 文件缓存（NDJSON 流式读写）
+// ============================================================
 const createNullCache = () => ({
-  get() {},
+  get() {
+    return undefined;
+  },
   set() {},
   async save() {},
   size() {
@@ -143,9 +163,11 @@ const createFileCache = (filePath) => {
       const raw = fs.readFileSync(filePath, "utf-8");
       const t = raw.trimStart();
       if (t.startsWith("{")) {
+        // 兼容旧 JSON 格式
         const data = JSON.parse(raw);
         for (const k of Object.keys(data)) store.set(k, data[k]);
       } else {
+        // NDJSON
         for (const line of raw.split("\n")) {
           if (!line) continue;
           try {
@@ -180,6 +202,9 @@ const createFileCache = (filePath) => {
   };
 };
 
+// ============================================================
+// 主函数
+// ============================================================
 /**
  * 流式剔除死域名。
  *
@@ -213,7 +238,9 @@ const removeDeadRules = async (inputFiles, options) => {
   const cacheStore =
     cache || (cacheFile ? createFileCache(cacheFile) : createNullCache());
 
-  // ============ 第一遍：构建 domainMap（只存域名 → 0/1）============
+  // ========================================================
+  // 第 1 遍：提取域名
+  // ========================================================
   const domainMap = new Map();
   const passthroughWriter = passthroughFile
     ? new LineWriter(passthroughFile)
@@ -231,9 +258,11 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
       const prev = domainMap.get(parsed.domain);
-      if (prev === undefined)
+      if (prev === undefined) {
         domainMap.set(parsed.domain, parsed.isWhite ? 1 : 0);
-      else if (parsed.isWhite && prev === 0) domainMap.set(parsed.domain, 1);
+      } else if (parsed.isWhite && prev === 0) {
+        domainMap.set(parsed.domain, 1);
+      }
     });
   }
 
@@ -242,7 +271,9 @@ const removeDeadRules = async (inputFiles, options) => {
   const total = domainMap.size;
   console.log(`规则解析完成，共${totalRules}条规则，提取${total}个域名`);
 
-  // ============ 第二遍：DNS 查询 ============
+  // ========================================================
+  // 第 2 遍：DNS 查询（滑动窗口）
+  // ========================================================
   const limit = pLimit(concurrency);
   const now = Math.floor(Date.now() / 1000);
   let cacheHits = 0;
@@ -299,7 +330,9 @@ const removeDeadRules = async (inputFiles, options) => {
 
   const deadCount = total - aliveSet.size;
 
-  // ============ 计算"死且无存活父域、非白名单"的集合 ============
+  // ========================================================
+  // 计算"死且无存活父域、非白名单"的集合
+  // ========================================================
   const deadWithoutAliveParent = new Set();
   let parentAliveCount = 0;
 
@@ -320,10 +353,11 @@ const removeDeadRules = async (inputFiles, options) => {
     else deadWithoutAliveParent.add(domain);
   }
 
-  // 可以把 domainMap 释放了（已不需要）
   domainMap.clear();
 
-  // ============ 第三遍：重新读输入文件，分类输出 ============
+  // ========================================================
+  // 第 3 遍：重新读输入文件，分类输出
+  // ========================================================
   const cleanedWriter = new LineWriter(cleanedFile);
   const nocleanedWriter = nocleanedFile ? new LineWriter(nocleanedFile) : null;
   const deadWriter = deadDomainsFile ? new LineWriter(deadDomainsFile) : null;
