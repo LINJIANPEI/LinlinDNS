@@ -73,6 +73,17 @@ const normalizeDomain = (value) => {
   return DOMAIN_RE.test(domain) ? domain : null;
 };
 
+const EXTENDED_RULE_MARKERS = [
+  "##",
+  "#@#",
+  "#$#",
+  "#@$#",
+  "#%#",
+  "#@%#",
+  "#?#",
+  "#@?#",
+];
+
 const parseRule = (line) => {
   if (typeof line !== "string") return null;
   const trimmed = line.trim();
@@ -80,17 +91,7 @@ const parseRule = (line) => {
 
   if (trimmed.startsWith("!")) return null;
   if (trimmed.startsWith("#")) {
-    const extMarkers = [
-      "##",
-      "#@#",
-      "#$#",
-      "#@$#",
-      "#%#",
-      "#@%#",
-      "#?#",
-      "#@?#",
-    ];
-    if (!extMarkers.some((m) => trimmed.startsWith(m))) return null;
+    if (!EXTENDED_RULE_MARKERS.some((m) => trimmed.startsWith(m))) return null;
   }
 
   const parts = trimmed.split(/\s+/);
@@ -252,7 +253,8 @@ const removeDeadRules = async (
     const report = (force = false) => {
       if (!force && completed % progressStep !== 0) return;
       const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-      const percent = ((completed / total) * 100).toFixed(1);
+      const percent =
+        total > 0 ? ((completed / total) * 100).toFixed(1) : "100.0";
       const speed = completed / Math.max(elapsed, 0.001);
       const remain = speed > 0 ? ((total - completed) / speed).toFixed(0) : "?";
       console.log(
@@ -298,7 +300,7 @@ const removeDeadRules = async (
       else deadSet.add(domain);
     }
 
-    // 4. 剔除规则（用循环 push，避免展开运算符爆栈）
+    // 4. 剔除规则（只处理域名规则，passthrough 不参与输出）
     const cleaned = [];
     const nocleaned = [];
 
@@ -330,8 +332,6 @@ const removeDeadRules = async (
       }
     }
 
-    for (const r of passthrough) cleaned.push(r);
-
     // 5. 统计信息
     const deadDomains = [...deadSet].sort();
     const aliveDomains = [...aliveSet].sort();
@@ -353,15 +353,21 @@ const removeDeadRules = async (
     }
 
     console.log(
-      `剔除死域名规则完成，存活${cleaned.length}条，剔除${nocleaned.length}条，死域名${deadDomains.length}个，缓存命中${cacheHits}次`,
+      `剔除死域名规则完成 | 输入 ${rules.length} 条` +
+        ` | 保留 ${cleaned.length} 条` +
+        ` | 剔除 ${nocleaned.length} 条` +
+        ` | 丢弃非域名行 ${passthrough.length} 条` +
+        ` | 死域名 ${deadDomains.length} 个` +
+        ` | 缓存命中 ${cacheHits} 次`,
     );
 
     return {
-      cleaned, // 排除死域名后的规则
-      nocleaned, // 被剔除的死域名规则
-      deadDomains, // 死域名列表
-      aliveDomains, // 存活域名列表
-      stats, // 统计信息
+      cleaned, // 活域名的原始规则
+      nocleaned, // 死域名的原始规则
+      passthrough, // 非域名行（注释、##、看不懂的），仅作参考，不参与输出
+      deadDomains,
+      aliveDomains,
+      stats,
     };
   } catch (error) {
     throw new Error(`剔除死域名规则失败: ${error.message}`);

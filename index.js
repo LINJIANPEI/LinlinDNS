@@ -63,7 +63,7 @@ async function main() {
     const { regexBlacklist, regexWhitelist, restBlacklist, restWhitelist } =
       splitRegexRules(blacklists1, whitelists1);
 
-    const { cleaned, nocleaned } = await removeDeadRules([
+    const { cleaned, nocleaned, passthrough } = await removeDeadRules([
       ...restBlacklist,
       ...restWhitelist,
     ]);
@@ -79,6 +79,7 @@ async function main() {
       `${newDirectory}/dead.txt`,
       `${newDirectory}/noblacklist.txt`,
       `${newDirectory}/nowhitelist.txt`,
+      `${newDirectory}/passthrough.txt`,
     );
 
     //有效规则
@@ -97,6 +98,9 @@ async function main() {
 
     // 死域名清单
     await writeFile(`${newDirectory}/dead.txt`, nocleaned.join("\n"));
+
+    //丢弃的规则
+    await writeFile(`${newDirectory}/passthrough.txt`, passthrough.join("\n"));
 
     // 处理title
     await title();
