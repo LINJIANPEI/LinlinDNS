@@ -75,7 +75,7 @@ async function main() {
     // ★ 关闭缓存，省下 305 万条 map + 序列化开销
     //   如果你确实想要缓存，用 cacheFile: "./dns-cache.json"
     const { cleaned, nocleaned, passthrough } = await removeDeadRules(restAll, {
-      cacheFile: null,
+      cacheFile: "./dns-cache.json",
     });
 
     // ---------- 5. 构建最终列表 ----------
