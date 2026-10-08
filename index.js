@@ -18,6 +18,9 @@ const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlac
 // 白名单
 const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
 
+// 正则抽离
+const { splitRegexRules } = require("./data/node/splitRegexRules"); // splitRegexRules.js 模块
+
 // 去除死域名
 const { removeDeadRules } = require("./data/node/removeDeadRules"); // removeDeadRules.js 模块
 
@@ -57,24 +60,40 @@ async function main() {
     const blacklists1 = await mergeBlacklists(oldDirectory);
     const whitelists1 = await mergeWhitelist(oldDirectory);
 
+    const { regexBlacklist, regexWhitelist, restBlacklist, restWhitelist } =
+      splitRegexRules(blacklists1, whitelists1);
+
     const { cleaned, nocleaned } = await removeDeadRules([
-      ...blacklists1,
-      ...whitelists1,
+      ...restBlacklist,
+      ...restWhitelist,
     ]);
 
     // 精确去重和域名标准化去重，并处理黑白名单冲突
-    const { blacklist, whitelist } = buildAdGuardHomeLists(cleaned);
+    const { blacklist, whitelist, noblacklist, nowhitelist } =
+      buildAdGuardHomeLists(cleaned);
 
     // 删除文件
     await deleteFiles(
       `${newDirectory}/allow.txt`,
       `${newDirectory}/rules.txt`,
       `${newDirectory}/dead.txt`,
+      `${newDirectory}/noblacklist.txt`,
+      `${newDirectory}/nowhitelist.txt`,
     );
 
     //有效规则
-    await writeFile(`${newDirectory}/rules.txt`, [...blacklist].join("\n"));
-    await writeFile(`${newDirectory}/allow.txt`, [...whitelist].join("\n"));
+    await writeFile(
+      `${newDirectory}/rules.txt`,
+      [...blacklist, ...regexBlacklist].join("\n"),
+    );
+    await writeFile(
+      `${newDirectory}/allow.txt`,
+      [...whitelist, ...regexWhitelist].join("\n"),
+    );
+
+    //去重以及丢弃规则
+    await writeFile(`${newDirectory}/noblacklist.txt`, noblacklist.join("\n"));
+    await writeFile(`${newDirectory}/nowhitelist.txt`, nowhitelist.join("\n"));
 
     // 死域名清单
     await writeFile(`${newDirectory}/dead.txt`, nocleaned.join("\n"));
