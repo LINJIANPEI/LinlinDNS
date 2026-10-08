@@ -3,7 +3,6 @@ const readline = require("node:readline");
 const { finished } = require("node:stream/promises");
 const path = require("path");
 const moment = require("moment-timezone");
-const { readDir } = require("./common_func");
 
 const getFilenameWithoutExtension = (filepath) => {
   const name = path.basename(filepath);
@@ -29,18 +28,18 @@ const title = async () => {
       .tz("Asia/Shanghai")
       .format("YYYY-MM-DD HH:mm:ss");
 
-    const files = await readDir("./");
-    const fileList = files.filter((f) => f.endsWith(".txt"));
+    // ★ 只处理这两个文件
+    const fileList = ["rules.txt", "allow.txt"];
 
     for (const file of fileList) {
       const filePath = `./${file}`;
+      if (!fs.existsSync(filePath)) continue;
+
       const result = getFilenameWithoutExtension(file);
       const tmpPath = `${filePath}.tmp`;
 
-      // 1. 流式统计行数
       const lineCount = await countLines(filePath);
 
-      // 2. 写临时文件：头部 + 原内容
       const out = fs.createWriteStream(tmpPath, { encoding: "utf8" });
       out.write(
         `[个人合并 2.0]\n` +
@@ -52,7 +51,6 @@ const title = async () => {
           `! Total count: ${lineCount}\n`,
       );
 
-      // 3. 流式追加原内容
       const rl = readline.createInterface({
         input: fs.createReadStream(filePath, { encoding: "utf8" }),
         crlfDelay: Infinity,
@@ -65,7 +63,6 @@ const title = async () => {
       out.end();
       await finished(out);
 
-      // 4. 替换原文件
       await fs.promises.rename(tmpPath, filePath);
     }
     console.log("写入头部信息成功");

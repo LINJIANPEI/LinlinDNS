@@ -5,10 +5,14 @@ const REGEX_LINE_RE = /^(@@)?\/.+\/[^/]*$/;
 const isRegexRuleLine = (s) => REGEX_LINE_RE.test(s);
 
 /**
- * 从黑/白名单文件中分离正则规则，输出 4 个文件。
- * @returns {Promise<{regexBlackFile, restBlackFile, regexWhiteFile, restWhiteFile, counts}>}
+ * 从单一文件按【内容】分离正则/普通 + 黑/白。
+ *
+ * 判断顺序：
+ *   @@ 前缀 → 白名单
+ *   否则 → 黑名单
+ *   /regex/ 格式 → 正则
  */
-const splitRegexRules = async (blackFile, whiteFile, outDir) => {
+const splitRegexRules = async (inputFile, outDir) => {
   const files = {
     regexBlackFile: path.join(outDir, "black_regex.txt"),
     restBlackFile: path.join(outDir, "black_rest.txt"),
@@ -21,18 +25,17 @@ const splitRegexRules = async (blackFile, whiteFile, outDir) => {
   const rw = new LineWriter(files.regexWhiteFile);
   const rkw = new LineWriter(files.restWhiteFile);
 
-  await readLines(blackFile, async (line) => {
+  await readLines(inputFile, async (line) => {
     const t = line.trim();
     if (!t) return;
-    if (isRegexRuleLine(t)) await rb.write(t);
-    else await rkb.write(line);
-  });
 
-  await readLines(whiteFile, async (line) => {
-    const t = line.trim();
-    if (!t) return;
-    if (isRegexRuleLine(t)) await rw.write(t);
-    else await rkw.write(line);
+    const isWhite = t.startsWith("@@");
+    const isRegex = isRegexRuleLine(t);
+
+    if (isWhite && isRegex) await rw.write(t);
+    else if (isWhite) await rkw.write(t);
+    else if (isRegex) await rb.write(t);
+    else await rkb.write(t);
   });
 
   await Promise.all([rb.close(), rkb.close(), rw.close(), rkw.close()]);
@@ -45,7 +48,7 @@ const splitRegexRules = async (blackFile, whiteFile, outDir) => {
   };
 
   console.log(
-    `正则抽离完成：正则黑 ${counts.regexBlacklist}，普通黑 ${counts.restBlacklist}，` +
+    `拆分完成（按内容）：正则黑 ${counts.regexBlacklist}，普通黑 ${counts.restBlacklist}，` +
       `正则白 ${counts.regexWhitelist}，普通白 ${counts.restWhitelist}`,
   );
 

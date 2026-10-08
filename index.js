@@ -3,9 +3,8 @@ const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
 
 const { readListFile } = require("./data/node/readListFile");
 const { downloadRules } = require("./data/node/downloadRules");
-const { mergeBlacklists } = require("./data/node/mergeBlacklists");
-const { mergeWhitelists } = require("./data/node/mergeWhitelists");
-const { dedupeFile } = require("./data/node/dedupe"); // ★ 新增
+const { mergeAll } = require("./data/node/mergeAll"); // ★
+const { dedupeFile } = require("./data/node/dedupe");
 const { splitRegexRules } = require("./data/node/splitRegexRules");
 const { removeDeadRules } = require("./data/node/removeDeadRules");
 const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
@@ -32,22 +31,16 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // 1. 合并 → 文件
-    await mergeBlacklists(tmpDir, p("black_all.txt"));
-    await mergeWhitelists(tmpDir, p("white_all.txt"));
+    // 1. ★ 全部合并到一个文件
+    await mergeAll(tmpDir, p("all.txt"));
 
-    // ★ 2. 去重（sort -u，原地替换）
-    await dedupeFile(p("black_all.txt"));
-    await dedupeFile(p("white_all.txt"));
+    // 2. ★ 去重
+    await dedupeFile(p("all.txt"));
 
-    // 3. 正则抽离 → 4 个文件
-    const split = await splitRegexRules(
-      p("black_all.txt"),
-      p("white_all.txt"),
-      tmpDir,
-    );
+    // 3. ★ 按内容分黑白 + 正则
+    const split = await splitRegexRules(p("all.txt"), tmpDir);
 
-    // 4. 剔除死域名（输入 = rest 黑 + rest 白 两个文件）
+    // 4. 剔除死域名（输入 = 黑 rest + 白 rest）
     await removeDeadRules([split.restBlackFile, split.restWhiteFile], {
       cleanedFile: p("cleaned.txt"),
       nocleanedFile: p("nocleaned.txt"),
@@ -57,7 +50,7 @@ async function main() {
       concurrency: 500,
     });
 
-    // 5. 构建最终列表（直接写 rules.txt / allow.txt）
+    // 5. 构建最终列表
     await deleteDir(removeDir);
     await createDir(removeDir);
 
@@ -72,7 +65,7 @@ async function main() {
       outSkippedFile: path.join(removeDir, "skipped.txt"),
     });
 
-    // 6. 把 nocleaned / passthrough 复制到 remove 目录
+    // 6. 复制丢弃文件
     await copyFiles(
       [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
       [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],

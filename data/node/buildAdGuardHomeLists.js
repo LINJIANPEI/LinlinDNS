@@ -169,19 +169,19 @@ function removeRedundantSubdomains(domains) {
   });
   const kept = [];
   for (const domain of sorted) {
-    const labels = domain.split(".");
     let redundant = false;
-    for (let i = 1; i < labels.length; i++) {
-      if (ordinary.has(labels.slice(i).join("."))) {
+    let idx = domain.indexOf(".");
+    while (idx !== -1) {
+      if (ordinary.has(domain.slice(idx + 1))) {
         redundant = true;
         break;
       }
+      idx = domain.indexOf(".", idx + 1);
     }
     if (!redundant) kept.push(domain);
   }
   return [...kept, ...wildcards].sort();
 }
-
 // ---------- 主函数（流式版） ----------
 
 /**
@@ -240,8 +240,6 @@ const buildAdGuardHomeLists = async (options) => {
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
 
-  let noblacklistCount = 0;
-  let nowhitelistCount = 0;
   let skippedCount = 0;
 
   // 用于跳过 cleanedFile 中重复出现的行
