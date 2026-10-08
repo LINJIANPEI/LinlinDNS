@@ -93,22 +93,13 @@ async function main() {
     await createDir(removeDir);
 
     //去重以及丢弃规则
-    await writeFileArray(
-      `${removeDir}/noblacklist.txt`,
-      noblacklist.join("\n"),
-    );
-    await writeFileArray(
-      `${removeDir}/nowhitelist.txt`,
-      nowhitelist.join("\n"),
-    );
-    await writeFileArray(`${removeDir}/skipped.txt`, skipped.join("\n"));
+    await writeFileArray(`${removeDir}/noblacklist.txt`, noblacklist);
+    await writeFileArray(`${removeDir}/nowhitelist.txt`, nowhitelist);
+    await writeFileArray(`${removeDir}/skipped.txt`, skipped);
     // 死域名清单
-    await writeFileArray(`${removeDir}/dead.txt`, nocleaned.join("\n"));
+    await writeFileArray(`${removeDir}/dead.txt`, nocleaned);
     //丢弃的规则
-    await writeFileArray(
-      `${removeDir}/passthrough.txt`,
-      passthrough.join("\n"),
-    );
+    await writeFileArray(`${removeDir}/passthrough.txt`, passthrough);
 
     // 处理title
     await title();
