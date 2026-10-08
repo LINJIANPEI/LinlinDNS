@@ -3,13 +3,14 @@ const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
 
 const { readListFile } = require("./data/node/readListFile");
 const { downloadRules } = require("./data/node/downloadRules");
-const { mergeAll } = require("./data/node/mergeAll"); // ★
+const { mergeAll } = require("./data/node/mergeAll");
 const { dedupeFile } = require("./data/node/dedupe");
 const { splitRegexRules } = require("./data/node/splitRegexRules");
 const { removeDeadRules } = require("./data/node/removeDeadRules");
 const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
 const { title } = require("./data/node/title");
 const { cleanReadme } = require("./data/node/cleanReadme");
+const { splitLargeFilesInDir } = require("./data/node/splitLargeFile"); // ★
 
 const tmpDir = "./tmp";
 const outDir = "./";
@@ -31,16 +32,16 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // 1. ★ 全部合并到一个文件
+    // 1. 全部合并到一个文件
     await mergeAll(tmpDir, p("all.txt"));
 
-    // 2. ★ 去重
+    // 2. 去重
     await dedupeFile(p("all.txt"));
 
-    // 3. ★ 按内容分黑白 + 正则
+    // 3. 按内容分黑白 + 正则
     const split = await splitRegexRules(p("all.txt"), tmpDir);
 
-    // 4. 剔除死域名（输入 = 黑 rest + 白 rest）
+    // 4. 剔除死域名
     await removeDeadRules([split.restBlackFile, split.restWhiteFile], {
       cleanedFile: p("cleaned.txt"),
       nocleanedFile: p("nocleaned.txt"),
@@ -65,14 +66,26 @@ async function main() {
       outSkippedFile: path.join(removeDir, "skipped.txt"),
     });
 
-    // 6. 复制丢弃文件
+    // 6. 复制丢弃文件到 remove 目录
     await copyFiles(
       [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
       [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],
     );
 
+    // 7. 写入头部信息
     await title();
+
+    // 8. ★ 分片：rules.txt / allow.txt
+    await splitLargeFilesInDir(outDir, {
+      pattern: /^(rules|allow)\.txt$/,
+    });
+
+    // 9. ★ 分片：data/remove/ 下所有 txt
+    await splitLargeFilesInDir(removeDir);
+
+    // 10. 更新 README
     await cleanReadme();
+
     console.log("更新完成");
   } catch (error) {
     console.log(`更新失败:${error}`);

@@ -1,58 +1,128 @@
+const fs = require("node:fs");
+const readline = require("node:readline");
 const path = require("node:path");
-const { readLines, LineWriter } = require("./stream_utils");
+const { finished } = require("node:stream/promises");
 
-const REGEX_LINE_RE = /^(@@)?\/.+\/[^/]*$/;
-const isRegexRuleLine = (s) => REGEX_LINE_RE.test(s);
+const DEFAULT_MAX_SIZE = 100 * 1024 * 1024; // 100MB
 
 /**
- * 从单一文件按【内容】分离正则/普通 + 黑/白。
+ * 把单个大文件切成多个 <100MB 的分片。
+ * - 每片保证以完整行结尾
+ * - 切完后删除原文件
  *
- * 判断顺序：
- *   @@ 前缀 → 白名单
- *   否则 → 黑名单
- *   /regex/ 格式 → 正则
+ * @param {string} filePath
+ * @param {number} [maxSize]
+ * @returns {Promise<string[]>} 分片路径；未超限时返回 [原路径]
  */
-const splitRegexRules = async (inputFile, outDir) => {
-  const files = {
-    regexBlackFile: path.join(outDir, "black_regex.txt"),
-    restBlackFile: path.join(outDir, "black_rest.txt"),
-    regexWhiteFile: path.join(outDir, "white_regex.txt"),
-    restWhiteFile: path.join(outDir, "white_rest.txt"),
+const splitOneFile = async (filePath, maxSize = DEFAULT_MAX_SIZE) => {
+  if (!fs.existsSync(filePath)) return [];
+
+  const stat = fs.statSync(filePath);
+  const sizeMB = (stat.size / 1024 / 1024).toFixed(1);
+
+  if (stat.size <= maxSize) {
+    console.log(`  [跳过] ${filePath} (${sizeMB}MB)`);
+    return [filePath];
+  }
+
+  console.log(`  [分片] ${filePath} (${sizeMB}MB)`);
+
+  const ext = path.extname(filePath);
+  const base = filePath.slice(0, -ext.length);
+  const pad = 3;
+
+  const parts = [];
+  let partIndex = 1;
+  let currentSize = 0;
+  let currentWriter = null;
+
+  const openNext = () => {
+    const name = `${base}.part${String(partIndex).padStart(pad, "0")}${ext}`;
+    parts.push(name);
+    currentSize = 0;
+    currentWriter = fs.createWriteStream(name, { encoding: "utf8" });
   };
 
-  const rb = new LineWriter(files.regexBlackFile);
-  const rkb = new LineWriter(files.restBlackFile);
-  const rw = new LineWriter(files.regexWhiteFile);
-  const rkw = new LineWriter(files.restWhiteFile);
+  openNext();
 
-  await readLines(inputFile, async (line) => {
-    const t = line.trim();
-    if (!t) return;
-
-    const isWhite = t.startsWith("@@");
-    const isRegex = isRegexRuleLine(t);
-
-    if (isWhite && isRegex) await rw.write(t);
-    else if (isWhite) await rkw.write(t);
-    else if (isRegex) await rb.write(t);
-    else await rkb.write(t);
+  const rl = readline.createInterface({
+    input: fs.createReadStream(filePath, { encoding: "utf8" }),
+    crlfDelay: Infinity,
   });
 
-  await Promise.all([rb.close(), rkb.close(), rw.close(), rkw.close()]);
+  for await (const line of rl) {
+    const lineSize = Buffer.byteLength(line, "utf8") + 1;
 
-  const counts = {
-    regexBlacklist: rb.count,
-    restBlacklist: rkb.count,
-    regexWhitelist: rw.count,
-    restWhitelist: rkw.count,
-  };
+    if (currentSize + lineSize > maxSize && currentSize > 0) {
+      currentWriter.end();
+      await finished(currentWriter);
+      partIndex++;
+      openNext();
+    }
 
-  console.log(
-    `拆分完成（按内容）：正则黑 ${counts.regexBlacklist}，普通黑 ${counts.restBlacklist}，` +
-      `正则白 ${counts.regexWhitelist}，普通白 ${counts.restWhitelist}`,
-  );
+    if (!currentWriter.write(line + "\n")) {
+      await new Promise((r) => currentWriter.once("drain", r));
+    }
+    currentSize += lineSize;
+  }
 
-  return { ...files, counts };
+  currentWriter.end();
+  await finished(currentWriter);
+
+  fs.unlinkSync(filePath);
+
+  console.log(`  [分片完成] ${filePath} → ${parts.length} 片`);
+  return parts;
 };
 
-module.exports = { splitRegexRules };
+/**
+ * 扫描目录下所有匹配的 .txt 文件，逐个分片。
+ *
+ * @param {string} dir - 目录
+ * @param {object} [options]
+ * @param {number} [options.maxSize] - 阈值（字节），默认 100MB
+ * @param {RegExp} [options.pattern] - 匹配的文件名，默认 /\.txt$/
+ * @param {string[]} [options.exclude] - 要排除的文件名（如 rules.txt, allow.txt）
+ * @returns {Promise<{file: string, parts: string[]}[]>}
+ */
+const splitLargeFilesInDir = async (dir, options = {}) => {
+  const {
+    maxSize = DEFAULT_MAX_SIZE,
+    pattern = /\.txt$/,
+    exclude = [],
+  } = options;
+
+  if (!fs.existsSync(dir)) {
+    console.log(`目录不存在，跳过: ${dir}`);
+    return [];
+  }
+
+  console.log(
+    `开始扫描目录分片: ${dir}（阈值 ${(maxSize / 1024 / 1024).toFixed(0)}MB）`,
+  );
+
+  const files = fs
+    .readdirSync(dir)
+    .filter((f) => pattern.test(f))
+    .filter((f) => !exclude.includes(f))
+    .filter((f) => !/\.part\d+\./.test(f)) // 跳过分片自身
+    .sort();
+
+  const results = [];
+
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (!stat.isFile()) continue;
+
+    const parts = await splitOneFile(fullPath, maxSize);
+    results.push({ file: fullPath, parts });
+  }
+
+  const totalParts = results.reduce((s, r) => s + r.parts.length, 0);
+  console.log(`目录分片完成: ${results.length} 个文件 → ${totalParts} 个分片`);
+
+  return results;
+};
+
+module.exports = { splitOneFile, splitLargeFilesInDir };
