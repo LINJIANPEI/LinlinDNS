@@ -1,3 +1,21 @@
-node_modules
+# DNS 缓存（用 actions/cache 保存，不进 git）
 dns-cache.json
+dns-cache.json.sorted
 smartdns-cache/
+smartdns.cache
+
+# 临时目录
+tmp/
+*.tmp
+*.sorted
+
+# 分片文件（旧版本遗留）
+*.part*.txt
+
+# Node
+node_modules/
+npm-debug.log*
+
+# 系统
+.DS_Store
+Thumbs.db

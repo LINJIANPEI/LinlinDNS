@@ -19,23 +19,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: 获取最新代码
+      - name: 配置 Git
         run: |
-          git init
-          git config --local user.email "1732509260@qq.com"
-          git config --local user.name "Linlin"
-          git fetch --all
-          git reset --hard origin/main
-          git pull
-          git branch -m main
+          git config user.name "Linlin"
+          git config user.email "1732509260@qq.com"
 
       - name: 恢复 DNS 缓存
         uses: actions/cache@v4
         with:
           path: |
             dns-cache.json
-            smartdns.cache
+            smartdns-cache
           key: dns-cache-${{ github.run_id }}
           restore-keys: |
             dns-cache-
@@ -70,15 +67,13 @@ jobs:
       - name: 运行
         run: |
           npm install
-          node index
+          node --max-old-space-size=4096 index
 
-      # ============ 新增：修复权限 ============
       - name: 修复缓存目录权限
         if: always()
         run: |
           sudo chown -R $USER:$USER smartdns-cache || true
           sudo chown -R $USER:$USER dns-cache.json || true
-          ls -la smartdns-cache || echo "smartdns-cache 不存在"
 
       - name: 保存 DNS 缓存
         uses: actions/cache/save@v4
@@ -91,9 +86,27 @@ jobs:
 
       - name: 更新文件
         run: |
-          git add --all
-          git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')（北京时间）" || echo "无变更"
-          git push -u origin -f
+          git add rules.txt allow.txt README.md
+          git add data/remove/ 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "无变更，跳过提交"
+            exit 0
+          fi
+
+          git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')（北京时间）"
+
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "push 成功"
+              exit 0
+            fi
+            echo "push 失败，第 $i 次重试..."
+            sleep 15
+          done
+
+          echo "push 连续失败"
+          exit 1
 
       - name: 删除 workflow 运行记录
         uses: Mattraks/delete-workflow-runs@main
