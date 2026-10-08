@@ -45,7 +45,6 @@ async function main() {
   try {
     // 创建临时文件夹
     await createDir(oldDirectory);
-    await createDir(removeDir);
 
     //黑名单规则
     const rules = await readListFile("./data/configs/rules.txt", "黑名单");
@@ -78,15 +77,7 @@ async function main() {
       buildAdGuardHomeLists(cleaned);
 
     // 删除文件
-    await deleteFiles(
-      `${newDirectory}/allow.txt`,
-      `${newDirectory}/rules.txt`,
-      `${removeDir}/dead.txt`,
-      `${removeDir}/noblacklist.txt`,
-      `${removeDir}/nowhitelist.txt`,
-      `${removeDir}/skipped.txt`,
-      `${removeDir}/passthrough.txt`,
-    );
+    await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
     //有效规则
     await writeFile(
@@ -97,6 +88,9 @@ async function main() {
       `${newDirectory}/allow.txt`,
       [...whitelist, ...regexWhitelist].join("\n"),
     );
+
+    await deleteDir(removeDir);
+    await createDir(removeDir);
 
     //去重以及丢弃规则
     await writeFileArray(
