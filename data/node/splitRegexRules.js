@@ -1,128 +1,97 @@
-const fs = require("node:fs");
-const readline = require("node:readline");
 const path = require("node:path");
-const { finished } = require("node:stream/promises");
+const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
 
-const DEFAULT_MAX_SIZE = 100 * 1024 * 1024; // 100MB
+const { readListFile } = require("./data/node/readListFile");
+const { downloadRules } = require("./data/node/downloadRules");
+const { mergeAll } = require("./data/node/mergeAll");
+const { dedupeFile } = require("./data/node/dedupe");
+const { splitRegexRules } = require("./data/node/splitRegexRules");
+const { removeDeadRules } = require("./data/node/removeDeadRules");
+const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
+const { title } = require("./data/node/title");
+const { cleanReadme } = require("./data/node/cleanReadme");
+const { splitLargeFilesInDir } = require("./data/node/splitLargeFile"); // ★
 
-/**
- * 把单个大文件切成多个 <100MB 的分片。
- * - 每片保证以完整行结尾
- * - 切完后删除原文件
- *
- * @param {string} filePath
- * @param {number} [maxSize]
- * @returns {Promise<string[]>} 分片路径；未超限时返回 [原路径]
- */
-const splitOneFile = async (filePath, maxSize = DEFAULT_MAX_SIZE) => {
-  if (!fs.existsSync(filePath)) return [];
+const tmpDir = "./tmp";
+const outDir = "./";
+const removeDir = "./data/remove";
 
-  const stat = fs.statSync(filePath);
-  const sizeMB = (stat.size / 1024 / 1024).toFixed(1);
+const p = (f) => path.join(tmpDir, f);
 
-  if (stat.size <= maxSize) {
-    console.log(`  [跳过] ${filePath} (${sizeMB}MB)`);
-    return [filePath];
+async function main() {
+  try {
+    await createDir(tmpDir);
+
+    const rules = await readListFile("./data/configs/rules.txt", "黑名单");
+    const allow = await readListFile("./data/configs/allow.txt", "白名单");
+
+    await downloadRules(rules, allow, tmpDir);
+
+    await copyFiles(
+      ["./data/rules/adblock.txt", p("rules01.txt")],
+      ["./data/rules/whitelist.txt", p("allow01.txt")],
+    );
+
+    // 1. 全部合并到一个文件
+    await mergeAll(tmpDir, p("all.txt"));
+
+    // 2. 去重
+    await dedupeFile(p("all.txt"));
+
+    // 3. 按内容分黑白 + 正则
+    const split = await splitRegexRules(p("all.txt"), tmpDir);
+
+    // 4. 剔除死域名
+    await removeDeadRules([split.restBlackFile, split.restWhiteFile], {
+      cleanedFile: p("cleaned.txt"),
+      nocleanedFile: p("nocleaned.txt"),
+      passthroughFile: p("passthrough.txt"),
+      deadDomainsFile: p("dead-domains.txt"),
+      cacheFile: "./dns-cache.json",
+      concurrency: 500,
+    });
+
+    // 5. 构建最终列表
+    await deleteDir(removeDir);
+    await createDir(removeDir);
+
+    await buildAdGuardHomeLists({
+      cleanedFile: p("cleaned.txt"),
+      regexBlackFile: split.regexBlackFile,
+      regexWhiteFile: split.regexWhiteFile,
+      outRulesFile: path.join(outDir, "rules.txt"),
+      outAllowFile: path.join(outDir, "allow.txt"),
+      outNoBlacklistFile: path.join(removeDir, "noblacklist.txt"),
+      outNoWhitelistFile: path.join(removeDir, "nowhitelist.txt"),
+      outSkippedFile: path.join(removeDir, "skipped.txt"),
+    });
+
+    // 6. 复制丢弃文件到 remove 目录
+    await copyFiles(
+      [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
+      [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],
+    );
+
+    // 7. 写入头部信息
+    await title();
+
+    // 8. ★ 分片：rules.txt / allow.txt
+    await splitLargeFilesInDir(outDir, {
+      pattern: /^(rules|allow)\.txt$/,
+    });
+
+    // 9. ★ 分片：data/remove/ 下所有 txt
+    await splitLargeFilesInDir(removeDir);
+
+    // 10. 更新 README
+    await cleanReadme();
+
+    console.log("更新完成");
+  } catch (error) {
+    console.log(`更新失败:${error}`);
+  } finally {
+    await deleteDir(tmpDir);
   }
+}
 
-  console.log(`  [分片] ${filePath} (${sizeMB}MB)`);
-
-  const ext = path.extname(filePath);
-  const base = filePath.slice(0, -ext.length);
-  const pad = 3;
-
-  const parts = [];
-  let partIndex = 1;
-  let currentSize = 0;
-  let currentWriter = null;
-
-  const openNext = () => {
-    const name = `${base}.part${String(partIndex).padStart(pad, "0")}${ext}`;
-    parts.push(name);
-    currentSize = 0;
-    currentWriter = fs.createWriteStream(name, { encoding: "utf8" });
-  };
-
-  openNext();
-
-  const rl = readline.createInterface({
-    input: fs.createReadStream(filePath, { encoding: "utf8" }),
-    crlfDelay: Infinity,
-  });
-
-  for await (const line of rl) {
-    const lineSize = Buffer.byteLength(line, "utf8") + 1;
-
-    if (currentSize + lineSize > maxSize && currentSize > 0) {
-      currentWriter.end();
-      await finished(currentWriter);
-      partIndex++;
-      openNext();
-    }
-
-    if (!currentWriter.write(line + "\n")) {
-      await new Promise((r) => currentWriter.once("drain", r));
-    }
-    currentSize += lineSize;
-  }
-
-  currentWriter.end();
-  await finished(currentWriter);
-
-  fs.unlinkSync(filePath);
-
-  console.log(`  [分片完成] ${filePath} → ${parts.length} 片`);
-  return parts;
-};
-
-/**
- * 扫描目录下所有匹配的 .txt 文件，逐个分片。
- *
- * @param {string} dir - 目录
- * @param {object} [options]
- * @param {number} [options.maxSize] - 阈值（字节），默认 100MB
- * @param {RegExp} [options.pattern] - 匹配的文件名，默认 /\.txt$/
- * @param {string[]} [options.exclude] - 要排除的文件名（如 rules.txt, allow.txt）
- * @returns {Promise<{file: string, parts: string[]}[]>}
- */
-const splitLargeFilesInDir = async (dir, options = {}) => {
-  const {
-    maxSize = DEFAULT_MAX_SIZE,
-    pattern = /\.txt$/,
-    exclude = [],
-  } = options;
-
-  if (!fs.existsSync(dir)) {
-    console.log(`目录不存在，跳过: ${dir}`);
-    return [];
-  }
-
-  console.log(
-    `开始扫描目录分片: ${dir}（阈值 ${(maxSize / 1024 / 1024).toFixed(0)}MB）`,
-  );
-
-  const files = fs
-    .readdirSync(dir)
-    .filter((f) => pattern.test(f))
-    .filter((f) => !exclude.includes(f))
-    .filter((f) => !/\.part\d+\./.test(f)) // 跳过分片自身
-    .sort();
-
-  const results = [];
-
-  for (const file of files) {
-    const fullPath = path.join(dir, file);
-    const stat = fs.statSync(fullPath);
-    if (!stat.isFile()) continue;
-
-    const parts = await splitOneFile(fullPath, maxSize);
-    results.push({ file: fullPath, parts });
-  }
-
-  const totalParts = results.reduce((s, r) => s + r.parts.length, 0);
-  console.log(`目录分片完成: ${results.length} 个文件 → ${totalParts} 个分片`);
-
-  return results;
-};
-
-module.exports = { splitOneFile, splitLargeFilesInDir };
+main();
