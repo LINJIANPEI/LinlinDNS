@@ -4,6 +4,7 @@ const {
   deleteDir,
   deleteFiles,
   writeFile,
+  writeFileArray,
 } = require("./data/node/common_func"); // common_func.js 模块
 
 // 读取规则源
@@ -98,13 +99,22 @@ async function main() {
     );
 
     //去重以及丢弃规则
-    await writeFile(`${removeDir}/noblacklist.txt`, noblacklist.join("\n"));
-    await writeFile(`${removeDir}/nowhitelist.txt`, nowhitelist.join("\n"));
-    await writeFile(`${removeDir}/skipped.txt`, skipped.join("\n"));
+    await writeFileArray(
+      `${removeDir}/noblacklist.txt`,
+      noblacklist.join("\n"),
+    );
+    await writeFileArray(
+      `${removeDir}/nowhitelist.txt`,
+      nowhitelist.join("\n"),
+    );
+    await writeFileArray(`${removeDir}/skipped.txt`, skipped.join("\n"));
     // 死域名清单
-    await writeFile(`${removeDir}/dead.txt`, nocleaned.join("\n"));
+    await writeFileArray(`${removeDir}/dead.txt`, nocleaned.join("\n"));
     //丢弃的规则
-    await writeFile(`${removeDir}/passthrough.txt`, passthrough.join("\n"));
+    await writeFileArray(
+      `${removeDir}/passthrough.txt`,
+      passthrough.join("\n"),
+    );
 
     // 处理title
     await title();
