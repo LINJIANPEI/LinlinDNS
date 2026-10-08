@@ -1,107 +1,77 @@
-const {
-  createDir,
-  copyFiles,
-  deleteDir,
-  deleteFiles,
-  writeFile,
-  writeFileArray,
-} = require("./data/node/common_func"); // common_func.js 模块
+const path = require("node:path");
+const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
 
-// 读取规则源
-const { readListFile } = require("./data/node/readListFile"); // readListFile.js 模块
+const { readListFile } = require("./data/node/readListFile");
+const { downloadRules } = require("./data/node/downloadRules");
+const { mergeBlacklists } = require("./data/node/mergeBlacklists");
+const { mergeWhitelist } = require("./data/node/mergeWhitelist");
+const { splitRegexRules } = require("./data/node/splitRegexRules");
+const { removeDeadRules } = require("./data/node/removeDeadRules");
+const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
+const { title } = require("./data/node/title");
+const { cleanReadme } = require("./data/node/cleanReadme");
 
-//规则下载
-const { downloadRules } = require("./data/node/downloadRules"); // downloadRules.js 模块
-
-// 合并规则
-// 黑名单
-const { mergeBlacklists } = require("./data/node/mergeBlacklists"); // mergeBlacklists.js 模块
-// 白名单
-const { mergeWhitelist } = require("./data/node/mergeWhitelist"); // mergeWhitelist.js 模块
-
-// 正则抽离
-const { splitRegexRules } = require("./data/node/splitRegexRules"); // splitRegexRules.js 模块
-
-// 去除死域名
-const { removeDeadRules } = require("./data/node/removeDeadRules"); // removeDeadRules.js 模块
-
-// 精确去重和域名标准化去重，并处理黑白名单冲突
-const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists"); // buildAdGuardHomeLists.js 模块
-
-// 处理title
-const { title } = require("./data/node/title"); // title.js 模块
-// 处理md文件
-const { cleanReadme } = require("./data/node/cleanReadme"); // cleanReadme.js 模块
-
-// 旧地址
-const oldDirectory = "./tmp";
-// 新地址
-const newDirectory = "./";
-
-// 丢弃的规则
+const tmpDir = "./tmp";
+const outDir = "./";
 const removeDir = "./data/remove";
+
+const p = (f) => path.join(tmpDir, f);
 
 async function main() {
   try {
-    await createDir(oldDirectory);
+    await createDir(tmpDir);
 
     const rules = await readListFile("./data/configs/rules.txt", "黑名单");
     const allow = await readListFile("./data/configs/allow.txt", "白名单");
 
-    await downloadRules(rules, allow, oldDirectory);
+    await downloadRules(rules, allow, tmpDir);
 
     await copyFiles(
-      ["./data/rules/adblock.txt", `${oldDirectory}/rules01.txt`],
-      ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`],
+      ["./data/rules/adblock.txt", p("rules01.txt")],
+      ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // ---------- 1. 合并 ----------
-    let blacklists1 = await mergeBlacklists(oldDirectory);
-    let whitelists1 = await mergeWhitelist(oldDirectory);
+    // 1. 合并 → 文件
+    await mergeBlacklists(tmpDir, p("black_all.txt"));
+    await mergeWhitelist(tmpDir, p("white_all.txt"));
 
-    // ---------- 2. 正则抽离 ----------
-    const { regexBlacklist, regexWhitelist, restBlacklist, restWhitelist } =
-      splitRegexRules(blacklists1, whitelists1);
+    // 2. 正则抽离 → 4 个文件
+    const split = await splitRegexRules(
+      p("black_all.txt"),
+      p("white_all.txt"),
+      tmpDir,
+    );
 
-    // ★ 立刻释放原始数组
-    blacklists1 = null;
-    whitelists1 = null;
-    if (global.gc) global.gc();
-
-    // ---------- 3. 合并 rest（concat 而非 spread）----------
-    const restAll = restBlacklist.concat(restWhitelist);
-
-    // ---------- 4. 剔除死域名 ----------
-    // ★ 关闭缓存，省下 305 万条 map + 序列化开销
-    //   如果你确实想要缓存，用 cacheFile: "./dns-cache.json"
-    const { cleaned, nocleaned, passthrough } = await removeDeadRules(restAll, {
-      cacheFile: "./dns-cache.json",
+    // 3. 剔除死域名（输入 = rest 黑 + rest 白 两个文件）
+    await removeDeadRules([split.restBlackFile, split.restWhiteFile], {
+      cleanedFile: p("cleaned.txt"),
+      nocleanedFile: p("nocleaned.txt"),
+      passthroughFile: p("passthrough.txt"),
+      deadDomainsFile: p("dead-domains.txt"),
+      cacheFile: "./dns-cache.json", // ★ 一定要开
+      concurrency: 500, // ★ 从 200 提到 500
     });
 
-    // ---------- 5. 构建最终列表 ----------
-    const { blacklist, whitelist, noblacklist, nowhitelist, skipped } =
-      buildAdGuardHomeLists(cleaned);
-
-    await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
-
-    // ★ 用 writeFileArray，不要 join 大字符串
-    await writeFileArray(
-      `${newDirectory}/rules.txt`,
-      blacklist.concat(regexBlacklist),
-    );
-    await writeFileArray(
-      `${newDirectory}/allow.txt`,
-      whitelist.concat(regexWhitelist),
-    );
-
+    // 4. 构建最终列表（直接写 rules.txt / allow.txt）
     await deleteDir(removeDir);
     await createDir(removeDir);
 
-    await writeFileArray(`${removeDir}/noblacklist.txt`, noblacklist);
-    await writeFileArray(`${removeDir}/nowhitelist.txt`, nowhitelist);
-    await writeFileArray(`${removeDir}/skipped.txt`, skipped);
-    await writeFileArray(`${removeDir}/dead.txt`, nocleaned);
-    await writeFileArray(`${removeDir}/passthrough.txt`, passthrough);
+    await buildAdGuardHomeLists({
+      cleanedFile: p("cleaned.txt"),
+      regexBlackFile: split.regexBlackFile,
+      regexWhiteFile: split.regexWhiteFile,
+      outRulesFile: path.join(outDir, "rules.txt"),
+      outAllowFile: path.join(outDir, "allow.txt"),
+      outNoBlacklistFile: path.join(removeDir, "noblacklist.txt"),
+      outNoWhitelistFile: path.join(removeDir, "nowhitelist.txt"),
+      outSkippedFile: path.join(removeDir, "skipped.txt"),
+    });
+
+    // 5. 把 nocleaned / passthrough 复制到 remove 目录
+    await copyFiles(
+      [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
+      [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],
+    );
 
     await title();
     await cleanReadme();
@@ -109,7 +79,7 @@ async function main() {
   } catch (error) {
     console.log(`更新失败:${error}`);
   } finally {
-    await deleteDir(oldDirectory);
+    await deleteDir(tmpDir);
   }
 }
 

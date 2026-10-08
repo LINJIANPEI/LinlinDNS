@@ -1,50 +1,55 @@
-// 识别 /pattern/ 或 @@/pattern/，兼容尾部修饰符（如 /ads/$important）
-const REGEX_LINE_RE = /^(@@)?\/.+\/[^/]*$/;
+const path = require("node:path");
+const { readLines, LineWriter } = require("./stream_utils");
 
-function isRegexRuleLine(line) {
-  return REGEX_LINE_RE.test(String(line).trim());
-}
+const REGEX_LINE_RE = /^(@@)?\/.+\/[^/]*$/;
+const isRegexRuleLine = (s) => REGEX_LINE_RE.test(s);
 
 /**
- * 从黑白名单数组里分离出正则规则。
- *
- * @param {string[]} blacklist  黑名单数组（形如 "||a.com^"、"/ads/"）
- * @param {string[]} whitelist  白名单数组（形如 "@@||a.com^$important"、"@@/ads/"）
- * @returns {{
- *   regexBlacklist: string[],
- *   regexWhitelist: string[],
- *   restBlacklist: string[],
- *   restWhitelist: string[]
- * }}
+ * 从黑/白名单文件中分离正则规则，输出 4 个文件。
+ * @returns {Promise<{regexBlackFile, restBlackFile, regexWhiteFile, restWhiteFile, counts}>}
  */
-function splitRegexRules(blacklist = [], whitelist = []) {
-  if (!Array.isArray(blacklist) || !Array.isArray(whitelist)) {
-    throw new TypeError("blacklist / whitelist 必须是字符串数组");
-  }
+const splitRegexRules = async (blackFile, whiteFile, outDir) => {
+  const files = {
+    regexBlackFile: path.join(outDir, "black_regex.txt"),
+    restBlackFile: path.join(outDir, "black_rest.txt"),
+    regexWhiteFile: path.join(outDir, "white_regex.txt"),
+    restWhiteFile: path.join(outDir, "white_rest.txt"),
+  };
 
-  const regexBlacklist = [];
-  const regexWhitelist = [];
-  const restBlacklist = [];
-  const restWhitelist = [];
+  const rb = new LineWriter(files.regexBlackFile);
+  const rkb = new LineWriter(files.restBlackFile);
+  const rw = new LineWriter(files.regexWhiteFile);
+  const rkw = new LineWriter(files.restWhiteFile);
 
-  for (const line of blacklist) {
-    if (line == null) continue;
-    const s = String(line).trim();
-    if (!s) continue;
-    if (isRegexRuleLine(s)) regexBlacklist.push(s);
-    else restBlacklist.push(line);
-  }
+  await readLines(blackFile, async (line) => {
+    const t = line.trim();
+    if (!t) return;
+    if (isRegexRuleLine(t)) await rb.write(t);
+    else await rkb.write(line);
+  });
 
-  for (const line of whitelist) {
-    if (line == null) continue;
-    const s = String(line).trim();
-    if (!s) continue;
-    if (isRegexRuleLine(s)) regexWhitelist.push(s);
-    else restWhitelist.push(line);
-  }
+  await readLines(whiteFile, async (line) => {
+    const t = line.trim();
+    if (!t) return;
+    if (isRegexRuleLine(t)) await rw.write(t);
+    else await rkw.write(line);
+  });
 
-  return { regexBlacklist, regexWhitelist, restBlacklist, restWhitelist };
-}
-module.exports = {
-  splitRegexRules,
+  await Promise.all([rb.close(), rkb.close(), rw.close(), rkw.close()]);
+
+  const counts = {
+    regexBlacklist: rb.count,
+    restBlacklist: rkb.count,
+    regexWhitelist: rw.count,
+    restWhitelist: rkw.count,
+  };
+
+  console.log(
+    `正则抽离完成：正则黑 ${counts.regexBlacklist}，普通黑 ${counts.restBlacklist}，` +
+      `正则白 ${counts.regexWhitelist}，普通白 ${counts.restWhitelist}`,
+  );
+
+  return { ...files, counts };
 };
+
+module.exports = { splitRegexRules };
