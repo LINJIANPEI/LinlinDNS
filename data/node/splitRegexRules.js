@@ -1,97 +1,73 @@
 const path = require("node:path");
-const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
+const { readLines, LineWriter } = require("./stream_utils");
 
-const { readListFile } = require("./data/node/readListFile");
-const { downloadRules } = require("./data/node/downloadRules");
-const { mergeAll } = require("./data/node/mergeAll");
-const { dedupeFile } = require("./data/node/dedupe");
-const { splitRegexRules } = require("./data/node/splitRegexRules");
-const { removeDeadRules } = require("./data/node/removeDeadRules");
-const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
-const { title } = require("./data/node/title");
-const { cleanReadme } = require("./data/node/cleanReadme");
-const { splitLargeFilesInDir } = require("./data/node/splitLargeFile"); // ★
+const REGEX_LINE_RE = /^(@@)?\/.+\/[^/]*$/;
+const isRegexRuleLine = (s) => REGEX_LINE_RE.test(s);
 
-const tmpDir = "./tmp";
-const outDir = "./";
-const removeDir = "./data/remove";
+/**
+ * 从单一文件按【内容】分离正则/普通 + 黑/白。
+ *
+ * 判断顺序：
+ *   @@ 前缀 → 白名单
+ *   否则 → 黑名单
+ *   /regex/ 格式 → 正则
+ *
+ * @param {string} inputFile - 输入文件（mergeAll 的输出）
+ * @param {string} outDir    - 输出目录
+ * @returns {Promise<{
+ *   regexBlackFile: string,
+ *   restBlackFile: string,
+ *   regexWhiteFile: string,
+ *   restWhiteFile: string,
+ *   counts: {
+ *     regexBlacklist: number,
+ *     restBlacklist: number,
+ *     regexWhitelist: number,
+ *     restWhitelist: number
+ *   }
+ * }>}
+ */
+const splitRegexRules = async (inputFile, outDir) => {
+  const files = {
+    regexBlackFile: path.join(outDir, "black_regex.txt"),
+    restBlackFile: path.join(outDir, "black_rest.txt"),
+    regexWhiteFile: path.join(outDir, "white_regex.txt"),
+    restWhiteFile: path.join(outDir, "white_rest.txt"),
+  };
 
-const p = (f) => path.join(tmpDir, f);
+  const rb = new LineWriter(files.regexBlackFile);
+  const rkb = new LineWriter(files.restBlackFile);
+  const rw = new LineWriter(files.regexWhiteFile);
+  const rkw = new LineWriter(files.restWhiteFile);
 
-async function main() {
-  try {
-    await createDir(tmpDir);
+  await readLines(inputFile, async (line) => {
+    const t = line.trim();
+    if (!t) return;
 
-    const rules = await readListFile("./data/configs/rules.txt", "黑名单");
-    const allow = await readListFile("./data/configs/allow.txt", "白名单");
+    const isWhite = t.startsWith("@@");
+    const isRegex = isRegexRuleLine(t);
 
-    await downloadRules(rules, allow, tmpDir);
+    if (isWhite && isRegex) await rw.write(t);
+    else if (isWhite) await rkw.write(t);
+    else if (isRegex) await rb.write(t);
+    else await rkb.write(t);
+  });
 
-    await copyFiles(
-      ["./data/rules/adblock.txt", p("rules01.txt")],
-      ["./data/rules/whitelist.txt", p("allow01.txt")],
-    );
+  await Promise.all([rb.close(), rkb.close(), rw.close(), rkw.close()]);
 
-    // 1. 全部合并到一个文件
-    await mergeAll(tmpDir, p("all.txt"));
+  const counts = {
+    regexBlacklist: rb.count,
+    restBlacklist: rkb.count,
+    regexWhitelist: rw.count,
+    restWhitelist: rkw.count,
+  };
 
-    // 2. 去重
-    await dedupeFile(p("all.txt"));
+  console.log(
+    `拆分完成（按内容）：正则黑 ${counts.regexBlacklist}，普通黑 ${counts.restBlacklist}，` +
+      `正则白 ${counts.regexWhitelist}，普通白 ${counts.restWhitelist}`,
+  );
 
-    // 3. 按内容分黑白 + 正则
-    const split = await splitRegexRules(p("all.txt"), tmpDir);
+  return { ...files, counts };
+};
 
-    // 4. 剔除死域名
-    await removeDeadRules([split.restBlackFile, split.restWhiteFile], {
-      cleanedFile: p("cleaned.txt"),
-      nocleanedFile: p("nocleaned.txt"),
-      passthroughFile: p("passthrough.txt"),
-      deadDomainsFile: p("dead-domains.txt"),
-      cacheFile: "./dns-cache.json",
-      concurrency: 500,
-    });
-
-    // 5. 构建最终列表
-    await deleteDir(removeDir);
-    await createDir(removeDir);
-
-    await buildAdGuardHomeLists({
-      cleanedFile: p("cleaned.txt"),
-      regexBlackFile: split.regexBlackFile,
-      regexWhiteFile: split.regexWhiteFile,
-      outRulesFile: path.join(outDir, "rules.txt"),
-      outAllowFile: path.join(outDir, "allow.txt"),
-      outNoBlacklistFile: path.join(removeDir, "noblacklist.txt"),
-      outNoWhitelistFile: path.join(removeDir, "nowhitelist.txt"),
-      outSkippedFile: path.join(removeDir, "skipped.txt"),
-    });
-
-    // 6. 复制丢弃文件到 remove 目录
-    await copyFiles(
-      [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
-      [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],
-    );
-
-    // 7. 写入头部信息
-    await title();
-
-    // 8. ★ 分片：rules.txt / allow.txt
-    await splitLargeFilesInDir(outDir, {
-      pattern: /^(rules|allow)\.txt$/,
-    });
-
-    // 9. ★ 分片：data/remove/ 下所有 txt
-    await splitLargeFilesInDir(removeDir);
-
-    // 10. 更新 README
-    await cleanReadme();
-
-    console.log("更新完成");
-  } catch (error) {
-    console.log(`更新失败:${error}`);
-  } finally {
-    await deleteDir(tmpDir);
-  }
-}
-
-main();
+module.exports = { splitRegexRules };
