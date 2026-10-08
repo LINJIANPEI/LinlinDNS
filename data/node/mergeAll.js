@@ -43,6 +43,7 @@ const mergeAll = async (directory, outputFile) => {
           (f.startsWith("rules") || f.startsWith("allow")) &&
           f.endsWith(".txt"),
       )
+      .filter((f) => !/\.part\d+\./.test(f))
       .sort();
 
     const writer = new LineWriter(outputFile);
