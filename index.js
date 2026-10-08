@@ -4,7 +4,7 @@ const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
 const { readListFile } = require("./data/node/readListFile");
 const { downloadRules } = require("./data/node/downloadRules");
 const { mergeBlacklists } = require("./data/node/mergeBlacklists");
-const { mergeWhitelist } = require("./data/node/mergeWhitelist");
+const { mergeWhitelists } = require("./data/node/mergeWhitelists");
 const { dedupeFile } = require("./data/node/dedupe"); // ★ 新增
 const { splitRegexRules } = require("./data/node/splitRegexRules");
 const { removeDeadRules } = require("./data/node/removeDeadRules");
@@ -34,7 +34,7 @@ async function main() {
 
     // 1. 合并 → 文件
     await mergeBlacklists(tmpDir, p("black_all.txt"));
-    await mergeWhitelist(tmpDir, p("white_all.txt"));
+    await mergeWhitelists(tmpDir, p("white_all.txt"));
 
     // ★ 2. 去重（sort -u，原地替换）
     await dedupeFile(p("black_all.txt"));
