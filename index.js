@@ -5,6 +5,7 @@ const { readListFile } = require("./data/node/readListFile");
 const { downloadRules } = require("./data/node/downloadRules");
 const { mergeBlacklists } = require("./data/node/mergeBlacklists");
 const { mergeWhitelist } = require("./data/node/mergeWhitelist");
+const { dedupeFile } = require("./data/node/dedupe"); // ★ 新增
 const { splitRegexRules } = require("./data/node/splitRegexRules");
 const { removeDeadRules } = require("./data/node/removeDeadRules");
 const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
@@ -35,24 +36,28 @@ async function main() {
     await mergeBlacklists(tmpDir, p("black_all.txt"));
     await mergeWhitelist(tmpDir, p("white_all.txt"));
 
-    // 2. 正则抽离 → 4 个文件
+    // ★ 2. 去重（sort -u，原地替换）
+    await dedupeFile(p("black_all.txt"));
+    await dedupeFile(p("white_all.txt"));
+
+    // 3. 正则抽离 → 4 个文件
     const split = await splitRegexRules(
       p("black_all.txt"),
       p("white_all.txt"),
       tmpDir,
     );
 
-    // 3. 剔除死域名（输入 = rest 黑 + rest 白 两个文件）
+    // 4. 剔除死域名（输入 = rest 黑 + rest 白 两个文件）
     await removeDeadRules([split.restBlackFile, split.restWhiteFile], {
       cleanedFile: p("cleaned.txt"),
       nocleanedFile: p("nocleaned.txt"),
       passthroughFile: p("passthrough.txt"),
       deadDomainsFile: p("dead-domains.txt"),
-      cacheFile: "./dns-cache.json", // ★ 一定要开
-      concurrency: 500, // ★ 从 200 提到 500
+      cacheFile: "./dns-cache.json",
+      concurrency: 500,
     });
 
-    // 4. 构建最终列表（直接写 rules.txt / allow.txt）
+    // 5. 构建最终列表（直接写 rules.txt / allow.txt）
     await deleteDir(removeDir);
     await createDir(removeDir);
 
@@ -67,7 +72,7 @@ async function main() {
       outSkippedFile: path.join(removeDir, "skipped.txt"),
     });
 
-    // 5. 把 nocleaned / passthrough 复制到 remove 目录
+    // 6. 把 nocleaned / passthrough 复制到 remove 目录
     await copyFiles(
       [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
       [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],

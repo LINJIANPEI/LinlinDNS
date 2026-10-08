@@ -201,53 +201,6 @@ const writeFile = async (filePath, content, decoded = "utf8") => {
 // ----------------------------------------
 
 /**
- *
- * 文件名规则：filePath 去掉扩展名后拼 .partNN + 原扩展名
- *   例：writeFile("./out/passthrough.txt", ["a","b",...])
- *   产出：./out/passthrough.part01.txt
- *         ./out/passthrough.part02.txt
- *
- * @param {string} filePath - 目标文件路径（作为基础名）
- * @param {string[]} content - 要写入的数组，每个元素占一行
- * @param {string} [decoded="utf8"] - 编码格式
- * @returns {Promise<void>}
- */
-const writeFileArray = async (filePath, content, decoded = "utf8") => {
-  if (!Array.isArray(content)) {
-    throw new TypeError("content 必须是数组");
-  }
-
-  const CHUNK_SIZE = 100000; // 每片行数，可按需调整
-
-  const ext = path.extname(filePath);
-  const base = ext ? filePath.slice(0, -ext.length) : filePath;
-  const totalChunks = Math.ceil(content.length / CHUNK_SIZE);
-  const pad = String(totalChunks).length;
-
-  const results = { success: [], failed: [] };
-
-  for (let i = 0; i < totalChunks; i++) {
-    const chunk = content.slice(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE);
-    const name = `${base}.part${String(i + 1).padStart(pad, "0")}${ext}`;
-    try {
-      await writeFile(name, chunk.join("\n"), decoded);
-      results.success.push(name);
-    } catch (error) {
-      results.failed.push({ filePath: name, error });
-    }
-  }
-
-  console.log(
-    `拆分写入完成：${content.length} 行 → ${totalChunks} 个文件，` +
-      `成功 ${results.success.length}，失败 ${results.failed.length}`,
-  );
-
-  return results;
-};
-
-// ----------------------------------------
-
-/**
  * 读取目录内容
  * @param {string} dirPath - 目录路径
  * @returns {Promise<Array<string>>} - 返回目录中的文件和子目录列表
@@ -276,5 +229,4 @@ module.exports = {
   readFile,
   writeFile,
   readDir,
-  writeFileArray,
 };

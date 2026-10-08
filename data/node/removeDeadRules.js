@@ -1,5 +1,4 @@
 const { Resolver } = require("node:dns/promises");
-const net = require("node:net");
 const fs = require("node:fs");
 const path = require("node:path");
 const { finished } = require("node:stream/promises");
@@ -10,7 +9,6 @@ const DEFAULT_CONCURRENCY = 200;
 const DEFAULT_NAMESERVERS = ["127.0.0.1"];
 const DEFAULT_PORT = 5053;
 const DNS_TIMEOUT = 800; // ★ 从 2000 降到 800
-const CONNECT_TIMEOUT = 2000;
 const DEFAULT_CACHE_FILE = "./dns-cache.json";
 const DEFAULT_PROGRESS_STEP = 1000;
 
@@ -83,65 +81,48 @@ const parseRule = (line) => {
   if (t.startsWith("#") && !EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m)))
     return null;
 
-  const parts = t.split(/\s+/);
-  if (parts.length === 2 && isIPv4(parts[0])) {
-    const domain = normalizeDomain(parts[1]);
-    if (domain) {
-      const isWhite = !(parts[0] === "0.0.0.0" || parts[0].startsWith("127."));
-      return { domain, isWhite };
+  // 只在可能为 "IP 域名" 时 split
+  const c0 = t.charCodeAt(0);
+  if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
+    const parts = t.split(/\s+/);
+    if (parts.length === 2 && isIPv4(parts[0])) {
+      const domain = normalizeDomain(parts[1]);
+      if (domain) {
+        const isWhite = !(
+          parts[0] === "0.0.0.0" || parts[0].startsWith("127.")
+        );
+        return { domain, isWhite };
+      }
+      return null;
     }
-    return null;
   }
 
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
-
   if (body.startsWith("||")) {
     const domain = normalizeDomain(body.slice(2).split("^")[0]);
     return domain ? { domain, isWhite } : null;
   }
-
   const domain = normalizeDomain(t.replace(/\^+$/, ""));
   return domain ? { domain, isWhite: false } : null;
 };
 
 const resolveA = async (domain, nameservers, port) => {
   const resolver = getResolver(nameservers, port);
+  let timer;
   try {
     const records = await Promise.race([
       resolver.resolve4(domain),
-      new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("DNS timeout")), DNS_TIMEOUT),
-      ),
+      new Promise((_, reject) => {
+        timer = setTimeout(() => reject(new Error("timeout")), DNS_TIMEOUT);
+      }),
     ]);
     return records.filter((ip) => ip !== "0.0.0.0");
   } catch {
     return [];
+  } finally {
+    if (timer) clearTimeout(timer);
   }
-};
-
-const connectWithTimeout = (ip, port, timeout = CONNECT_TIMEOUT) =>
-  new Promise((resolve) => {
-    const s = new net.Socket();
-    const done = (r) => {
-      s.destroy();
-      resolve(r);
-    };
-    s.setTimeout(timeout);
-    s.once("connect", () => done(true));
-    s.once("timeout", () => done(false));
-    s.once("error", () => done(false));
-    s.connect(port, ip);
-  });
-
-const checkDomain = async (domain, { nameservers, port }) => {
-  if (isIPv4(domain)) {
-    for (const p of [80, 443, 80, 443]) {
-      if (await connectWithTimeout(domain, p)) return [domain];
-    }
-    return [];
-  }
-  return resolveA(domain, nameservers, port);
 };
 
 // ---------- 缓存：NDJSON 流式 ----------
