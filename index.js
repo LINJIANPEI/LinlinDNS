@@ -43,74 +43,74 @@ const removeDir = "./data/remove";
 
 async function main() {
   try {
-    // 创建临时文件夹
     await createDir(oldDirectory);
 
-    //黑名单规则
     const rules = await readListFile("./data/configs/rules.txt", "黑名单");
-    //白名单规则
     const allow = await readListFile("./data/configs/allow.txt", "白名单");
 
-    //规则下载
     await downloadRules(rules, allow, oldDirectory);
 
-    // 复制文件
     await copyFiles(
       ["./data/rules/adblock.txt", `${oldDirectory}/rules01.txt`],
       ["./data/rules/whitelist.txt", `${oldDirectory}/allow01.txt`],
     );
 
-    // 合并规则
-    const blacklists1 = await mergeBlacklists(oldDirectory);
-    const whitelists1 = await mergeWhitelist(oldDirectory);
+    // ---------- 1. 合并 ----------
+    let blacklists1 = await mergeBlacklists(oldDirectory);
+    let whitelists1 = await mergeWhitelist(oldDirectory);
 
+    // ---------- 2. 正则抽离 ----------
     const { regexBlacklist, regexWhitelist, restBlacklist, restWhitelist } =
       splitRegexRules(blacklists1, whitelists1);
 
-    const { cleaned, nocleaned, passthrough } = await removeDeadRules([
-      ...restBlacklist,
-      ...restWhitelist,
-    ]);
+    // ★ 立刻释放原始数组
+    blacklists1 = null;
+    whitelists1 = null;
+    if (global.gc) global.gc();
 
-    // 精确去重和域名标准化去重，并处理黑白名单冲突
+    // ---------- 3. 合并 rest（concat 而非 spread）----------
+    const restAll = restBlacklist.concat(restWhitelist);
+
+    // ---------- 4. 剔除死域名 ----------
+    // ★ 关闭缓存，省下 305 万条 map + 序列化开销
+    //   如果你确实想要缓存，用 cacheFile: "./dns-cache.json"
+    const { cleaned, nocleaned, passthrough } = await removeDeadRules(restAll, {
+      cacheFile: null,
+    });
+
+    // ---------- 5. 构建最终列表 ----------
     const { blacklist, whitelist, noblacklist, nowhitelist, skipped } =
       buildAdGuardHomeLists(cleaned);
 
-    // 删除文件
     await deleteFiles(`${newDirectory}/allow.txt`, `${newDirectory}/rules.txt`);
 
-    //有效规则
-    await writeFile(
+    // ★ 用 writeFileArray，不要 join 大字符串
+    await writeFileArray(
       `${newDirectory}/rules.txt`,
-      [...blacklist, ...regexBlacklist].join("\n"),
+      blacklist.concat(regexBlacklist),
     );
-    await writeFile(
+    await writeFileArray(
       `${newDirectory}/allow.txt`,
-      [...whitelist, ...regexWhitelist].join("\n"),
+      whitelist.concat(regexWhitelist),
     );
 
     await deleteDir(removeDir);
     await createDir(removeDir);
 
-    //去重以及丢弃规则
     await writeFileArray(`${removeDir}/noblacklist.txt`, noblacklist);
     await writeFileArray(`${removeDir}/nowhitelist.txt`, nowhitelist);
     await writeFileArray(`${removeDir}/skipped.txt`, skipped);
-    // 死域名清单
     await writeFileArray(`${removeDir}/dead.txt`, nocleaned);
-    //丢弃的规则
     await writeFileArray(`${removeDir}/passthrough.txt`, passthrough);
 
-    // 处理title
     await title();
-    // 处理md文件
     await cleanReadme();
     console.log("更新完成");
   } catch (error) {
     console.log(`更新失败:${error}`);
   } finally {
-    // 删除临时文件夹
     await deleteDir(oldDirectory);
   }
 }
+
 main();
