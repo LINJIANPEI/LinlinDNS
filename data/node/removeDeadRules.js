@@ -219,13 +219,16 @@ const removeDeadRules = async (
 
     const cacheStore = cache || createFileCache(cacheFile);
 
-    // 1. 解析规则
+    // ========================================================
+    // 1. 解析规则：能解析出域名的进 domainMap，其余进 passthrough
+    // ========================================================
     const domainMap = new Map();
     const passthrough = [];
 
     for (const line of rules) {
       const parsed = parseRule(line);
       if (!parsed) {
+        // 注释、##、看不懂的行 —— 非域名行，既不是活也不是死
         passthrough.push(line);
         continue;
       }
@@ -242,7 +245,9 @@ const removeDeadRules = async (
     const total = domains.length;
     console.log(`规则解析完成，共${rules.length}条规则，提取${total}个域名`);
 
+    // ========================================================
     // 2. 并发检测（带进度）
+    // ========================================================
     const limit = pLimit(concurrency);
     const results = new Map();
     const now = Math.floor(Date.now() / 1000);
@@ -291,7 +296,9 @@ const removeDeadRules = async (
     );
     report(true);
 
-    // 3. 分类
+    // ========================================================
+    // 3. 分类：活域名 / 死域名
+    // ========================================================
     const deadSet = new Set();
     const aliveSet = new Set();
     for (const domain of domains) {
@@ -300,23 +307,33 @@ const removeDeadRules = async (
       else deadSet.add(domain);
     }
 
-    // 4. 剔除规则（只处理域名规则，passthrough 不参与输出）
+    // ========================================================
+    // 4. 剔除规则
+    //    cleaned    ← 活域名规则 / 白名单规则 / 父域存活的死域名规则
+    //    nocleaned  ← 死域名规则（自己死且父域也死）
+    //    passthrough 不参与输出
+    // ========================================================
     const cleaned = [];
     const nocleaned = [];
+    let parentAliveCount = 0; // 因父域存活而被保留的死域名个数
 
     for (const [domain, entry] of domainMap) {
       const isDead = deadSet.has(domain);
       const isWhite = entry.isWhite || whiteSet.has(domain);
 
+      // 白名单规则：保留
       if (isWhite && keepWhiteRules) {
         for (const r of entry.originals) cleaned.push(r);
         continue;
       }
+
+      // 活域名规则：保留
       if (!isDead) {
         for (const r of entry.originals) cleaned.push(r);
         continue;
       }
 
+      // 死域名：检查父域是否存活
       const labels = domain.split(".");
       let parentAlive = false;
       for (let i = 1; i < labels.length; i++) {
@@ -325,14 +342,20 @@ const removeDeadRules = async (
           break;
         }
       }
+
       if (parentAlive) {
+        // 父域活着，规则保留
+        parentAliveCount++;
         for (const r of entry.originals) cleaned.push(r);
       } else {
+        // 自己死 + 父域也死，规则剔除
         for (const r of entry.originals) nocleaned.push(r);
       }
     }
 
+    // ========================================================
     // 5. 统计信息
+    // ========================================================
     const deadDomains = [...deadSet].sort();
     const aliveDomains = [...aliveSet].sort();
 
@@ -341,6 +364,8 @@ const removeDeadRules = async (
       totalDomains: total,
       aliveDomains: aliveDomains.length,
       deadDomains: deadDomains.length,
+      deadDomainsWithParentAlive: parentAliveCount,
+      removedDomains: deadDomains.length - parentAliveCount,
       aliveRules: cleaned.length,
       deadRules: nocleaned.length,
       passthrough: passthrough.length,
@@ -358,16 +383,20 @@ const removeDeadRules = async (
         ` | 剔除 ${nocleaned.length} 条` +
         ` | 丢弃非域名行 ${passthrough.length} 条` +
         ` | 死域名 ${deadDomains.length} 个` +
+        `（父域存活保留 ${parentAliveCount} 个，实际剔除 ${stats.removedDomains} 个）` +
         ` | 缓存命中 ${cacheHits} 次`,
     );
 
+    // ========================================================
+    // 6. 返回
+    // ========================================================
     return {
-      cleaned, // 活域名的原始规则
-      nocleaned, // 死域名的原始规则
-      passthrough, // 非域名行（注释、##、看不懂的），仅作参考，不参与输出
-      deadDomains,
-      aliveDomains,
-      stats,
+      cleaned, // 存活的规则（活域名 + 白名单 + 父域存活的死域名规则）
+      nocleaned, // 死的规则（自己死且父域也死的域名规则）
+      passthrough, // 非域名行（注释、##、看不懂的），既不是活也不是死
+      deadDomains, // 死域名列表
+      aliveDomains, // 活域名列表
+      stats, // 统计信息
     };
   } catch (error) {
     throw new Error(`剔除死域名规则失败: ${error.message}`);

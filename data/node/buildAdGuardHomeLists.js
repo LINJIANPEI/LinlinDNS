@@ -184,30 +184,56 @@ function removeRedundantSubdomains(domains) {
 /**
  * 从规则字符串数组生成 AdGuard Home 黑白名单。
  *
- * @param {string[]} rawRules  原始规则数组（支持 hosts、||domain^、@@||domain^、裸域名等）
- * @returns {{ blacklist: string[], whitelist: string[] }}
- *   blacklist: 形如 "||example.com^"
- *   whitelist: 形如 "@@||example.com^$important"
+ * 五个输出数组互斥，且并集等于输入：
+ *   blacklist ∪ whitelist ∪ noblacklist ∪ nowhitelist ∪ skipped = 输入（去重后）
+ *
+ * @param {string[]} rawRules  原始规则数组
+ * @returns {{
+ *   blacklist: string[],
+ *   whitelist: string[],
+ *   noblacklist: string[],
+ *   nowhitelist: string[],
+ *   skipped: string[]
+ * }}
+ *   blacklist:   最终黑名单，形如 "||example.com^"
+ *   whitelist:   最终白名单，形如 "@@||example.com^$important"
+ *   noblacklist: 本应进黑名单但被丢弃的条目
+ *   nowhitelist: 本应进白名单但被丢弃的条目
+ *   skipped:     排除上面四类之后剩下的所有行（注释、空行、[xxx] 段头、
+ *                被 uncomment 截断后为空的行等）
  */
 function buildAdGuardHomeLists(rawRules) {
   if (!Array.isArray(rawRules)) {
     throw new TypeError("rawRules 必须是字符串数组");
   }
 
-  // 1. 去注释 + 去重 + 排序
+  const noblacklistSet = new Set();
+  const nowhitelistSet = new Set();
+  const skipped = [];
+
+  // 1. 去注释 + 去重 + 排序；uncomment 返回空的行全部进 skipped
   const lineSet = new Set();
   for (const raw of rawRules) {
     const line = uncomment(raw);
-    if (line) lineSet.add(line);
+    if (line) {
+      lineSet.add(line);
+    } else {
+      skipped.push(raw);
+    }
   }
   const lines = [...lineSet].sort();
 
-  // 2. 解析
+  // 2. 解析（未识别的按 @@ 前缀归档）
   const rules = [];
   for (const line of lines) {
     const rule = parseRule(line);
-    if (rule) rules.push(rule);
+    if (rule) {
+      rules.push(rule);
+    } else {
+      (line.startsWith("@@") ? nowhitelistSet : noblacklistSet).add(line);
+    }
   }
+
   rules.sort((a, b) => {
     if (a.isWhite !== b.isWhite) return a.isWhite ? 1 : -1;
     if (a.formatRank !== b.formatRank) return a.formatRank - b.formatRank;
@@ -215,24 +241,51 @@ function buildAdGuardHomeLists(rawRules) {
     return a.original < b.original ? -1 : a.original > b.original ? 1 : 0;
   });
 
-  // 3. 清洗：过滤非公网 host，白名单优先
-  const validRules = rules.filter(isValidFinalHost);
+  // 3. 清洗：过滤非公网 host，被过滤的归档
+  const validRules = [];
+  for (const r of rules) {
+    if (isValidFinalHost(r)) {
+      validRules.push(r);
+    } else {
+      (r.isWhite ? nowhitelistSet : noblacklistSet).add(r.original);
+    }
+  }
+
   const blackSet = new Set();
   const whiteSet = new Set();
   for (const r of validRules) {
     if (r.isWhite) whiteSet.add(r.domain);
     else blackSet.add(r.domain);
   }
-  for (const w of whiteSet) blackSet.delete(w);
 
-  // 4. 父域去冗余
+  // 白名单覆盖黑名单：被覆盖的黑名单条目归入 noblacklist
+  for (const w of whiteSet) {
+    if (blackSet.has(w)) {
+      blackSet.delete(w);
+      noblacklistSet.add(`||${w}^`);
+    }
+  }
+
+  // 4. 父域去冗余，被删掉的子域归档
   const blackDomains = removeRedundantSubdomains(blackSet);
   const whiteDomains = removeRedundantSubdomains(whiteSet);
 
-  // 5. 输出 AdGuard Home 格式
+  const blackKept = new Set(blackDomains);
+  for (const d of blackSet) {
+    if (!blackKept.has(d)) noblacklistSet.add(`||${d}^`);
+  }
+  const whiteKept = new Set(whiteDomains);
+  for (const d of whiteSet) {
+    if (!whiteKept.has(d)) nowhitelistSet.add(`@@||${d}^$important`);
+  }
+
+  // 5. 输出
   return {
     blacklist: blackDomains.map((d) => `||${d}^`),
     whitelist: whiteDomains.map((d) => `@@||${d}^$important`),
+    noblacklist: [...noblacklistSet].sort(),
+    nowhitelist: [...nowhitelistSet].sort(),
+    skipped,
   };
 }
 

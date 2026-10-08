@@ -37,10 +37,14 @@ const oldDirectory = "./tmp";
 // 新地址
 const newDirectory = "./";
 
+// 丢弃的规则
+const removeDir = "./data/remove";
+
 async function main() {
   try {
     // 创建临时文件夹
     await createDir(oldDirectory);
+    await createDir(removeDir);
 
     //黑名单规则
     const rules = await readListFile("./data/configs/rules.txt", "黑名单");
@@ -69,17 +73,18 @@ async function main() {
     ]);
 
     // 精确去重和域名标准化去重，并处理黑白名单冲突
-    const { blacklist, whitelist, noblacklist, nowhitelist } =
+    const { blacklist, whitelist, noblacklist, nowhitelist, skipped } =
       buildAdGuardHomeLists(cleaned);
 
     // 删除文件
     await deleteFiles(
       `${newDirectory}/allow.txt`,
       `${newDirectory}/rules.txt`,
-      `${newDirectory}/dead.txt`,
-      `${newDirectory}/noblacklist.txt`,
-      `${newDirectory}/nowhitelist.txt`,
-      `${newDirectory}/passthrough.txt`,
+      `${removeDir}/dead.txt`,
+      `${removeDir}/noblacklist.txt`,
+      `${removeDir}/nowhitelist.txt`,
+      `${removeDir}/skipped.txt`,
+      `${removeDir}/passthrough.txt`,
     );
 
     //有效规则
@@ -93,14 +98,13 @@ async function main() {
     );
 
     //去重以及丢弃规则
-    await writeFile(`${newDirectory}/noblacklist.txt`, noblacklist.join("\n"));
-    await writeFile(`${newDirectory}/nowhitelist.txt`, nowhitelist.join("\n"));
-
+    await writeFile(`${removeDir}/noblacklist.txt`, noblacklist.join("\n"));
+    await writeFile(`${removeDir}/nowhitelist.txt`, nowhitelist.join("\n"));
+    await writeFile(`${removeDir}/skipped.txt`, skipped.join("\n"));
     // 死域名清单
-    await writeFile(`${newDirectory}/dead.txt`, nocleaned.join("\n"));
-
+    await writeFile(`${removeDir}/dead.txt`, nocleaned.join("\n"));
     //丢弃的规则
-    await writeFile(`${newDirectory}/passthrough.txt`, passthrough.join("\n"));
+    await writeFile(`${removeDir}/passthrough.txt`, passthrough.join("\n"));
 
     // 处理title
     await title();
