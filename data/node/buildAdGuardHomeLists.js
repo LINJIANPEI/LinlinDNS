@@ -52,12 +52,6 @@ const hasUnsupportedModifier = (rule) =>
 
 /**
  * 从 URL 正则规则里提取域名，转成域名规则。
- * 支持：
- *   @@/xxx/*/yyy.js$script,domain=faselhd.cafe
- *   /xxx/*$xmlhttprequest,domain=example.com
- *   ||example.com^$script
- *   @@||example.com^$xmlhttprequest
- * 返回 { domain, isWhite } 或 null
  */
 const extractDomainFromRule = (rule) => {
   const isWhite = rule.startsWith("@@");
@@ -66,17 +60,15 @@ const extractDomainFromRule = (rule) => {
   // 1. 先从 $domain= 或 domain= 提取
   const domainMatch = body.match(/domain=([a-z0-9.,\-]+)/i);
   if (domainMatch && domainMatch[1]) {
-    // domain= 可能有多个，逗号分隔，取第一个
     const first = domainMatch[1].split(",")[0].trim();
-    // 去掉前导 ~
     const clean = first.replace(/^~/, "");
     if (clean && DOMAIN_RE.test(clean)) {
       return { domain: clean, isWhite };
     }
   }
 
-  // 2. 从 ||domain^ 提取
-  const pipeMatch = body.match(/^\|\|([a-z0-9.\-]+)\^?/i);
+  // 2. 从 ||domain^ 或 |domain^ 提取
+  const pipeMatch = body.match(/^\|{1,2}([a-z0-9.\-]+)\^?/i);
   if (pipeMatch && pipeMatch[1]) {
     const d = pipeMatch[1].toLowerCase().replace(/\.+$/, "");
     if (DOMAIN_RE.test(d)) {
@@ -85,9 +77,9 @@ const extractDomainFromRule = (rule) => {
   }
 
   // 3. 从 URL 正则里尝试提取域名
-  // 例如 /stream/*/*.ts  → 提取不到域名，返回 null
-  // 例如 https://example.com/xxx → 提取 example.com
-  const urlMatch = body.match(/(?:https?:\/\/)?([a-z0-9\-]+(?:\.[a-z0-9\-]+)+)/i);
+  const urlMatch = body.match(
+    /(?:https?:\/\/)?([a-z0-9\-]+(?:\.[a-z0-9\-]+)+)/i,
+  );
   if (urlMatch && urlMatch[1]) {
     const d = urlMatch[1].toLowerCase().replace(/\.+$/, "");
     if (DOMAIN_RE.test(d)) {
@@ -210,6 +202,7 @@ function parseRule(line) {
           isWhite: !isBlacklistHostIp(hostIp),
           formatRank: 1,
           hostIp,
+          singlePipe: false,
         };
       }
       return null;
@@ -218,16 +211,36 @@ function parseRule(line) {
 
   const isWhite = line.startsWith("@@");
   const body = isWhite ? line.slice(2) : line;
-  if (body.startsWith("||")) {
-    const domain = normalizeDomain(body.slice(2).split("^", 1)[0]);
+
+  // ★ 同时支持 || 和 |
+  if (body.startsWith("||") || body.startsWith("|")) {
+    const isDouble = body.startsWith("||");
+    let rest = body.slice(isDouble ? 2 : 1);
+    rest = rest.replace(/^\^/, "");
+    const domain = normalizeDomain(rest.split("^", 1)[0]);
     return domain
-      ? { original: line, domain, isWhite, formatRank: 2, hostIp: null }
+      ? {
+          original: line,
+          domain,
+          isWhite,
+          formatRank: 2,
+          hostIp: null,
+          singlePipe: !isDouble,
+        }
       : null;
   }
 
   const domain = normalizeDomain(line.replace(/\^+$/, ""));
+  // ★ 原来写死 false，改成 isWhite
   return domain
-    ? { original: line, domain, isWhite: false, formatRank: 0, hostIp: null }
+    ? {
+        original: line,
+        domain,
+        isWhite,
+        formatRank: 0,
+        hostIp: null,
+        singlePipe: false,
+      }
     : null;
 }
 
@@ -269,33 +282,6 @@ function removeRedundantSubdomains(domains) {
 
 // ---------- 主函数（流式版） ----------
 
-/**
- * 从 cleaned.txt（+ 正则文件）生成 AdGuard Home 黑/白名单，直接写文件。
- *
- * @param {object} options
- * @param {string}  options.cleanedFile        - 输入：清理过死域名的规则文件
- * @param {string}  [options.regexBlackFile]   - 输入：正则黑名单文件
- * @param {string}  [options.regexWhiteFile]   - 输入：正则白名单文件
- * @param {string}  options.outRulesFile       - 输出：最终 rules.txt
- * @param {string}  options.outAllowFile       - 输出：最终 allow.txt
- * @param {string}  [options.outNoBlacklistFile]
- * @param {string}  [options.outNoWhitelistFile]
- * @param {string}  [options.outSkippedFile]
- *
- * @returns {Promise<{
- *   blacklistCount: number,
- *   whitelistCount: number,
- *   noblacklistCount: number,
- *   nowhitelistCount: number,
- *   skippedCount: number,
- *   regexBlackCount: number,
- *   regexWhiteCount: number,
- *   convertedBlackCount: number,
- *   convertedWhiteCount: number,
- *   droppedBlackCount: number,
- *   droppedWhiteCount: number
- * }>}
- */
 const buildAdGuardHomeLists = async (options) => {
   const {
     cleanedFile,
@@ -328,6 +314,10 @@ const buildAdGuardHomeLists = async (options) => {
   const whiteSet = new Set();
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
+
+  // ★ 记录单 | 规则，输出时保留语义
+  const singlePipeBlack = new Set();
+  const singlePipeWhite = new Set();
 
   // ★ 修复：补上 let 声明
   let skippedCount = 0;
@@ -381,8 +371,13 @@ const buildAdGuardHomeLists = async (options) => {
     }
 
     // 5. 收集到 Set
-    if (rule.isWhite) whiteSet.add(rule.domain);
-    else blackSet.add(rule.domain);
+    if (rule.isWhite) {
+      whiteSet.add(rule.domain);
+      if (rule.singlePipe) singlePipeWhite.add(rule.domain);
+    } else {
+      blackSet.add(rule.domain);
+      if (rule.singlePipe) singlePipeBlack.add(rule.domain);
+    }
   });
 
   // 释放 lineSet（不再需要）
@@ -445,7 +440,9 @@ const buildAdGuardHomeLists = async (options) => {
   // ---------- 写最终 rules.txt ----------
   const rulesWriter = new LineWriter(outRulesFile);
   for (const d of blackDomains) {
-    await rulesWriter.write(`||${d}^`);
+    // ★ 单 | 保留原语义
+    const prefix = singlePipeBlack.has(d) ? "|" : "||";
+    await rulesWriter.write(`${prefix}${d}^`);
   }
 
   let regexBlackCount = 0;
@@ -490,7 +487,9 @@ const buildAdGuardHomeLists = async (options) => {
   // ---------- 写最终 allow.txt ----------
   const allowWriter = new LineWriter(outAllowFile);
   for (const d of whiteDomains) {
-    await allowWriter.write(`@@||${d}^$important`);
+    // ★ 单 | 保留原语义
+    const prefix = singlePipeWhite.has(d) ? "|" : "||";
+    await allowWriter.write(`@@${prefix}${d}^$important`);
   }
 
   let regexWhiteCount = 0;

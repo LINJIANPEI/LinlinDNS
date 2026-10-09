@@ -107,13 +107,18 @@ const parseRule = (line) => {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  if (body.startsWith("||")) {
-    const domain = normalizeDomain(body.slice(2).split("^")[0]);
+  // ★ 同时支持 || 和 |
+  if (body.startsWith("||") || body.startsWith("|")) {
+    const isDouble = body.startsWith("||");
+    let rest = body.slice(isDouble ? 2 : 1);
+    rest = rest.replace(/^\^/, "");
+    const domain = normalizeDomain(rest.split("^")[0]);
     return domain ? { domain, isWhite } : null;
   }
 
   const domain = normalizeDomain(t.replace(/\^+$/, ""));
-  return domain ? { domain, isWhite: false } : null;
+  // ★ 原来写死 false，改成 isWhite
+  return domain ? { domain, isWhite } : null;
 };
 
 // ============================================================
