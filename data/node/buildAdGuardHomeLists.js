@@ -57,7 +57,7 @@ const extractDomainFromRule = (rule) => {
   const isWhite = rule.startsWith("@@");
   const body = isWhite ? rule.slice(2) : rule;
 
-  // 1. 先从 $domain= 或 domain= 提取
+  // 1. 从 domain= 提取
   const domainMatch = body.match(/domain=([a-z0-9.,\-]+)/i);
   if (domainMatch && domainMatch[1]) {
     const first = domainMatch[1].split(",")[0].trim();
@@ -76,17 +76,7 @@ const extractDomainFromRule = (rule) => {
     }
   }
 
-  // 3. 从 URL 正则里尝试提取域名
-  const urlMatch = body.match(
-    /(?:https?:\/\/)?([a-z0-9\-]+(?:\.[a-z0-9\-]+)+)/i,
-  );
-  if (urlMatch && urlMatch[1]) {
-    const d = urlMatch[1].toLowerCase().replace(/\.+$/, "");
-    if (DOMAIN_RE.test(d)) {
-      return { domain: d, isWhite };
-    }
-  }
-
+  // ★ 删掉原来第三条 urlMatch 提取，直接返回 null
   return null;
 };
 
@@ -173,7 +163,58 @@ function normalizeDomain(value) {
     .replace(/^\.+/, "");
   if (domain === "localhost" || domain === "localhost.localdomain") return null;
   if (isIP(domain)) return null;
-  return DOMAIN_RE.test(domain) ? domain : null;
+  if (!DOMAIN_RE.test(domain)) return null;
+
+  // ★ 新增预过滤（和 removeDeadRules.js 保持一致）
+  const labels = domain.split(".");
+  if (labels.length > 5) return null;
+  if (domain.length > 80) return null;
+
+  const tld = labels[labels.length - 1];
+  if (tld.length > 24) return null;
+  if (!/^[a-z]+$/.test(tld)) return null;
+
+  const FAKE_TLDS = new Set([
+    "js",
+    "ts",
+    "css",
+    "html",
+    "htm",
+    "json",
+    "xml",
+    "txt",
+    "png",
+    "jpg",
+    "jpeg",
+    "gif",
+    "svg",
+    "webp",
+    "ico",
+    "woff",
+    "woff2",
+    "ttf",
+    "eot",
+    "otf",
+    "map",
+    "mp4",
+    "mp3",
+    "webm",
+    "m3u8",
+    "php",
+    "asp",
+    "aspx",
+    "jsp",
+    "cgi",
+    "do",
+    "action",
+  ]);
+  if (FAKE_TLDS.has(tld)) return null;
+
+  for (const label of labels) {
+    if (label.length > 63) return null;
+  }
+
+  return domain;
 }
 
 function uncomment(raw) {

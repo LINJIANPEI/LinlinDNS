@@ -66,7 +66,67 @@ const normalizeDomain = (value) => {
   if (!d) return null;
   if (d === "localhost" || d === "localhost.localdomain") return null;
   if (isIPv4(d)) return null;
-  return DOMAIN_RE.test(d) ? d : null;
+  if (!DOMAIN_RE.test(d)) return null;
+
+  // ★ 新增预过滤
+  const labels = d.split(".");
+
+  // 1. 域名层级：超过 5 层基本都是假域名
+  if (labels.length > 5) return null;
+
+  // 2. 总长度：超过 80 字符的域名基本不存在
+  if (d.length > 80) return null;
+
+  // 3. TLD 长度：超过 24 字符的 TLD 不存在
+  const tld = labels[labels.length - 1];
+  if (tld.length > 24) return null;
+
+  // 4. TLD 必须是字母，不能是数字
+  if (!/^[a-z]+$/.test(tld)) return null;
+
+  // 5. 过滤掉常见静态文件后缀被误当 TLD 的情况
+  const FAKE_TLDS = new Set([
+    "js",
+    "ts",
+    "css",
+    "html",
+    "htm",
+    "json",
+    "xml",
+    "txt",
+    "png",
+    "jpg",
+    "jpeg",
+    "gif",
+    "svg",
+    "webp",
+    "ico",
+    "woff",
+    "woff2",
+    "ttf",
+    "eot",
+    "otf",
+    "map",
+    "mp4",
+    "mp3",
+    "webm",
+    "m3u8",
+    "php",
+    "asp",
+    "aspx",
+    "jsp",
+    "cgi",
+    "do",
+    "action",
+  ]);
+  if (FAKE_TLDS.has(tld)) return null;
+
+  // 6. 每一层标签长度不能超过 63
+  for (const label of labels) {
+    if (label.length > 63) return null;
+  }
+
+  return d;
 };
 
 const EXTENDED_RULE_MARKERS = [

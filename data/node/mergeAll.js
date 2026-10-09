@@ -26,6 +26,23 @@ const isValidRuleLine = (t) => {
     if (!EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m))) return false;
   }
   if (!t.includes(".") && !t.includes("/")) return false;
+
+  // ★ 新增：纯 URL 路径规则，不带域名的，直接丢
+  if (/^\/(?!\/)/.test(t)) {
+    // 以单个 / 开头（不是 // ），是 URL 路径规则，DNS 用不上
+    // 但 @@/xxx 可能含 domain=，所以带 domain= 的保留
+    if (!t.includes("domain=")) return false;
+  }
+
+  // ★ 新增：以 .js .ts .css 等文件后缀结尾的，大概率不是域名
+  if (
+    /\.(js|ts|css|html?|json|xml|txt|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|otf|map|mp4|mp3|webm|m3u8)(\^|\$|$)/i.test(
+      t,
+    )
+  ) {
+    return false;
+  }
+
   return true;
 };
 
