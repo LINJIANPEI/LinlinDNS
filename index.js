@@ -5,12 +5,12 @@ const { readListFile } = require("./data/node/readListFile");
 const { downloadRules } = require("./data/node/downloadRules");
 const { mergeAll } = require("./data/node/mergeAll");
 const { dedupeFile } = require("./data/node/dedupe");
-const { splitRegexRules } = require("./data/node/splitRegexRules");
+const { prepareDnsRules } = require("./data/node/prepareDnsRules"); // ★ 替代 splitRegexRules
 const { removeDeadRules } = require("./data/node/removeDeadRules");
 const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
 const { title } = require("./data/node/title");
 const { cleanReadme } = require("./data/node/cleanReadme");
-const { splitLargeFilesInDir } = require("./data/node/splitLargeFile"); // ★
+const { splitLargeFilesInDir } = require("./data/node/splitLargeFile");
 
 const tmpDir = "./tmp";
 const outDir = "./";
@@ -32,17 +32,17 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // 1. 全部合并到一个文件
+    // 1. 合并
     await mergeAll(tmpDir, p("all.txt"));
 
     // 2. 去重
     await dedupeFile(p("all.txt"));
 
-    // 3. 按内容分黑白 + 正则
-    const split = await splitRegexRules(p("all.txt"), tmpDir);
+    // 3. ★ DNS 兼容过滤：转成纯域名，分离黑白
+    const dns = await prepareDnsRules(p("all.txt"), tmpDir);
 
-    // 4. 剔除死域名
-    await removeDeadRules([split.restBlackFile, split.restWhiteFile], {
+    // 4. ★ 剔除死域名（只处理纯域名规则，数量大幅减少）
+    await removeDeadRules([dns.blackFile, dns.whiteFile], {
       cleanedFile: p("cleaned.txt"),
       nocleanedFile: p("nocleaned.txt"),
       passthroughFile: p("passthrough.txt"),
@@ -57,8 +57,6 @@ async function main() {
 
     await buildAdGuardHomeLists({
       cleanedFile: p("cleaned.txt"),
-      regexBlackFile: split.regexBlackFile,
-      regexWhiteFile: split.regexWhiteFile,
       outRulesFile: path.join(outDir, "rules.txt"),
       outAllowFile: path.join(outDir, "allow.txt"),
       outNoBlacklistFile: path.join(removeDir, "noblacklist.txt"),
@@ -66,24 +64,22 @@ async function main() {
       outSkippedFile: path.join(removeDir, "skipped.txt"),
     });
 
-    // 6. 复制丢弃文件到 remove 目录
+    // 6. 复制丢弃文件
     await copyFiles(
       [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
       [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],
     );
 
-    // 7. 写入头部信息
+    // 7. 头部
     await title();
 
-    // 8. ★ 分片：rules.txt / allow.txt
+    // 8. 分片
     await splitLargeFilesInDir(outDir, {
       pattern: /^(rules|allow)\.txt$/,
     });
-
-    // 9. ★ 分片：data/remove/ 下所有 txt
     await splitLargeFilesInDir(removeDir);
 
-    // 10. 更新 README
+    // 9. 更新 README
     await cleanReadme();
 
     console.log("更新完成");

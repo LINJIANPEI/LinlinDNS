@@ -3,157 +3,15 @@ const { readLines, LineWriter } = require("./stream_utils");
 
 const DOMAIN_RE =
   /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
-const EXTENDED_RULE_MARKERS = [
-  "##",
-  "#@#",
-  "#$#",
-  "#@$#",
-  "#%#",
-  "#@%#",
-  "#?#",
-  "#@?#",
-];
-
-// ---------- DNS 不兼容修饰符 ----------
-const DNS_UNSUPPORTED_MODIFIERS = [
-  "$xmlhttprequest",
-  "$script",
-  "$image",
-  "$stylesheet",
-  "$subdocument",
-  "$document",
-  "$font",
-  "$media",
-  "$object",
-  "$ping",
-  "$websocket",
-  "$webrtc",
-  "$other",
-  "$popup",
-  "$csp",
-  "$removeparam",
-  "$redirect",
-  "$rewrite",
-  "$cookie",
-  "$header",
-  "$replace",
-  "$elemhide",
-  "$generichide",
-  "$genericblock",
-  "$inline-script",
-  "$inline-font",
-  "$empty",
-  "$mp4",
-  "$app",
-];
-
-const hasUnsupportedModifier = (rule) =>
-  DNS_UNSUPPORTED_MODIFIERS.some((m) => rule.includes(m));
-
-/**
- * 从 URL 正则规则里提取域名，转成域名规则。
- */
-const extractDomainFromRule = (rule) => {
-  const isWhite = rule.startsWith("@@");
-  const body = isWhite ? rule.slice(2) : rule;
-
-  // 1. 从 domain= 提取
-  const domainMatch = body.match(/domain=([a-z0-9.,\-]+)/i);
-  if (domainMatch && domainMatch[1]) {
-    const first = domainMatch[1].split(",")[0].trim();
-    const clean = first.replace(/^~/, "");
-    if (clean && DOMAIN_RE.test(clean)) {
-      return { domain: clean, isWhite };
-    }
-  }
-
-  // 2. 从 ||domain^ 或 |domain^ 提取
-  const pipeMatch = body.match(/^\|{1,2}([a-z0-9.\-]+)\^?/i);
-  if (pipeMatch && pipeMatch[1]) {
-    const d = pipeMatch[1].toLowerCase().replace(/\.+$/, "");
-    if (DOMAIN_RE.test(d)) {
-      return { domain: d, isWhite };
-    }
-  }
-
-  // ★ 删掉原来第三条 urlMatch 提取，直接返回 null
-  return null;
-};
-
-// ---------- IP 工具 ----------
 
 function isIPv4(s) {
   const m = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/.exec(s);
   if (!m) return false;
   return m.slice(1).every((p) => {
     const n = Number(p);
-    return n >= 0 && n <= 255 && String(n) === p.replace(/^0+(?=\d)/, "");
+    return n >= 0 && n <= 255;
   });
 }
-
-function isIPv6(s) {
-  if (!s.includes(":")) return false;
-  try {
-    new URL(`http://[${s}]/`);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-const isIP = (s) => isIPv4(s) || isIPv6(s);
-
-const ipToBigIntV4 = (ip) =>
-  ip.split(".").reduce((acc, p) => (acc << 8n) + BigInt(Number(p)), 0n);
-
-function isBlacklistHostIp(ip) {
-  if (!isIPv4(ip)) return false;
-  if (ip === "0.0.0.0") return true;
-  const n = ipToBigIntV4(ip);
-  return n >= ipToBigIntV4("127.0.0.0") && n <= ipToBigIntV4("127.255.255.255");
-}
-
-function isGlobalV4(ip) {
-  const n = ipToBigIntV4(ip);
-  const inRange = (a, b) => n >= ipToBigIntV4(a) && n <= ipToBigIntV4(b);
-  if (inRange("0.0.0.0", "0.255.255.255")) return false;
-  if (inRange("10.0.0.0", "10.255.255.255")) return false;
-  if (inRange("100.64.0.0", "100.127.255.255")) return false;
-  if (inRange("127.0.0.0", "127.255.255.255")) return false;
-  if (inRange("169.254.0.0", "169.254.255.255")) return false;
-  if (inRange("172.16.0.0", "172.31.255.255")) return false;
-  if (inRange("192.0.0.0", "192.0.0.255")) return false;
-  if (inRange("192.0.2.0", "192.0.2.255")) return false;
-  if (inRange("192.168.0.0", "192.168.255.255")) return false;
-  if (inRange("198.18.0.0", "198.19.255.255")) return false;
-  if (inRange("198.51.100.0", "198.51.100.255")) return false;
-  if (inRange("203.0.113.0", "203.0.113.255")) return false;
-  if (inRange("224.0.0.0", "239.255.255.255")) return false;
-  if (inRange("240.0.0.0", "255.255.255.255")) return false;
-  return true;
-}
-
-function isGlobalV6(ip) {
-  const lower = ip.toLowerCase();
-  if (lower === "::" || lower === "::1") return false;
-  if (lower.startsWith("fc") || lower.startsWith("fd")) return false;
-  if (/^fe[89ab]/.test(lower)) return false;
-  if (lower.startsWith("ff")) return false;
-  if (lower.startsWith("2001:db8")) return false;
-  if (lower.startsWith("::ffff:")) {
-    const v4 = lower.slice("::ffff:".length);
-    return isIPv4(v4) ? isGlobalV4(v4) : false;
-  }
-  return true;
-}
-
-function isGlobalIp(ip) {
-  if (isIPv4(ip)) return isGlobalV4(ip);
-  if (isIPv6(ip)) return isGlobalV6(ip);
-  return false;
-}
-
-// ---------- 单条规则解析 ----------
 
 function normalizeDomain(value) {
   const domain = value
@@ -161,11 +19,11 @@ function normalizeDomain(value) {
     .toLowerCase()
     .replace(/\.+$/, "")
     .replace(/^\.+/, "");
+  if (!domain) return null;
   if (domain === "localhost" || domain === "localhost.localdomain") return null;
-  if (isIP(domain)) return null;
+  if (isIPv4(domain)) return null;
   if (!DOMAIN_RE.test(domain)) return null;
 
-  // ★ 新增预过滤（和 removeDeadRules.js 保持一致）
   const labels = domain.split(".");
   if (labels.length > 5) return null;
   if (domain.length > 80) return null;
@@ -174,121 +32,32 @@ function normalizeDomain(value) {
   if (tld.length > 24) return null;
   if (!/^[a-z]+$/.test(tld)) return null;
 
-  const FAKE_TLDS = new Set([
-    "js",
-    "ts",
-    "css",
-    "html",
-    "htm",
-    "json",
-    "xml",
-    "txt",
-    "png",
-    "jpg",
-    "jpeg",
-    "gif",
-    "svg",
-    "webp",
-    "ico",
-    "woff",
-    "woff2",
-    "ttf",
-    "eot",
-    "otf",
-    "map",
-    "mp4",
-    "mp3",
-    "webm",
-    "m3u8",
-    "php",
-    "asp",
-    "aspx",
-    "jsp",
-    "cgi",
-    "do",
-    "action",
-  ]);
-  if (FAKE_TLDS.has(tld)) return null;
-
   for (const label of labels) {
-    if (label.length > 63) return null;
+    if (label.length > 62) return null;
   }
 
   return domain;
 }
 
-function uncomment(raw) {
-  const line = String(raw).trim();
-  if (!line || line.startsWith("!") || line.startsWith("[")) return "";
-  if (/^#{2,}\s/.test(line)) return "";
-  if (
-    line.startsWith("#") &&
-    !EXTENDED_RULE_MARKERS.some((m) => line.startsWith(m))
-  ) {
-    return "";
-  }
-  return line.split(/\s+[#!]/, 1)[0].trim();
-}
-
 function parseRule(line) {
-  const parts = line.split(/\s+/);
-  if (parts.length === 2) {
-    const hostIp = parts[0];
-    if (isIP(hostIp)) {
-      const domain = normalizeDomain(parts[1]);
-      if (domain) {
-        return {
-          original: line,
-          domain,
-          isWhite: !isBlacklistHostIp(hostIp),
-          formatRank: 1,
-          hostIp,
-          singlePipe: false,
-        };
-      }
-      return null;
-    }
-  }
+  const t = line.trim();
+  if (!t) return null;
+  if (t.startsWith("!") || t.startsWith("#")) return null;
 
-  const isWhite = line.startsWith("@@");
-  const body = isWhite ? line.slice(2) : line;
+  const isWhite = t.startsWith("@@");
+  const body = isWhite ? t.slice(2) : t;
 
-  // ★ 同时支持 || 和 |
+  let domain;
   if (body.startsWith("||") || body.startsWith("|")) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
-    const domain = normalizeDomain(rest.split("^", 1)[0]);
-    return domain
-      ? {
-          original: line,
-          domain,
-          isWhite,
-          formatRank: 2,
-          hostIp: null,
-          singlePipe: !isDouble,
-        }
-      : null;
+    domain = normalizeDomain(rest.split("^")[0].split("/")[0]);
+  } else {
+    domain = normalizeDomain(t.replace(/\^+$/, ""));
   }
 
-  const domain = normalizeDomain(line.replace(/\^+$/, ""));
-  // ★ 原来写死 false，改成 isWhite
-  return domain
-    ? {
-        original: line,
-        domain,
-        isWhite,
-        formatRank: 0,
-        hostIp: null,
-        singlePipe: false,
-      }
-    : null;
-}
-
-function isValidFinalHost(rule) {
-  if (rule.hostIp === null) return true;
-  if (isBlacklistHostIp(rule.hostIp)) return true;
-  return isGlobalIp(rule.hostIp);
+  return domain ? { domain, isWhite } : null;
 }
 
 function removeRedundantSubdomains(domains) {
@@ -321,13 +90,9 @@ function removeRedundantSubdomains(domains) {
   return [...kept, ...wildcards].sort();
 }
 
-// ---------- 主函数（流式版） ----------
-
 const buildAdGuardHomeLists = async (options) => {
   const {
     cleanedFile,
-    regexBlackFile,
-    regexWhiteFile,
     outRulesFile,
     outAllowFile,
     outNoBlacklistFile,
@@ -341,7 +106,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   console.log("开始构建 AdGuard Home 列表");
 
-  // ---------- 准备 writer ----------
   const noblacklistWriter = outNoBlacklistFile
     ? new LineWriter(outNoBlacklistFile)
     : null;
@@ -350,225 +114,91 @@ const buildAdGuardHomeLists = async (options) => {
     : null;
   const skippedWriter = outSkippedFile ? new LineWriter(outSkippedFile) : null;
 
-  // ---------- 收集过程 ----------
   const blackSet = new Set();
   const whiteSet = new Set();
-  const noblacklistSet = new Set();
-  const nowhitelistSet = new Set();
-
-  // ★ 记录单 | 规则，输出时保留语义
-  const singlePipeBlack = new Set();
-  const singlePipeWhite = new Set();
-
-  // ★ 修复：补上 let 声明
   let skippedCount = 0;
-  let noblacklistCount = 0;
-  let nowhitelistCount = 0;
-
-  // 用于跳过 cleanedFile 中重复出现的行
   const seenLines = new Set();
 
-  // ---------- 流式读 cleanedFile ----------
   await readLines(cleanedFile, async (raw) => {
-    // 1. 去注释；空行/注释进 skipped
-    const line = uncomment(raw);
+    const line = raw.trim();
     if (!line) {
       if (skippedWriter) await skippedWriter.write(raw);
       skippedCount++;
       return;
     }
-
-    // 2. 行级去重
     if (seenLines.has(line)) return;
     seenLines.add(line);
 
-    // 3. 解析
     const rule = parseRule(line);
     if (!rule) {
-      // 未识别的按 @@ 前缀归档
-      if (line.startsWith("@@")) {
-        if (!nowhitelistSet.has(line)) {
-          nowhitelistSet.add(line);
-          nowhitelistCount = nowhitelistSet.size;
-        }
-      } else {
-        if (!noblacklistSet.has(line)) {
-          noblacklistSet.add(line);
-          noblacklistCount = noblacklistSet.size;
-        }
-      }
+      if (skippedWriter) await skippedWriter.write(raw);
+      skippedCount++;
       return;
     }
 
-    // 4. hostIp 合法性清洗
-    if (!isValidFinalHost(rule)) {
-      const target = rule.isWhite ? nowhitelistSet : noblacklistSet;
-      if (!target.has(rule.original)) {
-        target.add(rule.original);
-        if (rule.isWhite) nowhitelistCount = nowhitelistSet.size;
-        else noblacklistCount = noblacklistSet.size;
-      }
-      return;
-    }
-
-    // 5. 收集到 Set
-    if (rule.isWhite) {
-      whiteSet.add(rule.domain);
-      if (rule.singlePipe) singlePipeWhite.add(rule.domain);
-    } else {
-      blackSet.add(rule.domain);
-      if (rule.singlePipe) singlePipeBlack.add(rule.domain);
-    }
+    if (rule.isWhite) whiteSet.add(rule.domain);
+    else blackSet.add(rule.domain);
   });
 
-  // 释放 lineSet（不再需要）
   seenLines.clear();
 
   console.log(
-    `clean 阶段解析完成：黑域名候选 ${blackSet.size}，白域名候选 ${whiteSet.size}`,
+    `解析完成：黑域名候选 ${blackSet.size}，白域名候选 ${whiteSet.size}`,
   );
 
-  // ---------- 白名单覆盖黑名单 ----------
+  const noblacklistSet = new Set();
+  const nowhitelistSet = new Set();
+
+  // 白名单覆盖黑名单
   for (const w of whiteSet) {
     if (blackSet.has(w)) {
       blackSet.delete(w);
-      const entry = `||${w}^`;
-      if (!noblacklistSet.has(entry)) {
-        noblacklistSet.add(entry);
-      }
+      noblacklistSet.add(`||${w}^`);
     }
   }
 
-  // ---------- 父域去冗余 ----------
+  // 父子域名收敛
   const blackDomains = removeRedundantSubdomains(blackSet);
   const whiteDomains = removeRedundantSubdomains(whiteSet);
 
   const blackKept = new Set(blackDomains);
   for (const d of blackSet) {
-    if (!blackKept.has(d)) {
-      const entry = `||${d}^`;
-      if (!noblacklistSet.has(entry)) noblacklistSet.add(entry);
-    }
+    if (!blackKept.has(d)) noblacklistSet.add(`||${d}^`);
   }
 
   const whiteKept = new Set(whiteDomains);
   for (const d of whiteSet) {
-    if (!whiteKept.has(d)) {
-      const entry = `@@||${d}^$important`;
-      if (!nowhitelistSet.has(entry)) nowhitelistSet.add(entry);
-    }
+    if (!whiteKept.has(d)) nowhitelistSet.add(`@@||${d}^$important`);
   }
 
-  // 释放大 Set（后面只写文件了）
   blackSet.clear();
   whiteSet.clear();
 
-  // ---------- 写 noblacklist / nowhitelist ----------
   if (noblacklistWriter) {
-    const sorted = [...noblacklistSet].sort();
-    for (const line of sorted) await noblacklistWriter.write(line);
+    for (const line of [...noblacklistSet].sort()) {
+      await noblacklistWriter.write(line);
+    }
     await noblacklistWriter.close();
   }
 
   if (nowhitelistWriter) {
-    const sorted = [...nowhitelistSet].sort();
-    for (const line of sorted) await nowhitelistWriter.write(line);
+    for (const line of [...nowhitelistSet].sort()) {
+      await nowhitelistWriter.write(line);
+    }
     await nowhitelistWriter.close();
   }
 
   if (skippedWriter) await skippedWriter.close();
 
-  // ---------- 写最终 rules.txt ----------
   const rulesWriter = new LineWriter(outRulesFile);
   for (const d of blackDomains) {
-    // ★ 单 | 保留原语义
-    const prefix = singlePipeBlack.has(d) ? "|" : "||";
-    await rulesWriter.write(`${prefix}${d}^`);
-  }
-
-  let regexBlackCount = 0;
-  let convertedBlackCount = 0;
-  let droppedBlackCount = 0;
-
-  if (regexBlackFile) {
-    await readLines(regexBlackFile, async (line) => {
-      const t = line.trim();
-      if (!t) return;
-
-      // ★ 带 DNS 不支持修饰符的规则，尝试转换
-      if (hasUnsupportedModifier(t)) {
-        const extracted = extractDomainFromRule(t);
-        if (extracted && !extracted.isWhite) {
-          await rulesWriter.write(`||${extracted.domain}^`);
-          convertedBlackCount++;
-        } else {
-          droppedBlackCount++;
-        }
-        return;
-      }
-
-      // ★ 纯 URL 正则（无修饰符但 AdGuard Home 也不认），尝试提取域名
-      if (/^(@@)?\//.test(t)) {
-        const extracted = extractDomainFromRule(t);
-        if (extracted && !extracted.isWhite) {
-          await rulesWriter.write(`||${extracted.domain}^`);
-          convertedBlackCount++;
-        } else {
-          droppedBlackCount++;
-        }
-        return;
-      }
-
-      await rulesWriter.write(t);
-      regexBlackCount++;
-    });
+    await rulesWriter.write(`||${d}^`);
   }
   await rulesWriter.close();
 
-  // ---------- 写最终 allow.txt ----------
   const allowWriter = new LineWriter(outAllowFile);
   for (const d of whiteDomains) {
-    // ★ 单 | 保留原语义
-    const prefix = singlePipeWhite.has(d) ? "|" : "||";
-    await allowWriter.write(`@@${prefix}${d}^$important`);
-  }
-
-  let regexWhiteCount = 0;
-  let convertedWhiteCount = 0;
-  let droppedWhiteCount = 0;
-
-  if (regexWhiteFile) {
-    await readLines(regexWhiteFile, async (line) => {
-      const t = line.trim();
-      if (!t) return;
-
-      // ★ 带 DNS 不支持修饰符的规则，尝试转换
-      if (hasUnsupportedModifier(t)) {
-        const extracted = extractDomainFromRule(t);
-        if (extracted && extracted.isWhite) {
-          await allowWriter.write(`@@||${extracted.domain}^$important`);
-          convertedWhiteCount++;
-        } else {
-          droppedWhiteCount++;
-        }
-        return;
-      }
-
-      // ★ 纯 URL 正则，尝试提取域名
-      if (/^(@@)?\//.test(t)) {
-        const extracted = extractDomainFromRule(t);
-        if (extracted && extracted.isWhite) {
-          await allowWriter.write(`@@||${extracted.domain}^$important`);
-          convertedWhiteCount++;
-        } else {
-          droppedWhiteCount++;
-        }
-        return;
-      }
-
-      await allowWriter.write(t);
-      regexWhiteCount++;
-    });
+    await allowWriter.write(`@@||${d}^$important`);
   }
   await allowWriter.close();
 
@@ -578,12 +208,6 @@ const buildAdGuardHomeLists = async (options) => {
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
     skippedCount,
-    regexBlackCount,
-    regexWhiteCount,
-    convertedBlackCount,
-    convertedWhiteCount,
-    droppedBlackCount,
-    droppedWhiteCount,
   };
 
   console.log(
@@ -591,13 +215,7 @@ const buildAdGuardHomeLists = async (options) => {
       `白名单 ${stats.whitelistCount} 条，` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
-      `skipped ${stats.skippedCount} 条，` +
-      `正则黑 ${stats.regexBlackCount} 条，` +
-      `正则白 ${stats.regexWhiteCount} 条，` +
-      `转换黑 ${stats.convertedBlackCount} 条，` +
-      `转换白 ${stats.convertedWhiteCount} 条，` +
-      `丢弃黑 ${stats.droppedBlackCount} 条，` +
-      `丢弃白 ${stats.droppedWhiteCount} 条`,
+      `skipped ${stats.skippedCount} 条`,
   );
 
   return stats;
