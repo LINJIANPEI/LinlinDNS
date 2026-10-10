@@ -4,6 +4,7 @@ const { readLines, LineWriter } = require("./stream_utils");
 const DOMAIN_RE =
   /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
 
+// DNS 层不支持的修饰符
 const DNS_UNSUPPORTED_MODIFIERS = [
   "$xmlhttprequest",
   "$script",
@@ -41,6 +42,9 @@ const DNS_UNSUPPORTED_MODIFIERS = [
 const hasUnsupportedModifier = (rule) =>
   DNS_UNSUPPORTED_MODIFIERS.some((m) => rule.includes(m));
 
+/**
+ * 从规则里提取域名。无法转换的返回 null。
+ */
 const extractDomain = (line) => {
   const isWhite = line.startsWith("@@");
   const body = isWhite ? line.slice(2) : line;
@@ -59,7 +63,7 @@ const extractDomain = (line) => {
     }
   }
 
-  // 白名单带不支持的修饰符：丢（除非有 $important）
+  // 白名单带 DNS 不支持的修饰符：丢（除非含 $important）
   if (isWhite && hasUnsupportedModifier(line)) {
     if (!line.includes("$important")) return null;
   }
@@ -81,7 +85,7 @@ const extractDomain = (line) => {
     }
   }
 
-  // 纯域名
+  // 纯域名（不带 || 和 @@）
   if (!body.includes("/") && !body.includes("$")) {
     const d = body.toLowerCase().replace(/\.+$/, "");
     if (DOMAIN_RE.test(d)) {

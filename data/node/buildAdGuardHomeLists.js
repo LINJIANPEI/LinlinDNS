@@ -60,6 +60,26 @@ function parseRule(line) {
   return domain ? { domain, isWhite } : null;
 }
 
+// ★ 修饰符判断
+const isImportant = (original) => /\$important\b/.test(original);
+const hasDnsRewrite = (original) => /\$dnsrewrite\b/.test(original);
+
+/**
+ * 判断白名单能否覆盖黑名单。
+ *
+ * AdGuard Home 优先级（从高到低）：
+ *   1. @@...$important   白名单 important
+ *   2. ...$important     黑名单 important
+ *   3. @@...             普通白名单
+ *   4. ...               普通黑名单
+ */
+function canCover(wOriginal, bOriginal) {
+  if (isImportant(wOriginal)) return true;
+  if (isImportant(bOriginal)) return false;
+  if (hasDnsRewrite(bOriginal)) return false;
+  return true;
+}
+
 function removeRedundantSubdomains(domains) {
   const set = domains instanceof Set ? domains : new Set(domains);
   const ordinary = new Set();
@@ -140,7 +160,13 @@ const buildAdGuardHomeLists = async (options) => {
 
     const map = rule.isWhite ? whiteMap : blackMap;
     if (!map.has(rule.domain)) {
-      map.set(rule.domain, line); // ★ 保留原始行
+      map.set(rule.domain, line);
+    } else {
+      // ★ 同域名优先保留带 $important 的行
+      const existing = map.get(rule.domain);
+      if (isImportant(line) && !isImportant(existing)) {
+        map.set(rule.domain, line);
+      }
     }
   });
 
@@ -153,11 +179,29 @@ const buildAdGuardHomeLists = async (options) => {
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
 
-  // 白名单覆盖黑名单（精确匹配）
+  // ★ 白名单覆盖黑名单（精确匹配 + 父域覆盖子域，考虑修饰符）
   for (const w of whiteMap.keys()) {
+    const wOriginal = whiteMap.get(w);
+
+    // 1. 精确匹配
     if (blackMap.has(w)) {
-      noblacklistSet.add(blackMap.get(w));
-      blackMap.delete(w);
+      const bOriginal = blackMap.get(w);
+      if (canCover(wOriginal, bOriginal)) {
+        noblacklistSet.add(bOriginal);
+        blackMap.delete(w);
+      }
+    }
+
+    // 2. 父域覆盖子域
+    const suffix = `.${w}`;
+    for (const b of [...blackMap.keys()]) {
+      if (b.endsWith(suffix)) {
+        const bOriginal = blackMap.get(b);
+        if (canCover(wOriginal, bOriginal)) {
+          noblacklistSet.add(bOriginal);
+          blackMap.delete(b);
+        }
+      }
     }
   }
 

@@ -148,6 +148,7 @@ const parseRule = (line) => {
   if (t.startsWith("#") && !EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m)))
     return null;
 
+  // IP 域名格式
   const c0 = t.charCodeAt(0);
   if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
     const parts = t.split(/\s+/);
@@ -166,11 +167,11 @@ const parseRule = (line) => {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
+  // ★ 同时支持 || 和 |，切 ^ / $
   if (body.startsWith("||") || body.startsWith("|")) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
-    // ★ 依次切 ^、/、$
     const d = rest
       .split("^")[0]
       .split("/")[0]
@@ -181,7 +182,7 @@ const parseRule = (line) => {
     return domain ? { domain, isWhite } : null;
   }
 
-  // ★ 兜底也切 $
+  // ★ 兜底也切 $ 和 /
   const domain = normalizeDomain(
     t.replace(/\^+$/, "").split("$")[0].split("/")[0],
   );
