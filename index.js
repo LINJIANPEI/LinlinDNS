@@ -55,6 +55,7 @@ async function main() {
       outNoBlacklistFile: path.join(removeDir, "noblacklist.txt"),
       outNoWhitelistFile: path.join(removeDir, "nowhitelist.txt"),
       outSkippedFile: path.join(removeDir, "skipped.txt"),
+      outRedundantFile: path.join(removeDir, "redundant.txt"), // ★ 新增
     });
 
     await copyFiles(
