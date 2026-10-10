@@ -51,7 +51,6 @@ function normalizeDomain(value) {
   return domain;
 }
 
-// 取修饰符名列表
 const getModifiers = (line) => {
   const idx = line.indexOf("$");
   if (idx === -1) return [];
@@ -66,11 +65,11 @@ const hasUnsupportedModifier = (line) =>
   getModifiers(line).some((m) => !DNS_SUPPORTED_MODIFIERS.has(m));
 
 /**
- * 解析一行规则 → { domain, isWhite, original }
- * 支持：
- *   ||domain^、|domain^、@@||domain^
- *   hosts: 0.0.0.0 domain / 127.0.0.1 domain
- *   纯域名
+ * 解析一行规则。
+ *
+ * 返回 { domain, isWhite, original, coverSub }
+ *   coverSub = true  → 覆盖子域（||、@@||）
+ *   coverSub = false → 只精确匹配（|、@@|、hosts、纯域名）
  */
 function parseRule(line) {
   const t = line.trim();
@@ -81,31 +80,37 @@ function parseRule(line) {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  // ||domain^ 或 |domain^
-  if (body.startsWith("||") || body.startsWith("|")) {
-    const isDouble = body.startsWith("||");
-    let rest = body.slice(isDouble ? 2 : 1);
-    rest = rest.replace(/^\^/, "");
+  // ||domain^ → 覆盖子域
+  if (body.startsWith("||")) {
+    const rest = body.slice(2).replace(/^\^/, "");
     const d = rest.split("^")[0].split("/")[0].split("$")[0];
     const domain = normalizeDomain(d);
-    return domain ? { domain, isWhite, original: t } : null;
+    return domain ? { domain, isWhite, original: t, coverSub: true } : null;
   }
 
-  // hosts 格式
+  // |domain^ → 只精确匹配
+  if (body.startsWith("|")) {
+    const rest = body.slice(1).replace(/^\^/, "");
+    const d = rest.split("^")[0].split("/")[0].split("$")[0];
+    const domain = normalizeDomain(d);
+    return domain ? { domain, isWhite, original: t, coverSub: false } : null;
+  }
+
+  // hosts 格式 → 只精确匹配
   const parts = t.split(/\s+/);
   if (parts.length === 2 && isIPv4(parts[0])) {
     const domain = normalizeDomain(parts[1]);
     if (!domain) return null;
     const isBlacklistIp =
       parts[0] === "0.0.0.0" || parts[0].startsWith("127.");
-    return { domain, isWhite: !isBlacklistIp, original: t };
+    return { domain, isWhite: !isBlacklistIp, original: t, coverSub: false };
   }
 
-  // 纯域名
+  // 纯域名 → 只精确匹配
   const domain = normalizeDomain(
     t.replace(/\^+$/, "").split("$")[0].split("/")[0],
   );
-  return domain ? { domain, isWhite, original: t } : null;
+  return domain ? { domain, isWhite, original: t, coverSub: false } : null;
 }
 
 // ★ 修饰符判断
@@ -113,18 +118,24 @@ const isImportant = (line) => /\$important\b/.test(line);
 const hasDnsRewrite = (line) => /\$dnsrewrite\b/.test(line);
 
 /**
- * 判断白名单能否覆盖黑名单。
+ * 判断白名单规则 wRule 能否覆盖黑名单规则 bRule。
  *
  * AdGuard Home 优先级（从高到低）：
  *   1. @@...$important   白名单 important
  *   2. ...$important     黑名单 important
  *   3. @@...             普通白名单
  *   4. ...               普通黑名单
+ *
+ * 覆盖范围：
+ *   白的范围必须 ≥ 黑的范围
+ *   - 白 coverSub=true  → 可覆盖任意黑
+ *   - 白 coverSub=false → 只能覆盖 bRule.coverSub=false 的黑
  */
-function canCover(wOriginal, bOriginal) {
-  if (isImportant(wOriginal)) return true;
-  if (isImportant(bOriginal)) return false;
-  if (hasDnsRewrite(bOriginal)) return false;
+function canCover(wRule, bRule) {
+  if (isImportant(wRule.original)) return true;
+  if (isImportant(bRule.original)) return false;
+  if (hasDnsRewrite(bRule.original)) return false;
+  if (!wRule.coverSub && bRule.coverSub) return false;
   return true;
 }
 
@@ -166,6 +177,7 @@ const buildAdGuardHomeLists = async (options) => {
     outNoBlacklistFile,
     outNoWhitelistFile,
     outSkippedFile,
+    outRedundantFile, // ★ 新增
   } = options;
 
   if (!cleanedFile) throw new TypeError("cleanedFile 必填");
@@ -181,13 +193,19 @@ const buildAdGuardHomeLists = async (options) => {
     ? new LineWriter(outNoWhitelistFile)
     : null;
   const skippedWriter = outSkippedFile ? new LineWriter(outSkippedFile) : null;
+  const redundantWriter = outRedundantFile
+    ? new LineWriter(outRedundantFile)
+    : null; // ★ 新增
 
-  // ★ Map：domain → 原始行
+  // ★ Map：domain → rule { original, coverSub, isWhite }
   const blackMap = new Map();
   const whiteMap = new Map();
 
   let skippedCount = 0;
   const seenLines = new Set();
+
+  // ★ 被同域名优先级挤掉的规则
+  const redundantSet = new Set();
 
   await readLines(cleanedFile, async (raw) => {
     const line = raw.trim();
@@ -207,13 +225,25 @@ const buildAdGuardHomeLists = async (options) => {
     }
 
     const map = rule.isWhite ? whiteMap : blackMap;
-    if (!map.has(rule.domain)) {
-      map.set(rule.domain, rule.original);
+    const existing = map.get(rule.domain);
+
+    if (existing === undefined) {
+      map.set(rule.domain, rule);
     } else {
-      // ★ 同域名优先保留带 $important 的行
-      const existing = map.get(rule.domain);
-      if (isImportant(line) && !isImportant(existing)) {
-        map.set(rule.domain, rule.original);
+      const curImp = isImportant(rule.original);
+      const exImp = isImportant(existing.original);
+
+      if (curImp && !exImp) {
+        // 新 important 覆盖旧普通 → 旧进 redundant
+        redundantSet.add(existing.original);
+        map.set(rule.domain, rule);
+      } else if (curImp === exImp && rule.coverSub && !existing.coverSub) {
+        // 新范围更大 → 旧进 redundant
+        redundantSet.add(existing.original);
+        map.set(rule.domain, rule);
+      } else {
+        // 新被挤掉 → 新进 redundant
+        redundantSet.add(rule.original);
       }
     }
   });
@@ -227,27 +257,27 @@ const buildAdGuardHomeLists = async (options) => {
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
 
-  // ★ 白名单覆盖黑名单（精确匹配 + 父域覆盖子域，考虑修饰符）
-  for (const w of whiteMap.keys()) {
-    const wOriginal = whiteMap.get(w);
-
+  // ★ 白名单覆盖黑名单
+  for (const [wDomain, wRule] of whiteMap) {
     // 1. 精确匹配
-    if (blackMap.has(w)) {
-      const bOriginal = blackMap.get(w);
-      if (canCover(wOriginal, bOriginal)) {
-        noblacklistSet.add(bOriginal);
-        blackMap.delete(w);
+    if (blackMap.has(wDomain)) {
+      const bRule = blackMap.get(wDomain);
+      if (canCover(wRule, bRule)) {
+        noblacklistSet.add(bRule.original);
+        blackMap.delete(wDomain);
       }
     }
 
-    // 2. 父域覆盖子域
-    const suffix = `.${w}`;
-    for (const b of [...blackMap.keys()]) {
-      if (b.endsWith(suffix)) {
-        const bOriginal = blackMap.get(b);
-        if (canCover(wOriginal, bOriginal)) {
-          noblacklistSet.add(bOriginal);
-          blackMap.delete(b);
+    // 2. 父域覆盖子域：只有 coverSub=true 的白才能覆盖子域
+    if (wRule.coverSub) {
+      const suffix = `.${wDomain}`;
+      for (const bDomain of [...blackMap.keys()]) {
+        if (bDomain.endsWith(suffix)) {
+          const bRule = blackMap.get(bDomain);
+          if (canCover(wRule, bRule)) {
+            noblacklistSet.add(bRule.original);
+            blackMap.delete(bDomain);
+          }
         }
       }
     }
@@ -256,9 +286,9 @@ const buildAdGuardHomeLists = async (options) => {
   // ★ 拆黑名单为普通和 important
   const normalBlack = new Map();
   const importantBlack = new Map();
-  for (const [d, original] of blackMap) {
-    if (isImportant(original)) importantBlack.set(d, original);
-    else normalBlack.set(d, original);
+  for (const [d, rule] of blackMap) {
+    if (isImportant(rule.original)) importantBlack.set(d, rule);
+    else normalBlack.set(d, rule);
   }
 
   // ★ 只对普通黑名单做父子收敛
@@ -266,11 +296,10 @@ const buildAdGuardHomeLists = async (options) => {
     new Set(normalBlack.keys()),
   );
   const normalBlackKept = new Set(normalBlackDomains);
-  for (const [d, original] of normalBlack) {
-    if (!normalBlackKept.has(d)) noblacklistSet.add(original);
+  for (const [d, rule] of normalBlack) {
+    if (!normalBlackKept.has(d)) noblacklistSet.add(rule.original);
   }
 
-  // ★ important 黑名单全部保留，不参与收敛
   const importantBlackDomains = [...importantBlack.keys()];
 
   const blackDomains = [
@@ -280,17 +309,17 @@ const buildAdGuardHomeLists = async (options) => {
   // ★ 白名单同理
   const normalWhite = new Map();
   const importantWhite = new Map();
-  for (const [d, original] of whiteMap) {
-    if (isImportant(original)) importantWhite.set(d, original);
-    else normalWhite.set(d, original);
+  for (const [d, rule] of whiteMap) {
+    if (isImportant(rule.original)) importantWhite.set(d, rule);
+    else normalWhite.set(d, rule);
   }
 
   const normalWhiteDomains = removeRedundantSubdomains(
     new Set(normalWhite.keys()),
   );
   const normalWhiteKept = new Set(normalWhiteDomains);
-  for (const [d, original] of normalWhite) {
-    if (!normalWhiteKept.has(d)) nowhitelistSet.add(original);
+  for (const [d, rule] of normalWhite) {
+    if (!normalWhiteKept.has(d)) nowhitelistSet.add(rule.original);
   }
 
   const importantWhiteDomains = [...importantWhite.keys()];
@@ -299,11 +328,17 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
   ].sort();
 
-  // ★ 从原始 Map 拿原始行
-  const getBlackOriginal = (d) =>
-    blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
-  const getWhiteOriginal = (d) =>
-    whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
+  // ★ 从 Map 拿原始行
+  const getBlackOriginal = (d) => {
+    const rule =
+      blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
+    return rule ? rule.original : null;
+  };
+  const getWhiteOriginal = (d) => {
+    const rule =
+      whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
+    return rule ? rule.original : null;
+  };
 
   if (noblacklistWriter) {
     for (const line of [...noblacklistSet].sort()) {
@@ -320,6 +355,15 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   if (skippedWriter) await skippedWriter.close();
+
+  // ★ 写 redundant.txt
+  if (redundantWriter) {
+    for (const line of [...redundantSet].sort()) {
+      await redundantWriter.write(line);
+    }
+    await redundantWriter.close();
+  }
+  const redundantCount = redundantSet.size;
 
   // ★ 输出原始行
   const rulesWriter = new LineWriter(outRulesFile);
@@ -342,6 +386,7 @@ const buildAdGuardHomeLists = async (options) => {
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
     skippedCount,
+    redundantCount, // ★ 新增
   };
 
   console.log(
@@ -349,7 +394,8 @@ const buildAdGuardHomeLists = async (options) => {
       `白名单 ${stats.whitelistCount} 条，` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
-      `skipped ${stats.skippedCount} 条`,
+      `skipped ${stats.skippedCount} 条，` +
+      `redundant ${stats.redundantCount} 条`,
   );
 
   return stats;
