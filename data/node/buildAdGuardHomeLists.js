@@ -52,9 +52,9 @@ function parseRule(line) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
-    domain = normalizeDomain(rest.split("^")[0].split("/")[0]);
+    domain = normalizeDomain(rest.split("^")[0].split("/")[0].split("$")[0]);
   } else {
-    domain = normalizeDomain(t.replace(/\^+$/, ""));
+    domain = normalizeDomain(t.replace(/\^+$/, "").split("$")[0].split("/")[0]);
   }
 
   return domain ? { domain, isWhite } : null;
@@ -114,8 +114,10 @@ const buildAdGuardHomeLists = async (options) => {
     : null;
   const skippedWriter = outSkippedFile ? new LineWriter(outSkippedFile) : null;
 
-  const blackSet = new Set();
-  const whiteSet = new Set();
+  // ★ Map：domain → original
+  const blackMap = new Map();
+  const whiteMap = new Map();
+
   let skippedCount = 0;
   const seenLines = new Set();
 
@@ -136,43 +138,44 @@ const buildAdGuardHomeLists = async (options) => {
       return;
     }
 
-    if (rule.isWhite) whiteSet.add(rule.domain);
-    else blackSet.add(rule.domain);
+    const map = rule.isWhite ? whiteMap : blackMap;
+    if (!map.has(rule.domain)) {
+      map.set(rule.domain, line); // ★ 保留原始行
+    }
   });
 
   seenLines.clear();
 
   console.log(
-    `解析完成：黑域名候选 ${blackSet.size}，白域名候选 ${whiteSet.size}`,
+    `解析完成：黑域名候选 ${blackMap.size}，白域名候选 ${whiteMap.size}`,
   );
 
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
 
-  // 白名单覆盖黑名单
-  for (const w of whiteSet) {
-    if (blackSet.has(w)) {
-      blackSet.delete(w);
-      noblacklistSet.add(`||${w}^`);
+  // 白名单覆盖黑名单（精确匹配）
+  for (const w of whiteMap.keys()) {
+    if (blackMap.has(w)) {
+      noblacklistSet.add(blackMap.get(w));
+      blackMap.delete(w);
     }
   }
 
-  // 父子域名收敛
-  const blackDomains = removeRedundantSubdomains(blackSet);
-  const whiteDomains = removeRedundantSubdomains(whiteSet);
+  // 父子域名收敛（按域名）
+  const blackDomains = removeRedundantSubdomains(new Set(blackMap.keys()));
+  const whiteDomains = removeRedundantSubdomains(new Set(whiteMap.keys()));
 
   const blackKept = new Set(blackDomains);
-  for (const d of blackSet) {
-    if (!blackKept.has(d)) noblacklistSet.add(`||${d}^`);
+  for (const [d, original] of blackMap) {
+    if (!blackKept.has(d)) noblacklistSet.add(original);
   }
 
   const whiteKept = new Set(whiteDomains);
-  for (const d of whiteSet) {
-    if (!whiteKept.has(d)) nowhitelistSet.add(`@@||${d}^$important`);
+  for (const [d, original] of whiteMap) {
+    if (!whiteKept.has(d)) nowhitelistSet.add(original);
   }
 
-  blackSet.clear();
-  whiteSet.clear();
+  // ★ 不要 clear blackMap / whiteMap，后面输出要用
 
   if (noblacklistWriter) {
     for (const line of [...noblacklistSet].sort()) {
@@ -190,15 +193,16 @@ const buildAdGuardHomeLists = async (options) => {
 
   if (skippedWriter) await skippedWriter.close();
 
+  // ★ 输出原始行
   const rulesWriter = new LineWriter(outRulesFile);
   for (const d of blackDomains) {
-    await rulesWriter.write(`||${d}^`);
+    await rulesWriter.write(blackMap.get(d));
   }
   await rulesWriter.close();
 
   const allowWriter = new LineWriter(outAllowFile);
   for (const d of whiteDomains) {
-    await allowWriter.write(`@@||${d}^$important`);
+    await allowWriter.write(whiteMap.get(d));
   }
   await allowWriter.close();
 

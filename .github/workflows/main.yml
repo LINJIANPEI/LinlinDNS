@@ -27,8 +27,9 @@ jobs:
           git config user.name "Linlin"
           git config user.email "1732509260@qq.com"
 
+      # ★ 改成 restore，只恢复不自动保存
       - name: 恢复 DNS 缓存
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: |
             dns-cache.json
@@ -64,27 +65,34 @@ jobs:
           cat data/configs/smartdns.conf
           exit 1
 
+      # ★ 加 id，供后续步骤判断成功/失败
+      # ★ index → index.js
       - name: 运行
+        id: run_rules
         run: |
           npm install
-          node --max-old-space-size=4096 index
+          node --max-old-space-size=4096 index.js
 
+      # ★ 只在 node 成功时执行
       - name: 修复缓存目录权限
-        if: always()
+        if: steps.run_rules.outcome == 'success'
         run: |
           sudo chown -R $USER:$USER smartdns-cache || true
           sudo chown -R $USER:$USER dns-cache.json || true
 
+      # ★ 只在 node 成功时保存，失败时保留旧缓存
       - name: 保存 DNS 缓存
         uses: actions/cache/save@v4
-        if: always()
+        if: steps.run_rules.outcome == 'success'
         with:
           path: |
             dns-cache.json
             smartdns-cache
           key: dns-cache-${{ github.run_id }}
 
+      # ★ 只在 node 成功时提交
       - name: 更新文件
+        if: steps.run_rules.outcome == 'success'
         run: |
           git add rules.txt allow.txt README.md
           git add data/remove/ 2>/dev/null || true
@@ -108,7 +116,9 @@ jobs:
           echo "push 连续失败"
           exit 1
 
+      # ★ 无论成功失败都清理运行记录
       - name: 删除 workflow 运行记录
+        if: always()
         uses: Mattraks/delete-workflow-runs@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

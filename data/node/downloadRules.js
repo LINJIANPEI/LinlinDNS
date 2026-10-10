@@ -12,6 +12,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
  * 下载单个文件，失败自动重试。
+ * 返回 true 表示成功，false 表示失败。
  */
 const downloadFile = async (url, filePath, retries = 2) => {
   for (let attempt = 0; attempt <= retries; attempt++) {
@@ -30,9 +31,17 @@ const downloadFile = async (url, filePath, retries = 2) => {
       const buffer = Buffer.from(response.data);
       const decoded = iconv.decode(buffer, "utf8");
 
+      // ★ 内容校验：太小或像 HTML，判定为失败
+      if (decoded.length < 100) {
+        throw new Error(`内容过短（${decoded.length} 字节）`);
+      }
+      if (/^\s*<(!DOCTYPE|html)/i.test(decoded)) {
+        throw new Error("返回的是 HTML 页面，不是规则文件");
+      }
+
       await writeFile(filePath, decoded);
 
-      console.log(`[成功] ${url}`);
+      console.log(`[成功] ${url}（${decoded.length} 字节）`);
       return true;
     } catch (error) {
       console.error(`[失败] ${url} - ${error.message}`);
@@ -74,6 +83,8 @@ const runWithConcurrency = async (tasks, limit) => {
 
 /**
  * 规则下载。
+ * - 全部失败 → 抛错
+ * - 部分失败 → 警告，继续
  */
 const downloadRules = async (rules, allow, directory) => {
   console.log(
@@ -93,13 +104,23 @@ const downloadRules = async (rules, allow, directory) => {
 
   const results = await runWithConcurrency(tasks, 5);
 
+  const total = results.length;
   const failed = results.filter((ok) => !ok).length;
+  const success = total - failed;
 
-  if (failed > 0) {
-    throw new Error(`规则下载完成，但有 ${failed} 个文件下载失败`);
+  // 全部失败 → 报错（避免生成空规则）
+  if (success === 0) {
+    throw new Error(`所有规则源下载失败（${total} 个）`);
   }
 
-  console.log("规则下载完成");
+  // 部分失败 → 警告，继续
+  if (failed > 0) {
+    console.warn(
+      `⚠️ 有 ${failed}/${total} 个规则源下载失败，继续使用成功的 ${success} 个`,
+    );
+  } else {
+    console.log(`规则下载完成：${success}/${total}`);
+  }
 };
 
 module.exports = {

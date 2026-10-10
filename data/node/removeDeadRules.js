@@ -148,7 +148,6 @@ const parseRule = (line) => {
   if (t.startsWith("#") && !EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m)))
     return null;
 
-  // 只在首字符是数字（可能是 "IP 域名"）时才 split
   const c0 = t.charCodeAt(0);
   if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
     const parts = t.split(/\s+/);
@@ -167,20 +166,27 @@ const parseRule = (line) => {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  // ★ 同时支持 || 和 |
   if (body.startsWith("||") || body.startsWith("|")) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
-    const domain = normalizeDomain(rest.split("^")[0]);
+    // ★ 依次切 ^、/、$
+    const d = rest
+      .split("^")[0]
+      .split("/")[0]
+      .split("$")[0]
+      .toLowerCase()
+      .replace(/\.+$/, "");
+    const domain = normalizeDomain(d);
     return domain ? { domain, isWhite } : null;
   }
 
-  const domain = normalizeDomain(t.replace(/\^+$/, ""));
-  // ★ 原来写死 false，改成 isWhite
+  // ★ 兜底也切 $
+  const domain = normalizeDomain(
+    t.replace(/\^+$/, "").split("$")[0].split("/")[0],
+  );
   return domain ? { domain, isWhite } : null;
 };
-
 // ============================================================
 // DNS 查询
 // ============================================================

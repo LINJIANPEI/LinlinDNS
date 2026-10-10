@@ -32,16 +32,11 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // 1. 合并
     await mergeAll(tmpDir, p("all.txt"));
-
-    // 2. 去重
     await dedupeFile(p("all.txt"));
 
-    // 3. ★ DNS 兼容过滤：转成纯域名，分离黑白
     const dns = await prepareDnsRules(p("all.txt"), tmpDir);
 
-    // 4. ★ 剔除死域名（只处理纯域名规则，数量大幅减少）
     await removeDeadRules([dns.blackFile, dns.whiteFile], {
       cleanedFile: p("cleaned.txt"),
       nocleanedFile: p("nocleaned.txt"),
@@ -51,7 +46,6 @@ async function main() {
       concurrency: 500,
     });
 
-    // 5. 构建最终列表
     await deleteDir(removeDir);
     await createDir(removeDir);
 
@@ -64,27 +58,25 @@ async function main() {
       outSkippedFile: path.join(removeDir, "skipped.txt"),
     });
 
-    // 6. 复制丢弃文件
     await copyFiles(
       [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
       [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],
     );
 
-    // 7. 头部
     await title();
 
-    // 8. 分片
     await splitLargeFilesInDir(outDir, {
       pattern: /^(rules|allow)\.txt$/,
     });
     await splitLargeFilesInDir(removeDir);
 
-    // 9. 更新 README
     await cleanReadme();
 
     console.log("更新完成");
+    process.exitCode = 0; // ★ 显式成功
   } catch (error) {
-    console.log(`更新失败:${error}`);
+    console.error(`更新失败:${error.stack || error}`); // ★ 打完整堆栈
+    process.exitCode = 1; // ★ 关键：标记失败
   } finally {
     await deleteDir(tmpDir);
   }
