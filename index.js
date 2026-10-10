@@ -4,8 +4,7 @@ const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
 const { readListFile } = require("./data/node/readListFile");
 const { downloadRules } = require("./data/node/downloadRules");
 const { mergeAll } = require("./data/node/mergeAll");
-const { dedupeFile } = require("./data/node/dedupe");
-const { prepareDnsRules } = require("./data/node/prepareDnsRules"); // ★ 替代 splitRegexRules
+const { prepareDnsRules } = require("./data/node/prepareDnsRules");
 const { removeDeadRules } = require("./data/node/removeDeadRules");
 const { buildAdGuardHomeLists } = require("./data/node/buildAdGuardHomeLists");
 const { title } = require("./data/node/title");
@@ -32,8 +31,8 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
+    // ★ 合并 + 去重 + 过滤 一步到位（不再需要 dedupeFile）
     await mergeAll(tmpDir, p("all.txt"));
-    await dedupeFile(p("all.txt"));
 
     const dns = await prepareDnsRules(p("all.txt"), tmpDir);
 
@@ -73,10 +72,10 @@ async function main() {
     await cleanReadme();
 
     console.log("更新完成");
-    process.exitCode = 0; // ★ 显式成功
+    process.exitCode = 0;
   } catch (error) {
-    console.error(`更新失败:${error.stack || error}`); // ★ 打完整堆栈
-    process.exitCode = 1; // ★ 关键：标记失败
+    console.error(`更新失败:${error.stack || error}`);
+    process.exitCode = 1;
   } finally {
     await deleteDir(tmpDir);
   }
