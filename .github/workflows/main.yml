@@ -10,6 +10,11 @@ on:
     types:
       - published
 
+# ★ 并发控制：同一时间只跑一个，新触发取消旧的
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
   actions: write
@@ -27,7 +32,7 @@ jobs:
           git config user.name "Linlin"
           git config user.email "1732509260@qq.com"
 
-      # ★ 改成 restore，只恢复不自动保存
+      # 恢复 DNS 缓存（只恢复，不自动保存）
       - name: 恢复 DNS 缓存
         uses: actions/cache/restore@v4
         with:
@@ -65,22 +70,21 @@ jobs:
           cat data/configs/smartdns.conf
           exit 1
 
-      # ★ 加 id，供后续步骤判断成功/失败
-      # ★ index → index.js
+      # 运行（加 id，供后续判断成功/失败）
       - name: 运行
         id: run_rules
         run: |
           npm install
           node --max-old-space-size=4096 index.js
 
-      # ★ 只在 node 成功时执行
+      # 只在 node 成功时执行
       - name: 修复缓存目录权限
         if: steps.run_rules.outcome == 'success'
         run: |
           sudo chown -R $USER:$USER smartdns-cache || true
           sudo chown -R $USER:$USER dns-cache.json || true
 
-      # ★ 只在 node 成功时保存，失败时保留旧缓存
+      # 只在 node 成功时保存，失败时保留旧缓存
       - name: 保存 DNS 缓存
         uses: actions/cache/save@v4
         if: steps.run_rules.outcome == 'success'
@@ -90,7 +94,7 @@ jobs:
             smartdns-cache
           key: dns-cache-${{ github.run_id }}
 
-      # ★ 只在 node 成功时提交
+      # 只在 node 成功时提交
       - name: 更新文件
         if: steps.run_rules.outcome == 'success'
         run: |
@@ -102,7 +106,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')（北京时间）"
+          git commit -m "Updated at $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')（北京时间） [skip ci]"
 
           for i in 1 2 3 4 5; do
             if git push; then
@@ -116,7 +120,7 @@ jobs:
           echo "push 连续失败"
           exit 1
 
-      # ★ 无论成功失败都清理运行记录
+      # 无论成功失败都清理运行记录，只保留 1 个
       - name: 删除 workflow 运行记录
         if: always()
         uses: Mattraks/delete-workflow-runs@main
@@ -124,4 +128,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           retain_days: 0
-          keep_minimum_runs: 0
+          keep_minimum_runs: 1
