@@ -82,7 +82,7 @@ const prepareDnsRules = async (inputFile, outDir) => {
 
     const map = result.isWhite ? seenWhite : seenBlack;
     if (!map.has(result.domain)) {
-      map.set(result.domain, t);
+      map.set(result.domain, t); // ★ 保留原始行
     }
   });
 
