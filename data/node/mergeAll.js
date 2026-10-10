@@ -2,7 +2,6 @@ const path = require("node:path");
 const { readDir } = require("./common_func");
 const { readLines, LineWriter } = require("./stream_utils");
 
-// HTML 特征
 const HTML_RE = /<\s*(html|head|body|div|a\s|script|style|!DOCTYPE|meta|link)/i;
 
 // ★ AdGuard Home DNS 层支持的修饰符（其余一律整条丢弃）
@@ -16,7 +15,7 @@ const DNS_SUPPORTED_MODIFIERS = new Set([
   "client",
 ]);
 
-// 提取 $ 后的修饰符名（去掉 $、去掉 =值、去掉 ~ 前缀）
+// 提取 $ 后的修饰符名（去掉 $、去掉 =值、去掉 ~ 前缀、小写）
 const getModifiers = (line) => {
   const idx = line.indexOf("$");
   if (idx === -1) return [];
@@ -27,7 +26,6 @@ const getModifiers = (line) => {
     .filter(Boolean);
 };
 
-// 含任意 DNS 不支持的修饰符 → 整条丢弃
 const hasUnsupportedModifier = (line) => {
   const mods = getModifiers(line);
   return mods.some((m) => !DNS_SUPPORTED_MODIFIERS.has(m));
@@ -39,14 +37,13 @@ const STATIC_FILE_RE =
 
 /**
  * 是否符合 AdGuard Home DNS 规则。
- * 只放行：域名规则 / hosts 规则 / 纯域名 / DNS 支持的修饰符。
  */
 const isValidRuleLine = (t) => {
   if (!t) return false;
   if (t.length < 3) return false;
   if (t.length > 1024) return false;
 
-  // 注释 / 标题 / 元素隐藏规则 —— 全丢
+  // 注释 / 标题 / 元素隐藏 —— 全丢
   if (t.startsWith("!")) return false;
   if (t.startsWith("[")) return false;
   if (t.startsWith("#")) return false;
