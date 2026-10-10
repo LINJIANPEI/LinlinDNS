@@ -31,7 +31,7 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // ★ 合并 + 去重 + 过滤 一步到位（不再需要 dedupeFile）
+    // ★ 合并 + 去重 + 过滤 一步到位
     await mergeAll(tmpDir, p("all.txt"));
 
     const dns = await prepareDnsRules(p("all.txt"), tmpDir);
