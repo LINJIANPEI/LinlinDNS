@@ -205,21 +205,58 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
-  // 父子域名收敛（按域名）
-  const blackDomains = removeRedundantSubdomains(new Set(blackMap.keys()));
-  const whiteDomains = removeRedundantSubdomains(new Set(whiteMap.keys()));
-
-  const blackKept = new Set(blackDomains);
+  // ★ 黑白冲突处理完之后，拆黑名单为普通和 important
+  const normalBlack = new Map();
+  const importantBlack = new Map();
   for (const [d, original] of blackMap) {
-    if (!blackKept.has(d)) noblacklistSet.add(original);
+    if (isImportant(original)) importantBlack.set(d, original);
+    else normalBlack.set(d, original);
   }
 
-  const whiteKept = new Set(whiteDomains);
+  // ★ 只对普通黑名单做父子收敛
+  const normalBlackDomains = removeRedundantSubdomains(
+    new Set(normalBlack.keys()),
+  );
+  const normalBlackKept = new Set(normalBlackDomains);
+  for (const [d, original] of normalBlack) {
+    if (!normalBlackKept.has(d)) noblacklistSet.add(original);
+  }
+
+  // ★ important 黑名单全部保留，不参与收敛
+  const importantBlackDomains = [...importantBlack.keys()];
+
+  // ★ 合并：普通 + important
+  const blackDomains = [
+    ...new Set([...normalBlackDomains, ...importantBlackDomains]),
+  ].sort();
+
+  // ★ 白名单同理：拆普通和 important
+  const normalWhite = new Map();
+  const importantWhite = new Map();
   for (const [d, original] of whiteMap) {
-    if (!whiteKept.has(d)) nowhitelistSet.add(original);
+    if (isImportant(original)) importantWhite.set(d, original);
+    else normalWhite.set(d, original);
   }
 
-  // ★ 不要 clear blackMap / whiteMap，后面输出要用
+  const normalWhiteDomains = removeRedundantSubdomains(
+    new Set(normalWhite.keys()),
+  );
+  const normalWhiteKept = new Set(normalWhiteDomains);
+  for (const [d, original] of normalWhite) {
+    if (!normalWhiteKept.has(d)) nowhitelistSet.add(original);
+  }
+
+  const importantWhiteDomains = [...importantWhite.keys()];
+
+  const whiteDomains = [
+    ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
+  ].sort();
+
+  // ★ 从原始 Map 拿原始行输出
+  const getBlackOriginal = (d) =>
+    blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
+  const getWhiteOriginal = (d) =>
+    whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
 
   if (noblacklistWriter) {
     for (const line of [...noblacklistSet].sort()) {
@@ -240,13 +277,15 @@ const buildAdGuardHomeLists = async (options) => {
   // ★ 输出原始行
   const rulesWriter = new LineWriter(outRulesFile);
   for (const d of blackDomains) {
-    await rulesWriter.write(blackMap.get(d));
+    const original = getBlackOriginal(d);
+    if (original) await rulesWriter.write(original);
   }
   await rulesWriter.close();
 
   const allowWriter = new LineWriter(outAllowFile);
   for (const d of whiteDomains) {
-    await allowWriter.write(whiteMap.get(d));
+    const original = getWhiteOriginal(d);
+    if (original) await allowWriter.write(original);
   }
   await allowWriter.close();
 
