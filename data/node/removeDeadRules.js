@@ -68,60 +68,22 @@ const normalizeDomain = (value) => {
   if (isIPv4(d)) return null;
   if (!DOMAIN_RE.test(d)) return null;
 
-  // ★ 新增预过滤
   const labels = d.split(".");
-
-  // 1. 域名层级：超过 5 层基本都是假域名
   if (labels.length > 5) return null;
-
-  // 2. 总长度：超过 80 字符的域名基本不存在
   if (d.length > 80) return null;
 
-  // 3. TLD 长度：超过 24 字符的 TLD 不存在
   const tld = labels[labels.length - 1];
   if (tld.length > 24) return null;
-
-  // 4. TLD 必须是字母，不能是数字
   if (!/^[a-z]+$/.test(tld)) return null;
 
-  // 5. 过滤掉常见静态文件后缀被误当 TLD 的情况
   const FAKE_TLDS = new Set([
-    "js",
-    "ts",
-    "css",
-    "html",
-    "htm",
-    "json",
-    "xml",
-    "txt",
-    "png",
-    "jpg",
-    "jpeg",
-    "gif",
-    "svg",
-    "webp",
-    "ico",
-    "woff",
-    "woff2",
-    "ttf",
-    "eot",
-    "otf",
-    "map",
-    "mp4",
-    "mp3",
-    "webm",
-    "m3u8",
-    "php",
-    "asp",
-    "aspx",
-    "jsp",
-    "cgi",
-    "do",
-    "action",
+    "js", "ts", "css", "html", "htm", "json", "xml", "txt",
+    "png", "jpg", "jpeg", "gif", "svg", "webp", "ico", "woff", "woff2",
+    "ttf", "eot", "otf", "map", "mp4", "mp3", "webm", "m3u8",
+    "php", "asp", "aspx", "jsp", "cgi", "do", "action",
   ]);
   if (FAKE_TLDS.has(tld)) return null;
 
-  // 6. 每一层标签长度不能超过 63
   for (const label of labels) {
     if (label.length > 63) return null;
   }
@@ -130,15 +92,11 @@ const normalizeDomain = (value) => {
 };
 
 const EXTENDED_RULE_MARKERS = [
-  "##",
-  "#@#",
-  "#$#",
-  "#@$#",
-  "#%#",
-  "#@%#",
-  "#?#",
-  "#@?#",
+  "##", "#@#", "#$#", "#@$#", "#%#", "#@%#", "#?#", "#@?#",
 ];
+
+// ★ 正则行判断
+const isRegexLine = (t) => /^(@@)?\/.+\/([^/]*)$/.test(t);
 
 const parseRule = (line) => {
   if (typeof line !== "string") return null;
@@ -148,7 +106,11 @@ const parseRule = (line) => {
   if (t.startsWith("#") && !EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m)))
     return null;
 
-  // IP 域名格式
+  // ★ 正则规则：不参与 DNS 查询
+  if (isRegexLine(t)) {
+    return { domain: null, isWhite: t.startsWith("@@"), isRegex: true };
+  }
+
   const c0 = t.charCodeAt(0);
   if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
     const parts = t.split(/\s+/);
@@ -167,7 +129,6 @@ const parseRule = (line) => {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  // ★ 同时支持 || 和 |，切 ^ / $
   if (body.startsWith("||") || body.startsWith("|")) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
@@ -182,12 +143,12 @@ const parseRule = (line) => {
     return domain ? { domain, isWhite } : null;
   }
 
-  // ★ 兜底也切 $ 和 /
   const domain = normalizeDomain(
     t.replace(/\^+$/, "").split("$")[0].split("/")[0],
   );
   return domain ? { domain, isWhite } : null;
 };
+
 // ============================================================
 // DNS 查询
 // ============================================================
@@ -214,17 +175,13 @@ const checkDomain = async (domain, { nameservers, port }) => {
 };
 
 // ============================================================
-// 文件缓存（NDJSON 流式读写）
+// 文件缓存
 // ============================================================
 const createNullCache = () => ({
-  get() {
-    return undefined;
-  },
+  get() { return undefined; },
   set() {},
   async save() {},
-  size() {
-    return 0;
-  },
+  size() { return 0; },
 });
 
 const createFileCache = (filePath) => {
@@ -235,17 +192,14 @@ const createFileCache = (filePath) => {
       const raw = fs.readFileSync(filePath, "utf-8");
       const t = raw.trimStart();
       if (t.startsWith("{")) {
-        // 兼容旧 JSON 格式
         const data = JSON.parse(raw);
         for (const k of Object.keys(data)) store.set(k, data[k]);
       } else {
-        // NDJSON
         for (const line of raw.split("\n")) {
           if (!line) continue;
           try {
             const arr = JSON.parse(line);
-            if (Array.isArray(arr) && arr.length === 2)
-              store.set(arr[0], arr[1]);
+            if (Array.isArray(arr) && arr.length === 2) store.set(arr[0], arr[1]);
           } catch {}
         }
       }
@@ -277,16 +231,6 @@ const createFileCache = (filePath) => {
 // ============================================================
 // 主函数
 // ============================================================
-/**
- * 流式剔除死域名。
- *
- * @param {string[]} inputFiles - 输入规则文件路径（可以有多个）
- * @param {object} options
- * @param {string} options.cleanedFile
- * @param {string} [options.nocleanedFile]
- * @param {string} [options.passthroughFile]
- * @param {string} [options.deadDomainsFile]
- */
 const removeDeadRules = async (inputFiles, options) => {
   const {
     cleanedFile,
@@ -314,6 +258,7 @@ const removeDeadRules = async (inputFiles, options) => {
   // 第 1 遍：提取域名
   // ========================================================
   const domainMap = new Map();
+  const regexRules = [];   // ★ 收集正则规则
   const passthroughWriter = passthroughFile
     ? new LineWriter(passthroughFile)
     : null;
@@ -329,6 +274,11 @@ const removeDeadRules = async (inputFiles, options) => {
         passthroughCount++;
         return;
       }
+      // ★ 正则规则单独收集，不参与 DNS 查询
+      if (parsed.isRegex) {
+        regexRules.push(raw);
+        return;
+      }
       const prev = domainMap.get(parsed.domain);
       if (prev === undefined) {
         domainMap.set(parsed.domain, parsed.isWhite ? 1 : 0);
@@ -341,10 +291,12 @@ const removeDeadRules = async (inputFiles, options) => {
   if (passthroughWriter) await passthroughWriter.close();
 
   const total = domainMap.size;
-  console.log(`规则解析完成，共${totalRules}条规则，提取${total}个域名`);
+  console.log(
+    `规则解析完成，共${totalRules}条规则，提取${total}个域名，${regexRules.length}条正则`,
+  );
 
   // ========================================================
-  // 第 2 遍：DNS 查询（滑动窗口）
+  // 第 2 遍：DNS 查询
   // ========================================================
   const limit = pLimit(concurrency);
   const now = Math.floor(Date.now() / 1000);
@@ -428,7 +380,7 @@ const removeDeadRules = async (inputFiles, options) => {
   domainMap.clear();
 
   // ========================================================
-  // 第 3 遍：重新读输入文件，分类输出
+  // 第 3 遍：分类输出
   // ========================================================
   const cleanedWriter = new LineWriter(cleanedFile);
   const nocleanedWriter = nocleanedFile ? new LineWriter(nocleanedFile) : null;
@@ -442,10 +394,18 @@ const removeDeadRules = async (inputFiles, options) => {
   let cleanedCount = 0;
   let nocleanedCount = 0;
 
+  // ★ 先写正则规则（不参与死域名判断，直接保留）
+  for (const raw of regexRules) {
+    await cleanedWriter.write(raw);
+    cleanedCount++;
+  }
+
   for (const file of inputFiles) {
     await readLines(file, async (raw) => {
       const parsed = parseRule(raw);
-      if (!parsed) return; // passthrough 已写
+      if (!parsed) return;
+      // ★ 正则已写过，跳过
+      if (parsed.isRegex) return;
 
       const isWhite = parsed.isWhite || whiteSet.has(parsed.domain);
 
@@ -480,6 +440,7 @@ const removeDeadRules = async (inputFiles, options) => {
     aliveRules: cleanedCount,
     deadRules: nocleanedCount,
     passthrough: passthroughCount,
+    regexRules: regexRules.length,
     cacheHits,
     cacheSize: cacheStore.size ? cacheStore.size() : 0,
   };
@@ -488,6 +449,7 @@ const removeDeadRules = async (inputFiles, options) => {
     `剔除死域名规则完成 | 输入 ${totalRules} 条` +
       ` | 保留 ${cleanedCount} 条` +
       ` | 剔除 ${nocleanedCount} 条` +
+      ` | 正则 ${regexRules.length} 条` +
       ` | 丢弃非域名行 ${passthroughCount} 条` +
       ` | 死域名 ${deadCount} 个` +
       `（父域存活保留 ${parentAliveCount} 个，实际剔除 ${stats.removedDomains} 个）` +
