@@ -18,8 +18,7 @@ const extractDomain = (line) => {
     if (/^(\d{1,3}\.){3}\d{1,3}$/.test(hostIp)) {
       const d = parts[1].toLowerCase().replace(/\.+$/, "");
       if (DOMAIN_RE.test(d)) {
-        const isBlacklistIp =
-          hostIp === "0.0.0.0" || hostIp.startsWith("127.");
+        const isBlacklistIp = hostIp === "0.0.0.0" || hostIp.startsWith("127.");
         return { domain: d, isWhite: !isBlacklistIp };
       }
       return null;
@@ -31,12 +30,13 @@ const extractDomain = (line) => {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
-    const d = rest
-      .split("^")[0]
-      .split("/")[0]
-      .split("$")[0]
-      .toLowerCase()
-      .replace(/\.+$/, "");
+
+    // ★ 先判断是否带路径，带路径的直接丢
+    const beforeMod = rest.split("$")[0];
+    const core = beforeMod.split("^")[0];
+    if (core.includes("/")) return null;
+
+    const d = core.toLowerCase().replace(/\.+$/, "");
     if (d && DOMAIN_RE.test(d)) {
       return { domain: d, isWhite };
     }

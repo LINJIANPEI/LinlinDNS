@@ -70,6 +70,8 @@ const hasUnsupportedModifier = (line) =>
  * 返回 { domain, isWhite, original, coverSub }
  *   coverSub = true  → 覆盖子域（||、@@||）
  *   coverSub = false → 只精确匹配（|、@@|、hosts、纯域名）
+ *
+ * 带路径的规则（||domain/path）返回 null。
  */
 function parseRule(line) {
   const t = line.trim();
@@ -83,16 +85,22 @@ function parseRule(line) {
   // ||domain^ → 覆盖子域
   if (body.startsWith("||")) {
     const rest = body.slice(2).replace(/^\^/, "");
-    const d = rest.split("^")[0].split("/")[0].split("$")[0];
-    const domain = normalizeDomain(d);
+    const beforeMod = rest.split("$")[0];
+    const core = beforeMod.split("^")[0];
+    // ★ 带路径的丢
+    if (core.includes("/")) return null;
+    const domain = normalizeDomain(core);
     return domain ? { domain, isWhite, original: t, coverSub: true } : null;
   }
 
   // |domain^ → 只精确匹配
   if (body.startsWith("|")) {
     const rest = body.slice(1).replace(/^\^/, "");
-    const d = rest.split("^")[0].split("/")[0].split("$")[0];
-    const domain = normalizeDomain(d);
+    const beforeMod = rest.split("$")[0];
+    const core = beforeMod.split("^")[0];
+    // ★ 带路径的丢
+    if (core.includes("/")) return null;
+    const domain = normalizeDomain(core);
     return domain ? { domain, isWhite, original: t, coverSub: false } : null;
   }
 
@@ -101,8 +109,7 @@ function parseRule(line) {
   if (parts.length === 2 && isIPv4(parts[0])) {
     const domain = normalizeDomain(parts[1]);
     if (!domain) return null;
-    const isBlacklistIp =
-      parts[0] === "0.0.0.0" || parts[0].startsWith("127.");
+    const isBlacklistIp = parts[0] === "0.0.0.0" || parts[0].startsWith("127.");
     return { domain, isWhite: !isBlacklistIp, original: t, coverSub: false };
   }
 
@@ -330,13 +337,11 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ★ 从 Map 拿原始行
   const getBlackOriginal = (d) => {
-    const rule =
-      blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
+    const rule = blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
     return rule ? rule.original : null;
   };
   const getWhiteOriginal = (d) => {
-    const rule =
-      whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
+    const rule = whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
     return rule ? rule.original : null;
   };
 

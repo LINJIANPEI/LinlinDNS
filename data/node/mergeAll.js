@@ -36,7 +36,30 @@ const STATIC_FILE_RE =
   /\.(js|ts|css|html?|json|xml|txt|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|otf|map|mp4|mp3|webm|m3u8)(\^|\$|$)/i;
 
 /**
+ * ★ 判断是否为 URL 路径规则（DNS 用不上）
+ * - /xxx 单斜杠开头的路径
+ * - ||domain/path 或 |domain/path
+ */
+const isPathRule = (t) => {
+  // 1. 以单个 / 开头（非 //）
+  if (/^\/(?!\/)/.test(t)) return true;
+
+  // 2. ||domain/path 或 |domain/path
+  const body = t.startsWith("@@") ? t.slice(2) : t;
+  let rest = null;
+  if (body.startsWith("||")) rest = body.slice(2);
+  else if (body.startsWith("|")) rest = body.slice(1);
+  else return false;
+
+  rest = rest.replace(/^\^/, "");
+  const beforeMod = rest.split("$")[0];
+  const core = beforeMod.split("^")[0];
+  return core.includes("/");
+};
+
+/**
  * 是否符合 AdGuard Home DNS 规则。
+ * 只放行：域名规则 / hosts 规则 / 纯域名 / DNS 支持的修饰符。
  */
 const isValidRuleLine = (t) => {
   if (!t) return false;
@@ -54,8 +77,8 @@ const isValidRuleLine = (t) => {
   // 必含 . 或 /
   if (!t.includes(".") && !t.includes("/")) return false;
 
-  // ★ URL 路径规则一律丢
-  if (/^\/(?!\/)/.test(t)) return false;
+  // ★ 路径规则一律丢（包括 ||domain/path）
+  if (isPathRule(t)) return false;
 
   // ★ 含 DNS 不支持的修饰符 → 整条丢
   if (hasUnsupportedModifier(t)) return false;
