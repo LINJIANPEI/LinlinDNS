@@ -39,10 +39,18 @@ function normalizeDomain(value) {
   return domain;
 }
 
+// ★ 正则行判断
+const isRegexLine = (t) => /^(@@)?\/.+\/([^/]*)$/.test(t);
+
 function parseRule(line) {
   const t = line.trim();
   if (!t) return null;
   if (t.startsWith("!") || t.startsWith("#")) return null;
+
+  // ★ 正则规则
+  if (isRegexLine(t)) {
+    return { domain: null, isWhite: t.startsWith("@@"), isRegex: true };
+  }
 
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
@@ -52,27 +60,21 @@ function parseRule(line) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
-    domain = normalizeDomain(rest.split("^")[0].split("/")[0].split("$")[0]);
+    domain = normalizeDomain(
+      rest.split("^")[0].split("/")[0].split("$")[0],
+    );
   } else {
-    domain = normalizeDomain(t.replace(/\^+$/, "").split("$")[0].split("/")[0]);
+    domain = normalizeDomain(
+      t.replace(/\^+$/, "").split("$")[0].split("/")[0],
+    );
   }
 
   return domain ? { domain, isWhite } : null;
 }
 
-// ★ 修饰符判断
 const isImportant = (original) => /\$important\b/.test(original);
 const hasDnsRewrite = (original) => /\$dnsrewrite\b/.test(original);
 
-/**
- * 判断白名单能否覆盖黑名单。
- *
- * AdGuard Home 优先级（从高到低）：
- *   1. @@...$important   白名单 important
- *   2. ...$important     黑名单 important
- *   3. @@...             普通白名单
- *   4. ...               普通黑名单
- */
 function canCover(wOriginal, bOriginal) {
   if (isImportant(wOriginal)) return true;
   if (isImportant(bOriginal)) return false;
@@ -134,9 +136,13 @@ const buildAdGuardHomeLists = async (options) => {
     : null;
   const skippedWriter = outSkippedFile ? new LineWriter(outSkippedFile) : null;
 
-  // ★ Map：domain → original
+  // 普通规则：domain → original
   const blackMap = new Map();
   const whiteMap = new Map();
+
+  // ★ 正则规则：直接存原始行
+  const regexBlack = new Set();
+  const regexWhite = new Set();
 
   let skippedCount = 0;
   const seenLines = new Set();
@@ -158,11 +164,17 @@ const buildAdGuardHomeLists = async (options) => {
       return;
     }
 
+    // ★ 正则规则单独存
+    if (rule.isRegex) {
+      if (rule.isWhite) regexWhite.add(line);
+      else regexBlack.add(line);
+      return;
+    }
+
     const map = rule.isWhite ? whiteMap : blackMap;
     if (!map.has(rule.domain)) {
       map.set(rule.domain, line);
     } else {
-      // ★ 同域名优先保留带 $important 的行
       const existing = map.get(rule.domain);
       if (isImportant(line) && !isImportant(existing)) {
         map.set(rule.domain, line);
@@ -173,17 +185,17 @@ const buildAdGuardHomeLists = async (options) => {
   seenLines.clear();
 
   console.log(
-    `解析完成：黑域名候选 ${blackMap.size}，白域名候选 ${whiteMap.size}`,
+    `解析完成：黑域名候选 ${blackMap.size}，白域名候选 ${whiteMap.size}，` +
+      `正则黑 ${regexBlack.size}，正则白 ${regexWhite.size}`,
   );
 
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
 
-  // ★ 白名单覆盖黑名单（精确匹配 + 父域覆盖子域，考虑修饰符）
+  // 白名单覆盖黑名单
   for (const w of whiteMap.keys()) {
     const wOriginal = whiteMap.get(w);
 
-    // 1. 精确匹配
     if (blackMap.has(w)) {
       const bOriginal = blackMap.get(w);
       if (canCover(wOriginal, bOriginal)) {
@@ -192,7 +204,6 @@ const buildAdGuardHomeLists = async (options) => {
       }
     }
 
-    // 2. 父域覆盖子域
     const suffix = `.${w}`;
     for (const b of [...blackMap.keys()]) {
       if (b.endsWith(suffix)) {
@@ -205,7 +216,7 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
-  // ★ 黑白冲突处理完之后，拆黑名单为普通和 important
+  // 拆分普通和 important
   const normalBlack = new Map();
   const importantBlack = new Map();
   for (const [d, original] of blackMap) {
@@ -213,7 +224,6 @@ const buildAdGuardHomeLists = async (options) => {
     else normalBlack.set(d, original);
   }
 
-  // ★ 只对普通黑名单做父子收敛
   const normalBlackDomains = removeRedundantSubdomains(
     new Set(normalBlack.keys()),
   );
@@ -222,15 +232,12 @@ const buildAdGuardHomeLists = async (options) => {
     if (!normalBlackKept.has(d)) noblacklistSet.add(original);
   }
 
-  // ★ important 黑名单全部保留，不参与收敛
   const importantBlackDomains = [...importantBlack.keys()];
-
-  // ★ 合并：普通 + important
   const blackDomains = [
     ...new Set([...normalBlackDomains, ...importantBlackDomains]),
   ].sort();
 
-  // ★ 白名单同理：拆普通和 important
+  // 白名单同理
   const normalWhite = new Map();
   const importantWhite = new Map();
   for (const [d, original] of whiteMap) {
@@ -247,12 +254,10 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   const importantWhiteDomains = [...importantWhite.keys()];
-
   const whiteDomains = [
     ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
   ].sort();
 
-  // ★ 从原始 Map 拿原始行输出
   const getBlackOriginal = (d) =>
     blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
   const getWhiteOriginal = (d) =>
@@ -274,11 +279,14 @@ const buildAdGuardHomeLists = async (options) => {
 
   if (skippedWriter) await skippedWriter.close();
 
-  // ★ 输出原始行
+  // ★ 输出：普通规则 + 正则规则
   const rulesWriter = new LineWriter(outRulesFile);
   for (const d of blackDomains) {
     const original = getBlackOriginal(d);
     if (original) await rulesWriter.write(original);
+  }
+  for (const r of regexBlack) {
+    await rulesWriter.write(r);
   }
   await rulesWriter.close();
 
@@ -287,19 +295,24 @@ const buildAdGuardHomeLists = async (options) => {
     const original = getWhiteOriginal(d);
     if (original) await allowWriter.write(original);
   }
+  for (const r of regexWhite) {
+    await allowWriter.write(r);
+  }
   await allowWriter.close();
 
   const stats = {
-    blacklistCount: blackDomains.length,
-    whitelistCount: whiteDomains.length,
+    blacklistCount: blackDomains.length + regexBlack.size,
+    whitelistCount: whiteDomains.length + regexWhite.size,
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
     skippedCount,
+    regexBlackCount: regexBlack.size,
+    regexWhiteCount: regexWhite.size,
   };
 
   console.log(
-    `构建完成：黑名单 ${stats.blacklistCount} 条，` +
-      `白名单 ${stats.whitelistCount} 条，` +
+    `构建完成：黑名单 ${stats.blacklistCount} 条（含正则 ${stats.regexBlackCount}），` +
+      `白名单 ${stats.whitelistCount} 条（含正则 ${stats.regexWhiteCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `skipped ${stats.skippedCount} 条`,
