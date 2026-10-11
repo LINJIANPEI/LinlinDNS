@@ -3,6 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { finished } = require("node:stream/promises");
 const { readLines, LineWriter } = require("./stream_utils");
+const { parseRule } = require("./rule_parser");
 
 const CACHE_TTL = 3110400; // 36 天
 const DEFAULT_CONCURRENCY = 500;
@@ -11,8 +12,6 @@ const DEFAULT_PORT = 5053;
 const DNS_TIMEOUT = 800;
 const DEFAULT_CACHE_FILE = "./dns-cache.json";
 const DEFAULT_PROGRESS_STEP = 1000;
-
-const IPV4_RE = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
 
 // ============================================================
 // Resolver 复用池
@@ -30,20 +29,8 @@ const getResolver = (nameservers, port) => {
 };
 
 // ============================================================
-// 工具函数
+// 并发控制
 // ============================================================
-const isIPv4 = (s) => {
-  const m = IPV4_RE.exec(s);
-  if (!m) return false;
-  return m.slice(1).every((p) => {
-    const n = Number(p);
-    return n >= 0 && n <= 255;
-  });
-};
-
-const isBlackholeIp = (ip) =>
-  ip === "0.0.0.0" || ip.startsWith("127.") || ip === "::1";
-
 const pLimit = (concurrency) => {
   let active = 0;
   const queue = [];
@@ -60,123 +47,6 @@ const pLimit = (concurrency) => {
       if (active < concurrency) run();
       else queue.push(run);
     });
-};
-
-/**
- * 处理通配符域名。
- * - *.domain.com → 剥离 *. → 'domain.com'
- * - ad*banner   → 含非前缀 * → 返回 null
- */
-const stripWildcard = (domain) => {
-  let d = domain;
-  if (d.startsWith("*.")) d = d.slice(2);
-  if (d.includes("*")) return null;
-  return d;
-};
-
-/**
- * 域名规范化（只做结构校验，无层级上限、无 TLD 校验）。
- */
-const normalizeDomain = (value) => {
-  const d = value.trim().toLowerCase().replace(/\.+$/, "").replace(/^\.+/, "");
-  if (!d) return null;
-  if (d === "localhost" || d === "localhost.localdomain") return null;
-  if (d.includes(" ")) return null;
-  if (!/^[a-z0-9.-]+$/.test(d)) return null;
-  if (d.includes("..")) return null;
-  if (isIPv4(d)) return null;
-
-  const labels = d.split(".");
-  if (labels.length < 2) return null;
-  if (d.length > 253) return null;
-
-  for (const label of labels) {
-    if (label.length < 1 || label.length > 63) return null;
-    if (!/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(label)) return null;
-  }
-
-  return d;
-};
-
-const EXTENDED_RULE_MARKERS = [
-  "##",
-  "#@#",
-  "#$#",
-  "#@$#",
-  "#%#",
-  "#@%#",
-  "#?#",
-  "#@?#",
-];
-
-/**
- * 解析规则 → { domain, isWhite, ip }
- *   ip 非空 → DNS 重写规则
- */
-const parseRule = (line) => {
-  if (typeof line !== "string") return null;
-  const t = line.trim();
-  if (!t) return null;
-  if (t.startsWith("!")) return null;
-  if (t.startsWith("#") && !EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m)))
-    return null;
-
-  // IP 域名格式（hosts）
-  const c0 = t.charCodeAt(0);
-  if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
-    const parts = t.split(/\s+/);
-    if (parts.length === 2 && isIPv4(parts[0])) {
-      let cand = parts[1];
-      cand = stripWildcard(cand);
-      if (cand === null) return null;
-      const domain = normalizeDomain(cand);
-      if (domain) {
-        const blackhole = isBlackholeIp(parts[0]);
-        return {
-          domain,
-          isWhite: !blackhole,
-          ip: blackhole ? null : parts[0],
-        };
-      }
-      return null;
-    }
-  }
-
-  const isWhite = t.startsWith("@@");
-  const body = isWhite ? t.slice(2) : t;
-
-  // ||domain^ 或 |domain^
-  if (body.startsWith("||") || body.startsWith("|")) {
-    const isDouble = body.startsWith("||");
-    let rest = body.slice(isDouble ? 2 : 1);
-    rest = rest.replace(/^\^/, "");
-
-    rest = stripWildcard(rest);
-    if (rest === null) return null;
-
-    const d = rest
-      .split("^")[0]
-      .split("/")[0]
-      .split("$")[0]
-      .toLowerCase()
-      .replace(/\.+$/, "");
-    const domain = normalizeDomain(d);
-    if (!domain) return null;
-
-    const dnsrewriteMatch = rest.match(/\$dnsrewrite=([^,;$]+)/i);
-    return {
-      domain,
-      isWhite,
-      ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
-    };
-  }
-
-  // 兜底：纯域名
-  let tail = body.replace(/\^+$/, "").split("$")[0].split("/")[0];
-  tail = stripWildcard(tail);
-  if (tail === null) return null;
-  const domain = normalizeDomain(tail);
-  return domain ? { domain, isWhite, ip: null } : null;
 };
 
 // ============================================================
@@ -287,14 +157,13 @@ const removeDeadRules = async (inputFiles, options) => {
     nocleanedFile,
     passthroughFile,
     deadDomainsFile,
-    deadWhitelistReportFile, // ★ 白名单死域名报告（只报告不删除）
+    deadWhitelistReportFile,
     concurrency = DEFAULT_CONCURRENCY,
     nameservers = DEFAULT_NAMESERVERS,
     port = DEFAULT_PORT,
     whiteSet = new Set(),
     cache,
     cacheFile = DEFAULT_CACHE_FILE,
-    // ★ 白名单不参与 DNS 检测，避免"白名单死了黑名单复活"
     keepWhiteRules = true,
     autoSaveCache = true,
     onProgress,
@@ -337,9 +206,8 @@ const removeDeadRules = async (inputFiles, options) => {
 
       if (prev === undefined) {
         domainMap.set(parsed.domain, flag);
-      } else {
-        // 优先级：重写(2) > 白(1) > 黑(0)
-        if (flag > prev) domainMap.set(parsed.domain, flag);
+      } else if (flag > prev) {
+        domainMap.set(parsed.domain, flag);
       }
     });
   }
@@ -352,8 +220,7 @@ const removeDeadRules = async (inputFiles, options) => {
   );
 
   // ========================================================
-  // 第 2 遍：DNS 查询
-  // ★ 白名单(flag=1) 跳过查询
+  // 第 2 遍：DNS 查询（白名单跳过）
   // ========================================================
   const limit = pLimit(concurrency);
   const now = Math.floor(Date.now() / 1000);
@@ -361,16 +228,14 @@ const removeDeadRules = async (inputFiles, options) => {
   let completed = 0;
   const startTime = Date.now();
 
-  // ★ 需要查询的域名：只有黑名单(0) 和 重写(2)
   const domainsToCheck = [];
   const aliveSet = new Set();
   const skipWhiteSet = new Set();
 
   for (const [domain, flag] of domainMap) {
     if (flag === 1 && keepWhiteRules) {
-      // 白名单：跳过 DNS 检测
       skipWhiteSet.add(domain);
-      aliveSet.add(domain); // 视为存活，参与父域判断
+      aliveSet.add(domain);
     } else {
       domainsToCheck.push(domain);
     }
@@ -382,7 +247,9 @@ const removeDeadRules = async (inputFiles, options) => {
     if (!force && completed % progressStep !== 0) return;
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
     const percent =
-      totalToCheck > 0 ? ((completed / totalToCheck) * 100).toFixed(1) : "100.0";
+      totalToCheck > 0
+        ? ((completed / totalToCheck) * 100).toFixed(1)
+        : "100.0";
     const speed = completed / Math.max(elapsed, 0.001);
     const remain =
       speed > 0 ? ((totalToCheck - completed) / speed).toFixed(0) : "?";
@@ -430,16 +297,13 @@ const removeDeadRules = async (inputFiles, options) => {
 
   // ========================================================
   // 计算"死且无存活父域"的集合
-  // ★ 白名单(keepWhiteRules=true) 跳过判定
   // ========================================================
   const deadWithoutAliveParent = new Set();
-  const deadWhitelistSet = new Set(); // ★ 白名单死域名（只报告）
+  const deadWhitelistSet = new Set();
   let parentAliveCount = 0;
 
   for (const [domain, flag] of domainMap) {
     if (aliveSet.has(domain)) continue;
-
-    // ★ 白名单跳过（keepWhiteRules=true 时永不进这里）
     if (keepWhiteRules && flag === 1) continue;
     if (keepWhiteRules && whiteSet.has(domain)) continue;
 
@@ -455,13 +319,10 @@ const removeDeadRules = async (inputFiles, options) => {
     else deadWithoutAliveParent.add(domain);
   }
 
-  // ★ 额外收集：白名单里的死域名（只用于报告）
+  // 白名单死域名（只报告）
   for (const [domain, flag] of domainMap) {
     if (flag !== 1) continue;
     if (aliveSet.has(domain)) continue;
-    // 白名单被视为"已跳过"，需要单独判定
-    // 由于 keepWhiteRules=true 时白名单被加入了 aliveSet，这里不会命中
-    // 只有 keepWhiteRules=false 时才可能命中
     deadWhitelistSet.add(domain);
   }
 
@@ -482,7 +343,6 @@ const removeDeadRules = async (inputFiles, options) => {
     await deadWriter.close();
   }
 
-  // ★ 输出白名单死域名报告（如果有）
   if (deadWhitelistWriter) {
     for (const d of [...deadWhitelistSet].sort()) {
       await deadWhitelistWriter.write(d);
@@ -505,7 +365,6 @@ const removeDeadRules = async (inputFiles, options) => {
       const isWhite = parsed.isWhite || whiteSet.has(parsed.domain);
       const isDead = deadWithoutAliveParent.has(parsed.domain);
 
-      // 重写规则：走死亡判定
       if (isRewrite) {
         if (isDead) {
           if (nocleanedWriter) await nocleanedWriter.write(raw);
@@ -519,7 +378,6 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
 
-      // ★ 白名单：无条件保留
       if (isWhite && keepWhiteRules) {
         await cleanedWriter.write(raw);
         cleanedCount++;
@@ -527,7 +385,6 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
 
-      // 白名单 + keepWhiteRules=false：走死亡判定
       if (isWhite) {
         if (isDead) {
           if (nocleanedWriter) await nocleanedWriter.write(raw);
@@ -540,7 +397,6 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
 
-      // 黑名单：走死亡判定
       if (isDead) {
         if (nocleanedWriter) await nocleanedWriter.write(raw);
         nocleanedCount++;

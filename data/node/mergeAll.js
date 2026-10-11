@@ -1,65 +1,16 @@
 const path = require("node:path");
 const { readDir } = require("./common_func");
 const { readLines, LineWriter } = require("./stream_utils");
+const { hasUnsupportedModifier, isPathRule } = require("./rule_parser");
 
 const HTML_RE = /<\s*(html|head|body|div|a\s|script|style|!DOCTYPE|meta|link)/i;
-
-// ★ AdGuard Home DNS 层支持的修饰符（其余一律整条丢弃）
-const DNS_SUPPORTED_MODIFIERS = new Set([
-  "important",
-  "badfilter",
-  "match-case",
-  "denyallow",
-  "dnsrewrite",
-  "dnstype",
-  "client",
-]);
-
-// 提取 $ 后的修饰符名（去掉 $、去掉 =值、去掉 ~ 前缀、小写）
-const getModifiers = (line) => {
-  const idx = line.indexOf("$");
-  if (idx === -1) return [];
-  return line
-    .slice(idx + 1)
-    .split(",")
-    .map((m) => m.trim().split("=")[0].replace(/^~/, "").toLowerCase())
-    .filter(Boolean);
-};
-
-const hasUnsupportedModifier = (line) => {
-  const mods = getModifiers(line);
-  return mods.some((m) => !DNS_SUPPORTED_MODIFIERS.has(m));
-};
 
 // 静态资源后缀（不是域名）
 const STATIC_FILE_RE =
   /\.(js|ts|css|html?|json|xml|txt|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|otf|map|mp4|mp3|webm|m3u8)(\^|\$|$)/i;
 
 /**
- * ★ 判断是否为 URL 路径规则（DNS 用不上）
- * - /xxx 单斜杠开头的路径
- * - ||domain/path 或 |domain/path
- */
-const isPathRule = (t) => {
-  // 1. 以单个 / 开头（非 //）
-  if (/^\/(?!\/)/.test(t)) return true;
-
-  // 2. ||domain/path 或 |domain/path
-  const body = t.startsWith("@@") ? t.slice(2) : t;
-  let rest = null;
-  if (body.startsWith("||")) rest = body.slice(2);
-  else if (body.startsWith("|")) rest = body.slice(1);
-  else return false;
-
-  rest = rest.replace(/^\^/, "");
-  const beforeMod = rest.split("$")[0];
-  const core = beforeMod.split("^")[0];
-  return core.includes("/");
-};
-
-/**
  * 是否符合 AdGuard Home DNS 规则。
- * 只放行：域名规则 / hosts 规则 / 纯域名 / DNS 支持的修饰符。
  */
 const isValidRuleLine = (t) => {
   if (!t) return false;
@@ -125,20 +76,17 @@ const mergeAll = async (directory, outputFile) => {
       await readLines(path.join(directory, file), async (line) => {
         const t = line.trim();
 
-        // 1. 过滤
         if (!isValidRuleLine(t)) {
           skipped++;
           return;
         }
 
-        // 2. 去重
         if (seen.has(t)) {
           duplicated++;
           return;
         }
         seen.add(t);
 
-        // 3. 写入
         await writer.write(t);
         written++;
         fileWritten++;
