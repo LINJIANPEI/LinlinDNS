@@ -1,6 +1,7 @@
 const path = require("node:path");
 const { readLines, LineWriter } = require("./stream_utils");
 
+// ★ AdGuard Home DNS 支持的修饰符
 const DNS_SUPPORTED_MODIFIERS = new Set([
   "important",
   "badfilter",
@@ -23,6 +24,11 @@ function isIPv4(s) {
 const isBlackholeIp = (ip) =>
   ip === "0.0.0.0" || ip.startsWith("127.") || ip === "::1";
 
+/**
+ * 处理通配符域名。
+ * - *.domain.com → 剥离 *. → 'domain.com'
+ * - ad*banner   → 含非前缀 * → 返回 null
+ */
 const stripWildcard = (domain) => {
   let d = domain;
   if (d.startsWith("*.")) d = d.slice(2);
@@ -30,6 +36,9 @@ const stripWildcard = (domain) => {
   return d;
 };
 
+/**
+ * 域名规范化（只做结构校验，无层级上限、无 TLD 校验）。
+ */
 function normalizeDomain(value) {
   const domain = value
     .trim()
@@ -37,8 +46,7 @@ function normalizeDomain(value) {
     .replace(/\.+$/, "")
     .replace(/^\.+/, "");
   if (!domain) return null;
-  if (domain === "localhost" || domain === "localhost.localdomain")
-    return null;
+  if (domain === "localhost" || domain === "localhost.localdomain") return null;
   if (domain.includes(" ")) return null;
   if (!/^[a-z0-9.-]+$/.test(domain)) return null;
   if (domain.includes("..")) return null;
@@ -70,9 +78,15 @@ const hasUnsupportedModifier = (line) =>
   getModifiers(line).some((m) => !DNS_SUPPORTED_MODIFIERS.has(m));
 
 /**
- * 解析规则。
- * 返回 { domain, isWhite, original, coverSub, ip }
- *   ip 非空 → DNS 重写规则
+ * 解析一行规则。
+ *
+ * 返回 { domain, isWhite, original, coverSub, ip, isHosts }
+ *   coverSub = true  → 覆盖子域（||、@@||）
+ *   coverSub = false → 只精确匹配（|、@@|、纯域名）
+ *   ip 非空          → DNS 重写规则
+ *   isHosts = true   → 原始是 hosts 格式（0.0.0.0 domain）
+ *
+ * 带路径的规则（||domain/path）返回 null。
  */
 function parseRule(line) {
   const t = line.trim();
@@ -83,7 +97,7 @@ function parseRule(line) {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  // ||domain^
+  // ||domain^ → 覆盖子域
   if (body.startsWith("||")) {
     let rest = body.slice(2).replace(/^\^/, "");
     rest = stripWildcard(rest);
@@ -102,10 +116,11 @@ function parseRule(line) {
       original: t,
       coverSub: true,
       ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
+      isHosts: false,
     };
   }
 
-  // |domain^
+  // |domain^ → 只精确匹配
   if (body.startsWith("|")) {
     let rest = body.slice(1).replace(/^\^/, "");
     rest = stripWildcard(rest);
@@ -124,10 +139,11 @@ function parseRule(line) {
       original: t,
       coverSub: false,
       ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
+      isHosts: false,
     };
   }
 
-  // hosts 格式
+  // hosts 格式：0.0.0.0 domain / 127.0.0.1 domain / 192.0.80.242 domain
   const parts = t.split(/\s+/);
   if (parts.length === 2 && isIPv4(parts[0])) {
     let cand = parts[1];
@@ -145,22 +161,45 @@ function parseRule(line) {
       original: t,
       coverSub: false,
       ip: blackhole ? null : ip,
+      isHosts: true, // ★ 标记来源
     };
   }
 
-  // 纯域名
+  // 纯域名 → 只精确匹配
   let tail = body.replace(/\^+$/, "").split("$")[0].split("/")[0];
   tail = stripWildcard(tail);
   if (tail === null) return null;
   const domain = normalizeDomain(tail);
   return domain
-    ? { domain, isWhite, original: t, coverSub: false, ip: null }
+    ? {
+        domain,
+        isWhite,
+        original: t,
+        coverSub: false,
+        ip: null,
+        isHosts: false,
+      }
     : null;
 }
 
+// ★ 修饰符判断
 const isImportant = (line) => /\$important\b/.test(line);
 const hasDnsRewrite = (line) => /\$dnsrewrite\b/.test(line);
 
+/**
+ * 判断白名单规则 wRule 能否覆盖黑名单规则 bRule。
+ *
+ * AdGuard Home 优先级（从高到低）：
+ *   1. @@...$important   白名单 important
+ *   2. ...$important     黑名单 important
+ *   3. @@...             普通白名单
+ *   4. ...               普通黑名单
+ *
+ * 覆盖范围：
+ *   白的范围必须 ≥ 黑的范围
+ *   - 白 coverSub=true  → 可覆盖任意黑
+ *   - 白 coverSub=false → 只能覆盖 bRule.coverSub=false 的黑
+ */
 function canCover(wRule, bRule) {
   if (isImportant(wRule.original)) return true;
   if (isImportant(bRule.original)) return false;
@@ -201,16 +240,31 @@ function removeRedundantSubdomains(domains) {
 
 /**
  * ★ 输出格式化：
- *   - rule.ip 存在 → 转成 $dnsrewrite 规则
- *   - 否则 → 保留原始行
+ *   - rule.ip 存在        → $dnsrewrite 规则
+ *   - hosts 格式黑名单    → |domain^       （精确匹配，与原意一致）
+ *   - hosts 格式白名单    → @@|domain^     （精确匹配，与原意一致）
+ *   - 其它                → 保留原始行
  */
 const formatOutput = (rule) => {
   if (!rule) return null;
+
+  // DNS 重写
   if (rule.ip) {
-    // 保留原有 coverSub 语义
     const anchor = rule.coverSub ? "||" : "|";
     return `${anchor}${rule.domain}^$dnsrewrite=${rule.ip}`;
   }
+
+  // ★ hosts 格式黑名单：0.0.0.0 domain → |domain^
+  if (rule.isHosts && !rule.isWhite) {
+    return `|${rule.domain}^`;
+  }
+
+  // ★ hosts 格式白名单：0.0.0.0 domain（在 allow 里）→ @@|domain^
+  if (rule.isHosts && rule.isWhite) {
+    return `@@|${rule.domain}^`;
+  }
+
+  // 其它保留原始行
   return rule.original;
 };
 
@@ -242,6 +296,7 @@ const buildAdGuardHomeLists = async (options) => {
     ? new LineWriter(outRedundantFile)
     : null;
 
+  // ★ Map：domain → rule { original, coverSub, isWhite, ip, isHosts }
   const blackMap = new Map();
   const whiteMap = new Map();
 
@@ -304,6 +359,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ★ 白名单覆盖黑名单
   for (const [wDomain, wRule] of whiteMap) {
+    // 1. 精确匹配
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
       if (canCover(wRule, bRule)) {
@@ -312,6 +368,7 @@ const buildAdGuardHomeLists = async (options) => {
       }
     }
 
+    // 2. 父域覆盖子域：只有 coverSub=true 的白才能覆盖子域
     if (wRule.coverSub) {
       const suffix = `.${wDomain}`;
       for (const bDomain of [...blackMap.keys()]) {
@@ -334,6 +391,7 @@ const buildAdGuardHomeLists = async (options) => {
     else normalBlack.set(d, rule);
   }
 
+  // ★ 只对普通黑名单做父子收敛
   const normalBlackDomains = removeRedundantSubdomains(
     new Set(normalBlack.keys()),
   );
@@ -370,6 +428,7 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
   ].sort();
 
+  // ★ 从 Map 拿 rule
   const getBlackRule = (d) =>
     blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
   const getWhiteRule = (d) =>
