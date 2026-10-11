@@ -1,6 +1,9 @@
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule: parseRuleBase, hasDnsRewrite } = require("./rule_parser");
 
+/**
+ * 包装 parseRule，返回完整字段。
+ */
 const parseRule = (line) =>
   parseRuleBase(line, {
     keepCoverSub: true,
@@ -8,6 +11,9 @@ const parseRule = (line) =>
     keepIsHosts: true,
   });
 
+/**
+ * 判断白名单规则 wRule 能否覆盖黑名单规则 bRule。
+ */
 function canCover(wRule, bRule) {
   if (wRule.important) return true;
   if (bRule.important) return false;
@@ -46,6 +52,9 @@ function removeRedundantSubdomains(domains) {
   return [...kept, ...wildcards].sort();
 }
 
+/**
+ * 输出格式化
+ */
 const formatOutput = (rule) => {
   if (!rule) return null;
 
@@ -65,24 +74,57 @@ const formatOutput = (rule) => {
   return rule.original;
 };
 
+/**
+ * ★ 黑名单分桶（6 层）
+ *   1. rewriteBlack → |domain^$dnsrewrite（不带 @@）
+ *   2. rewriteWhite → @@|domain^$dnsrewrite（带 @@）
+ *   3. modified     → 其他 $ 修饰符
+ *   4. exact        → |domain^
+ *   5. sub          → ||domain^
+ *   6. other
+ */
 const classifyBlackLine = (line) => {
-  if (line.includes("$dnsrewrite")) return "rewrite";
+  if (line.includes("$dnsrewrite")) {
+    return line.startsWith("@@") ? "rewriteWhite" : "rewriteBlack";
+  }
   if (line.includes("$")) return "modified";
   if (line.startsWith("||")) return "sub";
   if (line.startsWith("|")) return "exact";
   return "other";
 };
 
+/**
+ * ★ 白名单分桶（6 层）
+ *   1. rewriteBlack → |domain^$dnsrewrite（不带 @@，黑名单性质）
+ *   2. rewriteWhite → @@|domain^$dnsrewrite（带 @@）
+ *   3. modified     → 其他 $ 修饰符
+ *   4. exact        → @@|domain^
+ *   5. sub          → @@||domain^
+ *   6. other
+ */
 const classifyWhiteLine = (line) => {
-  if (line.includes("$dnsrewrite")) return "rewrite";
+  if (line.includes("$dnsrewrite")) {
+    return line.startsWith("@@") ? "rewriteWhite" : "rewriteBlack";
+  }
   if (line.includes("$")) return "modified";
   if (line.startsWith("@@||")) return "sub";
   if (line.startsWith("@@|")) return "exact";
   return "other";
 };
 
+/**
+ * ★ 桶输出：固定顺序，桶内排序
+ *   rewriteBlack → rewriteWhite → modified → exact → sub → other
+ */
 const writeBuckets = async (writer, buckets) => {
-  for (const key of ["rewrite", "modified", "exact", "sub", "other"]) {
+  for (const key of [
+    "rewriteBlack",
+    "rewriteWhite",
+    "modified",
+    "exact",
+    "sub",
+    "other",
+  ]) {
     const lines = buckets[key];
     if (!lines || lines.length === 0) continue;
     lines.sort();
@@ -210,7 +252,7 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   // ============================================================
-  // 第 3 步：反向排除
+  // 第 3 步：反向排除（同域名）
   // ============================================================
   const suppressedWhite = new Set();
 
@@ -242,6 +284,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
+  // 通配符白名单 + 子域 important/dnsrewrite 黑名单 → 强制重写
   // 锚点跟随原黑名单，不带 @@
   // ============================================================
   const dnsRewriteConflictSet = new Set();
@@ -346,11 +389,12 @@ const buildAdGuardHomeLists = async (options) => {
   const redundantCount = redundantSet.size;
 
   // ============================================================
-  // 第 8 步：输出产物
+  // 第 8 步：输出产物（6 层排序）
   // ============================================================
   // 8.1 黑名单
   const blackBuckets = {
-    rewrite: [],
+    rewriteBlack: [],
+    rewriteWhite: [],
     modified: [],
     exact: [],
     sub: [],
@@ -370,7 +414,8 @@ const buildAdGuardHomeLists = async (options) => {
 
   // 8.2 白名单
   const whiteBuckets = {
-    rewrite: [],
+    rewriteBlack: [],
+    rewriteWhite: [],
     modified: [],
     exact: [],
     sub: [],
@@ -384,16 +429,17 @@ const buildAdGuardHomeLists = async (options) => {
     whiteBuckets[classifyWhiteLine(line)].push(line);
   }
 
-  // ★ 冲突规则追加到白名单 rewrite 桶
+  // ★ 冲突规则（不带 @@）→ 白名单 rewriteBlack 桶
   for (const line of dnsRewriteConflictSet) {
-    whiteBuckets.rewrite.push(line);
+    whiteBuckets.rewriteBlack.push(line);
   }
 
   const allowWriter = new LineWriter(outAllowFile);
   await writeBuckets(allowWriter, whiteBuckets);
   await allowWriter.close();
 
-  const rewriteOutCount = whiteBuckets.rewrite.length;
+  const rewriteOutCount =
+    whiteBuckets.rewriteBlack.length + whiteBuckets.rewriteWhite.length;
 
   // ============================================================
   // 统计
