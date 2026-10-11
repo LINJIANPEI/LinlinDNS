@@ -22,8 +22,6 @@ const parseRule = (line) =>
  *
  * 覆盖范围：
  *   白的范围必须 ≥ 黑的范围
- *   - 白 coverSub=true  → 可覆盖任意黑
- *   - 白 coverSub=false → 只能覆盖 bRule.coverSub=false 的黑
  */
 function canCover(wRule, bRule) {
   if (wRule.important) return true;
@@ -64,7 +62,7 @@ function removeRedundantSubdomains(domains) {
 }
 
 /**
- * ★ 输出格式化：
+ * 输出格式化：
  *   - rule.ip 存在        → $dnsrewrite 规则
  *   - hosts 格式黑名单    → |domain^       （精确匹配，与原意一致）
  *   - hosts 格式白名单    → @@|domain^     （精确匹配，与原意一致）
@@ -124,6 +122,9 @@ const buildAdGuardHomeLists = async (options) => {
   const seenLines = new Set();
   const redundantSet = new Set();
 
+  // ============================================================
+  // 第 1 步：解析 cleaned.txt
+  // ============================================================
   await readLines(cleanedFile, async (raw) => {
     const line = raw.trim();
     if (!line) {
@@ -147,7 +148,7 @@ const buildAdGuardHomeLists = async (options) => {
     if (existing === undefined) {
       map.set(rule.domain, rule);
     } else {
-      // ★ 直接使用 rule.important
+      // ★ 同域名优先级：dnsrewrite > important > || > |
       if (rule.ip && !existing.ip) {
         redundantSet.add(existing.original);
         map.set(rule.domain, rule);
@@ -178,8 +179,11 @@ const buildAdGuardHomeLists = async (options) => {
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
 
-  // ★ 白名单覆盖黑名单
+  // ============================================================
+  // 第 2 步：白名单覆盖黑名单
+  // ============================================================
   for (const [wDomain, wRule] of whiteMap) {
+    // 2.1 精确匹配
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
       if (canCover(wRule, bRule)) {
@@ -188,6 +192,7 @@ const buildAdGuardHomeLists = async (options) => {
       }
     }
 
+    // 2.2 父域覆盖子域（只有 coverSub=true 的白才能覆盖子域）
     if (wRule.coverSub) {
       const suffix = `.${wDomain}`;
       for (const bDomain of [...blackMap.keys()]) {
@@ -202,7 +207,45 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
-  // ★ 拆黑名单为普通和 important（重写归入 important 级别）
+  // ============================================================
+  // 第 3 步：★ 反向排除
+  // 被 important 黑名单 / dnsrewrite 黑名单压制的普通白名单 → 剔除
+  // ============================================================
+  const suppressedWhite = new Set();
+
+  for (const [wDomain, wRule] of whiteMap) {
+    const bRule = blackMap.get(wDomain);
+    if (!bRule) continue;
+
+    // 普通白 vs important 黑 → 白被压制
+    if (!wRule.important && bRule.important) {
+      suppressedWhite.add(wDomain);
+      continue;
+    }
+
+    // 普通白 vs dnsrewrite 黑 → 白被压制
+    if (!wRule.important && bRule.ip) {
+      suppressedWhite.add(wDomain);
+      continue;
+    }
+  }
+
+  // 从 whiteMap 中剔除（记入 nowhitelist 审计）
+  for (const d of suppressedWhite) {
+    const rule = whiteMap.get(d);
+    if (rule) {
+      nowhitelistSet.add(rule.original);
+      whiteMap.delete(d);
+    }
+  }
+
+  console.log(
+    `反向排除：被 important/dnsrewrite 黑名单压制的白名单 ${suppressedWhite.size} 条`,
+  );
+
+  // ============================================================
+  // 第 4 步：拆黑名单为普通和 important
+  // ============================================================
   const normalBlack = new Map();
   const importantBlack = new Map();
   for (const [d, rule] of blackMap) {
@@ -210,6 +253,7 @@ const buildAdGuardHomeLists = async (options) => {
     else normalBlack.set(d, rule);
   }
 
+  // 只对普通黑名单做父子收敛
   const normalBlackDomains = removeRedundantSubdomains(
     new Set(normalBlack.keys()),
   );
@@ -224,7 +268,9 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalBlackDomains, ...importantBlackDomains]),
   ].sort();
 
-  // ★ 白名单同理
+  // ============================================================
+  // 第 5 步：拆白名单为普通和 important
+  // ============================================================
   const normalWhite = new Map();
   const importantWhite = new Map();
   for (const [d, rule] of whiteMap) {
@@ -251,6 +297,9 @@ const buildAdGuardHomeLists = async (options) => {
   const getWhiteRule = (d) =>
     whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
 
+  // ============================================================
+  // 第 6 步：写归档文件
+  // ============================================================
   if (noblacklistWriter) {
     for (const line of [...noblacklistSet].sort()) {
       await noblacklistWriter.write(line);
@@ -275,6 +324,9 @@ const buildAdGuardHomeLists = async (options) => {
   }
   const redundantCount = redundantSet.size;
 
+  // ============================================================
+  // 第 7 步：输出产物
+  // ============================================================
   let rewriteOutCount = 0;
 
   const rulesWriter = new LineWriter(outRulesFile);
@@ -296,12 +348,16 @@ const buildAdGuardHomeLists = async (options) => {
   }
   await allowWriter.close();
 
+  // ============================================================
+  // 统计
+  // ============================================================
   const stats = {
     blacklistCount: blackDomains.length,
     whitelistCount: whiteDomains.length,
     dnsRewriteCount: rewriteOutCount,
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
+    suppressedWhiteCount: suppressedWhite.size,
     skippedCount,
     redundantCount,
   };
@@ -311,6 +367,7 @@ const buildAdGuardHomeLists = async (options) => {
       `白名单 ${stats.whitelistCount} 条（含重写 ${stats.dnsRewriteCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
+      `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
       `skipped ${stats.skippedCount} 条，` +
       `redundant ${stats.redundantCount} 条`,
   );
