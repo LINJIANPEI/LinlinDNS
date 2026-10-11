@@ -5,6 +5,18 @@ const DOMAIN_RE =
   /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
 
 /**
+ * ★ 处理通配符域名。
+ * - *.domain.com → 剥离 *. → 'domain.com'
+ * - ad*banner   → 含非前缀 * → 返回 null
+ */
+const stripWildcard = (domain) => {
+  let d = domain;
+  if (d.startsWith("*.")) d = d.slice(2);
+  if (d.includes("*")) return null;
+  return d;
+};
+
+/**
  * 从规则里提取域名。无法转换的返回 null。
  */
 const extractDomain = (line) => {
@@ -31,7 +43,11 @@ const extractDomain = (line) => {
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
 
-    // ★ 先判断是否带路径，带路径的直接丢
+    // ★ 先处理通配符
+    rest = stripWildcard(rest);
+    if (rest === null) return null;
+
+    // 带路径的丢
     const beforeMod = rest.split("$")[0];
     const core = beforeMod.split("^")[0];
     if (core.includes("/")) return null;

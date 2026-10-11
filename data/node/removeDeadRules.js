@@ -2,7 +2,6 @@ const { Resolver } = require("node:dns/promises");
 const fs = require("node:fs");
 const path = require("node:path");
 const { finished } = require("node:stream/promises");
-const { parse: parseTld } = require("tldts");
 const { readLines, LineWriter } = require("./stream_utils");
 
 const CACHE_TTL = 3110400; // 36 天
@@ -13,8 +12,6 @@ const DNS_TIMEOUT = 800;
 const DEFAULT_CACHE_FILE = "./dns-cache.json";
 const DEFAULT_PROGRESS_STEP = 1000;
 
-const DOMAIN_RE =
-  /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
 const IPV4_RE = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
 
 // ============================================================
@@ -63,34 +60,39 @@ const pLimit = (concurrency) => {
 };
 
 /**
- * 域名规范化。
- * - 用 tldts 的公共后缀列表（PSL）判断 TLD 是否真实存在
- * - 不再使用硬编码假 TLD 名单
- * - 层级放宽到 10 层，总长放宽到 253
+ * ★ 处理通配符域名。
+ * - *.domain.com → 剥离 *. → 'domain.com'
+ * - ad*banner   → 含非前缀 * → 返回 null
+ */
+const stripWildcard = (domain) => {
+  let d = domain;
+  if (d.startsWith("*.")) d = d.slice(2);
+  if (d.includes("*")) return null;
+  return d;
+};
+
+/**
+ * 域名规范化（只做结构校验）。
+ * - 不再做 TLD 校验，交给 DNS 查询裁决
+ * - 保留字符、层级、长度校验
  */
 const normalizeDomain = (value) => {
   const d = value.trim().toLowerCase().replace(/\.+$/, "").replace(/^\.+/, "");
   if (!d) return null;
   if (d === "localhost" || d === "localhost.localdomain") return null;
+  if (d.includes(" ")) return null;
+  if (!/^[a-z0-9.-]+$/.test(d)) return null;
+  if (d.includes("..")) return null;
+  if (isIPv4(d)) return null;
 
-  // ★ 用 tldts 解析
-  const result = parseTld(d);
-
-  // IP 地址直接排除
-  if (result.isIp) return null;
-
-  // 无公共后缀或无注册域名 → 丢弃
-  if (!result.publicSuffix || !result.domain) return null;
-
-  // ★ 必须是 ICANN 段（真实 TLD）
-  if (!result.isIcann) return null;
-
-  // 结构性校验
   const labels = d.split(".");
-  if (labels.length > 10) return null;
-  if (d.length > 253) return null;
+  if (labels.length < 2) return null; // 至少 a.b
+  if (labels.length > 10) return null; // 层级上限
+  if (d.length > 253) return null; // RFC 上限
+
   for (const label of labels) {
-    if (label.length > 63) return null;
+    if (label.length < 1 || label.length > 63) return null;
+    if (!/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(label)) return null;
   }
 
   return d;
@@ -139,6 +141,11 @@ const parseRule = (line) => {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
+
+    // ★ 处理通配符
+    rest = stripWildcard(rest);
+    if (rest === null) return null;
+
     const d = rest
       .split("^")[0]
       .split("/")[0]
@@ -203,11 +210,9 @@ const createFileCache = (filePath) => {
       const raw = fs.readFileSync(filePath, "utf-8");
       const t = raw.trimStart();
       if (t.startsWith("{")) {
-        // 兼容旧 JSON 格式
         const data = JSON.parse(raw);
         for (const k of Object.keys(data)) store.set(k, data[k]);
       } else {
-        // NDJSON
         for (const line of raw.split("\n")) {
           if (!line) continue;
           try {
@@ -245,16 +250,6 @@ const createFileCache = (filePath) => {
 // ============================================================
 // 主函数
 // ============================================================
-/**
- * 流式剔除死域名。
- *
- * @param {string[]} inputFiles - 输入规则文件路径（可以有多个）
- * @param {object} options
- * @param {string} options.cleanedFile
- * @param {string} [options.nocleanedFile]
- * @param {string} [options.passthroughFile]
- * @param {string} [options.deadDomainsFile]
- */
 const removeDeadRules = async (inputFiles, options) => {
   const {
     cleanedFile,

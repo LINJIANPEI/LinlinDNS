@@ -1,9 +1,6 @@
 const path = require("node:path");
 const { readLines, LineWriter } = require("./stream_utils");
 
-const DOMAIN_RE =
-  /^(?:\*\.)?(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
-
 // ★ AdGuard Home DNS 支持的修饰符
 const DNS_SUPPORTED_MODIFIERS = new Set([
   "important",
@@ -24,28 +21,42 @@ function isIPv4(s) {
   });
 }
 
+/**
+ * ★ 处理通配符域名。
+ * - *.domain.com → 剥离 *. → 'domain.com'
+ * - ad*banner   → 含非前缀 * → 返回 null
+ */
+const stripWildcard = (domain) => {
+  let d = domain;
+  if (d.startsWith("*.")) d = d.slice(2);
+  if (d.includes("*")) return null;
+  return d;
+};
+
+/**
+ * 域名规范化（只做结构校验）。
+ */
 function normalizeDomain(value) {
   const domain = value
     .trim()
     .toLowerCase()
     .replace(/\.+$/, "")
-    .replace(/^\.+/, "")
-    .replace(/^\*\./, "");
+    .replace(/^\.+/, "");
   if (!domain) return null;
   if (domain === "localhost" || domain === "localhost.localdomain") return null;
+  if (domain.includes(" ")) return null;
+  if (!/^[a-z0-9.-]+$/.test(domain)) return null;
+  if (domain.includes("..")) return null;
   if (isIPv4(domain)) return null;
-  if (!DOMAIN_RE.test(domain)) return null;
 
   const labels = domain.split(".");
-  if (labels.length > 5) return null;
-  if (domain.length > 80) return null;
-
-  const tld = labels[labels.length - 1];
-  if (tld.length > 24) return null;
-  if (!/^[a-z]+$/.test(tld)) return null;
+  if (labels.length < 2) return null;
+  if (labels.length > 10) return null;
+  if (domain.length > 253) return null;
 
   for (const label of labels) {
-    if (label.length > 62) return null;
+    if (label.length < 1 || label.length > 63) return null;
+    if (!/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(label)) return null;
   }
 
   return domain;
@@ -84,10 +95,14 @@ function parseRule(line) {
 
   // ||domain^ → 覆盖子域
   if (body.startsWith("||")) {
-    const rest = body.slice(2).replace(/^\^/, "");
+    let rest = body.slice(2).replace(/^\^/, "");
+
+    // ★ 处理通配符
+    rest = stripWildcard(rest);
+    if (rest === null) return null;
+
     const beforeMod = rest.split("$")[0];
     const core = beforeMod.split("^")[0];
-    // ★ 带路径的丢
     if (core.includes("/")) return null;
     const domain = normalizeDomain(core);
     return domain ? { domain, isWhite, original: t, coverSub: true } : null;
@@ -95,10 +110,14 @@ function parseRule(line) {
 
   // |domain^ → 只精确匹配
   if (body.startsWith("|")) {
-    const rest = body.slice(1).replace(/^\^/, "");
+    let rest = body.slice(1).replace(/^\^/, "");
+
+    // ★ 处理通配符
+    rest = stripWildcard(rest);
+    if (rest === null) return null;
+
     const beforeMod = rest.split("$")[0];
     const core = beforeMod.split("^")[0];
-    // ★ 带路径的丢
     if (core.includes("/")) return null;
     const domain = normalizeDomain(core);
     return domain ? { domain, isWhite, original: t, coverSub: false } : null;
@@ -126,17 +145,6 @@ const hasDnsRewrite = (line) => /\$dnsrewrite\b/.test(line);
 
 /**
  * 判断白名单规则 wRule 能否覆盖黑名单规则 bRule。
- *
- * AdGuard Home 优先级（从高到低）：
- *   1. @@...$important   白名单 important
- *   2. ...$important     黑名单 important
- *   3. @@...             普通白名单
- *   4. ...               普通黑名单
- *
- * 覆盖范围：
- *   白的范围必须 ≥ 黑的范围
- *   - 白 coverSub=true  → 可覆盖任意黑
- *   - 白 coverSub=false → 只能覆盖 bRule.coverSub=false 的黑
  */
 function canCover(wRule, bRule) {
   if (isImportant(wRule.original)) return true;
@@ -184,7 +192,7 @@ const buildAdGuardHomeLists = async (options) => {
     outNoBlacklistFile,
     outNoWhitelistFile,
     outSkippedFile,
-    outRedundantFile, // ★ 新增
+    outRedundantFile,
   } = options;
 
   if (!cleanedFile) throw new TypeError("cleanedFile 必填");
@@ -202,16 +210,13 @@ const buildAdGuardHomeLists = async (options) => {
   const skippedWriter = outSkippedFile ? new LineWriter(outSkippedFile) : null;
   const redundantWriter = outRedundantFile
     ? new LineWriter(outRedundantFile)
-    : null; // ★ 新增
+    : null;
 
-  // ★ Map：domain → rule { original, coverSub, isWhite }
   const blackMap = new Map();
   const whiteMap = new Map();
 
   let skippedCount = 0;
   const seenLines = new Set();
-
-  // ★ 被同域名优先级挤掉的规则
   const redundantSet = new Set();
 
   await readLines(cleanedFile, async (raw) => {
@@ -241,15 +246,12 @@ const buildAdGuardHomeLists = async (options) => {
       const exImp = isImportant(existing.original);
 
       if (curImp && !exImp) {
-        // 新 important 覆盖旧普通 → 旧进 redundant
         redundantSet.add(existing.original);
         map.set(rule.domain, rule);
       } else if (curImp === exImp && rule.coverSub && !existing.coverSub) {
-        // 新范围更大 → 旧进 redundant
         redundantSet.add(existing.original);
         map.set(rule.domain, rule);
       } else {
-        // 新被挤掉 → 新进 redundant
         redundantSet.add(rule.original);
       }
     }
@@ -266,7 +268,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ★ 白名单覆盖黑名单
   for (const [wDomain, wRule] of whiteMap) {
-    // 1. 精确匹配
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
       if (canCover(wRule, bRule)) {
@@ -275,7 +276,6 @@ const buildAdGuardHomeLists = async (options) => {
       }
     }
 
-    // 2. 父域覆盖子域：只有 coverSub=true 的白才能覆盖子域
     if (wRule.coverSub) {
       const suffix = `.${wDomain}`;
       for (const bDomain of [...blackMap.keys()]) {
@@ -298,7 +298,6 @@ const buildAdGuardHomeLists = async (options) => {
     else normalBlack.set(d, rule);
   }
 
-  // ★ 只对普通黑名单做父子收敛
   const normalBlackDomains = removeRedundantSubdomains(
     new Set(normalBlack.keys()),
   );
@@ -335,7 +334,6 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
   ].sort();
 
-  // ★ 从 Map 拿原始行
   const getBlackOriginal = (d) => {
     const rule = blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
     return rule ? rule.original : null;
@@ -361,7 +359,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   if (skippedWriter) await skippedWriter.close();
 
-  // ★ 写 redundant.txt
   if (redundantWriter) {
     for (const line of [...redundantSet].sort()) {
       await redundantWriter.write(line);
@@ -370,7 +367,6 @@ const buildAdGuardHomeLists = async (options) => {
   }
   const redundantCount = redundantSet.size;
 
-  // ★ 输出原始行
   const rulesWriter = new LineWriter(outRulesFile);
   for (const d of blackDomains) {
     const original = getBlackOriginal(d);
@@ -391,7 +387,7 @@ const buildAdGuardHomeLists = async (options) => {
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
     skippedCount,
-    redundantCount, // ★ 新增
+    redundantCount,
   };
 
   console.log(
