@@ -17,25 +17,39 @@ const stripWildcard = (domain) => {
 };
 
 /**
- * 从规则里提取域名。无法转换的返回 null。
+ * 判断是否为黑洞 IP（视为拦截）。
+ */
+const isBlackholeIp = (ip) =>
+  ip === "0.0.0.0" ||
+  ip.startsWith("127.") ||
+  ip === "::1";
+
+/**
+ * 从规则里提取域名。
+ * @returns { domain, isWhite, ip } | null
+ *   ip 非空 → 该规则是 DNS 重写（$dnsrewrite）
+ *   ip 为空 → 普通黑/白名单
  */
 const extractDomain = (line) => {
   const isWhite = line.startsWith("@@");
   const body = isWhite ? line.slice(2) : line;
 
-  // hosts 格式：0.0.0.0 example.com / 127.0.0.1 example.com / 0.0.0.0 *.domain.com
+  // hosts 格式：0.0.0.0 example.com / 192.0.80.242 cdn.com / 0.0.0.0 *.domain.com
   const parts = line.split(/\s+/);
   if (parts.length === 2) {
     const hostIp = parts[0];
     if (/^(\d{1,3}\.){3}\d{1,3}$/.test(hostIp)) {
-      // ★ 处理通配符
       let cand = parts[1].toLowerCase().replace(/\.+$/, "");
       cand = stripWildcard(cand);
       if (cand === null) return null;
 
       if (DOMAIN_RE.test(cand)) {
-        const isBlacklistIp = hostIp === "0.0.0.0" || hostIp.startsWith("127.");
-        return { domain: cand, isWhite: !isBlacklistIp };
+        const blackhole = isBlackholeIp(hostIp);
+        return {
+          domain: cand,
+          isWhite: !blackhole,
+          ip: blackhole ? null : hostIp,   // ★ 非黑洞 IP 记录，作 dnsrewrite
+        };
       }
       return null;
     }
@@ -47,7 +61,6 @@ const extractDomain = (line) => {
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
 
-    // ★ 处理通配符
     rest = stripWildcard(rest);
     if (rest === null) return null;
 
@@ -57,19 +70,24 @@ const extractDomain = (line) => {
 
     const d = core.toLowerCase().replace(/\.+$/, "");
     if (d && DOMAIN_RE.test(d)) {
-      return { domain: d, isWhite };
+      // 检查 $dnsrewrite 修饰符
+      const dnsrewriteMatch = rest.match(/\$dnsrewrite=([^,;$]+)/i);
+      return {
+        domain: d,
+        isWhite,
+        ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
+      };
     }
   }
 
-  // ★ 纯域名（含 *.domain.com）
+  // 纯域名（含 *.domain.com）
   if (!body.includes("/") && !body.includes("$")) {
     let d = body.toLowerCase().replace(/\.+$/, "");
-    // ★ 处理通配符
     d = stripWildcard(d);
     if (d === null) return null;
 
     if (DOMAIN_RE.test(d)) {
-      return { domain: d, isWhite }; // ★ 不再写死 false
+      return { domain: d, isWhite, ip: null };
     }
   }
 
@@ -90,6 +108,7 @@ const prepareDnsRules = async (inputFile, outDir) => {
 
   let total = 0;
   let dropped = 0;
+  let rewriteCount = 0;
 
   await readLines(inputFile, async (line) => {
     const t = line.trim();
@@ -101,6 +120,8 @@ const prepareDnsRules = async (inputFile, outDir) => {
       dropped++;
       return;
     }
+
+    if (result.ip) rewriteCount++;
 
     const map = result.isWhite ? seenWhite : seenBlack;
     if (!map.has(result.domain)) {
@@ -119,7 +140,7 @@ const prepareDnsRules = async (inputFile, outDir) => {
   await whiteWriter.close();
 
   console.log(
-    `DNS 兼容过滤完成：输入 ${total} 条 | 黑 ${seenBlack.size} | 白 ${seenWhite.size} | 丢弃 ${dropped}`,
+    `DNS 兼容过滤完成：输入 ${total} 条 | 黑 ${seenBlack.size} | 白 ${seenWhite.size}（含重写 ${rewriteCount}）| 丢弃 ${dropped}`,
   );
 
   return {
@@ -127,6 +148,7 @@ const prepareDnsRules = async (inputFile, outDir) => {
     whiteFile,
     blackCount: seenBlack.size,
     whiteCount: seenWhite.size,
+    rewriteCount,
     dropped,
   };
 };
