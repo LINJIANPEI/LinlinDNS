@@ -95,7 +95,6 @@ const parseRule = (line) => {
   if (t.startsWith("#") && !EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m)))
     return null;
 
-  // IP 域名格式
   const c0 = t.charCodeAt(0);
   if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
     const parts = t.split(/\s+/);
@@ -119,7 +118,6 @@ const parseRule = (line) => {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  // ||domain^ 或 |domain^
   if (body.startsWith("||") || body.startsWith("|")) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
@@ -145,7 +143,6 @@ const parseRule = (line) => {
     };
   }
 
-  // 兜底
   let tail = body.replace(/\^+$/, "").split("$")[0].split("/")[0];
   tail = stripWildcard(tail);
   if (tail === null) return null;
@@ -154,28 +151,43 @@ const parseRule = (line) => {
 };
 
 // ============================================================
-// DNS 查询
+// DNS 查询：A 优先，失败兜底 AAAA
 // ============================================================
-const resolveA = async (domain, nameservers, port) => {
-  const resolver = getResolver(nameservers, port);
+const withTimeout = (promise, ms) => {
   let timer;
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      timer = setTimeout(() => reject(new Error("DNS timeout")), ms);
+    }),
+  ]).finally(() => {
+    if (timer) clearTimeout(timer);
+  });
+};
+
+const resolveHost = async (domain, nameservers, port) => {
+  const resolver = getResolver(nameservers, port);
+
+  // ★ 1. 先查 A 记录
   try {
-    const records = await Promise.race([
-      resolver.resolve4(domain),
-      new Promise((_, reject) => {
-        timer = setTimeout(() => reject(new Error("DNS timeout")), DNS_TIMEOUT);
-      }),
-    ]);
-    return records.filter((ip) => ip !== "0.0.0.0");
+    const v4 = await withTimeout(resolver.resolve4(domain), DNS_TIMEOUT);
+    const valid = v4.filter((ip) => ip !== "0.0.0.0");
+    if (valid.length > 0) return valid;
+  } catch {
+    // A 查询失败 → 继续尝试 AAAA
+  }
+
+  // ★ 2. A 失败后兜底查 AAAA
+  try {
+    const v6 = await withTimeout(resolver.resolve6(domain), DNS_TIMEOUT);
+    return v6.filter((ip) => ip !== "::");
   } catch {
     return [];
-  } finally {
-    if (timer) clearTimeout(timer);
   }
 };
 
 const checkDomain = async (domain, { nameservers, port }) => {
-  return resolveA(domain, nameservers, port);
+  return resolveHost(domain, nameservers, port);
 };
 
 // ============================================================
@@ -246,7 +258,6 @@ const removeDeadRules = async (inputFiles, options) => {
     whiteSet = new Set(),
     cache,
     cacheFile = DEFAULT_CACHE_FILE,
-    // ★ 默认改为 false：白名单也参与 DNS 检测
     keepWhiteRules = false,
     autoSaveCache = true,
     onProgress,
@@ -260,7 +271,6 @@ const removeDeadRules = async (inputFiles, options) => {
 
   // ========================================================
   // 第 1 遍：提取域名
-  // 三态标记：0=黑名单，1=白名单，2=重写
   // ========================================================
   const domainMap = new Map();
   const passthroughWriter = passthroughFile
@@ -301,7 +311,7 @@ const removeDeadRules = async (inputFiles, options) => {
   );
 
   // ========================================================
-  // 第 2 遍：DNS 查询（黑白 + 重写全部参与）
+  // 第 2 遍：DNS 查询
   // ========================================================
   const limit = pLimit(concurrency);
   const now = Math.floor(Date.now() / 1000);
@@ -359,15 +369,12 @@ const removeDeadRules = async (inputFiles, options) => {
 
   // ========================================================
   // 计算"死且无存活父域"的集合
-  // ★ keepWhiteRules=false 时，白名单也参与死亡判定
   // ========================================================
   const deadWithoutAliveParent = new Set();
   let parentAliveCount = 0;
 
   for (const [domain, flag] of domainMap) {
     if (aliveSet.has(domain)) continue;
-
-    // ★ 只有显式开启 keepWhiteRules 时才跳过白名单
     if (keepWhiteRules && flag === 1) continue;
     if (keepWhiteRules && whiteSet.has(domain)) continue;
 
@@ -387,7 +394,6 @@ const removeDeadRules = async (inputFiles, options) => {
 
   // ========================================================
   // 第 3 遍：分类输出
-  // ★ 白名单也走死亡判定
   // ========================================================
   const cleanedWriter = new LineWriter(cleanedFile);
   const nocleanedWriter = nocleanedFile ? new LineWriter(nocleanedFile) : null;
@@ -414,7 +420,6 @@ const removeDeadRules = async (inputFiles, options) => {
       const isWhite = parsed.isWhite || whiteSet.has(parsed.domain);
       const isDead = deadWithoutAliveParent.has(parsed.domain);
 
-      // 重写规则统计
       if (isRewrite) {
         if (isDead) {
           if (nocleanedWriter) await nocleanedWriter.write(raw);
@@ -428,7 +433,6 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
 
-      // ★ 白名单：也走死亡判定（除非 keepWhiteRules=true）
       if (isWhite && !keepWhiteRules) {
         if (isDead) {
           if (nocleanedWriter) await nocleanedWriter.write(raw);
@@ -442,7 +446,6 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
 
-      // 白名单 + keepWhiteRules=true：直接保留
       if (isWhite && keepWhiteRules) {
         await cleanedWriter.write(raw);
         cleanedCount++;
@@ -450,7 +453,6 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
 
-      // 黑名单：走死亡判定
       if (isDead) {
         if (nocleanedWriter) await nocleanedWriter.write(raw);
         nocleanedCount++;
