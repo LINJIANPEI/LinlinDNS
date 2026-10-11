@@ -1,9 +1,6 @@
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule: parseRuleBase, hasDnsRewrite } = require("./rule_parser");
 
-/**
- * ★ 包装 parseRule，返回完整字段。
- */
 const parseRule = (line) =>
   parseRuleBase(line, {
     keepCoverSub: true,
@@ -11,15 +8,6 @@ const parseRule = (line) =>
     keepIsHosts: true,
   });
 
-/**
- * 判断白名单规则 wRule 能否覆盖黑名单规则 bRule。
- *
- * AdGuard Home 优先级（从高到低）：
- *   1. @@...$important   白名单 important
- *   2. ...$important     黑名单 important
- *   3. @@...             普通白名单
- *   4. ...               普通黑名单
- */
 function canCover(wRule, bRule) {
   if (wRule.important) return true;
   if (bRule.important) return false;
@@ -58,13 +46,6 @@ function removeRedundantSubdomains(domains) {
   return [...kept, ...wildcards].sort();
 }
 
-/**
- * 输出格式化：
- *   - rule.ip 存在        → $dnsrewrite 规则
- *   - hosts 格式黑名单    → |domain^
- *   - hosts 格式白名单    → @@|domain^
- *   - 其它                → 保留原始行
- */
 const formatOutput = (rule) => {
   if (!rule) return null;
 
@@ -82,6 +63,52 @@ const formatOutput = (rule) => {
   }
 
   return rule.original;
+};
+
+/**
+ * ★ 黑名单分桶
+ *   1. rewrite    → $dnsrewrite 规则
+ *   2. modified   → 其它带 $ 修饰符（$important 等）
+ *   3. exact      → |domain^  精确匹配
+ *   4. sub        → ||domain^ 子域匹配
+ *   5. other
+ */
+const classifyBlackLine = (line) => {
+  if (line.includes("$dnsrewrite")) return "rewrite";
+  if (line.includes("$")) return "modified";
+  if (line.startsWith("||")) return "sub";
+  if (line.startsWith("|")) return "exact";
+  return "other";
+};
+
+/**
+ * ★ 白名单分桶
+ *   1. rewrite    → $dnsrewrite 规则
+ *   2. modified   → 其它带 $ 修饰符
+ *   3. exact      → @@|domain^  精确匹配
+ *   4. sub        → @@||domain^ 子域匹配
+ *   5. other
+ */
+const classifyWhiteLine = (line) => {
+  if (line.includes("$dnsrewrite")) return "rewrite";
+  if (line.includes("$")) return "modified";
+  if (line.startsWith("@@||")) return "sub";
+  if (line.startsWith("@@|")) return "exact";
+  return "other";
+};
+
+/**
+ * ★ 桶输出：按固定顺序，桶内排序
+ */
+const writeBuckets = async (writer, buckets) => {
+  for (const key of ["rewrite", "modified", "exact", "sub", "other"]) {
+    const lines = buckets[key];
+    if (!lines || lines.length === 0) continue;
+    lines.sort();
+    for (const line of lines) {
+      await writer.write(line);
+    }
+  }
 };
 
 const buildAdGuardHomeLists = async (options) => {
@@ -120,7 +147,7 @@ const buildAdGuardHomeLists = async (options) => {
   const redundantSet = new Set();
 
   // ============================================================
-  // 第 1 步：解析 cleaned.txt
+  // 第 1 步：解析
   // ============================================================
   await readLines(cleanedFile, async (raw) => {
     const line = raw.trim();
@@ -145,7 +172,6 @@ const buildAdGuardHomeLists = async (options) => {
     if (existing === undefined) {
       map.set(rule.domain, rule);
     } else {
-      // ★ 同域名优先级：dnsrewrite > important > || > |
       if (rule.ip && !existing.ip) {
         redundantSet.add(existing.original);
         map.set(rule.domain, rule);
@@ -180,7 +206,6 @@ const buildAdGuardHomeLists = async (options) => {
   // 第 2 步：白名单覆盖黑名单
   // ============================================================
   for (const [wDomain, wRule] of whiteMap) {
-    // 2.1 精确匹配
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
       if (canCover(wRule, bRule)) {
@@ -189,7 +214,6 @@ const buildAdGuardHomeLists = async (options) => {
       }
     }
 
-    // 2.2 父域覆盖子域
     if (wRule.coverSub) {
       const suffix = `.${wDomain}`;
       for (const bDomain of [...blackMap.keys()]) {
@@ -205,8 +229,7 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   // ============================================================
-  // 第 3 步：反向排除（同域名）
-  // 被 important 黑名单 / dnsrewrite 黑名单压制的普通白名单 → 剔除
+  // 第 3 步：反向排除
   // ============================================================
   const suppressedWhite = new Set();
 
@@ -237,13 +260,7 @@ const buildAdGuardHomeLists = async (options) => {
   );
 
   // ============================================================
-  // 第 4 步：★ $dnsrewrite 冲突检测
-  // 通配符白名单 + 子域 important/dnsrewrite 黑名单 → 生成白名单格式重写
-  //
-  // 语义说明：
-  //   @@||domain^$dnsrewrite=0.0.0.0
-  //   表示"放行 domain 并用 0.0.0.0 响应"
-  //   实际效果 = 返回 0.0.0.0 = 无法访问 = 类似拦截
+  // 第 4 步：$dnsrewrite 冲突检测
   // ============================================================
   const dnsRewriteConflictSet = new Set();
 
@@ -254,7 +271,6 @@ const buildAdGuardHomeLists = async (options) => {
     for (const [bDomain, bRule] of blackMap) {
       if (!bDomain.endsWith(suffix)) continue;
       if (bRule.important || bRule.ip) {
-        // ★ 白名单格式的 $dnsrewrite
         dnsRewriteConflictSet.add(`@@||${bDomain}^$dnsrewrite=0.0.0.0`);
       }
     }
@@ -262,12 +278,12 @@ const buildAdGuardHomeLists = async (options) => {
 
   if (dnsRewriteConflictSet.size > 0) {
     console.log(
-      `$dnsrewrite 冲突：${dnsRewriteConflictSet.size} 条子域需强制重写（白名单格式）`,
+      `$dnsrewrite 冲突：${dnsRewriteConflictSet.size} 条子域需强制重写`,
     );
   }
 
   // ============================================================
-  // 第 5 步：拆黑名单为普通和 important
+  // 第 5 步：拆黑名单
   // ============================================================
   const normalBlack = new Map();
   const importantBlack = new Map();
@@ -291,7 +307,7 @@ const buildAdGuardHomeLists = async (options) => {
   ].sort();
 
   // ============================================================
-  // 第 6 步：拆白名单为普通和 important
+  // 第 6 步：拆白名单
   // ============================================================
   const normalWhite = new Map();
   const importantWhite = new Map();
@@ -347,36 +363,54 @@ const buildAdGuardHomeLists = async (options) => {
   const redundantCount = redundantSet.size;
 
   // ============================================================
-  // 第 8 步：输出产物
+  // 第 8 步：输出产物（五层排序）
   // ============================================================
-  let rewriteOutCount = 0;
-
   // 8.1 黑名单
-  const rulesWriter = new LineWriter(outRulesFile);
+  const blackBuckets = {
+    rewrite: [],
+    modified: [],
+    exact: [],
+    sub: [],
+    other: [],
+  };
+
   for (const d of blackDomains) {
     const rule = getBlackRule(d);
     const line = formatOutput(rule);
-    if (line) await rulesWriter.write(line);
+    if (!line) continue;
+    blackBuckets[classifyBlackLine(line)].push(line);
   }
+
+  const rulesWriter = new LineWriter(outRulesFile);
+  await writeBuckets(rulesWriter, blackBuckets);
   await rulesWriter.close();
 
   // 8.2 白名单
-  const allowWriter = new LineWriter(outAllowFile);
+  const whiteBuckets = {
+    rewrite: [],
+    modified: [],
+    exact: [],
+    sub: [],
+    other: [],
+  };
+
   for (const d of whiteDomains) {
     const rule = getWhiteRule(d);
     const line = formatOutput(rule);
-    if (line) {
-      await allowWriter.write(line);
-      if (rule && rule.ip) rewriteOutCount++;
-    }
+    if (!line) continue;
+    whiteBuckets[classifyWhiteLine(line)].push(line);
   }
 
-  // ★ 8.3 追加 $dnsrewrite 冲突规则（白名单格式）
-  for (const line of [...dnsRewriteConflictSet].sort()) {
-    await allowWriter.write(line);
+  // 冲突生成的 dnsrewrite 追加到 rewrite 桶
+  for (const line of dnsRewriteConflictSet) {
+    whiteBuckets.rewrite.push(line);
   }
 
+  const allowWriter = new LineWriter(outAllowFile);
+  await writeBuckets(allowWriter, whiteBuckets);
   await allowWriter.close();
+
+  const rewriteOutCount = whiteBuckets.rewrite.length;
 
   // ============================================================
   // 统计
@@ -396,10 +430,11 @@ const buildAdGuardHomeLists = async (options) => {
   console.log(
     `构建完成：黑名单 ${blackDomains.length} 条，` +
       `白名单 ${stats.whitelistCount} 条` +
-      `（含重写 ${stats.dnsRewriteCount}，冲突重写 ${stats.dnsRewriteConflictCount}），` +
+      `（含重写 ${stats.dnsRewriteCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
+      `冲突重写 ${stats.dnsRewriteConflictCount} 条，` +
       `skipped ${stats.skippedCount} 条，` +
       `redundant ${stats.redundantCount} 条`,
   );
