@@ -17,6 +17,16 @@ const removeDir = "./data/remove";
 
 const p = (f) => path.join(tmpDir, f);
 
+// ★ 归档文件名（中文）
+const ARCHIVE = {
+  dead: "死域名.txt",
+  passthrough: "非域名行.txt",
+  noBlacklist: "被覆盖的黑名单.txt",
+  noWhitelist: "被收敛的白名单.txt",
+  skipped: "无法解析.txt",
+  redundant: "冗余规则.txt",
+};
+
 async function main() {
   try {
     await createDir(tmpDir);
@@ -31,7 +41,6 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // ★ 合并 + 去重 + 过滤 一步到位
     await mergeAll(tmpDir, p("all.txt"));
 
     const dns = await prepareDnsRules(p("all.txt"), tmpDir);
@@ -50,17 +59,19 @@ async function main() {
 
     await buildAdGuardHomeLists({
       cleanedFile: p("cleaned.txt"),
+      // ★ 产物保持英文（订阅链接指向它们）
       outRulesFile: path.join(outDir, "rules.txt"),
       outAllowFile: path.join(outDir, "allow.txt"),
-      outNoBlacklistFile: path.join(removeDir, "noblacklist.txt"),
-      outNoWhitelistFile: path.join(removeDir, "nowhitelist.txt"),
-      outSkippedFile: path.join(removeDir, "skipped.txt"),
-      outRedundantFile: path.join(removeDir, "redundant.txt"), // ★ 新增
+      // ★ 归档用中文
+      outNoBlacklistFile: path.join(removeDir, ARCHIVE.noBlacklist),
+      outNoWhitelistFile: path.join(removeDir, ARCHIVE.noWhitelist),
+      outSkippedFile: path.join(removeDir, ARCHIVE.skipped),
+      outRedundantFile: path.join(removeDir, ARCHIVE.redundant),
     });
 
     await copyFiles(
-      [p("nocleaned.txt"), path.join(removeDir, "dead.txt")],
-      [p("passthrough.txt"), path.join(removeDir, "passthrough.txt")],
+      [p("nocleaned.txt"), path.join(removeDir, ARCHIVE.dead)],
+      [p("passthrough.txt"), path.join(removeDir, ARCHIVE.passthrough)],
     );
 
     await title();
