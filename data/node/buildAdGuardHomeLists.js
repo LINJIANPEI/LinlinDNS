@@ -20,9 +20,9 @@ function isIPv4(s) {
   });
 }
 
-/**
- * ★ 处理通配符域名。
- */
+const isBlackholeIp = (ip) =>
+  ip === "0.0.0.0" || ip.startsWith("127.") || ip === "::1";
+
 const stripWildcard = (domain) => {
   let d = domain;
   if (d.startsWith("*.")) d = d.slice(2);
@@ -30,9 +30,6 @@ const stripWildcard = (domain) => {
   return d;
 };
 
-/**
- * 域名规范化（只做结构校验，无层级上限）。
- */
 function normalizeDomain(value) {
   const domain = value
     .trim()
@@ -40,7 +37,8 @@ function normalizeDomain(value) {
     .replace(/\.+$/, "")
     .replace(/^\.+/, "");
   if (!domain) return null;
-  if (domain === "localhost" || domain === "localhost.localdomain") return null;
+  if (domain === "localhost" || domain === "localhost.localdomain")
+    return null;
   if (domain.includes(" ")) return null;
   if (!/^[a-z0-9.-]+$/.test(domain)) return null;
   if (domain.includes("..")) return null;
@@ -48,7 +46,6 @@ function normalizeDomain(value) {
 
   const labels = domain.split(".");
   if (labels.length < 2) return null;
-  // ★ 不再限制层级上限
   if (domain.length > 253) return null;
 
   for (const label of labels) {
@@ -72,6 +69,11 @@ const getModifiers = (line) => {
 const hasUnsupportedModifier = (line) =>
   getModifiers(line).some((m) => !DNS_SUPPORTED_MODIFIERS.has(m));
 
+/**
+ * 解析规则。
+ * 返回 { domain, isWhite, original, coverSub, ip }
+ *   ip 非空 → DNS 重写规则
+ */
 function parseRule(line) {
   const t = line.trim();
   if (!t) return null;
@@ -84,7 +86,6 @@ function parseRule(line) {
   // ||domain^
   if (body.startsWith("||")) {
     let rest = body.slice(2).replace(/^\^/, "");
-    // ★ 处理通配符
     rest = stripWildcard(rest);
     if (rest === null) return null;
 
@@ -92,13 +93,21 @@ function parseRule(line) {
     const core = beforeMod.split("^")[0];
     if (core.includes("/")) return null;
     const domain = normalizeDomain(core);
-    return domain ? { domain, isWhite, original: t, coverSub: true } : null;
+    if (!domain) return null;
+
+    const dnsrewriteMatch = rest.match(/\$dnsrewrite=([^,;$]+)/i);
+    return {
+      domain,
+      isWhite,
+      original: t,
+      coverSub: true,
+      ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
+    };
   }
 
   // |domain^
   if (body.startsWith("|")) {
     let rest = body.slice(1).replace(/^\^/, "");
-    // ★ 处理通配符
     rest = stripWildcard(rest);
     if (rest === null) return null;
 
@@ -106,28 +115,47 @@ function parseRule(line) {
     const core = beforeMod.split("^")[0];
     if (core.includes("/")) return null;
     const domain = normalizeDomain(core);
-    return domain ? { domain, isWhite, original: t, coverSub: false } : null;
+    if (!domain) return null;
+
+    const dnsrewriteMatch = rest.match(/\$dnsrewrite=([^,;$]+)/i);
+    return {
+      domain,
+      isWhite,
+      original: t,
+      coverSub: false,
+      ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
+    };
   }
 
   // hosts 格式
   const parts = t.split(/\s+/);
   if (parts.length === 2 && isIPv4(parts[0])) {
-    // ★ 处理通配符
     let cand = parts[1];
     cand = stripWildcard(cand);
     if (cand === null) return null;
     const domain = normalizeDomain(cand);
     if (!domain) return null;
-    const isBlacklistIp = parts[0] === "0.0.0.0" || parts[0].startsWith("127.");
-    return { domain, isWhite: !isBlacklistIp, original: t, coverSub: false };
+
+    const ip = parts[0];
+    const blackhole = isBlackholeIp(ip);
+
+    return {
+      domain,
+      isWhite: !blackhole,
+      original: t,
+      coverSub: false,
+      ip: blackhole ? null : ip,
+    };
   }
 
-  // ★ 纯域名：用 body（已去 @@），并处理通配符
+  // 纯域名
   let tail = body.replace(/\^+$/, "").split("$")[0].split("/")[0];
   tail = stripWildcard(tail);
   if (tail === null) return null;
   const domain = normalizeDomain(tail);
-  return domain ? { domain, isWhite, original: t, coverSub: false } : null;
+  return domain
+    ? { domain, isWhite, original: t, coverSub: false, ip: null }
+    : null;
 }
 
 const isImportant = (line) => /\$important\b/.test(line);
@@ -170,6 +198,21 @@ function removeRedundantSubdomains(domains) {
   }
   return [...kept, ...wildcards].sort();
 }
+
+/**
+ * ★ 输出格式化：
+ *   - rule.ip 存在 → 转成 $dnsrewrite 规则
+ *   - 否则 → 保留原始行
+ */
+const formatOutput = (rule) => {
+  if (!rule) return null;
+  if (rule.ip) {
+    // 保留原有 coverSub 语义
+    const anchor = rule.coverSub ? "||" : "|";
+    return `${anchor}${rule.domain}^$dnsrewrite=${rule.ip}`;
+  }
+  return rule.original;
+};
 
 const buildAdGuardHomeLists = async (options) => {
   const {
@@ -232,7 +275,13 @@ const buildAdGuardHomeLists = async (options) => {
       const curImp = isImportant(rule.original);
       const exImp = isImportant(existing.original);
 
-      if (curImp && !exImp) {
+      // ★ DNS 重写优先级最高
+      if (rule.ip && !existing.ip) {
+        redundantSet.add(existing.original);
+        map.set(rule.domain, rule);
+      } else if (!rule.ip && existing.ip) {
+        redundantSet.add(rule.original);
+      } else if (curImp && !exImp) {
         redundantSet.add(existing.original);
         map.set(rule.domain, rule);
       } else if (curImp === exImp && rule.coverSub && !existing.coverSub) {
@@ -277,10 +326,11 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
+  // ★ 拆黑名单为普通和 important（重写归入 important 级别）
   const normalBlack = new Map();
   const importantBlack = new Map();
   for (const [d, rule] of blackMap) {
-    if (isImportant(rule.original)) importantBlack.set(d, rule);
+    if (isImportant(rule.original) || rule.ip) importantBlack.set(d, rule);
     else normalBlack.set(d, rule);
   }
 
@@ -298,10 +348,11 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalBlackDomains, ...importantBlackDomains]),
   ].sort();
 
+  // ★ 白名单同理
   const normalWhite = new Map();
   const importantWhite = new Map();
   for (const [d, rule] of whiteMap) {
-    if (isImportant(rule.original)) importantWhite.set(d, rule);
+    if (isImportant(rule.original) || rule.ip) importantWhite.set(d, rule);
     else normalWhite.set(d, rule);
   }
 
@@ -319,14 +370,10 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
   ].sort();
 
-  const getBlackOriginal = (d) => {
-    const rule = blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
-    return rule ? rule.original : null;
-  };
-  const getWhiteOriginal = (d) => {
-    const rule = whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
-    return rule ? rule.original : null;
-  };
+  const getBlackRule = (d) =>
+    blackMap.get(d) || normalBlack.get(d) || importantBlack.get(d);
+  const getWhiteRule = (d) =>
+    whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
 
   if (noblacklistWriter) {
     for (const line of [...noblacklistSet].sort()) {
@@ -352,23 +399,32 @@ const buildAdGuardHomeLists = async (options) => {
   }
   const redundantCount = redundantSet.size;
 
+  // ★ 输出：拦截 → rules.txt；重写 → allow.txt
+  let rewriteOutCount = 0;
+
   const rulesWriter = new LineWriter(outRulesFile);
   for (const d of blackDomains) {
-    const original = getBlackOriginal(d);
-    if (original) await rulesWriter.write(original);
+    const rule = getBlackRule(d);
+    const line = formatOutput(rule);
+    if (line) await rulesWriter.write(line);
   }
   await rulesWriter.close();
 
   const allowWriter = new LineWriter(outAllowFile);
   for (const d of whiteDomains) {
-    const original = getWhiteOriginal(d);
-    if (original) await allowWriter.write(original);
+    const rule = getWhiteRule(d);
+    const line = formatOutput(rule);
+    if (line) {
+      await allowWriter.write(line);
+      if (rule && rule.ip) rewriteOutCount++;
+    }
   }
   await allowWriter.close();
 
   const stats = {
     blacklistCount: blackDomains.length,
     whitelistCount: whiteDomains.length,
+    dnsRewriteCount: rewriteOutCount,
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
     skippedCount,
@@ -377,7 +433,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   console.log(
     `构建完成：黑名单 ${stats.blacklistCount} 条，` +
-      `白名单 ${stats.whitelistCount} 条，` +
+      `白名单 ${stats.whitelistCount} 条（含重写 ${stats.dnsRewriteCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `skipped ${stats.skippedCount} 条，` +
