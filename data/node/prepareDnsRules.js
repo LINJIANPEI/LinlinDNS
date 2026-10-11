@@ -23,15 +23,19 @@ const extractDomain = (line) => {
   const isWhite = line.startsWith("@@");
   const body = isWhite ? line.slice(2) : line;
 
-  // hosts 格式：0.0.0.0 example.com / 127.0.0.1 example.com
+  // hosts 格式：0.0.0.0 example.com / 127.0.0.1 example.com / 0.0.0.0 *.domain.com
   const parts = line.split(/\s+/);
   if (parts.length === 2) {
     const hostIp = parts[0];
     if (/^(\d{1,3}\.){3}\d{1,3}$/.test(hostIp)) {
-      const d = parts[1].toLowerCase().replace(/\.+$/, "");
-      if (DOMAIN_RE.test(d)) {
+      // ★ 处理通配符
+      let cand = parts[1].toLowerCase().replace(/\.+$/, "");
+      cand = stripWildcard(cand);
+      if (cand === null) return null;
+
+      if (DOMAIN_RE.test(cand)) {
         const isBlacklistIp = hostIp === "0.0.0.0" || hostIp.startsWith("127.");
-        return { domain: d, isWhite: !isBlacklistIp };
+        return { domain: cand, isWhite: !isBlacklistIp };
       }
       return null;
     }
@@ -43,11 +47,10 @@ const extractDomain = (line) => {
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
 
-    // ★ 先处理通配符
+    // ★ 处理通配符
     rest = stripWildcard(rest);
     if (rest === null) return null;
 
-    // 带路径的丢
     const beforeMod = rest.split("$")[0];
     const core = beforeMod.split("^")[0];
     if (core.includes("/")) return null;
@@ -58,11 +61,15 @@ const extractDomain = (line) => {
     }
   }
 
-  // 纯域名
+  // ★ 纯域名（含 *.domain.com）
   if (!body.includes("/") && !body.includes("$")) {
-    const d = body.toLowerCase().replace(/\.+$/, "");
+    let d = body.toLowerCase().replace(/\.+$/, "");
+    // ★ 处理通配符
+    d = stripWildcard(d);
+    if (d === null) return null;
+
     if (DOMAIN_RE.test(d)) {
-      return { domain: d, isWhite: false };
+      return { domain: d, isWhite }; // ★ 不再写死 false
     }
   }
 
@@ -78,7 +85,6 @@ const prepareDnsRules = async (inputFile, outDir) => {
   const blackWriter = new LineWriter(blackFile);
   const whiteWriter = new LineWriter(whiteFile);
 
-  // domain → 原始行
   const seenBlack = new Map();
   const seenWhite = new Map();
 
@@ -98,7 +104,7 @@ const prepareDnsRules = async (inputFile, outDir) => {
 
     const map = result.isWhite ? seenWhite : seenBlack;
     if (!map.has(result.domain)) {
-      map.set(result.domain, t); // ★ 保留原始行
+      map.set(result.domain, t);
     }
   });
 

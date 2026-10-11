@@ -1,7 +1,6 @@
 const path = require("node:path");
 const { readLines, LineWriter } = require("./stream_utils");
 
-// ★ AdGuard Home DNS 支持的修饰符
 const DNS_SUPPORTED_MODIFIERS = new Set([
   "important",
   "badfilter",
@@ -23,8 +22,6 @@ function isIPv4(s) {
 
 /**
  * ★ 处理通配符域名。
- * - *.domain.com → 剥离 *. → 'domain.com'
- * - ad*banner   → 含非前缀 * → 返回 null
  */
 const stripWildcard = (domain) => {
   let d = domain;
@@ -34,7 +31,7 @@ const stripWildcard = (domain) => {
 };
 
 /**
- * 域名规范化（只做结构校验）。
+ * 域名规范化（只做结构校验，无层级上限）。
  */
 function normalizeDomain(value) {
   const domain = value
@@ -51,7 +48,7 @@ function normalizeDomain(value) {
 
   const labels = domain.split(".");
   if (labels.length < 2) return null;
-  if (labels.length > 10) return null;
+  // ★ 不再限制层级上限
   if (domain.length > 253) return null;
 
   for (const label of labels) {
@@ -75,15 +72,6 @@ const getModifiers = (line) => {
 const hasUnsupportedModifier = (line) =>
   getModifiers(line).some((m) => !DNS_SUPPORTED_MODIFIERS.has(m));
 
-/**
- * 解析一行规则。
- *
- * 返回 { domain, isWhite, original, coverSub }
- *   coverSub = true  → 覆盖子域（||、@@||）
- *   coverSub = false → 只精确匹配（|、@@|、hosts、纯域名）
- *
- * 带路径的规则（||domain/path）返回 null。
- */
 function parseRule(line) {
   const t = line.trim();
   if (!t) return null;
@@ -93,10 +81,9 @@ function parseRule(line) {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  // ||domain^ → 覆盖子域
+  // ||domain^
   if (body.startsWith("||")) {
     let rest = body.slice(2).replace(/^\^/, "");
-
     // ★ 处理通配符
     rest = stripWildcard(rest);
     if (rest === null) return null;
@@ -108,10 +95,9 @@ function parseRule(line) {
     return domain ? { domain, isWhite, original: t, coverSub: true } : null;
   }
 
-  // |domain^ → 只精确匹配
+  // |domain^
   if (body.startsWith("|")) {
     let rest = body.slice(1).replace(/^\^/, "");
-
     // ★ 处理通配符
     rest = stripWildcard(rest);
     if (rest === null) return null;
@@ -123,29 +109,30 @@ function parseRule(line) {
     return domain ? { domain, isWhite, original: t, coverSub: false } : null;
   }
 
-  // hosts 格式 → 只精确匹配
+  // hosts 格式
   const parts = t.split(/\s+/);
   if (parts.length === 2 && isIPv4(parts[0])) {
-    const domain = normalizeDomain(parts[1]);
+    // ★ 处理通配符
+    let cand = parts[1];
+    cand = stripWildcard(cand);
+    if (cand === null) return null;
+    const domain = normalizeDomain(cand);
     if (!domain) return null;
     const isBlacklistIp = parts[0] === "0.0.0.0" || parts[0].startsWith("127.");
     return { domain, isWhite: !isBlacklistIp, original: t, coverSub: false };
   }
 
-  // 纯域名 → 只精确匹配
-  const domain = normalizeDomain(
-    t.replace(/\^+$/, "").split("$")[0].split("/")[0],
-  );
+  // ★ 纯域名：用 body（已去 @@），并处理通配符
+  let tail = body.replace(/\^+$/, "").split("$")[0].split("/")[0];
+  tail = stripWildcard(tail);
+  if (tail === null) return null;
+  const domain = normalizeDomain(tail);
   return domain ? { domain, isWhite, original: t, coverSub: false } : null;
 }
 
-// ★ 修饰符判断
 const isImportant = (line) => /\$important\b/.test(line);
 const hasDnsRewrite = (line) => /\$dnsrewrite\b/.test(line);
 
-/**
- * 判断白名单规则 wRule 能否覆盖黑名单规则 bRule。
- */
 function canCover(wRule, bRule) {
   if (isImportant(wRule.original)) return true;
   if (isImportant(bRule.original)) return false;
@@ -290,7 +277,6 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
-  // ★ 拆黑名单为普通和 important
   const normalBlack = new Map();
   const importantBlack = new Map();
   for (const [d, rule] of blackMap) {
@@ -312,7 +298,6 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalBlackDomains, ...importantBlackDomains]),
   ].sort();
 
-  // ★ 白名单同理
   const normalWhite = new Map();
   const importantWhite = new Map();
   for (const [d, rule] of whiteMap) {

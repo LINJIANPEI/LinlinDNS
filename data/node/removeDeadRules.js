@@ -14,11 +14,7 @@ const DEFAULT_PROGRESS_STEP = 1000;
 
 const IPV4_RE = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
 
-// ============================================================
-// Resolver 复用池
-// ============================================================
 const resolverCache = new Map();
-
 const getResolver = (nameservers, port) => {
   const key = `${nameservers.join(",")}:${port}`;
   if (!resolverCache.has(key)) {
@@ -29,9 +25,6 @@ const getResolver = (nameservers, port) => {
   return resolverCache.get(key);
 };
 
-// ============================================================
-// 工具函数
-// ============================================================
 const isIPv4 = (s) => {
   const m = IPV4_RE.exec(s);
   if (!m) return false;
@@ -61,8 +54,6 @@ const pLimit = (concurrency) => {
 
 /**
  * ★ 处理通配符域名。
- * - *.domain.com → 剥离 *. → 'domain.com'
- * - ad*banner   → 含非前缀 * → 返回 null
  */
 const stripWildcard = (domain) => {
   let d = domain;
@@ -72,9 +63,9 @@ const stripWildcard = (domain) => {
 };
 
 /**
- * 域名规范化（只做结构校验）。
- * - 不再做 TLD 校验，交给 DNS 查询裁决
- * - 保留字符、层级、长度校验
+ * 域名规范化。
+ * - 只做结构校验（无 TLD 校验）
+ * - ★ 移除层级限制，深层级域名也保留
  */
 const normalizeDomain = (value) => {
   const d = value.trim().toLowerCase().replace(/\.+$/, "").replace(/^\.+/, "");
@@ -86,9 +77,9 @@ const normalizeDomain = (value) => {
   if (isIPv4(d)) return null;
 
   const labels = d.split(".");
-  if (labels.length < 2) return null; // 至少 a.b
-  if (labels.length > 10) return null; // 层级上限
-  if (d.length > 253) return null; // RFC 上限
+  if (labels.length < 2) return null;
+  // ★ 不再限制层级上限
+  if (d.length > 253) return null;
 
   for (const label of labels) {
     if (label.length < 1 || label.length > 63) return null;
@@ -122,7 +113,11 @@ const parseRule = (line) => {
   if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
     const parts = t.split(/\s+/);
     if (parts.length === 2 && isIPv4(parts[0])) {
-      const domain = normalizeDomain(parts[1]);
+      // ★ 处理通配符
+      let cand = parts[1];
+      cand = stripWildcard(cand);
+      if (cand === null) return null;
+      const domain = normalizeDomain(cand);
       if (domain) {
         const isWhite = !(
           parts[0] === "0.0.0.0" || parts[0].startsWith("127.")
@@ -136,7 +131,7 @@ const parseRule = (line) => {
   const isWhite = t.startsWith("@@");
   const body = isWhite ? t.slice(2) : t;
 
-  // ★ 同时支持 || 和 |，切 ^ / $
+  // ||domain^ 或 |domain^
   if (body.startsWith("||") || body.startsWith("|")) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1);
@@ -156,10 +151,11 @@ const parseRule = (line) => {
     return domain ? { domain, isWhite } : null;
   }
 
-  // ★ 兜底也切 $ 和 /
-  const domain = normalizeDomain(
-    t.replace(/\^+$/, "").split("$")[0].split("/")[0],
-  );
+  // ★ 兜底：用 body（已去 @@），并处理通配符
+  let tail = body.replace(/\^+$/, "").split("$")[0].split("/")[0];
+  tail = stripWildcard(tail);
+  if (tail === null) return null;
+  const domain = normalizeDomain(tail);
   return domain ? { domain, isWhite } : null;
 };
 
@@ -189,7 +185,7 @@ const checkDomain = async (domain, { nameservers, port }) => {
 };
 
 // ============================================================
-// 文件缓存（NDJSON 流式读写）
+// 缓存
 // ============================================================
 const createNullCache = () => ({
   get() {
@@ -307,7 +303,7 @@ const removeDeadRules = async (inputFiles, options) => {
   console.log(`规则解析完成，共${totalRules}条规则，提取${total}个域名`);
 
   // ========================================================
-  // 第 2 遍：DNS 查询（滑动窗口）
+  // 第 2 遍：DNS 查询
   // ========================================================
   const limit = pLimit(concurrency);
   const now = Math.floor(Date.now() / 1000);
@@ -391,7 +387,7 @@ const removeDeadRules = async (inputFiles, options) => {
   domainMap.clear();
 
   // ========================================================
-  // 第 3 遍：重新读输入文件，分类输出
+  // 第 3 遍：分类输出
   // ========================================================
   const cleanedWriter = new LineWriter(cleanedFile);
   const nocleanedWriter = nocleanedFile ? new LineWriter(nocleanedFile) : null;
@@ -408,7 +404,7 @@ const removeDeadRules = async (inputFiles, options) => {
   for (const file of inputFiles) {
     await readLines(file, async (raw) => {
       const parsed = parseRule(raw);
-      if (!parsed) return; // passthrough 已写
+      if (!parsed) return;
 
       const isWhite = parsed.isWhite || whiteSet.has(parsed.domain);
 
