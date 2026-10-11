@@ -75,17 +75,23 @@ const formatOutput = (rule) => {
 };
 
 /**
- * ★ 黑名单分桶（6 层）
- *   1. rewriteBlack → |domain^$dnsrewrite（不带 @@）
- *   2. rewriteWhite → @@|domain^$dnsrewrite（带 @@）
- *   3. modified     → 其他 $ 修饰符
- *   4. exact        → |domain^
- *   5. sub          → ||domain^
- *   6. other
+ * ★ 黑名单分桶（8 层）
+ *   1. rewriteBlackExact → |domain^$dnsrewrite
+ *   2. rewriteBlackSub   → ||domain^$dnsrewrite
+ *   3. rewriteWhiteExact → @@|domain^$dnsrewrite
+ *   4. rewriteWhiteSub   → @@||domain^$dnsrewrite
+ *   5. modified          → 其他 $ 修饰符
+ *   6. exact             → |domain^
+ *   7. sub               → ||domain^
+ *   8. other
  */
 const classifyBlackLine = (line) => {
   if (line.includes("$dnsrewrite")) {
-    return line.startsWith("@@") ? "rewriteWhite" : "rewriteBlack";
+    if (line.startsWith("@@||")) return "rewriteWhiteSub";
+    if (line.startsWith("@@|")) return "rewriteWhiteExact";
+    if (line.startsWith("||")) return "rewriteBlackSub";
+    if (line.startsWith("|")) return "rewriteBlackExact";
+    return "other";
   }
   if (line.includes("$")) return "modified";
   if (line.startsWith("||")) return "sub";
@@ -94,17 +100,15 @@ const classifyBlackLine = (line) => {
 };
 
 /**
- * ★ 白名单分桶（6 层）
- *   1. rewriteBlack → |domain^$dnsrewrite（不带 @@，黑名单性质）
- *   2. rewriteWhite → @@|domain^$dnsrewrite（带 @@）
- *   3. modified     → 其他 $ 修饰符
- *   4. exact        → @@|domain^
- *   5. sub          → @@||domain^
- *   6. other
+ * ★ 白名单分桶（8 层）
  */
 const classifyWhiteLine = (line) => {
   if (line.includes("$dnsrewrite")) {
-    return line.startsWith("@@") ? "rewriteWhite" : "rewriteBlack";
+    if (line.startsWith("@@||")) return "rewriteWhiteSub";
+    if (line.startsWith("@@|")) return "rewriteWhiteExact";
+    if (line.startsWith("||")) return "rewriteBlackSub";
+    if (line.startsWith("|")) return "rewriteBlackExact";
+    return "other";
   }
   if (line.includes("$")) return "modified";
   if (line.startsWith("@@||")) return "sub";
@@ -113,13 +117,14 @@ const classifyWhiteLine = (line) => {
 };
 
 /**
- * ★ 桶输出：固定顺序，桶内排序
- *   rewriteBlack → rewriteWhite → modified → exact → sub → other
+ * ★ 8 层桶输出：固定顺序，桶内排序
  */
 const writeBuckets = async (writer, buckets) => {
   for (const key of [
-    "rewriteBlack",
-    "rewriteWhite",
+    "rewriteBlackExact",
+    "rewriteBlackSub",
+    "rewriteWhiteExact",
+    "rewriteWhiteSub",
     "modified",
     "exact",
     "sub",
@@ -170,7 +175,7 @@ const buildAdGuardHomeLists = async (options) => {
   const redundantSet = new Set();
 
   // ============================================================
-  // 第 1 步：解析
+  // 第 1 步：解析 cleaned.txt
   // ============================================================
   await readLines(cleanedFile, async (raw) => {
     const line = raw.trim();
@@ -195,6 +200,7 @@ const buildAdGuardHomeLists = async (options) => {
     if (existing === undefined) {
       map.set(rule.domain, rule);
     } else {
+      // 同域名优先级：dnsrewrite > important > || > |
       if (rule.ip && !existing.ip) {
         redundantSet.add(existing.original);
         map.set(rule.domain, rule);
@@ -229,6 +235,7 @@ const buildAdGuardHomeLists = async (options) => {
   // 第 2 步：白名单覆盖黑名单
   // ============================================================
   for (const [wDomain, wRule] of whiteMap) {
+    // 2.1 精确匹配
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
       if (canCover(wRule, bRule)) {
@@ -237,6 +244,7 @@ const buildAdGuardHomeLists = async (options) => {
       }
     }
 
+    // 2.2 父域覆盖子域
     if (wRule.coverSub) {
       const suffix = `.${wDomain}`;
       for (const bDomain of [...blackMap.keys()]) {
@@ -253,6 +261,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 3 步：反向排除（同域名）
+  // 被 important 黑名单 / dnsrewrite 黑名单压制的普通白名单 → 剔除
   // ============================================================
   const suppressedWhite = new Set();
 
@@ -309,7 +318,7 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   // ============================================================
-  // 第 5 步：拆黑名单
+  // 第 5 步：拆黑名单为普通和 important
   // ============================================================
   const normalBlack = new Map();
   const importantBlack = new Map();
@@ -333,7 +342,7 @@ const buildAdGuardHomeLists = async (options) => {
   ].sort();
 
   // ============================================================
-  // 第 6 步：拆白名单
+  // 第 6 步：拆白名单为普通和 important
   // ============================================================
   const normalWhite = new Map();
   const importantWhite = new Map();
@@ -389,12 +398,14 @@ const buildAdGuardHomeLists = async (options) => {
   const redundantCount = redundantSet.size;
 
   // ============================================================
-  // 第 8 步：输出产物（6 层排序）
+  // 第 8 步：输出产物（8 层排序）
   // ============================================================
   // 8.1 黑名单
   const blackBuckets = {
-    rewriteBlack: [],
-    rewriteWhite: [],
+    rewriteBlackExact: [],
+    rewriteBlackSub: [],
+    rewriteWhiteExact: [],
+    rewriteWhiteSub: [],
     modified: [],
     exact: [],
     sub: [],
@@ -414,8 +425,10 @@ const buildAdGuardHomeLists = async (options) => {
 
   // 8.2 白名单
   const whiteBuckets = {
-    rewriteBlack: [],
-    rewriteWhite: [],
+    rewriteBlackExact: [],
+    rewriteBlackSub: [],
+    rewriteWhiteExact: [],
+    rewriteWhiteSub: [],
     modified: [],
     exact: [],
     sub: [],
@@ -429,9 +442,9 @@ const buildAdGuardHomeLists = async (options) => {
     whiteBuckets[classifyWhiteLine(line)].push(line);
   }
 
-  // ★ 冲突规则（不带 @@）→ 白名单 rewriteBlack 桶
+  // ★ 冲突规则按锚点自动进对应桶
   for (const line of dnsRewriteConflictSet) {
-    whiteBuckets.rewriteBlack.push(line);
+    whiteBuckets[classifyWhiteLine(line)].push(line);
   }
 
   const allowWriter = new LineWriter(outAllowFile);
@@ -439,7 +452,10 @@ const buildAdGuardHomeLists = async (options) => {
   await allowWriter.close();
 
   const rewriteOutCount =
-    whiteBuckets.rewriteBlack.length + whiteBuckets.rewriteWhite.length;
+    whiteBuckets.rewriteBlackExact.length +
+    whiteBuckets.rewriteBlackSub.length +
+    whiteBuckets.rewriteWhiteExact.length +
+    whiteBuckets.rewriteWhiteSub.length;
 
   // ============================================================
   // 统计
