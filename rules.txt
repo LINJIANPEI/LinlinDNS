@@ -2,9 +2,9 @@
 ! Title: 林林rules
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-10-12 06:44:44（北京时间）
+! Version: 2026-10-12 06:58:45（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 345447
+! Total count: 345501
 |0--skitch--0.tt.omtrdc.net^
 |0-0-0-0-0-0-0-0-0-0-0-0-0-10-0-0-0-0-0-0-0-0-0-0-0-0-0.info^
 |0-0.binance.com^
@@ -77011,6 +77011,7 @@ data.jsdelivr.com
 ||data.mistat.india.xiaomi.com^
 ||data.mistat.intl.xiaomi.com^$important
 ||data.mistat.rus.xiaomi.com^
+||data.mistat.xiaomi.com^$important
 ||data.miw.co.id^
 ||data.mkt.aia.com.hk^
 ||data.mkt.infomoney.com.br^
@@ -305288,6 +305289,7 @@ tousatu-news.com
 ||tracking.interweave.com^
 ||tracking.inthechair.dk^
 ||tracking.intimaterose.com^
+||tracking.intl.miui.com^$important
 ||tracking.irigo.ch^
 ||tracking.isappcloud.com^
 ||tracking.it.hs-hannover.de^
@@ -305673,6 +305675,7 @@ tousatu-news.com
 ||tracking.rootinc.com^
 ||tracking.rootstoremedies.com^
 ||tracking.rtl.de^
+||tracking.rus.miui.com^$important
 ||tracking.s24.com^
 ||tracking.sabic.com^
 ||tracking.safety-kleen.com^
@@ -345452,3 +345455,54 @@ zvoleje.cz
 ||zzztest.oisd.nl^
 ||zzztl.com^
 |zzztube.com^
+||activity.baidu.com^$dnsrewrite=0.0.0.0
+||ada.baidu.com^$dnsrewrite=0.0.0.0
+||adimg.uve.weibo.com^$dnsrewrite=0.0.0.0
+||ads-api.twitter.com^$dnsrewrite=0.0.0.0
+||ads.facebook.com^$dnsrewrite=0.0.0.0
+||adservice.kugou.com^$dnsrewrite=0.0.0.0
+||adult-movie.bidobido.xyz^$dnsrewrite=0.0.0.0
+||an.facebook.com^$dnsrewrite=0.0.0.0
+||analytics.facebook.com^$dnsrewrite=0.0.0.0
+||bootpreload.uve.weibo.com^$dnsrewrite=0.0.0.0
+||business-ad.cdn-go.cn^$dnsrewrite=0.0.0.0
+||da.qiyukf.com^$dnsrewrite=0.0.0.0
+||dns.360.cn^$dnsrewrite=0.0.0.0
+||dns.jd.com^$dnsrewrite=0.0.0.0
+||dns.sina.com.cn^$dnsrewrite=0.0.0.0
+||doh.ptqy.gitv.tv^$dnsrewrite=0.0.0.0
+||events.redditmedia.com^$dnsrewrite=0.0.0.0
+||fakeurl.virtual.baidu.com^$dnsrewrite=0.0.0.0
+||fc-ccimage.baidu.com^$dnsrewrite=0.0.0.0
+||fclick.baidu.com^$dnsrewrite=0.0.0.0
+||fclickv4.baidu.com^$dnsrewrite=0.0.0.0
+||gad.kugou.com^$dnsrewrite=0.0.0.0
+||h2tcbox.baidu.com^$dnsrewrite=0.0.0.0
+||h5retry.kugou.com^$dnsrewrite=0.0.0.0
+||hpd.baidu.com^$dnsrewrite=0.0.0.0
+||jr-ad.ctrip.com^$dnsrewrite=0.0.0.0
+||logbak.hicloud.com^$dnsrewrite=0.0.0.0
+||logservice.hicloud.com^$dnsrewrite=0.0.0.0
+||logservice1.hicloud.com^$dnsrewrite=0.0.0.0
+||metrics-dra.dt.hicloud.com^$dnsrewrite=0.0.0.0
+||metrics.data.hicloud.com^$dnsrewrite=0.0.0.0
+||metrics1.data.hicloud.com^$dnsrewrite=0.0.0.0
+||metrics2.data.hicloud.com^$dnsrewrite=0.0.0.0
+||metrics5.data.hicloud.com^$dnsrewrite=0.0.0.0
+||mktm.jd.com^$dnsrewrite=0.0.0.0
+||mvads.kugou.com^$dnsrewrite=0.0.0.0
+||nourl.ubs.baidu.com^$dnsrewrite=0.0.0.0
+||oimageb7.ydstatic.com^$dnsrewrite=0.0.0.0
+||pcdn-tracker.baidu.com^$dnsrewrite=0.0.0.0
+||pixel.facebook.com^$dnsrewrite=0.0.0.0
+||resauth.kuwo.cn^$dnsrewrite=0.0.0.0
+||rtawin.daikuan.360.cn^$dnsrewrite=0.0.0.0
+||sax.sina.com.cn^$dnsrewrite=0.0.0.0
+||sdk-log.partner.sm.cn^$dnsrewrite=0.0.0.0
+||sdkapp.uve.weibo.com^$dnsrewrite=0.0.0.0
+||shouji.360.cn^$dnsrewrite=0.0.0.0
+||sptest.baidu.com^$dnsrewrite=0.0.0.0
+||tam.cdn-go.cn^$dnsrewrite=0.0.0.0
+||uisong.baidu.com^$dnsrewrite=0.0.0.0
+||voowebpbssdl.kugou.com^$dnsrewrite=0.0.0.0
+||wjz-cdn.baidu.com^$dnsrewrite=0.0.0.0
