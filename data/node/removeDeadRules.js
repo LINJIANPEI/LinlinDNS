@@ -246,7 +246,8 @@ const removeDeadRules = async (inputFiles, options) => {
     whiteSet = new Set(),
     cache,
     cacheFile = DEFAULT_CACHE_FILE,
-    keepWhiteRules = true,
+    // ★ 默认改为 false：白名单也参与 DNS 检测
+    keepWhiteRules = false,
     autoSaveCache = true,
     onProgress,
     progressStep = DEFAULT_PROGRESS_STEP,
@@ -259,7 +260,7 @@ const removeDeadRules = async (inputFiles, options) => {
 
   // ========================================================
   // 第 1 遍：提取域名
-  // ★ 三态标记：0=黑名单，1=真白名单，2=重写（也参与检测）
+  // 三态标记：0=黑名单，1=白名单，2=重写
   // ========================================================
   const domainMap = new Map();
   const passthroughWriter = passthroughFile
@@ -281,14 +282,12 @@ const removeDeadRules = async (inputFiles, options) => {
 
       if (parsed.ip) rewriteCount++;
 
-      // ★ 用三态标记
       const flag = parsed.ip ? 2 : parsed.isWhite ? 1 : 0;
       const prev = domainMap.get(parsed.domain);
 
       if (prev === undefined) {
         domainMap.set(parsed.domain, flag);
       } else {
-        // 优先级：重写(2) > 白(1) > 黑(0)
         if (flag > prev) domainMap.set(parsed.domain, flag);
       }
     });
@@ -302,7 +301,7 @@ const removeDeadRules = async (inputFiles, options) => {
   );
 
   // ========================================================
-  // 第 2 遍：DNS 查询（重写域名也参与）
+  // 第 2 遍：DNS 查询（黑白 + 重写全部参与）
   // ========================================================
   const limit = pLimit(concurrency);
   const now = Math.floor(Date.now() / 1000);
@@ -359,17 +358,18 @@ const removeDeadRules = async (inputFiles, options) => {
   const deadCount = total - aliveSet.size;
 
   // ========================================================
-  // 计算"死且无存活父域、非真白名单"的集合
-  // ★ 重写(flag=2) 参与判定；真白名单(flag=1) 跳过
+  // 计算"死且无存活父域"的集合
+  // ★ keepWhiteRules=false 时，白名单也参与死亡判定
   // ========================================================
   const deadWithoutAliveParent = new Set();
   let parentAliveCount = 0;
 
   for (const [domain, flag] of domainMap) {
     if (aliveSet.has(domain)) continue;
-    // ★ 只有真白名单跳过
-    if (flag === 1 && keepWhiteRules) continue;
-    if (whiteSet.has(domain) && keepWhiteRules) continue;
+
+    // ★ 只有显式开启 keepWhiteRules 时才跳过白名单
+    if (keepWhiteRules && flag === 1) continue;
+    if (keepWhiteRules && whiteSet.has(domain)) continue;
 
     const labels = domain.split(".");
     let parentAlive = false;
@@ -387,6 +387,7 @@ const removeDeadRules = async (inputFiles, options) => {
 
   // ========================================================
   // 第 3 遍：分类输出
+  // ★ 白名单也走死亡判定
   // ========================================================
   const cleanedWriter = new LineWriter(cleanedFile);
   const nocleanedWriter = nocleanedFile ? new LineWriter(nocleanedFile) : null;
@@ -401,6 +402,8 @@ const removeDeadRules = async (inputFiles, options) => {
   let nocleanedCount = 0;
   let rewriteKept = 0;
   let rewriteDropped = 0;
+  let whiteKept = 0;
+  let whiteDropped = 0;
 
   for (const file of inputFiles) {
     await readLines(file, async (raw) => {
@@ -409,10 +412,11 @@ const removeDeadRules = async (inputFiles, options) => {
 
       const isRewrite = !!parsed.ip;
       const isWhite = parsed.isWhite || whiteSet.has(parsed.domain);
+      const isDead = deadWithoutAliveParent.has(parsed.domain);
 
-      // ★ 重写规则：走死亡判定
+      // 重写规则统计
       if (isRewrite) {
-        if (deadWithoutAliveParent.has(parsed.domain)) {
+        if (isDead) {
           if (nocleanedWriter) await nocleanedWriter.write(raw);
           nocleanedCount++;
           rewriteDropped++;
@@ -424,15 +428,30 @@ const removeDeadRules = async (inputFiles, options) => {
         return;
       }
 
-      // 真白名单：保留
-      if (isWhite && keepWhiteRules) {
-        await cleanedWriter.write(raw);
-        cleanedCount++;
+      // ★ 白名单：也走死亡判定（除非 keepWhiteRules=true）
+      if (isWhite && !keepWhiteRules) {
+        if (isDead) {
+          if (nocleanedWriter) await nocleanedWriter.write(raw);
+          nocleanedCount++;
+          whiteDropped++;
+        } else {
+          await cleanedWriter.write(raw);
+          cleanedCount++;
+          whiteKept++;
+        }
         return;
       }
 
-      // 黑名单：死亡判定
-      if (deadWithoutAliveParent.has(parsed.domain)) {
+      // 白名单 + keepWhiteRules=true：直接保留
+      if (isWhite && keepWhiteRules) {
+        await cleanedWriter.write(raw);
+        cleanedCount++;
+        whiteKept++;
+        return;
+      }
+
+      // 黑名单：走死亡判定
+      if (isDead) {
         if (nocleanedWriter) await nocleanedWriter.write(raw);
         nocleanedCount++;
       } else {
@@ -460,6 +479,8 @@ const removeDeadRules = async (inputFiles, options) => {
     rewriteCount,
     rewriteKept,
     rewriteDropped,
+    whiteKept,
+    whiteDropped,
     cacheHits,
     cacheSize: cacheStore.size ? cacheStore.size() : 0,
   };
@@ -468,7 +489,8 @@ const removeDeadRules = async (inputFiles, options) => {
     `剔除死域名规则完成 | 输入 ${totalRules} 条` +
       ` | 保留 ${cleanedCount} 条` +
       ` | 剔除 ${nocleanedCount} 条` +
-      ` | 重写 ${rewriteCount} 条（保留 ${rewriteKept}，剔除 ${rewriteDropped}）` +
+      ` | 白名单（保留 ${whiteKept}，剔除 ${whiteDropped}）` +
+      ` | 重写（保留 ${rewriteKept}，剔除 ${rewriteDropped}）` +
       ` | 丢弃非域名行 ${passthroughCount} 条` +
       ` | 死域名 ${deadCount} 个` +
       `（父域存活保留 ${parentAliveCount} 个，实际剔除 ${stats.removedDomains} 个）` +
