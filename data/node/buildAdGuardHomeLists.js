@@ -1,6 +1,9 @@
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule: parseRuleBase, hasDnsRewrite } = require("./rule_parser");
 
+/**
+ * ★ 包装 parseRule，返回完整字段。
+ */
 const parseRule = (line) =>
   parseRuleBase(line, {
     keepCoverSub: true,
@@ -10,6 +13,12 @@ const parseRule = (line) =>
 
 /**
  * 判断白名单规则 wRule 能否覆盖黑名单规则 bRule。
+ *
+ * AdGuard Home 优先级（从高到低）：
+ *   1. @@...$important   白名单 important
+ *   2. ...$important     黑名单 important
+ *   3. @@...             普通白名单
+ *   4. ...               普通黑名单
  */
 function canCover(wRule, bRule) {
   if (wRule.important) return true;
@@ -50,7 +59,11 @@ function removeRedundantSubdomains(domains) {
 }
 
 /**
- * 输出格式化
+ * 输出格式化：
+ *   - rule.ip 存在        → $dnsrewrite 规则
+ *   - hosts 格式黑名单    → |domain^
+ *   - hosts 格式白名单    → @@|domain^
+ *   - 其它                → 保留原始行
  */
 const formatOutput = (rule) => {
   if (!rule) return null;
@@ -167,6 +180,7 @@ const buildAdGuardHomeLists = async (options) => {
   // 第 2 步：白名单覆盖黑名单
   // ============================================================
   for (const [wDomain, wRule] of whiteMap) {
+    // 2.1 精确匹配
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
       if (canCover(wRule, bRule)) {
@@ -175,6 +189,7 @@ const buildAdGuardHomeLists = async (options) => {
       }
     }
 
+    // 2.2 父域覆盖子域
     if (wRule.coverSub) {
       const suffix = `.${wDomain}`;
       for (const bDomain of [...blackMap.keys()]) {
@@ -191,6 +206,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 3 步：反向排除（同域名）
+  // 被 important 黑名单 / dnsrewrite 黑名单压制的普通白名单 → 剔除
   // ============================================================
   const suppressedWhite = new Set();
 
@@ -222,7 +238,12 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 4 步：★ $dnsrewrite 冲突检测
-  // 通配符白名单 + 子域 important/dnsrewrite 黑名单 → 生成强制重写
+  // 通配符白名单 + 子域 important/dnsrewrite 黑名单 → 生成白名单格式重写
+  //
+  // 语义说明：
+  //   @@||domain^$dnsrewrite=0.0.0.0
+  //   表示"放行 domain 并用 0.0.0.0 响应"
+  //   实际效果 = 返回 0.0.0.0 = 无法访问 = 类似拦截
   // ============================================================
   const dnsRewriteConflictSet = new Set();
 
@@ -233,15 +254,15 @@ const buildAdGuardHomeLists = async (options) => {
     for (const [bDomain, bRule] of blackMap) {
       if (!bDomain.endsWith(suffix)) continue;
       if (bRule.important || bRule.ip) {
-        // ★ 用 $dnsrewrite 强制拦截，绕过白名单引擎
-        dnsRewriteConflictSet.add(`||${bDomain}^$dnsrewrite=0.0.0.0`);
+        // ★ 白名单格式的 $dnsrewrite
+        dnsRewriteConflictSet.add(`@@||${bDomain}^$dnsrewrite=0.0.0.0`);
       }
     }
   }
 
   if (dnsRewriteConflictSet.size > 0) {
     console.log(
-      `$dnsrewrite 冲突：${dnsRewriteConflictSet.size} 条子域需强制重写`,
+      `$dnsrewrite 冲突：${dnsRewriteConflictSet.size} 条子域需强制重写（白名单格式）`,
     );
   }
 
@@ -330,23 +351,16 @@ const buildAdGuardHomeLists = async (options) => {
   // ============================================================
   let rewriteOutCount = 0;
 
+  // 8.1 黑名单
   const rulesWriter = new LineWriter(outRulesFile);
-
-  // 8.1 正常黑名单
   for (const d of blackDomains) {
     const rule = getBlackRule(d);
     const line = formatOutput(rule);
     if (line) await rulesWriter.write(line);
   }
-
-  // ★ 8.2 追加 $dnsrewrite 冲突规则（直接进黑名单）
-  for (const line of [...dnsRewriteConflictSet].sort()) {
-    await rulesWriter.write(line);
-  }
-
   await rulesWriter.close();
 
-  // 8.3 白名单
+  // 8.2 白名单
   const allowWriter = new LineWriter(outAllowFile);
   for (const d of whiteDomains) {
     const rule = getWhiteRule(d);
@@ -356,6 +370,12 @@ const buildAdGuardHomeLists = async (options) => {
       if (rule && rule.ip) rewriteOutCount++;
     }
   }
+
+  // ★ 8.3 追加 $dnsrewrite 冲突规则（白名单格式）
+  for (const line of [...dnsRewriteConflictSet].sort()) {
+    await allowWriter.write(line);
+  }
+
   await allowWriter.close();
 
   // ============================================================
@@ -363,7 +383,7 @@ const buildAdGuardHomeLists = async (options) => {
   // ============================================================
   const stats = {
     blacklistCount: blackDomains.length,
-    whitelistCount: whiteDomains.length,
+    whitelistCount: whiteDomains.length + dnsRewriteConflictSet.size,
     dnsRewriteCount: rewriteOutCount,
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
@@ -374,9 +394,9 @@ const buildAdGuardHomeLists = async (options) => {
   };
 
   console.log(
-    `构建完成：黑名单 ${stats.blacklistCount} 条` +
-      `（含 $dnsrewrite 冲突 ${stats.dnsRewriteConflictCount} 条），` +
-      `白名单 ${stats.whitelistCount} 条（含重写 ${stats.dnsRewriteCount}），` +
+    `构建完成：黑名单 ${blackDomains.length} 条，` +
+      `白名单 ${stats.whitelistCount} 条` +
+      `（含重写 ${stats.dnsRewriteCount}，冲突重写 ${stats.dnsRewriteConflictCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
