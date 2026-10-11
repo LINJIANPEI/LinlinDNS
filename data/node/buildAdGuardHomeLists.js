@@ -65,14 +65,6 @@ const formatOutput = (rule) => {
   return rule.original;
 };
 
-/**
- * ★ 黑名单分桶
- *   1. rewrite    → $dnsrewrite 规则
- *   2. modified   → 其它带 $ 修饰符（$important 等）
- *   3. exact      → |domain^  精确匹配
- *   4. sub        → ||domain^ 子域匹配
- *   5. other
- */
 const classifyBlackLine = (line) => {
   if (line.includes("$dnsrewrite")) return "rewrite";
   if (line.includes("$")) return "modified";
@@ -81,14 +73,6 @@ const classifyBlackLine = (line) => {
   return "other";
 };
 
-/**
- * ★ 白名单分桶
- *   1. rewrite    → $dnsrewrite 规则
- *   2. modified   → 其它带 $ 修饰符
- *   3. exact      → @@|domain^  精确匹配
- *   4. sub        → @@||domain^ 子域匹配
- *   5. other
- */
 const classifyWhiteLine = (line) => {
   if (line.includes("$dnsrewrite")) return "rewrite";
   if (line.includes("$")) return "modified";
@@ -97,9 +81,6 @@ const classifyWhiteLine = (line) => {
   return "other";
 };
 
-/**
- * ★ 桶输出：按固定顺序，桶内排序
- */
 const writeBuckets = async (writer, buckets) => {
   for (const key of ["rewrite", "modified", "exact", "sub", "other"]) {
     const lines = buckets[key];
@@ -261,6 +242,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
+  // 锚点跟随原黑名单，不带 @@
   // ============================================================
   const dnsRewriteConflictSet = new Set();
 
@@ -271,7 +253,8 @@ const buildAdGuardHomeLists = async (options) => {
     for (const [bDomain, bRule] of blackMap) {
       if (!bDomain.endsWith(suffix)) continue;
       if (bRule.important || bRule.ip) {
-        dnsRewriteConflictSet.add(`@@||${bDomain}^$dnsrewrite=0.0.0.0`);
+        const anchor = bRule.coverSub ? "||" : "|";
+        dnsRewriteConflictSet.add(`${anchor}${bDomain}^$dnsrewrite=0.0.0.0`);
       }
     }
   }
@@ -363,7 +346,7 @@ const buildAdGuardHomeLists = async (options) => {
   const redundantCount = redundantSet.size;
 
   // ============================================================
-  // 第 8 步：输出产物（五层排序）
+  // 第 8 步：输出产物
   // ============================================================
   // 8.1 黑名单
   const blackBuckets = {
@@ -401,7 +384,7 @@ const buildAdGuardHomeLists = async (options) => {
     whiteBuckets[classifyWhiteLine(line)].push(line);
   }
 
-  // 冲突生成的 dnsrewrite 追加到 rewrite 桶
+  // ★ 冲突规则追加到白名单 rewrite 桶
   for (const line of dnsRewriteConflictSet) {
     whiteBuckets.rewrite.push(line);
   }
@@ -430,11 +413,10 @@ const buildAdGuardHomeLists = async (options) => {
   console.log(
     `构建完成：黑名单 ${blackDomains.length} 条，` +
       `白名单 ${stats.whitelistCount} 条` +
-      `（含重写 ${stats.dnsRewriteCount}），` +
+      `（含重写 ${stats.dnsRewriteCount}，冲突重写 ${stats.dnsRewriteConflictCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
-      `冲突重写 ${stats.dnsRewriteConflictCount} 条，` +
       `skipped ${stats.skippedCount} 条，` +
       `redundant ${stats.redundantCount} 条`,
   );
