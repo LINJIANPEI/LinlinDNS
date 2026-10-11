@@ -4,7 +4,7 @@ const path = require("node:path");
 const { finished } = require("node:stream/promises");
 const { readLines, LineWriter } = require("./stream_utils");
 
-const CACHE_TTL = 3110400; // 36 天
+const CACHE_TTL = 3110400;
 const DEFAULT_CONCURRENCY = 500;
 const DEFAULT_NAMESERVERS = ["127.0.0.1"];
 const DEFAULT_PORT = 5053;
@@ -34,6 +34,9 @@ const isIPv4 = (s) => {
   });
 };
 
+const isBlackholeIp = (ip) =>
+  ip === "0.0.0.0" || ip.startsWith("127.") || ip === "::1";
+
 const pLimit = (concurrency) => {
   let active = 0;
   const queue = [];
@@ -52,9 +55,6 @@ const pLimit = (concurrency) => {
     });
 };
 
-/**
- * ★ 处理通配符域名。
- */
 const stripWildcard = (domain) => {
   let d = domain;
   if (d.startsWith("*.")) d = d.slice(2);
@@ -63,9 +63,7 @@ const stripWildcard = (domain) => {
 };
 
 /**
- * 域名规范化。
- * - 只做结构校验（无 TLD 校验）
- * - ★ 移除层级限制，深层级域名也保留
+ * 域名规范化（只做结构校验，无层级上限）。
  */
 const normalizeDomain = (value) => {
   const d = value.trim().toLowerCase().replace(/\.+$/, "").replace(/^\.+/, "");
@@ -78,7 +76,6 @@ const normalizeDomain = (value) => {
 
   const labels = d.split(".");
   if (labels.length < 2) return null;
-  // ★ 不再限制层级上限
   if (d.length > 253) return null;
 
   for (const label of labels) {
@@ -90,16 +87,13 @@ const normalizeDomain = (value) => {
 };
 
 const EXTENDED_RULE_MARKERS = [
-  "##",
-  "#@#",
-  "#$#",
-  "#@$#",
-  "#%#",
-  "#@%#",
-  "#?#",
-  "#@?#",
+  "##", "#@#", "#$#", "#@$#", "#%#", "#@%#", "#?#", "#@?#",
 ];
 
+/**
+ * 解析规则 → { domain, isWhite, ip }
+ *   ip 非空 → DNS 重写，跳过存活检测
+ */
 const parseRule = (line) => {
   if (typeof line !== "string") return null;
   const t = line.trim();
@@ -113,16 +107,17 @@ const parseRule = (line) => {
   if (c0 >= 48 && c0 <= 57 && t.includes(" ")) {
     const parts = t.split(/\s+/);
     if (parts.length === 2 && isIPv4(parts[0])) {
-      // ★ 处理通配符
       let cand = parts[1];
       cand = stripWildcard(cand);
       if (cand === null) return null;
       const domain = normalizeDomain(cand);
       if (domain) {
-        const isWhite = !(
-          parts[0] === "0.0.0.0" || parts[0].startsWith("127.")
-        );
-        return { domain, isWhite };
+        const blackhole = isBlackholeIp(parts[0]);
+        return {
+          domain,
+          isWhite: !blackhole,
+          ip: blackhole ? null : parts[0],
+        };
       }
       return null;
     }
@@ -137,7 +132,6 @@ const parseRule = (line) => {
     let rest = body.slice(isDouble ? 2 : 1);
     rest = rest.replace(/^\^/, "");
 
-    // ★ 处理通配符
     rest = stripWildcard(rest);
     if (rest === null) return null;
 
@@ -148,15 +142,22 @@ const parseRule = (line) => {
       .toLowerCase()
       .replace(/\.+$/, "");
     const domain = normalizeDomain(d);
-    return domain ? { domain, isWhite } : null;
+    if (!domain) return null;
+
+    const dnsrewriteMatch = rest.match(/\$dnsrewrite=([^,;$]+)/i);
+    return {
+      domain,
+      isWhite,
+      ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
+    };
   }
 
-  // ★ 兜底：用 body（已去 @@），并处理通配符
+  // 兜底：用 body（已去 @@）
   let tail = body.replace(/\^+$/, "").split("$")[0].split("/")[0];
   tail = stripWildcard(tail);
   if (tail === null) return null;
   const domain = normalizeDomain(tail);
-  return domain ? { domain, isWhite } : null;
+  return domain ? { domain, isWhite, ip: null } : null;
 };
 
 // ============================================================
@@ -188,14 +189,10 @@ const checkDomain = async (domain, { nameservers, port }) => {
 // 缓存
 // ============================================================
 const createNullCache = () => ({
-  get() {
-    return undefined;
-  },
+  get() { return undefined; },
   set() {},
   async save() {},
-  size() {
-    return 0;
-  },
+  size() { return 0; },
 });
 
 const createFileCache = (filePath) => {
@@ -237,9 +234,7 @@ const createFileCache = (filePath) => {
       out.end();
       await finished(out);
     },
-    size() {
-      return store.size;
-    },
+    size() { return store.size; },
   };
 };
 
@@ -278,6 +273,10 @@ const removeDeadRules = async (inputFiles, options) => {
     : null;
   let passthroughCount = 0;
   let totalRules = 0;
+  let rewriteCount = 0;
+
+  // ★ DNS 重写域名直接视为存活（不需要查询）
+  const rewriteAlive = new Set();
 
   for (const file of inputFiles) {
     await readLines(file, async (raw) => {
@@ -288,6 +287,14 @@ const removeDeadRules = async (inputFiles, options) => {
         passthroughCount++;
         return;
       }
+
+      // ★ 重写规则：跳过 DNS 检测
+      if (parsed.ip) {
+        rewriteAlive.add(parsed.domain);
+        rewriteCount++;
+        return;
+      }
+
       const prev = domainMap.get(parsed.domain);
       if (prev === undefined) {
         domainMap.set(parsed.domain, parsed.isWhite ? 1 : 0);
@@ -300,7 +307,9 @@ const removeDeadRules = async (inputFiles, options) => {
   if (passthroughWriter) await passthroughWriter.close();
 
   const total = domainMap.size;
-  console.log(`规则解析完成，共${totalRules}条规则，提取${total}个域名`);
+  console.log(
+    `规则解析完成，共${totalRules}条规则，提取${total}个域名（含重写 ${rewriteCount} 跳过检测）`,
+  );
 
   // ========================================================
   // 第 2 遍：DNS 查询
@@ -323,9 +332,7 @@ const removeDeadRules = async (inputFiles, options) => {
     );
     if (typeof onProgress === "function") {
       onProgress({
-        completed,
-        total,
-        cacheHits,
+        completed, total, cacheHits,
         elapsed: Number(elapsed),
         remain: Number(remain) || 0,
         percent: Number(percent),
@@ -333,7 +340,7 @@ const removeDeadRules = async (inputFiles, options) => {
     }
   };
 
-  const aliveSet = new Set();
+  const aliveSet = new Set(rewriteAlive); // ★ 重写域名也算存活
   const inflight = new Set();
   const MAX_INFLIGHT = concurrency * 4;
 
@@ -359,7 +366,7 @@ const removeDeadRules = async (inputFiles, options) => {
   await Promise.all(inflight);
   report(true);
 
-  const deadCount = total - aliveSet.size;
+  const deadCount = total - (aliveSet.size - rewriteAlive.size);
 
   // ========================================================
   // 计算"死且无存活父域、非白名单"的集合
@@ -406,6 +413,13 @@ const removeDeadRules = async (inputFiles, options) => {
       const parsed = parseRule(raw);
       if (!parsed) return;
 
+      // ★ 重写规则：始终保留
+      if (parsed.ip) {
+        await cleanedWriter.write(raw);
+        cleanedCount++;
+        return;
+      }
+
       const isWhite = parsed.isWhite || whiteSet.has(parsed.domain);
 
       if (isWhite && keepWhiteRules) {
@@ -439,6 +453,7 @@ const removeDeadRules = async (inputFiles, options) => {
     aliveRules: cleanedCount,
     deadRules: nocleanedCount,
     passthrough: passthroughCount,
+    rewriteCount,
     cacheHits,
     cacheSize: cacheStore.size ? cacheStore.size() : 0,
   };
@@ -447,6 +462,7 @@ const removeDeadRules = async (inputFiles, options) => {
     `剔除死域名规则完成 | 输入 ${totalRules} 条` +
       ` | 保留 ${cleanedCount} 条` +
       ` | 剔除 ${nocleanedCount} 条` +
+      ` | 重写 ${rewriteCount} 条（跳过检测）` +
       ` | 丢弃非域名行 ${passthroughCount} 条` +
       ` | 死域名 ${deadCount} 个` +
       `（父域存活保留 ${parentAliveCount} 个，实际剔除 ${stats.removedDomains} 个）` +
