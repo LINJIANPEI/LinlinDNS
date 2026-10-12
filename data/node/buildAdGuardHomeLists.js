@@ -1,15 +1,9 @@
 const { readLines, LineWriter } = require("./stream_utils");
 const {
-  parseRule: parseRuleBase,
+  parseRule,
+  formatRule,
   hasDnsRewrite,
 } = require("./rule_parser");
-
-const parseRule = (line) =>
-  parseRuleBase(line, {
-    keepCoverSub: true,
-    keepOriginal: true,
-    keepIsHosts: true,
-  });
 
 function canCover(wRule, bRule) {
   if (wRule.important) return true;
@@ -50,80 +44,22 @@ function removeRedundantSubdomains(domains) {
 }
 
 /**
- * ★ 输出格式化
- *   - *domain^$dnsrewrite=IP      → 保留 * 前缀
- *   - 无锚点 domain^$dnsrewrite=IP → 保持无锚点
- *   - 带锚点 dnsrewrite            → anchor + domain^$dnsrewrite=IP
- *   - hosts 黑名单                 → |domain^
- *   - hosts 白名单                 → @@|domain^
+ * ★ 按规则的结构字段分类（不再解析字符串前缀）。
  */
-const formatOutput = (rule) => {
-  if (!rule) return null;
-
+const classifyRule = (rule) => {
   if (rule.ip) {
-    // ★ * 前缀 → 保留
-    if (rule.original.startsWith("*")) {
-      return `*${rule.domain}^$dnsrewrite=${rule.ip}`;
-    }
-
-    // ★ 无锚点 dnsrewrite
-    const hasAnchor =
-      rule.original.startsWith("@@") || rule.original.startsWith("|");
-
-    if (!hasAnchor) {
-      return `${rule.domain}^$dnsrewrite=${rule.ip}`;
-    }
-
-    // 带锚点 dnsrewrite
-    const anchor = rule.coverSub ? "||" : "|";
-    return `${anchor}${rule.domain}^$dnsrewrite=${rule.ip}`;
+    if (rule.anchor === "star") return "rewriteStar";
+    if (rule.anchor === "bare") return "rewriteBare";
+    if (rule.anchor === "sub")
+      return rule.isWhite ? "rewriteWhiteSub" : "rewriteBlackSub";
+    return rule.isWhite ? "rewriteWhiteExact" : "rewriteBlackExact";
   }
-
-  if (rule.isHosts && !rule.isWhite) return `|${rule.domain}^`;
-  if (rule.isHosts && rule.isWhite) return `@@|${rule.domain}^`;
-
-  return rule.original;
-};
-
-/**
- * ★ 黑名单分桶（10 层）
- */
-const classifyBlackLine = (line) => {
-  if (line.includes("$dnsrewrite")) {
-    if (line.startsWith("@@||")) return "rewriteWhiteSub";
-    if (line.startsWith("@@|")) return "rewriteWhiteExact";
-    if (line.startsWith("||")) return "rewriteBlackSub";
-    if (line.startsWith("|")) return "rewriteBlackExact";
-    if (line.startsWith("*")) return "rewriteStar";
-    return "rewriteBare";
-  }
-  if (line.includes("$")) return "modified";
-  if (line.startsWith("||")) return "sub";
-  if (line.startsWith("|")) return "exact";
+  if (rule.anchor === "star") return "star";
+  if (rule.anchor === "sub") return "sub";
+  if (rule.anchor === "exact") return "exact";
   return "other";
 };
 
-/**
- * ★ 白名单分桶（10 层）
- */
-const classifyWhiteLine = (line) => {
-  if (line.includes("$dnsrewrite")) {
-    if (line.startsWith("@@||")) return "rewriteWhiteSub";
-    if (line.startsWith("@@|")) return "rewriteWhiteExact";
-    if (line.startsWith("||")) return "rewriteBlackSub";
-    if (line.startsWith("|")) return "rewriteBlackExact";
-    if (line.startsWith("*")) return "rewriteStar";
-    return "rewriteBare";
-  }
-  if (line.includes("$")) return "modified";
-  if (line.startsWith("@@||")) return "sub";
-  if (line.startsWith("@@|")) return "exact";
-  return "other";
-};
-
-/**
- * ★ 10 层桶输出顺序
- */
 const writeBuckets = async (writer, buckets) => {
   for (const key of [
     "rewriteBlackExact",
@@ -237,9 +173,7 @@ const buildAdGuardHomeLists = async (options) => {
   const noblacklistSet = new Set();
   const nowhitelistSet = new Set();
 
-  // ============================================================
   // 第 2 步：白名单覆盖黑名单
-  // ============================================================
   for (const [wDomain, wRule] of whiteMap) {
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
@@ -263,15 +197,11 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
-  // ============================================================
   // 第 3 步：反向排除
-  // ============================================================
   const suppressedWhite = new Set();
-
   for (const [wDomain, wRule] of whiteMap) {
     const bRule = blackMap.get(wDomain);
     if (!bRule) continue;
-
     if (!wRule.important && bRule.important) {
       suppressedWhite.add(wDomain);
       continue;
@@ -296,9 +226,9 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
-  // ★ 锚点转换：|| → *，| → 无
+  // ★ 锚点转换集中在这里：|| → *，| → bare
   // ============================================================
-  const dnsRewriteConflictSet = new Set();
+  const dnsRewriteConflictRules = [];
 
   for (const [wDomain, wRule] of whiteMap) {
     if (!wRule.coverSub || wRule.important || wRule.ip) continue;
@@ -307,24 +237,28 @@ const buildAdGuardHomeLists = async (options) => {
     for (const [bDomain, bRule] of blackMap) {
       if (!bDomain.endsWith(suffix)) continue;
       if (bRule.important || bRule.ip) {
-        // ★ || → *，| → 无锚点
-        const anchor = bRule.coverSub ? "*" : "";
-        dnsRewriteConflictSet.add(
-          `${anchor}${bDomain}^$dnsrewrite=0.0.0.0`,
-        );
+        // ★ 构造结构化规则，交给 formatRule 生成
+        dnsRewriteConflictRules.push({
+          domain: bDomain,
+          isWhite: false,
+          anchor: bRule.coverSub ? "star" : "bare",
+          ip: "0.0.0.0",
+          coverSub: bRule.coverSub,
+          isHosts: false,
+          important: false,
+          original: "",
+        });
       }
     }
   }
 
-  if (dnsRewriteConflictSet.size > 0) {
+  if (dnsRewriteConflictRules.length > 0) {
     console.log(
-      `$dnsrewrite 冲突：${dnsRewriteConflictSet.size} 条子域需强制重写`,
+      `$dnsrewrite 冲突：${dnsRewriteConflictRules.length} 条子域需强制重写`,
     );
   }
 
-  // ============================================================
   // 第 5 步：拆黑名单
-  // ============================================================
   const normalBlack = new Map();
   const importantBlack = new Map();
   for (const [d, rule] of blackMap) {
@@ -341,14 +275,11 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   const importantBlackDomains = [...importantBlack.keys()];
-
   const blackDomains = [
     ...new Set([...normalBlackDomains, ...importantBlackDomains]),
   ].sort();
 
-  // ============================================================
   // 第 6 步：拆白名单
-  // ============================================================
   const normalWhite = new Map();
   const importantWhite = new Map();
   for (const [d, rule] of whiteMap) {
@@ -365,7 +296,6 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   const importantWhiteDomains = [...importantWhite.keys()];
-
   const whiteDomains = [
     ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
   ].sort();
@@ -375,9 +305,7 @@ const buildAdGuardHomeLists = async (options) => {
   const getWhiteRule = (d) =>
     whiteMap.get(d) || normalWhite.get(d) || importantWhite.get(d);
 
-  // ============================================================
-  // 第 7 步：写归档文件
-  // ============================================================
+  // 第 7 步：写归档
   if (noblacklistWriter) {
     for (const line of [...noblacklistSet].sort()) {
       await noblacklistWriter.write(line);
@@ -403,9 +331,8 @@ const buildAdGuardHomeLists = async (options) => {
   const redundantCount = redundantSet.size;
 
   // ============================================================
-  // 第 8 步：输出产物（10 层排序）
+  // 第 8 步：输出产物（★ 全部走 formatRule）
   // ============================================================
-  // 8.1 黑名单
   const blackBuckets = {
     rewriteBlackExact: [],
     rewriteBlackSub: [],
@@ -421,16 +348,15 @@ const buildAdGuardHomeLists = async (options) => {
 
   for (const d of blackDomains) {
     const rule = getBlackRule(d);
-    const line = formatOutput(rule);
+    const line = formatRule(rule);   // ★
     if (!line) continue;
-    blackBuckets[classifyBlackLine(line)].push(line);
+    blackBuckets[classifyRule(rule)].push(line);
   }
 
   const rulesWriter = new LineWriter(outRulesFile);
   await writeBuckets(rulesWriter, blackBuckets);
   await rulesWriter.close();
 
-  // 8.2 白名单
   const whiteBuckets = {
     rewriteBlackExact: [],
     rewriteBlackSub: [],
@@ -446,14 +372,15 @@ const buildAdGuardHomeLists = async (options) => {
 
   for (const d of whiteDomains) {
     const rule = getWhiteRule(d);
-    const line = formatOutput(rule);
+    const line = formatRule(rule);   // ★
     if (!line) continue;
-    whiteBuckets[classifyWhiteLine(line)].push(line);
+    whiteBuckets[classifyRule(rule)].push(line);
   }
 
-  // 冲突规则按分类进桶
-  for (const line of dnsRewriteConflictSet) {
-    whiteBuckets[classifyWhiteLine(line)].push(line);
+  // ★ 冲突规则也走 formatRule
+  for (const conflict of dnsRewriteConflictRules) {
+    const line = formatRule(conflict);
+    if (line) whiteBuckets[classifyRule(conflict)].push(line);
   }
 
   const allowWriter = new LineWriter(outAllowFile);
@@ -468,17 +395,14 @@ const buildAdGuardHomeLists = async (options) => {
     whiteBuckets.rewriteStar.length +
     whiteBuckets.rewriteBare.length;
 
-  // ============================================================
-  // 统计
-  // ============================================================
   const stats = {
     blacklistCount: blackDomains.length,
-    whitelistCount: whiteDomains.length + dnsRewriteConflictSet.size,
+    whitelistCount: whiteDomains.length + dnsRewriteConflictRules.length,
     dnsRewriteCount: rewriteOutCount,
     noblacklistCount: noblacklistSet.size,
     nowhitelistCount: nowhitelistSet.size,
     suppressedWhiteCount: suppressedWhite.size,
-    dnsRewriteConflictCount: dnsRewriteConflictSet.size,
+    dnsRewriteConflictCount: dnsRewriteConflictRules.length,
     skippedCount,
     redundantCount,
   };
