@@ -5,48 +5,95 @@ const { hasUnsupportedModifier, isPathRule } = require("./rule_parser");
 
 const HTML_RE = /<\s*(html|head|body|div|a\s|script|style|!DOCTYPE|meta|link)/i;
 
-// 静态资源后缀（不是域名）
 const STATIC_FILE_RE =
   /\.(js|ts|css|html?|json|xml|txt|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|otf|map|mp4|mp3|webm|m3u8)(\^|\$|$)/i;
 
 /**
- * 是否符合 AdGuard Home DNS 规则。
+ * 是否符合 AdGuard Home DNS 规则
  */
 const isValidRuleLine = (t) => {
   if (!t) return false;
   if (t.length < 3) return false;
   if (t.length > 1024) return false;
 
-  // 注释 / 标题 / 元素隐藏 —— 全丢
   if (t.startsWith("!")) return false;
   if (t.startsWith("[")) return false;
   if (t.startsWith("#")) return false;
 
-  // HTML 垃圾
   if (HTML_RE.test(t)) return false;
 
-  // 必含 . 或 /
   if (!t.includes(".") && !t.includes("/")) return false;
 
-  // ★ 路径规则一律丢（包括 ||domain/path）
   if (isPathRule(t)) return false;
-
-  // ★ 含 DNS 不支持的修饰符 → 整条丢
   if (hasUnsupportedModifier(t)) return false;
-
-  // 静态资源后缀
   if (STATIC_FILE_RE.test(t)) return false;
 
   return true;
 };
 
 /**
+ * ★ 标准化一行规则。
+ *
+ * 规则：
+ *   - @@|| / @@| / || / | 开头 → 保留原样
+ *   - 裸 @@ + 纯域名          → @@|domain^
+ *   - 纯域名                  → |domain^  或  @@|domain^
+ *   - hosts 格式              → |domain^  或  @@|domain^
+ *
+ * @param {string} line
+ * @param {boolean} isWhite  当前文件是否白名单（allow*）
+ */
+const normalizeLine = (line, isWhite) => {
+  const t = line.trim();
+  if (!t) return null;
+
+  // ① 已带 @@|| / @@| → 保留
+  if (t.startsWith("@@||") || t.startsWith("@@|")) return t;
+
+  // ② 已带 || / | → 保留
+  if (t.startsWith("||") || t.startsWith("|")) return t;
+
+  // ③ 裸 @@ + 纯域名 → @@|domain^
+  if (t.startsWith("@@")) {
+    const body = t.slice(2).trim();
+    const domainPart = body.split("$")[0].split("/")[0].split("^")[0].trim();
+    if (domainPart && /^[a-z0-9.-]+$/i.test(domainPart)) {
+      const dollarIdx = body.indexOf("$");
+      const suffix = dollarIdx !== -1 ? body.slice(dollarIdx) : "";
+      return `@@|${domainPart}^${suffix}`;
+    }
+    return null;
+  }
+
+  const prefix = isWhite ? "@@" : "";
+
+  // ④ hosts 格式
+  const parts = t.split(/\s+/);
+  if (parts.length === 2 && /^(\d{1,3}\.){3}\d{1,3}$/.test(parts[0])) {
+    const domain = parts[1].toLowerCase().replace(/\.+$/, "");
+    if (domain) return `${prefix}|${domain}^`;
+    return null;
+  }
+
+  // ⑤ 纯域名
+  const rawDomain = t.split("$")[0].split("/")[0].replace(/\^+$/, "").trim();
+  if (rawDomain && /^[a-z0-9.-]+$/i.test(rawDomain)) {
+    const dollarIdx = t.indexOf("$");
+    const suffix = dollarIdx !== -1 ? t.slice(dollarIdx) : "";
+    return `${prefix}|${rawDomain}^${suffix}`;
+  }
+
+  return null;
+};
+
+/**
  * 合并所有 rules*.txt / allow*.txt 到一个文件。
  * - 过滤注释 / 无效行 / URL 规则 / 不支持的修饰符
+ * - ★ 标准化：补全锚点（rules* → |，allow* → @@|）
  * - 用 Set 去重，保留首次出现顺序
  */
 const mergeAll = async (directory, outputFile) => {
-  console.log("开始合并所有规则（含去重）");
+  console.log("开始合并所有规则（含去重 + 标准化）");
   try {
     const fileList = await readDir(directory);
     const allFiles = fileList
@@ -72,22 +119,35 @@ const mergeAll = async (directory, outputFile) => {
     let written = 0;
 
     for (const file of allFiles) {
+      // ★ 根据文件名判断归属
+      const isWhiteFile = file.startsWith("allow");
       let fileWritten = 0;
+
       await readLines(path.join(directory, file), async (line) => {
         const t = line.trim();
 
+        // 1. 过滤
         if (!isValidRuleLine(t)) {
           skipped++;
           return;
         }
 
-        if (seen.has(t)) {
+        // 2. ★ 标准化
+        const normalized = normalizeLine(t, isWhiteFile);
+        if (!normalized) {
+          skipped++;
+          return;
+        }
+
+        // 3. 去重
+        if (seen.has(normalized)) {
           duplicated++;
           return;
         }
-        seen.add(t);
+        seen.add(normalized);
 
-        await writer.write(t);
+        // 4. 写入
+        await writer.write(normalized);
         written++;
         fileWritten++;
       });
