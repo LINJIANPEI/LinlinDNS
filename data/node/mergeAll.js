@@ -9,7 +9,15 @@ const STATIC_FILE_RE =
   /\.(js|ts|css|html?|json|xml|txt|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|otf|map|mp4|mp3|webm|m3u8)(\^|\$|$)/i;
 
 /**
- * 是否符合 AdGuard Home DNS 规则
+ * 判断是否为 hosts 格式（IP domain）。
+ */
+const isHostsLine = (t) => {
+  const parts = t.split(/\s+/);
+  return parts.length === 2 && /^(\d{1,3}\.){3}\d{1,3}$/.test(parts[0]);
+};
+
+/**
+ * 是否符合 AdGuard Home DNS 规则。
  */
 const isValidRuleLine = (t) => {
   if (!t) return false;
@@ -34,14 +42,15 @@ const isValidRuleLine = (t) => {
 /**
  * ★ 标准化一行规则。
  *
- * 规则：
- *   - @@|| / @@| / || / | 开头 → 保留原样
- *   - 裸 @@ + 纯域名          → @@|domain^
- *   - 纯域名                  → |domain^  或  @@|domain^
- *   - hosts 格式              → |domain^  或  @@|domain^
+ * 处理规则：
+ *   ① 已带 @@|| / @@| / || / | → 保留原样
+ *   ② 裸 @@ + 纯域名          → @@|domain^
+ *   ③ hosts 格式（IP domain）  → ★ 保留原样（交给下游）
+ *   ④ 纯域名                  → |domain^  或  @@|domain^
  *
  * @param {string} line
  * @param {boolean} isWhite  当前文件是否白名单（allow*）
+ * @returns {string|null}
  */
 const normalizeLine = (line, isWhite) => {
   const t = line.trim();
@@ -65,17 +74,13 @@ const normalizeLine = (line, isWhite) => {
     return null;
   }
 
-  const prefix = isWhite ? "@@" : "";
-
-  // ④ hosts 格式
-  const parts = t.split(/\s+/);
-  if (parts.length === 2 && /^(\d{1,3}\.){3}\d{1,3}$/.test(parts[0])) {
-    const domain = parts[1].toLowerCase().replace(/\.+$/, "");
-    if (domain) return `${prefix}|${domain}^`;
-    return null;
+  // ④ ★ hosts 格式 → 保留原样（下游处理）
+  if (isHostsLine(t)) {
+    return t;
   }
 
-  // ⑤ 纯域名
+  // ⑤ 纯域名 → 加 | 或 @@|
+  const prefix = isWhite ? "@@" : "";
   const rawDomain = t.split("$")[0].split("/")[0].replace(/\^+$/, "").trim();
   if (rawDomain && /^[a-z0-9.-]+$/i.test(rawDomain)) {
     const dollarIdx = t.indexOf("$");
@@ -89,7 +94,7 @@ const normalizeLine = (line, isWhite) => {
 /**
  * 合并所有 rules*.txt / allow*.txt 到一个文件。
  * - 过滤注释 / 无效行 / URL 规则 / 不支持的修饰符
- * - ★ 标准化：补全锚点（rules* → |，allow* → @@|）
+ * - 标准化：纯域名补锚点，裸 @@ 补锚点，hosts 保留原样
  * - 用 Set 去重，保留首次出现顺序
  */
 const mergeAll = async (directory, outputFile) => {
