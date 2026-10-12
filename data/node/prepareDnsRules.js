@@ -2,7 +2,12 @@ const path = require("node:path");
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule } = require("./rule_parser");
 
-const prepareDnsRules = async (inputFile, outDir) => {
+/**
+ * @param {string} inputFile
+ * @param {string} outDir
+ * @param {string} [archiveDir] 归档目录（可选，不传则不归档）
+ */
+const prepareDnsRules = async (inputFile, outDir, archiveDir) => {
   console.log("开始准备 DNS 兼容规则");
 
   const blackFile = path.join(outDir, "black.txt");
@@ -10,6 +15,11 @@ const prepareDnsRules = async (inputFile, outDir) => {
 
   const blackWriter = new LineWriter(blackFile);
   const whiteWriter = new LineWriter(whiteFile);
+
+  // ★ 归档解析失败的行
+  const droppedWriter = archiveDir
+    ? new LineWriter(path.join(archiveDir, "DNS兼容-解析失败.txt"))
+    : null;
 
   const seenBlack = new Map();
   const seenWhite = new Map();
@@ -25,6 +35,7 @@ const prepareDnsRules = async (inputFile, outDir) => {
 
     const result = parseRule(t);
     if (!result) {
+      if (droppedWriter) await droppedWriter.write(line);
       dropped++;
       return;
     }
@@ -46,6 +57,7 @@ const prepareDnsRules = async (inputFile, outDir) => {
 
   await blackWriter.close();
   await whiteWriter.close();
+  if (droppedWriter) await droppedWriter.close();
 
   console.log(
     `DNS 兼容过滤完成：输入 ${total} 条 | 黑 ${seenBlack.size} | 白 ${seenWhite.size}（含重写 ${rewriteCount}）| 丢弃 ${dropped}`,

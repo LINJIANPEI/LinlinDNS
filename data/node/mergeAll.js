@@ -38,8 +38,13 @@ const isValidRuleLine = (t) => {
  * - 过滤注释 / 无效行 / URL 规则 / 不支持的修饰符
  * - ★ 使用 rule_parser.parseRule + formatRule 标准化
  * - 用 Set 去重
+ * - ★ 每一类过滤都写入 archiveDir 下的独立归档
+ *
+ * @param {string} directory  临时目录
+ * @param {string} outputFile 输出 all.txt
+ * @param {string} [archiveDir] 归档目录（可选，不传则不归档）
  */
-const mergeAll = async (directory, outputFile) => {
+const mergeAll = async (directory, outputFile, archiveDir) => {
   console.log("开始合并所有规则（含去重 + 标准化）");
   try {
     const fileList = await readDir(directory);
@@ -54,14 +59,43 @@ const mergeAll = async (directory, outputFile) => {
 
     const writer = new LineWriter(outputFile);
 
+    // ★ 四类归档
+    const invalidWriter = archiveDir
+      ? new LineWriter(path.join(archiveDir, "合并-无效行.txt"))
+      : null;
+    const parseFailWriter = archiveDir
+      ? new LineWriter(path.join(archiveDir, "合并-解析失败.txt"))
+      : null;
+    const formatFailWriter = archiveDir
+      ? new LineWriter(path.join(archiveDir, "合并-格式化失败.txt"))
+      : null;
+    const duplicateWriter = archiveDir
+      ? new LineWriter(path.join(archiveDir, "合并-重复行.txt"))
+      : null;
+
+    const closeArchives = async () => {
+      if (invalidWriter) await invalidWriter.close();
+      if (parseFailWriter) await parseFailWriter.close();
+      if (formatFailWriter) await formatFailWriter.close();
+      if (duplicateWriter) await duplicateWriter.close();
+    };
+
     if (allFiles.length === 0) {
       console.log("没有找到规则文件");
       await writer.close();
-      return { fileCount: 0, lineCount: 0, skipped: 0, duplicated: 0 };
+      await closeArchives();
+      return {
+        fileCount: 0,
+        lineCount: 0,
+        skipped: 0,
+        duplicated: 0,
+      };
     }
 
     const seen = new Set();
-    let skipped = 0;
+    let skippedInvalid = 0;
+    let skippedParse = 0;
+    let skippedFormat = 0;
     let duplicated = 0;
     let written = 0;
 
@@ -73,24 +107,28 @@ const mergeAll = async (directory, outputFile) => {
         const t = line.trim();
 
         if (!isValidRuleLine(t)) {
-          skipped++;
+          if (invalidWriter) await invalidWriter.write(line);
+          skippedInvalid++;
           return;
         }
 
         // ★ 解析 + 格式化（唯一处理锚点的地方）
         const rule = parseRule(t);
         if (!rule) {
-          skipped++;
+          if (parseFailWriter) await parseFailWriter.write(line);
+          skippedParse++;
           return;
         }
 
         const normalized = formatRule(rule, { fileIsWhite: isWhiteFile });
         if (!normalized) {
-          skipped++;
+          if (formatFailWriter) await formatFailWriter.write(line);
+          skippedFormat++;
           return;
         }
 
         if (seen.has(normalized)) {
+          if (duplicateWriter) await duplicateWriter.write(line);
           duplicated++;
           return;
         }
@@ -104,16 +142,24 @@ const mergeAll = async (directory, outputFile) => {
     }
 
     await writer.close();
+    await closeArchives();
     seen.clear();
 
+    const skipped = skippedInvalid + skippedParse + skippedFormat;
     console.log(
       `合并完成：${allFiles.length} 个文件，` +
-        `写入 ${written} 行，跳过 ${skipped} 行，去重 ${duplicated} 行`,
+        `写入 ${written} 行，跳过 ${skipped} 行` +
+        `（无效 ${skippedInvalid}，解析失败 ${skippedParse}，格式化失败 ${skippedFormat}），` +
+        `去重 ${duplicated} 行`,
     );
+
     return {
       fileCount: allFiles.length,
       lineCount: written,
       skipped,
+      skippedInvalid,
+      skippedParse,
+      skippedFormat,
       duplicated,
     };
   } catch (error) {
