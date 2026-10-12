@@ -145,10 +145,27 @@ const parseRule = (line, opts = {}) => {
     );
   }
 
-  // ② ||domain^ / |domain^
-  if (body.startsWith("||") || body.startsWith("|")) {
-    const isDouble = body.startsWith("||");
-    let rest = body.slice(isDouble ? 2 : 1).replace(/^\^/, "");
+  // ② ||domain^ / |domain^ / *domain^ / @@ 变体
+  if (
+    body.startsWith("||") ||
+    body.startsWith("|") ||
+    body.startsWith("*")
+  ) {
+    let isDouble = false;
+    let rest;
+
+    if (body.startsWith("||")) {
+      isDouble = true;
+      rest = body.slice(2);
+    } else if (body.startsWith("*")) {
+      // ★ * → 视为子域匹配
+      isDouble = true;
+      rest = body.slice(1);
+    } else {
+      rest = body.slice(1);
+    }
+
+    rest = rest.replace(/^\^/, "");
     rest = stripWildcard(rest);
     if (rest === null) return null;
 
@@ -180,7 +197,7 @@ const parseRule = (line, opts = {}) => {
     return wrap(
       {
         domain,
-        isWhite: true,   // ★ 无锚点 dnsrewrite 视为白名单（重写）
+        isWhite: true,   // 无锚点 dnsrewrite 视为白名单（重写）
         ip: bareDnsrewriteMatch[2],
       },
       { coverSub: false, isHosts: false },
