@@ -8,17 +8,25 @@ const HTML_RE = /<\s*(html|head|body|div|a\s|script|style|!DOCTYPE|meta|link)/i;
 const STATIC_FILE_RE =
   /\.(js|ts|css|html?|json|xml|txt|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|otf|map|mp4|mp3|webm|m3u8)(\^|\$|$)/i;
 
-/**
- * 判断是否为 hosts 格式（IP domain）。
- */
-const isHostsLine = (t) => {
-  const parts = t.split(/\s+/);
-  return parts.length === 2 && /^(\d{1,3}\.){3}\d{1,3}$/.test(parts[0]);
+const IPV4_RE = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
+
+const isIPv4 = (s) => {
+  const m = IPV4_RE.exec(s);
+  if (!m) return false;
+  return m.slice(1).every((p) => {
+    const n = Number(p);
+    return n >= 0 && n <= 255;
+  });
 };
 
-/**
- * 是否符合 AdGuard Home DNS 规则。
- */
+const isHostsLine = (t) => {
+  const parts = t.split(/\s+/);
+  return parts.length === 2 && isIPv4(parts[0]);
+};
+
+const isBlackholeIp = (ip) =>
+  ip === "0.0.0.0" || ip.startsWith("127.") || ip === "::1";
+
 const isValidRuleLine = (t) => {
   if (!t) return false;
   if (t.length < 3) return false;
@@ -42,27 +50,21 @@ const isValidRuleLine = (t) => {
 /**
  * ★ 标准化一行规则。
  *
- * 处理规则：
- *   ① 已带 @@|| / @@| / || / | → 保留原样
- *   ② 裸 @@ + 纯域名          → @@|domain^
- *   ③ hosts 格式（IP domain）  → ★ 保留原样（交给下游）
- *   ④ 纯域名                  → |domain^  或  @@|domain^
- *
- * @param {string} line
- * @param {boolean} isWhite  当前文件是否白名单（allow*）
- * @returns {string|null}
+ *   ① 已带 @@|| / @@| / || / | → 保留
+ *   ② 裸 @@ + 纯域名           → @@|domain^
+ *   ③ hosts + 黑洞 IP          → |domain^        （进黑名单）
+ *   ④ hosts + 公网 IP          → domain^$dnsrewrite=IP（无锚点，进白名单）
+ *   ⑤ 纯域名                   → |domain^ 或 @@|domain^
  */
 const normalizeLine = (line, isWhite) => {
   const t = line.trim();
   if (!t) return null;
 
-  // ① 已带 @@|| / @@| → 保留
+  // ① 已带锚点 → 保留
   if (t.startsWith("@@||") || t.startsWith("@@|")) return t;
-
-  // ② 已带 || / | → 保留
   if (t.startsWith("||") || t.startsWith("|")) return t;
 
-  // ③ 裸 @@ + 纯域名 → @@|domain^
+  // ② 裸 @@ + 纯域名 → @@|domain^
   if (t.startsWith("@@")) {
     const body = t.slice(2).trim();
     const domainPart = body.split("$")[0].split("/")[0].split("^")[0].trim();
@@ -74,9 +76,19 @@ const normalizeLine = (line, isWhite) => {
     return null;
   }
 
-  // ④ ★ hosts 格式 → 保留原样（下游处理）
+  // ③④ hosts 格式 → 按 IP 类型分流
   if (isHostsLine(t)) {
-    return t;
+    const parts = t.split(/\s+/);
+    const ip = parts[0];
+    const domain = parts[1].toLowerCase().replace(/\.+$/, "");
+
+    if (isBlackholeIp(ip)) {
+      // 黑洞 IP → |domain^（进黑名单）
+      return `|${domain}^`;
+    }
+
+    // 公网 IP → domain^$dnsrewrite=IP（无锚点，进白名单）
+    return `${domain}^$dnsrewrite=${ip}`;
   }
 
   // ⑤ 纯域名 → 加 | 或 @@|
@@ -91,12 +103,6 @@ const normalizeLine = (line, isWhite) => {
   return null;
 };
 
-/**
- * 合并所有 rules*.txt / allow*.txt 到一个文件。
- * - 过滤注释 / 无效行 / URL 规则 / 不支持的修饰符
- * - 标准化：纯域名补锚点，裸 @@ 补锚点，hosts 保留原样
- * - 用 Set 去重，保留首次出现顺序
- */
 const mergeAll = async (directory, outputFile) => {
   console.log("开始合并所有规则（含去重 + 标准化）");
   try {
@@ -124,34 +130,29 @@ const mergeAll = async (directory, outputFile) => {
     let written = 0;
 
     for (const file of allFiles) {
-      // ★ 根据文件名判断归属
       const isWhiteFile = file.startsWith("allow");
       let fileWritten = 0;
 
       await readLines(path.join(directory, file), async (line) => {
         const t = line.trim();
 
-        // 1. 过滤
         if (!isValidRuleLine(t)) {
           skipped++;
           return;
         }
 
-        // 2. ★ 标准化
         const normalized = normalizeLine(t, isWhiteFile);
         if (!normalized) {
           skipped++;
           return;
         }
 
-        // 3. 去重
         if (seen.has(normalized)) {
           duplicated++;
           return;
         }
         seen.add(normalized);
 
-        // 4. 写入
         await writer.write(normalized);
         written++;
         fileWritten++;
