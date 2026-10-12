@@ -50,11 +50,11 @@ const isValidRuleLine = (t) => {
 /**
  * ★ 标准化一行规则。
  *
- *   ① 已带 @@|| / @@| / || / | → 保留
- *   ② 裸 @@ + 纯域名           → @@|domain^
- *   ③ hosts + 黑洞 IP          → |domain^        （进黑名单）
- *   ④ hosts + 公网 IP          → domain^$dnsrewrite=IP（无锚点，进白名单）
- *   ⑤ 纯域名                   → |domain^ 或 @@|domain^
+ *   ① 已带 @@|| / @@| / || / | / * → 保留
+ *   ② 裸 @@ + 纯域名              → @@|domain^
+ *   ③ hosts + 黑洞 IP             → |domain^          （进黑名单）
+ *   ④ hosts + 公网 IP             → domain^$dnsrewrite=IP（无锚点，进白名单）
+ *   ⑤ 纯域名                      → |domain^ 或 @@|domain^
  */
 const normalizeLine = (line, isWhite) => {
   const t = line.trim();
@@ -63,6 +63,7 @@ const normalizeLine = (line, isWhite) => {
   // ① 已带锚点 → 保留
   if (t.startsWith("@@||") || t.startsWith("@@|")) return t;
   if (t.startsWith("||") || t.startsWith("|")) return t;
+  if (t.startsWith("*")) return t;   // ★ 保留 * 前缀
 
   // ② 裸 @@ + 纯域名 → @@|domain^
   if (t.startsWith("@@")) {
@@ -83,11 +84,8 @@ const normalizeLine = (line, isWhite) => {
     const domain = parts[1].toLowerCase().replace(/\.+$/, "");
 
     if (isBlackholeIp(ip)) {
-      // 黑洞 IP → |domain^（进黑名单）
       return `|${domain}^`;
     }
-
-    // 公网 IP → domain^$dnsrewrite=IP（无锚点，进白名单）
     return `${domain}^$dnsrewrite=${ip}`;
   }
 
