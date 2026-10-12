@@ -1,5 +1,6 @@
 /**
  * 共享规则解析模块。
+ * ★ 唯一负责解析和格式化锚点的地方。
  */
 
 const DNS_SUPPORTED_MODIFIERS = new Set([
@@ -97,9 +98,27 @@ const isPathRule = (t) => {
 };
 
 /**
- * 统一规则解析。
+ * 从原始行中提取 $ 修饰符后缀。
+ */
+const extractSuffix = (line) => {
+  const idx = line.indexOf("$");
+  return idx === -1 ? "" : line.slice(idx);
+};
+
+/**
+ * ★ 解析规则 → 结构化对象。
  *
- * 返回 { domain, isWhite, ip, coverSub?, original?, important?, isHosts? }
+ * 返回：
+ *   {
+ *     domain,       // 提取的域名
+ *     isWhite,      // 是否白名单
+ *     anchor,       // "exact" | "sub" | "star" | "bare"
+ *     ip,           // dnsrewrite/hosts IP，无则 null
+ *     coverSub,     // anchor === "sub" || "star"
+ *     isHosts,      // 是否来自 hosts 格式
+ *     important,    // 是否带 $important
+ *     original,     // 原始行
+ *   }
  */
 const parseRule = (line, opts = {}) => {
   if (typeof line !== "string") return null;
@@ -116,15 +135,16 @@ const parseRule = (line, opts = {}) => {
   const isWhitePrefix = t.startsWith("@@");
   const body = isWhitePrefix ? t.slice(2) : t;
 
-  const wrap = (result, extra) => {
-    if (opts.keepCoverSub) result.coverSub = extra.coverSub;
-    if (opts.keepOriginal) {
-      result.original = t;
-      result.important = hasImportant(t);
-    }
-    if (opts.keepIsHosts) result.isHosts = extra.isHosts;
-    return result;
-  };
+  const make = (domain, isWhite, anchor, ip, isHosts = false) => ({
+    domain,
+    isWhite,
+    anchor,
+    ip,
+    coverSub: anchor === "sub" || anchor === "star",
+    isHosts,
+    important: hasImportant(t),
+    original: t,
+  });
 
   // ① hosts 格式
   const parts = t.split(/\s+/);
@@ -135,33 +155,28 @@ const parseRule = (line, opts = {}) => {
     if (!domain) return null;
 
     const blackhole = isBlackholeIp(parts[0]);
-    return wrap(
-      {
-        domain,
-        isWhite: !blackhole,
-        ip: blackhole ? null : parts[0],
-      },
-      { coverSub: false, isHosts: true },
+    return make(
+      domain,
+      !blackhole,
+      "bare",                  // hosts 锚点语义为裸
+      blackhole ? null : parts[0],
+      true,
     );
   }
 
-  // ② ||domain^ / |domain^ / *domain^ / @@ 变体
-  if (
-    body.startsWith("||") ||
-    body.startsWith("|") ||
-    body.startsWith("*")
-  ) {
-    let isDouble = false;
+  // ② 已有锚点：|| / | / *
+  if (body.startsWith("||") || body.startsWith("|") || body.startsWith("*")) {
+    let anchor;
     let rest;
 
     if (body.startsWith("||")) {
-      isDouble = true;
+      anchor = "sub";
       rest = body.slice(2);
     } else if (body.startsWith("*")) {
-      // ★ * → 视为子域匹配
-      isDouble = true;
+      anchor = "star";
       rest = body.slice(1);
     } else {
+      anchor = "exact";
       rest = body.slice(1);
     }
 
@@ -176,32 +191,16 @@ const parseRule = (line, opts = {}) => {
     const domain = normalizeDomain(core);
     if (!domain) return null;
 
-    const dnsrewriteMatch = rest.match(/\$dnsrewrite=([^,;$]+)/i);
-    return wrap(
-      {
-        domain,
-        isWhite: isWhitePrefix,
-        ip: dnsrewriteMatch ? dnsrewriteMatch[1] : null,
-      },
-      { coverSub: isDouble, isHosts: false },
-    );
+    const m = rest.match(/\$dnsrewrite=([^,;$]+)/i);
+    return make(domain, isWhitePrefix, anchor, m ? m[1] : null);
   }
 
-  // ③ ★ 无锚点 + $dnsrewrite：domain^$dnsrewrite=IP
-  const bareDnsrewriteMatch = body.match(
-    /^([a-z0-9.-]+)\^\$dnsrewrite=([^,;$]+)$/i,
-  );
-  if (bareDnsrewriteMatch) {
-    const domain = normalizeDomain(bareDnsrewriteMatch[1]);
+  // ③ 无锚点 + $dnsrewrite：domain^$dnsrewrite=IP
+  const bareMatch = body.match(/^([a-z0-9.-]+)\^\$dnsrewrite=([^,;$]+)$/i);
+  if (bareMatch) {
+    const domain = normalizeDomain(bareMatch[1]);
     if (!domain) return null;
-    return wrap(
-      {
-        domain,
-        isWhite: true,   // 无锚点 dnsrewrite 视为白名单（重写）
-        ip: bareDnsrewriteMatch[2],
-      },
-      { coverSub: false, isHosts: false },
-    );
+    return make(domain, true, "bare", bareMatch[2]);
   }
 
   // ④ 纯域名
@@ -210,13 +209,58 @@ const parseRule = (line, opts = {}) => {
     if (d === null) return null;
     const domain = normalizeDomain(d);
     if (!domain) return null;
-    return wrap(
-      { domain, isWhite: isWhitePrefix, ip: null },
-      { coverSub: false, isHosts: false },
-    );
+    return make(domain, isWhitePrefix, "bare", null);
   }
 
   return null;
+};
+
+/**
+ * ★ 格式化规则 → 标准字符串。
+ * 唯一拼接锚点的地方。
+ *
+ * @param {object} rule  parseRule 返回的对象
+ * @param {object} [opts]
+ * @param {boolean} [opts.fileIsWhite]  文件归属（用于 bare 锚点补全）
+ */
+const formatRule = (rule, opts = {}) => {
+  if (!rule) return null;
+
+  const { domain, anchor, ip, isHosts } = rule;
+
+  // 有效白名单状态（文件归属影响 bare 锚点）
+  let isWhite = rule.isWhite;
+  if (anchor === "bare" && opts.fileIsWhite !== undefined) {
+    isWhite = opts.fileIsWhite;
+  }
+
+  const prefix = isWhite ? "@@" : "";
+  const suffix = ip ? "" : extractSuffix(rule.original || "");
+
+  // ① hosts
+  if (isHosts) {
+    if (ip) return `${domain}^$dnsrewrite=${ip}`;
+    return `|${domain}^`;
+  }
+
+  // ② dnsrewrite
+  if (ip) {
+    if (anchor === "bare") return `${domain}^$dnsrewrite=${ip}`;
+    if (anchor === "star") return `*${domain}^$dnsrewrite=${ip}`;
+    const bar = anchor === "sub" ? "||" : "|";
+    return `${prefix}${bar}${domain}^$dnsrewrite=${ip}`;
+  }
+
+  // ③ 普通规则
+  if (anchor === "bare") {
+    // 裸域名 → 补全为 | 或 @@|
+    return `${prefix}|${domain}^${suffix}`;
+  }
+  if (anchor === "star") {
+    return `*${domain}^${suffix}`;
+  }
+  const bar = anchor === "sub" ? "||" : "|";
+  return `${prefix}${bar}${domain}^${suffix}`;
 };
 
 module.exports = {
@@ -231,5 +275,6 @@ module.exports = {
   hasDnsRewrite,
   isPathRule,
   parseRule,
+  formatRule,
   EXTENDED_RULE_MARKERS,
 };
