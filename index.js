@@ -17,27 +17,33 @@ const removeDir = "./data/remove";
 
 const p = (f) => path.join(tmpDir, f);
 
-// ★ 归档文件名（中文）
+// ============================================================
+// ★ 缓存模式（改这里切换）
+// ------------------------------------------------------------
+//   A 不读不写：cacheRead: false, cacheWrite: false
+//   B 只读不写：cacheRead: true,  cacheWrite: false
+//   C 要读要写：cacheRead: true,  cacheWrite: true   ← 默认
+//   D 只写不读：cacheRead: false, cacheWrite: true
+// ============================================================
+const CACHE_MODE = {
+  read: true,
+  write: true,
+};
+
+// ★ 归档文件名（中文，按流水线编号）
 const ARCHIVE = {
-  // ===== 阶段 1：合并上游规则（mergeAll）=====
-  mergeInvalid: "① 合并-无效行.txt",
-  mergeParseFail: "② 合并-无法解析.txt",
-  mergeFormatFail: "③ 合并-格式化失败.txt",
-  mergeDuplicate: "④ 合并-重复规则.txt",
-
-  // ===== 阶段 2：DNS 兼容过滤（prepareDnsRules）=====
-  dnsParseFail: "⑤ DNS-无法解析.txt",
-
-  // ===== 阶段 3：剔除死域名（removeDeadRules）=====
-  dead: "⑥ 死域名.txt",
-  passthrough: "⑦ 非域名行.txt",
-
-  // ===== 阶段 4：构建 AdGuard 列表（buildAdGuardHomeLists）=====
-  noBlacklist: "⑧ 黑名单被覆盖.txt",
-  noWhitelist: "⑨ 白名单被收敛.txt",
-  skipped: "⑩ 构建-无法解析.txt",
-  redundant: "⑪ 构建-同域冗余.txt",
-  buildDuplicate: "⑫ 构建-重复规则.txt",
+  mergeInvalid: "01-合并-无效行.txt",
+  mergeParseFail: "02-合并-无法解析.txt",
+  mergeFormatFail: "03-合并-格式化失败.txt",
+  mergeDuplicate: "04-合并-重复规则.txt",
+  dnsParseFail: "05-DNS-无法解析.txt",
+  dead: "06-死域名.txt",
+  passthrough: "07-非域名行.txt",
+  noBlacklist: "08-黑名单被覆盖.txt",
+  noWhitelist: "09-白名单被收敛.txt",
+  skipped: "10-构建-无法解析.txt",
+  redundant: "11-构建-同域冗余.txt",
+  buildDuplicate: "12-构建-重复规则.txt",
 };
 
 async function main() {
@@ -70,6 +76,8 @@ async function main() {
       passthroughFile: p("passthrough.txt"),
       deadDomainsFile: p("dead-domains.txt"),
       cacheFile: "./dns-cache.json",
+      cacheRead: CACHE_MODE.read, // ★ 缓存读开关
+      cacheWrite: CACHE_MODE.write, // ★ 缓存写开关
       concurrency: 500,
     });
 

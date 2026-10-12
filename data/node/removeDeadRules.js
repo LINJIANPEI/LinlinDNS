@@ -103,10 +103,18 @@ const createNullCache = () => ({
   },
 });
 
-const createFileCache = (filePath) => {
+/**
+ * @param {string} filePath  缓存文件路径
+ * @param {object} [options]
+ * @param {boolean} [options.read=true]   是否读取已有缓存到内存
+ * @param {boolean} [options.write=true]  是否允许 save() 覆盖缓存文件
+ */
+const createFileCache = (filePath, options = {}) => {
+  const { read = true, write = true } = options;
   const store = new Map();
 
-  if (filePath && fs.existsSync(filePath)) {
+  // ★ read=false 时跳过加载，旧文件原封不动
+  if (read && filePath && fs.existsSync(filePath)) {
     try {
       const raw = fs.readFileSync(filePath, "utf-8");
       const t = raw.trimStart();
@@ -130,6 +138,8 @@ const createFileCache = (filePath) => {
     get: (d) => store.get(d),
     set: (d, v) => store.set(d, v),
     async save() {
+      // ★ write=false 直接返回，旧文件不被覆盖
+      if (!write) return;
       if (!filePath) return;
       const dir = path.dirname(filePath);
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -164,6 +174,8 @@ const removeDeadRules = async (inputFiles, options) => {
     whiteSet = new Set(),
     cache,
     cacheFile = DEFAULT_CACHE_FILE,
+    cacheRead = true, // ★ 新增
+    cacheWrite = true, // ★ 新增
     keepWhiteRules = true,
     autoSaveCache = true,
     onProgress,
@@ -172,8 +184,12 @@ const removeDeadRules = async (inputFiles, options) => {
 
   console.log("开始剔除死域名规则");
 
+  // ★ 构造缓存时把 read/write 传进去
   const cacheStore =
-    cache || (cacheFile ? createFileCache(cacheFile) : createNullCache());
+    cache ||
+    (cacheFile
+      ? createFileCache(cacheFile, { read: cacheRead, write: cacheWrite })
+      : createNullCache());
 
   // ========================================================
   // 第 1 遍：提取域名
@@ -410,6 +426,7 @@ const removeDeadRules = async (inputFiles, options) => {
   await cleanedWriter.close();
   if (nocleanedWriter) await nocleanedWriter.close();
 
+  // ★ write=false 时 save() 内部直接 return，旧文件不被覆盖
   if (autoSaveCache && cacheStore.save) await cacheStore.save();
 
   const stats = {
@@ -449,4 +466,4 @@ const removeDeadRules = async (inputFiles, options) => {
   return stats;
 };
 
-module.exports = { removeDeadRules, createFileCache };
+module.exports = { removeDeadRules, createFileCache, createNullCache };
