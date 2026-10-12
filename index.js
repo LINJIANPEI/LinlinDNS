@@ -19,19 +19,25 @@ const p = (f) => path.join(tmpDir, f);
 
 // ★ 归档文件名（中文）
 const ARCHIVE = {
-  dead: "死域名.txt",
-  passthrough: "非域名行.txt",
-  noBlacklist: "被覆盖的黑名单.txt",
-  noWhitelist: "被收敛的白名单.txt",
-  skipped: "无法解析.txt",
-  redundant: "冗余规则.txt",
-  // ★ 新增归档
-  mergeInvalid: "合并-无效行.txt",
-  mergeParseFail: "合并-解析失败.txt",
-  mergeFormatFail: "合并-格式化失败.txt",
-  mergeDuplicate: "合并-重复行.txt",
-  dnsParseFail: "DNS兼容-解析失败.txt",
-  buildDuplicate: "构建-重复行.txt",
+  // ===== 阶段 1：合并上游规则（mergeAll）=====
+  mergeInvalid: "① 合并-无效行.txt",
+  mergeParseFail: "② 合并-无法解析.txt",
+  mergeFormatFail: "③ 合并-格式化失败.txt",
+  mergeDuplicate: "④ 合并-重复规则.txt",
+
+  // ===== 阶段 2：DNS 兼容过滤（prepareDnsRules）=====
+  dnsParseFail: "⑤ DNS-无法解析.txt",
+
+  // ===== 阶段 3：剔除死域名（removeDeadRules）=====
+  dead: "⑥ 死域名.txt",
+  passthrough: "⑦ 非域名行.txt",
+
+  // ===== 阶段 4：构建 AdGuard 列表（buildAdGuardHomeLists）=====
+  noBlacklist: "⑧ 黑名单被覆盖.txt",
+  noWhitelist: "⑨ 白名单被收敛.txt",
+  skipped: "⑩ 构建-无法解析.txt",
+  redundant: "⑪ 构建-同域冗余.txt",
+  buildDuplicate: "⑫ 构建-重复规则.txt",
 };
 
 async function main() {
