@@ -1,9 +1,7 @@
 /**
  * 共享规则解析模块。
- * 供 mergeAll / prepareDnsRules / removeDeadRules / buildAdGuardHomeLists 复用。
  */
 
-// ★ AdGuard Home DNS 支持的修饰符
 const DNS_SUPPORTED_MODIFIERS = new Set([
   "important",
   "badfilter",
@@ -28,11 +26,6 @@ const isIPv4 = (s) => {
 const isBlackholeIp = (ip) =>
   ip === "0.0.0.0" || ip.startsWith("127.") || ip === "::1";
 
-/**
- * 处理通配符域名。
- * - *.domain.com → 剥离 *. → 'domain.com'
- * - ad*banner   → 含非前缀 * → 返回 null
- */
 const stripWildcard = (domain) => {
   let d = domain;
   if (d.startsWith("*.")) d = d.slice(2);
@@ -40,9 +33,6 @@ const stripWildcard = (domain) => {
   return d;
 };
 
-/**
- * 域名规范化（只做结构校验，无层级上限、无 TLD 校验）。
- */
 const normalizeDomain = (value) => {
   const d = value.trim().toLowerCase().replace(/\.+$/, "").replace(/^\.+/, "");
   if (!d) return null;
@@ -64,7 +54,6 @@ const normalizeDomain = (value) => {
   return d;
 };
 
-// 提取 $ 后的修饰符名（去掉 $、去掉 =值、去掉 ~ 前缀、小写）
 const getModifiers = (line) => {
   const idx = line.indexOf("$");
   if (idx === -1) return [];
@@ -92,11 +81,6 @@ const EXTENDED_RULE_MARKERS = [
   "#@?#",
 ];
 
-/**
- * 判断一行是否为 URL 路径规则（DNS 用不上）。
- * - /xxx 单斜杠开头的路径
- * - ||domain/path 或 |domain/path
- */
 const isPathRule = (t) => {
   if (/^\/(?!\/)/.test(t)) return true;
 
@@ -113,17 +97,9 @@ const isPathRule = (t) => {
 };
 
 /**
- * ★ 统一规则解析。
+ * 统一规则解析。
  *
- * @param {string} line
- * @param {object} [opts]
- * @param {boolean} [opts.allowExtended]  允许 ## / #@# 等扩展规则标记
- * @param {boolean} [opts.keepCoverSub]   返回 coverSub 字段
- * @param {boolean} [opts.keepOriginal]   返回 original + important 字段
- * @param {boolean} [opts.keepIsHosts]    返回 isHosts 字段
- *
- * @returns {object|null}
- *   { domain, isWhite, ip, coverSub?, original?, important?, isHosts? }
+ * 返回 { domain, isWhite, ip, coverSub?, original?, important?, isHosts? }
  */
 const parseRule = (line, opts = {}) => {
   if (typeof line !== "string") return null;
@@ -135,7 +111,6 @@ const parseRule = (line, opts = {}) => {
     if (!EXTENDED_RULE_MARKERS.some((m) => t.startsWith(m))) return null;
   }
 
-  // 含 DNS 不支持的修饰符 → 丢弃
   if (hasUnsupportedModifier(t)) return null;
 
   const isWhitePrefix = t.startsWith("@@");
@@ -151,7 +126,7 @@ const parseRule = (line, opts = {}) => {
     return result;
   };
 
-  // hosts 格式：0.0.0.0 domain / 127.0.0.1 domain / 192.0.80.242 domain
+  // ① hosts 格式
   const parts = t.split(/\s+/);
   if (parts.length === 2 && isIPv4(parts[0])) {
     const cand = stripWildcard(parts[1]);
@@ -170,7 +145,7 @@ const parseRule = (line, opts = {}) => {
     );
   }
 
-  // ||domain^ 或 |domain^
+  // ② ||domain^ / |domain^
   if (body.startsWith("||") || body.startsWith("|")) {
     const isDouble = body.startsWith("||");
     let rest = body.slice(isDouble ? 2 : 1).replace(/^\^/, "");
@@ -195,13 +170,29 @@ const parseRule = (line, opts = {}) => {
     );
   }
 
-  // 纯域名（含 *.domain.com）
+  // ③ ★ 无锚点 + $dnsrewrite：domain^$dnsrewrite=IP
+  const bareDnsrewriteMatch = body.match(
+    /^([a-z0-9.-]+)\^\$dnsrewrite=([^,;$]+)$/i,
+  );
+  if (bareDnsrewriteMatch) {
+    const domain = normalizeDomain(bareDnsrewriteMatch[1]);
+    if (!domain) return null;
+    return wrap(
+      {
+        domain,
+        isWhite: true,   // ★ 无锚点 dnsrewrite 视为白名单（重写）
+        ip: bareDnsrewriteMatch[2],
+      },
+      { coverSub: false, isHosts: false },
+    );
+  }
+
+  // ④ 纯域名
   if (!body.includes("/") && !body.includes("$")) {
     const d = stripWildcard(body.replace(/\.+$/, ""));
     if (d === null) return null;
     const domain = normalizeDomain(d);
     if (!domain) return null;
-
     return wrap(
       { domain, isWhite: isWhitePrefix, ip: null },
       { coverSub: false, isHosts: false },
