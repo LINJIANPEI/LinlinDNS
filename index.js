@@ -26,7 +26,7 @@ const p = (f) => path.join(tmpDir, f);
 //   D 只写不读：cacheRead: false, cacheWrite: true
 // ============================================================
 const CACHE_MODE = {
-  read: true,
+  read: false,
   write: true,
 };
 
