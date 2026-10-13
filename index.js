@@ -18,36 +18,48 @@ const removeDir = "./data/remove";
 const p = (f) => path.join(tmpDir, f);
 
 // ============================================================
-// ★ 缓存模式（改这里切换）
+// ★ 缓存模式（从环境变量读取）
 // ------------------------------------------------------------
-//   A 不读不写：cacheRead: false, cacheWrite: false
-//   B 只读不写：cacheRead: true,  cacheWrite: false
-//   C 要读要写：cacheRead: true,  cacheWrite: true   ← 默认
-//   D 只写不读：cacheRead: false, cacheWrite: true
+//   CI:  由 workflow 的 env.CACHE_READ / env.CACHE_WRITE 注入
+//   本地: 不设环境变量时默认 read=true, write=true
+//
+//   A 不读不写：CACHE_READ=false CACHE_WRITE=false node index.js
+//   B 只读不写：CACHE_READ=true  CACHE_WRITE=false node index.js
+//   C 要读要写：CACHE_READ=true  CACHE_WRITE=true  node index.js  ← 默认
+//   D 只写不读：CACHE_READ=false CACHE_WRITE=true  node index.js
 // ============================================================
 const CACHE_MODE = {
-  read: false,
-  write: true,
+  read: process.env.CACHE_READ !== "false",
+  write: process.env.CACHE_WRITE !== "false",
 };
 
 // ★ 归档文件名（中文，按流水线编号）
 const ARCHIVE = {
-  mergeInvalid: "01-合并-无效行.txt",
-  mergeParseFail: "02-合并-无法解析.txt",
-  mergeFormatFail: "03-合并-格式化失败.txt",
-  mergeDuplicate: "04-合并-重复规则.txt",
-  dnsParseFail: "05-DNS-无法解析.txt",
-  dead: "06-死域名.txt",
-  passthrough: "07-非域名行.txt",
-  noBlacklist: "08-黑名单被覆盖.txt",
-  noWhitelist: "09-白名单被收敛.txt",
-  skipped: "10-构建-无法解析.txt",
-  redundant: "11-构建-同域冗余.txt",
-  buildDuplicate: "12-构建-重复规则.txt",
+  // ===== 阶段 1：合并上游规则（mergeAll）=====
+  mergeInvalid: "① 合并-无效行.txt",
+  mergeParseFail: "② 合并-无法解析.txt",
+  mergeFormatFail: "③ 合并-格式化失败.txt",
+  mergeDuplicate: "④ 合并-重复规则.txt",
+
+  // ===== 阶段 2：DNS 兼容过滤（prepareDnsRules）=====
+  dnsParseFail: "⑤ DNS-无法解析.txt",
+
+  // ===== 阶段 3：剔除死域名（removeDeadRules）=====
+  dead: "⑥ 死域名.txt",
+  passthrough: "⑦ 非域名行.txt",
+
+  // ===== 阶段 4：构建 AdGuard 列表（buildAdGuardHomeLists）=====
+  noBlacklist: "⑧ 黑名单被覆盖.txt",
+  noWhitelist: "⑨ 白名单被收敛.txt",
+  skipped: "⑩ 构建-无法解析.txt",
+  redundant: "⑪ 构建-同域冗余.txt",
+  buildDuplicate: "⑫ 构建-重复规则.txt",
 };
 
 async function main() {
   try {
+    console.log(`缓存模式：read=${CACHE_MODE.read} write=${CACHE_MODE.write}`);
+
     await createDir(tmpDir);
 
     // ★ 提前创建归档目录，供 mergeAll / prepareDnsRules 写入
@@ -93,7 +105,7 @@ async function main() {
       outNoWhitelistFile: path.join(removeDir, ARCHIVE.noWhitelist),
       outSkippedFile: path.join(removeDir, ARCHIVE.skipped),
       outRedundantFile: path.join(removeDir, ARCHIVE.redundant),
-      outDuplicateFile: path.join(removeDir, ARCHIVE.buildDuplicate), // ★ 新增
+      outDuplicateFile: path.join(removeDir, ARCHIVE.buildDuplicate),
     });
 
     await copyFiles(

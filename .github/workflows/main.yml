@@ -1,6 +1,17 @@
 name: Linlin DNS UpdateRules
 on:
   workflow_dispatch:
+    inputs:
+      cache_mode:
+        description: "缓存模式"
+        type: choice
+        required: true
+        default: "C 要读要写"
+        options:
+          - "A 不读不写"
+          - "B 只读不写"
+          - "C 要读要写"
+          - "D 只写不读"
   schedule:
     - cron: "0 */1 * * *"
   push:
@@ -19,6 +30,19 @@ permissions:
   contents: write
   actions: write
 
+# ============================================================
+# ★ 缓存模式（手动触发时由 inputs.cache_mode 决定；
+#    定时/push/release 触发时默认 true/true）
+# ------------------------------------------------------------
+#   A 不读不写：CACHE_READ=false, CACHE_WRITE=false
+#   B 只读不写：CACHE_READ=true,  CACHE_WRITE=false
+#   C 要读要写：CACHE_READ=true,  CACHE_WRITE=true   ← 默认
+#   D 只写不读：CACHE_READ=false, CACHE_WRITE=true
+# ============================================================
+env:
+  CACHE_READ: ${{ (github.event_name != 'workflow_dispatch' || startsWith(inputs.cache_mode, 'B') || startsWith(inputs.cache_mode, 'C')) && 'true' || 'false' }}
+  CACHE_WRITE: ${{ (github.event_name != 'workflow_dispatch' || startsWith(inputs.cache_mode, 'C') || startsWith(inputs.cache_mode, 'D')) && 'true' || 'false' }}
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -32,8 +56,16 @@ jobs:
           git config user.name "Linlin"
           git config user.email "1732509260@qq.com"
 
-      # 恢复 DNS 缓存（只恢复，不自动保存）
+      - name: 显示缓存模式
+        run: |
+          echo "触发方式: ${{ github.event_name }}"
+          echo "手动选择: ${{ inputs.cache_mode || '（非手动触发）' }}"
+          echo "CACHE_READ  = $CACHE_READ"
+          echo "CACHE_WRITE = $CACHE_WRITE"
+
+      # ★ 只在 CACHE_READ=true 时恢复
       - name: 恢复 DNS 缓存
+        if: env.CACHE_READ == 'true'
         uses: actions/cache/restore@v4
         with:
           path: |
@@ -84,10 +116,10 @@ jobs:
           sudo chown -R $USER:$USER smartdns-cache || true
           sudo chown -R $USER:$USER dns-cache.json || true
 
-      # 只在 node 成功时保存，失败时保留旧缓存
+      # ★ 只在 node 成功 且 CACHE_WRITE=true 时保存
       - name: 保存 DNS 缓存
         uses: actions/cache/save@v4
-        if: steps.run_rules.outcome == 'success'
+        if: steps.run_rules.outcome == 'success' && env.CACHE_WRITE == 'true'
         with:
           path: |
             dns-cache.json
