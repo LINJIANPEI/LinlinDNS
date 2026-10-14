@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-10-14 12:01:07（北京时间）
+! Version: 2026-10-14 17:35:41（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 3260
+! Total count: 3279
 *activity.baidu.com^$dnsrewrite=0.0.0.0
 *ada.baidu.com^$dnsrewrite=0.0.0.0
 *adimg.uve.weibo.com^$dnsrewrite=0.0.0.0
@@ -23,7 +23,6 @@
 *fclick.baidu.com^$dnsrewrite=0.0.0.0
 *fclickv4.baidu.com^$dnsrewrite=0.0.0.0
 *gad.kugou.com^$dnsrewrite=0.0.0.0
-*h2tcbox.baidu.com^$dnsrewrite=0.0.0.0
 *h5retry.kugou.com^$dnsrewrite=0.0.0.0
 *hpd.baidu.com^$dnsrewrite=0.0.0.0
 *jr-ad.ctrip.com^$dnsrewrite=0.0.0.0
@@ -41,7 +40,6 @@
 *oimageb7.ydstatic.com^$dnsrewrite=0.0.0.0
 *pcdn-tracker.baidu.com^$dnsrewrite=0.0.0.0
 *resauth.kuwo.cn^$dnsrewrite=0.0.0.0
-*sax.sina.com.cn^$dnsrewrite=0.0.0.0
 *sdk-log.partner.sm.cn^$dnsrewrite=0.0.0.0
 *sdkapp.uve.weibo.com^$dnsrewrite=0.0.0.0
 *sptest.baidu.com^$dnsrewrite=0.0.0.0
@@ -344,6 +342,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@|dns11.quad9.net^
 @@|dnscheck.tools^
 @@|doh.cleanbrowsing.org^
+@@|doh.dns.apple.com^
 @@|doh.dns.sb^
 @@|doh.opendns.com^
 @@|doh.pub^
@@ -532,6 +531,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@|mermaid.ximalaya.com^
 @@|metaso.cn^
 @@|metric-ccc.bcs.cmbchina.com^
+@@|metrics.icloud.com^
 @@|mi.com^
 @@|microsoft.com^
 @@|microsoftapp.net^
@@ -654,6 +654,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@|rethinkdns.com^
 @@|roaming.officeapps.live.com^
 @@|router-app-api.jdcloud.com.jcloudlb.com^
+@@|rtbapi.douyucdn.cn^
 @@|s2.music.126.net.163jiasu.com^
 @@|s6.music.126.net.163jiasu.com^
 @@|safebrowsing.googleapis.com^
@@ -758,6 +759,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@|uc-novel-api.shuqireader.com^
 @@|uc.cn^
 @@|ufileos.com^
+@@|ug-data.mihoyo.com^
 @@|up.cm.ksmobile.com^
 @@|up.woozooo.com^
 @@|upload.gifshow.com^
@@ -784,6 +786,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@|visa.cn^
 @@|vm.gtimg.cn.cdn.dnsv1.com.cn^
 @@|vod-all.qiniu.com.volcgslb.com^
+@@|vod-settings.bytedanceapi.com^
 @@|vscode-sync.trafficmanager.net^
 @@|w-api.pp.cn^
 @@|w1-pro.kskwai.com^
@@ -957,6 +960,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||ali2-course.video.yximgs.com^
 @@||aligames.com^$important
 @@||alist.wavee.cn^
+@@||alistgo.com^
 @@||allawntech.com^
 @@||allcdn.china.qiniu.qnydns.com^
 @@||alllaw.112.2o7.net^
@@ -1060,6 +1064,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||app.toutiao.com^
 @@||app.zhuanzhuan.com^
 @@||app2.522.com.cn^
+@@||appcenter.ms^
 @@||appcloud.zhihu.com^
 @@||appcloud2.zhihu.com^
 @@||appgallery.huawei.com^
@@ -1069,6 +1074,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||appsec-mobile.meituan.com^
 @@||appstore.pandora.xiaomi.com^
 @@||appstore.vivo.com^
+@@||appupdates.189.cn^
 @@||aps.amap.com^
 @@||archive.biliimg.com^
 @@||arenascan.com^
@@ -1403,6 +1409,8 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||data.digital.costco.ca^
 @@||data.digital.costco.com^
 @@||data.flurry.com^
+@@||data.mistat.intl.xiaomi.com^
+@@||data.mistat.xiaomi.com^
 @@||data.notify.macys.com^
 @@||data.orders.costco.ca^
 @@||data.orders.costco.com^
@@ -1421,6 +1429,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||dbankcloud.eu^
 @@||dbankcloud.ru^
 @@||dc.sigmob.cn^
+@@||dcloud.net.cn^
 @@||dcms.1688.com^
 @@||dd.myapp.com^
 @@||ddys.pro^
@@ -1440,6 +1449,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||dianfeijisuanqi.bmcx.com^
 @@||dida151.zhushou.xyhuabo.com^
 @@||dig.bdurl.net^$important
+@@||dig.zjurl.cn^
 @@||dimg04.c-ctrip.com^
 @@||dinamicx.alibabausercontent.com^
 @@||disneyplus.bn5x.net^
@@ -1499,6 +1509,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||dragate.dc.oppomobile.com^
 @@||drive.uc.cn^$important
 @@||dsp.fcbox.com^
+@@||dss0.bdstatic.com^
 @@||dss2.bdstatic.com^
 @@||duapps.com^
 @@||dubaji-api.zhhainiao.com^
@@ -1697,6 +1708,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||help.x.com^
 @@||hemashare.cn^
 @@||hentaihand.com^
+@@||hermes.hupu.com^
 @@||heroku.com^
 @@||hicloud.com^
 @@||hidive.com^
@@ -1761,6 +1773,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||id.uc.cn^$important
 @@||id6.me^
 @@||idmsa.apple.com^
+@@||ietheivaicai.com^
 @@||iface2.iqiyi.com^
 @@||ifdian.net^
 @@||iframe.arkoselabs.com^
@@ -1820,7 +1833,6 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||imop.com^
 @@||imtt.dd.qq.com^$important
 @@||in-addr.arpa^
-@@||in.appcenter.ms^
 @@||incoming.telemetry.mozilla.org^
 @@||increase-openapi.soulapp.cn^
 @@||inews.gtimg.com^
@@ -1989,6 +2001,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||locprivate-tostc.sf-express.com^$important
 @@||log-api.pangolin-sdk-toutiao-b.com^
 @@||log-api.pangolin-sdk-toutiao.com^
+@@||log-sdk.ksapisrv.com^
 @@||log-upload.mihoyo.com^
 @@||log.dailygn.com^$important
 @@||log.snssdk.com^$important
@@ -2007,6 +2020,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||logupdate.avlyun.sec.miui.com^$important
 @@||long.eqnsui.cn^
 @@||long.voqpox.cn^
+@@||lp.pinduoduo.com^
 @@||lpcdn.pinduoduo.com^
 @@||ltzn.9377.com^
 @@||m.17173.com^
@@ -2096,6 +2110,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||member.jiaoyimao.com^
 @@||members.bitcomet.com^
 @@||message.bilibili.com^
+@@||metrics.apple.com^
 @@||metrics.torproject.org^
 @@||metrics.ubuntu.com^
 @@||mfunuevebimg1.sxjwwp.com^
@@ -2281,6 +2296,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||oneplus.helpshift.com^
 @@||onl.bz^
 @@||open.bytedanceapi.com^
+@@||open.douyin.com^
 @@||open.oppomobile.com^
 @@||open.unionpay.com^
 @@||open.unionpayintl.com^
@@ -2416,6 +2432,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||pay.soulapp.cn^
 @@||pay.xunlei.com^
 @@||pay.youku.com^
+@@||paydns.wechatpay.cn^
 @@||pc.xunlei.com^
 @@||pcvideoaliyun.titan.mgtv.com^
 @@||pepsico.com.cn^
@@ -2643,6 +2660,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||sec.resource.xiaomi.net^
 @@||second-floor-pro.pf.jd.com^$important
 @@||secureimage.securedataimages.com^
+@@||securemetrics.apple.com^
 @@||security.vivo.com^
 @@||sedge.nfl.com^
 @@||sentry.kuaishou.com^
@@ -2748,6 +2766,7 @@ zh.wikipedia.org^$dnsrewrite=208.80.154.224
 @@||static.zhihu.com^
 @@||staticimg.yidianzixun.com^
 @@||statics.itc.cn^
+@@||staticsns.cdn.bcebos.com^
 @@||staticwiki.biligame.com^
 @@||stats.britishbaseball.org.uk^
 @@||stats.gc.apple.com^
