@@ -1,6 +1,7 @@
 const { Resolver } = require("node:dns/promises");
 const fs = require("node:fs");
 const path = require("node:path");
+const readline = require("node:readline");
 const { finished } = require("node:stream/promises");
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule } = require("./rule_parser");
@@ -104,35 +105,70 @@ const createNullCache = () => ({
 });
 
 /**
+ * ★ 流式把缓存文件加载进 store。
+ * - 兼容旧格式（整文件是单个 JSON 对象）
+ * - 新格式：NDJSON（每行一个 JSON 数组 [domain, value]）
+ *
+ * 使用 readline 逐行读取，避免 fs.readFileSync + split("\n")
+ * 在大缓存下造成的内存翻倍。
+ */
+const loadCacheInto = async (filePath, store) => {
+  if (!filePath || !fs.existsSync(filePath)) return;
+
+  // 嗅探文件头，判断是否旧格式（整文件单个 JSON 对象）
+  let head = "";
+  try {
+    const fd = fs.openSync(filePath, "r");
+    const buf = Buffer.alloc(64);
+    const n = fs.readSync(fd, buf, 0, 64, 0);
+    fs.closeSync(fd);
+    head = buf.slice(0, n).toString("utf8").trimStart();
+  } catch {
+    return;
+  }
+
+  // 旧格式：一次性加载（只用于迁移，通常体积已经很大时才危险，
+  // 建议迁移后立即删除旧文件或改为 NDJSON）
+  if (head.startsWith("{")) {
+    try {
+      const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      for (const k of Object.keys(data)) store.set(k, data[k]);
+    } catch {
+      // 旧格式解析失败，忽略
+    }
+    return;
+  }
+
+  // 新格式：流式逐行读取
+  const rl = readline.createInterface({
+    input: fs.createReadStream(filePath, { encoding: "utf8" }),
+    crlfDelay: Infinity,
+  });
+  for await (const line of rl) {
+    if (!line) continue;
+    try {
+      const arr = JSON.parse(line);
+      if (Array.isArray(arr) && arr.length === 2) store.set(arr[0], arr[1]);
+    } catch {
+      // 单行损坏，跳过
+    }
+  }
+};
+
+/**
+ * ★ 改为 async 工厂：加载阶段流式读取，避免一次性驻留整文件。
+ *
  * @param {string} filePath  缓存文件路径
  * @param {object} [options]
  * @param {boolean} [options.read=true]   是否读取已有缓存到内存
  * @param {boolean} [options.write=true]  是否允许 save() 覆盖缓存文件
  */
-const createFileCache = (filePath, options = {}) => {
+const createFileCache = async (filePath, options = {}) => {
   const { read = true, write = true } = options;
   const store = new Map();
 
   // ★ read=false 时跳过加载，旧文件原封不动
-  if (read && filePath && fs.existsSync(filePath)) {
-    try {
-      const raw = fs.readFileSync(filePath, "utf-8");
-      const t = raw.trimStart();
-      if (t.startsWith("{")) {
-        const data = JSON.parse(raw);
-        for (const k of Object.keys(data)) store.set(k, data[k]);
-      } else {
-        for (const line of raw.split("\n")) {
-          if (!line) continue;
-          try {
-            const arr = JSON.parse(line);
-            if (Array.isArray(arr) && arr.length === 2)
-              store.set(arr[0], arr[1]);
-          } catch {}
-        }
-      }
-    } catch {}
-  }
+  if (read) await loadCacheInto(filePath, store);
 
   return {
     get: (d) => store.get(d),
@@ -174,8 +210,8 @@ const removeDeadRules = async (inputFiles, options) => {
     whiteSet = new Set(),
     cache,
     cacheFile = DEFAULT_CACHE_FILE,
-    cacheRead = true, // ★ 新增
-    cacheWrite = true, // ★ 新增
+    cacheRead = true, // ★ 缓存读开关
+    cacheWrite = true, // ★ 缓存写开关
     keepWhiteRules = true,
     autoSaveCache = true,
     onProgress,
@@ -184,11 +220,11 @@ const removeDeadRules = async (inputFiles, options) => {
 
   console.log("开始剔除死域名规则");
 
-  // ★ 构造缓存时把 read/write 传进去
+  // ★ createFileCache 现在是 async 工厂
   const cacheStore =
     cache ||
     (cacheFile
-      ? createFileCache(cacheFile, { read: cacheRead, write: cacheWrite })
+      ? await createFileCache(cacheFile, { read: cacheRead, write: cacheWrite })
       : createNullCache());
 
   // ========================================================
@@ -291,18 +327,27 @@ const removeDeadRules = async (inputFiles, options) => {
     let p;
     p = limit(async () => {
       const cached = cacheStore.get(domain);
-      let ipList;
+      let alive;
+
       if (cached && now - cached.timeStamp <= CACHE_TTL) {
-        ipList = cached.ipList;
+        // ★ 兼容旧格式（含 ipList）
+        alive =
+          cached.alive !== undefined
+            ? cached.alive
+            : Array.isArray(cached.ipList) && cached.ipList.length > 0;
         cacheHits++;
       } else {
-        ipList = await checkDomain(domain, { nameservers, port });
-        cacheStore.set(domain, { ipList, timeStamp: now });
+        const ipList = await checkDomain(domain, { nameservers, port });
+        alive = ipList && ipList.length > 0;
+        // ★ 只存布尔值 + 时间戳，单条记录体积大幅缩小
+        cacheStore.set(domain, { alive, timeStamp: now });
       }
-      if (ipList && ipList.length > 0) aliveSet.add(domain);
+
+      if (alive) aliveSet.add(domain);
       completed++;
       report();
     }).finally(() => inflight.delete(p));
+
     inflight.add(p);
     if (inflight.size >= MAX_INFLIGHT) await Promise.race(inflight);
   }

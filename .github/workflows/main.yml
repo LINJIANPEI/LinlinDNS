@@ -1,4 +1,4 @@
-name: Linlin DNS UpdateRules
+name: Linlin DNS 规则更新
 on:
   workflow_dispatch:
     inputs:
@@ -40,6 +40,7 @@ permissions:
 #   D 只写不读：CACHE_READ=false, CACHE_WRITE=true
 # ============================================================
 env:
+  NODE_OPTIONS: "--max-old-space-size=4096"
   CACHE_READ: ${{ (github.event_name != 'workflow_dispatch' || startsWith(inputs.cache_mode, 'B') || startsWith(inputs.cache_mode, 'C')) && 'true' || 'false' }}
   CACHE_WRITE: ${{ (github.event_name != 'workflow_dispatch' || startsWith(inputs.cache_mode, 'C') || startsWith(inputs.cache_mode, 'D')) && 'true' || 'false' }}
 
@@ -60,8 +61,9 @@ jobs:
         run: |
           echo "触发方式: ${{ github.event_name }}"
           echo "手动选择: ${{ inputs.cache_mode || '（非手动触发）' }}"
-          echo "CACHE_READ  = $CACHE_READ"
-          echo "CACHE_WRITE = $CACHE_WRITE"
+          echo "CACHE_READ   = $CACHE_READ"
+          echo "CACHE_WRITE  = $CACHE_WRITE"
+          echo "NODE_OPTIONS = $NODE_OPTIONS"
 
       # ★ 只在 CACHE_READ=true 时恢复
       - name: 恢复 DNS 缓存
@@ -74,6 +76,29 @@ jobs:
           key: dns-cache-${{ github.run_id }}
           restore-keys: |
             dns-cache-
+
+      # ★ 检查旧格式缓存：整体 JSON 且 >100MB 时删除，避免读入 OOM
+      - name: 检查旧缓存格式
+        if: env.CACHE_READ == 'true'
+        run: |
+          if [ ! -f dns-cache.json ]; then
+            echo "无缓存，跳过"
+            exit 0
+          fi
+          head=$(head -c 64 dns-cache.json | tr -d '[:space:]')
+          case "$head" in
+            \{*)
+              size=$(stat -c%s dns-cache.json)
+              echo "⚠️ 旧格式缓存，体积 $((size/1024/1024)) MB"
+              if [ "$size" -gt 104857600 ]; then
+                echo "> 100MB，删除以免 OOM"
+                rm -f dns-cache.json
+              fi
+              ;;
+            *)
+              echo "✓ 已是 NDJSON 格式"
+              ;;
+          esac
 
       - name: 启动 SmartDNS
         run: |
@@ -102,12 +127,12 @@ jobs:
           cat data/configs/smartdns.conf
           exit 1
 
-      # 运行（加 id，供后续判断成功/失败）
+      # ★ 运行（NODE_OPTIONS 已通过 env 全局注入，无需再写 --max-old-space-size）
       - name: 运行
         id: run_rules
         run: |
           npm install
-          node --max-old-space-size=4096 index.js
+          node index.js
 
       # 只在 node 成功时执行
       - name: 修复缓存目录权限
