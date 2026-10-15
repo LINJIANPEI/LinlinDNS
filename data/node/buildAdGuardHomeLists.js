@@ -1,5 +1,20 @@
+const { execFileSync } = require("node:child_process");
+const fs = require("node:fs");
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule, formatRule, hasDnsRewrite } = require("./rule_parser");
+
+// ============================================================
+// ★ 分片去重：规避 V8 单 Set 2^24-1 ≈ 1677 万上限
+// ============================================================
+const SHARD_COUNT = 128;
+
+const hashStr = (s) => {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) + h + s.charCodeAt(i)) | 0;
+  }
+  return h >>> 0;
+};
 
 function canCover(wRule, bRule) {
   if (wRule.important) return true;
@@ -9,11 +24,6 @@ function canCover(wRule, bRule) {
   return true;
 }
 
-/**
- * ★ 返回 { kept, removed }：
- *   kept    - 保留的域名（已排序）
- *   removed - Map<子域, 父域>，被父域收敛掉的子域
- */
 function removeRedundantSubdomains(domains) {
   const set = domains instanceof Set ? domains : new Set(domains);
   const ordinary = new Set();
@@ -97,7 +107,6 @@ const newBuckets = () => ({
   other: [],
 });
 
-/** 统计指定 key 的行数（在 writeBuckets 之前调用） */
 const countBuckets = (buckets, keys) => {
   let n = 0;
   for (const k of keys) n += buckets[k] ? buckets[k].length : 0;
@@ -108,29 +117,39 @@ const writeBuckets = async (writer, buckets) => {
   for (const key of BUCKET_KEYS) {
     const lines = buckets[key];
     if (!lines || lines.length === 0) {
-      buckets[key] = null; // ★ 立即释放
+      buckets[key] = null;
       continue;
     }
     lines.sort();
     for (const line of lines) {
       await writer.write(line);
     }
-    buckets[key] = null; // ★ 写完立即释放
+    buckets[key] = null;
   }
 };
 
 /**
- * ★ 把 Map<被覆盖规则, 覆盖者> 排序后写成 "被覆盖  ->  覆盖者"
+ * ★ 外部排序 + 去重（按第一列）
+ * 用系统 sort 替代内存里的 Map.sort()，彻底脱离堆内存限制。
+ *
+ * 输入行格式：`<被覆盖规则>  ->  <覆盖者>`
+ * 用 awk 按第一个空格分隔的字段（domain）去重（保留首次出现），
+ * 再 sort 排序输出到 outPath。
  */
-const writeCoveredMap = async (writer, map) => {
-  if (!writer) return;
-  const entries = [...map.entries()].sort((a, b) =>
-    a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0,
-  );
-  for (const [covered, coverBy] of entries) {
-    await writer.write(`${covered}  ->  ${coverBy}`);
+const externalSortCovered = (tmpPath, outPath) => {
+  if (!tmpPath || !outPath) return;
+  if (!fs.existsSync(tmpPath)) {
+    // 没有内容，写个空文件
+    fs.writeFileSync(outPath, "");
+    return;
   }
-  await writer.close();
+  // awk 按 $1（第一个空格分隔的字段）去重 → sort → 输出
+  execFileSync(
+    "bash",
+    ["-c", `awk -F' ' '!seen[$1]++' "$1" | sort > "$2"`, "_", tmpPath, outPath],
+    { stdio: "inherit" },
+  );
+  fs.unlinkSync(tmpPath);
 };
 
 const buildAdGuardHomeLists = async (options) => {
@@ -151,12 +170,24 @@ const buildAdGuardHomeLists = async (options) => {
 
   console.log("开始构建 AdGuard Home 列表");
 
-  const noblacklistWriter = outNoBlacklistFile
-    ? new LineWriter(outNoBlacklistFile)
+  // ★ 用「临时文件 + 系统 sort」替代内存 Map
+  const noblacklistTmp = outNoBlacklistFile
+    ? `${outNoBlacklistFile}.tmp`
     : null;
-  const nowhitelistWriter = outNoWhitelistFile
-    ? new LineWriter(outNoWhitelistFile)
+  const nowhitelistTmp = outNoWhitelistFile
+    ? `${outNoWhitelistFile}.tmp`
     : null;
+
+  const noblacklistWriter = noblacklistTmp
+    ? new LineWriter(noblacklistTmp)
+    : null;
+  const nowhitelistWriter = nowhitelistTmp
+    ? new LineWriter(nowhitelistTmp)
+    : null;
+
+  let noblacklistCount = 0;
+  let nowhitelistCount = 0;
+
   const skippedWriter = outSkippedFile ? new LineWriter(outSkippedFile) : null;
   const redundantWriter = outRedundantFile
     ? new LineWriter(outRedundantFile)
@@ -171,11 +202,12 @@ const buildAdGuardHomeLists = async (options) => {
   let skippedCount = 0;
   let duplicateCount = 0;
   let redundantCount = 0;
-  const seenLines = new Set();
+
+  // ★ 分片 Set 替代原来的单个 seenLines
+  const seenShards = Array.from({ length: SHARD_COUNT }, () => new Set());
 
   // ============================================================
   // 第 1 步：解析
-  // ★ 冗余行直接流式写入 redundantWriter，不再用 Set 缓冲
   // ============================================================
   await readLines(cleanedFile, async (raw) => {
     const line = raw.trim();
@@ -184,12 +216,14 @@ const buildAdGuardHomeLists = async (options) => {
       skippedCount++;
       return;
     }
-    if (seenLines.has(line)) {
+
+    const shard = seenShards[hashStr(line) % SHARD_COUNT];
+    if (shard.has(line)) {
       if (duplicateWriter) await duplicateWriter.write(raw);
       duplicateCount++;
       return;
     }
-    seenLines.add(line);
+    shard.add(line);
 
     const rule = parseRule(line);
     if (!rule) {
@@ -228,7 +262,8 @@ const buildAdGuardHomeLists = async (options) => {
     }
   });
 
-  seenLines.clear();
+  for (let i = 0; i < SHARD_COUNT; i++) seenShards[i].clear();
+
   if (redundantWriter) await redundantWriter.close();
 
   console.log(
@@ -237,19 +272,20 @@ const buildAdGuardHomeLists = async (options) => {
       (redundantCount > 0 ? `，冗余行 ${redundantCount}` : ""),
   );
 
-  // ★ 被覆盖规则 -> 覆盖者
-  const noblacklistSet = new Map();
-  const nowhitelistSet = new Map();
-
   // ============================================================
   // 第 2 步：白名单覆盖黑名单
-  // ★ 用 toDelete 数组批量删除，避免 [...blackMap.keys()] 大数组复制
+  // ★ 不再累积到 Map，直接流式写临时文件
   // ============================================================
   for (const [wDomain, wRule] of whiteMap) {
     if (blackMap.has(wDomain)) {
       const bRule = blackMap.get(wDomain);
       if (canCover(wRule, bRule)) {
-        noblacklistSet.set(bRule.original, wRule.original);
+        if (noblacklistWriter) {
+          await noblacklistWriter.write(
+            `${bRule.original}  ->  ${wRule.original}`,
+          );
+          noblacklistCount++;
+        }
         blackMap.delete(wDomain);
       }
     }
@@ -257,12 +293,16 @@ const buildAdGuardHomeLists = async (options) => {
     if (wRule.coverSub) {
       const suffix = `.${wDomain}`;
       const toDelete = [];
-      // ★ 直接迭代 Map.keys()，不创建数组副本
       for (const bDomain of blackMap.keys()) {
         if (bDomain.endsWith(suffix)) {
           const bRule = blackMap.get(bDomain);
           if (canCover(wRule, bRule)) {
-            noblacklistSet.set(bRule.original, wRule.original);
+            if (noblacklistWriter) {
+              await noblacklistWriter.write(
+                `${bRule.original}  ->  ${wRule.original}`,
+              );
+              noblacklistCount++;
+            }
             toDelete.push(bDomain);
           }
         }
@@ -272,16 +312,20 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   // ============================================================
-  // 第 3 步：反向排除（被 important/dnsrewrite 黑名单压制的白名单）
-  // ★ 去掉 suppressedWhite 中间 Map，边遍历边删
+  // 第 3 步：反向排除
   // ============================================================
   let suppressedWhiteCount = 0;
   for (const [wDomain, wRule] of whiteMap) {
     const bRule = blackMap.get(wDomain);
     if (!bRule) continue;
     if (!wRule.important && (bRule.important || bRule.ip)) {
-      nowhitelistSet.set(wRule.original, bRule.original);
-      whiteMap.delete(wDomain); // ★ Map 遍历中删当前项是安全的
+      if (nowhitelistWriter) {
+        await nowhitelistWriter.write(
+          `${wRule.original}  ->  ${bRule.original}`,
+        );
+        nowhitelistCount++;
+      }
+      whiteMap.delete(wDomain);
       suppressedWhiteCount++;
     }
   }
@@ -292,7 +336,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
-  // ★ 直接在循环里 push 到 whiteBuckets，不保留 dnsRewriteConflictRules 数组
   // ============================================================
   const whiteBuckets = newBuckets();
   let dnsRewriteConflictCount = 0;
@@ -328,7 +371,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 5 步：拆黑名单
-  // ★ 拆完后立即 blackMap.clear()，避免双份驻留
   // ============================================================
   const normalBlack = new Map();
   const importantBlack = new Map();
@@ -336,7 +378,7 @@ const buildAdGuardHomeLists = async (options) => {
     if (rule.important || rule.ip) importantBlack.set(d, rule);
     else normalBlack.set(d, rule);
   }
-  blackMap.clear(); // ★ 释放原 Map
+  blackMap.clear();
 
   const { kept: normalBlackDomains, removed: normalBlackRemoved } =
     removeRedundantSubdomains(new Set(normalBlack.keys()));
@@ -345,12 +387,16 @@ const buildAdGuardHomeLists = async (options) => {
     const childRule = normalBlack.get(childDomain);
     const parentRule = normalBlack.get(parentDomain);
     if (!childRule) continue;
-    noblacklistSet.set(
-      childRule.original,
-      parentRule ? parentRule.original : `(父域: ${parentDomain})`,
-    );
+    if (noblacklistWriter) {
+      await noblacklistWriter.write(
+        `${childRule.original}  ->  ${
+          parentRule ? parentRule.original : `(父域: ${parentDomain})`
+        }`,
+      );
+      noblacklistCount++;
+    }
   }
-  normalBlackRemoved.clear(); // ★
+  normalBlackRemoved.clear();
 
   const importantBlackDomains = [...importantBlack.keys()];
   const blackDomains = [
@@ -366,7 +412,7 @@ const buildAdGuardHomeLists = async (options) => {
     if (rule.important || rule.ip) importantWhite.set(d, rule);
     else normalWhite.set(d, rule);
   }
-  whiteMap.clear(); // ★ 释放原 Map
+  whiteMap.clear();
 
   const { kept: normalWhiteDomains, removed: normalWhiteRemoved } =
     removeRedundantSubdomains(new Set(normalWhite.keys()));
@@ -375,27 +421,33 @@ const buildAdGuardHomeLists = async (options) => {
     const childRule = normalWhite.get(childDomain);
     const parentRule = normalWhite.get(parentDomain);
     if (!childRule) continue;
-    nowhitelistSet.set(
-      childRule.original,
-      parentRule ? parentRule.original : `(父域: ${parentDomain})`,
-    );
+    if (nowhitelistWriter) {
+      await nowhitelistWriter.write(
+        `${childRule.original}  ->  ${
+          parentRule ? parentRule.original : `(父域: ${parentDomain})`
+        }`,
+      );
+      nowhitelistCount++;
+    }
   }
-  normalWhiteRemoved.clear(); // ★
+  normalWhiteRemoved.clear();
 
   const importantWhiteDomains = [...importantWhite.keys()];
   const whiteDomains = [
     ...new Set([...normalWhiteDomains, ...importantWhiteDomains]),
   ].sort();
 
-  // ★ blackMap/whiteMap 已 clear，只需查拆分后的子 Map
   const getBlackRule = (d) => normalBlack.get(d) || importantBlack.get(d);
   const getWhiteRule = (d) => normalWhite.get(d) || importantWhite.get(d);
 
   // ============================================================
-  // 第 7 步：写归档
+  // 第 7 步：关闭临时 writer + 外部排序去重
   // ============================================================
-  await writeCoveredMap(noblacklistWriter, noblacklistSet);
-  await writeCoveredMap(nowhitelistWriter, nowhitelistSet);
+  if (noblacklistWriter) await noblacklistWriter.close();
+  if (nowhitelistWriter) await nowhitelistWriter.close();
+
+  externalSortCovered(noblacklistTmp, outNoBlacklistFile);
+  externalSortCovered(nowhitelistTmp, outNoWhitelistFile);
 
   if (skippedWriter) await skippedWriter.close();
   if (duplicateWriter) await duplicateWriter.close();
@@ -415,7 +467,6 @@ const buildAdGuardHomeLists = async (options) => {
   await writeBuckets(rulesWriter, blackBuckets);
   await rulesWriter.close();
 
-  // ★ 白名单普通规则（冲突规则已在第 4 步 push 进 whiteBuckets）
   for (const d of whiteDomains) {
     const rule = getWhiteRule(d);
     const line = formatRule(rule);
@@ -423,7 +474,6 @@ const buildAdGuardHomeLists = async (options) => {
     pushLine(whiteBuckets, rule, line);
   }
 
-  // ★ 统计必须在 writeBuckets 之前（后者会把 bucket 置 null）
   const rewriteOutCount = countBuckets(whiteBuckets, [
     "rewriteBlackExact",
     "rewriteBlackSub",
@@ -441,8 +491,8 @@ const buildAdGuardHomeLists = async (options) => {
     blacklistCount: blackDomains.length,
     whitelistCount: whiteDomains.length + dnsRewriteConflictCount,
     dnsRewriteCount: rewriteOutCount,
-    noblacklistCount: noblacklistSet.size,
-    nowhitelistCount: nowhitelistSet.size,
+    noblacklistCount,
+    nowhitelistCount,
     suppressedWhiteCount,
     dnsRewriteConflictCount,
     skippedCount,

@@ -33,12 +33,30 @@ const isValidRuleLine = (t) => {
   return true;
 };
 
+// ============================================================
+// ★ 分片去重
+// ------------------------------------------------------------
+// V8 对单个 Set 有 2^24 - 1 ≈ 1677 万元素上限。
+// 把 seen 拆成 SHARD_COUNT 个小 Set，每个分片独立去重。
+// 总容量 = SHARD_COUNT × 1677 万，彻底避开上限。
+// ============================================================
+const SHARD_COUNT = 128;
+
+/** djb2 字符串哈希，返回 uint32 */
+const hashStr = (s) => {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) + h + s.charCodeAt(i)) | 0;
+  }
+  return h >>> 0;
+};
+
 /**
  * 合并所有 rules*.txt / allow*.txt 到一个文件。
  * - 过滤注释 / 无效行 / URL 规则 / 不支持的修饰符
- * - ★ 使用 rule_parser.parseRule + formatRule 标准化
- * - 用 Set 去重
- * - ★ 每一类过滤都写入 archiveDir 下的独立归档
+ * - 使用 rule_parser.parseRule + formatRule 标准化
+ * - ★ 分片 Set 去重，突破单 Set 1677 万上限
+ * - 每一类过滤都写入 archiveDir 下的独立归档
  *
  * @param {string} directory  临时目录
  * @param {string} outputFile 输出 all.txt
@@ -92,7 +110,9 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
       };
     }
 
-    const seen = new Set();
+    // ★ 分片 Set（替代原来的单个 seen）
+    const shards = Array.from({ length: SHARD_COUNT }, () => new Set());
+
     let skippedInvalid = 0;
     let skippedParse = 0;
     let skippedFormat = 0;
@@ -127,12 +147,16 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
           return;
         }
 
-        if (seen.has(normalized)) {
+        // ★ 分片查重
+        const idx = hashStr(normalized) % SHARD_COUNT;
+        const shard = shards[idx];
+
+        if (shard.has(normalized)) {
           if (duplicateWriter) await duplicateWriter.write(line);
           duplicated++;
           return;
         }
-        seen.add(normalized);
+        shard.add(normalized);
 
         await writer.write(normalized);
         written++;
@@ -143,7 +167,11 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
 
     await writer.close();
     await closeArchives();
-    seen.clear();
+
+    // ★ 释放分片 Set
+    for (let i = 0; i < SHARD_COUNT; i++) {
+      shards[i].clear();
+    }
 
     const skipped = skippedInvalid + skippedParse + skippedFormat;
     console.log(
