@@ -261,46 +261,61 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 2 步：白名单覆盖黑名单
+  // ★ 反转遍历方向：对每个黑名单域名，查其后缀链上的白名单
+  //     原版 O(白 × 黑)，新版 O(黑 × 平均后缀数)
   // ============================================================
-  for (const [wDomain, wRule] of whiteMap) {
-    if (blackMap.has(wDomain)) {
-      const bRule = blackMap.get(wDomain);
-      if (canCover(wRule, bRule)) {
-        if (noblacklistWriter) {
-          await noblacklistWriter.write(
-            `${bRule.original}  ->  ${wRule.original}`,
-          );
-          noblacklistCount++;
-        }
-        blackMap.delete(wDomain);
+  console.log("开始白名单覆盖黑名单...");
+  const toDeleteBlack = [];
+  let step2Progress = 0;
+
+  for (const [bDomain, bRule] of blackMap) {
+    // 1) 精确匹配
+    const wExact = whiteMap.get(bDomain);
+    if (wExact && canCover(wExact, bRule)) {
+      if (noblacklistWriter) {
+        await noblacklistWriter.write(
+          `${bRule.original}  ->  ${wExact.original}`,
+        );
+        noblacklistCount++;
       }
+      toDeleteBlack.push(bDomain);
+      continue;
     }
 
-    if (wRule.coverSub) {
-      const suffix = `.${wDomain}`;
-      const toDelete = [];
-      for (const bDomain of blackMap.keys()) {
-        if (bDomain.endsWith(suffix)) {
-          const bRule = blackMap.get(bDomain);
-          if (canCover(wRule, bRule)) {
-            if (noblacklistWriter) {
-              await noblacklistWriter.write(
-                `${bRule.original}  ->  ${wRule.original}`,
-              );
-              noblacklistCount++;
-            }
-            toDelete.push(bDomain);
-          }
+    // 2) 后缀匹配（最长后缀优先）
+    let idx = bDomain.indexOf(".");
+    let matched = false;
+    while (idx !== -1) {
+      const parent = bDomain.slice(idx + 1);
+      const w = whiteMap.get(parent);
+      if (w && w.coverSub && canCover(w, bRule)) {
+        if (noblacklistWriter) {
+          await noblacklistWriter.write(`${bRule.original}  ->  ${w.original}`);
+          noblacklistCount++;
         }
+        matched = true;
+        break;
       }
-      for (const d of toDelete) blackMap.delete(d);
+      idx = bDomain.indexOf(".", idx + 1);
+    }
+    if (matched) toDeleteBlack.push(bDomain);
+
+    // 进度日志
+    step2Progress++;
+    if (step2Progress % 500000 === 0) {
+      console.log(`  白名单覆盖进度: ${step2Progress}/${blackMap.size}`);
     }
   }
+
+  for (const d of toDeleteBlack) blackMap.delete(d);
+  toDeleteBlack.length = 0;
+  console.log(`白名单覆盖黑名单完成：移除 ${noblacklistCount} 条`);
 
   // ============================================================
   // 第 3 步：反向排除
   // ============================================================
   let suppressedWhiteCount = 0;
+  const toDeleteWhite = [];
   for (const [wDomain, wRule] of whiteMap) {
     const bRule = blackMap.get(wDomain);
     if (!bRule) continue;
@@ -311,10 +326,12 @@ const buildAdGuardHomeLists = async (options) => {
         );
         nowhitelistCount++;
       }
-      whiteMap.delete(wDomain);
+      toDeleteWhite.push(wDomain);
       suppressedWhiteCount++;
     }
   }
+  for (const d of toDeleteWhite) whiteMap.delete(d);
+  toDeleteWhite.length = 0;
 
   console.log(
     `反向排除：被 important/dnsrewrite 黑名单压制的白名单 ${suppressedWhiteCount} 条`,
@@ -322,25 +339,20 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
-  // ★ 优化：先提取 coverSub 白名单，再遍历黑名单
-  //   原版 O(白 × 黑)，新版 O(黑 × 白-coverSub)
+  // ★ 同样反转方向：对每个 important/ip 黑名单，查后缀链上的白名单
   // ============================================================
+  console.log("开始 $dnsrewrite 冲突检测...");
   const whiteBuckets = newBuckets();
   let dnsRewriteConflictCount = 0;
 
-  const coverSubWhite = [];
-  for (const [wDomain, wRule] of whiteMap) {
-    if (!wRule.coverSub || wRule.important || wRule.ip) continue;
-    coverSubWhite.push({ suffix: `.${wDomain}`, wRule });
-  }
+  for (const [bDomain, bRule] of blackMap) {
+    if (!bRule.important && !bRule.ip) continue;
 
-  if (coverSubWhite.length > 0) {
-    for (const [bDomain, bRule] of blackMap) {
-      if (!bRule.important && !bRule.ip) continue;
-
-      for (const { suffix, wRule } of coverSubWhite) {
-        if (!bDomain.endsWith(suffix)) continue;
-
+    let idx = bDomain.indexOf(".");
+    while (idx !== -1) {
+      const parent = bDomain.slice(idx + 1);
+      const w = whiteMap.get(parent);
+      if (w && w.coverSub && !w.important && !w.ip) {
         const conflict = {
           domain: bDomain,
           isWhite: false,
@@ -354,8 +366,9 @@ const buildAdGuardHomeLists = async (options) => {
         const line = formatRule(conflict);
         if (line) pushLine(whiteBuckets, conflict, line);
         dnsRewriteConflictCount++;
-        break; // 一个黑名单只会被一个后缀覆盖
+        break;
       }
+      idx = bDomain.indexOf(".", idx + 1);
     }
   }
 
@@ -368,6 +381,7 @@ const buildAdGuardHomeLists = async (options) => {
   // ============================================================
   // 第 5 步：拆黑名单
   // ============================================================
+  console.log("开始拆黑名单...");
   const normalBlack = new Map();
   const importantBlack = new Map();
   for (const [d, rule] of blackMap) {
@@ -402,6 +416,7 @@ const buildAdGuardHomeLists = async (options) => {
   // ============================================================
   // 第 6 步：拆白名单
   // ============================================================
+  console.log("开始拆白名单...");
   const normalWhite = new Map();
   const importantWhite = new Map();
   for (const [d, rule] of whiteMap) {
@@ -439,6 +454,7 @@ const buildAdGuardHomeLists = async (options) => {
   // ============================================================
   // 第 7 步：关闭 writer + 外部排序去重
   // ============================================================
+  console.log("开始外部排序归档文件...");
   if (noblacklistWriter) await noblacklistWriter.close();
   if (nowhitelistWriter) await nowhitelistWriter.close();
 
@@ -451,6 +467,7 @@ const buildAdGuardHomeLists = async (options) => {
   // ============================================================
   // 第 8 步：输出产物
   // ============================================================
+  console.log("开始输出产物...");
   const blackBuckets = newBuckets();
   for (const d of blackDomains) {
     const rule = getBlackRule(d);
