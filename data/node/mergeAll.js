@@ -34,15 +34,10 @@ const isValidRuleLine = (t) => {
 };
 
 // ============================================================
-// ★ 分片去重
-// ------------------------------------------------------------
-// V8 对单个 Set 有 2^24 - 1 ≈ 1677 万元素上限。
-// 把 seen 拆成 SHARD_COUNT 个小 Set，每个分片独立去重。
-// 总容量 = SHARD_COUNT × 1677 万，彻底避开上限。
+// ★ 分片去重：规避 V8 单 Set 2^24-1 ≈ 1677 万上限
 // ============================================================
 const SHARD_COUNT = 128;
 
-/** djb2 字符串哈希，返回 uint32 */
 const hashStr = (s) => {
   let h = 5381;
   for (let i = 0; i < s.length; i++) {
@@ -51,17 +46,6 @@ const hashStr = (s) => {
   return h >>> 0;
 };
 
-/**
- * 合并所有 rules*.txt / allow*.txt 到一个文件。
- * - 过滤注释 / 无效行 / URL 规则 / 不支持的修饰符
- * - 使用 rule_parser.parseRule + formatRule 标准化
- * - ★ 分片 Set 去重，突破单 Set 1677 万上限
- * - 每一类过滤都写入 archiveDir 下的独立归档
- *
- * @param {string} directory  临时目录
- * @param {string} outputFile 输出 all.txt
- * @param {string} [archiveDir] 归档目录（可选，不传则不归档）
- */
 const mergeAll = async (directory, outputFile, archiveDir) => {
   console.log("开始合并所有规则（含去重 + 标准化）");
   try {
@@ -77,7 +61,6 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
 
     const writer = new LineWriter(outputFile);
 
-    // ★ 四类归档
     const invalidWriter = archiveDir
       ? new LineWriter(path.join(archiveDir, "合并-无效行.txt"))
       : null;
@@ -110,7 +93,6 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
       };
     }
 
-    // ★ 分片 Set（替代原来的单个 seen）
     const shards = Array.from({ length: SHARD_COUNT }, () => new Set());
 
     let skippedInvalid = 0;
@@ -132,7 +114,6 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
           return;
         }
 
-        // ★ 解析 + 格式化（唯一处理锚点的地方）
         const rule = parseRule(t);
         if (!rule) {
           if (parseFailWriter) await parseFailWriter.write(line);
@@ -147,7 +128,6 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
           return;
         }
 
-        // ★ 分片查重
         const idx = hashStr(normalized) % SHARD_COUNT;
         const shard = shards[idx];
 
@@ -168,7 +148,6 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
     await writer.close();
     await closeArchives();
 
-    // ★ 释放分片 Set
     for (let i = 0; i < SHARD_COUNT; i++) {
       shards[i].clear();
     }

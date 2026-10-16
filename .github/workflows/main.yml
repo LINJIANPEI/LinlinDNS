@@ -1,4 +1,4 @@
-name: Linlin DNS 规则更新
+name: Linlin DNS UpdateRules
 on:
   workflow_dispatch:
     inputs:
@@ -21,7 +21,6 @@ on:
     types:
       - published
 
-# ★ 并发控制：同一时间只跑一个，新触发取消旧的
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
@@ -30,17 +29,8 @@ permissions:
   contents: write
   actions: write
 
-# ============================================================
-# ★ 缓存模式（手动触发时由 inputs.cache_mode 决定；
-#    定时/push/release 触发时默认 true/true）
-# ------------------------------------------------------------
-#   A 不读不写：CACHE_READ=false, CACHE_WRITE=false
-#   B 只读不写：CACHE_READ=true,  CACHE_WRITE=false
-#   C 要读要写：CACHE_READ=true,  CACHE_WRITE=true   ← 默认
-#   D 只写不读：CACHE_READ=false, CACHE_WRITE=true
-# ============================================================
 env:
-  NODE_OPTIONS: "--max-old-space-size=4096"
+  NODE_OPTIONS: "--max-old-space-size=8192"
   CACHE_READ: ${{ (github.event_name != 'workflow_dispatch' || startsWith(inputs.cache_mode, 'B') || startsWith(inputs.cache_mode, 'C')) && 'true' || 'false' }}
   CACHE_WRITE: ${{ (github.event_name != 'workflow_dispatch' || startsWith(inputs.cache_mode, 'C') || startsWith(inputs.cache_mode, 'D')) && 'true' || 'false' }}
 
@@ -65,7 +55,6 @@ jobs:
           echo "CACHE_WRITE  = $CACHE_WRITE"
           echo "NODE_OPTIONS = $NODE_OPTIONS"
 
-      # ★ 只在 CACHE_READ=true 时恢复
       - name: 恢复 DNS 缓存
         if: env.CACHE_READ == 'true'
         uses: actions/cache/restore@v4
@@ -77,7 +66,6 @@ jobs:
           restore-keys: |
             dns-cache-
 
-      # ★ 检查旧格式缓存：整体 JSON 且 >100MB 时删除，避免读入 OOM
       - name: 检查旧缓存格式
         if: env.CACHE_READ == 'true'
         run: |
@@ -127,31 +115,28 @@ jobs:
           cat data/configs/smartdns.conf
           exit 1
 
-      # ★ 运行（NODE_OPTIONS 已通过 env 全局注入，无需再写 --max-old-space-size）
       - name: 运行
         id: run_rules
         run: |
           npm install
           node index.js
 
-      # 只在 node 成功时执行
       - name: 修复缓存目录权限
-        if: steps.run_rules.outcome == 'success'
+        if: always()
         run: |
-          sudo chown -R $USER:$USER smartdns-cache || true
-          sudo chown -R $USER:$USER dns-cache.json || true
+          sudo chown -R $USER:$USER smartdns-cache 2>/dev/null || true
+          sudo chown -R $USER:$USER dns-cache.json 2>/dev/null || true
 
-      # ★ 只在 node 成功 且 CACHE_WRITE=true 时保存
       - name: 保存 DNS 缓存
         uses: actions/cache/save@v4
-        if: steps.run_rules.outcome == 'success' && env.CACHE_WRITE == 'true'
+        if: always() && env.CACHE_WRITE == 'true'
+        continue-on-error: true
         with:
           path: |
             dns-cache.json
             smartdns-cache
           key: dns-cache-${{ github.run_id }}
 
-      # 只在 node 成功时提交
       - name: 更新文件
         if: steps.run_rules.outcome == 'success'
         run: |
@@ -177,7 +162,6 @@ jobs:
           echo "push 连续失败"
           exit 1
 
-      # 无论成功失败都清理运行记录，只保留 1 个
       - name: 删除 workflow 运行记录
         if: always()
         uses: Mattraks/delete-workflow-runs@main
