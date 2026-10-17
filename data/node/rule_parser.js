@@ -179,18 +179,18 @@ const parseRule = (line, opts = {}) => {
     const domain = normalizeDomain(core);
     if (!domain) return null;
 
-    // ★ 修复：只排除 $，允许分号和逗号（多参数重写 + 额外修饰符）
+    // ★ 修复：只排除 $，允许分号和逗号
     const m = rest.match(/\$dnsrewrite=([^$]+)/i);
     return make(domain, isWhitePrefix, anchor, m ? m[1] : null);
   }
 
-  // ③ 无锚点 + $dnsrewrite：domain^$dnsrewrite=IP
-  // ★ 修复：允许 ; 和 ,（多参数重写）
+  // ③ 无锚点 + $dnsrewrite
+  // ★ 修复：允许 ; 和 ,
   const bareMatch = body.match(/^([a-z0-9.-]+)\^\$dnsrewrite=(.+)$/i);
   if (bareMatch) {
     const domain = normalizeDomain(bareMatch[1]);
     if (!domain) return null;
-    // ★ 修复：isWhite 应该跟随 isWhitePrefix（原版写死 true，是 bug）
+    // ★ 修复：isWhite 跟随 isWhitePrefix
     return make(domain, isWhitePrefix, "bare", bareMatch[2]);
   }
 
@@ -208,6 +208,9 @@ const parseRule = (line, opts = {}) => {
 
 /**
  * ★ 格式化规则 → 标准字符串。
+ *
+ * ★ 关键改动：所有 $dnsrewrite 规则自动加 $important，
+ *   使其优先级压过普通规则和白名单规则。
  */
 const formatRule = (rule, opts = {}) => {
   if (!rule) return null;
@@ -224,19 +227,29 @@ const formatRule = (rule, opts = {}) => {
 
   // ① hosts
   if (isHosts) {
-    if (ip) return `${domain}^$dnsrewrite=${ip}`;
+    if (ip) {
+      // ★ hosts 重写也加 important
+      const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
+      const imp = hasImpInIp ? "" : "important,";
+      return `${domain}^$${imp}dnsrewrite=${ip}`;
+    }
     return `|${domain}^`;
   }
 
   // ② dnsrewrite
   if (ip) {
-    if (anchor === "bare") return `${domain}^$dnsrewrite=${ip}`;
-    if (anchor === "star") return `*${domain}^$dnsrewrite=${ip}`;
+    // ★ 检查 ip 里是否已经包含 important，避免重复
+    const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
+    const impPrefix = hasImpInIp ? "" : "important,";
+    const suffixStr = `$${impPrefix}dnsrewrite=${ip}`;
+
+    if (anchor === "bare") return `${domain}^${suffixStr}`;
+    if (anchor === "star") return `*${domain}^${suffixStr}`;
     const bar = anchor === "sub" ? "||" : "|";
-    return `${prefix}${bar}${domain}^$dnsrewrite=${ip}`;
+    return `${prefix}${bar}${domain}^${suffixStr}`;
   }
 
-  // ③ 普通规则
+  // ③ 普通规则（不变）
   if (anchor === "bare") {
     return `${prefix}|${domain}^${suffix}`;
   }
