@@ -24,8 +24,20 @@ const isIPv4 = (s) => {
   });
 };
 
+/**
+ * ★ 新增：宽松 IPv6 识别（用于 hosts 文件）
+ * 只做基础格式检查：包含冒号，且只由十六进制字符和冒号组成。
+ */
+const isIPv6 = (s) => {
+  if (typeof s !== "string" || !s.includes(":")) return false;
+  return /^[0-9a-f:]+$/i.test(s);
+};
+
 const isBlackholeIp = (ip) =>
-  ip === "0.0.0.0" || ip.startsWith("127.") || ip === "::1";
+  ip === "0.0.0.0" ||
+  ip.startsWith("127.") ||
+  ip === "::1" ||
+  ip === "0:0:0:0:0:0:0:1"; // ★ 补上完整 IPv6 回环
 
 const stripWildcard = (domain) => {
   let d = domain;
@@ -97,17 +109,11 @@ const isPathRule = (t) => {
   return core.includes("/");
 };
 
-/**
- * 从原始行中提取 $ 修饰符后缀。
- */
 const extractSuffix = (line) => {
   const idx = line.indexOf("$");
   return idx === -1 ? "" : line.slice(idx);
 };
 
-/**
- * ★ 解析规则 → 结构化对象。
- */
 const parseRule = (line, opts = {}) => {
   if (typeof line !== "string") return null;
   const t = line.trim();
@@ -134,22 +140,16 @@ const parseRule = (line, opts = {}) => {
     original: t,
   });
 
-  // ① hosts 格式
+  // ① hosts 格式（★ 同时支持 IPv4 和 IPv6）
   const parts = t.split(/\s+/);
-  if (parts.length === 2 && isIPv4(parts[0])) {
+  if (parts.length === 2 && (isIPv4(parts[0]) || isIPv6(parts[0]))) {
     const cand = stripWildcard(parts[1]);
     if (cand === null) return null;
     const domain = normalizeDomain(cand);
     if (!domain) return null;
 
     const blackhole = isBlackholeIp(parts[0]);
-    return make(
-      domain,
-      !blackhole,
-      "bare",
-      blackhole ? null : parts[0],
-      true,
-    );
+    return make(domain, !blackhole, "bare", blackhole ? null : parts[0], true);
   }
 
   // ② 已有锚点：|| / | / *
@@ -179,18 +179,15 @@ const parseRule = (line, opts = {}) => {
     const domain = normalizeDomain(core);
     if (!domain) return null;
 
-    // ★ 修复：只排除 $，允许分号和逗号
     const m = rest.match(/\$dnsrewrite=([^$]+)/i);
     return make(domain, isWhitePrefix, anchor, m ? m[1] : null);
   }
 
   // ③ 无锚点 + $dnsrewrite
-  // ★ 修复：允许 ; 和 ,
   const bareMatch = body.match(/^([a-z0-9.-]+)\^\$dnsrewrite=(.+)$/i);
   if (bareMatch) {
     const domain = normalizeDomain(bareMatch[1]);
     if (!domain) return null;
-    // ★ 修复：isWhite 跟随 isWhitePrefix
     return make(domain, isWhitePrefix, "bare", bareMatch[2]);
   }
 
@@ -206,12 +203,6 @@ const parseRule = (line, opts = {}) => {
   return null;
 };
 
-/**
- * ★ 格式化规则 → 标准字符串。
- *
- * ★ 关键改动：所有 $dnsrewrite 规则自动加 $important，
- *   使其优先级压过普通规则和白名单规则。
- */
 const formatRule = (rule, opts = {}) => {
   if (!rule) return null;
 
@@ -228,7 +219,6 @@ const formatRule = (rule, opts = {}) => {
   // ① hosts
   if (isHosts) {
     if (ip) {
-      // ★ hosts 重写也加 important
       const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
       const imp = hasImpInIp ? "" : "important,";
       return `${domain}^$${imp}dnsrewrite=${ip}`;
@@ -238,7 +228,6 @@ const formatRule = (rule, opts = {}) => {
 
   // ② dnsrewrite
   if (ip) {
-    // ★ 检查 ip 里是否已经包含 important，避免重复
     const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
     const impPrefix = hasImpInIp ? "" : "important,";
     const suffixStr = `$${impPrefix}dnsrewrite=${ip}`;
@@ -249,7 +238,7 @@ const formatRule = (rule, opts = {}) => {
     return `${prefix}${bar}${domain}^${suffixStr}`;
   }
 
-  // ③ 普通规则（不变）
+  // ③ 普通规则
   if (anchor === "bare") {
     return `${prefix}|${domain}^${suffix}`;
   }
@@ -263,6 +252,7 @@ const formatRule = (rule, opts = {}) => {
 module.exports = {
   DNS_SUPPORTED_MODIFIERS,
   isIPv4,
+  isIPv6,
   isBlackholeIp,
   stripWildcard,
   normalizeDomain,
