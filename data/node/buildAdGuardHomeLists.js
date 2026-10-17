@@ -344,9 +344,12 @@ const buildAdGuardHomeLists = async (options) => {
     `反向排除：被 important/dnsrewrite 黑名单压制的白名单 ${suppressedWhiteCount} 条`,
   );
 
+  // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
+  // ★ 修复：冲突规则收集到 conflictRules 数组，不直接 push 到 whiteBuckets
+  // ============================================================
   console.log("开始 $dnsrewrite 冲突检测...");
-  const whiteBuckets = newBuckets();
+  const conflictRules = [];
   let dnsRewriteConflictCount = 0;
 
   for (const [bDomain, bRule] of blackMap) {
@@ -367,8 +370,7 @@ const buildAdGuardHomeLists = async (options) => {
           important: false,
           original: "",
         };
-        const line = formatRule(conflict);
-        if (line) pushLine(whiteBuckets, conflict, line);
+        conflictRules.push(conflict); // ★ 改为收集
         dnsRewriteConflictCount++;
         break;
       }
@@ -464,14 +466,21 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 8 步：输出产物
-  // ★ 所有 $dnsrewrite 规则统一输出到 allow.txt，按域名去重，重定向优先
+  // ★ 所有 $dnsrewrite（含冲突规则）统一进 rewriteByDomain，按域名去重，重定向优先
   // ============================================================
   console.log("开始输出产物...");
   const blackBuckets = newBuckets();
+  const whiteBuckets = newBuckets();
 
-  // ★ 收集所有 $dnsrewrite 规则，按域名去重，重定向优先
-  const rewriteByDomain = new Map(); // domain → { rule, line }
+  const rewriteByDomain = new Map();
 
+  // ★ 先放入冲突规则（0.0.0.0，拦截）
+  for (const conflict of conflictRules) {
+    const line = formatRule(conflict);
+    if (line) rewriteByDomain.set(conflict.domain, { rule: conflict, line });
+  }
+
+  // ★ 再处理黑名单/白名单的 $dnsrewrite（重定向优先）
   const collectRewrite = (d, rule) => {
     const line = formatRule(rule);
     if (!line) return;
@@ -480,12 +489,10 @@ const buildAdGuardHomeLists = async (options) => {
       rewriteByDomain.set(d, { rule, line });
       return;
     }
-    // 重定向优先：已有拦截，新的重定向 → 替换
+    // 重定向优先
     if (isBlockRewrite(existing.rule.ip) && !isBlockRewrite(rule.ip)) {
       rewriteByDomain.set(d, { rule, line });
     }
-    // 已有重定向，新的拦截 → 不替换
-    // 同类型 → 保留第一条
   };
 
   for (const d of blackDomains) {
@@ -519,7 +526,7 @@ const buildAdGuardHomeLists = async (options) => {
     pushLine(whiteBuckets, rule, line);
   }
 
-  // ★ 输出去重后的 $dnsrewrite 规则（重定向优先）
+  // ★ 输出去重后的 $dnsrewrite 规则（含冲突规则）
   let rewriteFromBlackCount = 0;
   for (const { rule, line } of rewriteByDomain.values()) {
     pushLine(whiteBuckets, rule, line);
