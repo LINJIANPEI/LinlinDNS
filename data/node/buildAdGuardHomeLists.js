@@ -3,9 +3,6 @@ const fs = require("node:fs");
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule, formatRule, hasDnsRewrite } = require("./rule_parser");
 
-// ============================================================
-// ★ 分片去重：规避 V8 单 Set 2^24-1 ≈ 1677 万上限
-// ============================================================
 const SHARD_COUNT = 128;
 
 const hashStr = (s) => {
@@ -261,15 +258,12 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 2 步：白名单覆盖黑名单
-  // ★ 反转遍历方向：对每个黑名单域名，查其后缀链上的白名单
-  //     原版 O(白 × 黑)，新版 O(黑 × 平均后缀数)
   // ============================================================
   console.log("开始白名单覆盖黑名单...");
   const toDeleteBlack = [];
   let step2Progress = 0;
 
   for (const [bDomain, bRule] of blackMap) {
-    // 1) 精确匹配
     const wExact = whiteMap.get(bDomain);
     if (wExact && canCover(wExact, bRule)) {
       if (noblacklistWriter) {
@@ -282,7 +276,6 @@ const buildAdGuardHomeLists = async (options) => {
       continue;
     }
 
-    // 2) 后缀匹配（最长后缀优先）
     let idx = bDomain.indexOf(".");
     let matched = false;
     while (idx !== -1) {
@@ -290,7 +283,9 @@ const buildAdGuardHomeLists = async (options) => {
       const w = whiteMap.get(parent);
       if (w && w.coverSub && canCover(w, bRule)) {
         if (noblacklistWriter) {
-          await noblacklistWriter.write(`${bRule.original}  ->  ${w.original}`);
+          await noblacklistWriter.write(
+            `${bRule.original}  ->  ${w.original}`,
+          );
           noblacklistCount++;
         }
         matched = true;
@@ -300,7 +295,6 @@ const buildAdGuardHomeLists = async (options) => {
     }
     if (matched) toDeleteBlack.push(bDomain);
 
-    // 进度日志
     step2Progress++;
     if (step2Progress % 500000 === 0) {
       console.log(`  白名单覆盖进度: ${step2Progress}/${blackMap.size}`);
@@ -339,7 +333,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
-  // ★ 同样反转方向：对每个 important/ip 黑名单，查后缀链上的白名单
   // ============================================================
   console.log("开始 $dnsrewrite 冲突检测...");
   const whiteBuckets = newBuckets();
@@ -466,20 +459,33 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 8 步：输出产物
+  // ★ 关键改动：所有 $dnsrewrite 规则统一输出到 allow.txt
   // ============================================================
   console.log("开始输出产物...");
   const blackBuckets = newBuckets();
+
+  // 黑名单输出：普通规则进 rules.txt，
+  //             $dnsrewrite 规则改道进 whiteBuckets → allow.txt
+  let rewriteFromBlackCount = 0;
   for (const d of blackDomains) {
     const rule = getBlackRule(d);
     const line = formatRule(rule);
     if (!line) continue;
-    pushLine(blackBuckets, rule, line);
+
+    if (rule.ip) {
+      // ★ $dnsrewrite 规则 → 进 whiteBuckets（最终写到 allow.txt）
+      pushLine(whiteBuckets, rule, line);
+      rewriteFromBlackCount++;
+    } else {
+      pushLine(blackBuckets, rule, line);
+    }
   }
 
   const rulesWriter = new LineWriter(outRulesFile);
   await writeBuckets(rulesWriter, blackBuckets);
   await rulesWriter.close();
 
+  // 白名单输出：普通白名单 + 所有 $dnsrewrite
   for (const d of whiteDomains) {
     const rule = getWhiteRule(d);
     const line = formatRule(rule);
@@ -501,8 +507,11 @@ const buildAdGuardHomeLists = async (options) => {
   await allowWriter.close();
 
   const stats = {
-    blacklistCount: blackDomains.length,
-    whitelistCount: whiteDomains.length + dnsRewriteConflictCount,
+    blacklistCount: blackDomains.length - rewriteFromBlackCount,
+    whitelistCount:
+      whiteDomains.length +
+      dnsRewriteConflictCount +
+      rewriteFromBlackCount,
     dnsRewriteCount: rewriteOutCount,
     noblacklistCount,
     nowhitelistCount,
@@ -511,12 +520,15 @@ const buildAdGuardHomeLists = async (options) => {
     skippedCount,
     duplicateCount,
     redundantCount,
+    rewriteFromBlackCount,
   };
 
   console.log(
-    `构建完成：黑名单 ${blackDomains.length} 条，` +
+    `构建完成：黑名单 ${stats.blacklistCount} 条，` +
       `白名单 ${stats.whitelistCount} 条` +
-      `（含重写 ${stats.dnsRewriteCount}，冲突重写 ${stats.dnsRewriteConflictCount}），` +
+      `（含重写 ${stats.dnsRewriteCount}，` +
+      `冲突重写 ${stats.dnsRewriteConflictCount}，` +
+      `黑名单改写 ${stats.rewriteFromBlackCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
