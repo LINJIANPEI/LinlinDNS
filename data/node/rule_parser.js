@@ -24,10 +24,6 @@ const isIPv4 = (s) => {
   });
 };
 
-/**
- * ★ 新增：宽松 IPv6 识别（用于 hosts 文件）
- * 只做基础格式检查：包含冒号，且只由十六进制字符和冒号组成。
- */
 const isIPv6 = (s) => {
   if (typeof s !== "string" || !s.includes(":")) return false;
   return /^[0-9a-f:]+$/i.test(s);
@@ -37,7 +33,7 @@ const isBlackholeIp = (ip) =>
   ip === "0.0.0.0" ||
   ip.startsWith("127.") ||
   ip === "::1" ||
-  ip === "0:0:0:0:0:0:0:1"; // ★ 补上完整 IPv6 回环
+  ip === "0:0:0:0:0:0:0:1";
 
 const stripWildcard = (domain) => {
   let d = domain;
@@ -65,6 +61,26 @@ const normalizeDomain = (value) => {
   }
 
   return d;
+};
+
+/**
+ * ★ 从修饰符字符串中提取 dnsrewrite 的值。
+ * 支持任意位置，例如：
+ *   "dnsrewrite=1.2.3.4"                     → "1.2.3.4"
+ *   "important,dnsrewrite=1.2.3.4"           → "1.2.3.4"
+ *   "dnsrewrite=NOERROR;AAAA;::1,client=xxx" → "NOERROR;AAAA;::1"
+ */
+const extractDnsRewrite = (modStr) => {
+  if (!modStr) return null;
+  const parts = modStr.split(",");
+  for (const part of parts) {
+    const t = part.trim();
+    const eq = t.indexOf("=");
+    if (eq === -1) continue;
+    const name = t.slice(0, eq).trim().toLowerCase();
+    if (name === "dnsrewrite") return t.slice(eq + 1);
+  }
+  return null;
 };
 
 const getModifiers = (line) => {
@@ -116,7 +132,13 @@ const extractSuffix = (line) => {
 
 const parseRule = (line, opts = {}) => {
   if (typeof line !== "string") return null;
-  const t = line.trim();
+  const t0 = line.trim();
+  if (!t0) return null;
+
+  // ★ 剥离行尾注释：空白 + # 之后的内容
+  // 不影响 ## / #@# 等 AdGuard 扩展规则（它们前面没有空白）
+  const t = t0.replace(/\s+#.*$/, "");
+
   if (!t) return null;
   if (t.startsWith("!")) return null;
   if (t.startsWith("#")) {
@@ -140,7 +162,7 @@ const parseRule = (line, opts = {}) => {
     original: t,
   });
 
-  // ① hosts 格式（★ 同时支持 IPv4 和 IPv6）
+  // ① hosts 格式（IPv4 / IPv6）
   const parts = t.split(/\s+/);
   if (parts.length === 2 && (isIPv4(parts[0]) || isIPv6(parts[0]))) {
     const cand = stripWildcard(parts[1]);
@@ -179,16 +201,21 @@ const parseRule = (line, opts = {}) => {
     const domain = normalizeDomain(core);
     if (!domain) return null;
 
-    const m = rest.match(/\$dnsrewrite=([^$]+)/i);
-    return make(domain, isWhitePrefix, anchor, m ? m[1] : null);
+    const dollarIdx = rest.indexOf("$");
+    const ip =
+      dollarIdx === -1 ? null : extractDnsRewrite(rest.slice(dollarIdx + 1));
+
+    return make(domain, isWhitePrefix, anchor, ip);
   }
 
-  // ③ 无锚点 + $dnsrewrite
-  const bareMatch = body.match(/^([a-z0-9.-]+)\^\$dnsrewrite=(.+)$/i);
+  // ③ 无锚点 + 修饰符（含 dnsrewrite）
+  const bareMatch = body.match(/^([a-z0-9.-]+)\^\$(.+)$/i);
   if (bareMatch) {
     const domain = normalizeDomain(bareMatch[1]);
     if (!domain) return null;
-    return make(domain, isWhitePrefix, "bare", bareMatch[2]);
+    const ip = extractDnsRewrite(bareMatch[2]);
+    if (ip === null) return null;
+    return make(domain, isWhitePrefix, "bare", ip);
   }
 
   // ④ 纯域名
@@ -216,7 +243,6 @@ const formatRule = (rule, opts = {}) => {
   const prefix = isWhite ? "@@" : "";
   const suffix = ip ? "" : extractSuffix(rule.original || "");
 
-  // ① hosts
   if (isHosts) {
     if (ip) {
       const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
@@ -226,7 +252,6 @@ const formatRule = (rule, opts = {}) => {
     return `|${domain}^`;
   }
 
-  // ② dnsrewrite
   if (ip) {
     const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
     const impPrefix = hasImpInIp ? "" : "important,";
@@ -238,7 +263,6 @@ const formatRule = (rule, opts = {}) => {
     return `${prefix}${bar}${domain}^${suffixStr}`;
   }
 
-  // ③ 普通规则
   if (anchor === "bare") {
     return `${prefix}|${domain}^${suffix}`;
   }
@@ -256,6 +280,7 @@ module.exports = {
   isBlackholeIp,
   stripWildcard,
   normalizeDomain,
+  extractDnsRewrite,
   getModifiers,
   hasUnsupportedModifier,
   hasImportant,
