@@ -65,7 +65,7 @@ const normalizeDomain = (value) => {
 
 /**
  * ★ 从修饰符字符串中提取 dnsrewrite 的值。
- * 支持任意位置，例如：
+ * 支持任意位置：
  *   "dnsrewrite=1.2.3.4"                     → "1.2.3.4"
  *   "important,dnsrewrite=1.2.3.4"           → "1.2.3.4"
  *   "dnsrewrite=NOERROR;AAAA;::1,client=xxx" → "NOERROR;AAAA;::1"
@@ -130,13 +130,15 @@ const extractSuffix = (line) => {
   return idx === -1 ? "" : line.slice(idx);
 };
 
+/**
+ * ★ 解析规则 → 结构化对象。
+ */
 const parseRule = (line, opts = {}) => {
   if (typeof line !== "string") return null;
   const t0 = line.trim();
   if (!t0) return null;
 
-  // ★ 剥离行尾注释：空白 + # 之后的内容
-  // 不影响 ## / #@# 等 AdGuard 扩展规则（它们前面没有空白）
+  // ★ 剥离行尾注释（空白 + # 之后）
   const t = t0.replace(/\s+#.*$/, "");
 
   if (!t) return null;
@@ -230,6 +232,10 @@ const parseRule = (line, opts = {}) => {
   return null;
 };
 
+/**
+ * ★ 格式化规则 → 标准字符串。
+ * 所有 $dnsrewrite 规则自动加 $important。
+ */
 const formatRule = (rule, opts = {}) => {
   if (!rule) return null;
 
@@ -243,6 +249,7 @@ const formatRule = (rule, opts = {}) => {
   const prefix = isWhite ? "@@" : "";
   const suffix = ip ? "" : extractSuffix(rule.original || "");
 
+  // ① hosts
   if (isHosts) {
     if (ip) {
       const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
@@ -252,6 +259,7 @@ const formatRule = (rule, opts = {}) => {
     return `|${domain}^`;
   }
 
+  // ② dnsrewrite
   if (ip) {
     const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
     const impPrefix = hasImpInIp ? "" : "important,";
@@ -263,6 +271,7 @@ const formatRule = (rule, opts = {}) => {
     return `${prefix}${bar}${domain}^${suffixStr}`;
   }
 
+  // ③ 普通规则
   if (anchor === "bare") {
     return `${prefix}|${domain}^${suffix}`;
   }

@@ -14,9 +14,7 @@ const DNS_TIMEOUT = 500;
 const DEFAULT_CACHE_FILE = "./dns-cache.json";
 const DEFAULT_PROGRESS_STEP = 1000;
 
-// ============================================================
 // Resolver 复用池
-// ============================================================
 const resolverCache = new Map();
 
 const getResolver = (nameservers, port) => {
@@ -29,13 +27,7 @@ const getResolver = (nameservers, port) => {
   return resolverCache.get(key);
 };
 
-// ============================================================
 // ★ Worker Pool：固定并发，内存只占用 concurrency 个 slot
-// ------------------------------------------------------------
-// 原 pLimit 实现会为每个域名创建一个 pending Promise，
-// 1158 万域名 → 1.7GB 内存 + O(n²) shift。
-// runPool 用固定数量 worker 循环取任务，内存与域名总数解耦。
-// ============================================================
 const runPool = async (items, concurrency, worker) => {
   const it = items[Symbol.iterator]();
   const runOne = async () => {
@@ -50,9 +42,7 @@ const runPool = async (items, concurrency, worker) => {
   await Promise.all(workers);
 };
 
-// ============================================================
 // DNS 查询：A 优先，失败兜底 AAAA（保留两次查询）
-// ============================================================
 const withTimeout = (promise, ms) => {
   let timer;
   return Promise.race([
@@ -68,16 +58,12 @@ const withTimeout = (promise, ms) => {
 const resolveHost = async (domain, nameservers, port) => {
   const resolver = getResolver(nameservers, port);
 
-  // 1. 先查 A 记录
   try {
     const v4 = await withTimeout(resolver.resolve4(domain), DNS_TIMEOUT);
     const valid = v4.filter((ip) => ip !== "0.0.0.0");
     if (valid.length > 0) return valid;
-  } catch {
-    // A 失败 → 继续尝试 AAAA
-  }
+  } catch {}
 
-  // 2. A 失败后兜底查 AAAA
   try {
     const v6 = await withTimeout(resolver.resolve6(domain), DNS_TIMEOUT);
     return v6.filter((ip) => ip !== "::");
@@ -90,9 +76,7 @@ const checkDomain = async (domain, { nameservers, port }) => {
   return resolveHost(domain, nameservers, port);
 };
 
-// ============================================================
 // 文件缓存（NDJSON 流式读写）
-// ============================================================
 const createNullCache = () => ({
   get() {
     return undefined;
@@ -168,9 +152,7 @@ const createFileCache = async (filePath, options = {}) => {
   };
 };
 
-// ============================================================
 // 主函数
-// ============================================================
 const removeDeadRules = async (inputFiles, options) => {
   const {
     cleanedFile,
@@ -200,9 +182,7 @@ const removeDeadRules = async (inputFiles, options) => {
       ? await createFileCache(cacheFile, { read: cacheRead, write: cacheWrite })
       : createNullCache());
 
-  // ========================================================
   // 第 1 遍：提取域名
-  // ========================================================
   const domainMap = new Map();
   const passthroughWriter = passthroughFile
     ? new LineWriter(passthroughFile)
@@ -243,9 +223,7 @@ const removeDeadRules = async (inputFiles, options) => {
     `规则解析完成，共${totalRules}条规则，提取${total}个域名（白 ${whiteCount}，重写 ${rewriteCount}）`,
   );
 
-  // ========================================================
-  // 第 2 遍：DNS 查询（白名单跳过）
-  // ========================================================
+  // 第 2 遍：DNS 查询
   const now = Math.floor(Date.now() / 1000);
   let cacheHits = 0;
   let completed = 0;
@@ -291,7 +269,6 @@ const removeDeadRules = async (inputFiles, options) => {
     }
   };
 
-  // ★ runPool 替代 pLimit
   await runPool(domainsToCheck, concurrency, async (domain) => {
     const cached = cacheStore.get(domain);
     let alive;
@@ -317,9 +294,7 @@ const removeDeadRules = async (inputFiles, options) => {
 
   const deadCount = aliveSet.size - skipWhiteSet.size;
 
-  // ========================================================
   // 计算"死且无存活父域"的集合
-  // ========================================================
   const deadWithoutAliveParent = new Set();
   const deadWhitelistSet = new Set();
   let parentAliveCount = 0;
@@ -349,9 +324,7 @@ const removeDeadRules = async (inputFiles, options) => {
 
   domainMap.clear();
 
-  // ========================================================
   // 第 3 遍：分类输出
-  // ========================================================
   const cleanedWriter = new LineWriter(cleanedFile);
   const nocleanedWriter = nocleanedFile ? new LineWriter(nocleanedFile) : null;
   const deadWriter = deadDomainsFile ? new LineWriter(deadDomainsFile) : null;

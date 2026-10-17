@@ -22,13 +22,10 @@ function canCover(wRule, bRule) {
 }
 
 /**
- * ★ 修复：接收 Map<domain, rule>，只有父域 coverSub 时才判子域冗余。
- *
- * @param {Map<string, object>} domainRuleMap
- * @returns {{ kept: string[], removed: Map<string, string> }}
+ * ★ 接收 Map<domain, rule>，只有父域 coverSub 时才判子域冗余。
  */
 function removeRedundantSubdomains(domainRuleMap) {
-  const ordinary = new Map(); // domain → rule
+  const ordinary = new Map();
   const wildcards = [];
 
   for (const [d, rule] of domainRuleMap) {
@@ -52,7 +49,6 @@ function removeRedundantSubdomains(domainRuleMap) {
     while (idx !== -1) {
       const parent = domain.slice(idx + 1);
       const parentRule = ordinary.get(parent);
-      // ★ 关键：父域存在，且父域规则覆盖子域（sub / star）才判冗余
       if (parentRule && parentRule.coverSub) {
         redundant = true;
         removed.set(domain, parent);
@@ -266,7 +262,7 @@ const buildAdGuardHomeLists = async (options) => {
       (redundantCount > 0 ? `，冗余行 ${redundantCount}` : ""),
   );
 
-  // 第 2 步：白名单覆盖黑名单
+  // 第 2 步：白名单覆盖黑名单（反转遍历）
   console.log("开始白名单覆盖黑名单...");
   const toDeleteBlack = [];
   let step2Progress = 0;
@@ -374,7 +370,6 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   // 第 5 步：拆黑名单
-  // ★ 修复：传入 Map，让 removeRedundantSubdomains 能看 rule.coverSub
   console.log("开始拆黑名单...");
   const normalBlack = new Map();
   const importantBlack = new Map();
@@ -385,7 +380,7 @@ const buildAdGuardHomeLists = async (options) => {
   blackMap.clear();
 
   const { kept: normalBlackDomains, removed: normalBlackRemoved } =
-    removeRedundantSubdomains(normalBlack); // ★ 改这里
+    removeRedundantSubdomains(normalBlack);
 
   for (const [childDomain, parentDomain] of normalBlackRemoved) {
     const childRule = normalBlack.get(childDomain);
@@ -408,7 +403,6 @@ const buildAdGuardHomeLists = async (options) => {
   ].sort();
 
   // 第 6 步：拆白名单
-  // ★ 修复：传入 Map
   console.log("开始拆白名单...");
   const normalWhite = new Map();
   const importantWhite = new Map();
@@ -419,7 +413,7 @@ const buildAdGuardHomeLists = async (options) => {
   whiteMap.clear();
 
   const { kept: normalWhiteDomains, removed: normalWhiteRemoved } =
-    removeRedundantSubdomains(normalWhite); // ★ 改这里
+    removeRedundantSubdomains(normalWhite);
 
   for (const [childDomain, parentDomain] of normalWhiteRemoved) {
     const childRule = normalWhite.get(childDomain);
@@ -456,7 +450,7 @@ const buildAdGuardHomeLists = async (options) => {
   if (duplicateWriter) await duplicateWriter.close();
 
   // 第 8 步：输出产物
-  // ★ 所有 $dnsrewrite 规则统一输出到 allow.txt
+  // 所有 $dnsrewrite 规则统一输出到 allow.txt
   console.log("开始输出产物...");
   const blackBuckets = newBuckets();
   let rewriteFromBlackCount = 0;

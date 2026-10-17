@@ -71,7 +71,7 @@ async function main() {
       cacheFile: "./dns-cache.json",
       cacheRead: CACHE_MODE.read,
       cacheWrite: CACHE_MODE.write,
-      concurrency: 1500, // ★ 500 → 1500
+      concurrency: 1500,
     });
 
     await buildAdGuardHomeLists({
