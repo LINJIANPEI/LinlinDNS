@@ -107,18 +107,6 @@ const extractSuffix = (line) => {
 
 /**
  * ★ 解析规则 → 结构化对象。
- *
- * 返回：
- *   {
- *     domain,       // 提取的域名
- *     isWhite,      // 是否白名单
- *     anchor,       // "exact" | "sub" | "star" | "bare"
- *     ip,           // dnsrewrite/hosts IP，无则 null
- *     coverSub,     // anchor === "sub" || "star"
- *     isHosts,      // 是否来自 hosts 格式
- *     important,    // 是否带 $important
- *     original,     // 原始行
- *   }
  */
 const parseRule = (line, opts = {}) => {
   if (typeof line !== "string") return null;
@@ -158,7 +146,7 @@ const parseRule = (line, opts = {}) => {
     return make(
       domain,
       !blackhole,
-      "bare",                  // hosts 锚点语义为裸
+      "bare",
       blackhole ? null : parts[0],
       true,
     );
@@ -191,16 +179,19 @@ const parseRule = (line, opts = {}) => {
     const domain = normalizeDomain(core);
     if (!domain) return null;
 
-    const m = rest.match(/\$dnsrewrite=([^,;$]+)/i);
+    // ★ 修复：只排除 $，允许分号和逗号（多参数重写 + 额外修饰符）
+    const m = rest.match(/\$dnsrewrite=([^$]+)/i);
     return make(domain, isWhitePrefix, anchor, m ? m[1] : null);
   }
 
   // ③ 无锚点 + $dnsrewrite：domain^$dnsrewrite=IP
-  const bareMatch = body.match(/^([a-z0-9.-]+)\^\$dnsrewrite=([^,;$]+)$/i);
+  // ★ 修复：允许 ; 和 ,（多参数重写）
+  const bareMatch = body.match(/^([a-z0-9.-]+)\^\$dnsrewrite=(.+)$/i);
   if (bareMatch) {
     const domain = normalizeDomain(bareMatch[1]);
     if (!domain) return null;
-    return make(domain, true, "bare", bareMatch[2]);
+    // ★ 修复：isWhite 应该跟随 isWhitePrefix（原版写死 true，是 bug）
+    return make(domain, isWhitePrefix, "bare", bareMatch[2]);
   }
 
   // ④ 纯域名
@@ -217,18 +208,12 @@ const parseRule = (line, opts = {}) => {
 
 /**
  * ★ 格式化规则 → 标准字符串。
- * 唯一拼接锚点的地方。
- *
- * @param {object} rule  parseRule 返回的对象
- * @param {object} [opts]
- * @param {boolean} [opts.fileIsWhite]  文件归属（用于 bare 锚点补全）
  */
 const formatRule = (rule, opts = {}) => {
   if (!rule) return null;
 
   const { domain, anchor, ip, isHosts } = rule;
 
-  // 有效白名单状态（文件归属影响 bare 锚点）
   let isWhite = rule.isWhite;
   if (anchor === "bare" && opts.fileIsWhite !== undefined) {
     isWhite = opts.fileIsWhite;
@@ -253,7 +238,6 @@ const formatRule = (rule, opts = {}) => {
 
   // ③ 普通规则
   if (anchor === "bare") {
-    // 裸域名 → 补全为 | 或 @@|
     return `${prefix}|${domain}^${suffix}`;
   }
   if (anchor === "star") {
