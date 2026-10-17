@@ -21,9 +21,6 @@ function canCover(wRule, bRule) {
   return true;
 }
 
-/**
- * ★ 接收 Map<domain, rule>，只有父域 coverSub 时才判子域冗余。
- */
 function removeRedundantSubdomains(domainRuleMap) {
   const ordinary = new Map();
   const wildcards = [];
@@ -147,6 +144,22 @@ const externalSortCovered = (tmpPath, outPath) => {
   fs.unlinkSync(tmpPath);
 };
 
+// ★ 判断是否「拦截语义」的 dnsrewrite
+const isBlockRewrite = (ip) => {
+  if (!ip) return false;
+  if (ip.includes(";")) return false;
+  const first = ip.split(",")[0].trim().toLowerCase();
+  if (
+    first === "0.0.0.0" ||
+    first.startsWith("127.") ||
+    first === "::1" ||
+    first === "0:0:0:0:0:0:0:1"
+  ) {
+    return true;
+  }
+  return /^(noerror|nxdomain|refused|servfail)$/i.test(first);
+};
+
 const buildAdGuardHomeLists = async (options) => {
   const {
     cleanedFile,
@@ -262,7 +275,7 @@ const buildAdGuardHomeLists = async (options) => {
       (redundantCount > 0 ? `，冗余行 ${redundantCount}` : ""),
   );
 
-  // 第 2 步：白名单覆盖黑名单（反转遍历）
+  // 第 2 步：白名单覆盖黑名单
   console.log("开始白名单覆盖黑名单...");
   const toDeleteBlack = [];
   let step2Progress = 0;
@@ -449,34 +462,68 @@ const buildAdGuardHomeLists = async (options) => {
   if (skippedWriter) await skippedWriter.close();
   if (duplicateWriter) await duplicateWriter.close();
 
+  // ============================================================
   // 第 8 步：输出产物
-  // 所有 $dnsrewrite 规则统一输出到 allow.txt
+  // ★ 所有 $dnsrewrite 规则统一输出到 allow.txt，按域名去重，重定向优先
+  // ============================================================
   console.log("开始输出产物...");
   const blackBuckets = newBuckets();
-  let rewriteFromBlackCount = 0;
+
+  // ★ 收集所有 $dnsrewrite 规则，按域名去重，重定向优先
+  const rewriteByDomain = new Map(); // domain → { rule, line }
+
+  const collectRewrite = (d, rule) => {
+    const line = formatRule(rule);
+    if (!line) return;
+    const existing = rewriteByDomain.get(d);
+    if (!existing) {
+      rewriteByDomain.set(d, { rule, line });
+      return;
+    }
+    // 重定向优先：已有拦截，新的重定向 → 替换
+    if (isBlockRewrite(existing.rule.ip) && !isBlockRewrite(rule.ip)) {
+      rewriteByDomain.set(d, { rule, line });
+    }
+    // 已有重定向，新的拦截 → 不替换
+    // 同类型 → 保留第一条
+  };
 
   for (const d of blackDomains) {
     const rule = getBlackRule(d);
+    if (rule.ip) collectRewrite(d, rule);
+  }
+  for (const d of whiteDomains) {
+    const rule = getWhiteRule(d);
+    if (rule.ip) collectRewrite(d, rule);
+  }
+
+  // ★ 输出黑名单普通规则（无 ip）
+  for (const d of blackDomains) {
+    const rule = getBlackRule(d);
+    if (rule.ip) continue;
     const line = formatRule(rule);
     if (!line) continue;
-
-    if (rule.ip) {
-      pushLine(whiteBuckets, rule, line);
-      rewriteFromBlackCount++;
-    } else {
-      pushLine(blackBuckets, rule, line);
-    }
+    pushLine(blackBuckets, rule, line);
   }
 
   const rulesWriter = new LineWriter(outRulesFile);
   await writeBuckets(rulesWriter, blackBuckets);
   await rulesWriter.close();
 
+  // ★ 输出白名单普通规则（无 ip）
   for (const d of whiteDomains) {
     const rule = getWhiteRule(d);
+    if (rule.ip) continue;
     const line = formatRule(rule);
     if (!line) continue;
     pushLine(whiteBuckets, rule, line);
+  }
+
+  // ★ 输出去重后的 $dnsrewrite 规则（重定向优先）
+  let rewriteFromBlackCount = 0;
+  for (const { rule, line } of rewriteByDomain.values()) {
+    pushLine(whiteBuckets, rule, line);
+    if (!rule.isWhite) rewriteFromBlackCount++;
   }
 
   const rewriteOutCount = countBuckets(whiteBuckets, [
@@ -505,6 +552,7 @@ const buildAdGuardHomeLists = async (options) => {
     duplicateCount,
     redundantCount,
     rewriteFromBlackCount,
+    rewriteUniqueCount: rewriteByDomain.size,
   };
 
   console.log(
@@ -512,7 +560,8 @@ const buildAdGuardHomeLists = async (options) => {
       `白名单 ${stats.whitelistCount} 条` +
       `（含重写 ${stats.dnsRewriteCount}，` +
       `冲突重写 ${stats.dnsRewriteConflictCount}，` +
-      `黑名单改写 ${stats.rewriteFromBlackCount}），` +
+      `黑名单改写 ${stats.rewriteFromBlackCount}，` +
+      `去重后重写 ${stats.rewriteUniqueCount}），` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
