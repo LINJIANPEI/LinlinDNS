@@ -89,14 +89,7 @@ jobs:
               ;;
           esac
 
-      # ★ 关键：把 53 端口转发到 5053，兼容 Node.js dns.Resolver 不认 ip:port
-      - name: 转发 53 到 5053
-        run: |
-          sudo iptables -t nat -A OUTPUT -p udp --dport 53 -j REDIRECT --to-port 5053
-          sudo iptables -t nat -A OUTPUT -p tcp --dport 53 -j REDIRECT --to-port 5053
-          echo "=== 当前 NAT 规则 ==="
-          sudo iptables -t nat -L OUTPUT -n -v
-
+      # ★ 先启动 SmartDNS（此时 iptables 规则还没加，Docker 拉镜像正常）
       - name: 启动 SmartDNS
         run: |
           mkdir -p smartdns-cache
@@ -112,12 +105,6 @@ jobs:
           for i in {1..15}; do
             if dig @127.0.0.1 -p 5053 github.com +short +time=2 +tries=1 > /dev/null 2>&1; then
               echo "SmartDNS 就绪（5053 端口）"
-              # ★ 验证 53 → 5053 转发是否生效
-              if dig @127.0.0.1 -p 53 github.com +short +time=2 +tries=1 > /dev/null 2>&1; then
-                echo "✓ 53 端口转发生效"
-              else
-                echo "⚠️ 53 端口转发可能未生效，removeDeadRules 会失败"
-              fi
               exit 0
             fi
             echo "等待 SmartDNS... ($i)"
@@ -129,6 +116,22 @@ jobs:
           ss -tulnp | grep -E ':(53|5053)' || echo "53/5053 未监听"
           cat data/configs/smartdns.conf
           exit 1
+
+      # ★ SmartDNS 就绪后再加 iptables 规则
+      # ★ 只转发目标为 127.0.0.1:53 的查询，不影响 Docker/systemd-resolved
+      - name: 转发 53 到 5053
+        run: |
+          sudo iptables -t nat -A OUTPUT -p udp -d 127.0.0.1 --dport 53 -j REDIRECT --to-port 5053
+          sudo iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport 53 -j REDIRECT --to-port 5053
+          echo "=== 当前 NAT 规则 ==="
+          sudo iptables -t nat -L OUTPUT -n -v
+          # 验证转发：查询 127.0.0.1:53 应该能拿到结果
+          if dig @127.0.0.1 -p 53 github.com +short +time=2 +tries=1 > /dev/null 2>&1; then
+            echo "✓ 53 → 5053 转发生效"
+          else
+            echo "⚠️ 53 → 5053 转发未生效"
+            exit 1
+          fi
 
       - name: 运行
         id: run_rules
