@@ -123,6 +123,32 @@ const extractSuffix = (line) => {
   return idx === -1 ? "" : line.slice(idx);
 };
 
+/**
+ * ★ 修正修饰符格式：$xxx$yyy → $xxx,yyy
+ * - 只把「修饰符之间」的 $ 替换为 ,
+ * - 保留规则开头的第一个 $
+ * - 清理多余逗号
+ * 例：
+ *   $important$denyallow=xxx → $important,denyallow=xxx
+ *   $important,,denyallow=xxx → $important,denyallow=xxx
+ *   $dnsrewrite=0.0.0.0$important → $dnsrewrite=0.0.0.0,important
+ */
+const sanitizeModifiers = (line) => {
+  if (!line) return line;
+  const firstDollar = line.indexOf("$");
+  if (firstDollar === -1) return line;
+
+  const head = line.slice(0, firstDollar + 1);
+  let rest = line.slice(firstDollar + 1);
+
+  // 把「修饰符之间」的 $ 替换为 ,
+  rest = rest.replace(/\$(?=[a-z])/gi, ",");
+  // 清理连续逗号和首尾逗号
+  rest = rest.replace(/,+/g, ",").replace(/^,|,$/g, "");
+
+  return head + rest;
+};
+
 const parseRule = (line, opts = {}) => {
   if (typeof line !== "string") return null;
   const t0 = line.trim();
@@ -225,6 +251,7 @@ const parseRule = (line, opts = {}) => {
  * formatRule：根据 rule.important 动态加/删 $important
  * - rule.important = true 且 suffix 里没有 → 加
  * - rule.important = false 且 suffix 里有 → 删
+ * ★ 出口统一调用 sanitizeModifiers 修正格式
  */
 const formatRule = (rule, opts = {}) => {
   if (!rule) return null;
@@ -250,34 +277,38 @@ const formatRule = (rule, opts = {}) => {
     suffix = suffix ? `${suffix},important` : "$important";
   }
 
+  let result;
+
   if (isHosts) {
     if (ip) {
       const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
       const imp = hasImpInIp ? "" : "important,";
-      return `${domain}^$${imp}dnsrewrite=${ip}`;
+      result = `${domain}^$${imp}dnsrewrite=${ip}`;
+    } else {
+      result = `|${domain}^${suffix}`;
     }
-    return `|${domain}^${suffix}`;
-  }
-
-  if (ip) {
+  } else if (ip) {
     const hasImpInIp = /(^|,)\s*important\s*(,|$)/i.test(ip);
     const impPrefix = hasImpInIp ? "" : "important,";
     const suffixStr = `$${impPrefix}dnsrewrite=${ip}`;
 
-    if (anchor === "bare") return `${domain}^${suffixStr}`;
-    if (anchor === "star") return `*${domain}^${suffixStr}`;
+    if (anchor === "bare") result = `${domain}^${suffixStr}`;
+    else if (anchor === "star") result = `*${domain}^${suffixStr}`;
+    else {
+      const bar = anchor === "sub" ? "||" : "|";
+      result = `${prefix}${bar}${domain}^${suffixStr}`;
+    }
+  } else if (anchor === "bare") {
+    result = `${prefix}|${domain}^${suffix}`;
+  } else if (anchor === "star") {
+    result = `*${domain}^${suffix}`;
+  } else {
     const bar = anchor === "sub" ? "||" : "|";
-    return `${prefix}${bar}${domain}^${suffixStr}`;
+    result = `${prefix}${bar}${domain}^${suffix}`;
   }
 
-  if (anchor === "bare") {
-    return `${prefix}|${domain}^${suffix}`;
-  }
-  if (anchor === "star") {
-    return `*${domain}^${suffix}`;
-  }
-  const bar = anchor === "sub" ? "||" : "|";
-  return `${prefix}${bar}${domain}^${suffix}`;
+  // ★ 统一出口：修正修饰符格式
+  return sanitizeModifiers(result);
 };
 
 module.exports = {
@@ -295,5 +326,6 @@ module.exports = {
   isPathRule,
   parseRule,
   formatRule,
+  sanitizeModifiers,
   EXTENDED_RULE_MARKERS,
 };
