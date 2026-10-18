@@ -2,48 +2,11 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-10-19 04:04:04（北京时间）
+! Version: 2026-10-19 04:30:40（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 3150
-*activity.baidu.com^$important,dnsrewrite=0.0.0.0
-*ada.baidu.com^$important,dnsrewrite=0.0.0.0
-*adimg.uve.weibo.com^$important,dnsrewrite=0.0.0.0
-*adservice.kugou.com^$important,dnsrewrite=0.0.0.0
-*adult-movie.bidobido.xyz^$important,dnsrewrite=0.0.0.0
-*bootpreload.uve.weibo.com^$important,dnsrewrite=0.0.0.0
-*business-ad.cdn-go.cn^$important,dnsrewrite=0.0.0.0
-*da.qiyukf.com^$important,dnsrewrite=0.0.0.0
-*dns.360.cn^$important,dnsrewrite=0.0.0.0
-*dns.jd.com^$important,dnsrewrite=0.0.0.0
-*dns.sina.com.cn^$important,dnsrewrite=0.0.0.0
-*doh.ptqy.gitv.tv^$important,dnsrewrite=0.0.0.0
-*fakeurl.virtual.baidu.com^$important,dnsrewrite=0.0.0.0
-*fc-ccimage.baidu.com^$important,dnsrewrite=0.0.0.0
-*fclick.baidu.com^$important,dnsrewrite=0.0.0.0
-*fclickv4.baidu.com^$important,dnsrewrite=0.0.0.0
-*gad.kugou.com^$important,dnsrewrite=0.0.0.0
-*h2tcbox.baidu.com^$important,dnsrewrite=0.0.0.0
-*h5retry.kugou.com^$important,dnsrewrite=0.0.0.0
-*hpd.baidu.com^$important,dnsrewrite=0.0.0.0
-*jr-ad.ctrip.com^$important,dnsrewrite=0.0.0.0
-*mktm.jd.com^$important,dnsrewrite=0.0.0.0
-*mvads.kugou.com^$important,dnsrewrite=0.0.0.0
-*nourl.ubs.baidu.com^$important,dnsrewrite=0.0.0.0
-*nstool.netease.com^$important,dnsrewrite=0.0.0.0
+! Total count: 3138
 *oimageb7.ydstatic.com^$important,dnsrewrite=0.0.0.0
-*pcdn-tracker.baidu.com^$important,dnsrewrite=0.0.0.0
-*resauth.kuwo.cn^$important,dnsrewrite=0.0.0.0
-*rtawin.daikuan.360.cn^$important,dnsrewrite=0.0.0.0
-*sax.sina.com.cn^$important,dnsrewrite=0.0.0.0
-*sdk-log.partner.sm.cn^$important,dnsrewrite=0.0.0.0
-*sdkapp.uve.weibo.com^$important,dnsrewrite=0.0.0.0
-*shouji.360.cn^$important,dnsrewrite=0.0.0.0
-*sptest.baidu.com^$important,dnsrewrite=0.0.0.0
-*tam.cdn-go.cn^$important,dnsrewrite=0.0.0.0
-*uisong.baidu.com^$important,dnsrewrite=0.0.0.0
-*voowebpbssdl.kugou.com^$important,dnsrewrite=0.0.0.0
 *vs2.bjct.u3.ucweb.com^$important,dnsrewrite=0.0.0.0
-*wjz-cdn.baidu.com^$important,dnsrewrite=0.0.0.0
 0.gravatar.com^$important,dnsrewrite=192.0.80.242
 1.gravatar.com^$important,dnsrewrite=192.0.80.242
 2.gravatar.com^$important,dnsrewrite=192.0.80.242
@@ -211,6 +174,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||aax-fe.amazon.co.jp^
 @@||abre-videos.cdn1122.com^
 @@||abtest3-misc-lf.zijieapi.com^
+@@||abtestvm.bytedance.com^
 @@||ac.dun.163yun.com^
 @@||ac.ebis.ne.jp^
 @@||ac.opapp.cn^$important
@@ -239,6 +203,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||acs.m.goofish.com^
 @@||acs.m.taobao.com^
 @@||acs.youku.com^
+@@||acs4baichuan.m.taobao.com^
 @@||acs4public.m.taobao.com^
 @@||acstatic-dun.126.net^
 @@||act-webstatic.hoyoverse.com^
@@ -255,6 +220,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||acts.qidian.com^
 @@||ad-experience.bytedance.com^
 @@||ad-gone.com^
+@@||ad-log-upload.mihoyo.com^
 @@||ad-putting.gw.zt-express.com^
 @@||ad.10010.com^
 @@||ad.abchina.com^
@@ -267,6 +233,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||ad.ourgame.com^
 @@||ad.siemens.com.cn^
 @@||adapter.juhaolian.cn^
+@@||adash-emas.cn-hangzhou.aliyuncs.com^
 @@||adblock.adguard.com^
 @@||adcdn.pingan.com^
 @@||adidasapp.api.adidas.com.cn^
@@ -309,6 +276,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com^
 @@||alissl.ucdl.pp.uc.cn^
 @@||alist.wavee.cn^
+@@||alistgo.com^
 @@||allawntech.com^
 @@||allcdn.china.qiniu.qnydns.com^
 @@||alllaw.112.2o7.net^
@@ -335,6 +303,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||annas-archive.org^
 @@||antivirus.vivo.com^
 @@||anwb.webpower.eu^
+@@||anythinktech.com^
 @@||aod.cos.tx.xmcdn.com^
 @@||ap-southeast-1-ga.device.saf.aliyuncs.com^
 @@||ap-southeast-1.device.saf.aliyuncs.com^
@@ -451,6 +420,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||app.powerbi.com^
 @@||app.toutiao.com^
 @@||app.zhuanzhuan.com^
+@@||appcenter.ms^
 @@||appcfg.v.qq.com^
 @@||appcloud.zhihu.com^
 @@||appcloud2.zhihu.com^
@@ -466,6 +436,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||appstore.pandora.xiaomi.com^
 @@||appstore.vivo.com^
 @@||appsupport.qq.com^
+@@||appupdates.189.cn^
 @@||aps.amap.com^
 @@||aq.qq.com^
 @@||archive.biliimg.com^
@@ -795,6 +766,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||cnlogs.umengcloud.com^$important
 @@||cnnic.net.cn^
 @@||code.bdstatic.com^
+@@||collect.hupu.com^
 @@||collector.githubapp.com^
 @@||comate-ide.cdn.bcebos.com^
 @@||commimg.pddpic.com^
@@ -889,6 +861,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||data.digital.costco.ca^
 @@||data.digital.costco.com^
 @@||data.flurry.com^
+@@||data.mistat.intl.xiaomi.com^
 @@||data.mistat.xiaomi.com^
 @@||data.notify.macys.com^
 @@||data.orders.costco.ca^
@@ -908,6 +881,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||dbankcloud.eu^
 @@||dbankcloud.ru^
 @@||dc.sigmob.cn^
+@@||dcloud.net.cn^
 @@||dcms.1688.com^
 @@||dd.myapp.com^
 @@||ddys.pro^
@@ -929,6 +903,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||dianfeijisuanqi.bmcx.com^
 @@||dida151.zhushou.xyhuabo.com^
 @@||dig.bdurl.net^$important
+@@||dig.zjurl.cn^
 @@||dimg04.c-ctrip.com^
 @@||dinamicx.alibabausercontent.com^
 @@||dir.minigame.qq.com^
@@ -1007,6 +982,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||drive.uc.cn^$important
 @@||ds.163.com^
 @@||dsp.fcbox.com^
+@@||dss0.bdstatic.com^
 @@||dss2.bdstatic.com^
 @@||du.163.com^
 @@||dualstack-a.apilocate.amap.com^
@@ -1265,6 +1241,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||help.x.com^
 @@||hemashare.cn^
 @@||hentaihand.com^
+@@||hermes.hupu.com^
 @@||heroku.com^
 @@||heytapdownload.com^
 @@||hicloud.com^
@@ -1344,6 +1321,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||id.uc.cn^$important
 @@||id6.me^
 @@||idmsa.apple.com^
+@@||ietheivaicai.com^
 @@||iface2.iqiyi.com^
 @@||ifdian.net^
 @@||iflow-api.uc.cn^
@@ -1415,7 +1393,6 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||imop.com^
 @@||imtt.dd.qq.com^$important
 @@||in-addr.arpa^
-@@||in.appcenter.ms^
 @@||incoming.telemetry.mozilla.org^
 @@||increase-openapi.soulapp.cn^
 @@||inews.gtimg.com^
@@ -1543,6 +1520,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||level-plus.net^
 @@||lf-ad-convert-feedback.oceanengine.com^
 @@||lf-c-flwb.bytetos.com^
+@@||lf-cdn-tos.bytescm.com^
 @@||lf-douyin-pc-search.douyinstatic.com^
 @@||lf-douyin-pc-web.douyinstatic.com^
 @@||lf-douyin-search-fe.bytetos.com^
@@ -1615,6 +1593,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||locprivate-tostc.sf-express.com^$important
 @@||log-api.pangolin-sdk-toutiao-b.com^
 @@||log-api.pangolin-sdk-toutiao.com^
+@@||log-sdk.ksapisrv.com^
 @@||log-upload.mihoyo.com^
 @@||log.dailygn.com^$important
 @@||log.snssdk.com^$important
@@ -1637,6 +1616,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||lol.qq.com^
 @@||long.eqnsui.cn^
 @@||long.voqpox.cn^
+@@||lp.pinduoduo.com^
 @@||lpcdn.pinduoduo.com^
 @@||lpl.qq.com^
 @@||luna-dict-community.nosdn.127.net^
@@ -1752,6 +1732,8 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||member.jiaoyimao.com^
 @@||members.bitcomet.com^
 @@||message.bilibili.com^
+@@||metok.sys.miui.com^
+@@||metrics.apple.com^
 @@||metrics.icloud.com^
 @@||metrics.ubuntu.com^
 @@||mfunuevebimg1.sxjwwp.com^
@@ -1973,6 +1955,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||oneplus.helpshift.com^
 @@||onl.bz^
 @@||open.bytedanceapi.com^
+@@||open.douyin.com^
 @@||open.oppomobile.com^
 @@||open.snssdk.com^
 @@||open.unionpay.com^
@@ -2123,6 +2106,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||pay.soulapp.cn^
 @@||pay.xunlei.com^
 @@||pay.youku.com^
+@@||paydns.wechatpay.cn^
 @@||pbaccess.video.qq.com^
 @@||pc-api.uc.cn^
 @@||pc.xunlei.com^
@@ -2158,6 +2142,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||pingjs.qq.com^
 @@||pingma.qq.com^
 @@||pingtas.qq.com^
+@@||pitaya.bytedance.com^
 @@||pixpin.cn^
 @@||pkg.biligame.com^
 @@||pkg.sinaimg.cn^
@@ -2533,6 +2518,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||staticimg.yidianzixun.com^
 @@||statics.123pan.com^
 @@||statics.itc.cn^
+@@||staticsns.cdn.bcebos.com^
 @@||staticwiki.biligame.com^
 @@||stats.britishbaseball.org.uk^
 @@||stats.gc.apple.com^
@@ -2613,6 +2599,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||thumbor.thedailymeal.com^
 @@||thumbs2.imgbox.com^
 @@||ti.qq.com^
+@@||tianshu.gtimg.cn^
 @@||tieba-ares.cdn.bcebos.com^
 @@||tiktokcdn.com^
 @@||tiktokv.com^
@@ -2904,6 +2891,7 @@ zh.wikipedia.org^$important,dnsrewrite=208.80.154.224
 @@||www.bootcdn.cn^
 @@||www.bootcss.com^
 @@||www.bqgyy.com^
+@@||www.bytedance.com^
 @@||www.chemdraw.com.cn^
 @@||www.chinaunicom.com.cn^
 @@||www.chinaunicom.com^
