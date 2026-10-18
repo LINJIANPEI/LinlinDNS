@@ -9,9 +9,6 @@ tmp/
 *.tmp
 *.sorted
 
-# 分片文件（旧版本遗留）
-*.part*.txt
-
 # Node
 node_modules/
 npm-debug.log*
@@ -20,6 +17,6 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-# 完整文件走 Release，不进 Git
+# 完整文件走 Release，不进 Git（精确匹配根目录）
 /rules.txt
 /allow.txt
