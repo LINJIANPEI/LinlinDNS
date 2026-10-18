@@ -128,7 +128,6 @@ const parseRule = (line, opts = {}) => {
   const t0 = line.trim();
   if (!t0) return null;
 
-  // ★ 剥离行尾注释
   const t = t0.replace(/\s+#.*$/, "");
 
   if (!t) return null;
@@ -145,7 +144,6 @@ const parseRule = (line, opts = {}) => {
 
   const make = (domain, isWhite, anchor, ip, isHosts = false) => ({
     domain,
-    // ★ $dnsrewrite 是拦截重写动作，忽略 @@（白名单不支持重写）
     isWhite: ip ? false : isWhite,
     anchor,
     ip,
@@ -155,7 +153,7 @@ const parseRule = (line, opts = {}) => {
     original: t,
   });
 
-  // ① hosts 格式（IPv4 / IPv6）
+  // ① hosts
   const parts = t.split(/\s+/);
   if (parts.length === 2 && (isIPv4(parts[0]) || isIPv6(parts[0]))) {
     const cand = stripWildcard(parts[1]);
@@ -167,7 +165,7 @@ const parseRule = (line, opts = {}) => {
     return make(domain, !blackhole, "bare", blackhole ? null : parts[0], true);
   }
 
-  // ② 已有锚点：|| / | / *
+  // ② 已有锚点
   if (body.startsWith("||") || body.startsWith("|") || body.startsWith("*")) {
     let anchor;
     let rest;
@@ -201,7 +199,7 @@ const parseRule = (line, opts = {}) => {
     return make(domain, isWhitePrefix, anchor, ip);
   }
 
-  // ③ 无锚点 + 修饰符（含 dnsrewrite）
+  // ③ 无锚点 + 修饰符
   const bareMatch = body.match(/^([a-z0-9.-]+)\^\$(.+)$/i);
   if (bareMatch) {
     const domain = normalizeDomain(bareMatch[1]);
@@ -223,6 +221,12 @@ const parseRule = (line, opts = {}) => {
   return null;
 };
 
+/**
+ * ★ formatRule：根据 rule.important 动态加/删 $important
+ * - rule.important = true 且 suffix 里没有 → 加
+ * - rule.important = false 且 suffix 里有 → 删
+ * 这样调用方只需改 rule.important 属性，无需动 original。
+ */
 const formatRule = (rule, opts = {}) => {
   if (!rule) return null;
 
@@ -234,7 +238,20 @@ const formatRule = (rule, opts = {}) => {
   }
 
   const prefix = isWhite ? "@@" : "";
-  const suffix = ip ? "" : extractSuffix(rule.original || "");
+  let suffix = ip ? "" : extractSuffix(rule.original || "");
+
+  // ★ 动态调整 suffix 里的 important
+  if (!rule.important && /\$important\b/i.test(suffix)) {
+    // 删除 important
+    const body = suffix.replace(/^\$/, "");
+    const mods = body
+      .split(",")
+      .filter((m) => m.trim().toLowerCase() !== "important");
+    suffix = mods.length > 0 ? `$${mods.join(",")}` : "";
+  } else if (rule.important && !/\$important\b/i.test(suffix)) {
+    // 添加 important
+    suffix = suffix ? `${suffix},important` : "$important";
+  }
 
   if (isHosts) {
     if (ip) {
@@ -242,7 +259,7 @@ const formatRule = (rule, opts = {}) => {
       const imp = hasImpInIp ? "" : "important,";
       return `${domain}^$${imp}dnsrewrite=${ip}`;
     }
-    return `|${domain}^`;
+    return `|${domain}^${suffix}`;
   }
 
   if (ip) {

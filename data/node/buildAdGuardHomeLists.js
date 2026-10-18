@@ -172,6 +172,20 @@ const isBlockRewrite = (ip) => {
   return /^(noerror|nxdomain|refused|servfail)$/i.test(first);
 };
 
+/**
+ * 获取域名的所有父域后缀（不含自身）
+ * a.b.c.com → [b.c.com, c.com, com]
+ */
+const getSuffixes = (domain) => {
+  const suffixes = [];
+  let idx = domain.indexOf(".");
+  while (idx !== -1) {
+    suffixes.push(domain.slice(idx + 1));
+    idx = domain.indexOf(".", idx + 1);
+  }
+  return suffixes;
+};
+
 const buildAdGuardHomeLists = async (options) => {
   const {
     cleanedFile,
@@ -183,7 +197,7 @@ const buildAdGuardHomeLists = async (options) => {
     outRedundantFile,
     outDuplicateFile,
     priorityFile = null,
-    priorityProtectFile = null, // ★ 输出：强制规则保护追溯
+    priorityProtectFile = null,
   } = options;
 
   if (!cleanedFile) throw new TypeError("cleanedFile 必填");
@@ -192,7 +206,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   console.log("开始构建 AdGuard Home 列表");
 
-  // ★ 读入强制规则
   const prioritySet = new Set();
   if (priorityFile && fs.existsSync(priorityFile)) {
     await readLines(priorityFile, (line) => {
@@ -202,7 +215,6 @@ const buildAdGuardHomeLists = async (options) => {
     console.log(`强制规则（priorityFile）：${prioritySet.size} 条`);
   }
 
-  // ★ 强制规则保护追溯
   const priorityProtectWriter = priorityProtectFile
     ? new LineWriter(priorityProtectFile)
     : null;
@@ -317,37 +329,131 @@ const buildAdGuardHomeLists = async (options) => {
       (redundantCount > 0 ? `，冗余行 ${redundantCount}` : ""),
   );
 
-  // 第 2 步：白名单覆盖黑名单
+  // ============================================================
+  // 第 1.5 步：★ 冲突分析 + 应用修改（子域优先）
+  // ============================================================
+  console.log("开始冲突分析（子域优先）...");
+
+  // 建立父域到子域白名单的索引
+  const childWhiteIndex = new Map(); // parentDomain → [wDomain, ...]
+  for (const [wDomain, wRule] of whiteMap) {
+    if (!prioritySet.has(wRule.original)) continue; // 只索引 priority 白名单
+    for (const suffix of getSuffixes(wDomain)) {
+      if (!childWhiteIndex.has(suffix)) childWhiteIndex.set(suffix, []);
+      childWhiteIndex.get(suffix).push(wDomain);
+    }
+  }
+
+  const addImportantBlack = new Set();
+  const addImportantWhite = new Set();
+  const removeImportantBlack = new Set();
+  const removeImportantWhite = new Set();
+  const deleteBlackDomains = new Set();
+
+  // 遍历 priority 黑名单，检测与 priority 白名单的冲突
+  for (const [bDomain, bRule] of blackMap) {
+    if (!prioritySet.has(bRule.original)) continue;
+
+    // 1. 精确匹配 → 同级 → 白名单覆盖黑名单
+    const wExact = whiteMap.get(bDomain);
+    if (wExact && prioritySet.has(wExact.original)) {
+      deleteBlackDomains.add(bDomain);
+      if (priorityProtectWriter) {
+        await priorityProtectWriter.write(
+          `[同级冲突] ${bRule.original} 被白名单覆盖（删除黑名单）✕ ${wExact.original}`,
+        );
+      }
+      continue; // 精确匹配处理完，跳过后续
+    }
+
+    // 2. 父域白名单 → 黑名单子域优先
+    let parentWhiteDomain = null;
+    for (const suffix of getSuffixes(bDomain)) {
+      const wParent = whiteMap.get(suffix);
+      if (wParent && prioritySet.has(wParent.original)) {
+        parentWhiteDomain = suffix;
+        break;
+      }
+    }
+    if (parentWhiteDomain) {
+      const wParent = whiteMap.get(parentWhiteDomain);
+      addImportantBlack.add(bDomain);
+      if (wParent.important) removeImportantWhite.add(parentWhiteDomain);
+      if (priorityProtectWriter) {
+        await priorityProtectWriter.write(
+          `[子域冲突] ${bRule.original}（子域优先，加 important）vs ${wParent.original}（父域${wParent.important ? "，删 important" : ""}）`,
+        );
+      }
+    }
+
+    // 3. 子域白名单 → 白名单子域优先
+    const childWhites = childWhiteIndex.get(bDomain) || [];
+    for (const wSubDomain of childWhites) {
+      if (wSubDomain === bDomain) continue; // 精确匹配已在步骤 1 处理
+      const wSub = whiteMap.get(wSubDomain);
+      if (!wSub) continue;
+      addImportantWhite.add(wSubDomain);
+      if (bRule.important) removeImportantBlack.add(bDomain);
+      if (priorityProtectWriter) {
+        await priorityProtectWriter.write(
+          `[子域冲突] ${bRule.original}（父域）vs ${wSub.original}（子域优先，加 important）`,
+        );
+      }
+    }
+  }
+
+  // ★ 应用修改
+  // 删除黑名单
+  for (const d of deleteBlackDomains) {
+    const rule = blackMap.get(d);
+    if (rule) {
+      if (noblacklistWriter) await noblacklistWriter.write(rule.original);
+      blackMap.delete(d);
+      noblacklistCount++;
+    }
+  }
+
+  // 加 important
+  for (const d of addImportantBlack) {
+    const rule = blackMap.get(d);
+    if (rule) rule.important = true;
+  }
+  for (const d of addImportantWhite) {
+    const rule = whiteMap.get(d);
+    if (rule) rule.important = true;
+  }
+
+  // 删 important
+  for (const d of removeImportantBlack) {
+    const rule = blackMap.get(d);
+    if (rule) rule.important = false;
+  }
+  for (const d of removeImportantWhite) {
+    const rule = whiteMap.get(d);
+    if (rule) rule.important = false;
+  }
+
+  console.log(
+    `冲突分析完成：删除黑名单 ${deleteBlackDomains.size} 条，` +
+      `黑名单加 important ${addImportantBlack.size} 条，` +
+      `白名单加 important ${addImportantWhite.size} 条，` +
+      `黑名单删 important ${removeImportantBlack.size} 条，` +
+      `白名单删 important ${removeImportantWhite.size} 条`,
+  );
+
+  // ============================================================
+  // 第 2 步：白名单覆盖黑名单（原有逻辑）
+  // ============================================================
   console.log("开始白名单覆盖黑名单...");
   const toDeleteBlack = [];
   let step2Progress = 0;
   let priorityProtected = 0;
 
   for (const [bDomain, bRule] of blackMap) {
-    if (prioritySet.has(bRule.original)) {
+    if (prioritySet.has(bRule.original) && bRule.important) {
+      // 已经是 important 了，不会被覆盖
       priorityProtected++;
       step2Progress++;
-      // ★ 追溯：强制黑名单被哪些白名单试图覆盖
-      if (priorityProtectWriter) {
-        const wExact = whiteMap.get(bDomain);
-        if (wExact) {
-          await priorityProtectWriter.write(
-            `[保护黑名单] ${bRule.original}  ✕  白名单 ${wExact.original}`,
-          );
-        }
-        let idx = bDomain.indexOf(".");
-        while (idx !== -1) {
-          const parent = bDomain.slice(idx + 1);
-          const w = whiteMap.get(parent);
-          if (w && w.coverSub) {
-            await priorityProtectWriter.write(
-              `[保护黑名单] ${bRule.original}  ✕  父域白名单 ${w.original}`,
-            );
-            break;
-          }
-          idx = bDomain.indexOf(".", idx + 1);
-        }
-      }
       continue;
     }
 
@@ -398,7 +504,7 @@ const buildAdGuardHomeLists = async (options) => {
   let whitePriorityProtected = 0;
   const toDeleteWhite = [];
   for (const [wDomain, wRule] of whiteMap) {
-    if (prioritySet.has(wRule.original)) {
+    if (prioritySet.has(wRule.original) || wRule.important) {
       whitePriorityProtected++;
       if (priorityProtectWriter) {
         const bRule = blackMap.get(wDomain);
@@ -414,7 +520,7 @@ const buildAdGuardHomeLists = async (options) => {
     const bRule = blackMap.get(wDomain);
     if (!bRule) continue;
 
-    if (prioritySet.has(bRule.original)) {
+    if (prioritySet.has(bRule.original) || bRule.important) {
       whitePriorityProtected++;
       if (priorityProtectWriter) {
         await priorityProtectWriter.write(
@@ -557,7 +663,7 @@ const buildAdGuardHomeLists = async (options) => {
   console.log("开始外部排序归档文件...");
   if (noblacklistWriter) await noblacklistWriter.close();
   if (nowhitelistWriter) await nowhitelistWriter.close();
-  if (priorityProtectWriter) await priorityProtectWriter.close(); // ★
+  if (priorityProtectWriter) await priorityProtectWriter.close();
 
   externalSortCovered(noblacklistTmp, outNoBlacklistFile);
   externalSortCovered(nowhitelistTmp, outNoWhitelistFile);
@@ -660,6 +766,11 @@ const buildAdGuardHomeLists = async (options) => {
     priorityCount: prioritySet.size,
     priorityProtected,
     whitePriorityProtected,
+    conflictDeleteBlackCount: deleteBlackDomains.size,
+    conflictAddImportantBlackCount: addImportantBlack.size,
+    conflictAddImportantWhiteCount: addImportantWhite.size,
+    conflictRemoveImportantBlackCount: removeImportantBlack.size,
+    conflictRemoveImportantWhiteCount: removeImportantWhite.size,
     priorityProtectFile,
   };
 
@@ -672,6 +783,11 @@ const buildAdGuardHomeLists = async (options) => {
       `去重后重写 ${stats.rewriteUniqueCount}），` +
       `强制规则 ${stats.priorityCount} 条` +
       `（保护黑名单 ${stats.priorityProtected}，保护白名单 ${stats.whitePriorityProtected}），` +
+      `冲突处理：删除黑名单 ${stats.conflictDeleteBlackCount}，` +
+      `黑加important ${stats.conflictAddImportantBlackCount}，` +
+      `白加important ${stats.conflictAddImportantWhiteCount}，` +
+      `黑删important ${stats.conflictRemoveImportantBlackCount}，` +
+      `白删important ${stats.conflictRemoveImportantWhiteCount}，` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
