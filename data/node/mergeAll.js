@@ -47,7 +47,7 @@ const mergeAll = async (directory, outputFile, archiveDir, options = {}) => {
 
   console.log("开始合并所有规则（含去重 + 标准化）");
   if (forceSkipDnsFiles.length > 0) {
-    console.log(`跳过 DNS 查询的文件：${forceSkipDnsFiles.join(", ")}`);
+    console.log(`强制判活文件：${forceSkipDnsFiles.join(", ")}`);
   }
 
   try {
@@ -152,7 +152,7 @@ const mergeAll = async (directory, outputFile, archiveDir, options = {}) => {
         fileWritten++;
       });
 
-      const mark = skipDns ? " [跳过DNS]" : "";
+      const mark = skipDns ? " [强制判活]" : "";
       console.log(`  ${file}: 写入 ${fileWritten} 行${mark}`);
     }
 
@@ -169,7 +169,7 @@ const mergeAll = async (directory, outputFile, archiveDir, options = {}) => {
         `写入 ${written} 行，跳过 ${skipped} 行` +
         `（无效 ${skippedInvalid}，解析失败 ${skippedParse}，格式化失败 ${skippedFormat}），` +
         `去重 ${duplicated} 行` +
-        (forcedWritten > 0 ? `，强制跳过DNS ${forcedWritten} 行` : ""),
+        (forcedWritten > 0 ? `，强制判活 ${forcedWritten} 行` : ""),
     );
 
     return {
