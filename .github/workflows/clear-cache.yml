@@ -1,0 +1,49 @@
+name: Clear All Caches
+
+on:
+  workflow_dispatch:
+    inputs:
+      filter:
+        description: "缓存 key 前缀（留空则删除全部）"
+        required: false
+        default: ""
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  clear:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 列出缓存
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== 当前缓存 ==="
+          gh cache list --limit 100
+
+      - name: 删除缓存
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FILTER: ${{ inputs.filter }}
+        run: |
+          if [ -z "$FILTER" ]; then
+            echo "删除全部缓存..."
+            gh cache delete --all
+          else
+            echo "删除前缀为 '$FILTER' 的缓存..."
+            # 按前缀过滤并逐个删除
+            gh cache list --key "$FILTER" --limit 1000 --json id --jq '.[].id' \
+              | while read id; do
+                  echo "删除 cache id=$id"
+                  gh cache delete "$id" || true
+                done
+          fi
+
+      - name: 确认剩余缓存
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== 剩余缓存 ==="
+          gh cache list --limit 100 || echo "无缓存"
