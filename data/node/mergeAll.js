@@ -17,23 +17,17 @@ const isValidRuleLine = (t) => {
   if (!t) return false;
   if (t.length < 3) return false;
   if (t.length > 1024) return false;
-
   if (t.startsWith("!")) return false;
   if (t.startsWith("[")) return false;
   if (t.startsWith("#")) return false;
-
   if (HTML_RE.test(t)) return false;
-
   if (!t.includes(".") && !t.includes("/")) return false;
-
   if (isPathRule(t)) return false;
   if (hasUnsupportedModifier(t)) return false;
   if (STATIC_FILE_RE.test(t)) return false;
-
   return true;
 };
 
-// ★ 分片去重：规避 V8 单 Set 2^24-1 ≈ 1677 万上限
 const SHARD_COUNT = 128;
 
 const hashStr = (s) => {
@@ -44,8 +38,18 @@ const hashStr = (s) => {
   return h >>> 0;
 };
 
-const mergeAll = async (directory, outputFile, archiveDir) => {
+/**
+ * options.forceSkipDnsFiles：这些文件的规则原文额外写入 forcedRulesFile
+ * 供 prepareDnsRules / removeDeadRules 优先保留 + 跳过 DNS 查询
+ */
+const mergeAll = async (directory, outputFile, archiveDir, options = {}) => {
+  const { forceSkipDnsFiles = [], forcedRulesFile = null } = options;
+
   console.log("开始合并所有规则（含去重 + 标准化）");
+  if (forceSkipDnsFiles.length > 0) {
+    console.log(`跳过 DNS 查询的文件：${forceSkipDnsFiles.join(", ")}`);
+  }
+
   try {
     const fileList = await readDir(directory);
     const allFiles = fileList
@@ -58,6 +62,9 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
       .sort();
 
     const writer = new LineWriter(outputFile);
+    const forcedWriter = forcedRulesFile
+      ? new LineWriter(forcedRulesFile)
+      : null;
 
     const invalidWriter = archiveDir
       ? new LineWriter(path.join(archiveDir, "合并-无效行.txt"))
@@ -77,18 +84,14 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
       if (parseFailWriter) await parseFailWriter.close();
       if (formatFailWriter) await formatFailWriter.close();
       if (duplicateWriter) await duplicateWriter.close();
+      if (forcedWriter) await forcedWriter.close();
     };
 
     if (allFiles.length === 0) {
       console.log("没有找到规则文件");
       await writer.close();
       await closeArchives();
-      return {
-        fileCount: 0,
-        lineCount: 0,
-        skipped: 0,
-        duplicated: 0,
-      };
+      return { fileCount: 0, lineCount: 0, skipped: 0, duplicated: 0 };
     }
 
     const shards = Array.from({ length: SHARD_COUNT }, () => new Set());
@@ -98,9 +101,11 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
     let skippedFormat = 0;
     let duplicated = 0;
     let written = 0;
+    let forcedWritten = 0;
 
     for (const file of allFiles) {
       const isWhiteFile = file.startsWith("allow");
+      const skipDns = forceSkipDnsFiles.includes(file);
       let fileWritten = 0;
 
       await readLines(path.join(directory, file), async (line) => {
@@ -126,6 +131,12 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
           return;
         }
 
+        // ★ 强制跳过 DNS：额外写入 forcedWriter（标准化后的规则）
+        if (skipDns && forcedWriter) {
+          await forcedWriter.write(normalized);
+          forcedWritten++;
+        }
+
         const idx = hashStr(normalized) % SHARD_COUNT;
         const shard = shards[idx];
 
@@ -140,7 +151,9 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
         written++;
         fileWritten++;
       });
-      console.log(`  ${file}: 写入 ${fileWritten} 行`);
+
+      const mark = skipDns ? " [跳过DNS]" : "";
+      console.log(`  ${file}: 写入 ${fileWritten} 行${mark}`);
     }
 
     await writer.close();
@@ -155,7 +168,8 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
       `合并完成：${allFiles.length} 个文件，` +
         `写入 ${written} 行，跳过 ${skipped} 行` +
         `（无效 ${skippedInvalid}，解析失败 ${skippedParse}，格式化失败 ${skippedFormat}），` +
-        `去重 ${duplicated} 行`,
+        `去重 ${duplicated} 行` +
+        (forcedWritten > 0 ? `，强制跳过DNS ${forcedWritten} 行` : ""),
     );
 
     return {
@@ -166,6 +180,7 @@ const mergeAll = async (directory, outputFile, archiveDir) => {
       skippedParse,
       skippedFormat,
       duplicated,
+      forcedWritten,
     };
   } catch (error) {
     throw new Error(`合并失败: ${error.message}`);

@@ -36,11 +36,14 @@ const ARCHIVE = {
   skipped: "⑩ 构建-无法解析.txt",
   redundant: "⑪ 构建-同域冗余.txt",
   buildDuplicate: "⑫ 构建-重复规则.txt",
+  forceAlive: "⑬ 强制判活.txt",
+  priorityProtect: "⑭ 强制规则保护.txt",
+  forcedRules: "⑮ 强制规则清单.txt",
 };
 
-/**
- * 清理目录下所有 *.part*.txt（避免分片数量变化时残留旧分片）
- */
+const FORCE_SKIP_DNS_FILES = ["rules01.txt", "allow01.txt"];
+const FORCED_RULES_FILE = p("forced-rules.txt");
+
 const cleanOldParts = (dir) => {
   if (!fs.existsSync(dir)) return;
   let n = 0;
@@ -73,10 +76,26 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    await mergeAll(tmpDir, p("all.txt"), removeDir);
+    // ★ mergeAll 收集强制规则原文
+    await mergeAll(tmpDir, p("all.txt"), removeDir, {
+      forceSkipDnsFiles: FORCE_SKIP_DNS_FILES,
+      forcedRulesFile: FORCED_RULES_FILE,
+    });
 
-    const dns = await prepareDnsRules(p("all.txt"), tmpDir, removeDir);
+    // ★ 持久化 forced-rules.txt 到 data/remove/
+    if (fs.existsSync(FORCED_RULES_FILE)) {
+      await copyFiles([
+        FORCED_RULES_FILE,
+        path.join(removeDir, ARCHIVE.forcedRules),
+      ]);
+    }
 
+    // ★ prepareDnsRules 让强制规则优先不被上游替换
+    const dns = await prepareDnsRules(p("all.txt"), tmpDir, removeDir, {
+      priorityFile: FORCED_RULES_FILE,
+    });
+
+    // ★ removeDeadRules 正常查询 + 查询后强制判活 + 追溯
     await removeDeadRules([dns.blackFile, dns.whiteFile], {
       cleanedFile: p("cleaned.txt"),
       nocleanedFile: p("nocleaned.txt"),
@@ -86,8 +105,11 @@ async function main() {
       cacheRead: CACHE_MODE.read,
       cacheWrite: CACHE_MODE.write,
       concurrency: 1500,
+      forceAliveFile: FORCED_RULES_FILE,
+      forceAliveReportFile: path.join(removeDir, ARCHIVE.forceAlive),
     });
 
+    // ★ buildAdGuardHomeLists 让强制规则优先不被覆盖 + 追溯
     await buildAdGuardHomeLists({
       cleanedFile: p("cleaned.txt"),
       outRulesFile: path.join(outDir, "rules.txt"),
@@ -97,6 +119,8 @@ async function main() {
       outSkippedFile: path.join(removeDir, ARCHIVE.skipped),
       outRedundantFile: path.join(removeDir, ARCHIVE.redundant),
       outDuplicateFile: path.join(removeDir, ARCHIVE.buildDuplicate),
+      priorityFile: FORCED_RULES_FILE,
+      priorityProtectFile: path.join(removeDir, ARCHIVE.priorityProtect),
     });
 
     await copyFiles(
@@ -106,9 +130,8 @@ async function main() {
 
     await title();
 
-    // 排查：title() 之后
     console.log("=== title() 之后检查 ===");
-    for (const f of ["rules.txt", "allow.txt"]) {
+    for (const f of ["rules.txt", "allow.txt", "README.md"]) {
       if (fs.existsSync(f)) {
         const s = fs.statSync(f);
         console.log(`  ✓ ${f} (${(s.size / 1024 / 1024).toFixed(2)} MB)`);
@@ -117,24 +140,19 @@ async function main() {
       }
     }
 
-    // ★ 关键顺序：cleanReadme 在分片之前（统计完整文件的行数）
     await cleanReadme();
 
-    // ★ 清理旧分片（避免分片数量变化时残留）
     console.log("=== 清理旧分片 ===");
     cleanOldParts(outDir);
     cleanOldParts(removeDir);
 
-    // ★ 对 outDir 分片，保留原文件（rules.txt / allow.txt 完整保留，供 Release 上传）
     await splitLargeFilesInDir(outDir, {
       pattern: /^(rules|allow)\.txt$/,
       keepOriginals: true,
     });
 
-    // ★ removeDir 正常分片（删除原文件）
     await splitLargeFilesInDir(removeDir);
 
-    // 排查：分片后
     console.log("=== 分片后检查 ===");
     for (const f of ["rules.txt", "allow.txt"]) {
       if (fs.existsSync(f)) {

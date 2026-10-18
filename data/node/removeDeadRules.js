@@ -6,7 +6,7 @@ const { finished } = require("node:stream/promises");
 const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule } = require("./rule_parser");
 
-const CACHE_TTL = 3110400; // 36 天
+const CACHE_TTL = 3110400;
 const DEFAULT_CONCURRENCY = 1000;
 const DEFAULT_NAMESERVERS = ["127.0.0.1"];
 const DEFAULT_PORT = 5053;
@@ -14,7 +14,6 @@ const DNS_TIMEOUT = 500;
 const DEFAULT_CACHE_FILE = "./dns-cache.json";
 const DEFAULT_PROGRESS_STEP = 1000;
 
-// Resolver 复用池
 const resolverCache = new Map();
 
 const getResolver = (nameservers, port) => {
@@ -27,7 +26,6 @@ const getResolver = (nameservers, port) => {
   return resolverCache.get(key);
 };
 
-// ★ Worker Pool：固定并发，内存只占用 concurrency 个 slot
 const runPool = async (items, concurrency, worker) => {
   const it = items[Symbol.iterator]();
   const runOne = async () => {
@@ -42,7 +40,6 @@ const runPool = async (items, concurrency, worker) => {
   await Promise.all(workers);
 };
 
-// DNS 查询：A 优先，失败兜底 AAAA（保留两次查询）
 const withTimeout = (promise, ms) => {
   let timer;
   return Promise.race([
@@ -76,7 +73,6 @@ const checkDomain = async (domain, { nameservers, port }) => {
   return resolveHost(domain, nameservers, port);
 };
 
-// 文件缓存（NDJSON 流式读写）
 const createNullCache = () => ({
   get() {
     return undefined;
@@ -152,7 +148,6 @@ const createFileCache = async (filePath, options = {}) => {
   };
 };
 
-// 主函数
 const removeDeadRules = async (inputFiles, options) => {
   const {
     cleanedFile,
@@ -172,6 +167,8 @@ const removeDeadRules = async (inputFiles, options) => {
     autoSaveCache = true,
     onProgress,
     progressStep = DEFAULT_PROGRESS_STEP,
+    forceAliveFile = null,
+    forceAliveReportFile = null, // ★ 输出：强制判活追溯文件
   } = options;
 
   console.log("开始剔除死域名规则");
@@ -182,7 +179,21 @@ const removeDeadRules = async (inputFiles, options) => {
       ? await createFileCache(cacheFile, { read: cacheRead, write: cacheWrite })
       : createNullCache());
 
-  // 第 1 遍：提取域名
+  // ★ 读入强制判活域名
+  const forceAliveDomains = new Set();
+  if (forceAliveFile && fs.existsSync(forceAliveFile)) {
+    await readLines(forceAliveFile, (line) => {
+      const t = line.trim();
+      if (!t) return;
+      const parsed = parseRule(t);
+      if (parsed) forceAliveDomains.add(parsed.domain);
+    });
+    console.log(`强制判活域名：${forceAliveDomains.size} 个`);
+  }
+
+  // ========================================================
+  // 第 1 遍：提取域名（所有域名都参与）
+  // ========================================================
   const domainMap = new Map();
   const passthroughWriter = passthroughFile
     ? new LineWriter(passthroughFile)
@@ -223,7 +234,9 @@ const removeDeadRules = async (inputFiles, options) => {
     `规则解析完成，共${totalRules}条规则，提取${total}个域名（白 ${whiteCount}，重写 ${rewriteCount}）`,
   );
 
+  // ========================================================
   // 第 2 遍：DNS 查询
+  // ========================================================
   const now = Math.floor(Date.now() / 1000);
   let cacheHits = 0;
   let completed = 0;
@@ -292,9 +305,37 @@ const removeDeadRules = async (inputFiles, options) => {
 
   report(true);
 
+  // ========================================================
+  // ★ 查询完成后：强制名单中的死域名 → 强制判活 + 追溯
+  // ========================================================
+  const forceAliveWriter = forceAliveReportFile
+    ? new LineWriter(forceAliveReportFile)
+    : null;
+
+  let forceAliveCount = 0;
+  for (const d of forceAliveDomains) {
+    if (domainMap.has(d) && !aliveSet.has(d)) {
+      aliveSet.add(d);
+      forceAliveCount++;
+      // ★ 追溯：域名 + 原因
+      if (forceAliveWriter) {
+        await forceAliveWriter.write(
+          `${d}\t# 原判死，强制保留（来自 adblock.txt / allow.txt）`,
+        );
+      }
+    }
+  }
+  if (forceAliveWriter) await forceAliveWriter.close();
+
+  if (forceAliveCount > 0) {
+    console.log(`强制判活：${forceAliveCount} 个死域名被强制保留`);
+  }
+
   const deadCount = aliveSet.size - skipWhiteSet.size;
 
+  // ========================================================
   // 计算"死且无存活父域"的集合
+  // ========================================================
   const deadWithoutAliveParent = new Set();
   const deadWhitelistSet = new Set();
   let parentAliveCount = 0;
@@ -324,7 +365,9 @@ const removeDeadRules = async (inputFiles, options) => {
 
   domainMap.clear();
 
+  // ========================================================
   // 第 3 遍：分类输出
+  // ========================================================
   const cleanedWriter = new LineWriter(cleanedFile);
   const nocleanedWriter = nocleanedFile ? new LineWriter(nocleanedFile) : null;
   const deadWriter = deadDomainsFile ? new LineWriter(deadDomainsFile) : null;
@@ -411,6 +454,9 @@ const removeDeadRules = async (inputFiles, options) => {
     totalDomains: total,
     queriedDomains: totalToCheck,
     skippedWhite: skipWhiteSet.size,
+    forceAliveDomains: forceAliveDomains.size,
+    forceAliveCount,
+    forceAliveReportFile,
     aliveDomains: aliveSet.size - skipWhiteSet.size,
     deadDomains: deadCount,
     deadDomainsWithParentAlive: parentAliveCount,
@@ -430,6 +476,7 @@ const removeDeadRules = async (inputFiles, options) => {
   console.log(
     `剔除死域名规则完成 | 输入 ${totalRules} 条` +
       ` | 查询 ${totalToCheck} 个域名（跳过白名单 ${skipWhiteSet.size}）` +
+      ` | 强制判活 ${forceAliveCount} 个（共 ${forceAliveDomains.size} 个强制域名）` +
       ` | 保留 ${cleanedCount} 条` +
       ` | 剔除 ${nocleanedCount} 条` +
       ` | 白名单（保留 ${whiteKept}）` +

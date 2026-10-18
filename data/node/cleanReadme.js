@@ -29,7 +29,6 @@ const countLines = (filePath) =>
  * 统计行数：
  * - 原文件存在 → 直接统计
  * - 原文件不存在 → 查找 rules.part*.txt / allow.part*.txt 求和
- *   （兜底：即使 cleanReadme 被移到分片之后，也能拿到正确数字）
  */
 const extractCount = async (filename) => {
   console.log(`开始统计${filename}行数`);
@@ -70,7 +69,7 @@ const extractCount = async (filename) => {
   let total = 0;
   for (const p of parts) {
     const n = await countLines(p);
-    total += n - 7; // 每片都有 title() 写入的 7 行头部
+    total += n - 7;
   }
   console.log(
     `统计${filename}行数成功：${total}（${parts.length} 个分片合计）`,
@@ -93,15 +92,22 @@ const cleanReadme = async () => {
       [/^黑名单规则数量.*/, `黑名单规则数量: ${numRules}`],
       [/^白名单规则数量.*/, `白名单规则数量: ${numAllow}`],
     ];
+
+    let replaced = 0;
     readmeContent = readmeContent
       .split("\n")
       .map((line) => {
         for (const [regex, replacement] of replacements) {
-          if (regex.test(line)) return replacement;
+          if (regex.test(line)) {
+            replaced++;
+            return replacement;
+          }
         }
         return line;
       })
       .join("\n");
+
+    console.log(`README 替换了 ${replaced} 行（期望 3 行）`);
 
     await writeFile("README.md", readmeContent);
     console.log("更新md文件成功");
