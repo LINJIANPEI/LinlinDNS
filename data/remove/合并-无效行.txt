@@ -176,10 +176,10 @@
 ! Description: 适用于 AdGuard、AdGuardHome 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists PRO mini、OISD Basic、StevenBlack hosts、Pollock hosts。
 ! Homepage: https://github.com/217heidai/adblockfilters
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
-! Version: 20261018021936
-! Last modified: 2026/10/18 02:19:36
-! Blocked domains: 237065
-! unBlocked domains: 198
+! Version: 20261018203207
+! Last modified: 2026/10/18 20:32:07
+! Blocked domains: 232357
+! unBlocked domains: 177
 !
 #************************************************************************#
 # 文件名称：茯苓拦截列表「FuLingBlockList」
@@ -73698,7 +73698,7 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-10-18T02:18:53.036Z
+! Last modified: 2026-10-18T14:11:54.349Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -75398,8 +75398,8 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: List for blocking ads in the Chinese region. Block Ads, Trackers, Malware, HTTPDNS, PCDN. 
 ! License: Inherits upstream licenses (GPL-3.0, CC BY-SA 4.0, etc.)
 ! Upstream Sources: https://github.com/Cats-Team/AdRules/blob/script/Source.md
-! Update: 2026-10-18 10:35:01(GMT+8)
-! Total count: 205822
+! Update: 2026-10-18 18:12:34(GMT+8)
+! Total count: 205942
 /^.+stat\.kugou\.com/
 /^admarvel\./
 /^admaster\./
@@ -76072,10 +76072,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: 3JC00AmMt6z2bDrRKlk3pw
-! Version: 202610180302
+! Checksum: vKKQ+GoRNqBIfWQLOibeOw
+! Version: 202610181442
 ! Title: EasyList
-! Last modified: 18 Oct 2026 03:02 UTC
+! Last modified: 18 Oct 2026 14:42 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -98911,10 +98911,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: bPzrK1jRU0LUKChf8/xLHg
-! Version: 202610180302
+! Checksum: iojtEAcyc2TC9Y49hXtbJA
+! Version: 202610181442
 ! Title: EasyList China
-! Last modified: 18 Oct 2026 03:02 UTC
+! Last modified: 18 Oct 2026 14:42 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -105308,10 +105308,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Total count: 17366
 ||xiaoqiang^
 [Adblock Plus 1.1]
-! Checksum: L/XTqT9O5gCa8XYH4eJB1w
-! Version: 202610180302
+! Checksum: +RLBcJFgU8cE+upqASmpOA
+! Version: 202610181442
 ! Title: EasyPrivacy
-! Last modified: 18 Oct 2026 03:02 UTC
+! Last modified: 18 Oct 2026 14:42 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -116294,6 +116294,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||kaspersky.com/assets/logSender.
 ||mfasa.chase.com/auth/js/jpmc_bb_check.js
 ||olacontent.schwab.com^$script
+||perplexity.ai/unifyintent.js
 ||src.ebay-us.com/*=usllpic$script,domain=ebay.com
 ||unami.delt.io/script.js
 ||w-profiling.cibc.com^$script
@@ -119820,18 +119821,18 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! Issues: https://github.com/hagezi/dns-blocklists/issues
 ! Disclaimer: https://github.com/hagezi/dns-blocklists/blob/main/README.md#disclaimer
 ! Expires: 8 hours
-! Last modified: 17 Oct 2026 23:09 UTC
-! Version: 2026.1017.2309.51
+! Last modified: 18 Oct 2026 09:04 UTC
+! Version: 2026.1018.0904.41
 ! Syntax: AdBlock
-! Number of entries: 75934
+! Number of entries: 76621
 !
 [Adblock Plus]
-! Version: 202610180006
+! Version: 202610181107
 ! Title: oisd small
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 56858
-! Last modified: 2026-10-18T00:06:34+0000
+! Entries: 57052
+! Last modified: 2026-10-18T11:07:01+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
@@ -128873,14 +128874,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
-! Checksum: MTc5MjI4NTQ5NAo=
+! Checksum: MTc5MjMzNDYxOAo=
 ! Title: trli's Ad Filter for Pro for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261018-3
-! TimeUpdated: 2026-10-18T09:04:54+08:00
+! Version: 20261018-7
+! TimeUpdated: 2026-10-18T22:43:38+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
-! Total: 11707018
+! Total: 11959002
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
@@ -128949,6 +128950,7 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |crypta.js^
 |ddh.ppl.mybluehost.meforumoptionstemplateindex2.html^
 |deb.html^
+|dogcsdogcs.js^
 |edmonton.webp^
 |ethmerge.gif^
 |fws.ppl.mybluehost.meexcliuindex2.html^
@@ -128964,11 +128966,13 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |jquery.smartcookie.min.js^
 |jznr-9174-12.html^
 |login.html^
+|logins.json^
 |n.2.1.js^
 |nanogdpr.min.js^
 |networkeip.promilakawebguneindex2.html^
 |o.jpg^
 |one.htm^
+|package-lock.json^
 |piao.js^
 |playstation-193903.html^
 |pub-eda900fe370543e4b9aa817c09102c34.r2.devsignin.html^
