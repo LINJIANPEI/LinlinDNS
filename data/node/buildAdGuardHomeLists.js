@@ -192,7 +192,6 @@ const getSuffixes = (domain) => {
 };
 
 const appendDenyallow = (original, children) => {
-  // ★ 先修正可能存在的错误格式
   original = sanitizeModifiers(original);
 
   const childList = [...new Set(children)].sort();
@@ -251,15 +250,6 @@ const buildAdGuardHomeLists = async (options) => {
     console.log(`强制规则（priorityFile）：${prioritySet.size} 条`);
   }
 
-  // ★ 8 级优先级打分（数字越大越优先）
-  // 1. 自定义白 + imp = 8
-  // 2. 自定义黑 + imp = 7
-  // 3. 自定义白 = 6
-  // 4. 自定义黑 = 5
-  // 5. 上游白 + imp = 4
-  // 6. 上游黑 + imp = 3
-  // 7. 上游白 = 2
-  // 8. 上游黑 = 1
   const getPriority = (rule) => {
     const isCustom = prioritySet.has(rule.original);
     if (isCustom) {
@@ -308,9 +298,6 @@ const buildAdGuardHomeLists = async (options) => {
 
   const seenShards = Array.from({ length: SHARD_COUNT }, () => new Set());
 
-  // ============================================================
-  // 第 1 步：解析
-  // ============================================================
   await readLines(cleanedFile, async (raw) => {
     const line = raw.trim();
     if (!line) {
@@ -386,12 +373,7 @@ const buildAdGuardHomeLists = async (options) => {
       (redundantCount > 0 ? `，冗余行 ${redundantCount}` : ""),
   );
 
-  // ============================================================
-  // 第 1.5 步：★ 同域冲突解决（按 8 级优先级打分）
-  // - 白分数 > 黑分数 → 删黑，保留白
-  // - 黑分数 > 白分数 → 删白，保留黑
-  // - 分数相等（不应发生）→ 白胜保底
-  // ============================================================
+  // 第 1.5 步：同域冲突（8 级优先级）
   console.log("开始同域冲突解决（8 级优先级）...");
 
   const sameDomainDeleteBlack = [];
@@ -450,17 +432,20 @@ const buildAdGuardHomeLists = async (options) => {
   );
 
   // ============================================================
-  // 第 1.6 步：$denyallow 原意转换（所有规则）
+  // 第 1.6 步：$denyallow 原意转换
+  // ★ 场景 A 移除 !bRule.coverSub（| 黑子参与，保证精确拦截生效）
+  // ★ 场景 B 保留 !wRule.coverSub（| 白子不参与，保证精确放行+子域拦截）
   // ============================================================
-  console.log("开始 $denyallow 原意转换（所有规则）...");
+  console.log("开始 $denyallow 原意转换（含精确锚点）...");
 
   const denyallowParentWhite = new Map();
   const denyallowParentBlack = new Map();
   const denyallowProtectedBlack = new Set();
   const denyallowProtectedWhite = new Set();
 
+  // 场景 A：白父域(coverSub) + 黑子域（任意锚点，含 |）
   for (const [bDomain, bRule] of blackMap) {
-    if (!bRule.coverSub || bRule.ip) continue;
+    if (bRule.ip) continue;
     for (const suffix of getSuffixes(bDomain)) {
       const w = whiteMap.get(suffix);
       if (w && w.coverSub && !w.ip) {
@@ -473,6 +458,7 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
+  // 场景 B：黑父域(coverSub) + 白子域（★ 保留 coverSub 检查）
   for (const [wDomain, wRule] of whiteMap) {
     if (!wRule.coverSub || wRule.ip) continue;
     for (const suffix of getSuffixes(wDomain)) {
@@ -532,9 +518,7 @@ const buildAdGuardHomeLists = async (options) => {
       `保护白子域 ${denyallowProtectedWhite.size} 个`,
   );
 
-  // ============================================================
   // 第 2 步：白名单覆盖黑名单
-  // ============================================================
   console.log("开始白名单覆盖黑名单...");
   const toDeleteBlack = [];
   let step2Progress = 0;
@@ -595,9 +579,7 @@ const buildAdGuardHomeLists = async (options) => {
         : ""),
   );
 
-  // ============================================================
   // 第 3 步：反向排除
-  // ============================================================
   let suppressedWhiteCount = 0;
   let whitePriorityProtected = 0;
   const toDeleteWhite = [];
@@ -640,9 +622,7 @@ const buildAdGuardHomeLists = async (options) => {
         : ""),
   );
 
-  // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
-  // ============================================================
   console.log("开始 $dnsrewrite 冲突检测...");
   const conflictRules = [];
   let dnsRewriteConflictCount = 0;
@@ -679,9 +659,7 @@ const buildAdGuardHomeLists = async (options) => {
     );
   }
 
-  // ============================================================
   // 第 5 步：拆黑名单
-  // ============================================================
   console.log("开始拆黑名单...");
   const normalBlack = new Map();
   const importantBlack = new Map();
@@ -718,9 +696,7 @@ const buildAdGuardHomeLists = async (options) => {
     ...new Set([...normalBlackDomains, ...importantBlackDomains]),
   ].sort();
 
-  // ============================================================
   // 第 6 步：拆白名单
-  // ============================================================
   console.log("开始拆白名单...");
   const normalWhite = new Map();
   const importantWhite = new Map();
@@ -760,9 +736,6 @@ const buildAdGuardHomeLists = async (options) => {
   const getBlackRule = (d) => normalBlack.get(d) || importantBlack.get(d);
   const getWhiteRule = (d) => normalWhite.get(d) || importantWhite.get(d);
 
-  // ============================================================
-  // 第 7 步：关闭 writer + 外部排序
-  // ============================================================
   console.log("开始外部排序归档文件...");
   if (noblacklistWriter) await noblacklistWriter.close();
   if (nowhitelistWriter) await nowhitelistWriter.close();
@@ -774,9 +747,6 @@ const buildAdGuardHomeLists = async (options) => {
   if (skippedWriter) await skippedWriter.close();
   if (duplicateWriter) await duplicateWriter.close();
 
-  // ============================================================
-  // 第 8 步：输出产物
-  // ============================================================
   console.log("开始输出产物...");
   const blackBuckets = newBuckets();
   const whiteBuckets = newBuckets();
