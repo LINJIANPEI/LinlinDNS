@@ -19,31 +19,34 @@ jobs:
       - name: 列出缓存
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
         run: |
           echo "=== 当前缓存 ==="
-          gh cache list --limit 100
+          gh cache list --repo "$REPO" --limit 100 || echo "无缓存"
 
       - name: 删除缓存
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
           FILTER: ${{ inputs.filter }}
         run: |
           if [ -z "$FILTER" ]; then
             echo "删除全部缓存..."
-            gh cache delete --all
+            gh cache delete --all --repo "$REPO"
           else
             echo "删除前缀为 '$FILTER' 的缓存..."
-            # 按前缀过滤并逐个删除
-            gh cache list --key "$FILTER" --limit 1000 --json id --jq '.[].id' \
+            gh cache list --repo "$REPO" --key "$FILTER" --limit 1000 --json id --jq '.[].id' \
               | while read id; do
+                  [ -z "$id" ] && continue
                   echo "删除 cache id=$id"
-                  gh cache delete "$id" || true
+                  gh cache delete "$id" --repo "$REPO" || true
                 done
           fi
 
       - name: 确认剩余缓存
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
         run: |
           echo "=== 剩余缓存 ==="
-          gh cache list --limit 100 || echo "无缓存"
+          gh cache list --repo "$REPO" --limit 100 || echo "无缓存"
