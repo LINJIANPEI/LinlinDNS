@@ -1,4 +1,5 @@
 const path = require("node:path");
+const fs = require("node:fs");
 const { createDir, copyFiles, deleteDir } = require("./data/node/common_func");
 
 const { readListFile } = require("./data/node/readListFile");
@@ -96,6 +97,17 @@ async function main() {
       pattern: /^(rules|allow)\.txt$/,
     });
     await splitLargeFilesInDir(removeDir);
+
+    // ★ 排查：确认关键文件存在
+    console.log("=== 当前目录文件检查 ===");
+    for (const f of ["rules.txt", "allow.txt", "README.md"]) {
+      if (fs.existsSync(f)) {
+        const s = fs.statSync(f);
+        console.log(`  ✓ ${f} (${(s.size / 1024).toFixed(1)} KB)`);
+      } else {
+        console.error(`  ✗ ${f} 不存在！`);
+      }
+    }
 
     await cleanReadme();
 
