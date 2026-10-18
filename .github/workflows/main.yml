@@ -89,11 +89,11 @@ jobs:
               ;;
           esac
 
-      # ★ 先启动 SmartDNS（此时 iptables 规则还没加，Docker 拉镜像正常）
       - name: 启动 SmartDNS
+        timeout-minutes: 5
         run: |
           mkdir -p smartdns-cache
-          docker run -d --name smartdns \
+          timeout 120 docker run -d --name smartdns \
             --network host \
             -v ${{ github.workspace }}/data/configs/smartdns.conf:/etc/smartdns/smartdns.conf \
             -v ${{ github.workspace }}/smartdns-cache:/var/cache/smartdns \
@@ -117,15 +117,12 @@ jobs:
           cat data/configs/smartdns.conf
           exit 1
 
-      # ★ SmartDNS 就绪后再加 iptables 规则
-      # ★ 只转发目标为 127.0.0.1:53 的查询，不影响 Docker/systemd-resolved
       - name: 转发 53 到 5053
         run: |
           sudo iptables -t nat -A OUTPUT -p udp -d 127.0.0.1 --dport 53 -j REDIRECT --to-port 5053
           sudo iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport 53 -j REDIRECT --to-port 5053
           echo "=== 当前 NAT 规则 ==="
           sudo iptables -t nat -L OUTPUT -n -v
-          # 验证转发：查询 127.0.0.1:53 应该能拿到结果
           if dig @127.0.0.1 -p 53 github.com +short +time=2 +tries=1 > /dev/null 2>&1; then
             echo "✓ 53 → 5053 转发生效"
           else
@@ -135,6 +132,7 @@ jobs:
 
       - name: 运行
         id: run_rules
+        timeout-minutes: 90
         run: |
           npm install
           node index.js
@@ -158,7 +156,25 @@ jobs:
       - name: 更新文件
         if: steps.run_rules.outcome == 'success'
         run: |
-          git add rules.txt allow.txt README.md
+          # 1. 清理 Git 索引里旧的跟踪状态（rules.txt / allow.txt / 所有分片）
+          git rm --cached rules.txt allow.txt 2>/dev/null || true
+          git rm --cached 'rules.part*.txt' 'allow.part*.txt' 2>/dev/null || true
+
+          # 2. 对每个文件动态判断：有分片提交分片，无分片提交原文件
+          for base in rules allow; do
+            if ls ${base}.part*.txt 2>/dev/null | grep -q .; then
+              echo "✓ ${base}.txt 有分片，提交所有分片"
+              ls -lh ${base}.part*.txt
+              git add ${base}.part*.txt
+            else
+              echo "✓ ${base}.txt 无分片（≤ 100MB），直接提交原文件"
+              ls -lh ${base}.txt
+              git add -f ${base}.txt
+            fi
+          done
+
+          # 3. README 和归档
+          git add README.md
           git add data/remove/ 2>/dev/null || true
 
           if git diff --cached --quiet; then
@@ -180,8 +196,30 @@ jobs:
           echo "push 连续失败"
           exit 1
 
+      # ★ rules.txt / allow.txt（完整文件）上传到 Release
+      - name: 上传完整文件到 Release
+        if: steps.run_rules.outcome == 'success'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Latest Rules"
+          body: |
+            Automatically updated by workflow.
+
+            **订阅链接（推荐）：**
+            - 黑名单：`https://github.com/LINJIANPEI/DnsRules/releases/download/latest/rules.txt`
+            - 白名单：`https://github.com/LINJIANPEI/DnsRules/releases/download/latest/allow.txt`
+
+            **分片文件（兼容旧订阅，仅当文件 > 100MB 时存在）：**
+            - `rules.part*.txt` / `allow.part*.txt`
+          files: |
+            rules.txt
+            allow.txt
+          generate_release_notes: false
+          make_latest: true
+
       - name: 删除 workflow 运行记录
-        if: always()
+        if: always() && !cancelled()
         uses: Mattraks/delete-workflow-runs@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

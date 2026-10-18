@@ -3,7 +3,7 @@ const { readLines, LineWriter } = require("./stream_utils");
 const { parseRule } = require("./rule_parser");
 
 /**
- * ★ 判断一条 dnsrewrite 规则是否是「拦截语义」。
+ * 判断 dnsrewrite 是否拦截语义。
  * - 黑洞 IP：0.0.0.0 / 127.x.x.x / ::1 / 0:0:0:0:0:0:0:1
  * - 单参数状态码：NOERROR / NXDOMAIN / REFUSED / SERVFAIL
  * 多参数（含 ;）属于定向重写，不算拦截。
@@ -24,26 +24,30 @@ const isBlockRewrite = (ip) => {
 };
 
 /**
- * ★ 冲突时决定是否替换已有规则。
+ * 冲突时决定是否替换已有规则。
  * 优先级：重定向 > 拦截 > 普通规则
  */
 const shouldReplace = (existingParsed, newParsed) => {
+  // 1. 都是普通规则 → 按 important 判断
   if (!existingParsed.ip && !newParsed.ip) {
     return newParsed.important && !existingParsed.important;
   }
 
+  // 2. 有 ip 的优先
   if (existingParsed.ip && !newParsed.ip) return false;
   if (!existingParsed.ip && newParsed.ip) return true;
 
+  // 3. 都有 ip
   const existingIsBlock = isBlockRewrite(existingParsed.ip);
   const newIsBlock = isBlockRewrite(newParsed.ip);
 
-  // 重定向优先：已有拦截 → 新重定向 → 替换
+  // ★ 重定向优先
   if (existingIsBlock && !newIsBlock) return true;
-  // 重定向优先：已有重定向 → 新拦截 → 不替换
   if (!existingIsBlock && newIsBlock) return false;
 
+  // 4. 同类型 → 按 important
   if (newParsed.important && !existingParsed.important) return true;
+
   return false;
 };
 
@@ -63,6 +67,7 @@ const prepareDnsRules = async (inputFile, outDir, archiveDir) => {
     ? new LineWriter(path.join(archiveDir, "DNS兼容-同域冲突.txt"))
     : null;
 
+  // ★ Map<domain, original>，每个域名只保留一条
   const seenBlack = new Map();
   const seenWhite = new Map();
 

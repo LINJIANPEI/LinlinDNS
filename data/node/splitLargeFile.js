@@ -8,13 +8,18 @@ const DEFAULT_MAX_SIZE = 100 * 1024 * 1024; // 100MB
 /**
  * 把单个大文件切成多个 <100MB 的分片。
  * - 每片保证以完整行结尾
- * - 切完后删除原文件
+ * - keepOriginal=true 时保留原文件；false 时删除原文件
  *
  * @param {string} filePath
  * @param {number} [maxSize]
+ * @param {boolean} [keepOriginal=false]
  * @returns {Promise<string[]>} 分片路径；未超限时返回 [原路径]
  */
-const splitOneFile = async (filePath, maxSize = DEFAULT_MAX_SIZE) => {
+const splitOneFile = async (
+  filePath,
+  maxSize = DEFAULT_MAX_SIZE,
+  keepOriginal = false,
+) => {
   if (!fs.existsSync(filePath)) return [];
 
   const stat = fs.statSync(filePath);
@@ -25,7 +30,9 @@ const splitOneFile = async (filePath, maxSize = DEFAULT_MAX_SIZE) => {
     return [filePath];
   }
 
-  console.log(`  [分片] ${filePath} (${sizeMB}MB)`);
+  console.log(
+    `  [分片] ${filePath} (${sizeMB}MB)${keepOriginal ? "，保留原文件" : ""}`,
+  );
 
   const ext = path.extname(filePath);
   const base = filePath.slice(0, -ext.length);
@@ -69,7 +76,10 @@ const splitOneFile = async (filePath, maxSize = DEFAULT_MAX_SIZE) => {
   currentWriter.end();
   await finished(currentWriter);
 
-  fs.unlinkSync(filePath);
+  // 只有 keepOriginal=false 时才删除原文件
+  if (!keepOriginal) {
+    fs.unlinkSync(filePath);
+  }
 
   console.log(`  [分片完成] ${filePath} → ${parts.length} 片`);
   return parts;
@@ -83,6 +93,7 @@ const splitOneFile = async (filePath, maxSize = DEFAULT_MAX_SIZE) => {
  * @param {number} [options.maxSize] - 阈值（字节），默认 100MB
  * @param {RegExp} [options.pattern] - 匹配的文件名，默认 /\.txt$/
  * @param {string[]} [options.exclude] - 要排除的文件名
+ * @param {boolean} [options.keepOriginals=false] - 是否保留原文件
  * @returns {Promise<{file: string, parts: string[]}[]>}
  */
 const splitLargeFilesInDir = async (dir, options = {}) => {
@@ -90,6 +101,7 @@ const splitLargeFilesInDir = async (dir, options = {}) => {
     maxSize = DEFAULT_MAX_SIZE,
     pattern = /\.txt$/,
     exclude = [],
+    keepOriginals = false,
   } = options;
 
   if (!fs.existsSync(dir)) {
@@ -98,14 +110,14 @@ const splitLargeFilesInDir = async (dir, options = {}) => {
   }
 
   console.log(
-    `开始扫描目录分片: ${dir}（阈值 ${(maxSize / 1024 / 1024).toFixed(0)}MB）`,
+    `开始扫描目录分片: ${dir}（阈值 ${(maxSize / 1024 / 1024).toFixed(0)}MB${keepOriginals ? "，保留原文件" : ""}）`,
   );
 
   const files = fs
     .readdirSync(dir)
     .filter((f) => pattern.test(f))
     .filter((f) => !exclude.includes(f))
-    .filter((f) => !/\.part\d+\./.test(f)) // 跳过分片自身
+    .filter((f) => !/\.part\d+\./.test(f))
     .sort();
 
   const results = [];
@@ -115,7 +127,7 @@ const splitLargeFilesInDir = async (dir, options = {}) => {
     const stat = fs.statSync(fullPath);
     if (!stat.isFile()) continue;
 
-    const parts = await splitOneFile(fullPath, maxSize);
+    const parts = await splitOneFile(fullPath, maxSize, keepOriginals);
     results.push({ file: fullPath, parts });
   }
 

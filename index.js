@@ -28,17 +28,30 @@ const ARCHIVE = {
   mergeParseFail: "② 合并-无法解析.txt",
   mergeFormatFail: "③ 合并-格式化失败.txt",
   mergeDuplicate: "④ 合并-重复规则.txt",
-
   dnsParseFail: "⑤ DNS-无法解析.txt",
-
   dead: "⑥ 死域名.txt",
   passthrough: "⑦ 非域名行.txt",
-
   noBlacklist: "⑧ 黑名单被覆盖.txt",
   noWhitelist: "⑨ 白名单被收敛.txt",
   skipped: "⑩ 构建-无法解析.txt",
   redundant: "⑪ 构建-同域冗余.txt",
   buildDuplicate: "⑫ 构建-重复规则.txt",
+};
+
+/**
+ * 清理目录下所有 *.part*.txt（避免分片数量变化时残留旧分片）
+ */
+const cleanOldParts = (dir) => {
+  if (!fs.existsSync(dir)) return;
+  let n = 0;
+  for (const f of fs.readdirSync(dir)) {
+    if (/\.part\d+\.txt$/.test(f)) {
+      fs.unlinkSync(path.join(dir, f));
+      console.log(`  删除旧分片: ${f}`);
+      n++;
+    }
+  }
+  if (n === 0) console.log(`  无旧分片可删`);
 };
 
 async function main() {
@@ -93,23 +106,50 @@ async function main() {
 
     await title();
 
-    await splitLargeFilesInDir(outDir, {
-      pattern: /^(rules|allow)\.txt$/,
-    });
-    await splitLargeFilesInDir(removeDir);
-
-    // ★ 排查：确认关键文件存在
-    console.log("=== 当前目录文件检查 ===");
-    for (const f of ["rules.txt", "allow.txt", "README.md"]) {
+    // 排查：title() 之后
+    console.log("=== title() 之后检查 ===");
+    for (const f of ["rules.txt", "allow.txt"]) {
       if (fs.existsSync(f)) {
         const s = fs.statSync(f);
-        console.log(`  ✓ ${f} (${(s.size / 1024).toFixed(1)} KB)`);
+        console.log(`  ✓ ${f} (${(s.size / 1024 / 1024).toFixed(2)} MB)`);
       } else {
         console.error(`  ✗ ${f} 不存在！`);
       }
     }
 
+    // ★ 关键顺序：cleanReadme 在分片之前（统计完整文件的行数）
     await cleanReadme();
+
+    // ★ 清理旧分片（避免分片数量变化时残留）
+    console.log("=== 清理旧分片 ===");
+    cleanOldParts(outDir);
+    cleanOldParts(removeDir);
+
+    // ★ 对 outDir 分片，保留原文件（rules.txt / allow.txt 完整保留，供 Release 上传）
+    await splitLargeFilesInDir(outDir, {
+      pattern: /^(rules|allow)\.txt$/,
+      keepOriginals: true,
+    });
+
+    // ★ removeDir 正常分片（删除原文件）
+    await splitLargeFilesInDir(removeDir);
+
+    // 排查：分片后
+    console.log("=== 分片后检查 ===");
+    for (const f of ["rules.txt", "allow.txt"]) {
+      if (fs.existsSync(f)) {
+        const s = fs.statSync(f);
+        console.log(`  ✓ ${f} (${(s.size / 1024 / 1024).toFixed(2)} MB)`);
+      } else {
+        console.error(`  ✗ ${f} 不存在`);
+      }
+    }
+    const parts = fs.readdirSync(".").filter((f) => /\.part\d+\./.test(f));
+    if (parts.length > 0) {
+      console.log(`  ✓ 分片文件：${parts.join(", ")}`);
+    } else {
+      console.log("  ✓ 无分片文件");
+    }
 
     console.log("更新完成");
     process.exitCode = 0;
