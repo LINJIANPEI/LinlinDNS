@@ -156,16 +156,16 @@ jobs:
       - name: 更新文件
         if: steps.run_rules.outcome == 'success'
         run: |
-          # 1. 清理 Git 索引里旧的跟踪状态（rules.txt / allow.txt / 所有分片）
+          # 1. 清理 Git 索引里旧的跟踪状态
           git rm --cached rules.txt allow.txt 2>/dev/null || true
           git rm --cached 'rules.part*.txt' 'allow.part*.txt' 2>/dev/null || true
 
-          # 2. 对每个文件动态判断：有分片提交分片，无分片提交原文件
+          # 2. 对每个文件动态判断
           for base in rules allow; do
             if ls ${base}.part*.txt 2>/dev/null | grep -q .; then
               echo "✓ ${base}.txt 有分片，提交所有分片"
               ls -lh ${base}.part*.txt
-              git add ${base}.part*.txt
+              git add -f ${base}.part*.txt
             else
               echo "✓ ${base}.txt 无分片（≤ 100MB），直接提交原文件"
               ls -lh ${base}.txt
@@ -196,9 +196,19 @@ jobs:
           echo "push 连续失败"
           exit 1
 
-      # ★ rules.txt / allow.txt（完整文件）上传到 Release
+      # ★ 关键：删除旧 Release + 旧 tag，让时间能更新
+      - name: 删除旧 latest Release
+        if: steps.run_rules.outcome == 'success' && github.event_name != 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "清理旧 latest Release 和 tag..."
+          gh release delete latest --cleanup-tag --yes 2>/dev/null || true
+          echo "✓ 清理完成"
+
+      # ★ 重新创建 Release，时间会更新
       - name: 上传完整文件到 Release
-        if: steps.run_rules.outcome == 'success'
+        if: steps.run_rules.outcome == 'success' && github.event_name != 'release'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
@@ -207,8 +217,8 @@ jobs:
             Automatically updated by workflow.
 
             **订阅链接（推荐）：**
-            - 黑名单：`https://github.com/LINJIANPEI/DnsRules/releases/download/latest/rules.txt`
-            - 白名单：`https://github.com/LINJIANPEI/DnsRules/releases/download/latest/allow.txt`
+            - 黑名单：`https://github.com/LINJIANPEI/LinlinDNS/releases/download/latest/rules.txt`
+            - 白名单：`https://github.com/LINJIANPEI/LinlinDNS/releases/download/latest/allow.txt`
 
             **分片文件（兼容旧订阅，仅当文件 > 100MB 时存在）：**
             - `rules.part*.txt` / `allow.part*.txt`
@@ -217,6 +227,7 @@ jobs:
             allow.txt
           generate_release_notes: false
           make_latest: true
+          overwrite_files: true
 
       - name: 删除 workflow 运行记录
         if: always() && !cancelled()
