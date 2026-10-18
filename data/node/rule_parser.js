@@ -153,7 +153,7 @@ const parseRule = (line, opts = {}) => {
     original: t,
   });
 
-  // ① hosts
+  // ① hosts 格式
   const parts = t.split(/\s+/);
   if (parts.length === 2 && (isIPv4(parts[0]) || isIPv6(parts[0]))) {
     const cand = stripWildcard(parts[1]);
@@ -222,10 +222,9 @@ const parseRule = (line, opts = {}) => {
 };
 
 /**
- * ★ formatRule：根据 rule.important 动态加/删 $important
+ * formatRule：根据 rule.important 动态加/删 $important
  * - rule.important = true 且 suffix 里没有 → 加
  * - rule.important = false 且 suffix 里有 → 删
- * 这样调用方只需改 rule.important 属性，无需动 original。
  */
 const formatRule = (rule, opts = {}) => {
   if (!rule) return null;
@@ -240,16 +239,14 @@ const formatRule = (rule, opts = {}) => {
   const prefix = isWhite ? "@@" : "";
   let suffix = ip ? "" : extractSuffix(rule.original || "");
 
-  // ★ 动态调整 suffix 里的 important
+  // 动态调整 suffix 里的 important
   if (!rule.important && /\$important\b/i.test(suffix)) {
-    // 删除 important
     const body = suffix.replace(/^\$/, "");
     const mods = body
       .split(",")
       .filter((m) => m.trim().toLowerCase() !== "important");
     suffix = mods.length > 0 ? `$${mods.join(",")}` : "";
   } else if (rule.important && !/\$important\b/i.test(suffix)) {
-    // 添加 important
     suffix = suffix ? `${suffix},important` : "$important";
   }
 
