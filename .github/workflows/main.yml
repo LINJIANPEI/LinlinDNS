@@ -54,6 +54,7 @@ jobs:
           echo "CACHE_READ   = $CACHE_READ"
           echo "CACHE_WRITE  = $CACHE_WRITE"
           echo "NODE_OPTIONS = $NODE_OPTIONS"
+          echo "Node 版本    = $(node --version)"
 
       - name: 恢复 DNS 缓存
         if: env.CACHE_READ == 'true'
@@ -88,6 +89,14 @@ jobs:
               ;;
           esac
 
+      # ★ 关键：把 53 端口转发到 5053，兼容 Node.js dns.Resolver 不认 ip:port
+      - name: 转发 53 到 5053
+        run: |
+          sudo iptables -t nat -A OUTPUT -p udp --dport 53 -j REDIRECT --to-port 5053
+          sudo iptables -t nat -A OUTPUT -p tcp --dport 53 -j REDIRECT --to-port 5053
+          echo "=== 当前 NAT 规则 ==="
+          sudo iptables -t nat -L OUTPUT -n -v
+
       - name: 启动 SmartDNS
         run: |
           mkdir -p smartdns-cache
@@ -102,7 +111,13 @@ jobs:
         run: |
           for i in {1..15}; do
             if dig @127.0.0.1 -p 5053 github.com +short +time=2 +tries=1 > /dev/null 2>&1; then
-              echo "SmartDNS 就绪"
+              echo "SmartDNS 就绪（5053 端口）"
+              # ★ 验证 53 → 5053 转发是否生效
+              if dig @127.0.0.1 -p 53 github.com +short +time=2 +tries=1 > /dev/null 2>&1; then
+                echo "✓ 53 端口转发生效"
+              else
+                echo "⚠️ 53 端口转发可能未生效，removeDeadRules 会失败"
+              fi
               exit 0
             fi
             echo "等待 SmartDNS... ($i)"
@@ -111,7 +126,7 @@ jobs:
           echo "=== 启动超时，排查信息 ==="
           docker ps -a
           docker logs smartdns
-          ss -tulnp | grep 5053 || echo "5053 未监听"
+          ss -tulnp | grep -E ':(53|5053)' || echo "53/5053 未监听"
           cat data/configs/smartdns.conf
           exit 1
 
