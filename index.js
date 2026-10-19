@@ -39,6 +39,8 @@ const ARCHIVE = {
   forceAlive: "⑬ 强制判活.txt",
   priorityProtect: "⑭ 强制规则保护.txt",
   forcedRules: "⑮ 强制规则清单.txt",
+  dropped: "⑯ 构建-丢弃规则.txt",
+  rewriteConvert: "⑰ 构建-重写转换.txt",
 };
 
 const FORCE_SKIP_DNS_FILES = ["rules01.txt", "allow01.txt"];
@@ -76,13 +78,11 @@ async function main() {
       ["./data/rules/whitelist.txt", p("allow01.txt")],
     );
 
-    // ★ mergeAll 收集强制规则原文
     await mergeAll(tmpDir, p("all.txt"), removeDir, {
       forceSkipDnsFiles: FORCE_SKIP_DNS_FILES,
       forcedRulesFile: FORCED_RULES_FILE,
     });
 
-    // ★ 持久化 forced-rules.txt 到 data/remove/
     if (fs.existsSync(FORCED_RULES_FILE)) {
       await copyFiles([
         FORCED_RULES_FILE,
@@ -90,12 +90,10 @@ async function main() {
       ]);
     }
 
-    // ★ prepareDnsRules 让强制规则优先不被上游替换
     const dns = await prepareDnsRules(p("all.txt"), tmpDir, removeDir, {
       priorityFile: FORCED_RULES_FILE,
     });
 
-    // ★ removeDeadRules 正常查询 + 查询后强制判活 + 追溯
     await removeDeadRules([dns.blackFile, dns.whiteFile], {
       cleanedFile: p("cleaned.txt"),
       nocleanedFile: p("nocleaned.txt"),
@@ -109,7 +107,6 @@ async function main() {
       forceAliveReportFile: path.join(removeDir, ARCHIVE.forceAlive),
     });
 
-    // ★ buildAdGuardHomeLists 让强制规则优先不被覆盖 + 追溯
     await buildAdGuardHomeLists({
       cleanedFile: p("cleaned.txt"),
       outRulesFile: path.join(outDir, "rules.txt"),
@@ -119,6 +116,8 @@ async function main() {
       outSkippedFile: path.join(removeDir, ARCHIVE.skipped),
       outRedundantFile: path.join(removeDir, ARCHIVE.redundant),
       outDuplicateFile: path.join(removeDir, ARCHIVE.buildDuplicate),
+      outDroppedFile: path.join(removeDir, ARCHIVE.dropped),
+      outRewriteConvertFile: path.join(removeDir, ARCHIVE.rewriteConvert),
       priorityFile: FORCED_RULES_FILE,
       priorityProtectFile: path.join(removeDir, ARCHIVE.priorityProtect),
     });
