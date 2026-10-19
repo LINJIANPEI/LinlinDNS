@@ -652,13 +652,19 @@ const buildAdGuardHomeLists = async (options) => {
         : ""),
   );
 
+  // ============================================================
   // 第 4 步：$dnsrewrite 冲突检测
+  // ★ 修复 1：star 锚点规则不生成 conflict（会被第 8 步丢弃）
+  // ★ 修复 2：anchor 改成 "sub"（原 "star" 是笔误）
+  // ============================================================
   console.log("开始 $dnsrewrite 冲突检测...");
   const conflictRules = [];
   let dnsRewriteConflictCount = 0;
 
   for (const [bDomain, bRule] of blackMap) {
     if (!bRule.important && !bRule.ip) continue;
+    // ★ 新增：star 规则会被第 8 步丢弃，不生成 conflict
+    if (bRule.anchor === "star") continue;
 
     let idx = bDomain.indexOf(".");
     while (idx !== -1) {
@@ -668,7 +674,7 @@ const buildAdGuardHomeLists = async (options) => {
         const conflict = {
           domain: bDomain,
           isWhite: false,
-          anchor: bRule.coverSub ? "star" : "bare",
+          anchor: bRule.coverSub ? "sub" : "bare", // ★ "sub" 而非 "star"
           ip: "0.0.0.0",
           coverSub: bRule.coverSub,
           isHosts: false,
