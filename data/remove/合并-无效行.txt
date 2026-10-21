@@ -66,7 +66,7 @@
 
 
 
-! Version:    最后同步时间: 2026-10-20 01:15:04
+! Version:    最后同步时间: 2026-10-21 01:15:05
 ! Total count: 323
 #放行单
 #只适合海哥规则
@@ -235,9 +235,9 @@
 ! Description: 适用于 AdGuard、AdGuardHome 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists PRO mini、OISD Basic、StevenBlack hosts、Pollock hosts。
 ! Homepage: https://github.com/217heidai/adblockfilters
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
-! Version: 20261020212758
-! Last modified: 2026/10/20 21:27:58
-! Blocked domains: 234857
+! Version: 20261021035646
+! Last modified: 2026/10/21 03:56:46
+! Blocked domains: 235018
 ! unBlocked domains: 196
 !
 [Adblock Plus 2.0]
@@ -1250,15 +1250,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
-! Checksum: MTc5MjQ5NjA1Mgo=
+! Checksum: MTc5MjU0MTE3NQo=
 ! Title: trli's Ad Filter for Pro for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261020-6
-! TimeUpdated: 2026-10-20T19:34:12+08:00
+! Version: 20261021-2
+! TimeUpdated: 2026-10-21T08:06:15+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
-! Total: 11677465
-|0x1b532a.map^
+! Total: 11239809
 |120-600.gif^
 |120x500.gif^
 |120x600.gif^
@@ -1307,7 +1306,6 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |bootstrap-cookie-consent.js^
 |buildersans-regular.otf^
 |com.yxcorp.gifshow.map^
-|components.map^
 |cookie-consent.es5.min.js^
 |cookie-use-policy.js^
 |cookiebanner.min.js^
@@ -1326,7 +1324,6 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |crypta.js^
 |ddh.ppl.mybluehost.meforumoptionstemplateindex2.html^
 |deb.html^
-|dogcsdogcs.js^
 |edmonton.webp^
 |ethmerge.gif^
 |fws.ppl.mybluehost.meexcliuindex2.html^
@@ -1342,19 +1339,16 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |jquery.smartcookie.min.js^
 |jznr-9174-12.html^
 |login.html^
-|logins.json^
 |n.2.1.js^
 |nanogdpr.min.js^
 |networkeip.promilakawebguneindex2.html^
 |o.jpg^
 |one.htm^
-|package-lock.json^
 |piao.js^
 |playstation-193903.html^
 |pub-eda900fe370543e4b9aa817c09102c34.r2.devsignin.html^
 |sc-f6eade8.js^
 |second-blocklist.txt^
-|sections.map^
 |software-103677.html^
 |test.txt^
 |third-youtube-blocklist.txt^
@@ -3079,14 +3073,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 @@||guokr.com/apis/flowingboard/item/m_home_
 @@||developer.apple.com$generichide
 @@||zhihu-web-analytics.zhihu.com/api/v2/za/payload-verification
-! Checksum: MTc5MjQzNDQzMAo=
+! Checksum: MTc5MjUxMzc3NQo=
 ! Title: trli's Ad Filter Youtube for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261020-0
-! TimeUpdated: 2026-10-20T02:27:10+08:00
+! Version: 20261021-0
+! TimeUpdated: 2026-10-21T00:29:35+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://file.trli.club:2083/ad-youtube-hosts/
-! Total: 108535
+! Total: 108560
 |blockeverything.txt^
 |second-blocklist.txt^
 |third-youtube-blocklist.txt^
@@ -6559,7 +6553,6 @@ euronews.com#$#div.pub.ad.advertising.adzone.sponsored[data-ad-name] { display: 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/193098
 ! https://github.com/AdguardTeam/AdguardFilters/issues/193068
 @@||googleads.g.doubleclick.net/pagead/interaction/$domain=hotels.historyofyesterday.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/193141
 ! https://github.com/AdguardTeam/AdguardFilters/issues/192995
 ||3dzip.org/adblock/main.js
 3dsfree.org#$#body { overflow: auto !important; }
@@ -20425,6 +20418,7 @@ aftonbladet.se#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.tex
 ##.right-menu > div.adhl
 !
 !
+embed.nana2play.com#$?#.vast-ad-overlay { remove: true; }
 xn--y3cta3b5d6a.net#$##main-video-container { display: block !important; }
 xn--y3cta3b5d6a.net#$##main > div[style]:not([class]) { display: none !important; }
 xn--y3cta3b5d6a.net#$#.top-banner-grid { display: none !important; }
@@ -23089,7 +23083,7 @@ jamaicaobserver.com#%#//scriptlet("abort-current-inline-script", "$", "window.op
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73799
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74246
 ! Hydrax/abyss.to
-abysplayer.xyz,player.321movies.xyz,abyssplayer.com,asmrfreeplayer.fun,mov18plus.cloud,jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,abysscdn.com,player-cdn.com,nazarickol.com,redirect-ads.com#%#//scriptlet('abort-on-stack-trace', 'String.prototype.charAt', '$0')
+ab.nanacdn.com,abysplayer.xyz,player.321movies.xyz,abyssplayer.com,asmrfreeplayer.fun,mov18plus.cloud,jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,abysscdn.com,player-cdn.com,nazarickol.com,redirect-ads.com#%#//scriptlet('abort-on-stack-trace', 'String.prototype.charAt', '$0')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81005
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73947
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142830
@@ -26427,6 +26421,7 @@ $third-party,script,domain=klto9.com|f2movies.to|hacamchicac.com|yourporngod.com
 !
 ! NOTE: Specific rules
 !
+||freegames.click^$domain=novelfull.com
 ||coincodex.com/*.php?t=$script,domain=coincodex.com
 ||cdn.onnetwork.tv/js/prebid*.js
 ||mjedge.net/nb/service-handler.js
@@ -30796,7 +30791,7 @@ txxxporn.tube,txxx.*$$script:contains(AdManager)
 /^https:\/\/x?1337x\.(?:eu|g3g\.sbs|gd|to|se|unblockit\.name|st)\/(?:css\/)?(?:images\/)?[0-9a-z]+\.(?:gif|jpe?g|png)/$image,~third-party,domain=1337x.st|1337x.to|1337xx.to|x1337x.eu|x1337x.ws|1337x.unblock2.xyz
 !
 ! Hydrax/abyss.to
-||click.infonium.org^$domain=jetvid.top|fembedx.top|hihihaha1.xyz|playhydrax.com|hydrax.net|filmespi.online|playembedapi.site|abysscdn.com|player-cdn.com|nazarickol.com|mov18plus.cloud|asmrfreeplayer.fun|abyssplayer.com|abysplayer.xyz
+||click.infonium.org^$domain=jetvid.top|fembedx.top|hihihaha1.xyz|playhydrax.com|hydrax.net|filmespi.online|playembedapi.site|abysscdn.com|player-cdn.com|nazarickol.com|mov18plus.cloud|asmrfreeplayer.fun|abyssplayer.com|abysplayer.xyz|ab.nanacdn.com
 !
 ! Rogers Media
 ! Also rules in another files
@@ -66299,6 +66294,7 @@ $third-party,xmlhttprequest,domain=mega4upload.net
 ||ohmygore.com/ef_pub
 ||oklink.com/api/explorer/v2/index/text-advertisement?
 ||oldgamesdownload.com/wp-content/plugins/placement-manager/
+||omegascans.org/spicybox-ad.mp4
 ||onlineshopping.co.za/expop/
 ||openapk.net/include/affiliate-units.js
 ||opencart.com/application/view/image/banner/
@@ -76465,7 +76461,7 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-10-20T14:14:46.346Z
+! Last modified: 2026-10-21T00:37:10.711Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -77439,6 +77435,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! PopCash : popcashjs.b-cdn.net disguised advertising networks
 ! included to BaseFilter/sections/cname_adservers.txt
 !
+! ProxyHog : proxyhog.com and europehog.com disguised trackers
+!
+! DataFast : datafa.st and datafast.io disguised trackers
+!
 ! RedTrack : rdtk.io disguised advertising networks
 !
 ! Company name: RedTrack
@@ -78166,8 +78166,8 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: List for blocking ads in the Chinese region. Block Ads, Trackers, Malware, HTTPDNS, PCDN. 
 ! License: Inherits upstream licenses (GPL-3.0, CC BY-SA 4.0, etc.)
 ! Upstream Sources: https://github.com/Cats-Team/AdRules/blob/script/Source.md
-! Update: 2026-10-20 18:47:27(GMT+8)
-! Total count: 208599
+! Update: 2026-10-21 05:07:31(GMT+8)
+! Total count: 209225
 /^.+stat\.kugou\.com/
 /^admarvel\./
 /^admaster\./
@@ -78840,10 +78840,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: pK4bwkXax4iFndd8JPeZ1Q
-! Version: 202610201542
+! Checksum: Wwcj0wMwvnu3ABMxyG3Pxw
+! Version: 202610210202
 ! Title: EasyList
-! Last modified: 20 Oct 2026 15:42 UTC
+! Last modified: 21 Oct 2026 02:02 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -101680,10 +101680,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: xR094azhWt3icZJicwSYog
-! Version: 202610201543
+! Checksum: RTjeyKfottQOIaRLjrRRBQ
+! Version: 202610210202
 ! Title: EasyList China
-! Last modified: 20 Oct 2026 15:43 UTC
+! Last modified: 21 Oct 2026 02:02 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -108047,10 +108047,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 !---------------------------------Temporary-----------------------------------!
 !----------------------------------The End------------------------------------!
 [Adblock Plus 1.1]
-! Checksum: /qlWT+ZTohUNX0bixFLEbg
-! Version: 202610201542
+! Checksum: wuOQhOVWxI+AdiVHZWGNQw
+! Version: 202610210202
 ! Title: EasyPrivacy
-! Last modified: 20 Oct 2026 15:42 UTC
+! Last modified: 21 Oct 2026 02:02 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -121428,9 +121428,9 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2026-10-20 12:16:38（北京时间）
+! Version: 2026-10-21 00:37:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 119636
+! Total count: 119769
 ||1337x.*/ma.js^
 ||199.180.100.185/love44^
 ||3pornstarmovies.com/*/*/*/js/ssu*.js^
@@ -122733,12 +122733,12 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! Number of entries: 79303
 !
 [Adblock Plus]
-! Version: 202610201415
+! Version: 202610202107
 ! Title: oisd small
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 57205
-! Last modified: 2026-10-20T14:15:02+0000
+! Entries: 57169
+! Last modified: 2026-10-20T21:07:04+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
@@ -129888,10 +129888,10 @@ ff02::3		ip6-allhosts
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
 ! by: 酷安@那个谁520
-! Last Updated: 2026-10-20 11:25:42（北京时间）
+! Last Updated: 2026-10-21 00:21:35（北京时间）
 ! Total count: 17333
 ||xiaoqiang^
-! Version:    最后同步时间: 2026-10-20 01:15:04
+! Version:    最后同步时间: 2026-10-21 01:15:05
 ! Total count: 13120
 # 此规则不定时更新
 # This rule does not regularly updated
