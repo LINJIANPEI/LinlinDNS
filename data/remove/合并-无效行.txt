@@ -158,84 +158,6 @@
 # 更新时间：2026-09-15
 #************************************************************************#
 
-! Title: sosel 防误杀白名单(各源@@例外 + 白名单订阅源[风险剔除] + 人工allow_extra, 去重)
-! Compiled: 2026-10-10 20:20 UTC
-! Allow domains: 6076  wildcard/regex: 189
-
-
-
-
-
-
-
-
-
-
-# ADBLOCK-20261022 ||gator.volces.com^
-# ADBLOCK-20261022 ||mcs.zijieapi.com^
-# ADBLOCK-20261022 ||mssdk.volces.com^
-# ★ 2026-10-18【主代理】example.com / example.org 是 RFC 2606 保留的演示域名。
-# 上游 hg1.txt 第 5742 行有 `||example.com^`，会把这两个**文档示例域名**拦掉，
-# 导致「我被拦了什么」里出现用户根本没访问过的域名，看起来像误杀。
-# 直接放行，不需要重启 AdGuardHome（白名单按 filters_update_interval 自动重拉）。
-# ★ 2026-10-18【主代理】神州租车（反馈 8d7d3b0d「接入DNS后打开神州租车会提示接入数据失败」）
-# 实测：apiproxy / dmonitor / netmanager / netport.zuche.com 被 hg1.txt 的
-# `||zuche.com^` 全部拦掉，App 拉不到接口数据就报"接入失败"。
-# 这些是**租车主流程的接口**，不是广告，必须放行。
-# ★ 写法：本文件是 whitelist_filters 的订阅源，**直接写 || 就代表放行**，
-#   ⛔ 不要写成 @@|| —— 那是"例外规则"语法，用在这里是多余的
-#   （本文件既有 6255 条全部是 || 形式，我第一版加了 @@ 是错的，已改回）。
-# ★ 2026-10-18【主代理】起点读书（反馈 f14cc3b2「qidian.qpic.cn放行，段评论头像被拦截无法加载」）
-# hg1.txt 第 9721 行有 `||qidian.qpic.cn^`，而白名单源文件里**没有**它
-# （只有 qidian.gtimg.com 等 12 条别的），放行一直只写在 yaml 的 user_rules 里。
-# 与 zuche 同一条手法：补进白名单订阅源，多一层冗余。
-# ★ 2026-10-18【主代理 · 站长：「白名单放行率有点高了」】
-# 已删除 `||douyincdn.com^`：
-#   · 实测它一条吃掉全部白名单命中的 49.8%（98,913 次 / 200MB 样本）
-#   · 而 douyincdn 在拦截列表 hg1 里 **0 命中** ⇒ 一次都没救回任何东西
-#   · 它又是父域级规则（覆盖整棵子树）⇒ 把大量"本来正常"的解析
-#     算成了"白名单放行"，让首页那个比例虚高
-# 文件里已有的精确子域规则（pull-flv-*.douyincdn.com.* 等）全部保留。
-# ⛔ 其余父域规则**本轮不动** —— 每条都要单独验证，不混在一起改。
-# ★ 2026-10-18【主代理 · 反馈 369daba9「微博的开屏广告没有拦截成功」】
-# 已删除两条：
-#   `||weibo.com^`        —— 覆盖掉 hg1 里 19 条微博广告子域拦截规则
-#   `||sax.sina.com.cn^`  —— hg1 想拦它，白名单却显式放行（疑似误加）
-# 实测依据（querylog 尾部 200MB）：微博域 185 条 reason=1、0 条 reason=3
-#   ⇒ 从来没拦过。开屏广告真实链路（*.uve.weibo.com / *.biz.weibo.com）
-#     全部是 reason=1 被放行。
-# ⛔ 保留 `||weibo.cn^` 与 `||sina.com.cn^`：它们护着 IM/登录/网页，不该删。
-# ⚠️ 残留缺口：biz.weibo.com 广告族根本不在 hg1 里，删白名单后仍会解析，
-#   要彻底拦需另行补规则（下一轮）。
-# 2026-10-18 主代理：已删 4 条广告域放行规则
-#   （小米追踪 / 小米广告 / 小米商店广告 / 百度贴吧）
-#   实测：这四个域名命中白名单时 Reason=1，
-#   而 hg1 拦截列表里同时有它们 ⇒ 删掉放行后自然被拦。
-#   ⛔ 保留百度网盘（业务，不能砍）。
-# ⚠️ 本段注释故意不写任何规则原文：
-#   规则解析器会把注释里的域名当成真规则（已踩坑）。
-# 2026-10-18 主代理：已删 3 条父域放行规则（小米、MIUI、百度）
-#   理由：父域会放行整棵子域树，把 hg1 里那批广告子域的拦截规则全顶掉了。
-#   前提检查：hg1 里并没有拦这三个父域本身
-#   ⇒ 删掉后主站、登录、云服务照常，只有广告子域开始被拦。
-#   白名单里仍保留各子域的精确放行（小米 85 / MIUI 42 / 百度 86 条）。
-# ⚠️ 本段注释故意不写规则原文 —— 解析器会把注释里的域名当成规则。
-# 2026-10-18 主代理：恢复百度贴吧主域放行
-#   原因：反馈只说「贴吧里面的广告还在」，不是说贴吧打不开。
-#   上一步我删了它 ⇒ 实测整站解析失败 ⇒ **过度拦截**，比漏拦更糟。
-#   贴吧里的广告来自别的域名，那些已经拦住了。
-# 2026-10-18 主代理：已删小米商店父域放行规则
-#   理由：它放行整棵子域树，把 hg1 里 5 个广告子域的拦截规则全顶掉了。
-#   前提检查：hg1 里 **没有** 拦该商店主域本身（命中 0 条），
-#   且白名单里已有 **38 条精确子域放行**。
-#   ⇒ 删后商店主域与已放行子域照常，只有广告子域开始被拦。
-# ⚠️ 本段注释故意不写规则原文 —— 解析器会把注释里的域名当成规则。
-# 2026-10-18 主代理：已删 7 条通配符父域放行（广告/埋点/推送通道）
-#   腾讯广告投放、腾讯出海广告 SDK、美团广告埋点、
-#   腾讯游戏 CDN 埋点、个推推送、小米应用商店（含子域通配）。
-# ⛔ 保留 microsoft / blob.core.windows.net / dbankcloud / hicloud /
-#   music.126.net / lianjia 等业务必需项（删了会大面积断网）。
-# ⚠️ 本段注释故意不写规则原文。
 #针对天猫校园的拦截规则，勿删
 #针对可可影视的拦截规则，勿删
 #针对喜马拉雅的拦截规则，勿删
@@ -78901,10 +78823,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: SGAvwxWPxM0AfcmEfBekyg
-! Version: 202610260632
+! Checksum: CNXeeQXlt9ygQ+TDK78Dig
+! Version: 202610260642
 ! Title: EasyList
-! Last modified: 26 Oct 2026 06:32 UTC
+! Last modified: 26 Oct 2026 06:42 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -101730,10 +101652,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: x7Joo35aUbBSq8g/LlIZaA
-! Version: 202610260632
+! Checksum: aljq7GqoZKB2307h2UOsCQ
+! Version: 202610260642
 ! Title: EasyList China
-! Last modified: 26 Oct 2026 06:32 UTC
+! Last modified: 26 Oct 2026 06:42 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -108098,10 +108020,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 !---------------------------------Temporary-----------------------------------!
 !----------------------------------The End------------------------------------!
 [Adblock Plus 1.1]
-! Checksum: VdhfrOE7uE/RKtT5W55p/g
-! Version: 202610260632
+! Checksum: 6idZpVIb4o4D7nk3HsYeAg
+! Version: 202610260642
 ! Title: EasyPrivacy
-! Last modified: 26 Oct 2026 06:32 UTC
+! Last modified: 26 Oct 2026 06:42 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -129943,134 +129865,6 @@ ff02::3		ip6-allhosts
 # kwadronaut for Windows 7 and Vista information
 # John Mueller and Lawrence H Smith for Mac Pre-OSX information
 # Jesse Baird for the Cisco IOS script
-! Title: sosel 个人去广告合并规则(黑名单)
-! Compiled: 2026-10-24 09:45 UTC
-! Method: 多源并集去重 + 父子域无损压缩 + 白名单订阅源风险剔除，并已剔除被本站白名单压住的条目（发布即有效）
-! Sources: hg1(线上在用) 13122 条 + 站长手写 713 条 + 历史存量 479211 条
-! Rules: 475739 条（去重后 481446，剔除被白名单罩住的 5707）
-! Companion allowlist: https://www.23-4.cn/rules/merged-allow.txt
-/(https?:\/\/)213\.32\.115\..{100,}/
-/(https?:\/\/)217\.182\.11\..{100,}/
-/(https?:\/\/)51\.195\.31\..{100,}/
-/193.200.64.24:/
-/62.76.25.2(7|8)/
-/^(\S+\.)?(webstats?|swebstats?|mywebstats?)\./
-/^(\S+\.)?11599[\da-z]{2,20}\.com$/
-/^(\S+\.)?333[1-9]{2}[0-9]{2}\.com?$/
-/^(\S+\.)?5551[0-9]{3}\.com?$/
-/^(\S+\.)?61677[\da-z]{0,20}\.com$/
-/^(\S+\.)?777\-?partners?\.(net|com)$/
-/^(\S+\.)?[0-9a-f]{15,}\.com$/
-/^(\S+\.)?[0-9a-z]{16,}\.xyz$/
-/^(\S+\.)?[c-s]ads(abs|abz|ans|anz|ats|atz|del|ecs|ecz|ims|imz|ips|ipz|kis|kiz|oks|okz|one|pms|pmz)\.com/
-/^(\S+\.)?adservice\.google\./
-/^(\S+\.)?affiliat(es?[0-9a-z]*?|ion[0-9\-a-z]*?|ly[0-9a-z\-]*?)\./
-/^(\S+\.)?afgr[\d]{1,2}\.com$/
-/^(\S+\.)?aj[0-9]{4,}.online$/
-/^(\S+\.)?analytics(\-|\.)/
-/^(\S+\.)?counter(\-|\.)/
-/^(\S+\.)?delivery([\d]{2}|dom|modo).com$/
-/^(\S+\.)?e7[0-9]{2,4}\.(net|com)?$/
-/^(\S+\.)?g[1-4][0-9]{8,9}\.com?$/
-/^(\S+\.)?hg[0-9]{4,5}\.com?$/
-/^(\S+\.)?pixels?\./
-/^(\S+\.)?s?metrics\./
-/^(\S+\.)?sax[\dns]?\.sina\.com\.cn/
-/^(\S+\.)?syma[a-z]\.cn$/
-/^(\S+\.)?tongji\./
-/^(\S+\.)?toolbar\./
-/^(\S+\.)?voyage-prive\.[a-z]+(\.uk)?$/
-/^(\S+\.)?widgets?\./
-/^(\S+\.)?xpj[0-9]\.net$/
-/^(\S+\.)?ylx-[0-9].com$/
-/^(a|c)\.[0-9a-f]{56}\.com$/
-/^(mon|tue|wed|thu|fri|sat|sun)\d{1,2}\.\w{2}\d{1,6}\w{4}\.com$/
-/^.+stat\.kugou\.com/
-/^139\.45\.197\.2(4[0-9]|5[0-4])/
-/^139\.45\.197\.2(4[0-9]|5[0-4]):/
-/^139\.45\.19[5-7]\.\d{1,3}/
-/^142\.91\.159\.(1[5-9]\d|2[0-4]\d|250):(80|443)$/
-/^188\.42\.84\.\d{1,3}/
-/^2.59.219.121/
-/^23\.109\.170\.(18[7-9]|19[0-2])$/
-/^23\.109\.73\.\d{3}/
-/^88\.208\.22\.[1234]$/
-/^88\.208\.22\.[1234]:/
-/^94\.242\.247\.(2[0-9]|3[0-2])/
-/^94\.242\.247\.(2[0-9]|3[0-2]):/
-/^admarvel\./
-/^admaster\./
-/^adsage\./
-/^adsensor\./
-/^adservice\./
-/^adsmogo\./
-/^adsrvmedia\./
-/^adsserving\./
-/^adsystem\./
-/^adwords\./
-/^anon1.gt\d{6}.com$/
-/^applovin\./
-/^appsflyer\./
-/^domob\./
-/^duomeng\./
-/^dwtrack\./
-/^guanggao\./
-/^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
-/^https:\/\/anon1.gt\d{6}.com/
-/^omgmta\./
-/^omgmtaw\./
-/^omniture\./
-/^openx\./
-/^partnerad\./
-/^pingfore\./
-/^socdm\./
-/^supersonicads\./
-/^wlmonitor\./
-/^zjtoolbar\./
-/i*.snssdk.com/
-/pangolin-sdk.*/
-||*-980x60.gif^
-||*.pop.js^
-||*_950x90.gif^
-||*coinhive.min.js^
-||*martrix_bbs.gif^
-||*martrix_bbs.jpg^
-||/7gq78s4ltrea/^
-||0019a^
-||1.1.1.l80.js^
-||216.239.35.0/24^
-||295cdn^
-||3.n.2.1.l50.js^
-||3.n.2.2.l30.js^
-||3132372e302e302e31^
-||5976m45com^
-||<!doctype.^
-||c.3.cn^$importan
-||cdn.zhiyileiju.cn/*.jpeg
-||cdn.zhiyileiju.cn/*.jpg
-||d6294kcj^
-||dcarapi.com/motor/ad/*
-||dlcdn996^
-||fake-domain^
-||gao1asdjws^
-||gif.thegalaxy01.com^$importan
-||huilongkj^
-||ib-lq.snssdk.com/api/ad/*
-||kps230^
-||m.miguvideo.com/mgs/share/migu_dsp_member/
-||n.2.1.js^
-||n.2.1.l60.js^
-||shturl.cc/4^
-||shturl.cc/IEavUwS^
-||shturl.cc/J^
-||shturl.cc/e1E^
-||shuixiands^
-||sunyonga^
-||tx-adaptive^
-||undefined^
-||xchcmmtn2z^
-||xpj079cc08868comxpjggtz^
-||yd11_13-site-02^
 [Adblock Plus 2.0]
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
