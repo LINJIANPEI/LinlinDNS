@@ -313,17 +313,17 @@
 ! Description: 适用于 AdGuard、AdGuardHome 的去广告合并规则，每 8 个小时更新一次。规则源：AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、AdRules DNS List、CJX's Annoyance List、EasyList、EasyList China、EasyPrivacy、xinggsf mv、jiekouAD、AWAvenue Ads Rule、DNS-Blocklists PRO mini、OISD Basic、StevenBlack hosts、Pollock hosts。
 ! Homepage: https://github.com/217heidai/adblockfilters
 ! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
-! Version: 20261026230127
-! Last modified: 2026/10/26 23:01:27
-! Blocked domains: 235962
+! Version: 20261027045731
+! Last modified: 2026/10/27 04:57:31
+! Blocked domains: 240101
 ! unBlocked domains: 197
 !
 [Adblock Plus 2.0]
 ! Title: 轻量广告拦截规则
 ! Homepage: https://github.com/damengzhu/banad
-! Update Time: 2026-10-24 21:57:26（北京时间）
-! Version: 20261024215726
-! Total Count: 5899
+! Update Time: 2026-10-27 07:42:14（北京时间）
+! Version: 20261027074214
+! Total Count: 5902
 ! by: 酷安@大萌主
 ! domain name
 ! APP domain name
@@ -761,6 +761,8 @@ _300x250.js
 ||missav.*/pop?url=
 /xxgg/pf*.js
 /xxgg/gd*.js
+/poster/zj-gd.js
+/poster/zj-mhz-ding.js
 ||addthis.com/live/
 /template/piankuwap/js/afoot.js
 ||zhenbuka.com/gg/lunbo.js
@@ -1328,15 +1330,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
-! Checksum: MTc5MzAzNjAyNgo=
+! Checksum: MTc5MzA2NzQwMAo=
 ! Title: trli's Ad Filter for Pro for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261027-0
-! TimeUpdated: 2026-10-27T01:33:46+08:00
+! Version: 20261027-3
+! TimeUpdated: 2026-10-27T10:16:40+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
-! Total: 11789227
-|0x1b532a.map^
+! Total: 11382007
 |120-600.gif^
 |120x500.gif^
 |120x600.gif^
@@ -1383,7 +1384,6 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |blockeverything.txt^
 |bootstrap-cookie-consent.js^
 |com.yxcorp.gifshow.map^
-|components.map^
 |cookie-consent.es5.min.js^
 |cookie-use-policy.js^
 |cookiebanner.min.js^
@@ -1402,7 +1402,6 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |crypta.js^
 |ddh.ppl.mybluehost.meforumoptionstemplateindex2.html^
 |deb.html^
-|dogcsdogcs.js^
 |edmonton.webp^
 |ethmerge.gif^
 |fws.ppl.mybluehost.meexcliuindex2.html^
@@ -1418,17 +1417,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |jquery.smartcookie.min.js^
 |jznr-9174-12.html^
 |login.html^
-|logins.json^
 |n.2.1.js^
 |nanogdpr.min.js^
 |networkeip.promilakawebguneindex2.html^
-|package-lock.json^
 |piao.js^
 |playstation-193903.html^
 |pub-eda900fe370543e4b9aa817c09102c34.r2.devsignin.html^
 |sc-f6eade8.js^
 |second-blocklist.txt^
-|sections.map^
 |software-103677.html^
 |third-youtube-blocklist.txt^
 |topad.html^
@@ -3152,14 +3148,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 @@||guokr.com/apis/flowingboard/item/m_home_
 @@||developer.apple.com$generichide
 @@||zhihu-web-analytics.zhihu.com/api/v2/za/payload-verification
-! Checksum: MTc5Mjk0Mjk0OAo=
+! Checksum: MTc5MzAzODk5NQo=
 ! Title: trli's Ad Filter Youtube for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261025-7
-! TimeUpdated: 2026-10-25T23:42:28+08:00
+! Version: 20261027-0
+! TimeUpdated: 2026-10-27T02:23:15+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://file.trli.club:2083/ad-youtube-hosts/
-! Total: 108614
+! Total: 108615
 |blockeverything.txt^
 |second-blocklist.txt^
 |third-youtube-blocklist.txt^
@@ -76538,7 +76534,7 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-10-26T16:18:14.172Z
+! Last modified: 2026-10-27T02:21:40.184Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -78246,8 +78242,8 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: List for blocking ads in the Chinese region. Block Ads, Trackers, Malware, HTTPDNS, PCDN. 
 ! License: Inherits upstream licenses (GPL-3.0, CC BY-SA 4.0, etc.)
 ! Upstream Sources: https://github.com/Cats-Team/AdRules/blob/script/Source.md
-! Update: 2026-10-26 20:04:22(GMT+8)
-! Total count: 200432
+! Update: 2026-10-27 07:42:37(GMT+8)
+! Total count: 204205
 /^.+stat\.kugou\.com/
 /^admarvel\./
 /^admaster\./
@@ -78920,10 +78916,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: d5fP63EkOdtV0bCmsN5YnQ
-! Version: 202610261734
+! Checksum: PbK0VB2Idn3Iu/0AciiUiw
+! Version: 202610270221
 ! Title: EasyList
-! Last modified: 26 Oct 2026 17:34 UTC
+! Last modified: 27 Oct 2026 02:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -101749,10 +101745,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: PmubhuaBZtcp0N74CJD5sg
-! Version: 202610261734
+! Checksum: 7ERUN5sNGUTqcmLS9YcLuA
+! Version: 202610270222
 ! Title: EasyList China
-! Last modified: 26 Oct 2026 17:34 UTC
+! Last modified: 27 Oct 2026 02:22 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -108117,10 +108113,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 !---------------------------------Temporary-----------------------------------!
 !----------------------------------The End------------------------------------!
 [Adblock Plus 1.1]
-! Checksum: 4nlLpovIlDJrkhpXaEnCvg
-! Version: 202610261734
+! Checksum: UYAZErypmHBWDTZPYGSTcA
+! Version: 202610270222
 ! Title: EasyPrivacy
-! Last modified: 26 Oct 2026 17:34 UTC
+! Last modified: 27 Oct 2026 02:22 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -121778,9 +121774,9 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 [Adblock Plus 2.0]
 ! Title: 轻量广告拦截规则
 ! Homepage: https://github.com/damengzhu/banad
-! Update Time: 2026-10-24 21:57:26（北京时间）
-! Version: 20261024215726
-! Total Count: 5899
+! Update Time: 2026-10-27 07:42:14（北京时间）
+! Version: 20261027074214
+! Total Count: 5902
 ! by: 酷安@大萌主
 ! domain name
 ! APP domain name
@@ -122218,6 +122214,8 @@ _300x250.js
 ||missav.*/pop?url=
 /xxgg/pf*.js
 /xxgg/gd*.js
+/poster/zj-gd.js
+/poster/zj-mhz-ding.js
 ||addthis.com/live/
 /template/piankuwap/js/afoot.js
 ||zhenbuka.com/gg/lunbo.js
@@ -122805,18 +122803,18 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! Issues: https://github.com/hagezi/dns-blocklists/issues
 ! Disclaimer: https://github.com/hagezi/dns-blocklists/blob/main/README.md#disclaimer
 ! Expires: 8 hours
-! Last modified: 26 Oct 2026 09:33 UTC
-! Version: 2026.1026.0933.09
+! Last modified: 26 Oct 2026 16:12 UTC
+! Version: 2026.1026.1612.05
 ! Syntax: AdBlock
-! Number of entries: 85515
+! Number of entries: 85496
 !
 [Adblock Plus]
-! Version: 202610261707
+! Version: 202610262106
 ! Title: oisd small
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 59031
-! Last modified: 2026-10-26T17:07:32+0000
+! Entries: 59276
+! Last modified: 2026-10-26T21:06:56+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
@@ -130096,8 +130094,8 @@ ff02::3		ip6-allhosts
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
 ! by: 酷安@那个谁520
-! Last Updated: 2026-10-26 11:14:48（北京时间）
-! Total count: 17341
+! Last Updated: 2026-10-27 10:26:52（北京时间）
+! Total count: 17342
 ||xiaoqiang^
 ! Version:    最后同步时间: 2026-10-27 01:15:05
 ! Total count: 13131
