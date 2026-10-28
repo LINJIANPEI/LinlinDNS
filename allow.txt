@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-10-28 10:45:36（北京时间）
+! Version: 2026-10-29 01:38:12（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 3123
+! Total count: 3134
 @@|0.gravatar.com^$important
 @@|1.gravatar.com^$important
 @@|2.gravatar.com^$important
@@ -412,8 +412,10 @@
 @@||app.biligame.com^
 @@||app.chat.xiaomi.net^
 @@||app.huabao.360.cn^
+@@||app.mi.com^
 @@||app.powerbi.com^
 @@||app.toutiao.com^
+@@||app.xiaomi.com^$denyallow=t.app.xiaomi.com
 @@||app.zhuanzhuan.com^
 @@||appcfg.v.qq.com^
 @@||appcloud.zhihu.com^
@@ -433,6 +435,7 @@
 @@||aps.amap.com^
 @@||aq.qq.com^$denyallow=js.aq.qq.com|sv.aq.qq.com
 @@||archive.biliimg.com^
+@@||archive.stardock.com^
 @@||arenascan.com^
 @@||article.zlink.toutiao.com^$important
 @@||artifactory.appodeal.com^
@@ -733,7 +736,7 @@
 @@||cloudauth.cn-shanghai.aliyuncs.com^
 @@||cloudcache.tencent-cloud.cn^
 @@||clouddrive-activity.uc.cn^$important
-@@||cloudflare-dns.com^$denyallow=mozilla.cloudflare-dns.com
+@@||cloudflare-dns.com^$denyallow=family.cloudflare-dns.com|mozilla.cloudflare-dns.com|security.cloudflare-dns.com
 @@||cloudflareinsights.com^$denyallow=msd.cloudflareinsights.com|static-staging.cloudflareinsights.com|www.cloudflareinsights.com
 @@||cloudpush.aliyuncs.com^
 @@||cm-beacon.nakanohito.jp^
@@ -787,6 +790,7 @@
 @@||coolapk-oss-image.oss-cn-hangzhou.aliyuncs.com^
 @@||coolapk.com^
 @@||coop.voicecloud.cn^
+@@||copilot.tencent.com^
 @@||core.tantanapp.com^
 @@||cos.ap-bangkok.myqcloud.com^$denyallow=03-04-03-59t-93y5tt-1324992141.cos.ap-bangkok.myqcloud.com|06-0030-0-359yg-3r9g-1324002210.cos.ap-bangkok.myqcloud.com|2g312kn32qfy-1323053341.cos.ap-bangkok.myqcloud.com|3590-r4-f8g8-db4-1324002210.cos.ap-bangkok.myqcloud.com|4n9w3b3j3q-1324277188.cos.ap-bangkok.myqcloud.com|62iju0jbpetk-1321712386.cos.ap-bangkok.myqcloud.com|65j9ooee0y6j0-1324239560.cos.ap-bangkok.myqcloud.com|americasotherarmy-1317634057.cos.ap-bangkok.myqcloud.com|b8nzabun71r6-1323921533.cos.ap-bangkok.myqcloud.com|bj5y6-0f-9h4-9fgg4-1324992141.cos.ap-bangkok.myqcloud.com|cashbackholiday-1318069902.cos.ap-bangkok.myqcloud.com|cc-35g-pg03u5i-9gh-1324992141.cos.ap-bangkok.myqcloud.com|d-098ybui-hgf-1324992141.cos.ap-bangkok.myqcloud.com|enstromlaw-1318439371.cos.ap-bangkok.myqcloud.com|familylaw-1318233601.cos.ap-bangkok.myqcloud.com|izxax94he1-1324839608.cos.ap-bangkok.myqcloud.com|j-0-09g-9bh-h-ggf-1324992141.cos.ap-bangkok.myqcloud.com|jembretcar-1316850103.cos.ap-bangkok.myqcloud.com|lawcopytheother-1318334846.cos.ap-bangkok.myqcloud.com|masstortlawsuit-1318334846.cos.ap-bangkok.myqcloud.com|nycreparationslawyer-1318334846.cos.ap-bangkok.myqcloud.com|pearlawhirltutus-1318439371.cos.ap-bangkok.myqcloud.com|recreationcafe-1316850103.cos.ap-bangkok.myqcloud.com|valkyriebizgoddess-1317634057.cos.ap-bangkok.myqcloud.com
 @@||cos.ap-beijing-1.myqcloud.com^
@@ -1089,6 +1093,8 @@
 @@||forum.notebookreview.com^
 @@||forum.trae.cn^
 @@||forums.oneplus.com^
+@@||forums.stardock.com^
+@@||forums.stardock.net^
 @@||foundation.youdao.com^
 @@||fourhoi.com^
 @@||fourier-videoclip-eu.allawnos.com^
@@ -1169,7 +1175,7 @@
 @@||googletagmanager.com^$denyallow=1www.googletagmanager.com|2www.googletagmanager.com|apis.googletagmanager.com|celebsunmasked.googletagmanager.com|chooseyourmask.googletagmanager.com|citrix.googletagmanager.com|connectwww.googletagmanager.com|content-autofill.googletagmanager.com|cveweb.googletagmanager.com|damask.googletagmanager.com|depannage-ordinateur-windows-virus.googletagmanager.com|dfafwwww.googletagmanager.com|distance.googletagmanager.com|e-distance.googletagmanager.com|er1v.googletagmanager.com|globalchildrenschool.googletagmanager.com|help-toolbar.googletagmanager.com|htps.googletagmanager.com|httpswww.googletagmanager.com|hwww.googletagmanager.com|kabokimask.googletagmanager.com|kaspersky-anti-virus.googletagmanager.com|koronaekszerkft-hu.googletagmanager.com|languageisavirus.googletagmanager.com|lm.googletagmanager.com|losses.googletagmanager.com|mail.googletagmanager.com|maps.googletagmanager.com|mascara1.googletagmanager.com|maskdelily.googletagmanager.com|maskey.googletagmanager.com|maskinsalg.googletagmanager.com|maskofreason.googletagmanager.com|metamask.googletagmanager.com|miracleglow-mask.googletagmanager.com|nosemask.googletagmanager.com|nwww.googletagmanager.com|open-heart-lung-ntm-infection-settlement.googletagmanager.com|photographythomaskru.googletagmanager.com|qs11.googletagmanager.com|quarentena.googletagmanager.com|signed-www.googletagmanager.com|sitdev.googletagmanager.com|teekaewpreecha2555.googletagmanager.com|test-web.googletagmanager.com|test-webnewest.googletagmanager.com|trainingmask.googletagmanager.com|u002fwww.googletagmanager.com|uorlzpb1ej45a99j.googletagmanager.com|uploads-awsdashboard.googletagmanager.com|vaccin-timisoara.googletagmanager.com|vaccin.googletagmanager.com|virusisrbija.googletagmanager.com|viruslex.googletagmanager.com|wp.googletagmanager.com|ww.googletagmanager.com|www-gh.googletagmanager.com|www-lax0.googletagmanager.com|www-lax3.googletagmanager.com|www-maskotkowo-crtostaticusepreprod-endpoint.googletagmanager.com|www.googletagmanager.com|wwwctp.googletagmanager.com|wwwj.googletagmanager.com|wwwlas.googletagmanager.com|wwws.googletagmanager.com|wwww.googletagmanager.com|x2fwww.googletagmanager.com|xroads.googletagmanager.com|ynni.googletagmanager.com|zame.googletagmanager.com|zepo.googletagmanager.com|zw.googletagmanager.com
 @@||goto.target.com^
 @@||goto.walmart.com^
-@@||gov.cn^$denyallow=ahfyrd.gov.cn|analysis.mofcom.gov.cn|app.mps.gov.cn|aqxxgk.anqing.gov.cn|beian.mps.gov.cn|big5.gd.gov.cn|bk.gov.cn|bozhou.gov.cn|cabdjw.gov.cn|cnzjmsa.gov.cn|counsellor.gov.cn|cq.gov.cn|cyberpolice.mps.gov.cn|czj.huaian.gov.cn|dawa.gov.cn|dbjb.mps.gov.cn|dtsrd.gov.cn|ecidcwc.mps.gov.cn|ecidewc.mps.gov.cn|fcg.gxepb.gov.cn|gaj.shanghai.gov.cn|gss.mof.gov.cn|gzjw.gov.cn|hangzhouit.gov.cn|hbsfl.gov.cn|hrb93.gov.cn|hrbexperts.gov.cn|hwsmartcdn.hailar.gov.cn|images.tax861.gov.cn|ispl.mps.gov.cn|jsyczx.gov.cn|jxedzsp.gov.cn|jyzx.beibei.gov.cn|khjw.gov.cn|kjbm4.mof.gov.cn|kjbm8.mof.gov.cn|known.counsellor.gov.cn|kongzi.gov.cn|ln.msa.gov.cn|lyrd.gov.cn|m.mps.gov.cn|mail.hangzhouit.gov.cn|mail.mps.gov.cn|mhrc.shmh.gov.cn|miit.gov.cn|ngo.mps.gov.cn|pingliang.gov.cn|pywgx.gov.cn|pz.gov.cn|qcdj.gov.cn|qhhxzny.gov.cn|sdbzedu.gov.cn|shanghai.gov.cn|stat.shanghai.gov.cn|statistics.gd.gov.cn|stzzb.gov.cn|sxxx.gov.cn|sydl.gov.cn|tcm.gov.cn|test.sch.gov.cn|tezrsrc.gov.cn|unknown.counsellor.gov.cn|whhd.gov.cn|www.cabdjw.gov.cn|www.cnzjmsa.gov.cn|www.cq.gov.cn|www.gansu.gov.cn|www.gzjw.gov.cn|www.hanyang.gov.cn|www.hljlr.gov.cn|www.hrb93.gov.cn|www.hrbexperts.gov.cn|www.hswmw.gov.cn|www.jmpj.gov.cn|www.jsyczx.gov.cn|www.jxedzsp.gov.cn|www.jyg.gansu.gov.cn|www.kongzi.gov.cn|www.lyrd.gov.cn|www.mps.gov.cn|www.pz.gov.cn|www.stzzb.gov.cn|www.sxxx.gov.cn|www.tcm.gov.cn|www.xncb.gov.cn|www.xxzwzys.gov.cn|www.ycswnb.gov.cn|www.yunancourt.gov.cn|www.yzxxc.gov.cn|www.zgydds.gov.cn|www.zxswsj.gov.cn|www21.counsellor.gov.cn|wxgaj.gov.cn|xc12365.gov.cn|xj-n-tax.gov.cn|xncb.gov.cn|yanshan.gov.cn|yaqf.gov.cn|youth.gov.cn|yunancourt.gov.cn|ywtb.mps.gov.cn|ywtbapi.mps.gov.cn|zgydds.gov.cn|zjce.gov.cn|zlbj.mps.gov.cn|zwfw.mps.gov.cn|zxswsj.gov.cn
+@@||gov.cn^$denyallow=ahfyrd.gov.cn|analysis.mofcom.gov.cn|app.mps.gov.cn|aqxxgk.anqing.gov.cn|beian.mps.gov.cn|big5.gd.gov.cn|bk.gov.cn|bozhou.gov.cn|cabdjw.gov.cn|cnzjmsa.gov.cn|counsellor.gov.cn|cq.gov.cn|cyberpolice.mps.gov.cn|czj.huaian.gov.cn|dawa.gov.cn|dbjb.mps.gov.cn|dtsrd.gov.cn|ecidcwc.mps.gov.cn|ecidewc.mps.gov.cn|fcg.gxepb.gov.cn|gaj.shanghai.gov.cn|gss.mof.gov.cn|gzjw.gov.cn|hangzhouit.gov.cn|hbsfl.gov.cn|hrb93.gov.cn|hrbexperts.gov.cn|hwsmartcdn.hailar.gov.cn|images.tax861.gov.cn|ispl.mps.gov.cn|jsyczx.gov.cn|jxedzsp.gov.cn|jyzx.beibei.gov.cn|khjw.gov.cn|kjbm4.mof.gov.cn|kjbm8.mof.gov.cn|known.counsellor.gov.cn|kongzi.gov.cn|ln.msa.gov.cn|lyrd.gov.cn|m.mps.gov.cn|m.old.gxjczx.gov.cn|mail.hangzhouit.gov.cn|mail.mps.gov.cn|mhrc.shmh.gov.cn|miit.gov.cn|ngo.mps.gov.cn|pingliang.gov.cn|pywgx.gov.cn|pz.gov.cn|qcdj.gov.cn|qhhxzny.gov.cn|sdbzedu.gov.cn|shanghai.gov.cn|stat.shanghai.gov.cn|statistics.gd.gov.cn|stzzb.gov.cn|sxxx.gov.cn|sydl.gov.cn|tcm.gov.cn|test.sch.gov.cn|tezrsrc.gov.cn|unknown.counsellor.gov.cn|whhd.gov.cn|www.cabdjw.gov.cn|www.cnzjmsa.gov.cn|www.cq.gov.cn|www.gansu.gov.cn|www.gzjw.gov.cn|www.hanyang.gov.cn|www.hljlr.gov.cn|www.hrb93.gov.cn|www.hrbexperts.gov.cn|www.hswmw.gov.cn|www.jmpj.gov.cn|www.jsyczx.gov.cn|www.jxedzsp.gov.cn|www.jyg.gansu.gov.cn|www.khjw.gov.cn|www.kongzi.gov.cn|www.lyrd.gov.cn|www.mps.gov.cn|www.pz.gov.cn|www.stzzb.gov.cn|www.sxxx.gov.cn|www.tcm.gov.cn|www.xncb.gov.cn|www.xxzwzys.gov.cn|www.ycswnb.gov.cn|www.yunancourt.gov.cn|www.yzxxc.gov.cn|www.zgydds.gov.cn|www.zxswsj.gov.cn|www21.counsellor.gov.cn|wxgaj.gov.cn|xc12365.gov.cn|xj-n-tax.gov.cn|xncb.gov.cn|yanshan.gov.cn|yaqf.gov.cn|youth.gov.cn|yunancourt.gov.cn|ywtb.mps.gov.cn|ywtbapi.mps.gov.cn|zgydds.gov.cn|zjce.gov.cn|zlbj.mps.gov.cn|zwfw.mps.gov.cn|zxswsj.gov.cn
 @@||gql-fed.reddit.com^
 @@||graph.qq.com^
 @@||groupprohead.gtimg.cn^
@@ -1309,6 +1315,7 @@
 @@||id.realme.com^
 @@||id.uc.cn^$important
 @@||id6.me^
+@@||identity.stardock.com^
 @@||idmsa.apple.com^
 @@||iface2.iqiyi.com^
 @@||ifdian.net^
@@ -1380,7 +1387,7 @@
 @@||imgx.mediav.com^
 @@||imop.com^$denyallow=bbs.imop.com|bbs.t.imop.com|t.imop.com|u.imop.com
 @@||imtt.dd.qq.com^$important
-@@||in-addr.arpa^$denyallow=1.0.0.127.in-addr.arpa|166.73.56.50.in-addr.arpa|18.58.107.184.in-addr.arpa|185.172.2.183.in-addr.arpa|196.147.45.in-addr.arpa
+@@||in-addr.arpa^$denyallow=1.0.0.127.in-addr.arpa|1.48.21.104.in-addr.arpa|1.96.21.104.in-addr.arpa|122.134.67.172.in-addr.arpa|166.73.56.50.in-addr.arpa|17.22.171.150.in-addr.arpa|172.210.232.199.in-addr.arpa|18.58.107.184.in-addr.arpa|185.172.2.183.in-addr.arpa|187.243.181.163.in-addr.arpa|19.3.101.151.in-addr.arpa|196.147.45.in-addr.arpa|204.201.212.88.in-addr.arpa|229.129.101.151.in-addr.arpa|63.150.64.172.in-addr.arpa|78.136.67.172.in-addr.arpa|84.71.67.172.in-addr.arpa|91.65.101.151.in-addr.arpa
 @@||in.appcenter.ms^
 @@||incoming.telemetry.mozilla.org^
 @@||increase-openapi.soulapp.cn^
@@ -2683,6 +2690,7 @@
 @@||up.cm.ksmobile.com^
 @@||upage.imtt.qq.com^
 @@||update.360safe.com^$denyallow=360game.update.360safe.com|mobsafe.update.360safe.com|sdup.update.360safe.com|softm-s.update.360safe.com|zip.update.360safe.com
+@@||update.appstore.vivo.com.cn^
 @@||update.huorong.cn^
 @@||update.vivo.com^
 @@||upgrade.vivo.com^
@@ -2990,6 +2998,8 @@
 @@||www.siyuan-note.club^
 @@||www.so.com^$denyallow=api.www.so.com|gem.www.so.com|ipv6.www.so.com|j.www.so.com|safe.www.so.com|waiter.www.so.com
 @@||www.spaceship.com^
+@@||www.stardock.com^
+@@||www.stardock.net^
 @@||www.statcounter.com^
 @@||www.sygjx.com^
 @@||www.taobao.com^
@@ -3057,6 +3067,7 @@
 @@||xkm.m3.3stgd4.com^
 @@||xlivesex.com^$denyallow=ar.xlivesex.com|br.xlivesex.com|comet.xlivesex.com|creative.xlivesex.com|de.xlivesex.com|es.xlivesex.com|ext.xlivesex.com|fr.xlivesex.com|go.xlivesex.com|id.xlivesex.com|ms.xlivesex.com|th.xlivesex.com|tr.xlivesex.com|trk.account.xlivesex.com|trk.e.xlivesex.com|trk.email.xlivesex.com|trk.notify.xlivesex.com|vi.xlivesex.com|websocket-extensions-v6.xlivesex.com|websocket-v6.xlivesex.com|websocket.xlivesex.com
 @@||xn--4gqu8tcnnope.com^$important
+@@||xn--4gqx1hgtfdmt.com^
 @@||xn--9swa.com^$important
 @@||xn--cp3a08l.com^
 @@||xn--ehqx7tcnnope.com^$important,denyallow=gw-1.xn--ehqx7tcnnope.com
@@ -3084,7 +3095,7 @@
 @@||yhd.com^$denyallow=api.dsp.yhd.com|click.yhd.com|tracker.yhd.com|www.yhd.com
 @@||yixiu-abtest.alicdn.com^
 @@||ykf.ichongqing.info^
-@@||ykimg.com^$denyallow=e.stat.ykimg.com|g3.ykimg.com|l.ykimg.com|p-log.ykimg.com|p.l.ykimg.com|r1.ykimg.com|sf.ykimg.com|sub.ykimg.com|themis.ykimg.com
+@@||ykimg.com^$denyallow=e.stat.ykimg.com|l.ykimg.com|p-log.ykimg.com|p.l.ykimg.com|r1.ykimg.com|sf.ykimg.com|sub.ykimg.com|themis.ykimg.com
 @@||ykm.wrating.com^
 @@||ylog.huya.com^
 @@||ym.163.com^
