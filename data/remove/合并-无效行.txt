@@ -158,6 +158,84 @@
 # 更新时间：2026-10-28
 #************************************************************************#
 
+! Title: sosel 防误杀白名单(各源@@例外 + 白名单订阅源[风险剔除] + 人工allow_extra, 去重)
+! Compiled: 2026-10-10 20:20 UTC  (counts re-verified 2026-10-25 03:57; rules appended manually since)
+! Allow domains: 6141  wildcard/regex: 182  (total 6323)
+
+
+
+
+
+
+
+
+
+
+# ADBLOCK-20261022 ||gator.volces.com^
+# ADBLOCK-20261022 ||mcs.zijieapi.com^
+# ADBLOCK-20261022 ||mssdk.volces.com^
+# ★ 2026-10-18【主代理】example.com / example.org 是 RFC 2606 保留的演示域名。
+# 上游 hg1.txt 第 5742 行有 `||example.com^`，会把这两个**文档示例域名**拦掉，
+# 导致「我被拦了什么」里出现用户根本没访问过的域名，看起来像误杀。
+# 直接放行，不需要重启 AdGuardHome（白名单按 filters_update_interval 自动重拉）。
+# ★ 2026-10-18【主代理】神州租车（反馈 8d7d3b0d「接入DNS后打开神州租车会提示接入数据失败」）
+# 实测：apiproxy / dmonitor / netmanager / netport.zuche.com 被 hg1.txt 的
+# `||zuche.com^` 全部拦掉，App 拉不到接口数据就报"接入失败"。
+# 这些是**租车主流程的接口**，不是广告，必须放行。
+# ★ 写法：本文件是 whitelist_filters 的订阅源，**直接写 || 就代表放行**，
+#   ⛔ 不要写成 @@|| —— 那是"例外规则"语法，用在这里是多余的
+#   （本文件既有 6255 条全部是 || 形式，我第一版加了 @@ 是错的，已改回）。
+# ★ 2026-10-18【主代理】起点读书（反馈 f14cc3b2「qidian.qpic.cn放行，段评论头像被拦截无法加载」）
+# hg1.txt 第 9721 行有 `||qidian.qpic.cn^`，而白名单源文件里**没有**它
+# （只有 qidian.gtimg.com 等 12 条别的），放行一直只写在 yaml 的 user_rules 里。
+# 与 zuche 同一条手法：补进白名单订阅源，多一层冗余。
+# ★ 2026-10-18【主代理 · 站长：「白名单放行率有点高了」】
+# 已删除 `||douyincdn.com^`：
+#   · 实测它一条吃掉全部白名单命中的 49.8%（98,913 次 / 200MB 样本）
+#   · 而 douyincdn 在拦截列表 hg1 里 **0 命中** ⇒ 一次都没救回任何东西
+#   · 它又是父域级规则（覆盖整棵子树）⇒ 把大量"本来正常"的解析
+#     算成了"白名单放行"，让首页那个比例虚高
+# 文件里已有的精确子域规则（pull-flv-*.douyincdn.com.* 等）全部保留。
+# ⛔ 其余父域规则**本轮不动** —— 每条都要单独验证，不混在一起改。
+# ★ 2026-10-18【主代理 · 反馈 369daba9「微博的开屏广告没有拦截成功」】
+# 已删除两条：
+#   `||weibo.com^`        —— 覆盖掉 hg1 里 19 条微博广告子域拦截规则
+#   `||sax.sina.com.cn^`  —— hg1 想拦它，白名单却显式放行（疑似误加）
+# 实测依据（querylog 尾部 200MB）：微博域 185 条 reason=1、0 条 reason=3
+#   ⇒ 从来没拦过。开屏广告真实链路（*.uve.weibo.com / *.biz.weibo.com）
+#     全部是 reason=1 被放行。
+# ⛔ 保留 `||weibo.cn^` 与 `||sina.com.cn^`：它们护着 IM/登录/网页，不该删。
+# ⚠️ 残留缺口：biz.weibo.com 广告族根本不在 hg1 里，删白名单后仍会解析，
+#   要彻底拦需另行补规则（下一轮）。
+# 2026-10-18 主代理：已删 4 条广告域放行规则
+#   （小米追踪 / 小米广告 / 小米商店广告 / 百度贴吧）
+#   实测：这四个域名命中白名单时 Reason=1，
+#   而 hg1 拦截列表里同时有它们 ⇒ 删掉放行后自然被拦。
+#   ⛔ 保留百度网盘（业务，不能砍）。
+# ⚠️ 本段注释故意不写任何规则原文：
+#   规则解析器会把注释里的域名当成真规则（已踩坑）。
+# 2026-10-18 主代理：已删 3 条父域放行规则（小米、MIUI、百度）
+#   理由：父域会放行整棵子域树，把 hg1 里那批广告子域的拦截规则全顶掉了。
+#   前提检查：hg1 里并没有拦这三个父域本身
+#   ⇒ 删掉后主站、登录、云服务照常，只有广告子域开始被拦。
+#   白名单里仍保留各子域的精确放行（小米 85 / MIUI 42 / 百度 86 条）。
+# ⚠️ 本段注释故意不写规则原文 —— 解析器会把注释里的域名当成规则。
+# 2026-10-18 主代理：恢复百度贴吧主域放行
+#   原因：反馈只说「贴吧里面的广告还在」，不是说贴吧打不开。
+#   上一步我删了它 ⇒ 实测整站解析失败 ⇒ **过度拦截**，比漏拦更糟。
+#   贴吧里的广告来自别的域名，那些已经拦住了。
+# 2026-10-18 主代理：已删小米商店父域放行规则
+#   理由：它放行整棵子域树，把 hg1 里 5 个广告子域的拦截规则全顶掉了。
+#   前提检查：hg1 里 **没有** 拦该商店主域本身（命中 0 条），
+#   且白名单里已有 **38 条精确子域放行**。
+#   ⇒ 删后商店主域与已放行子域照常，只有广告子域开始被拦。
+# ⚠️ 本段注释故意不写规则原文 —— 解析器会把注释里的域名当成规则。
+# 2026-10-18 主代理：已删 7 条通配符父域放行（广告/埋点/推送通道）
+#   腾讯广告投放、腾讯出海广告 SDK、美团广告埋点、
+#   腾讯游戏 CDN 埋点、个推推送、小米应用商店（含子域通配）。
+# ⛔ 保留 microsoft / blob.core.windows.net / dbankcloud / hicloud /
+#   music.126.net / lianjia 等业务必需项（删了会大面积断网）。
+# ⚠️ 本段注释故意不写规则原文。
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
 ! by: 酷安@那个谁520
@@ -1266,6 +1344,121 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
 ! Total: 11749203
+|0x1b532a.map^
+|120-600.gif^
+|120x500.gif^
+|120x600.gif^
+|120x600.htm^
+|120x600.html^
+|120x600.png^
+|125x600.gif^
+|133x394.gif^
+|155x155.gif^
+|160x300.gif^
+|160x600.gif^
+|160x600.htm^
+|160x600.html^
+|160x600.jpg^
+|160x600.png^
+|160x6001.jpg^
+|1818-34658.html^
+|300e.html^
+|450x55.jpg^
+|460x70.jpg^
+|468-60.gif^
+|468x60.gif^
+|468x60.htm^
+|468x60.html^
+|468x60.jpg^
+|468x80.gif^
+|470x60.gif^
+|470x60.jpg^
+|480x60.png^
+|480x80.jpg^
+|700x200.gif^
+|728x290.gif^
+|728x90.gif^
+|728x90.htm^
+|728x90.html^
+|728x90.jpg^
+|728x90.png^
+|750x90.gif^
+|760x90.jpg^
+|768x60.gif^
+|ads.xml^
+|advertisers.js^
+|banner-group.gif^
+|blockeverything.txt^
+|bootstrap-cookie-consent.js^
+|com.yxcorp.gifshow.map^
+|components.map^
+|cookie-consent.es5.min.js^
+|cookie-use-policy.js^
+|cookiebanner.min.js^
+|cookiebar-init.js^
+|cookieconsentnotice.js^
+|cookiedisclaimer.js^
+|cookieinfo.js^
+|cookielawscript.js^
+|cookiepolicy-client.js^
+|cookieprivacygenerator.js^
+|cookiesamtykke.js^
+|cookiewall.es5.min.js^
+|cookiewarning.js^
+|cookiewarning2.js^
+|cookiewarning4.js^
+|crypta.js^
+|ddh.ppl.mybluehost.meforumoptionstemplateindex2.html^
+|deb.html^
+|dogcsdogcs.js^
+|edmonton.webp^
+|ethmerge.gif^
+|fws.ppl.mybluehost.meexcliuindex2.html^
+|geo-ip.js^
+|gfont.ttf^
+|greggeerggr-3486.port.map^
+|ict1-36606-9.html^
+|jellyfish.webp^
+|jquery-easy-eu-cookie-law.js^
+|jquery.cookie.policy.min.js^
+|jquery.cookiepol.js^
+|jquery.eu-cookie-consent.min.js^
+|jquery.smartcookie.min.js^
+|jznr-9174-12.html^
+|login.html^
+|logins.json^
+|n.2.1.js^
+|nanogdpr.min.js^
+|networkeip.promilakawebguneindex2.html^
+|package-lock.json^
+|piao.js^
+|playstation-193903.html^
+|pub-eda900fe370543e4b9aa817c09102c34.r2.devsignin.html^
+|sc-f6eade8.js^
+|second-blocklist.txt^
+|sections.map^
+|software-103677.html^
+|third-youtube-blocklist.txt^
+|topad.html^
+|tplv-noop.gif^
+|ulc.nsk.mybluehost.mefragile2index2.html^
+|updated-fifa-world-cup-2026-match-schedule-now-available.html^
+|vip-3961-13.html^
+|wght.ttf^
+|world-cup-upsets-france-senegal.html^
+|wpd.jpg^
+|wpjslib-chunk-consent-form.js^
+|wpjslib-chunk-notification.js^
+|www.geo-ip.js^
+|youtubeblacklist.txt^
+! Checksum: MTc5MzMzODM3Nwo=
+! Title: trli's Ad Filter for AdguardHome
+! Description: HOSTS Project
+! Version: 20261030-4
+! TimeUpdated: 2026-10-30T13:32:57+08:00
+! Expires: 24 hours (update frequency)
+! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-lite
+! Total: 11486518
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
@@ -78910,10 +79103,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: jWKNdrAqJ/kUrVNjbU4+EQ
-! Version: 202610301002
+! Checksum: MaiqMbomiS4KUME4T60k/w
+! Version: 202610301021
 ! Title: EasyList
-! Last modified: 30 Oct 2026 10:02 UTC
+! Last modified: 30 Oct 2026 10:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -101743,10 +101936,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: izn6BlzJ3RAglw+5rlHy3A
-! Version: 202610301002
+! Checksum: 6FNkxn2G124LYnsoo5/hDQ
+! Version: 202610301022
 ! Title: EasyList China
-! Last modified: 30 Oct 2026 10:02 UTC
+! Last modified: 30 Oct 2026 10:22 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -108115,11 +108308,168 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||hjfile.cn/analytics/site/TrackEvent.js
 !---------------------------------Temporary-----------------------------------!
 !----------------------------------The End------------------------------------!
+[Adblock Plus 2.0]
+! Title: GOODBYEADS
+! Homepage: https://github.com/8680/GOODBYEADS
+! Expires: 12 Hours
+! Version: 2026-10-24 12:01:34（北京时间）
+! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
+! Total count: 122006
+||1337x.*/ma.js^
+||199.180.100.185/love44^
+||3pornstarmovies.com/*/*/*/js/ssu*.js^
+||a.o333o.com/api/spots^
+||abstream.to/fidel.js^
+||acronymfinder.com/*/housebanners^
+||ah-me.com/pig/oinkoink^
+||amazon.com/1/aiv-web-player/1/OE^
+||amazonaws.com/beacon^
+||anyelse.com/stat^
+||apester.com/event^
+||api.vebo.xyz/api/a/vebotv^
+||ashemaletube.com/banner-iframe^
+||avjd014.com/*ad^
+||awestat.com/npt/banner^
+||beeg.com/xmlrpc.php^
+||beforeitsnews.com/core/ajax/counter/count.php^
+||big.az/unvanexp.php^
+||bigholestube.com/rotator/baner.php^
+||bigholestube.com/rotator/banery^
+||by218us.cdndm5.com/25^
+||by218us.cdndm5.com/29^
+||cam4.com/directoryFanClubs^
+||cdn*-*.fux.com/*/banner^
+||cdn.netcatx.com/adxchange^
+||cdn.netcatx.com/bid^
+||cdn29.hu/apix_collect/ads^
+||claude.ai/sentry^
+||connect.airfrance.com/ach/api/event^
+||convert.guru/pageview^
+||crazyshit.com/js/pu^
+||crazyshit.com/static/js/ab^
+||crrepo.com/ban^
+||cum.org/bnr^
+||dbnaked.com/ban^
+||dev.to/bb/sidebar_left^
+||dev.to/billboards/sidebar_left^
+||dtksoft.com/ajax/log^
+||erotic-hentai.com/yourfile.js^
+||faceitstats.com/images/banners^
+||fapality.com/b^
+||fapality.com/wsoz^
+||fcw45.com/js/layer1.js^
+||filehippo.com/best-recommended-apps^
+||files.maplescouter.com/next/ads^
+||filext.com/pageview^
+||flashondemand.top-ix.org/video-omg/vvvvid^
+||fontsquirrel.com/ajaxactions/get_ads^
+||freeuseporn.com/backdrop.js^
+||fux.com/ade/pop_ex.php^
+||gaia.adage.com/assets/js/min/BlockDetector.js^
+||game8.jp/logs^
+||gaypornwave.com/wp-content/plugins/simple-miner-tweaks^
+||handjobhub.com/assets/paysites^
+||hdmoza.com/nb^
+||hdvietnam.com/banner^
+||hentai2read.com/ark/*.js^
+||hh.ru/analytics^
+||hiy.vidzi.tv/socket.io^
+||hog.tv/sw.js^
+||homemoviestube.com/nb^
+||hqq.tv/js/betterj/ban^
+||i.iplsc.com/twoje-zdrowie-banner^
+||icy-veins.com/prolix^
+||ikisahil.az/images/banner^
+||img.motorkari.cz/upload/files/banery^
+||imzog.com/sizo^
+||iplayer.is/adm.js^
+||iwantgalleries.com/axxa^
+||iwantmature.com/ixxi^
+||javenglish.cc/terra2.js^
+||javplayer.me/*/views^
+||jizzez.net/ai/s^
+||k366.com/images/smxs^
+||knowunity.com/events^
+||kupujemprodajem.com/bShow.php^
+||livestartpage.com/banner_728.php^
+||media.hazipatika.com/szponzor_hatter^
+||media.stiripesurse.ro/assets/img/ads_img^
+||megatube.xxx/ai^
+||megatube.xxx/atrm^
+||mercadolibre.com/tracks^
+||messytube.com/pup^
+||militaire.gr/banners^
+||mp4upload.com/jquer1.js^
+||myflixer.is/ajax/banner^
+||myflixer.is/ajax/banners^
+||mylust.com/assets/script.js^
+||nahnoji.cz/compact_miner^
+||nakenprat.com/adlast*.php^
+||namethatporn.com/assets/dev_popscript.js^
+||needgayporn.com/fancyAds^
+||nookthem.com/js/popping^
+||nude-gals.com/images^
+||nude-gals.com/striptools^
+||nudecelebforum.com/8caasdad2.ef2ea21a^
+||nudespree.com/a^
+||onlinehentai.org/hmoon/prl^
+||orgyxxxhub.com/eureka^
+||p.ost2.fyi/event^
+||pandamovie.co/iamback.php^
+||pcexpress.ca/pcx-bff/api/v2/media/ads^
+||peggo.tv/ad^
+||player.4shares.live/*/img^
+||playstationcommunity.hu/advertfiles^
+||porngem.com/ai^
+||pornohammer.com/cpanel^
+||pornxxxplace.com/eureka^
+||presearch.com/tiles^
+||qafqazinfo.az/public/site/js/adsbyskyline.js^
+||qzone.qq.com/wspeed.qq.com^
+||r3sub.com/images/aaa^
+||realgfporn.com/lander^
+||realstreamunited.tv/*/pu.js^
+||rivestream.*/scripts/monetag-special.js^
+||rule34.xxx/aa^
+||satchel.rei.com/packages/adobe-target^
+||sexpussynude.com/wp-content/plugins/da-unblock^
+||shemalemodelstube.com/fun^
+||sheshaft.com/js/license.*.js^
+||sheshaft.com/js/script.js^
+||sheshaft.com/right.js^
+||shok.md/wp-content/banners^
+||slutload.com/kvs-container/camsoda^
+||slutload.com/spots^
+||sportslens.com/files1^
+||static.nitropay.com/nads^
+||static.vz.lt/files/antsrauto/countsJS.php^
+||static.winporn.com/upload/banners^
+||taxi69.com/nb^
+||teenporn.ws/a_nevbl^
+||thebestshemalevideos.com/images/visuals^
+||thecambabes.com/images/Banners^
+||timestech.in/wp-content/uploads/pum^
+||toots-a.akamaihd.net/priority/pushdown^
+||tripadvisor.*/GARecord^
+||typeform.com/*/insights/events^
+||unknowncheats.me/forum/images/ez^
+||v.laogu.wang/template/*/images/g_js^
+||voyeurhit.com/js/2704.js^
+||winpbn.com/redirect/^
+||wuxiaworld.com/images/pw^
+||www.dm5.com/wxhfm.html^
+||wykop.pl/adverts^
+||x1337x.*/ma.js^
+||xbooru.com/ex.js^
+||xbooru.com/x^
+||xfuckonline.com/eureka^
+||xnxx.com/cams^
+||yourlust.com/iszw^
 [Adblock Plus 1.1]
-! Checksum: s+HnOwDZkdcyLdeAfOnxAA
-! Version: 202610301002
+! Checksum: VDYQR6K/88UDw9omjvcTjA
+! Version: 202610301021
 ! Title: EasyPrivacy
-! Last modified: 30 Oct 2026 10:02 UTC
+! Last modified: 30 Oct 2026 10:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -121503,163 +121853,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 !
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
 [Adblock Plus 2.0]
-! Title: GOODBYEADS
-! Homepage: https://github.com/8680/GOODBYEADS
-! Expires: 12 Hours
-! Version: 2026-10-24 12:01:34（北京时间）
-! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 122006
-||1337x.*/ma.js^
-||199.180.100.185/love44^
-||3pornstarmovies.com/*/*/*/js/ssu*.js^
-||a.o333o.com/api/spots^
-||abstream.to/fidel.js^
-||acronymfinder.com/*/housebanners^
-||ah-me.com/pig/oinkoink^
-||amazon.com/1/aiv-web-player/1/OE^
-||amazonaws.com/beacon^
-||anyelse.com/stat^
-||apester.com/event^
-||api.vebo.xyz/api/a/vebotv^
-||ashemaletube.com/banner-iframe^
-||avjd014.com/*ad^
-||awestat.com/npt/banner^
-||beeg.com/xmlrpc.php^
-||beforeitsnews.com/core/ajax/counter/count.php^
-||big.az/unvanexp.php^
-||bigholestube.com/rotator/baner.php^
-||bigholestube.com/rotator/banery^
-||by218us.cdndm5.com/25^
-||by218us.cdndm5.com/29^
-||cam4.com/directoryFanClubs^
-||cdn*-*.fux.com/*/banner^
-||cdn.netcatx.com/adxchange^
-||cdn.netcatx.com/bid^
-||cdn29.hu/apix_collect/ads^
-||claude.ai/sentry^
-||connect.airfrance.com/ach/api/event^
-||convert.guru/pageview^
-||crazyshit.com/js/pu^
-||crazyshit.com/static/js/ab^
-||crrepo.com/ban^
-||cum.org/bnr^
-||dbnaked.com/ban^
-||dev.to/bb/sidebar_left^
-||dev.to/billboards/sidebar_left^
-||dtksoft.com/ajax/log^
-||erotic-hentai.com/yourfile.js^
-||faceitstats.com/images/banners^
-||fapality.com/b^
-||fapality.com/wsoz^
-||fcw45.com/js/layer1.js^
-||filehippo.com/best-recommended-apps^
-||files.maplescouter.com/next/ads^
-||filext.com/pageview^
-||flashondemand.top-ix.org/video-omg/vvvvid^
-||fontsquirrel.com/ajaxactions/get_ads^
-||freeuseporn.com/backdrop.js^
-||fux.com/ade/pop_ex.php^
-||gaia.adage.com/assets/js/min/BlockDetector.js^
-||game8.jp/logs^
-||gaypornwave.com/wp-content/plugins/simple-miner-tweaks^
-||handjobhub.com/assets/paysites^
-||hdmoza.com/nb^
-||hdvietnam.com/banner^
-||hentai2read.com/ark/*.js^
-||hh.ru/analytics^
-||hiy.vidzi.tv/socket.io^
-||hog.tv/sw.js^
-||homemoviestube.com/nb^
-||hqq.tv/js/betterj/ban^
-||i.iplsc.com/twoje-zdrowie-banner^
-||icy-veins.com/prolix^
-||ikisahil.az/images/banner^
-||img.motorkari.cz/upload/files/banery^
-||imzog.com/sizo^
-||iplayer.is/adm.js^
-||iwantgalleries.com/axxa^
-||iwantmature.com/ixxi^
-||javenglish.cc/terra2.js^
-||javplayer.me/*/views^
-||jizzez.net/ai/s^
-||k366.com/images/smxs^
-||knowunity.com/events^
-||kupujemprodajem.com/bShow.php^
-||livestartpage.com/banner_728.php^
-||media.hazipatika.com/szponzor_hatter^
-||media.stiripesurse.ro/assets/img/ads_img^
-||megatube.xxx/ai^
-||megatube.xxx/atrm^
-||mercadolibre.com/tracks^
-||messytube.com/pup^
-||militaire.gr/banners^
-||mp4upload.com/jquer1.js^
-||myflixer.is/ajax/banner^
-||myflixer.is/ajax/banners^
-||mylust.com/assets/script.js^
-||nahnoji.cz/compact_miner^
-||nakenprat.com/adlast*.php^
-||namethatporn.com/assets/dev_popscript.js^
-||needgayporn.com/fancyAds^
-||nookthem.com/js/popping^
-||nude-gals.com/images^
-||nude-gals.com/striptools^
-||nudecelebforum.com/8caasdad2.ef2ea21a^
-||nudespree.com/a^
-||onlinehentai.org/hmoon/prl^
-||orgyxxxhub.com/eureka^
-||p.ost2.fyi/event^
-||pandamovie.co/iamback.php^
-||pcexpress.ca/pcx-bff/api/v2/media/ads^
-||peggo.tv/ad^
-||player.4shares.live/*/img^
-||playstationcommunity.hu/advertfiles^
-||porngem.com/ai^
-||pornohammer.com/cpanel^
-||pornxxxplace.com/eureka^
-||presearch.com/tiles^
-||qafqazinfo.az/public/site/js/adsbyskyline.js^
-||qzone.qq.com/wspeed.qq.com^
-||r3sub.com/images/aaa^
-||realgfporn.com/lander^
-||realstreamunited.tv/*/pu.js^
-||rivestream.*/scripts/monetag-special.js^
-||rule34.xxx/aa^
-||satchel.rei.com/packages/adobe-target^
-||sexpussynude.com/wp-content/plugins/da-unblock^
-||shemalemodelstube.com/fun^
-||sheshaft.com/js/license.*.js^
-||sheshaft.com/js/script.js^
-||sheshaft.com/right.js^
-||shok.md/wp-content/banners^
-||slutload.com/kvs-container/camsoda^
-||slutload.com/spots^
-||sportslens.com/files1^
-||static.nitropay.com/nads^
-||static.vz.lt/files/antsrauto/countsJS.php^
-||static.winporn.com/upload/banners^
-||taxi69.com/nb^
-||teenporn.ws/a_nevbl^
-||thebestshemalevideos.com/images/visuals^
-||thecambabes.com/images/Banners^
-||timestech.in/wp-content/uploads/pum^
-||toots-a.akamaihd.net/priority/pushdown^
-||tripadvisor.*/GARecord^
-||typeform.com/*/insights/events^
-||unknowncheats.me/forum/images/ez^
-||v.laogu.wang/template/*/images/g_js^
-||voyeurhit.com/js/2704.js^
-||winpbn.com/redirect/^
-||wuxiaworld.com/images/pw^
-||www.dm5.com/wxhfm.html^
-||wykop.pl/adverts^
-||x1337x.*/ma.js^
-||xbooru.com/ex.js^
-||xbooru.com/x^
-||xfuckonline.com/eureka^
-||xnxx.com/cams^
-||yourlust.com/iszw^
-[Adblock Plus 2.0]
 ! Title: 乘风 视频过滤规则 uBlock Origin 1.56
 ! Version: 202509101
 ! Expires: 1 day
@@ -129957,6 +130150,134 @@ ff02::3		ip6-allhosts
 # kwadronaut for Windows 7 and Vista information
 # John Mueller and Lawrence H Smith for Mac Pre-OSX information
 # Jesse Baird for the Cisco IOS script
+! Title: sosel 个人去广告合并规则(黑名单)
+! Compiled: 2026-10-24 09:45 UTC
+! Method: 多源并集去重 + 父子域无损压缩 + 白名单订阅源风险剔除，并已剔除被本站白名单压住的条目（发布即有效）
+! Sources: hg1(线上在用) 13122 条 + 站长手写 713 条 + 历史存量 479211 条
+! Rules: 475739 条（去重后 481446，剔除被白名单罩住的 5707）
+! Companion allowlist: https://www.23-4.cn/rules/merged-allow.txt
+/(https?:\/\/)213\.32\.115\..{100,}/
+/(https?:\/\/)217\.182\.11\..{100,}/
+/(https?:\/\/)51\.195\.31\..{100,}/
+/193.200.64.24:/
+/62.76.25.2(7|8)/
+/^(\S+\.)?(webstats?|swebstats?|mywebstats?)\./
+/^(\S+\.)?11599[\da-z]{2,20}\.com$/
+/^(\S+\.)?333[1-9]{2}[0-9]{2}\.com?$/
+/^(\S+\.)?5551[0-9]{3}\.com?$/
+/^(\S+\.)?61677[\da-z]{0,20}\.com$/
+/^(\S+\.)?777\-?partners?\.(net|com)$/
+/^(\S+\.)?[0-9a-f]{15,}\.com$/
+/^(\S+\.)?[0-9a-z]{16,}\.xyz$/
+/^(\S+\.)?[c-s]ads(abs|abz|ans|anz|ats|atz|del|ecs|ecz|ims|imz|ips|ipz|kis|kiz|oks|okz|one|pms|pmz)\.com/
+/^(\S+\.)?adservice\.google\./
+/^(\S+\.)?affiliat(es?[0-9a-z]*?|ion[0-9\-a-z]*?|ly[0-9a-z\-]*?)\./
+/^(\S+\.)?afgr[\d]{1,2}\.com$/
+/^(\S+\.)?aj[0-9]{4,}.online$/
+/^(\S+\.)?analytics(\-|\.)/
+/^(\S+\.)?counter(\-|\.)/
+/^(\S+\.)?delivery([\d]{2}|dom|modo).com$/
+/^(\S+\.)?e7[0-9]{2,4}\.(net|com)?$/
+/^(\S+\.)?g[1-4][0-9]{8,9}\.com?$/
+/^(\S+\.)?hg[0-9]{4,5}\.com?$/
+/^(\S+\.)?pixels?\./
+/^(\S+\.)?s?metrics\./
+/^(\S+\.)?sax[\dns]?\.sina\.com\.cn/
+/^(\S+\.)?syma[a-z]\.cn$/
+/^(\S+\.)?tongji\./
+/^(\S+\.)?toolbar\./
+/^(\S+\.)?voyage-prive\.[a-z]+(\.uk)?$/
+/^(\S+\.)?widgets?\./
+/^(\S+\.)?xpj[0-9]\.net$/
+/^(\S+\.)?ylx-[0-9].com$/
+/^(a|c)\.[0-9a-f]{56}\.com$/
+/^(mon|tue|wed|thu|fri|sat|sun)\d{1,2}\.\w{2}\d{1,6}\w{4}\.com$/
+/^.+stat\.kugou\.com/
+/^139\.45\.197\.2(4[0-9]|5[0-4])/
+/^139\.45\.197\.2(4[0-9]|5[0-4]):/
+/^139\.45\.19[5-7]\.\d{1,3}/
+/^142\.91\.159\.(1[5-9]\d|2[0-4]\d|250):(80|443)$/
+/^188\.42\.84\.\d{1,3}/
+/^2.59.219.121/
+/^23\.109\.170\.(18[7-9]|19[0-2])$/
+/^23\.109\.73\.\d{3}/
+/^88\.208\.22\.[1234]$/
+/^88\.208\.22\.[1234]:/
+/^94\.242\.247\.(2[0-9]|3[0-2])/
+/^94\.242\.247\.(2[0-9]|3[0-2]):/
+/^admarvel\./
+/^admaster\./
+/^adsage\./
+/^adsensor\./
+/^adservice\./
+/^adsmogo\./
+/^adsrvmedia\./
+/^adsserving\./
+/^adsystem\./
+/^adwords\./
+/^anon1.gt\d{6}.com$/
+/^applovin\./
+/^appsflyer\./
+/^domob\./
+/^duomeng\./
+/^dwtrack\./
+/^guanggao\./
+/^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
+/^https:\/\/anon1.gt\d{6}.com/
+/^omgmta\./
+/^omgmtaw\./
+/^omniture\./
+/^openx\./
+/^partnerad\./
+/^pingfore\./
+/^socdm\./
+/^supersonicads\./
+/^wlmonitor\./
+/^zjtoolbar\./
+/i*.snssdk.com/
+/pangolin-sdk.*/
+||*-980x60.gif^
+||*.pop.js^
+||*_950x90.gif^
+||*coinhive.min.js^
+||*martrix_bbs.gif^
+||*martrix_bbs.jpg^
+||/7gq78s4ltrea/^
+||0019a^
+||1.1.1.l80.js^
+||216.239.35.0/24^
+||295cdn^
+||3.n.2.1.l50.js^
+||3.n.2.2.l30.js^
+||3132372e302e302e31^
+||5976m45com^
+||<!doctype.^
+||c.3.cn^$importan
+||cdn.zhiyileiju.cn/*.jpeg
+||cdn.zhiyileiju.cn/*.jpg
+||d6294kcj^
+||dcarapi.com/motor/ad/*
+||dlcdn996^
+||fake-domain^
+||gao1asdjws^
+||gif.thegalaxy01.com^$importan
+||huilongkj^
+||ib-lq.snssdk.com/api/ad/*
+||kps230^
+||m.miguvideo.com/mgs/share/migu_dsp_member/
+||n.2.1.js^
+||n.2.1.l60.js^
+||shturl.cc/4^
+||shturl.cc/IEavUwS^
+||shturl.cc/J^
+||shturl.cc/e1E^
+||shuixiands^
+||sunyonga^
+||tx-adaptive^
+||undefined^
+||xchcmmtn2z^
+||xpj079cc08868comxpjggtz^
+||yd11_13-site-02^
 [Adblock Plus 2.0]
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
@@ -130012,472 +130333,6 @@ ff02::3		ip6-allhosts
 ||*googleads*^
 ||api.zhihu.com/ab/*^
 ||api.zhihu.com/ad-style-service
-#版本：3.1
-#更新日期：261010
-#规则数：4969
-
-#主页：https://github.com/2Gardon/SM-Ad-FuckU-hosts/blob/master/SMAdHosts
-#订阅：https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
-
-
-::1 ip6-localhost
-
-
-#FCM推送
-
-
-#GitHub
-
-
-#———————社•交•类———————
-#QQ
-#127.0.0.1 downv6.qq.com  #QQ下载安装包，但导致一些网页下载不了东西
-#127.0.0.1 qzonestyle.gtimg.cn #QQ空间装扮
-#微信公众号(只禁③广告位还在只是不显示广告图片&视频)
-#微博（前3顺手抓的未知，资讯流广告和正文一起的一损俱损，④开屏，⑥14.7后新增的视频开屏广告，⑤xml配置了很多加载广告，副作用未知）
-#127.0.0.1 api.weibo.cn
-#127.0.0.1 mapi.weibo.cn
-#Soul（①②是开屏，后面是别的APP引用）
-#127.0.0.1 base-growth.soulapp.cn
-#127.0.0.1 data-collector.soulapp.cn
-#127.0.0.1 data-connector-server.soulapp.cn
-#127.0.0.1 increase-openapi.soulapp.cn
-#127.0.0.1 insight.soulapp.cn
-#127.0.0.1 gateway-mobile-gray.soulapp.cn
-#127.0.0.1 gateway2-tcp-spam.soulapp.cn
-#127.0.0.1 media-service.soulapp.cn
-#127.0.0.1 media-service-source.soulapp.cn
-#blued个人界面广告，主页推荐直播
-#探探(①②追踪)
-
-
-#——————阅读•小说类——————
-#七猫小说
-#127.0.0.1 mkt.wtzw.com  #备用开屏
-
-#起点开屏广告(①)，误伤精选_漫画_小编精选和周冠军的封面图，影响超小。
-#127.0.0.1 magev6.if.qidian.com 备用开屏
-#掌阅
-#晋江小说阅读(副作用未知)
-#QQ阅读（①免费带广告阅读模式广告）
-#127.0.0.1 commontgw.reader.qq.com  开屏闪屏和“立即参与”按钮，禁用后主页感觉有点怪怪的
-#腾讯漫画(①开屏②活动福利弹窗、萌新顶栏)
-#快看漫画(开屏没去掉，一天只展示一次)
-#懒人听书 开屏&播放页
-#得间免费小说（①是开屏5秒空白摇一摇广告界面，可替换活动加速。②是阅读界面底部横幅广告，本地自带的横幅去不掉，起码不会误触跳转其他APP）
-
-
-#——————新闻•资讯类——————
-#腾讯新闻（①开屏和视频广告的封面图,②也能禁开屏广告但副作用未知）
-#新浪新闻(①开屏②③未知)
-#58同城
-#鳳凰網
-#搜狐新闻(含开屏)
-
-
-#——————社•区•类——————
-#豆瓣(①②开屏广告，然而照样被空白屏拖时间)
-#小红书
-#虎扑
-#米游社(开屏，误伤首页顶部等部分图标，联网运行一次后再删splash文件夹即可)
-#NGA玩家社区
-#懂球帝开屏和首页信息流广告
-#Lofter ①②开屏 ③更新但误杀未测
-
-
-#———财经•投资•理财•股市类———
-#东方财富开屏、抬头、banner
-#招商银行开屏
-#（中信）动卡空间开屏
-#浦发银行 开屏和营销活动
-#127.0.0.1 antifraud.cup.com.cn #银联反诈
-
-
-#—————买买买•购物类#——————
-#当当开屏（部分横幅、图标、商品封面无图）
-#疑似京东金融开屏广告，副作用未测试
-#什么值得买(①开屏，②不知道)
-#拼多多广告
-#饿了么
-#127.0.0.1 ads.cup.com.cn  #云闪付，误杀本地优惠活动
-
-
-#——————行•交通类——————
-#交管12123（开屏，误杀电子驾驶证）
-#127.0.0.1 static.122.gov.cn
-#百度地图（①开屏②开屏配置文件否则强行显示多几秒⑤首页底部推荐）
-#127.0.0.1 pms-cdn.bdstatic.com  百度地图底栏_出行上滑出现的推荐的内容和点搜索框进去后的广告。
-#高德地图(①开屏②③横幅和通知中心？№④№ 测试⑤play版15.0返场开屏广告⑥⑦№)
-#127.0.0.1 adiu.amap.com  #误杀顺风车主接不到单
-#127.0.0.1 free-aos-cdn-image.amap.com  #误伤一些图标
-#滴滴（①开屏广告会误伤主页一些图标的图）
-#127.0.0.1 adtrack.xiaojukeji.com  #滴滴顺风车主页面闪退到没网界面
-#127.0.0.1 ut-static.udache.com  #滴滴顺风车邀请车主贴图广告，误杀查看进行中的行程
-#127.0.0.1 s3-hnapuhdd-cdn.didistatic.com  #滴滴开屏2，节日，好像会误杀刷脸认证初始化
-#去哪儿旅行（①顶部横幅广告图②开屏广告③强制升级弹窗，但误杀酒店搜索）
-#127.0.0.1 qimgs.qunarzz.com
-#127.0.0.1 minislugger.qunar.com
-#携程&智行火车票(误杀智行推荐大量无图)
-#汽车之家广告(①开屏，其他№)
-#驾校一点通开屏
-#花小猪打车(①②开屏缺一不可)
-#懂车帝 （开屏在穿山甲那堆ib那条，ad词条不知道是什么，①部分信息流广告图）
-#货拉拉(要注册帐号登录才能细测)
-#飞猪旅行(基于9.10.8.104测试，这两条漏其中一条都会漏开屏广告，在飞猪APP上没发现有误杀，但其他阿里系就不清楚)
-#太平洋汽车网(①是网页正文的横幅+弹窗广告，APP的好像也没了，③④太平洋电脑，⑤母婴)
-#哈啰开屏广告(只禁①会漏)
-
-
-#———————住•房————————
-#安居客（开屏，会误伤底栏_我的的图标无图以及新房详情里的部分图标无图）
-#链家（①开屏 ②屏蔽更新）
-
-
-#———————学•习•类———————
-#印象笔记（误伤识堂_识堂话题 封面图）
-#扫描全能王开屏，误杀扫图转word等没网
-#127.0.0.1 open.camscanner.com
-#有道词典
-#有道精品课(误伤首页横幅图片，其他图未知)
-#学习通开屏，貌似没误杀
-#百词斩(①不知道②开屏误杀少量图片)
-
-
-#———————工•具•类———————
-#WiFi万能钥匙(尚网网络)
-#WiFi万能钥匙_好看
-#迅雷
-#工时记录
-#612咔叽(相机)，测试时没发现任何广告。不同于上面俩相机着实是开屏广告，这仨只是域名看着像广告。
-#夸克浏览器(①②更新提示缺一不可)
-#99手游加速器(测试时也没发现广告)
-#中国天气(①②信息流横幅广告，③右上角贴图)
-#2345系APP开屏广告和弹窗广告和更新
-#WPS
-#百度输入法上传你输入了什么，副作用云联想词加载不出来。
-#网页[美国地址生成器]弹窗广告①上面②中间弹窗③几乎铺满全屏的大弹窗
-#茄子快传(SHAREit)
-
-
-#———————其•他———————
-#智联招聘(开屏和部分广告图，开屏倒计时仍然要霸占3秒才走，误伤少量图标)，据说误杀聊天图片
-#127.0.0.1 storage-public.zhaopin.cn
-
-#Keep（①图②视频开屏广告，①会误伤用户头像、首页_活动无图）
-
-#百度网盘（①是开屏广告②网页分享页上半部分的广告图片）
-
-#邮箱大师（①是开屏，nex为主页的广告）
-
-#联通营业厅APP的开屏广告
-#中国电信
-
-#美柚(开屏&信息流)
-#宝宝树孕育，信息流+弹窗+开屏
-#127.0.0.1 yoyo.qq.com 掌上穿越火线开屏
-#蓝奏云分享页上的部分广告
-
-
-#——————影音•娱乐类——————
-#网易云音乐
-
-#小米·QQ音乐（前2未知，③是开屏广告）
-#QQ音乐
-#127.0.0.1 c6.y.qq.com  #更新？
-#127.0.0.1 base.music.qq.com  #更新？
-#酷我音乐（去开屏广告①②缺一不可，①会误伤主页的主banner轮播图，③是主页插入的广告如拼多多广告）
-#酷狗音乐（开屏还是搞不掉，新版好像突然沒了？）
-
-#喜马拉雅
-#蜻蜓FM
-
-#1905电影网
-#乐视
-#乐视TV
-
-#PPTV
-
-#芒果TV（首次打开显示没网，后面正常）
-#芒果TV-TV端
-
-#咪咕视频、音乐、阅读开屏和部分图片广告（②）
-
-#爱奇艺
-
-#优酷，①片头广告，不全，会漏。
-#酷喵影视（CIBN优酷）
-
-#云视听极光(腾讯视频电视端)
-#腾讯云视频极光测试250318
-#其它和其他端
-#酷云_电视广告数据
-
-#小米视频电视端
-#127.0.0.1 t2.market.mi-img.com
-#127.0.0.1 t1.market.mi-img.com
-#127.0.0.1 t1.a.market.xiaomi.com
-#127.0.0.1 t2.a.market.xiaomi.com
-
-#虎牙 24.04云更新后开屏和信息流都去不掉了
-#央视系广告
-#糖豆(广场舞)片头广告？
-#sooplive（韩国的直播APP，酷友要求添加的）
-
-
-#DNS，可能会导致hosts失效
-#127.0.0.1 httpdns.ocloud.heytapmobi.com
-#127.0.0.1 httpdns.ocloud.oppomobile.com
-#127.0.0.1 httpdns.push.heytapmobi.com
-#127.0.0.1 httpdns.push.oppomobile.com
-
-
-#腾讯优量汇广告
-#腾讯广告
-#127.0.0.1 h.trace.qq.com 误杀手游加速器功能页
-#腾讯！
-#127.0.0.1 aegis.qq.com  误杀手游加速器功能页
-#127.0.0.1 cgi.connect.qq.com  #据说误杀王者荣耀QQ登录，测试未发现异常；以及游戏120帧，未测。 据说安卓抖音异常？
-#127.0.0.1 dldir1.qq.com  #腾讯手游加速器开屏广告，误杀微信官网网页无法下载安卓版微信、微信视频号封面图和UP主头像。
-#127.0.0.1 dldir2.qq.com
-#127.0.0.1 dldir3.qq.com  #误杀欢乐麻将不少道具图标和角色装扮。
-#127.0.0.1 dldir4.qq.com
-#127.0.0.1 dldir5.qq.com
-#127.0.0.1 isee.weishi.qq.com #微视_短剧_短剧广场会没网
-#127.0.0.1 qqlogo.qq.com
-#127.0.0.1 h5.qzone.qq.com  #据说是腾讯文档首页横幅
-#h.trace.qq.com和aegis.qq.com必须一起放行，不然手游加速器一些功能界面明明能打开但是秒跳转显示没网。
-#QQ浏览器
-#127.0.0.1 qbuc.html5.qq.com  #底栏我的 的营销卡片和工具卡片
-#QQ
-#下载？
-#127.0.0.1 c.pc.qq.com  QQ群链接安全中转页无法直接点开
-#腾讯视频
-#127.0.0.1 static-res.qq.com  #260811测试看看是不是这条导致QQ人脸验证无法下载资源
-#欢乐麻将弹窗广告。两个都能单独屏蔽抽奖的弹窗广告(活动领奖励的弹窗未屏蔽)，第二个看起来还有别家用可能会误杀，好像是游戏资源下载
-#127.0.0.1 down.pandora.qq.com
-#隐私相关(GitHub扒)
-#127.0.0.1 access1.tpns.tencent.com  #会误杀酷安没有推送。 禁用腾讯推送相关组件也会没推送。
-
-
-#阿里广告
-#127.0.0.1 appdownload.alicdn.com  #闲鱼聊天发送图片界面初始化被卡住
-#127.0.0.1 download.alicdn.com 影响酷安部分阿里系APP下载，定制版淘宝更新资源包
-#淘宝广告
-#127.0.0.1 acs.m.taobao.com  #会导致一些新装的阿里系APP没网，连过网再禁却没事，可能是和初始化有关。阿里云盘卡开屏。
-#127.0.0.1 msgacs.m.taobao.com  淘宝和店铺聊天消息
-#ali-mama
-
-#京东广告
-#127.0.0.1 dg.k.jd.com #值得买无法跳转京东
-#127.0.0.1 img10.360buyimg.com #一号店开屏，但会误杀京东部分商品详情页的图。
-
-#百度广告
-#新浪新闻首页插入的广告封面图+视频
-#127.0.0.1 b.bdstatic.com  #一些图标，比如百家号的视频的播放暂停按钮▶️，不影响点击播放
-#127.0.0.1 sofire.baidu.com  #百度慧推,用户数据收集与分析,误伤贴吧lite的一键签到
-#127.0.0.1 code.bdstatic.com  误杀百度地图(V19)_底栏_周边
-#127.0.0.1 mbdp02.bdstatic.com  百家号打不开
-#百度音乐
-#贴吧
-#127.0.0.1 bj.bcebos.com  酷友反馈误杀理想汽车APP驻车照片。
-#百度视频
-#百度知道
-#百度安全、杀毒
-#吧/百度浏览器
-#baidu-soft/cleaner
-#baidu-soft/down
-#baidu-soft/hao123
-#百度网盘
-#百度智能云
-#度小满(金融)
-#隐私分析上报(GitHub扒)
-
-#网易系广告
-#127.0.0.1 ir-sdk.dun.163.com  网易云音乐用网易邮箱登录，验证帐号失败。
-#网易阅读
-
-#新浪
-#爱问
-#sina-icast
-#微博
-
-#搜狐搜狗
-#搜狐视频
-
-#奇虎360
-
-
-#穿山甲广告★
-
-#127.0.0.1 p3.douyinpic.com  #据说误伤抖音福袋和优惠券，我没号测试
-#127.0.0.1 p5.douyinpic.com
-#127.0.0.1 p11.douyinpic.com  #抖音头像
-#127.0.0.1 p26.douyinpic.com  #据说误伤抖音福袋和优惠券，我没号测试
-#127.0.0.1 p3-sign.douyinpic.com #评论图
-#127.0.0.1 p26-sign.douyinpic.com
-
-#番茄小说，v5.3禁用reading.snssdk.com和abtest-ch.snssdk.com和tnc3-alisc1.bytedance.com会全部没网，只放行reading.snssdk.com就好，但是会有领红包弹窗；放行tnc3和abtest禁用reading则初始化没网，过一下才好，但是没红包弹窗
-
-
-#127.0.0.1 reading.snssdk.com  #番茄小说v5.3初始化断网
-#127.0.0.1 haohuo.snssdk.com 抖音订单？
-#127.0.0.1 log.snssdk.com  #新安装的抖音同城、直播没网
-#127.0.0.1 f-cpay.snssdk.com 抖音月付
-
-
-#127.0.0.1 api.toutiaoapi.com  今日头条≈没网
-
-
-
-#海外字节系广告
-
-
-#TopOn广告(酷安用，不然信息流漏广告)
-
-#快手广告
-#127.0.0.1 ali2.a.yximgs.com  #快手评论区图片
-#127.0.0.1 tx2.a.yximgs.com  #据说是少部分评论图
-
-#UC
-
-
-#三星
-
-#苹果
-
-#荣耀
-
-#魅族
-#127.0.0.1 upush.meizu.com  #系统更新？
-
-#OPPO
-#OV真我Realme一加
-
-#VIVO
-#VIVO国际
-
-#小米广告
-#系统应用更新弹窗，比如下载管理、相册
-#软件安装验证相关
-#安全相关，每次装完APP都会连，可能有上报
-#安全相关，下载完文件触发
-#小米云扫描组件(搬运)
-#禁用后将无法云扫描病毒
-#屏蔽系统更新
-#小米rom下载加速（备用IP香港163.181.35.44，182.239.104.89，台北47.246.36.217，47.246.37.220）
-#快应用
-#127.0.0.1 api.comm.miui.com  #小米日历广告，误杀法定节假日数据更新
-#127.0.0.1  wtradv.market.xiaomi.com  #小米天气主页广告、央视天气预报和适宜XX卡片
-
-
-#反诈
-#政府平台(搬运)
-
-
-#微软广告
-
-#谷歌广告
-
-#油管推脸书P站
-
-#Spotify(音频广告去不掉)
-
-#SnapChat
-
-#——————墙外的广告商——————
-#乱七八糟
-
-#Adobe
-
-#91porn.com
-
-#亚马逊广告
-#亚马逊
-
-#Unity3D游戏引擎
-
-#雅虎广告
-
-# ADjust
-# Flurry
-# TrAdPlus
-# Crwdcntrl
-# Adnxs
-# AppLovin
-# Taboola
-# Inmobi
-# Branch营销
-# AppsFlyer营销
-# SuperSonicAds
-# Mtgglobals
-# Vungle
-
-#127.0.0.1 yandex.ru 【vpnify】底部横幅和弹窗，看上去会误杀很多俄罗斯的yandex网站的内容
-#从茄子快传(SHAREit)抓出的广告域名
-#————SHAREit End————
-
-
-#=========各大广告联盟=========
-#个推广告
-
-#极光推送
-
-#友盟广告
-#127.0.0.1 errlog.umeng.com
-#127.0.0.1 errlogos.umeng.com
-#127.0.0.1 errnewlog.umeng.com
-#127.0.0.1 errnewlogos.umeng.com
-#127.0.0.1 ossnt-errlog.umeng.com
-
-#TalkingData-数据、分析、广告
-#布里奇信息(酷安评论信息流广告用)
-#天目广告
-#贵士移动
-#上海游昆数据
-#袤博
-#讯飞营销云
-#趣盟广告
-#数字联盟
-#秒针广告
-#Mediav上海聚胜万合
-#irs01艾瑞数据
-#商助科技99click营销云
-#悠易广告
-#多盟广告
-#mmstat（阿里的广告追踪）
-#阿里巴巴-tanx
-#阿里巴巴-wrating
-#基调听云（数据监控）
-#杯子广告
-#127.0.0.1 sdk-api.beizi.biz  #据说123云盘卡开屏？反正我测试都没卡过。
-#白盒广告
-#国双科技 营销(几十条，懒得撸完它了)
-#新度博望(从贴吧抓出，好像是百度系的)
-#深圳素人网络
-#枫岚互联-广告营销
-#CNZZ数据
-#美数科技（腾讯手游加速器开屏用，AM图标）
-#软告移动广告交易平台
-#倍业科技
-#瑞狮网络
-#喆威
-#掌之淘信息
-#巨量引擎
-#优比客思(七猫小说开屏广告用)
-#济南维快营销
-#优推
-#Sigmob移动广告平台
-#章鱼移动-Octopus-移动广告平台
-#汇量科技
-#广东万唯_移动短视频广告
-
-#各种乱七八糟的广告商、广告联盟
-#乐播投屏及广告流
-
-
-#杂七杂八（不含开屏）
-#修改版应用被劫持的垃圾弹窗，帝落、改的贴吧、笔趣阁完美版等弹窗
-#U净，甚至可以考虑放行，广告不恶心，还是几条tips，禁用了反而难看。
 ! Title: AFWFV DD-AD list of DD-AD
 ! Last Modified: 2026-7-29 00:00:00
 ! Homepage: https://github.com/afwfv/DD-AD/
@@ -130754,6 +130609,148 @@ ff02::3		ip6-allhosts
 #未知来源 广告/日志
 #gamepass日志
 #杂七杂八
+! Title: DD-AD
+! Last Modified: 2026-10-30T11:32:23.266068361+08:00
+! Homepage: https://github.com/afwfv/DD-AD
+||_ad_content^
+||banner468x60^
+||-120-600^
+||-120_600_^
+||-120x600-^
+||-120x600^
+||-120x600_^
+||-160-600^
+||-160x600^
+||-160x600_^
+||-300-250^
+||-300x250_^
+||-300x600^
+||-460x68^
+||-468-100^
+||-468-60-^
+||-468-60^
+||-468-60_^
+||-468_60^
+||-468x60-^
+||-468x60^
+||-468x60_^
+||-468x70^
+||-468x80^
+||-468x80_^
+||-468x90^
+||-480x60-^
+||-480x60^
+||-480x60_^
+||-486x60^
+||-500x100^
+||-600x70^
+||-600x90-^
+||-720x90-^
+||-720x90^
+||-728-90-^
+||-728-90^
+||-728x90-^
+||-728x90^
+||-728x90_^
+||-729x91-^
+||-780x90-^
+||-980x60-^
+||-988x60^
+||_120_600^
+||_120_600_^
+||_120x240^
+||_120x500^
+||_120x600-^
+||_120x600^
+||_120x600_^
+||_125x600_^
+||_140x600^
+||_140x600_^
+||_150x700_^
+||_160-600^
+||_160_600^
+||_160_600_^
+||_160x300^
+||_160x300_^
+||_160x350^
+||_160x400^
+||_160x600-^
+||_160x600^
+||_160x600_^
+||_300-250-^
+||_300x250-^
+||_300x250^
+||_300x250_^
+||_300x600^
+||_300x600_^
+||_320x250_^
+||_323x120_^
+||_336x120^
+||_350_100^
+||_350_100_^
+||_350x100^
+||_400-80^
+||_400x60^
+||_400x68^
+||_420x80^
+||_420x80_^
+||_438x50^
+||_438x60^
+||_438x60_^
+||_460_60^
+||_460x60^
+||_468-60^
+||_468_60^
+||_468_60_^
+||_468_80^
+||_468_80_^
+||_468x060-^
+||_468x060^
+||_468x060_^
+||_468x100^
+||_468x100_^
+||_468x120^
+||_468x60-^
+||_468x60^
+||_468x60_^
+||_468x60b^
+||_468x80-^
+||_468x80^
+||_468x80_^
+||_468x90^
+||_468x90_^
+||_480_60^
+||_480_80_^
+||_480x60-^
+||_480x60^
+||_480x60_^
+||_486x60^
+||_486x60_^
+||_700_100_^
+||_700_150_^
+||_700_200_^
+||_720_90^
+||_720x90^
+||_720x90_^
+||_728-90^
+||_728-90_^
+||_728_90^
+||_728_90_^
+||_728x60^
+||_728x90-^
+||_728x90^
+||_728x90_^
+||_750x100^
+||_760x100^
+||_768x90_^
+||_800x100^
+||_800x80_^
+||-90mh-gg^
+||_dasiqq315^
+||_popads^
+||_tm11_pmt_^
+||_yad_jsonp_^
+||-bobo_recommend_^
 
 ! =========================
 ! 腾讯
