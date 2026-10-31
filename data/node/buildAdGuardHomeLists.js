@@ -5,7 +5,6 @@ const {
   parseRule,
   formatRule,
   hasDnsRewrite,
-  sanitizeModifiers,
 } = require("./rule_parser");
 
 const SHARD_COUNT = 128;
@@ -218,36 +217,6 @@ const getSuffixes = (domain) => {
     idx = domain.indexOf(".", idx + 1);
   }
   return suffixes;
-};
-
-const appendDenyallow = (original, children) => {
-  original = sanitizeModifiers(original);
-
-  const childList = [...new Set(children)].sort();
-  const dollarIdx = original.indexOf("$");
-
-  if (dollarIdx === -1) {
-    return sanitizeModifiers(`${original}$denyallow=${childList.join("|")}`);
-  }
-
-  const head = original.slice(0, dollarIdx);
-  const suffix = original.slice(dollarIdx + 1);
-  const parts = suffix.split(",");
-
-  const denyallowIdx = parts.findIndex((p) =>
-    p.trim().toLowerCase().startsWith("denyallow="),
-  );
-  if (denyallowIdx !== -1) {
-    const existingVal = parts[denyallowIdx].trim().slice("denyallow=".length);
-    const existingList = existingVal.split("|").filter(Boolean);
-    const merged = [...new Set([...existingList, ...childList])].sort();
-    parts[denyallowIdx] = `denyallow=${merged.join("|")}`;
-    return sanitizeModifiers(`${head}$${parts.join(",")}`);
-  }
-
-  return sanitizeModifiers(
-    `${head}$${suffix},denyallow=${childList.join("|")}`,
-  );
 };
 
 const buildAdGuardHomeLists = async (options) => {
@@ -473,49 +442,69 @@ const buildAdGuardHomeLists = async (options) => {
   );
 
   // ============================================================
-  // 第 1.6 步：$denyallow 原意转换（仅场景 A）+ 场景 B 独立输出
-  //  - 场景 A：白父域 coverSub + 黑子域 → 白父域加 $denyallow=黑子域
-  //            （必须保留，否则黑子域会被白父域放行）
+  // 第 1.6 步：白父域 + 黑子域 处理
+  //  - 场景 A：白父域 coverSub + 黑子域
+  //            ★ 不再合成 $denyallow；改为直接删除白父域，
+  //              让黑子域回到黑名单层级正常拦截，避免超长行 token too long。
+  //            ★ 若白父域来自强制规则（forced-rules.txt），跳过删除并追溯。
   //  - 场景 B：黑父域 coverSub + 白子域 → 白子域独立输出，不再合成
   //            若黑父域带 $important，则白子域也补 $important 才能覆盖
   // ============================================================
   console.log(
-    "开始 $denyallow 原意转换（白父域+黑子域）；黑父域+白子域改为独立输出...",
+    "开始处理白父域+黑子域（改为删除白父域放行拦截）；黑父域+白子域改为独立输出...",
   );
 
-  const denyallowParentWhite = new Map();
+  const whiteParentsWithBlackChildren = new Map();
+  // 保留空集合，第 2 步引用此集合不会命中，无副作用
   const denyallowProtectedBlack = new Set();
 
-  // 场景 A
+  // 场景 A：收集「白父域 → 其下黑子域集合」
   for (const [bDomain, bRule] of blackMap) {
     if (bRule.ip) continue;
     for (const suffix of getSuffixes(bDomain)) {
       const w = whiteMap.get(suffix);
       if (w && w.coverSub && !w.ip) {
-        if (!denyallowParentWhite.has(suffix)) {
-          denyallowParentWhite.set(suffix, new Set());
+        if (!whiteParentsWithBlackChildren.has(suffix)) {
+          whiteParentsWithBlackChildren.set(suffix, new Set());
         }
-        denyallowParentWhite.get(suffix).add(bDomain);
-        denyallowProtectedBlack.add(bDomain);
+        whiteParentsWithBlackChildren.get(suffix).add(bDomain);
       }
     }
   }
 
-  let denyallowWhiteCount = 0;
-  for (const [parentDomain, childSet] of denyallowParentWhite) {
+  // 场景 A：删除白父域（强制规则跳过）
+  let deletedWhiteParents = 0;
+  let deletedWhiteParentsSkippedPriority = 0;
+
+  for (const [parentDomain, childSet] of whiteParentsWithBlackChildren) {
     const wRule = whiteMap.get(parentDomain);
     if (!wRule) continue;
+
     const childList = [...childSet].sort();
     const oldOriginal = wRule.original;
-    wRule.original = appendDenyallow(oldOriginal, childList);
-    denyallowWhiteCount++;
+
     if (prioritySet.has(oldOriginal)) {
-      prioritySet.delete(oldOriginal);
-      prioritySet.add(wRule.original);
+      deletedWhiteParentsSkippedPriority++;
+      if (priorityProtectWriter) {
+        await priorityProtectWriter.write(
+          `[删白父-跳过] @@${parentDomain} 是强制规则，保留（其下黑子域 [${childList.join("|")}] 将被放行）`,
+        );
+      }
+      continue;
     }
+
+    if (nowhitelistWriter) {
+      await nowhitelistWriter.write(
+        `${oldOriginal}  # 其下存在黑子域 [${childList.join("|")}]，删除白父域以放行拦截`,
+      );
+      nowhitelistCount++;
+    }
+    whiteMap.delete(parentDomain);
+    deletedWhiteParents++;
+
     if (priorityProtectWriter) {
       await priorityProtectWriter.write(
-        `[$denyallow-A] @@${parentDomain} 加 denyallow=[${childList.join("|")}]`,
+        `[删白父] @@${parentDomain} 因黑子域 [${childList.join("|")}] 被删除`,
       );
     }
   }
@@ -541,8 +530,9 @@ const buildAdGuardHomeLists = async (options) => {
   }
 
   console.log(
-    `$denyallow 原意转换完成：白父域 ${denyallowWhiteCount} 条，` +
-      `保护黑子域 ${denyallowProtectedBlack.size} 个；` +
+    `白父域处理完成：删除白父域 ${deletedWhiteParents} 条` +
+      `（其下黑子域改为正常拦截），` +
+      `强制规则保留 ${deletedWhiteParentsSkippedPriority} 条；` +
       `场景B 白子域独立输出并补 important ${denyallowImportantBoost} 条`,
   );
 
@@ -561,6 +551,7 @@ const buildAdGuardHomeLists = async (options) => {
       continue;
     }
     if (denyallowProtectedBlack.has(bDomain)) {
+      // 集合始终为空，此处不会命中；保留以兼容原逻辑
       step2Progress++;
       continue;
     }
@@ -734,7 +725,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 6 步：拆白名单
-  // ★ 不再需要 denyallowProtectedWhite，白子域独立存在，不受黑父域覆盖影响
+  // ★ 白子域独立存在，不受黑父域覆盖影响
   // ============================================================
   console.log("开始拆白名单...");
   const normalWhite = new Map();
@@ -998,9 +989,10 @@ const buildAdGuardHomeLists = async (options) => {
     whitePriorityProtected,
     sameDomainDeleteBlack: sameDomainDeleteBlack.length,
     sameDomainDeleteWhite: sameDomainDeleteWhite.length,
-    denyallowWhiteCount,
+    // ★ 由 $denyallow 方案改为「删除白父域」方案
+    deletedWhiteParents,
+    deletedWhiteParentsSkippedPriority,
     denyallowImportantBoost,
-    denyallowProtectedBlack: denyallowProtectedBlack.size,
     priorityProtectFile,
   };
 
@@ -1014,8 +1006,8 @@ const buildAdGuardHomeLists = async (options) => {
       `star丢弃 ${stats.dropRewriteCount}），` +
       `强制规则 ${stats.priorityCount} 条，` +
       `同域处理：删黑 ${stats.sameDomainDeleteBlack}，删白 ${stats.sameDomainDeleteWhite}，` +
-      `$denyallow：白父 ${stats.denyallowWhiteCount}，` +
-      `保护黑子 ${stats.denyallowProtectedBlack}，` +
+      `删白父域 ${stats.deletedWhiteParents}` +
+      `（强制保留 ${stats.deletedWhiteParentsSkippedPriority}），` +
       `场景B important 补 ${stats.denyallowImportantBoost}，` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
