@@ -473,16 +473,20 @@ const buildAdGuardHomeLists = async (options) => {
   );
 
   // ============================================================
-  // 第 1.6 步：$denyallow 原意转换
+  // 第 1.6 步：$denyallow 原意转换（仅场景 A）+ 场景 B 独立输出
+  //  - 场景 A：白父域 coverSub + 黑子域 → 白父域加 $denyallow=黑子域
+  //            （必须保留，否则黑子域会被白父域放行）
+  //  - 场景 B：黑父域 coverSub + 白子域 → 白子域独立输出，不再合成
+  //            若黑父域带 $important，则白子域也补 $important 才能覆盖
   // ============================================================
-  console.log("开始 $denyallow 原意转换（含精确锚点）...");
+  console.log(
+    "开始 $denyallow 原意转换（白父域+黑子域）；黑父域+白子域改为独立输出...",
+  );
 
   const denyallowParentWhite = new Map();
-  const denyallowParentBlack = new Map();
   const denyallowProtectedBlack = new Set();
-  const denyallowProtectedWhite = new Set();
 
-  // 场景 A：白父域 + 黑子域（含 |）
+  // 场景 A
   for (const [bDomain, bRule] of blackMap) {
     if (bRule.ip) continue;
     for (const suffix of getSuffixes(bDomain)) {
@@ -493,21 +497,6 @@ const buildAdGuardHomeLists = async (options) => {
         }
         denyallowParentWhite.get(suffix).add(bDomain);
         denyallowProtectedBlack.add(bDomain);
-      }
-    }
-  }
-
-  // 场景 B：黑父域 + 白子域（保留 coverSub 检查）
-  for (const [wDomain, wRule] of whiteMap) {
-    if (!wRule.coverSub || wRule.ip) continue;
-    for (const suffix of getSuffixes(wDomain)) {
-      const b = blackMap.get(suffix);
-      if (b && b.coverSub && !b.ip) {
-        if (!denyallowParentBlack.has(suffix)) {
-          denyallowParentBlack.set(suffix, new Set());
-        }
-        denyallowParentBlack.get(suffix).add(wDomain);
-        denyallowProtectedWhite.add(wDomain);
       }
     }
   }
@@ -531,30 +520,30 @@ const buildAdGuardHomeLists = async (options) => {
     }
   }
 
-  let denyallowBlackCount = 0;
-  for (const [parentDomain, childSet] of denyallowParentBlack) {
-    const bRule = blackMap.get(parentDomain);
-    if (!bRule) continue;
-    const childList = [...childSet].sort();
-    const oldOriginal = bRule.original;
-    bRule.original = appendDenyallow(oldOriginal, childList);
-    denyallowBlackCount++;
-    if (prioritySet.has(oldOriginal)) {
-      prioritySet.delete(oldOriginal);
-      prioritySet.add(bRule.original);
-    }
-    if (priorityProtectWriter) {
-      await priorityProtectWriter.write(
-        `[$denyallow-B] ||${parentDomain} 加 denyallow=[${childList.join("|")}]`,
-      );
+  // 场景 B：不再合成 denyallow，白子域独立输出
+  //   若父黑域带 $important，则白子域必须也 $important 才能覆盖
+  let denyallowImportantBoost = 0;
+  for (const [wDomain, wRule] of whiteMap) {
+    if (wRule.ip || wRule.important) continue;
+    for (const suffix of getSuffixes(wDomain)) {
+      const b = blackMap.get(suffix);
+      if (b && b.coverSub && !b.ip && b.important) {
+        wRule.important = true;
+        denyallowImportantBoost++;
+        if (priorityProtectWriter) {
+          await priorityProtectWriter.write(
+            `[$denyallow-B] @@${wDomain} 独立输出，父黑域 important，白子域补 $important`,
+          );
+        }
+        break;
+      }
     }
   }
 
   console.log(
     `$denyallow 原意转换完成：白父域 ${denyallowWhiteCount} 条，` +
-      `黑父域 ${denyallowBlackCount} 条，` +
-      `保护黑子域 ${denyallowProtectedBlack.size} 个，` +
-      `保护白子域 ${denyallowProtectedWhite.size} 个`,
+      `保护黑子域 ${denyallowProtectedBlack.size} 个；` +
+      `场景B 白子域独立输出并补 important ${denyallowImportantBoost} 条`,
   );
 
   // ============================================================
@@ -628,10 +617,6 @@ const buildAdGuardHomeLists = async (options) => {
   const toDeleteWhite = [];
   for (const [wDomain, wRule] of whiteMap) {
     if (wRule.important) {
-      whitePriorityProtected++;
-      continue;
-    }
-    if (denyallowProtectedWhite.has(wDomain)) {
       whitePriorityProtected++;
       continue;
     }
@@ -749,6 +734,7 @@ const buildAdGuardHomeLists = async (options) => {
 
   // ============================================================
   // 第 6 步：拆白名单
+  // ★ 不再需要 denyallowProtectedWhite，白子域独立存在，不受黑父域覆盖影响
   // ============================================================
   console.log("开始拆白名单...");
   const normalWhite = new Map();
@@ -760,11 +746,7 @@ const buildAdGuardHomeLists = async (options) => {
   whiteMap.clear();
 
   const { kept: normalWhiteDomains, removed: normalWhiteRemoved } =
-    removeRedundantSubdomains(
-      normalWhite,
-      prioritySet,
-      denyallowProtectedWhite,
-    );
+    removeRedundantSubdomains(normalWhite, prioritySet, null);
 
   for (const [childDomain, parentDomain] of normalWhiteRemoved) {
     const childRule = normalWhite.get(childDomain);
@@ -1017,9 +999,8 @@ const buildAdGuardHomeLists = async (options) => {
     sameDomainDeleteBlack: sameDomainDeleteBlack.length,
     sameDomainDeleteWhite: sameDomainDeleteWhite.length,
     denyallowWhiteCount,
-    denyallowBlackCount,
+    denyallowImportantBoost,
     denyallowProtectedBlack: denyallowProtectedBlack.size,
-    denyallowProtectedWhite: denyallowProtectedWhite.size,
     priorityProtectFile,
   };
 
@@ -1033,8 +1014,9 @@ const buildAdGuardHomeLists = async (options) => {
       `star丢弃 ${stats.dropRewriteCount}），` +
       `强制规则 ${stats.priorityCount} 条，` +
       `同域处理：删黑 ${stats.sameDomainDeleteBlack}，删白 ${stats.sameDomainDeleteWhite}，` +
-      `$denyallow：白父 ${stats.denyallowWhiteCount}，黑父 ${stats.denyallowBlackCount}，` +
-      `保护黑子 ${stats.denyallowProtectedBlack}，保护白子 ${stats.denyallowProtectedWhite}，` +
+      `$denyallow：白父 ${stats.denyallowWhiteCount}，` +
+      `保护黑子 ${stats.denyallowProtectedBlack}，` +
+      `场景B important 补 ${stats.denyallowImportantBoost}，` +
       `noblacklist ${stats.noblacklistCount} 条，` +
       `nowhitelist ${stats.nowhitelistCount} 条，` +
       `被压制白名单 ${stats.suppressedWhiteCount} 条，` +
