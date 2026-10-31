@@ -2,9 +2,9 @@
 ! Title: 林林allow
 ! Homepage: https://github.com/LINJIANPEI/DnsRules/
 ! Expires: 1 Hours
-! Version: 2026-11-01 00:17:26（北京时间）
+! Version: 2026-11-01 00:29:56（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 3695
+! Total count: 3685
 @@|0.gravatar.com^$important
 @@|1.gravatar.com^$important
 @@|2.gravatar.com^$important
@@ -256,7 +256,6 @@
 @@||adtrack.xiaojukeji.com^$important
 @@||adv.bloop.info^
 @@||adv.ccb.com^
-@@||adv.sec.miui.com^
 @@||advert.kf5.com^
 @@||advertisement.taobao.com^
 @@||adverts.1foo.com^
@@ -453,8 +452,8 @@
 @@||app.bilibili.com^$important
 @@||app.biligame.com^
 @@||app.chat.xiaomi.net^
-@@||app.home.360.cn^
-@@||app.huabao.360.cn^
+@@||app.home.360.cn^$important
+@@||app.huabao.360.cn^$important
 @@||app.m.kuaishou.com^
 @@||app.market.xiaomi.com^$important
 @@||app.mi.com^
@@ -817,7 +816,7 @@
 @@||cloud.oneplus.com^
 @@||cloud.oppo.com^
 @@||cloud.realme.com^
-@@||cloud.safe.360.cn^
+@@||cloud.safe.360.cn^$important
 @@||cloud.video.taobao.com^$important
 @@||cloud.xunlei.com^
 @@||cloudauth-device-dualstack.ap-southeast-1.aliyuncs.com^
@@ -833,7 +832,7 @@
 @@||cloudauth.cn-beijing.aliyuncs.com^
 @@||cloudauth.cn-shanghai.aliyuncs.com^
 @@||cloudcache.tencent-cloud.cn^
-@@||cloudcontrol.live.360.cn^
+@@||cloudcontrol.live.360.cn^$important
 @@||clouddrive-activity.uc.cn^$important
 @@||cloudpush.aliyuncs.com^
 @@||cloudsearch.googleapis.com^$important
@@ -842,7 +841,6 @@
 @@||cm-beacon.nakanohito.jp^
 @@||cm-h.phncdn.com^
 @@||cm-widget.nakanohito.jp^
-@@||cm.bilibili.com^
 @@||cm.kalay.net.cn^
 @@||cms-assets.unrealengine.com^
 @@||cms-bucket.ws.126.net^
@@ -946,7 +944,7 @@
 @@||d.bmcx.com^$important
 @@||d.docs.live.net^$important
 @@||d.ifengimg.com^
-@@||d.mse.360.cn^
+@@||d.mse.360.cn^$important
 @@||d.qchannel03.cn^
 @@||d.sinaimg.cn^
 @@||d.toutiao.com^
@@ -977,7 +975,6 @@
 @@||datarouter.ol.epicgames.com^$important
 @@||datastorage-public-service-liveegs.live.use1a.on.epicgames.com^$important
 @@||dc.services.visualstudio.com^
-@@||dc.sigmob.cn^
 @@||dcms.1688.com^
 @@||ddys.pro^
 @@||de.pandora.xiaomi.com^
@@ -1055,7 +1052,7 @@
 @@||dorado.xiaojukeji.com^
 @@||dorangesource.alicdn.com^
 @@||doris.yidianzixun.com^
-@@||dot.360.cn^
+@@||dot.360.cn^$important
 @@||down-tencent.huorong.cn^
 @@||down-update.qq.com^$important
 @@||down.anticheatexpert.com^
@@ -1085,7 +1082,7 @@
 @@||downpack.baidu.com^
 @@||downum.game.uc.cn^$important
 @@||downv6.qq.com^
-@@||dp.push.dc.360.cn^
+@@||dp.push.dc.360.cn^$important
 @@||dpm.demdex.net^
 @@||dpmtpush.dianping.com^
 @@||dpurl.cn^
@@ -1161,7 +1158,6 @@
 @@||ereg.adobe.com^
 @@||erp.jd.com^
 @@||err.taobao.com^
-@@||errlog.umeng.com^
 @@||errnewlog.umeng.com^$important
 @@||etl-xlmc-ssl.sandai.net^
 @@||etl-xlmc-ssl.xunlei.com^
@@ -1189,7 +1185,7 @@
 @@||facepic.qidian.com^
 @@||fanqienovel.com^
 @@||fastcdn.hoyoverse.com^
-@@||fastconn-api.iot.360.cn^
+@@||fastconn-api.iot.360.cn^$important
 @@||fastly-download.epicgames.com^$important
 @@||fba.apple.com^$important
 @@||fc.kejiweixun.com^$important
@@ -1287,7 +1283,6 @@
 @@||gate.first-id.fr^
 @@||gateway.icloud.com^$important
 @@||gateway.kugou.com^
-@@||gator.volces.com^$important
 @@||gcable.com.cn^$important
 @@||gdfp.gifshow.com^
 @@||gdmf-ados.apple.com^$important
@@ -1351,7 +1346,6 @@
 @@||gweb-gettingstartedguide.appspot.com^$important
 @@||gx-target-experiments-frontend-api.gx.nvidia.com^
 @@||h-adashx.ut.ele.me^
-@@||h-adashx.ut.taobao.com^
 @@||h.163.com^
 @@||h.trace.qq.com^
 @@||h18.update.netease.com^
@@ -1368,7 +1362,7 @@
 @@||h5.kugou.com^
 @@||h5.m.goofish.com^
 @@||h5.m.taobao.com^$important
-@@||h5.mse.360.cn^
+@@||h5.mse.360.cn^$important
 @@||h5.qzone.qq.com^
 @@||h5.sinaimg.cn^
 @@||h5.sm.cn^$important
@@ -1796,8 +1790,6 @@
 @@||localads.chengzijianzhan.cn^
 @@||lockororder.netlify.app^
 @@||locprivate-tostc.sf-express.com^$important
-@@||log-api.pangolin-sdk-toutiao-b.com^
-@@||log-api.pangolin-sdk-toutiao.com^
 @@||log-upload.mihoyo.com^
 @@||log.dailygn.com^$important
 @@||log.mmstat.com^
@@ -1955,10 +1947,10 @@
 @@||mcs.ele.me^
 @@||mcs.snssdk.com^
 @@||mcs.zijieapi.com^$important
-@@||md.openapi.360.cn^
+@@||md.openapi.360.cn^$important
 @@||mdevstat.qqlive.qq.com^
 @@||mdgram.app^
-@@||mdm.openapi.360.cn^
+@@||mdm.openapi.360.cn^$important
 @@||mdmenrollment.apple.com^$important
 @@||me-api.jd.com^
 @@||med-fe.cdn.bcebos.com^
@@ -2102,7 +2094,7 @@
 @@||music.douyin.com^
 @@||musician.kugou.com^
 @@||mv6.music.tc.qq.com^
-@@||mvconf.f.360.cn^
+@@||mvconf.f.360.cn^$important
 @@||mvod.itunes.apple.com^
 @@||mwappimgs.cc^
 @@||mwfimsvfast2.cc^
@@ -2286,7 +2278,6 @@
 @@||p01-ubiquity.icloud.com^
 @@||p1-dcd.byteimg.com^
 @@||p1-lm.adbkwai.com^
-@@||p1-lm.adukwai.com^
 @@||p1-sign.douyinpic.com^
 @@||p1-tt.byteimg.com^
 @@||p1.bdxiguaimg.com^$important
@@ -2300,7 +2291,6 @@
 @@||p16-tiktokcdn-com.akamaized.net^
 @@||p2-game.kskwai.com^$important
 @@||p2-lm.adbkwai.com^
-@@||p2-lm.adukwai.com^
 @@||p26-sign.bdxiguaimg.com^$important
 @@||p26-sign.douyinpic.com^
 @@||p26-sign.toutiaoimg.com^
@@ -2335,7 +2325,6 @@
 @@||p3.dcarimg.com^
 @@||p3.douyinpic.com^
 @@||p3.ssl.qhimg.com^
-@@||p4-ad.adukwai.com^
 @@||p47-buy.itunes.apple.com^
 @@||p5-auto-sign.dcarimg.com^
 @@||p5-auto.dcarimg.com^
@@ -2391,7 +2380,7 @@
 @@||partnerservices.getmicrosoftkey.com^$important
 @@||party.163.com^
 @@||passport.2345.com^
-@@||passport.360.cn^
+@@||passport.360.cn^$important
 @@||passport.baidu.com^
 @@||passport.bilibili.com^
 @@||passport.biligame.com^
@@ -2425,7 +2414,7 @@
 @@||pdds-c1-cdn.uc.cn^
 @@||pdds.ucweb.com^
 @@||pepsico.com.cn^
-@@||pf.s.360.cn^
+@@||pf.s.360.cn^$important
 @@||pfga0.market.xiaomi.com^
 @@||pg-bootstrap.itunes.apple.com^$important
 @@||pgdt.gtimg.cn^$important
@@ -2516,7 +2505,7 @@
 @@||prod.msocdn.com^$important
 @@||profile-avatar.csdnimg.cn^
 @@||profile.csdnimg.cn^
-@@||profile2.se.360.cn^
+@@||profile2.se.360.cn^$important
 @@||promo.gramedia.com^
 @@||protection.office.com^$important
 @@||proto2ad.durasite.net^
@@ -2559,7 +2548,7 @@
 @@||py2.qlogo.cn^
 @@||pzdown.laomaotao.com^
 @@||q.dmsys.com^
-@@||q3.jia.360.cn^
+@@||q3.jia.360.cn^$important
 @@||qappcenterv6.3g.qq.com^
 @@||qcaptcha.so.com^
 @@||qcloudimg.tencent-cloud.cn^
@@ -2629,6 +2618,7 @@
 @@||render-prod-backup-tile.amap.com^
 @@||render.amap.com^
 @@||report.dingtalk.com^$important
+@@||report.passport.360.cn^$important
 @@||report.qqweb.qq.com^
 @@||report.taptapdada.com^
 @@||reports.adguard.com^
@@ -2678,6 +2668,7 @@
 @@||s.click.taobao.com^$important
 @@||s.click.tmall.com^
 @@||s.img.mix.sina.com.cn^
+@@||s.mvconf.f.360.cn^$important
 @@||s.mzstatic.com^$important
 @@||s.optnx.com^
 @@||s.pximg.net^
@@ -2738,18 +2729,18 @@
 @@||sbanh.com^
 @@||sbfast.com^
 @@||sbfull.com^
-@@||scan.call.f.360.cn^
+@@||scan.call.f.360.cn^$important
 @@||scene.cup.com.cn^
 @@||school.apple.com^$important
 @@||scone-pa.clients6.google.com^$important
 @@||scriptcat.org^
 @@||sdk-api.beizi.biz^
 @@||sdk.jinrishici.com^
-@@||sdk.live.360.cn^
+@@||sdk.live.360.cn^$important
 @@||sdk.mihoyo.com^
 @@||sdk.open.talk.gepush.com^$important
 @@||sdk.ptqy.gitv.tv^
-@@||sdk.s.360.cn^
+@@||sdk.s.360.cn^$important
 @@||sdk.xyapi.game.qq.com^
 @@||sdkapi.sms.mob.com^
 @@||se2.360simg.com^
@@ -2822,7 +2813,7 @@
 @@||skydrivesync.policies.live.net^
 @@||sl.hpplay.cn^
 @@||slapp-tk.oray.com^
-@@||smart.360.cn^
+@@||smart.360.cn^$important
 @@||smartcard.apps.coloros.com^$important
 @@||smarthome-drcn.dbankcdn.com^
 @@||smartop-sdkapi.jiguang.cn^
@@ -2854,7 +2845,7 @@
 @@||spclient.wg.spotify.com^$important
 @@||spcsz.cdn.bcebos.com^
 @@||speech.platform.bing.com^
-@@||speed.live.360.cn^
+@@||speed.live.360.cn^$important
 @@||sponsor.nitropay.com^
 @@||spoprod-a.akamaihd.net^$important
 @@||sports.163.com^
@@ -2925,7 +2916,7 @@
 @@||static.qiyi.com^
 @@||static.res.qq.com^
 @@||static.spankbang.com^
-@@||static.tieba.baidu.com^
+@@||static.tieba.baidu.com^$important
 @@||static.woozooo.com^
 @@||static.ws.126.net^
 @@||static.xmcdn.com^
@@ -2972,7 +2963,7 @@
 @@||subscription.iqiyi.com^
 @@||suconfig.apple.com^$important
 @@||sug.browser.miui.com^
-@@||sug.so.360.cn^
+@@||sug.so.360.cn^$important
 @@||sugar.zhihu.com^
 @@||suggestion.baidu.com^
 @@||sugs.m.sm.cn^
@@ -3340,7 +3331,7 @@
 @@||webstatic.nero.com^
 @@||webtoonscan.com^
 @@||webzjcaptcha.reg.163.com^
-@@||weishi.360.cn^
+@@||weishi.360.cn^$important
 @@||wenxue.iqiyi.com^
 @@||wg.wavee.cn^
 @@||wgo.mmstat.com^
@@ -3370,7 +3361,6 @@
 @@||ws.ribaoapi.com^
 @@||ws.school.apple.com^$important
 @@||wsdl.360safe.com^
-@@||wtradv.market.xiaomi.com^
 @@||wus-firstpartyapps.oaspapps.com^$important
 @@||wuxia.163.com^
 @@||ww1.lanzous.com^
@@ -3387,7 +3377,7 @@
 @@||www.163.com^
 @@||www.17173.com^
 @@||www.336mn.com^
-@@||www.360.cn^
+@@||www.360.cn^$important
 @@||www.360kuai.com^
 @@||www.360simg.com^
 @@||www.4399.cn^
