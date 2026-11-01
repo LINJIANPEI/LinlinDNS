@@ -68,7 +68,7 @@
 
 
 
-! Version:    最后同步时间: 2026-10-31 01:15:04
+! Version:    最后同步时间: 2026-11-01 01:15:05
 ! Total count: 325
 #放行单
 #只适合海哥规则
@@ -160,88 +160,10 @@
 # 更新时间：2026-10-28
 #************************************************************************#
 
-! Title: sosel 防误杀白名单(各源@@例外 + 白名单订阅源[风险剔除] + 人工allow_extra, 去重)
-! Compiled: 2026-10-10 20:20 UTC  (counts re-verified 2026-10-25 03:57; rules appended manually since)
-! Allow domains: 6141  wildcard/regex: 182  (total 6323)
-
-
-
-
-
-
-
-
-
-
-# ADBLOCK-20261022 ||gator.volces.com^
-# ADBLOCK-20261022 ||mcs.zijieapi.com^
-# ADBLOCK-20261022 ||mssdk.volces.com^
-# ★ 2026-10-18【主代理】example.com / example.org 是 RFC 2606 保留的演示域名。
-# 上游 hg1.txt 第 5742 行有 `||example.com^`，会把这两个**文档示例域名**拦掉，
-# 导致「我被拦了什么」里出现用户根本没访问过的域名，看起来像误杀。
-# 直接放行，不需要重启 AdGuardHome（白名单按 filters_update_interval 自动重拉）。
-# ★ 2026-10-18【主代理】神州租车（反馈 8d7d3b0d「接入DNS后打开神州租车会提示接入数据失败」）
-# 实测：apiproxy / dmonitor / netmanager / netport.zuche.com 被 hg1.txt 的
-# `||zuche.com^` 全部拦掉，App 拉不到接口数据就报"接入失败"。
-# 这些是**租车主流程的接口**，不是广告，必须放行。
-# ★ 写法：本文件是 whitelist_filters 的订阅源，**直接写 || 就代表放行**，
-#   ⛔ 不要写成 @@|| —— 那是"例外规则"语法，用在这里是多余的
-#   （本文件既有 6255 条全部是 || 形式，我第一版加了 @@ 是错的，已改回）。
-# ★ 2026-10-18【主代理】起点读书（反馈 f14cc3b2「qidian.qpic.cn放行，段评论头像被拦截无法加载」）
-# hg1.txt 第 9721 行有 `||qidian.qpic.cn^`，而白名单源文件里**没有**它
-# （只有 qidian.gtimg.com 等 12 条别的），放行一直只写在 yaml 的 user_rules 里。
-# 与 zuche 同一条手法：补进白名单订阅源，多一层冗余。
-# ★ 2026-10-18【主代理 · 站长：「白名单放行率有点高了」】
-# 已删除 `||douyincdn.com^`：
-#   · 实测它一条吃掉全部白名单命中的 49.8%（98,913 次 / 200MB 样本）
-#   · 而 douyincdn 在拦截列表 hg1 里 **0 命中** ⇒ 一次都没救回任何东西
-#   · 它又是父域级规则（覆盖整棵子树）⇒ 把大量"本来正常"的解析
-#     算成了"白名单放行"，让首页那个比例虚高
-# 文件里已有的精确子域规则（pull-flv-*.douyincdn.com.* 等）全部保留。
-# ⛔ 其余父域规则**本轮不动** —— 每条都要单独验证，不混在一起改。
-# ★ 2026-10-18【主代理 · 反馈 369daba9「微博的开屏广告没有拦截成功」】
-# 已删除两条：
-#   `||weibo.com^`        —— 覆盖掉 hg1 里 19 条微博广告子域拦截规则
-#   `||sax.sina.com.cn^`  —— hg1 想拦它，白名单却显式放行（疑似误加）
-# 实测依据（querylog 尾部 200MB）：微博域 185 条 reason=1、0 条 reason=3
-#   ⇒ 从来没拦过。开屏广告真实链路（*.uve.weibo.com / *.biz.weibo.com）
-#     全部是 reason=1 被放行。
-# ⛔ 保留 `||weibo.cn^` 与 `||sina.com.cn^`：它们护着 IM/登录/网页，不该删。
-# ⚠️ 残留缺口：biz.weibo.com 广告族根本不在 hg1 里，删白名单后仍会解析，
-#   要彻底拦需另行补规则（下一轮）。
-# 2026-10-18 主代理：已删 4 条广告域放行规则
-#   （小米追踪 / 小米广告 / 小米商店广告 / 百度贴吧）
-#   实测：这四个域名命中白名单时 Reason=1，
-#   而 hg1 拦截列表里同时有它们 ⇒ 删掉放行后自然被拦。
-#   ⛔ 保留百度网盘（业务，不能砍）。
-# ⚠️ 本段注释故意不写任何规则原文：
-#   规则解析器会把注释里的域名当成真规则（已踩坑）。
-# 2026-10-18 主代理：已删 3 条父域放行规则（小米、MIUI、百度）
-#   理由：父域会放行整棵子域树，把 hg1 里那批广告子域的拦截规则全顶掉了。
-#   前提检查：hg1 里并没有拦这三个父域本身
-#   ⇒ 删掉后主站、登录、云服务照常，只有广告子域开始被拦。
-#   白名单里仍保留各子域的精确放行（小米 85 / MIUI 42 / 百度 86 条）。
-# ⚠️ 本段注释故意不写规则原文 —— 解析器会把注释里的域名当成规则。
-# 2026-10-18 主代理：恢复百度贴吧主域放行
-#   原因：反馈只说「贴吧里面的广告还在」，不是说贴吧打不开。
-#   上一步我删了它 ⇒ 实测整站解析失败 ⇒ **过度拦截**，比漏拦更糟。
-#   贴吧里的广告来自别的域名，那些已经拦住了。
-# 2026-10-18 主代理：已删小米商店父域放行规则
-#   理由：它放行整棵子域树，把 hg1 里 5 个广告子域的拦截规则全顶掉了。
-#   前提检查：hg1 里 **没有** 拦该商店主域本身（命中 0 条），
-#   且白名单里已有 **38 条精确子域放行**。
-#   ⇒ 删后商店主域与已放行子域照常，只有广告子域开始被拦。
-# ⚠️ 本段注释故意不写规则原文 —— 解析器会把注释里的域名当成规则。
-# 2026-10-18 主代理：已删 7 条通配符父域放行（广告/埋点/推送通道）
-#   腾讯广告投放、腾讯出海广告 SDK、美团广告埋点、
-#   腾讯游戏 CDN 埋点、个推推送、小米应用商店（含子域通配）。
-# ⛔ 保留 microsoft / blob.core.windows.net / dbankcloud / hicloud /
-#   music.126.net / lianjia 等业务必需项（删了会大面积断网）。
-# ⚠️ 本段注释故意不写规则原文。
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
 ! by: 酷安@那个谁520
-! Last Updated: 2026-10-31 18:59:37（北京时间）
+! Last Updated: 2026-11-01 00:49:36（北京时间）
 ! Total count: 4116
 ! ==============================================
 ! 📋 规则来源：大萌主
@@ -1383,14 +1305,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
-! Checksum: MTc5MzQ2MjE3OQo=
+! Checksum: MTc5MzQ4OTIzMgo=
 ! Title: trli's Ad Filter for Pro for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261031-7
-! TimeUpdated: 2026-10-31T23:56:19+08:00
+! Version: 20261101-2
+! TimeUpdated: 2026-11-01T07:27:12+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
-! Total: 11643040
+! Total: 11655471
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
@@ -1498,15 +1420,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |wpjslib-chunk-notification.js^
 |www.geo-ip.js^
 |youtubeblacklist.txt^
-! Checksum: MTc5MzQ2MjQ3MAo=
+! Checksum: MTc5MzQ4OTk4Mgo=
 ! Title: trli's Ad Filter for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261101-0
-! TimeUpdated: 2026-11-01T00:01:10+08:00
+! Version: 20261101-2
+! TimeUpdated: 2026-11-01T07:39:42+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-lite
-! Total: 11392407
-|0x1b532a.map^
+! Total: 10892054
 |120-600.gif^
 |120x500.gif^
 |120x600.gif^
@@ -1553,7 +1474,6 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |blockeverything.txt^
 |bootstrap-cookie-consent.js^
 |com.yxcorp.gifshow.map^
-|components.map^
 |cookie-consent.es5.min.js^
 |cookie-use-policy.js^
 |cookiebanner.min.js^
@@ -1572,7 +1492,6 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |crypta.js^
 |ddh.ppl.mybluehost.meforumoptionstemplateindex2.html^
 |deb.html^
-|dogcsdogcs.js^
 |edmonton.webp^
 |ethmerge.gif^
 |fws.ppl.mybluehost.meexcliuindex2.html^
@@ -1588,17 +1507,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |jquery.smartcookie.min.js^
 |jznr-9174-12.html^
 |login.html^
-|logins.json^
 |n.2.1.js^
 |nanogdpr.min.js^
 |networkeip.promilakawebguneindex2.html^
-|package-lock.json^
 |piao.js^
 |playstation-193903.html^
 |pub-eda900fe370543e4b9aa817c09102c34.r2.devsignin.html^
 |sc-f6eade8.js^
 |second-blocklist.txt^
-|sections.map^
 |software-103677.html^
 |third-youtube-blocklist.txt^
 |topad.html^
@@ -2244,9 +2160,9 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 !
 ! Title: CHN: anti-AD
 ! Description: List for blocking ads in the Chinese region. Aims at privacy protection.
-! Version: 1.0.18.38
+! Version: 1.0.18.39
 ! Homepage: https://anti-ad.net/
-! Last modified: 2026-10-30T13:13:09.592Z
+! Last modified: 2026-10-31T22:09:59.656Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -3324,11 +3240,11 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 @@||guokr.com/apis/flowingboard/item/m_home_
 @@||developer.apple.com$generichide
 @@||zhihu-web-analytics.zhihu.com/api/v2/za/payload-verification
-! Checksum: MTc5MzM4MjQ3Mgo=
+! Checksum: MTc5MzQ2NTgzMQo=
 ! Title: trli's Ad Filter Youtube for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261031-0
-! TimeUpdated: 2026-10-31T01:47:52+08:00
+! Version: 20261101-0
+! TimeUpdated: 2026-11-01T00:57:11+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://file.trli.club:2083/ad-youtube-hosts/
 ! Total: 108625
@@ -25814,7 +25730,7 @@ oilprice.com,stitchbyfay.com,riftdecks.com,cooktoria.com,guidingtech.com,411mani
 /^https:\/\/www\.[0-9a-z-][0-9a-z-][0-9a-z-][0-9a-z-][0-9a-z-][0-9a-z-]+\.xyz\/script\/[0-9A-Za-z.-]+\.[A-Za-z-][A-Za-z-]+\.js$/$script,third-party,match-case
 ! For all platforms including iOS
 ||minecraftskins.com/miscjs/as*.js
-||html-load.com^$important,domain=j-cast.com|picksandparlays.net|ranking.net|minkou.jp|aucfree.com|motor-talk.de|373news.com|northantstelegraph.co.uk|tavovaikas.lt|agriculture.com|travelandleisure.com|learnreligions.com|verywellhealth.com|statecollege.com|dayspedia.com|aussieaudiomart.com|ukaudiomart.com|usaudiomart.com|canuckaudiomart.com|thestreet.com|kurashiru.com|micechat.com|seriouseats.com|followfollow.com|financialpost.com|vancouversun.com|driving.ca|theprovince.com|calgaryherald.com|edmontonsun.com|athlonsports.com|leaderpost.com|thestarphoenix.com|parade.com|elnacional.cat|livescience.com|saikyo-jump.com|torontosun.com|robbreport.com|thelayoff.com|preventionrd.com|meteo60.fr|cybertruckownersclub.com|jlwranglerforums.com|yorkshirepost.co.uk|ontariofarmer.com|all-nationz.com|broncosportforum.com|deltiasgaming.com|taycanforum.com|urbandictionary.com|lfpress.com|4runner6g.com|f150gen14.com|mavericktruckclub.com|tacoma4g.com|game8.jp|windowscentral.com|tomshardware.com|androidcentral.com|avnetwork.com|bikeperfect.com|cinemablend.com|countrylife.co.uk|creativebloq.com|cyclingnews.com|cyclingweekly.com|decanter.com|digitalcameraworld.com|discover.futureplc.com|fitandwell.com|fourfourtwo.com|gamesradar.com|golfmonthly.com|guitarworld.com|homebuilding.co.uk|homesandgardens.com|idealhome.co.uk|imore.com|itpro.com|kiplinger.com|laptopmag.com|livescience.com|livingetc.com|loudersound.com|marieclaire.co.uk|marieclaire.com|moneyweek.com|pcgamer.com|space.com|t3.com|techradar.com|theweek.com|tomsguide.com|tvtechnology.com|wallpaper.com|whathifi.com|whattowatch.com|whowhatwear.com|womanandhome.com|wielerflits.nl|advnture.com|weeronline.nl|fufuskitchen.com|gamebanana.com|jikayosha.jp|gentosha-go.com|gearjunkie.com|artnews.com|trucs-et-astuces.co|pakkotoisto.com|walesonline.co.uk|przegladsportowy.onet.pl|techwiser.com|gamingbible.com
+||html-load.com^$important,domain=j-cast.com|picksandparlays.net|ranking.net|minkou.jp|aucfree.com|motor-talk.de|373news.com|northantstelegraph.co.uk|tavovaikas.lt|agriculture.com|travelandleisure.com|learnreligions.com|verywellhealth.com|statecollege.com|dayspedia.com|aussieaudiomart.com|ukaudiomart.com|usaudiomart.com|canuckaudiomart.com|thestreet.com|kurashiru.com|micechat.com|seriouseats.com|followfollow.com|financialpost.com|vancouversun.com|driving.ca|theprovince.com|calgaryherald.com|edmontonsun.com|athlonsports.com|leaderpost.com|thestarphoenix.com|parade.com|elnacional.cat|livescience.com|saikyo-jump.com|torontosun.com|robbreport.com|thelayoff.com|preventionrd.com|meteo60.fr|cybertruckownersclub.com|jlwranglerforums.com|yorkshirepost.co.uk|ontariofarmer.com|all-nationz.com|broncosportforum.com|deltiasgaming.com|taycanforum.com|urbandictionary.com|lfpress.com|4runner6g.com|f150gen14.com|mavericktruckclub.com|tacoma4g.com|game8.jp|windowscentral.com|tomshardware.com|androidcentral.com|avnetwork.com|bikeperfect.com|cinemablend.com|countrylife.co.uk|creativebloq.com|cyclingnews.com|cyclingweekly.com|decanter.com|digitalcameraworld.com|discover.futureplc.com|fitandwell.com|fourfourtwo.com|gamesradar.com|golfmonthly.com|guitarworld.com|homebuilding.co.uk|homesandgardens.com|idealhome.co.uk|imore.com|itpro.com|kiplinger.com|laptopmag.com|livescience.com|livingetc.com|loudersound.com|marieclaire.co.uk|marieclaire.com|moneyweek.com|pcgamer.com|space.com|t3.com|techradar.com|theweek.com|tomsguide.com|tvtechnology.com|wallpaper.com|whathifi.com|whattowatch.com|whowhatwear.com|womanandhome.com|wielerflits.nl|advnture.com|weeronline.nl|fufuskitchen.com|gamebanana.com|jikayosha.jp|gentosha-go.com|gearjunkie.com|artnews.com|trucs-et-astuces.co|pakkotoisto.com|walesonline.co.uk|przegladsportowy.onet.pl|techwiser.com|gamingbible.com|manchestereveningnews.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231808
 ! gumtree
 ! https://github.com/AdguardTeam/AdguardFilters/issues/238478
@@ -25822,14 +25738,14 @@ oilprice.com,stitchbyfay.com,riftdecks.com,cooktoria.com,guidingtech.com,411mani
 /ybar/mail.yahoo.com/*adshield*$domain=mail.yahoo.com
 !#if (adguard_app_ios)
 trucs-et-astuces.co,jikayosha.jp,advnture.com,androidcentral.com,avnetwork.com,bikeperfect.com,cinemablend.com,countrylife.co.uk,creativebloq.com,cyclingnews.com,cyclingweekly.com,decanter.com,digitalcameraworld.com,discover.futureplc.com,fitandwell.com,fourfourtwo.com,gamesradar.com,golfmonthly.com,guitarworld.com,homebuilding.co.uk,homesandgardens.com,idealhome.co.uk,imore.com,itpro.com,kiplinger.com,laptopmag.com,livescience.com,livingetc.com,loudersound.com,marieclaire.co.uk,marieclaire.com,moneyweek.com,pcgamer.com,space.com,t3.com,techradar.com,theweek.com,tomsguide.com,tvtechnology.com,wallpaper.com,whathifi.com,whattowatch.com,whowhatwear.com,womanandhome.com,tomshardware.com,windowscentral.com,oraridiapertura24.it,tacoma4g.com,mavericktruckclub.com,f150gen14.com,4runner6g.com,lfpress.com,trafficnews.jp,taycanforum.com,deltiasgaming.com,broncosportforum.com,macheforum.com,all-nationz.com,ontariofarmer.com,yorkshirepost.co.uk,jlwranglerforums.com,cybertruckownersclub.com,meteo60.fr,robbreport.com,torontosun.com,saikyo-jump.com,livescience.com,elnacional.cat,parade.com,athlonsports.com,edmontonsun.com,canoe.com,driving.ca,vancouversun.com,seriouseats.com,alfalfalfa.com,aussieaudiomart.com,ukaudiomart.com,usaudiomart.com,canuckaudiomart.com#%#//scriptlet('remove-node-text', 'script', 'html-load.com')
-gamingbible.com,merkur.de,przegladsportowy.onet.pl,walesonline.co.uk,trucs-et-astuces.co,pakkotoisto.com,jikayosha.jp,advnture.com,androidcentral.com,avnetwork.com,bikeperfect.com,cinemablend.com,countrylife.co.uk,creativebloq.com,cyclingnews.com,cyclingweekly.com,decanter.com,digitalcameraworld.com,discover.futureplc.com,fitandwell.com,fourfourtwo.com,gamesradar.com,golfmonthly.com,guitarworld.com,homebuilding.co.uk,homesandgardens.com,idealhome.co.uk,imore.com,itpro.com,kiplinger.com,laptopmag.com,livescience.com,livingetc.com,loudersound.com,marieclaire.co.uk,marieclaire.com,moneyweek.com,pcgamer.com,space.com,t3.com,techradar.com,theweek.com,tomsguide.com,tvtechnology.com,wallpaper.com,whathifi.com,whattowatch.com,whowhatwear.com,womanandhome.com,tomshardware.com,windowscentral.com,oraridiapertura24.it,tacoma4g.com,mavericktruckclub.com,f150gen14.com,4runner6g.com,lfpress.com,trafficnews.jp,urbandictionary.com,taycanforum.com,deltiasgaming.com,broncosportforum.com,macheforum.com,all-nationz.com,ontariofarmer.com,yorkshirepost.co.uk,jlwranglerforums.com,cybertruckownersclub.com,meteo60.fr,robbreport.com,torontosun.com,saikyo-jump.com,livescience.com,elnacional.cat,parade.com,hestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,financialpost.com,followfollow.com,seriouseats.com,alfalfalfa.com,aussieaudiomart.com,ukaudiomart.com,usaudiomart.com,canuckaudiomart.com#%#//scriptlet('trusted-replace-argument', 'Element.prototype.setAttribute', '1', 'replace:/.+(error-report|new Promise|:window|&&window,|\|\|window,|void 0\]|\)\.join\(String\.fromCharCode|html-load\.com[\s\S]*_onerror).+//g')
+manchestereveningnews.co.uk,gamingbible.com,merkur.de,przegladsportowy.onet.pl,walesonline.co.uk,trucs-et-astuces.co,pakkotoisto.com,jikayosha.jp,advnture.com,androidcentral.com,avnetwork.com,bikeperfect.com,cinemablend.com,countrylife.co.uk,creativebloq.com,cyclingnews.com,cyclingweekly.com,decanter.com,digitalcameraworld.com,discover.futureplc.com,fitandwell.com,fourfourtwo.com,gamesradar.com,golfmonthly.com,guitarworld.com,homebuilding.co.uk,homesandgardens.com,idealhome.co.uk,imore.com,itpro.com,kiplinger.com,laptopmag.com,livescience.com,livingetc.com,loudersound.com,marieclaire.co.uk,marieclaire.com,moneyweek.com,pcgamer.com,space.com,t3.com,techradar.com,theweek.com,tomsguide.com,tvtechnology.com,wallpaper.com,whathifi.com,whattowatch.com,whowhatwear.com,womanandhome.com,tomshardware.com,windowscentral.com,oraridiapertura24.it,tacoma4g.com,mavericktruckclub.com,f150gen14.com,4runner6g.com,lfpress.com,trafficnews.jp,urbandictionary.com,taycanforum.com,deltiasgaming.com,broncosportforum.com,macheforum.com,all-nationz.com,ontariofarmer.com,yorkshirepost.co.uk,jlwranglerforums.com,cybertruckownersclub.com,meteo60.fr,robbreport.com,torontosun.com,saikyo-jump.com,livescience.com,elnacional.cat,parade.com,hestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,financialpost.com,followfollow.com,seriouseats.com,alfalfalfa.com,aussieaudiomart.com,ukaudiomart.com,usaudiomart.com,canuckaudiomart.com#%#//scriptlet('trusted-replace-argument', 'Element.prototype.setAttribute', '1', 'replace:/.+(error-report|new Promise|:window|&&window,|\|\|window,|void 0\]|\)\.join\(String\.fromCharCode|html-load\.com[\s\S]*_onerror).+//g')
 trucs-et-astuces.co,jikayosha.jp,advnture.com,androidcentral.com,avnetwork.com,bikeperfect.com,cinemablend.com,countrylife.co.uk,creativebloq.com,cyclingnews.com,cyclingweekly.com,decanter.com,digitalcameraworld.com,discover.futureplc.com,fitandwell.com,fourfourtwo.com,gamesradar.com,golfmonthly.com,guitarworld.com,homebuilding.co.uk,homesandgardens.com,idealhome.co.uk,imore.com,itpro.com,kiplinger.com,laptopmag.com,livescience.com,livingetc.com,loudersound.com,marieclaire.co.uk,marieclaire.com,moneyweek.com,pcgamer.com,space.com,t3.com,techradar.com,theweek.com,tomsguide.com,tvtechnology.com,wallpaper.com,whathifi.com,whattowatch.com,whowhatwear.com,womanandhome.com,tomshardware.com,windowscentral.com,oraridiapertura24.it,tacoma4g.com,mavericktruckclub.com,f150gen14.com,4runner6g.com,lfpress.com,trafficnews.jp,taycanforum.com,deltiasgaming.com,broncosportforum.com,macheforum.com,all-nationz.com,ontariofarmer.com,yorkshirepost.co.uk,jlwranglerforums.com,cybertruckownersclub.com,meteo60.fr,torontosun.com,saikyo-jump.com,livescience.com,elnacional.cat,parade.com,athlonsports.com,edmontonsun.com,canoe.com,driving.ca,vancouversun.com,seriouseats.com,alfalfalfa.com,aussieaudiomart.com,ukaudiomart.com,usaudiomart.com,canuckaudiomart.com#%#//scriptlet('remove-node-text', 'script', '/:\(\)=>eval/')
 !#endif
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_app_cli || adguard_ext_chromium || adguard_ext_chromium_mv3 || adguard_ext_firefox || adguard_ext_edge || adguard_ext_opera)
 !#endif
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_app_cli || adguard_ext_chromium || adguard_ext_chromium_mv3 || adguard_ext_firefox || adguard_ext_edge || adguard_ext_opera)
-gamingbible.com,merkur.de,looopings.nl,przegladsportowy.onet.pl,myinstants.com,coachweb.com,walesonline.co.uk,gry-online.pl,f150lightningforum.com,hna.de,onemileatatime.com,merkmal-biz.jp,bike-news.jp,yorkshireeveningpost.co.uk,lasisa.net,onlineradiobox.com,notebookcheck.com,notebookcheck.net,notebookcheck.org,notebookcheck.biz,notebookcheck.it,notebookcheck.nl,notebookcheck.pl,notebookcheck.info,notebookcheck-ru.com,notebookcheck-tr.com,notebookcheck.se,notebookcheck-cn.com,notebookcheck-hu.com,tunebat.com,jikayosha.jp,macanevowners.com,fourfourtwo.com,gamebanana.com,weerplaza.nl,cardcluster.com,tbsradio.jp,mopo.de,trilltrill.jp,capital.fr,kurashiru.com,daily.co.jp,voici.fr,motorbikecatalog.com,greenwichmeantime.com,tomshardware.com,windowscentral.com,glianec.com,hochi.news,willyweather.com,motorsport.com,wordshake.com,cotemaison.fr,higherorlowergame.com,melaterevancha.com,resultadostris.com,football-ukraine.com,hbrfrance.fr,oraridiapertura24.it,befa.lt,pockettactics.com,pcgamesn.com,wargamer.com,portsmouth.co.uk,pakkotoisto.com,fandom.com,tacoma4g.com,mavericktruckclub.com,f150gen14.com,4runner6g.com,lfpress.com,cheezburger.com,cracked.com,tipsandtrickskorea.com,afrotech.com,blavity.com,majorleaguepickleball.co,newcastleworld.com,northernirelandworld.com,sunderlandecho.com,travelnoire.com,index.hr,automobile-catalog.com,tvtv.us,taycanforum.com,deltiasgaming.com,broncosportforum.com,macheforum.com,all-nationz.com,ontariofarmer.com,247wallst.com,yorkshirepost.co.uk,upstyledaily.com,jlwranglerforums.com,cybertruckownersclub.com,adrenaline.com.br,pcgamer.com,urbandictionary.com,ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,hk01.com,calculatorsoup.com,russianmachineneverbreaks.com,scribd.com,bg-mania.jp,egolf.jp,otonanswer.jp,vague.style,magmix.jp,langenscheidt.com,trafficnews.jp,parents.com,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,inverse.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,onceuponachef.com,dict.cc,fansided.com,nationalpost.com,chloeting.com,sinemalar.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,dexerto.com,happyinshape.com,thetruthaboutcars.com,foodandwine.com,tips-and-tricks.co,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,myrecipes.com,treehugger.com,ldoceonline.com,lifewire.com,thoughtco.com,yorkshirepost.co.uk,marthastewart.com,eatingwell.com,thespruceeats.com,simplyrecipes.com,liquor.com,seriouseats.com,mamastar.jp,collinsdictionary.com,andrewzimmern.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,redcurrantbakery.com,gonnawantseconds.com,thegunnysack.com,bestfriendsforfrosting.com,savvysavingcouple.net,thesoccermomblog.com,iambaker.net,bakeplaysmile.com,crayonsandcravings.com,realhousemoms.com,bunsinmyoven.com,dinnersdishesanddesserts.com,chelseasmessyapron.com,julieseatsandtreats.com,cafedelites.com,dinneratthezoo.com,jamjarkitchen.com,laurenslatest.com,tablefortwoblog.com,learnmetrics.com,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,slideshare.net,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,gutefrage.net,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,neoseeker.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,omnicalculator.com,thelayoff.com,sourceforge.net,welt.de,boardingarea.com,doviz.com,oricon.co.jp#%#//scriptlet('trusted-replace-argument', 'Element.prototype.setAttribute', '1', 'replace:/.+(error-report|new Promise|:window|&&window,|\|\|window,|void 0\]|\)\.join\(String\.fromCharCode|html-load\.com[\s\S]*_onerror).+//g')
-||html-load.com^$script,important,domain=oricon.co.jp|doviz.com|boardingarea.com|welt.de|sourceforge.net|omnicalculator.com|divinedaolibrary.com|computerbild.de|deadline.com|nouvelobs.com|hollywoodreporter.com|variety.com|billboard.com|rollingstone.com|dnevnik.hr|akinator.com|helpdeskgeek.com|indiewire.com|wwd.com|sportico.com|exceljet.net|perezhilton.com|fossbytes.com|newatlas.com|songfacts.com|slideshare.net|nextchessmove.com|usaudiomart.com|toyokeizai.net|autobild.de|infinityfree.com|kuruma-news.jp|liveandletsfly.com|learnmetrics.com|tablefortwoblog.com|laurenslatest.com|jamjarkitchen.com|dinneratthezoo.com|cafedelites.com|julieseatsandtreats.com|chelseasmessyapron.com|dinnersdishesanddesserts.com|bunsinmyoven.com|realhousemoms.com|crayonsandcravings.com|bakeplaysmile.com|iambaker.net|thesoccermomblog.com|savvysavingcouple.net|bestfriendsforfrosting.com|thegunnysack.com|gonnawantseconds.com|redcurrantbakery.com|bab.la|dictionary.cambridge.org|oxfordlearnersdictionaries.com|homesicktexan.com|tipsandtricksjapan.com|andrewzimmern.com|collinsdictionary.com|mamastar.jp|seriouseats.com|liquor.com|simplyrecipes.com|thespruceeats.com|eatingwell.com|marthastewart.com|thoughtco.com|lifewire.com|ldoceonline.com|treehugger.com|myrecipes.com|lerobert.com|sussexexpress.co.uk|edinburghnews.scotsman.com|lejdd.fr|tips-and-tricks.co|foodandwine.com|thetruthaboutcars.com|dexerto.com|happyinshape.com|wort-suchen.de|woxikon.de|ukaudiomart.com|wielerrevue.nl|zeilen.nl|chloeting.com|nationalpost.com|fansided.com|dict.cc|onceuponachef.com|twopeasandtheirpod.com|bz-berlin.de|myhomebook.de|fitbook.de|techbook.de|travelbook.de|pons.com|inverse.com|windsorstar.com|canuckaudiomart.com|watchdocumentaries.com|manchesterworld.uk|9gag.com|egitim.net.tr|petbook.de|natalie.mu|crosswordsolver.com|merinfo.se|trafficnews.jp|otonanswer.jp|egolf.jp|scribd.com|calculatorsoup.com|hk01.com|itavisen.no|magmix.jp|edmontonjournal.com|urldecoder.org|base64decode.org|programme-tv.net|aussieaudiomart.com|girlschannel.net|montrealgazette.com|nemzetisport.hu|mrexcel.com|vague.style|thingiverse.com|alfalfalfa.com|pcgamebenchmark.com|skinmc.net|followfollow.com|oeffnungszeitenbuch.de|geo.fr|financialpost.com|canada.com|vancouversun.com|driving.ca|canoe.com|theprovince.com|calgaryherald.com|edmontonsun.com|athlonsports.com|thestarphoenix.com|leaderpost.com|tj.news|parade.com|elnacional.cat|livescience.com|buchstaben.com|torontosun.com|milestomemories.com|km77.com|vibe.com|goldderby.com|robbreport.com|hollywoodlife.com|gerbeaud.com|nationalreview.com|calgarysun.com|ottawacitizen.com|ottawasun.com|willyweather.com.au|urbandictionary.com|pcgamer.com|adrenaline.com.br|cybertruckownersclub.com|jlwranglerforums.com|upstyledaily.com|euronews.com|yorkshirepost.co.uk|247wallst.com|all-nationz.com|macheforum.com|broncosportforum.com|deltiasgaming.com|taycanforum.com|tvtv.us|automobile-catalog.com|index.hr|travelnoire.com|sunderlandecho.com|northernirelandworld.com|newcastleworld.com|majorleaguepickleball.co|blavity.com|afrotech.com|tipsandtrickskorea.com|cracked.com|cheezburger.com|fandom.com|pakkotoisto.com|portsmouth.co.uk|wargamer.com|pcgamesn.com|pockettactics.com|befa.lt|oraridiapertura24.it|hbrfrance.fr|football-ukraine.com|resultadostris.com|melaterevancha.com|higherorlowergame.com|cotemaison.fr|wordshake.com|motorsport.com|willyweather.com|hochi.news|glianec.com|windowscentral.com|tomshardware.com|motorbikecatalog.com|voici.fr|daily.co.jp|gamewith.jp|kurashiru.com|capital.fr|trilltrill.jp|mopo.de|tbsradio.jp|cardcluster.com|weerplaza.nl|gamebanana.com|macanevowners.com|tunebat.com|notebookcheck.com|notebookcheck.net|notebookcheck.org|notebookcheck.biz|notebookcheck.it|notebookcheck.nl|notebookcheck.pl|notebookcheck.info|notebookcheck-ru.com|notebookcheck-tr.com|notebookcheck.se|notebookcheck-cn.com|notebookcheck-hu.com|onlineradiobox.com|lasisa.net|yorkshireeveningpost.co.uk|bike-news.jp|merkmal-biz.jp|onemileatatime.com|hna.de|f150lightningforum.com|nikkansports.com|gry-online.pl|saita-puls.com|coachweb.com|myinstants.com|zekamashi.net|looopings.nl|getnews.jp
+manchestereveningnews.co.uk,gamingbible.com,merkur.de,looopings.nl,przegladsportowy.onet.pl,myinstants.com,coachweb.com,walesonline.co.uk,gry-online.pl,f150lightningforum.com,hna.de,onemileatatime.com,merkmal-biz.jp,bike-news.jp,yorkshireeveningpost.co.uk,lasisa.net,onlineradiobox.com,notebookcheck.com,notebookcheck.net,notebookcheck.org,notebookcheck.biz,notebookcheck.it,notebookcheck.nl,notebookcheck.pl,notebookcheck.info,notebookcheck-ru.com,notebookcheck-tr.com,notebookcheck.se,notebookcheck-cn.com,notebookcheck-hu.com,tunebat.com,jikayosha.jp,macanevowners.com,fourfourtwo.com,gamebanana.com,weerplaza.nl,cardcluster.com,tbsradio.jp,mopo.de,trilltrill.jp,capital.fr,kurashiru.com,daily.co.jp,voici.fr,motorbikecatalog.com,greenwichmeantime.com,tomshardware.com,windowscentral.com,glianec.com,hochi.news,willyweather.com,motorsport.com,wordshake.com,cotemaison.fr,higherorlowergame.com,melaterevancha.com,resultadostris.com,football-ukraine.com,hbrfrance.fr,oraridiapertura24.it,befa.lt,pockettactics.com,pcgamesn.com,wargamer.com,portsmouth.co.uk,pakkotoisto.com,fandom.com,tacoma4g.com,mavericktruckclub.com,f150gen14.com,4runner6g.com,lfpress.com,cheezburger.com,cracked.com,tipsandtrickskorea.com,afrotech.com,blavity.com,majorleaguepickleball.co,newcastleworld.com,northernirelandworld.com,sunderlandecho.com,travelnoire.com,index.hr,automobile-catalog.com,tvtv.us,taycanforum.com,deltiasgaming.com,broncosportforum.com,macheforum.com,all-nationz.com,ontariofarmer.com,247wallst.com,yorkshirepost.co.uk,upstyledaily.com,jlwranglerforums.com,cybertruckownersclub.com,adrenaline.com.br,pcgamer.com,urbandictionary.com,ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,hk01.com,calculatorsoup.com,russianmachineneverbreaks.com,scribd.com,bg-mania.jp,egolf.jp,otonanswer.jp,vague.style,magmix.jp,langenscheidt.com,trafficnews.jp,parents.com,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,inverse.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,onceuponachef.com,dict.cc,fansided.com,nationalpost.com,chloeting.com,sinemalar.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,dexerto.com,happyinshape.com,thetruthaboutcars.com,foodandwine.com,tips-and-tricks.co,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,myrecipes.com,treehugger.com,ldoceonline.com,lifewire.com,thoughtco.com,yorkshirepost.co.uk,marthastewart.com,eatingwell.com,thespruceeats.com,simplyrecipes.com,liquor.com,seriouseats.com,mamastar.jp,collinsdictionary.com,andrewzimmern.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,redcurrantbakery.com,gonnawantseconds.com,thegunnysack.com,bestfriendsforfrosting.com,savvysavingcouple.net,thesoccermomblog.com,iambaker.net,bakeplaysmile.com,crayonsandcravings.com,realhousemoms.com,bunsinmyoven.com,dinnersdishesanddesserts.com,chelseasmessyapron.com,julieseatsandtreats.com,cafedelites.com,dinneratthezoo.com,jamjarkitchen.com,laurenslatest.com,tablefortwoblog.com,learnmetrics.com,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,slideshare.net,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,gutefrage.net,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,neoseeker.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,omnicalculator.com,thelayoff.com,sourceforge.net,welt.de,boardingarea.com,doviz.com,oricon.co.jp#%#//scriptlet('trusted-replace-argument', 'Element.prototype.setAttribute', '1', 'replace:/.+(error-report|new Promise|:window|&&window,|\|\|window,|void 0\]|\)\.join\(String\.fromCharCode|html-load\.com[\s\S]*_onerror).+//g')
+||html-load.com^$script,important,domain=oricon.co.jp|doviz.com|boardingarea.com|welt.de|sourceforge.net|omnicalculator.com|divinedaolibrary.com|computerbild.de|deadline.com|nouvelobs.com|hollywoodreporter.com|variety.com|billboard.com|rollingstone.com|dnevnik.hr|akinator.com|helpdeskgeek.com|indiewire.com|wwd.com|sportico.com|exceljet.net|perezhilton.com|fossbytes.com|newatlas.com|songfacts.com|slideshare.net|nextchessmove.com|usaudiomart.com|toyokeizai.net|autobild.de|infinityfree.com|kuruma-news.jp|liveandletsfly.com|learnmetrics.com|tablefortwoblog.com|laurenslatest.com|jamjarkitchen.com|dinneratthezoo.com|cafedelites.com|julieseatsandtreats.com|chelseasmessyapron.com|dinnersdishesanddesserts.com|bunsinmyoven.com|realhousemoms.com|crayonsandcravings.com|bakeplaysmile.com|iambaker.net|thesoccermomblog.com|savvysavingcouple.net|bestfriendsforfrosting.com|thegunnysack.com|gonnawantseconds.com|redcurrantbakery.com|bab.la|dictionary.cambridge.org|oxfordlearnersdictionaries.com|homesicktexan.com|tipsandtricksjapan.com|andrewzimmern.com|collinsdictionary.com|mamastar.jp|seriouseats.com|liquor.com|simplyrecipes.com|thespruceeats.com|eatingwell.com|marthastewart.com|thoughtco.com|lifewire.com|ldoceonline.com|treehugger.com|myrecipes.com|lerobert.com|sussexexpress.co.uk|edinburghnews.scotsman.com|lejdd.fr|tips-and-tricks.co|foodandwine.com|thetruthaboutcars.com|dexerto.com|happyinshape.com|wort-suchen.de|woxikon.de|ukaudiomart.com|wielerrevue.nl|zeilen.nl|chloeting.com|nationalpost.com|fansided.com|dict.cc|onceuponachef.com|twopeasandtheirpod.com|bz-berlin.de|myhomebook.de|fitbook.de|techbook.de|travelbook.de|pons.com|inverse.com|windsorstar.com|canuckaudiomart.com|watchdocumentaries.com|manchesterworld.uk|9gag.com|egitim.net.tr|petbook.de|natalie.mu|crosswordsolver.com|merinfo.se|trafficnews.jp|otonanswer.jp|egolf.jp|scribd.com|calculatorsoup.com|hk01.com|itavisen.no|magmix.jp|edmontonjournal.com|urldecoder.org|base64decode.org|programme-tv.net|aussieaudiomart.com|girlschannel.net|montrealgazette.com|nemzetisport.hu|mrexcel.com|vague.style|thingiverse.com|alfalfalfa.com|pcgamebenchmark.com|skinmc.net|followfollow.com|oeffnungszeitenbuch.de|geo.fr|financialpost.com|canada.com|vancouversun.com|driving.ca|canoe.com|theprovince.com|calgaryherald.com|edmontonsun.com|athlonsports.com|thestarphoenix.com|leaderpost.com|tj.news|parade.com|elnacional.cat|livescience.com|buchstaben.com|torontosun.com|milestomemories.com|km77.com|vibe.com|goldderby.com|robbreport.com|hollywoodlife.com|gerbeaud.com|nationalreview.com|calgarysun.com|ottawacitizen.com|ottawasun.com|willyweather.com.au|urbandictionary.com|pcgamer.com|adrenaline.com.br|cybertruckownersclub.com|jlwranglerforums.com|upstyledaily.com|euronews.com|yorkshirepost.co.uk|247wallst.com|all-nationz.com|macheforum.com|broncosportforum.com|deltiasgaming.com|taycanforum.com|tvtv.us|automobile-catalog.com|index.hr|travelnoire.com|sunderlandecho.com|northernirelandworld.com|newcastleworld.com|majorleaguepickleball.co|blavity.com|afrotech.com|tipsandtrickskorea.com|cracked.com|cheezburger.com|fandom.com|pakkotoisto.com|portsmouth.co.uk|wargamer.com|pcgamesn.com|pockettactics.com|befa.lt|oraridiapertura24.it|hbrfrance.fr|football-ukraine.com|resultadostris.com|melaterevancha.com|higherorlowergame.com|cotemaison.fr|wordshake.com|motorsport.com|willyweather.com|hochi.news|glianec.com|windowscentral.com|tomshardware.com|motorbikecatalog.com|voici.fr|daily.co.jp|gamewith.jp|kurashiru.com|capital.fr|trilltrill.jp|mopo.de|tbsradio.jp|cardcluster.com|weerplaza.nl|gamebanana.com|macanevowners.com|tunebat.com|notebookcheck.com|notebookcheck.net|notebookcheck.org|notebookcheck.biz|notebookcheck.it|notebookcheck.nl|notebookcheck.pl|notebookcheck.info|notebookcheck-ru.com|notebookcheck-tr.com|notebookcheck.se|notebookcheck-cn.com|notebookcheck-hu.com|onlineradiobox.com|lasisa.net|yorkshireeveningpost.co.uk|bike-news.jp|merkmal-biz.jp|onemileatatime.com|hna.de|f150lightningforum.com|nikkansports.com|gry-online.pl|saita-puls.com|coachweb.com|myinstants.com|zekamashi.net|looopings.nl|getnews.jp|manchestereveningnews.co.uk
 ||html-load.com^$script,important,domain=gazeta.pl|edziecko.pl|sport.pl|moto.pl|plotek.pl|tibiopedia.pl|makeitmeme.com|minecraftskins.com|satkurier.pl|freemcserver.net|tvtechnology.com|theweek.com|laptopmag.com
 bloxd.io,laptopmag.com,theweek.com,tvtechnology.com,freemcserver.net,satkurier.pl,minecraftskins.com,dictionary.cambridge.org,uppercutmma.com,makeitmeme.com,tibiopedia.pl,gazeta.pl,edziecko.pl,sport.pl,moto.pl,plotek.pl#%#//scriptlet('trusted-replace-argument', 'Function', '1', 'replace:/^([A-Za-z_$][\w$]*\(\);)(?=[\s\S]*report\.error-report\.com)(?=[\s\S]*html-load\.com)[\s\S]*$/$1/')
 ||page-kit.io^$domain=minecraftskins.com|bloxd.io
@@ -76784,7 +76700,7 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-10-31T16:09:09.896Z
+! Last modified: 2026-11-01T02:13:43.220Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -78492,8 +78408,8 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: List for blocking ads in the Chinese region. Block Ads, Trackers, Malware, HTTPDNS, PCDN. 
 ! License: Inherits upstream licenses (GPL-3.0, CC BY-SA 4.0, etc.)
 ! Upstream Sources: https://github.com/Cats-Team/AdRules/blob/script/Source.md
-! Update: 2026-10-31 19:32:23(GMT+8)
-! Total count: 205861
+! Update: 2026-11-01 04:52:18(GMT+8)
+! Total count: 205995
 /^.+stat\.kugou\.com/
 /^admarvel\./
 /^admaster\./
@@ -79166,10 +79082,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: vwSUyQphvDWlL3LsQiNGhw
-! Version: 202610311612
+! Checksum: PwW/V97FWyiz2CanFh5RYg
+! Version: 202611010232
 ! Title: EasyList
-! Last modified: 31 Oct 2026 16:12 UTC
+! Last modified: 01 Nov 2026 02:32 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -102002,10 +101918,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: U68DbtrtQ/w4IIiWIh6E7A
-! Version: 202610311612
+! Checksum: WGq9ikUNjTmGNq/akSlAaQ
+! Version: 202611010232
 ! Title: EasyList China
-! Last modified: 31 Oct 2026 16:12 UTC
+! Last modified: 01 Nov 2026 02:32 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -108532,10 +108448,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||xnxx.com/cams^
 ||yourlust.com/iszw^
 [Adblock Plus 1.1]
-! Checksum: 6RtVr/8HjZ8yWq9aieLhew
-! Version: 202610311612
+! Checksum: N24IMIfCyMgrXidZub3GRg
+! Version: 202611010232
 ! Title: EasyPrivacy
-! Last modified: 31 Oct 2026 16:12 UTC
+! Last modified: 01 Nov 2026 02:32 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -123067,18 +122983,18 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! Issues: https://github.com/hagezi/dns-blocklists/issues
 ! Disclaimer: https://github.com/hagezi/dns-blocklists/blob/main/README.md#disclaimer
 ! Expires: 8 hours
-! Last modified: 31 Oct 2026 09:32 UTC
-! Version: 2026.1031.0932.29
+! Last modified: 31 Oct 2026 15:53 UTC
+! Version: 2026.1031.1553.11
 ! Syntax: AdBlock
-! Number of entries: 94237
+! Number of entries: 94244
 !
 [Adblock Plus]
-! Version: 202610311606
+! Version: 202611010206
 ! Title: oisd small
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 60320
-! Last modified: 2026-10-31T16:06:14+0000
+! Entries: 60461
+! Last modified: 2026-11-01T02:06:27+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
@@ -130217,139 +130133,11 @@ ff02::3		ip6-allhosts
 # kwadronaut for Windows 7 and Vista information
 # John Mueller and Lawrence H Smith for Mac Pre-OSX information
 # Jesse Baird for the Cisco IOS script
-! Title: sosel 个人去广告合并规则(黑名单)
-! Compiled: 2026-10-24 09:45 UTC
-! Method: 多源并集去重 + 父子域无损压缩 + 白名单订阅源风险剔除，并已剔除被本站白名单压住的条目（发布即有效）
-! Sources: hg1(线上在用) 13122 条 + 站长手写 713 条 + 历史存量 479211 条
-! Rules: 475739 条（去重后 481446，剔除被白名单罩住的 5707）
-! Companion allowlist: https://www.23-4.cn/rules/merged-allow.txt
-/(https?:\/\/)213\.32\.115\..{100,}/
-/(https?:\/\/)217\.182\.11\..{100,}/
-/(https?:\/\/)51\.195\.31\..{100,}/
-/193.200.64.24:/
-/62.76.25.2(7|8)/
-/^(\S+\.)?(webstats?|swebstats?|mywebstats?)\./
-/^(\S+\.)?11599[\da-z]{2,20}\.com$/
-/^(\S+\.)?333[1-9]{2}[0-9]{2}\.com?$/
-/^(\S+\.)?5551[0-9]{3}\.com?$/
-/^(\S+\.)?61677[\da-z]{0,20}\.com$/
-/^(\S+\.)?777\-?partners?\.(net|com)$/
-/^(\S+\.)?[0-9a-f]{15,}\.com$/
-/^(\S+\.)?[0-9a-z]{16,}\.xyz$/
-/^(\S+\.)?[c-s]ads(abs|abz|ans|anz|ats|atz|del|ecs|ecz|ims|imz|ips|ipz|kis|kiz|oks|okz|one|pms|pmz)\.com/
-/^(\S+\.)?adservice\.google\./
-/^(\S+\.)?affiliat(es?[0-9a-z]*?|ion[0-9\-a-z]*?|ly[0-9a-z\-]*?)\./
-/^(\S+\.)?afgr[\d]{1,2}\.com$/
-/^(\S+\.)?aj[0-9]{4,}.online$/
-/^(\S+\.)?analytics(\-|\.)/
-/^(\S+\.)?counter(\-|\.)/
-/^(\S+\.)?delivery([\d]{2}|dom|modo).com$/
-/^(\S+\.)?e7[0-9]{2,4}\.(net|com)?$/
-/^(\S+\.)?g[1-4][0-9]{8,9}\.com?$/
-/^(\S+\.)?hg[0-9]{4,5}\.com?$/
-/^(\S+\.)?pixels?\./
-/^(\S+\.)?s?metrics\./
-/^(\S+\.)?sax[\dns]?\.sina\.com\.cn/
-/^(\S+\.)?syma[a-z]\.cn$/
-/^(\S+\.)?tongji\./
-/^(\S+\.)?toolbar\./
-/^(\S+\.)?voyage-prive\.[a-z]+(\.uk)?$/
-/^(\S+\.)?widgets?\./
-/^(\S+\.)?xpj[0-9]\.net$/
-/^(\S+\.)?ylx-[0-9].com$/
-/^(a|c)\.[0-9a-f]{56}\.com$/
-/^(mon|tue|wed|thu|fri|sat|sun)\d{1,2}\.\w{2}\d{1,6}\w{4}\.com$/
-/^.+stat\.kugou\.com/
-/^139\.45\.197\.2(4[0-9]|5[0-4])/
-/^139\.45\.197\.2(4[0-9]|5[0-4]):/
-/^139\.45\.19[5-7]\.\d{1,3}/
-/^142\.91\.159\.(1[5-9]\d|2[0-4]\d|250):(80|443)$/
-/^188\.42\.84\.\d{1,3}/
-/^2.59.219.121/
-/^23\.109\.170\.(18[7-9]|19[0-2])$/
-/^23\.109\.73\.\d{3}/
-/^88\.208\.22\.[1234]$/
-/^88\.208\.22\.[1234]:/
-/^94\.242\.247\.(2[0-9]|3[0-2])/
-/^94\.242\.247\.(2[0-9]|3[0-2]):/
-/^admarvel\./
-/^admaster\./
-/^adsage\./
-/^adsensor\./
-/^adservice\./
-/^adsmogo\./
-/^adsrvmedia\./
-/^adsserving\./
-/^adsystem\./
-/^adwords\./
-/^anon1.gt\d{6}.com$/
-/^applovin\./
-/^appsflyer\./
-/^domob\./
-/^duomeng\./
-/^dwtrack\./
-/^guanggao\./
-/^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
-/^https:\/\/anon1.gt\d{6}.com/
-/^omgmta\./
-/^omgmtaw\./
-/^omniture\./
-/^openx\./
-/^partnerad\./
-/^pingfore\./
-/^socdm\./
-/^supersonicads\./
-/^wlmonitor\./
-/^zjtoolbar\./
-/i*.snssdk.com/
-/pangolin-sdk.*/
-||*-980x60.gif^
-||*.pop.js^
-||*_950x90.gif^
-||*coinhive.min.js^
-||*martrix_bbs.gif^
-||*martrix_bbs.jpg^
-||/7gq78s4ltrea/^
-||0019a^
-||1.1.1.l80.js^
-||216.239.35.0/24^
-||295cdn^
-||3.n.2.1.l50.js^
-||3.n.2.2.l30.js^
-||3132372e302e302e31^
-||5976m45com^
-||<!doctype.^
-||c.3.cn^$importan
-||cdn.zhiyileiju.cn/*.jpeg
-||cdn.zhiyileiju.cn/*.jpg
-||d6294kcj^
-||dcarapi.com/motor/ad/*
-||dlcdn996^
-||fake-domain^
-||gao1asdjws^
-||gif.thegalaxy01.com^$importan
-||huilongkj^
-||ib-lq.snssdk.com/api/ad/*
-||kps230^
-||m.miguvideo.com/mgs/share/migu_dsp_member/
-||n.2.1.js^
-||n.2.1.l60.js^
-||shturl.cc/4^
-||shturl.cc/IEavUwS^
-||shturl.cc/J^
-||shturl.cc/e1E^
-||shuixiands^
-||sunyonga^
-||tx-adaptive^
-||undefined^
-||xchcmmtn2z^
-||xpj079cc08868comxpjggtz^
-||yd11_13-site-02^
 [Adblock Plus 2.0]
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
 ! by: 酷安@那个谁520
-! Last Updated: 2026-10-31 18:59:37（北京时间）
+! Last Updated: 2026-11-01 00:49:35（北京时间）
 ! Total count: 17305
 
 ! ────────────── 来源汇总 ──────────────
@@ -130439,7 +130227,7 @@ ff02::3		ip6-allhosts
 ! 🔗 原始地址：https://raw.githubusercontent.com/liwenjie119/adg-rules/master/black.txt
 ! 📊 本区规则：2 条
 ! ==============================================
-! Version:    最后同步时间: 2026-10-31 01:15:04
+! Version:    最后同步时间: 2026-11-01 01:15:05
 ! Total count: 13152
 # 此规则不定时更新
 # This rule does not regularly updated
@@ -130764,7 +130552,7 @@ ff02::3		ip6-allhosts
 #gamepass日志
 #杂七杂八
 ! Title: DD-AD
-! Last Modified: 2026-10-31T22:01:13.005139497+08:00
+! Last Modified: 2026-11-01T03:37:43.918137179+08:00
 ! Homepage: https://github.com/afwfv/DD-AD
 ||_ad_content^
 ||banner468x60^
