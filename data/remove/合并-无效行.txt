@@ -1385,14 +1385,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
-! Checksum: MTc5Mzg3NjI3NAo=
+! Checksum: MTc5MzkwNDY2Mwo=
 ! Title: trli's Ad Filter for Pro for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261105-6
-! TimeUpdated: 2026-11-05T18:57:54+08:00
+! Version: 20261106-0
+! TimeUpdated: 2026-11-06T02:51:03+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
-! Total: 11530408
+! Total: 11527555
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
@@ -1501,14 +1501,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 |wpjslib-chunk-notification.js^
 |www.geo-ip.js^
 |youtubeblacklist.txt^
-! Checksum: MTc5Mzg3NjI0MAo=
+! Checksum: MTc5MzkwNTA3NAo=
 ! Title: trli's Ad Filter for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261105-6
-! TimeUpdated: 2026-11-05T18:57:20+08:00
+! Version: 20261106-0
+! TimeUpdated: 2026-11-06T02:57:54+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-lite
-! Total: 11267749
+! Total: 11264897
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
@@ -5034,6 +5034,8 @@ youporn.com$$script:contains(/window\.[\s\S]*?_zone_[\s\S]*?{"zone_id":/)
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/246376
+! https://github.com/AdguardTeam/AdguardFilters/issues/246366
 ! https://github.com/AdguardTeam/AdguardFilters/issues/246368
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tempgmailer.com
@@ -76859,7 +76861,7 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-11-05T16:11:13.769Z
+! Last modified: 2026-11-05T18:12:17.380Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -77653,8 +77655,6 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42797
 ! goguardian tracking
 !
-! eyepin.com
-!
 !
 ! NOTE: CNAME disguised tracking networks
 ! SECTION: CNAME disguised tracking networks
@@ -77758,6 +77758,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 !
 ! Extole : extole.com disguised trackers
 ! not included
+!
+! Eyepin : post.eyepinnews.com disguised trackers
+!
+! Company name: Eyepin
 !
 ! Fathom : fathomdns.com disguised trackers
 !
@@ -79245,10 +79249,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: JbQ0Ve5zxmEw832IyPsYUA
-! Version: 202611051722
+! Checksum: GztvBI3B8JBNsjlYiifzUA
+! Version: 202611051903
 ! Title: EasyList
-! Last modified: 05 Nov 2026 17:22 UTC
+! Last modified: 05 Nov 2026 19:03 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -102085,10 +102089,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: qv6zMLjyR27PMpjiGZjT2Q
-! Version: 202611051722
+! Checksum: Im8ntDC03Y6a5Hu/CXPXvg
+! Version: 202611051903
 ! Title: EasyList China
-! Last modified: 05 Nov 2026 17:22 UTC
+! Last modified: 05 Nov 2026 19:03 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -108615,10 +108619,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||xnxx.com/cams^
 ||yourlust.com/iszw^
 [Adblock Plus 1.1]
-! Checksum: zrFiCHaWA9x/k57a6DUREQ
-! Version: 202611051722
+! Checksum: hPR26vlrxK8mIlWPfQnQmQ
+! Version: 202611051903
 ! Title: EasyPrivacy
-! Last modified: 05 Nov 2026 17:22 UTC
+! Last modified: 05 Nov 2026 19:03 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
