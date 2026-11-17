@@ -78031,10 +78031,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: fXOlO/REeUKbD7wWMiGnvA
-! Version: 202611170522
+! Checksum: 1nBcXubvOF/LElq9gCQatg
+! Version: 202611170532
 ! Title: EasyList
-! Last modified: 17 Nov 2026 05:22 UTC
+! Last modified: 17 Nov 2026 05:32 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -100883,10 +100883,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: MNHQwp/7+6QzUBD93Xe6LQ
-! Version: 202611170522
+! Checksum: wVINvZWu3z9phY0JLKSA2w
+! Version: 202611170532
 ! Title: EasyList China
-! Last modified: 17 Nov 2026 05:22 UTC
+! Last modified: 17 Nov 2026 05:32 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -107202,10 +107202,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 !---------------------------------Temporary-----------------------------------!
 !----------------------------------The End------------------------------------!
 [Adblock Plus 1.1]
-! Checksum: jalnvzRfjAiLD9rxkOJlow
-! Version: 202611170522
+! Checksum: GCJPUkFNKQw5UQ97zQH1QQ
+! Version: 202611170532
 ! Title: EasyPrivacy
-! Last modified: 17 Nov 2026 05:22 UTC
+! Last modified: 17 Nov 2026 05:32 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -120687,122 +120687,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 !
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
 [Adblock Plus 2.0]
-! Title: 乘风 视频过滤规则 uBlock Origin 1.56
-! Version: 202509101
-! Expires: 1 day
-! Homepage: https://github.com/xinggsf/Adblock-Plus-Rule/issues
-
-! atm.youku.com
-@@||log.mmstat.com/eg.js^$script
-! ||cibntv.net/youku/$media
-! ||valipl.cp31.ott.cibntv.net/$media
-||alicdn.com/*yksdk/*sdk.js$script,domain=youku.com
-||alicdn.com/awsc/et/$script
-||g.alicdn.com/htmlVodP2P/$script
-
-||static.iqiyi.com/js/common/mars_v.js^$script
-! 以下二条规则禁用P2P
-||video.iqiyi.com/ws$websocket
-||www.iqiyi.com/service-worker.js
-||mesh.if.iqiyi.com/player/pcw/update/commonAppDownloadData^$xhr
-||127.0.0.1^$script,domain=iqiyi.com
-!||iqiyi.com/videos/other/202$xmlhttprequest
-!||71edge.com/videos/other/202$xmlhttprequest
-||iqiyipic.com/image/20*_100000$image
-||ssports.iqiyi.com/json/shop/shopInfo
-||ssports.iqiyi.com/app/$media,object-subrequest
-
-!qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
-!qq.com##+js(aopr, Beacon.prototype.fail)
-@@||union.video.qq.com/fcgi-bin/$script,domain=qq.com
-||mall.video.qq.com/m/activity/h5/$subdocument
-!||l.qq.com/lview?
-||qq.com/livemsg?
-||gtimg.com/qqlive/
-||qzonestyle.gtimg.cn/qzone/biz/ac/comm/$script
-|https://imgcache.qq.com/qzone/biz/comm/js/qbs.js
-||news.ssp.qq.com/app
-||ssp.qq.com/ad^$xhr
-||staticfile.qq.com/datong/$script
-||staticfile.qq.com/qimei/$script
-||vfiles.gtimg.cn/tvideo/js/new_ping_video.js^$script
-||res.ab.qq.com/tab/$script
-||v.qq.com/cache/wuji/object^$script
-
-!此规则有效过滤首页AD但导致页面加载慢 www.bilibili.com##.container.is-version8 > .feed-card:has(>div:only-child), .container.is-version8 > .bili-video-card:has(>div:only-child)
-||api.bilibili.com/x/*/res/locs?$~script
-!||hdslb.com/bfs/sycp/creative_img/$image
-||hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js^$empty
-||hdslb.com/bfs/cm/cm-sdk/static/js/pc.js^$script
-||hdslb.com/bfs/seed/jinkela/short/user-fingerprint/$script
-
-||aixifan.com/static/*/appGuide/
-
-!||imall.cctv.com/$subdocument
-
-||g.pptv.com/game/$subdocument
-||osswc.pplive.cn/cccms/$image
-||mediamax.suning.com/adssp/sdk/$script
-
-! miguvideo.com###adver-box
-! ||ggc.cmvideo.cn/v1/iflyad/deliverysystem/direct/$image,redirect=2x2.png
-! ||cmvideo.cn/v1/iflyad/$media,image,domain=miguvideo.com
-||miguvideo.com/mgs/common/miguplayerPlugins/prd/WWWggView.js^$script
-! 风行网： fun.tv
-
-||relive.vodfile.m1905.com/video/qiantie202$media
-||www.1905.com/uploadfile/2024/0401/20240401094429405834.jpg^$image
-
-@@||tb.mgtv.com/sdk/*/ad-sdk.js^$script
-||video.da.mgtv.com/$media
-||da.mgtv.com/mediafiles/wiad_creative/$image
-
-@@||js.tv.itc.cn/gg.seed.js
-||tv.sohu.com/upload/csad/admaster/$image
-||17173.com/batch_show?ads=
-||17173.com/if/$script,subdocument
-
-||ott.cibntv.net/*/letv-wzgug/$media
-||letvimg.com/lc*_iscms/202$image
-||letvimg.com/*_gugwl/$image
-
-||douyucdn.cn/adxdsp/$image,media
-!弹幕 ||www.douyu.com/webSocket.worker_$script
-||shark2.douyucdn.cn/front-publish/live-master/js/player_first/qvbp2p_douyu$script
-!douyu.com##+js(set, RTCPeerConnection.prototype.addTrack, noopFunc)
-||shark2.douyucdn.cn/front-publish/live-master/js/room/topBanner_$script
-||shark2.douyucdn.cn/front-publish/live-master/js/room/ScreenBannerAd_$script
-||shark2.douyucdn.cn/front-publish/live-master/js/room/CloseVideoAd_$script
-||shark2.douyucdn.cn/front-publish/live-master/js/room/FreeTimeAd_$script
-||shark2.douyucdn.cn/front-publish/live-master/js/room/SuspendedBallAd_$script
-
-||business.msstatic.com/advertiser/$image
-||midext2.cdn.huya.com/ext-web-mid/ext-web-sub-frame/$subdocument
-||live-cover.msstatic.com/huyalive/*/format,webp/$image
-||tx-live-cover.msstatic.com/huyalive/*/format,webp/$image
-||msstatic.com/huya/main3/assets/modules/CommercialAdSdk/$script
-||cdn.huya.com/leaf/$xhr
-
-
-||google.*/pagead/
-||gstatic.com/shopping?
-
-||btsow.lol/app/jav$image
-|https://tellme.pw/go/jav$popup
-
-! age.tv##.ratio-16x9:has(>.dplayer):remove-class(ratio-16x9)
-! age.tv##+js(noeval-if, devtoolsDetector)
-||cdn.aiqingyu1314.com/age/statics/js/notice.js^$script
-||toutiaoimg.com/origin/137370002e7fbe11b296a$image
-||dd-static.jd.com^$image,domain=subaibai.com
-
-!dandanzan.me,nunuyy5.com##+js(set,webkitRTCPeerConnection,null)
-
-||www.yatu.tv/image/*.gif^$image
-||www.yatu.tv/m/images/$image
-
-||tracker.$xhr,websocket,script,ping
-[Adblock Plus 2.0]
 ! Title: 轻量广告拦截规则
 ! Homepage: https://github.com/damengzhu/banad
 ! Update Time: 2026-11-17 10:57:25（北京时间）
@@ -121815,6 +121699,17 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
+!Title: AWAvenue Ads Rule
+!--------------------------------------
+!Total lines: 985
+!Version: 1.7.9-release
+!Update time: 2026-11-16 17:36:05 UTC+8
+!Update content: 新增拦截TopOn聚合与上海领页广告接口8条及崩溃日志与埋点上报域名6条
+
+!Homepage: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
+!License: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
+
+
 [Adblock Plus 2.0]
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
@@ -121972,17 +121867,6 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ||xfuckonline.com/eureka^
 ||xnxx.com/cams^
 ||yourlust.com/iszw^
-!Title: AWAvenue Ads Rule
-!--------------------------------------
-!Total lines: 985
-!Version: 1.7.9-release
-!Update time: 2026-11-16 17:36:05 UTC+8
-!Update content: 新增拦截TopOn聚合与上海领页广告接口8条及崩溃日志与埋点上报域名6条
-
-!Homepage: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
-!License: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
-
-
 [Adblock Plus]
 ! Title: HaGeZi's Multi PRO mini (best for browser/mobile ad blockers)
 ! Description: A size-optimized version made for DNS or browser blockers, like devices with limited RAM. This only contains domains from the full Pro list that show up on Top 1M/10M lists (Umbrella, Cloudflare, Tranco, Chrome, BuiltWith, Majestic, DomCop).
@@ -129271,6 +129155,44 @@ ff02::3		ip6-allhosts
 ||xchcmmtn2z^
 ||xpj079cc08868comxpjggtz^
 ||yd11_13-site-02^
+#@coolapk 1007
+#有问题可以在文件里搜索关键词
+#例如"toutiao(头条)"，"MIUI xiaomi (小米)"，"reward(奖励)"。
+#在相应行的开头加个"#"号
+::1 localhost
+::1 ip6-loopback
+::1 ip6-localhost
+#提速测试
+::2 ip6-localhost
+::3 ip6-localhost
+
+
+0.0.0.0 com.yxcorp.gifshow.map
+#广告奖励
+#END
+#自定义重定向hosts
+#小米ROM服务器下载加速
+#23.09.19
+#谷歌FCM
+#END
+#@coolapk 1007
+#有问题可以在文件里搜索关键词
+#例如"toutiao(头条)"，"MIUI xiaomi (小米)"，"reward(奖励)"。
+#在相应行的开头加个"#"号
+::1 localhost
+::1 ip6-loopback
+::1 ip6-localhost
+#提速测试
+::2 ip6-localhost
+::3 ip6-localhost
+
+
+0.0.0.0 com.yxcorp.gifshow.map
+#自定义重定向hosts
+#小米ROM服务器下载加速
+#23.09.19
+#谷歌FCM
+#END
 [Host 10007]
 [Adblock Plus 2.0]
 ! Title: Host 10007
