@@ -70,7 +70,7 @@
 
 
 
-! Version:    最后同步时间: 2026-11-17 01:15:05
+! Version:    最后同步时间: 2026-11-18 01:15:05
 ! Total count: 328
 #放行单
 #只适合海哥规则
@@ -164,19 +164,13 @@
 # 更新时间：2026-11-12
 #************************************************************************#
 
-! Title: sosel 防误杀白名单(各源@@例外 + 白名单订阅源[风险剔除] + 人工allow_extra, 去重)
-! Compiled: 2026-10-10 20:20 UTC  (counts re-verified 2026-10-25 03:57; rules appended manually since)
-! Allow domains: 6141  wildcard/regex: 182  (total 6323)
-
-
-
-
-
-
-
-
-
-
+! Title: 234 DNS 防误杀白名单 · 纯净版
+! Description: 234DNS 官方维护的误杀白名单，用于修复已知误拦；黑名单发布时已剔除本清单覆盖的条目。
+! Homepage: https://www.23-4.cn/rules/
+! Maintainer: 23-4.CN 加密DNS实验室
+! Version: 2026-11-17
+! Rules: 6387
+! Companion blocklist: https://www.23-4.cn/rules/234dns-block.txt
 # ADBLOCK-20261022 ||gator.volces.com^
 # ADBLOCK-20261022 ||mcs.zijieapi.com^
 # ADBLOCK-20261022 ||mssdk.volces.com^
@@ -375,14 +369,14 @@
 ! Blocked domains: 241710
 ! unBlocked domains: 197
 !
-! Checksum: MTc5NDg4NzY0Nwo=
+! Checksum: MTc5NDkyMTMxMgo=
 ! Title: trli's Ad Filter for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261117-3
-! TimeUpdated: 2026-11-17T11:54:07+08:00
+! Version: 20261117-7
+! TimeUpdated: 2026-11-17T21:15:12+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-lite
-! Total: 11053134
+! Total: 11052928
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
@@ -2395,7 +2389,7 @@ iptvbin.com$$script:contains(/^(?=.{0,1200}$)(?=.*a\.id="arlinablock").*/s)
 ! #%#//scriptlet('abort-current-inline-script', 'document.createElement', 'ignielAdBlock')
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,important,domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.*|miuiku.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|indokontraktor.com|neosatsu.com|shahidd4u.net|shaid4u.day|shahhid4u.cam|shhahid4u.day|shhahid4u.cam|shahid4u.*|shahid4u.you|shahid-4u.*|shahid-4u.day|shahid-4u.my|sshahid4u.*|sshahid4u.day|shah4u.*|shah4u.day|shaahed4u.net|shiid4u.day|shhahhed4u.net|shahheid4u.net|shaheiid4u.net|odiadance.com|shaheed4u.day|shahieeid4u.net|sahid4u.com|shii4u.media
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|indokontraktor.com|shahid4u.*|neosatsu.com|shahidd4u.net|shahiid4u.net|shahid-4u.*|shaid4u.day|shahhid4u.cam|shhahid4u.*|sshahid4u.*|sshahid4u.day|sd4u.net|shah4u.*|shah4u.day|shaahed4u.net|shiid4u.day|shhahhed4u.net|shahheid4u.net|shaheiid4u.net|odiadance.comz|shaheed4u.day|shahieeid4u.net|sahid4u.com|shii4u.media
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freebnbcoin.com|exotictgirl.blogspot.com|bospedia.com|rockmods.net|aiimsneetshortnotes.com|arabseed.onl|miuiku.com|flash-firmware.blogspot.com|rumahit.id|romfirmware.com|gsmfirmware.net|akwam.*|fc-lc.com|fc.lc|note1s.com|ipacrack.com|traffic1s.com|adnews.me|ak4eg.*|xn--mgba7fjn.*|akw.to|ak4ar.*|nguyenvanbao.com|ak.sv|indokontraktor.com|shahid4u.*|neosatsu.com|shahidd4u.net|shahiid4u.net|shahid-4u.*|shaid4u.day|shahhid4u.cam|shhahid4u.*|sshahid4u.*|sshahid4u.day|sd4u.net|shah4u.*|shah4u.day|shaahed4u.net|shiid4u.day|shhahhed4u.net|shahheid4u.net|shaheiid4u.net|odiadance.com|shaheed4u.day|shahieeid4u.net|sahid4u.com|shii4u.media
 !+ NOT_OPTIMIZED
 shii4u.media,sahid4u.com,shaheed4u.day,shaheiid4u.net,shahheid4u.net,shhahhed4u.net,shiid4u.day,shaahed4u.net,shah4u.*,sd4u.net,sshahid4u.*,shahid-4u.*,shahid4u.*,shhahid4u.*,shaid4u.day,shahhid4u.cam,shsaahid4u.net,shahiid4u.net,shahidd4u.net,neosatsu.com,indokontraktor.comak.sv,nguyenvanbao.com,ak4ar.*,akw.to,xn--mgba7fjn.*,ak4eg.*,adnews.me,traffic1s.com,ipacrack.com,oii.io,note1s.com,fc.lc#$#body { overflow: auto !important; }
 !+ NOT_OPTIMIZED
@@ -2712,6 +2706,8 @@ youporn.com$$script:contains(/window\.[\s\S]*?_zone_[\s\S]*?{"zone_id":/)
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/247440
+||retrovault.ch/assets/js/rv-guard.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/247275
 ! https://community.brave.app/t/ad-blocker-detected-by-the-website/660988
 yupflix.org#$##hb-wall { display: none !important; }
@@ -11342,6 +11338,7 @@ drivermax.com#$#.ad-block-enabled { visibility: hidden; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111850
 !+ PLATFORM(ios, ext_android_cb)
 @@||bigbrothercanada.ca^$generichide
+
 !-------------------------------------------------------------------------------!
 !------------------ Banner sizes -----------------------------------------------!
 !-------------------------------------------------------------------------------!
@@ -15021,6 +15018,9 @@ delfi.lv#?#section > div[style]:has(> span:contains(/^Реклама$|^Reklāma$
 !---------------------------------------------------------------------
 !
 ! NOTE: Lithuanian
+||krepsinis.net/catheter/detector.js^
+||tv3.lt/Uploads/image/TOP-7bet/
+krepsinis.net#$#.header-menu-segment { height: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/247304
 ! aglint-disable no-invalid-modifiers
 !+ NOT_VALIDATE
@@ -24431,6 +24431,8 @@ $third-party,script,domain=klto9.com|f2movies.to|hacamchicac.com|yourporngod.com
 !
 ! NOTE: Specific rules
 !
+||dlink10.com/apop.php
+||scanwp.net/js/exit-popup.js
 ||liveball.sx/public/js/custom_clickunder.js
 ||cdn.lbs.pw/rek/
 ||80.lv/api/updpromos
@@ -29303,7 +29305,7 @@ mail.yahoo.com#%#//scriptlet('trusted-replace-node-text', 'script', '/App(State|
 ||nativesurge.net/wp-content/uploads/csh/surge.js
 ! #%#//scriptlet('abort-on-property-read', 'Adcash')
 firestream.site,stre4mpay.one,pooembed.eu,tpead.net,streamed.pk,bmovies.vip,sanet.st,yifysubtitles.ch,streamtape.com,streamtape.net,advertape.net,adblockeronstape.*,adblockplustape.*,adblockstreamtape.*,adblockstrtape.*,adblockstrtech.*,advertisertape.com,antiadtape.*,gettapeads.com,noblocktape.*,shavetape.*,stapadblockuser.*,stape.*,strcloud.*,streamadblocker.*,streamadblockplus.*,streamnoads.com,streamta.*,streamtapeadblock.*,streamtapeadblockuser.*,strtape.*,strtapeadblock.*,strtapeadblocker.*,strtapewithadblock.*,strtpe.*,tapeadsenjoyer.com,tapeadvertisement.com,tapeantiads.com,tapeblocker.com,tapelovesads.org,tapenoads.com,tapepops.com,tapewithadblock.org,watchadsontape.com,streamtape.*,wizja.cc,totalsportek.*,casthill.net,streamed.*,exposestrat.com,embedsports.top,nativesurge.net,yts.bz,yts.lt,yts.*,seir-sanduk.com,daddylive3.com,sterham.net,buffsports.io,soccerstreams7.com,loadvid.com,telewizjada.top,strumyk.net,ogladaj.in,istreameast.app,streamingnow.mov,watchug.to,primewire.tf,filecrypt.cc,veplay.top,colegialasdeverdad.*,flixrave.me,anime4i.com,cuttyy.com,daddyhd.com,daddylive.*,zavalise.com,wooflix.tv,yassflix.net,swipebreed.net,eurekaddl.lat,en.tgo-tv.xyz,miztv.shop,vidlink.pro,knaben.xyz,powstream.*,rojadirectaenvivo.pl,ext.to,capo4play.com,wawacity.cfd,1337x.to,zone-telechargement.*,redecanais.in,streameast.*,thestreameast.*,anroll.net,anarchy-stream.com,freckledine.net,buffstreams.app,sanet.lc,1stream.eu,dl-protect.link,extreme-down.*,eztvx.to,skidrowreloaded.com,streambucket.net,modsfire.com,official.nbabite.com#%#//scriptlet('abort-on-property-read', 'Adcash')
-tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,strcsh.xyz,audioz.download,savefiles.com,missflight.net,grandemx.org,bembed.sbs,uqload.*,desicinema.se,dramavideo.se,torupload.com,stellar.rip,streame.center,totalsporteki.st,totalsportekhd.st,cricwatch.io,cricwatch.*,tennisonline.im,tennisonline.*,posamari.me,sportfusion.me,nbabox.*,nbabox.im,dartsstreams.me,soccerbox.st,soccerbox.*,thetvapp.plus,fbstream.is,fbstream.*,dollardescent.net,mappl.tv,lightflix.app,mapple.fun,mapple.*,embed.st,executeandship.com,embedindia.st,strikeout.im,strikeout.*,boxingbox.me,boxingbox.*,rugbybox.me,rugbybox.*,nflbox.sx,nflbox.*,f1live.me,f1live.*,www.viprow.lc,viprow.*,ninguno.cc,mmabox.me,mmabox.*,olympiclive.me,olympicweb.*,sportsonlinee.*,sportsonline.*,4k.beer,streamcash.to,anime.uniquestream.net,cine.su,nepu.*,vidzy.cc,fs16.lol,porneec.com,asiaflix.in,asiaflix.*,streamtape.com,yts.bz,yts.gg,yts.*,filecrypt.co,strumyk.*,powwideo.*,hornysimp.com,futemax.at,embdmstrplayer.com,pahe.ink,foulembeds.live,smksports.*,fileditchfiles.me,strumyk.cfd,dorawatch.one,streamingworld.xyz,streami.su,streamed.pk,streamed.*,visualnewshub.com,cloudnestra.com,cloudfam.io,thepibay.*,bypass.city,eztvx.to,ext.to,vidsrc.cc,sanet.st,yifysubtitles.ch,vinovo.to,livesporthub.shop,dstelemundo.site,7fractals.icu,epicplayplay.cfd,goalstreamer.shop,streameast7.com,buffztreamz.shop,rippleplay.shop,shd247.click,antenasport.top,gamestrend.net,exposestrat.com,embedsports.top,seir-sanduk.com,embedtv-5.icu,daddylive3.com,sterham.net,animeunity.*,vixcloud.*,buffsports.io,soccerstreams7.com,loadvid.com,telewizjada.top,ogladaj.in,istreameast.app,streamingnow.mov,watchug.to,primewire.tf,worldsports.si,filecrypt.cc,veplay.top,colegialasdeverdad.*,anime4i.com,cuttyy.com,puffytr.com,anizm.*,anizle.*#%#//scriptlet('abort-on-property-read', 'aclib')
+retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,strcsh.xyz,audioz.download,savefiles.com,missflight.net,grandemx.org,bembed.sbs,uqload.*,desicinema.se,dramavideo.se,torupload.com,stellar.rip,streame.center,totalsporteki.st,totalsportekhd.st,cricwatch.io,cricwatch.*,tennisonline.im,tennisonline.*,posamari.me,sportfusion.me,nbabox.*,nbabox.im,dartsstreams.me,soccerbox.st,soccerbox.*,thetvapp.plus,fbstream.is,fbstream.*,dollardescent.net,mappl.tv,lightflix.app,mapple.fun,mapple.*,embed.st,executeandship.com,embedindia.st,strikeout.im,strikeout.*,boxingbox.me,boxingbox.*,rugbybox.me,rugbybox.*,nflbox.sx,nflbox.*,f1live.me,f1live.*,www.viprow.lc,viprow.*,ninguno.cc,mmabox.me,mmabox.*,olympiclive.me,olympicweb.*,sportsonlinee.*,sportsonline.*,4k.beer,streamcash.to,anime.uniquestream.net,cine.su,nepu.*,vidzy.cc,fs16.lol,porneec.com,asiaflix.in,asiaflix.*,streamtape.com,yts.bz,yts.gg,yts.*,filecrypt.co,strumyk.*,powwideo.*,hornysimp.com,futemax.at,embdmstrplayer.com,pahe.ink,foulembeds.live,smksports.*,fileditchfiles.me,strumyk.cfd,dorawatch.one,streamingworld.xyz,streami.su,streamed.pk,streamed.*,visualnewshub.com,cloudnestra.com,cloudfam.io,thepibay.*,bypass.city,eztvx.to,ext.to,vidsrc.cc,sanet.st,yifysubtitles.ch,vinovo.to,livesporthub.shop,dstelemundo.site,7fractals.icu,epicplayplay.cfd,goalstreamer.shop,streameast7.com,buffztreamz.shop,rippleplay.shop,shd247.click,antenasport.top,gamestrend.net,exposestrat.com,embedsports.top,seir-sanduk.com,embedtv-5.icu,daddylive3.com,sterham.net,animeunity.*,vixcloud.*,buffsports.io,soccerstreams7.com,loadvid.com,telewizjada.top,ogladaj.in,istreameast.app,streamingnow.mov,watchug.to,primewire.tf,worldsports.si,filecrypt.cc,veplay.top,colegialasdeverdad.*,anime4i.com,cuttyy.com,puffytr.com,anizm.*,anizle.*#%#//scriptlet('abort-on-property-read', 'aclib')
 anime.uniquestream.net,asiaflix.*$$script[id="aclib"]
 [$path=/sd0embed/*]#%#//scriptlet('abort-on-property-read', 'AtcshAltNm')
 !#if (adguard_app_ios || adguard_ext_safari)
@@ -75653,7 +75655,7 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-11-17T10:10:00.853Z
+! Last modified: 2026-11-17T18:12:00.237Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -77368,8 +77370,8 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ! Description: List for blocking ads in the Chinese region. Block Ads, Trackers, Malware, HTTPDNS, PCDN. 
 ! License: Inherits upstream licenses (GPL-3.0, CC BY-SA 4.0, etc.)
 ! Upstream Sources: https://github.com/Cats-Team/AdRules/blob/script/Source.md
-! Update: 2026-11-17 17:51:54(GMT+8)
-! Total count: 210861
+! Update: 2026-11-17 23:20:51(GMT+8)
+! Total count: 211165
 /^.+stat\.kugou\.com/
 /^admarvel\./
 /^admaster\./
@@ -78042,10 +78044,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 ||zol.com.cn/cgimp/zc.js
 !----------------------------------The End------------------------------------!
 [Adblock Plus 2.0]
-! Checksum: IxxtnQJ1YO6tFdgPTcUg0A
-! Version: 202611171111
+! Checksum: 5XhQYhacEjnc7Oie48jtfA
+! Version: 202611172002
 ! Title: EasyList
-! Last modified: 17 Nov 2026 11:11 UTC
+! Last modified: 17 Nov 2026 20:02 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -100894,10 +100896,10 @@ reddxxx.com#?#[role="gridcell"]:has-text(/^AD$/)
 @@||milfzr.com^$generichide
 ! *** easylist:easylist_adult/adult_allowlist_popup.txt ***
 [Adblock Plus 2.0]
-! Checksum: mNZ5/tKBumkMRsrKkzNH3g
-! Version: 202611171111
+! Checksum: F3rCiUjpbpifv7edAcYnsQ
+! Version: 202611172002
 ! Title: EasyList China
-! Last modified: 17 Nov 2026 11:11 UTC
+! Last modified: 17 Nov 2026 20:02 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/easylist/easylistchina/
 !
@@ -107214,10 +107216,10 @@ $script,third-party,domain=torkitty.com|torkitty.net|torrentkitty.app|torrentkit
 !---------------------------------Temporary-----------------------------------!
 !----------------------------------The End------------------------------------!
 [Adblock Plus 1.1]
-! Checksum: HejHtxXBmI24piEiyERgjw
-! Version: 202611171111
+! Checksum: hCGJfZDlaGJ8Ei0oy08xvA
+! Version: 202611172002
 ! Title: EasyPrivacy
-! Last modified: 17 Nov 2026 11:11 UTC
+! Last modified: 17 Nov 2026 20:02 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -121895,12 +121897,12 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! Number of entries: 103700
 !
 [Adblock Plus]
-! Version: 202611170705
+! Version: 202611171905
 ! Title: oisd small
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 62454
-! Last modified: 2026-11-17T07:05:34+0000
+! Entries: 62615
+! Last modified: 2026-11-17T19:05:53+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
@@ -129040,134 +129042,45 @@ ff02::3		ip6-allhosts
 # kwadronaut for Windows 7 and Vista information
 # John Mueller and Lawrence H Smith for Mac Pre-OSX information
 # Jesse Baird for the Cisco IOS script
-! Title: sosel 个人去广告合并规则(黑名单)
-! Compiled: 2026-10-24 09:45 UTC
-! Method: 多源并集去重 + 父子域无损压缩 + 白名单订阅源风险剔除，并已剔除被本站白名单压住的条目（发布即有效）
-! Sources: hg1(线上在用) 13122 条 + 站长手写 713 条 + 历史存量 479211 条
-! Rules: 475739 条（去重后 481446，剔除被白名单罩住的 5707）
-! Companion allowlist: https://www.23-4.cn/rules/merged-allow.txt
-/(https?:\/\/)213\.32\.115\..{100,}/
-/(https?:\/\/)217\.182\.11\..{100,}/
-/(https?:\/\/)51\.195\.31\..{100,}/
-/193.200.64.24:/
-/62.76.25.2(7|8)/
-/^(\S+\.)?(webstats?|swebstats?|mywebstats?)\./
-/^(\S+\.)?11599[\da-z]{2,20}\.com$/
-/^(\S+\.)?333[1-9]{2}[0-9]{2}\.com?$/
-/^(\S+\.)?5551[0-9]{3}\.com?$/
-/^(\S+\.)?61677[\da-z]{0,20}\.com$/
-/^(\S+\.)?777\-?partners?\.(net|com)$/
-/^(\S+\.)?[0-9a-f]{15,}\.com$/
-/^(\S+\.)?[0-9a-z]{16,}\.xyz$/
-/^(\S+\.)?[c-s]ads(abs|abz|ans|anz|ats|atz|del|ecs|ecz|ims|imz|ips|ipz|kis|kiz|oks|okz|one|pms|pmz)\.com/
-/^(\S+\.)?adservice\.google\./
-/^(\S+\.)?affiliat(es?[0-9a-z]*?|ion[0-9\-a-z]*?|ly[0-9a-z\-]*?)\./
-/^(\S+\.)?afgr[\d]{1,2}\.com$/
-/^(\S+\.)?aj[0-9]{4,}.online$/
-/^(\S+\.)?analytics(\-|\.)/
-/^(\S+\.)?counter(\-|\.)/
-/^(\S+\.)?delivery([\d]{2}|dom|modo).com$/
-/^(\S+\.)?e7[0-9]{2,4}\.(net|com)?$/
-/^(\S+\.)?g[1-4][0-9]{8,9}\.com?$/
-/^(\S+\.)?hg[0-9]{4,5}\.com?$/
-/^(\S+\.)?pixels?\./
-/^(\S+\.)?s?metrics\./
-/^(\S+\.)?sax[\dns]?\.sina\.com\.cn/
-/^(\S+\.)?syma[a-z]\.cn$/
-/^(\S+\.)?tongji\./
-/^(\S+\.)?toolbar\./
-/^(\S+\.)?voyage-prive\.[a-z]+(\.uk)?$/
-/^(\S+\.)?widgets?\./
-/^(\S+\.)?xpj[0-9]\.net$/
-/^(\S+\.)?ylx-[0-9].com$/
-/^(a|c)\.[0-9a-f]{56}\.com$/
-/^(mon|tue|wed|thu|fri|sat|sun)\d{1,2}\.\w{2}\d{1,6}\w{4}\.com$/
-/^.+stat\.kugou\.com/
-/^139\.45\.197\.2(4[0-9]|5[0-4])/
-/^139\.45\.197\.2(4[0-9]|5[0-4]):/
-/^139\.45\.19[5-7]\.\d{1,3}/
-/^142\.91\.159\.(1[5-9]\d|2[0-4]\d|250):(80|443)$/
-/^188\.42\.84\.\d{1,3}/
-/^2.59.219.121/
-/^23\.109\.170\.(18[7-9]|19[0-2])$/
-/^23\.109\.73\.\d{3}/
-/^88\.208\.22\.[1234]$/
-/^88\.208\.22\.[1234]:/
-/^94\.242\.247\.(2[0-9]|3[0-2])/
-/^94\.242\.247\.(2[0-9]|3[0-2]):/
-/^admarvel\./
-/^admaster\./
-/^adsage\./
-/^adsensor\./
-/^adservice\./
-/^adsmogo\./
-/^adsrvmedia\./
-/^adsserving\./
-/^adsystem\./
-/^adwords\./
-/^anon1.gt\d{6}.com$/
-/^applovin\./
-/^appsflyer\./
-/^domob\./
-/^duomeng\./
-/^dwtrack\./
-/^guanggao\./
-/^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
-/^https:\/\/anon1.gt\d{6}.com/
-/^omgmta\./
-/^omgmtaw\./
-/^omniture\./
-/^openx\./
-/^partnerad\./
-/^pingfore\./
-/^socdm\./
-/^supersonicads\./
-/^wlmonitor\./
-/^zjtoolbar\./
-/i*.snssdk.com/
-/pangolin-sdk.*/
-||*-980x60.gif^
-||*.pop.js^
-||*_950x90.gif^
-||*coinhive.min.js^
-||*martrix_bbs.gif^
-||*martrix_bbs.jpg^
-||/7gq78s4ltrea/^
-||0019a^
-||1.1.1.l80.js^
-||216.239.35.0/24^
-||295cdn^
-||3.n.2.1.l50.js^
-||3.n.2.2.l30.js^
-||3132372e302e302e31^
-||5976m45com^
-||<!doctype.^
-||c.3.cn^$importan
-||cdn.zhiyileiju.cn/*.jpeg
-||cdn.zhiyileiju.cn/*.jpg
-||d6294kcj^
-||dcarapi.com/motor/ad/*
+! Title: 234 DNS 精确去广 · 纯净版
+! Description: 234DNS 官方维护的精确去广清单。以真实用户反馈、误杀回滚和人工复核为核心，只保留当前仍在使用的规则，不做历史存量堆叠，也不包含任何会员客户前缀。
+! Homepage: https://www.23-4.cn/rules/
+! Maintainer: 23-4.CN 加密DNS实验室
+! Version: 2026-11-17
+! Rules: 13168
+! Companion allowlist: https://www.23-4.cn/rules/234dns-allow.txt
+! Policy: 仅用于 DNS 层过滤；不放行任何白名单条目；规则顺序已打乱；更新频率按实际维护。
+! Expires: 12 hours
+||xchcmmtn2z^
 ||dlcdn996^
-||fake-domain^
-||gao1asdjws^
 ||gif.thegalaxy01.com^$importan
-||huilongkj^
-||ib-lq.snssdk.com/api/ad/*
+||c.3.cn^$importan
+||undefined^
+||d6294kcj^
+||cdn.zhiyileiju.cn/*.jpeg
+||216.239.35.0/24^
+||0019a^
 ||kps230^
-||m.miguvideo.com/mgs/share/migu_dsp_member/
-||n.2.1.js^
-||n.2.1.l60.js^
 ||shturl.cc/4^
+||huilongkj^
+||5976m45com^
+||ib-lq.snssdk.com/api/ad/*
+||/7gq78s4ltrea/^
+||sunyonga^
+||295cdn^
+||yd11_13-site-02^
+||shturl.cc/e1E^
+||xpj079cc08868comxpjggtz^
+||cdn.zhiyileiju.cn/*.jpg
+||tx-adaptive^
+||3132372e302e302e31^
 ||shturl.cc/IEavUwS^
 ||shturl.cc/J^
-||shturl.cc/e1E^
 ||shuixiands^
-||sunyonga^
-||tx-adaptive^
-||undefined^
-||xchcmmtn2z^
-||xpj079cc08868comxpjggtz^
-||yd11_13-site-02^
+||gao1asdjws^
+||dcarapi.com/motor/ad/*
+||fake-domain^
+||m.miguvideo.com/mgs/share/migu_dsp_member/
 [Host 10007]
 [Adblock Plus 2.0]
 ! Title: Host 10007
@@ -129951,7 +129864,7 @@ ff02::3		ip6-allhosts
 ! 🔗 原始地址：https://raw.githubusercontent.com/liwenjie119/adg-rules/master/black.txt
 ! 📊 本区规则：2 条
 ! ==============================================
-! Version:    最后同步时间: 2026-11-17 01:15:05
+! Version:    最后同步时间: 2026-11-18 01:15:05
 ! Total count: 13178
 # 此规则不定时更新
 # This rule does not regularly updated
@@ -131424,14 +131337,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
-! Checksum: MTc5NDg4NzQ4OAo=
+! Checksum: MTc5NDkyMTMwMwo=
 ! Title: trli's Ad Filter for Pro for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261117-3
-! TimeUpdated: 2026-11-17T11:51:28+08:00
+! Version: 20261117-7
+! TimeUpdated: 2026-11-17T21:15:03+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
-! Total: 11315375
+! Total: 11315168
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
