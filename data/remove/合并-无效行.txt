@@ -70,7 +70,7 @@
 
 
 
-! Version:    最后同步时间: 2026-11-19 01:15:05
+! Version:    最后同步时间: 2026-11-20 01:15:04
 ! Total count: 328
 #放行单
 #只适合海哥规则
@@ -239,7 +239,7 @@
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
 ! by: 酷安@那个谁520
-! Last Updated: 2026-11-19 03:58:43（北京时间）
+! Last Updated: 2026-11-19 13:56:05（北京时间）
 ! Total count: 4124
 ! ==============================================
 ! 📋 规则来源：大萌主
@@ -888,7 +888,7 @@
 ! Title: Host 10007
 ! Homepage: https://github.com/lingeringsound/10007_auto
 ! ZH_Homepage: https://www.gitlink.org.cn/keytoolazy/10007_auto
-! Last modified: 2026-11-19 05:43:41
+! Last modified: 2026-11-19 14:28:12
 ! 规则数量: 12412
 
 ! 爱奇艺腾讯视频网页版广告，删除了客户端没广告，网页就打不开。
@@ -1581,8 +1581,8 @@
 ! 订阅线路1官方文件直链（部分国内网络可能无法访问）：https://raw.githubusercontent.com/Thelongdarkorg/ad-rules-merged/main/merged.txt
 ! 订阅线路2国内连接稳（可达性更好）：https://ghproxy.net/https://raw.githubusercontent.com/Thelongdarkorg/ad-rules-merged/main/merged.txt
 ! Expires: 12 hours
-! Generated: 2026-11-18 18:20:05 UTC+8
-! Total rules: 33571
+! Generated: 2026-11-19 18:29:17 UTC+8
+! Total rules: 33588
 ! ============================================================
 ! ---------- 拦截规则 (blocking) ----------
 .xyz/$domain=pan.huang1111.cn
@@ -2602,6 +2602,23 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##a[href*="?channelCode="] > img[src]
 ##img[alt="33直播"]
 ##A[href*='.life/8888'][style='display: inline-block;']
+##.adspop
+##.horizontal-banner
+##.page-nav ~ .addbox[style]
+##a[title="PG电子"]
+##a[title="开元棋牌"]
+##img[alt$="约炮"]
+##[class*="card-ads"]
+##[onclick*="'Ad Click'"]
+##[onclick*="ad_slot"]
+##a[href]:not([target="_blank"]) + a[href][rel*="sponsored"][target="_blank"]
+##a[href][target="_blank"][rel*="sponsored"] > img[alt*="棋牌"]
+##a[href][target="_blank"][rel*="sponsored"] > img[alt^="PG"]
+##a[onclick*="棋牌"]
+##a[onclick*="澳门"]
+##a[onclick*="约炮"]
+##a[rel*="sponsored"][onclick]
+##img[alt^="PG"][alt*="电子"]
 ##.dx-recommend-icons
 ##img[alt="开元电子"]
 ##img[alt*="PG"][alt*="娱乐"]
@@ -2812,7 +2829,7 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! Title: 酷安广告规则
 ! Homepage: https://github.com/qq5460168/AD886
 ! by: 酷安@那个谁520
-! Last Updated: 2026-11-19 03:58:43（北京时间）
+! Last Updated: 2026-11-19 13:56:05（北京时间）
 ! Total count: 17324
 
 ! ────────────── 来源汇总 ──────────────
@@ -2902,7 +2919,7 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ! 🔗 原始地址：https://raw.githubusercontent.com/liwenjie119/adg-rules/master/black.txt
 ! 📊 本区规则：2 条
 ! ==============================================
-! Version:    最后同步时间: 2026-11-19 01:15:05
+! Version:    最后同步时间: 2026-11-20 01:15:04
 ! Total count: 13183
 # 此规则不定时更新
 # This rule does not regularly updated
@@ -4117,14 +4134,14 @@ mxdm9.com,ntdm9.com,mxdm6.com,ntdm6.com##[style$='background-size: 400px 127px !
 ##A[href*='com:'] > IMG[src],A[href*='cc:'] > IMG[src]
 ##div#h2_player_prevideo > A[href][target='_blank']
 ##body#reader-m-fix IMG[src*='.gif'][style='width:100%;height:100%']
-! Checksum: MTc5NTA1ODI5Nwo=
+! Checksum: MTc5NTA5MjkzNgo=
 ! Title: trli's Ad Filter for Pro for AdguardHome
 ! Description: HOSTS Project
-! Version: 20261119-3
-! TimeUpdated: 2026-11-19T11:18:17+08:00
+! Version: 20261119-6
+! TimeUpdated: 2026-11-19T20:55:36+08:00
 ! Expires: 24 hours (update frequency)
 ! Homepage: https://github.com/Potterli20/file/releases/tag/ad-hosts-pro
-! Total: 11837739
+! Total: 11839081
 |0x1b532a.map^
 |120-600.gif^
 |120x500.gif^
