@@ -835,6 +835,7 @@
 ||guanceyun.autohome.com.cn^$important
 ||leads.*^$important
 #拦截腾讯微信相关域名
+||apd-pcdnwxlogin.teg.tencent-cloud.net^$important
 #针对两步路户外助手广告拦截
 ||shop45920354.m.youzan.com^$important
 ||ad.*^$important
@@ -1104,3 +1105,6 @@
 ||alibaba-cn-pvg-00001.oss-enet.aliyuncs.com^$important
 #针对掌上莲峰开屏的广告拦截规则
 ||dcloud.net.cn^$important
+#阻断ECH公钥链接防止流量绕过
+||_https.*^$important
+||_svcb.*^$important
