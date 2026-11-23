@@ -132,7 +132,7 @@ jobs:
 
       - name: 运行
         id: run_rules
-        timeout-minutes: 90
+        timeout-minutes: 360
         run: |
           npm install
           node index.js
